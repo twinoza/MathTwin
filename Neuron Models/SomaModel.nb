@@ -1,0 +1,2203 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     93269,       2194]
+NotebookOptionsPosition[     89624,       2063]
+NotebookOutlinePosition[     91699,       2137]
+CellTagsIndexPosition[     91656,       2134]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Soma Neuron Models", "Title",
+ CellMargins->{{17, 10}, {5, 10}},
+ CellAutoOverwrite->False,
+ CellChangeTimes->{{3.5534326096383348`*^9, 3.553432683381708*^9}, {
+   3.5551770591654234`*^9, 3.555177136916198*^9}, {3.5560461138976755`*^9, 
+   3.556046136938675*^9}, {3.5584696132869787`*^9, 3.5584696149111414`*^9}, 
+   3.5584704147861204`*^9, {3.599941614797063*^9, 3.599941618135463*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Quadratic Neuron", "Section",
+ CellChangeTimes->{{3.558466666698349*^9, 3.5584666798816676`*^9}, {
+  3.5584696041830683`*^9, 3.558469606735324*^9}, {3.5584699095976067`*^9, 
+  3.5584699384354906`*^9}, {3.5584704111837606`*^9, 3.558470412902932*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Bifurcation Model and Quadratic Firing Rate Model", "Subsection",
+ CellChangeTimes->{
+  3.558469941920839*^9, {3.558470408999542*^9, 3.5584704093515773`*^9}, {
+   3.5602829134440455`*^9, 3.5602829219989014`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SubscriptBox["\[Tau]", "m"], 
+   StyleBox[
+    OverscriptBox[
+     SubscriptBox["v", "m"], "\[Bullet]"], "Text"]}], 
+  StyleBox["=", "Text"], 
+  StyleBox[" ", "Text"], 
+  StyleBox[
+   RowBox[{
+    RowBox[{"-", 
+     SubscriptBox["v", "m"]}], "+", 
+    FractionBox[
+     SuperscriptBox[
+      SubscriptBox["v", "m"], "2"], "2"], "+", " ", 
+    SubscriptBox["v", "in"]}], "Text"]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["v", "in"], "=", 
+  RowBox[{
+   SubscriptBox["\[Rho]", "qua"], 
+   FractionBox[
+    SuperscriptBox[
+     SubscriptBox["I", "c"], "2"], 
+    SuperscriptBox[
+     SubscriptBox["I", "l"], "2"]]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  StyleBox[
+   SubscriptBox["\[Tau]", "m"], "Text"], 
+  StyleBox["=", "Text"], 
+  StyleBox[" ", "Text"], 
+  FractionBox[
+   SubscriptBox[
+    StyleBox["\[Rho]", "Text"], "tau"], 
+   SubscriptBox["I", "l"]]}], "\[LineSeparator]", 
+ RowBox[{
+  SubscriptBox["\[Tau]", "ref"], "=", 
+  FractionBox[
+   SubscriptBox["\[Rho]", "ref"], 
+   SubscriptBox["I", "ref"]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"f", "[", 
+   SubscriptBox["v", "in"], "]"}], "=", 
+  FractionBox["1", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Tau]", "m"], "\[CenterDot]", 
+     RowBox[{"h", "[", 
+      SubscriptBox["V", "in"], "]"}]}], " ", "+", " ", 
+    SubscriptBox["t", "ref"]}]]}]}], "Text",
+ CellChangeTimes->{{3.5584476398546343`*^9, 3.55844764291294*^9}, {
+   3.5584477946701145`*^9, 3.558447818517499*^9}, {3.5584479087235184`*^9, 
+   3.558447924280074*^9}, {3.5584479555121965`*^9, 3.55844800224787*^9}, {
+   3.558448048111456*^9, 3.558448061881833*^9}, {3.558448113991043*^9, 
+   3.5584481232779717`*^9}, {3.558448320052647*^9, 3.5584483220038424`*^9}, {
+   3.5584483995335946`*^9, 3.5584484370093417`*^9}, {3.558448507345375*^9, 
+   3.5584485299826384`*^9}, {3.558448597645404*^9, 3.558448676385277*^9}, {
+   3.558448713706009*^9, 3.5584487238960276`*^9}, {3.5584488216868057`*^9, 
+   3.5584488380384407`*^9}, {3.55844888493213*^9, 3.5584489261032467`*^9}, {
+   3.5584497918418117`*^9, 3.5584497927419014`*^9}, {3.558450094796104*^9, 
+   3.5584500953221564`*^9}, {3.5584645825649567`*^9, 
+   3.5584645885155516`*^9}, {3.55846591623431*^9, 3.558465950686755*^9}, 
+   3.5584668117248507`*^9, {3.560719012062147*^9, 3.5607190606851473`*^9}, {
+   3.5607202170991473`*^9, 3.5607202468631477`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"q", "[", 
+   RowBox[{"Vm_", ",", "Ic_", ",", "Il_", ",", "\[Tau]_", ",", "pqua_"}], 
+   "]"}], " ", ":=", 
+  FractionBox[
+   RowBox[{" ", 
+    RowBox[{
+     RowBox[{
+      FractionBox["1", "2"], 
+      SuperscriptBox["Vm", "2"]}], "-", "Vm", " ", "+", " ", 
+     RowBox[{"Vin", "[", 
+      RowBox[{"Ic", ",", "Il", ",", "pqua"}], "]"}]}]}], 
+   "\[Tau]"]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Vin", "[", 
+   RowBox[{"Ic_", ",", "Il_", ",", "pqua_"}], "]"}], ":=", 
+  RowBox[{"pqua", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"Ic", "/", "Il"}], ")"}], "2"]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"VinDualBias", "[", 
+   RowBox[{"Iin_", ",", "Il_", ",", "pqua_"}], "]"}], ":=", 
+  RowBox[{"pqua", 
+   RowBox[{"(", 
+    RowBox[{"Iin", "/", "Il"}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Tau]", "[", 
+   RowBox[{"Il_", ",", "ptau_"}], "]"}], ":=", 
+  RowBox[{"ptau", "/", "Il"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tref", "[", 
+   RowBox[{"Iref_", ",", "pref_"}], "]"}], ":=", 
+  RowBox[{"pref", "/", "Iref"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"Vin_", ",", "\[Tau]_", ",", "tref_"}], "]"}], ":=", 
+  FractionBox["1", 
+   RowBox[{
+    RowBox[{"\[Tau]", " ", 
+     RowBox[{"h", "[", "Vin", "]"}]}], "+", 
+    "tref"}]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"h", "[", "Vin_", "]"}], ":=", 
+  FractionBox[
+   RowBox[{"\[Pi]", "+", 
+    RowBox[{"2", 
+     RowBox[{"ArcCot", "[", 
+      SqrtBox[
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        RowBox[{"2", "Vin"}]}]], "]"}]}]}], 
+   SqrtBox[
+    RowBox[{
+     RowBox[{"-", "1"}], "+", 
+     RowBox[{"2", "Vin"}]}]]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"labelSize", "=", "16"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"titleLabelSize", "=", "18"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"DynamicModule", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Ic", "=", ".5"}], ",", 
+     RowBox[{"Il", "=", ".595"}], ",", 
+     RowBox[{"Iref", "=", "7.333"}], ",", 
+     RowBox[{"pqua", "=", "1.39"}], ",", 
+     RowBox[{"ptau", "=", "0.00119"}], ",", 
+     RowBox[{"pref", "=", "0.022"}], ",", " ", 
+     RowBox[{"vmMax", "=", "5"}], ",", " ", 
+     RowBox[{"vdotMin", " ", "=", " ", "0"}], ",", 
+     RowBox[{"vdotMax", "=", "20"}], ",", " ", 
+     RowBox[{"vinMax", "=", "2"}], ",", 
+     RowBox[{"fMax", " ", "=", " ", "175"}], ",", " ", 
+     RowBox[{"ilitMax", "=", "3"}]}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Panel", "[", "\[IndentingNewLine]", 
+    RowBox[{"Grid", "[", 
+     RowBox[{
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"Grid", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"{", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"Grid", "[", 
+               RowBox[{
+                RowBox[{"{", "\[IndentingNewLine]", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\!\(\*SubscriptBox[\(I\), \(c\)]\)\>\"", ",", 
+                    "labelSize"}], "]"}], ",", 
+                    RowBox[{"Slider", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "Ic", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0.01", ",", "5"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"InputField", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "Ic", "]"}], ",", 
+                    RowBox[{"FieldSize", "\[Rule]", "5"}]}], "]"}]}], "}"}], 
+                  ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\!\(\*SubscriptBox[\(I\), \(l\)]\)\>\"", ",", 
+                    "labelSize"}], "]"}], ",", 
+                    RowBox[{"Slider", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "Il", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0.01", ",", "1", ",", "0.005"}], "}"}]}], "]"}], 
+                    ",", 
+                    RowBox[{"InputField", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "Il", "]"}], ",", 
+                    RowBox[{"FieldSize", "\[Rule]", "5"}]}], "]"}]}], "}"}], 
+                  ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\!\(\*SubscriptBox[\(I\), \(ref\)]\)\>\"", ",", 
+                    "labelSize"}], "]"}], ",", 
+                    RowBox[{"Slider", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "Iref", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0.01", ",", "10"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"InputField", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "Iref", "]"}], ",", 
+                    RowBox[{"FieldSize", "\[Rule]", "5"}]}], "]"}]}], "}"}]}],
+                  "}"}], ",", 
+                RowBox[{"Alignment", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"Left", ",", "Center", ",", "Left"}], "}"}]}], ",", 
+                RowBox[{"Spacings", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"1", ",", "1", ",", "2"}], "}"}], ",", "0.5"}], 
+                  "}"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"Grid", "[", 
+               RowBox[{
+                RowBox[{"{", "\[IndentingNewLine]", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)\>\"", ",", 
+                    "labelSize"}], "]"}], ",", 
+                    RowBox[{"Slider", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "pqua", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0.5", ",", "6"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"InputField", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "pqua", "]"}], ",", 
+                    RowBox[{"FieldSize", "\[Rule]", "5"}]}], "]"}]}], "}"}], 
+                  ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(tau\)]\)\>\"", ",", 
+                    "labelSize"}], "]"}], ",", 
+                    RowBox[{"Slider", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "ptau", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0.0001", ",", "0.005"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"InputField", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "ptau", "]"}], ",", 
+                    RowBox[{"FieldSize", "\[Rule]", "5"}]}], "]"}]}], "}"}], 
+                  ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(ref\)]\)\>\"", ",", 
+                    "labelSize"}], "]"}], ",", 
+                    RowBox[{"Slider", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "pref", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0.", ",", "0.2"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"InputField", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "pref", "]"}], ",", 
+                    RowBox[{"FieldSize", "\[Rule]", "5"}]}], "]"}]}], "}"}]}],
+                  "}"}], ",", 
+                RowBox[{"Alignment", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"Left", ",", "Center", ",", "Left"}], "}"}]}], ",", 
+                RowBox[{"Spacings", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"1", ",", "1", ",", "2"}], "}"}], ",", "0.5"}], 
+                  "}"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"Grid", "[", 
+               RowBox[{
+                RowBox[{"{", "\[IndentingNewLine]", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\!\(\*SubscriptBox[\(v\), \(in\)]\)\>\"", ",", 
+                    "labelSize"}], "]"}], ",", 
+                    RowBox[{"Panel", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", 
+                    RowBox[{"Vin", "[", 
+                    RowBox[{"Ic", ",", "Il", ",", "pqua"}], "]"}], "]"}], ",", 
+                    RowBox[{"Background", "\[Rule]", "LightGray"}]}], "]"}]}],
+                    "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\!\(\*SubscriptBox[\(\[Tau]\), \(m\)]\)\>\"", ",", 
+                    "labelSize"}], "]"}], ",", 
+                    RowBox[{"Panel", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", 
+                    RowBox[{"\[Tau]", "[", 
+                    RowBox[{"Il", ",", "ptau"}], "]"}], "]"}], ",", 
+                    RowBox[{"Background", "\[Rule]", "LightGray"}]}], "]"}]}],
+                    "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\!\(\*SubscriptBox[\(t\), \(ref\)]\)\>\"", ",", 
+                    "labelSize"}], "]"}], ",", 
+                    RowBox[{"Panel", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", 
+                    RowBox[{"tref", "[", 
+                    RowBox[{"Iref", ",", "pref"}], "]"}], "]"}], ",", 
+                    RowBox[{"Background", "\[Rule]", "LightGray"}]}], "]"}]}],
+                    "}"}]}], "}"}], ",", 
+                RowBox[{"Alignment", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"Left", ",", "Left"}], "}"}]}], ",", 
+                RowBox[{"Spacings", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"1", ",", "0"}], "}"}]}]}], "]"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"Grid", "[", 
+               RowBox[{"{", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Style", "[", 
+                    RowBox[{"\"\<f\>\"", ",", "labelSize"}], "]"}], ",", 
+                   RowBox[{"Panel", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", 
+                    RowBox[{"f", "[", 
+                    RowBox[{
+                    RowBox[{"Vin", "[", 
+                    RowBox[{"Ic", ",", "Il", ",", "pqua"}], "]"}], ",", 
+                    RowBox[{"\[Tau]", "[", 
+                    RowBox[{"Il", ",", " ", "ptau"}], "]"}], ",", " ", 
+                    RowBox[{"tref", "[", 
+                    RowBox[{"Iref", ",", " ", "pref"}], "]"}]}], "]"}], "]"}],
+                     ",", 
+                    RowBox[{"Background", "\[Rule]", "LightGray"}]}], "]"}]}],
+                   "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<2/\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)\>\"", 
+                    ",", "labelSize"}], "]"}], ",", 
+                   RowBox[{"Panel", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", 
+                    RowBox[{"2", "/", "pqua"}], "]"}], ",", 
+                    RowBox[{"Background", "\[Rule]", "LightGray"}]}], "]"}]}],
+                   "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<f(2/\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\))\>\"", 
+                    ",", "labelSize"}], "]"}], ",", 
+                   RowBox[{"Panel", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", 
+                    RowBox[{"f", "[", 
+                    RowBox[{
+                    RowBox[{"Vin", "[", 
+                    RowBox[{"Ic", ",", "Il", ",", 
+                    RowBox[{"2", "/", "pqua"}]}], "]"}], ",", 
+                    RowBox[{"\[Tau]", "[", 
+                    RowBox[{"Il", ",", " ", "ptau"}], "]"}], ",", " ", 
+                    RowBox[{"tref", "[", 
+                    RowBox[{"Iref", ",", " ", "pref"}], "]"}]}], "]"}], "]"}],
+                     ",", 
+                    RowBox[{"Background", "\[Rule]", "LightGray"}]}], "]"}]}],
+                   "}"}]}], "\[IndentingNewLine]", "}"}], "]"}]}], 
+             "\[IndentingNewLine]", "}"}], "}"}], ",", 
+           RowBox[{"Spacings", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"5", ",", "0"}], "}"}]}]}], "]"}], "}"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"Grid", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"{", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"Panel", "[", "\[IndentingNewLine]", 
+               RowBox[{"Dynamic", "[", "\[IndentingNewLine]", 
+                RowBox[{"Plot", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"q", "[", 
+                    RowBox[{"Vmem", ",", "Ic", ",", "Il", ",", 
+                    RowBox[{"\[Tau]", "[", 
+                    RowBox[{"Il", ",", "ptau"}], "]"}], ",", "pqua"}], "]"}], 
+                   "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"Vmem", ",", "0", ",", "vmMax"}], "}"}], ",", 
+                  RowBox[{"PlotRange", "\[Rule]", 
+                   RowBox[{"{", 
+                    RowBox[{"vdotMin", ",", "vdotMax"}], "}"}]}], ",", 
+                  RowBox[{"PlotLabel", "\[Rule]", 
+                   RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<Bifurcation Model\>\"", ",", "titleLabelSize"}], 
+                    "]"}]}], ",", 
+                  RowBox[{"AxesLabel", "\[Rule]", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\!\(\*SubscriptBox[\(v\), \(m\)]\)\>\"", ",", 
+                    "labelSize"}], "]"}], ",", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\!\(\*OverscriptBox[\(v\), \(.\)]\)\>\"", ",", 
+                    "labelSize"}], "]"}]}], "}"}]}], ",", 
+                  RowBox[{"ImageSize", "\[Rule]", "500"}]}], "]"}], 
+                "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "]"}], 
+              ",", "\[IndentingNewLine]", 
+              RowBox[{"Panel", "[", "\[IndentingNewLine]", 
+               RowBox[{"Dynamic", "[", "\[IndentingNewLine]", 
+                RowBox[{"Show", "[", "\[IndentingNewLine]", 
+                 RowBox[{
+                  RowBox[{"Plot", "[", 
+                   RowBox[{
+                    RowBox[{"{", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"Piecewise", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"vin", "\[LessEqual]", "0"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"f", "[", 
+                    RowBox[{"vin", ",", 
+                    RowBox[{"\[Tau]", "[", 
+                    RowBox[{"Il", ",", "ptau"}], "]"}], ",", 
+                    RowBox[{"tref", "[", 
+                    RowBox[{"Iref", ",", "pref"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"vin", ">", "0.5"}]}], "}"}]}], "}"}], "]"}], ",",
+                     "\[IndentingNewLine]", 
+                    RowBox[{"Piecewise", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"vin", "\[LessEqual]", "0"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"f", "[", 
+                    RowBox[{"vin", ",", 
+                    RowBox[{"\[Tau]", "[", 
+                    RowBox[{"Il", ",", "ptau"}], "]"}], ",", "0"}], "]"}], 
+                    ",", 
+                    RowBox[{"vin", ">", "0.5"}]}], "}"}]}], "}"}], "]"}], ",",
+                     "\[IndentingNewLine]", 
+                    RowBox[{"f", "[", 
+                    RowBox[{
+                    RowBox[{"Vin", "[", 
+                    RowBox[{"Ic", ",", "Il", ",", "pqua"}], "]"}], ",", 
+                    RowBox[{"\[Tau]", "[", 
+                    RowBox[{"Il", ",", "ptau"}], "]"}], ",", 
+                    RowBox[{"tref", "[", 
+                    RowBox[{"Iref", ",", "pref"}], "]"}]}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"f", "[", 
+                    RowBox[{
+                    RowBox[{"Vin", "[", 
+                    RowBox[{"Ic", ",", "Il", ",", "pqua"}], "]"}], ",", 
+                    RowBox[{"\[Tau]", "[", 
+                    RowBox[{"Il", ",", "ptau"}], "]"}], ",", "0"}], "]"}]}], 
+                    "}"}], ",", "\[IndentingNewLine]", 
+                    RowBox[{"{", 
+                    RowBox[{"vin", ",", "0", ",", "vinMax"}], "}"}], ",", 
+                    RowBox[{"AxesOrigin", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}]}], ",", 
+                    RowBox[{"PlotRange", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "fMax"}], "}"}]}], ",", 
+                    RowBox[{"PlotLabel", "\[Rule]", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<Quadratic Neuron Firing Rate\>\"", ",", 
+                    "titleLabelSize"}], "]"}]}], ",", 
+                    RowBox[{"PlotStyle", "\[Rule]", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"Blue", ",", " ", 
+                    RowBox[{"Darker", "[", "Red", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Dashed", ",", "Blue"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Dashed", ",", 
+                    RowBox[{"Darker", "[", "Red", "]"}]}], "}"}]}], "}"}]}], 
+                    ",", 
+                    RowBox[{"AxesLabel", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\!\(\*SubscriptBox[\(v\), \(in\)]\)\>\"", ",", 
+                    "labelSize"}], "]"}], ",", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<f(\!\(\*SubscriptBox[\(v\), \(in\)]\))\>\"", ",", 
+                    "labelSize"}], "]"}]}], "}"}]}], ",", 
+                    RowBox[{"ImageSize", "\[Rule]", "500"}]}], "]"}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"ListPlot", "[", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Vin", "[", 
+                    RowBox[{"Ic", ",", "Il", ",", "pqua"}], "]"}], ",", 
+                    RowBox[{"f", "[", 
+                    RowBox[{
+                    RowBox[{"Vin", "[", 
+                    RowBox[{"Ic", ",", "Il", ",", "pqua"}], "]"}], ",", 
+                    RowBox[{"\[Tau]", "[", 
+                    RowBox[{"Il", ",", "ptau"}], "]"}], ",", "0"}], "]"}]}], 
+                    "}"}], "}"}], ",", 
+                    RowBox[{"PlotStyle", "\[Rule]", 
+                    RowBox[{"Darker", "[", "Green", "]"}]}], ",", 
+                    RowBox[{"PlotMarkers", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"\"\<\[FilledCircle]\>\"", ",", "Small"}], 
+                    "}"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"ListPlot", "[", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Vin", "[", 
+                    RowBox[{"Ic", ",", "Il", ",", "pqua"}], "]"}], ",", 
+                    RowBox[{"f", "[", 
+                    RowBox[{
+                    RowBox[{"Vin", "[", 
+                    RowBox[{"Ic", ",", "Il", ",", "pqua"}], "]"}], ",", 
+                    RowBox[{"\[Tau]", "[", 
+                    RowBox[{"Il", ",", "ptau"}], "]"}], ",", 
+                    RowBox[{"tref", "[", 
+                    RowBox[{"Iref", ",", "pref"}], "]"}]}], "]"}]}], "}"}], 
+                    "}"}], ",", 
+                    RowBox[{"PlotStyle", "\[Rule]", 
+                    RowBox[{"Darker", "[", "Green", "]"}]}], ",", 
+                    RowBox[{"PlotMarkers", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"\"\<\[FilledCircle]\>\"", ",", "Small"}], 
+                    "}"}]}]}], "]"}]}], "\[IndentingNewLine]", "]"}], 
+                "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "]"}], 
+              ",", "\[IndentingNewLine]", 
+              RowBox[{"Panel", "[", "\[IndentingNewLine]", 
+               RowBox[{"Dynamic", "[", "\[IndentingNewLine]", 
+                RowBox[{"Show", "[", "\[IndentingNewLine]", 
+                 RowBox[{"Plot", "[", 
+                  RowBox[{
+                   RowBox[{"{", "\[IndentingNewLine]", 
+                    RowBox[{"(*", 
+                    RowBox[{
+                    RowBox[{"Piecewise", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"vin", "\[LessEqual]", "0"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"f", "[", 
+                    RowBox[{"vin", ",", 
+                    RowBox[{"\[Tau]", "[", 
+                    RowBox[{"Il", ",", "ptau"}], "]"}], ",", 
+                    RowBox[{"tref", "[", 
+                    RowBox[{"Iref", ",", "pref"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"vin", ">", "0.5"}]}], "}"}]}], "}"}], "]"}], ",",
+                     "\[IndentingNewLine]", 
+                    RowBox[{"Piecewise", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"vin", "\[LessEqual]", "0"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"f", "[", 
+                    RowBox[{"vin", ",", 
+                    RowBox[{"\[Tau]", "[", 
+                    RowBox[{"Il", ",", "ptau"}], "]"}], ",", "0"}], "]"}], 
+                    ",", 
+                    RowBox[{"vin", ">", "0.5"}]}], "}"}]}], "}"}], "]"}]}], 
+                    "*)"}], 
+                    RowBox[{",", "\[IndentingNewLine]", 
+                    RowBox[{"f", "[", 
+                    RowBox[{
+                    RowBox[{"Vin", "[", 
+                    RowBox[{"Ic", ",", "Ilit", ",", "pqua"}], "]"}], ",", 
+                    RowBox[{"\[Tau]", "[", 
+                    RowBox[{"Ilit", ",", "ptau"}], "]"}], ",", 
+                    RowBox[{"tref", "[", 
+                    RowBox[{"Iref", ",", "pref"}], "]"}]}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"f", "[", 
+                    RowBox[{
+                    RowBox[{"Vin", "[", 
+                    RowBox[{"Ic", ",", "Ilit", ",", "pqua"}], "]"}], ",", 
+                    RowBox[{"\[Tau]", "[", 
+                    RowBox[{"Ilit", ",", "ptau"}], "]"}], ",", "0"}], "]"}]}],
+                     "}"}], ",", "\[IndentingNewLine]", 
+                   RowBox[{"{", 
+                    RowBox[{"Ilit", ",", "0", ",", "ilitMax"}], "}"}], ",", 
+                   RowBox[{"AxesOrigin", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}]}], ",", 
+                   RowBox[{"PlotRange", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "fMax"}], "}"}]}], ",", 
+                   RowBox[{"PlotLabel", "\[Rule]", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<Quadratic Neuron Firing Rate\>\"", ",", 
+                    "titleLabelSize"}], "]"}]}], ",", 
+                   RowBox[{"PlotStyle", "\[Rule]", " ", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Darker", "[", "Red", "]"}], ",", "Blue"}], 
+                    "}"}]}], ",", 
+                   RowBox[{"AxesLabel", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\!\(\*SubscriptBox[\(I\), \(lk\)]\)\>\"", ",", 
+                    "labelSize"}], "]"}], ",", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<f(\!\(\*SubscriptBox[\(I\), \(lk\)]\))\>\"", ",", 
+                    "labelSize"}], "]"}]}], "}"}]}], ",", 
+                   RowBox[{"ImageSize", "\[Rule]", "500"}]}], "]"}], 
+                 RowBox[{"(*", 
+                  RowBox[{",", "\[IndentingNewLine]", 
+                   RowBox[{"ListPlot", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Vin", "[", 
+                    RowBox[{"Ic", ",", "Il", ",", "pqua"}], "]"}], ",", 
+                    RowBox[{"f", "[", 
+                    RowBox[{
+                    RowBox[{"Vin", "[", 
+                    RowBox[{"Ic", ",", "Il", ",", "pqua"}], "]"}], ",", 
+                    RowBox[{"\[Tau]", "[", 
+                    RowBox[{"Il", ",", "ptau"}], "]"}], ",", "0"}], "]"}]}], 
+                    "}"}], "}"}], ",", 
+                    RowBox[{"PlotStyle", "\[Rule]", 
+                    RowBox[{"Darker", "[", "Green", "]"}]}], ",", 
+                    RowBox[{"PlotMarkers", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"\"\<\[FilledCircle]\>\"", ",", "Small"}], 
+                    "}"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+                   RowBox[{"ListPlot", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Vin", "[", 
+                    RowBox[{"Ic", ",", "Il", ",", "pqua"}], "]"}], ",", 
+                    RowBox[{"f", "[", 
+                    RowBox[{
+                    RowBox[{"Vin", "[", 
+                    RowBox[{"Ic", ",", "Il", ",", "pqua"}], "]"}], ",", 
+                    RowBox[{"\[Tau]", "[", 
+                    RowBox[{"Il", ",", "ptau"}], "]"}], ",", 
+                    RowBox[{"tref", "[", 
+                    RowBox[{"Iref", ",", "pref"}], "]"}]}], "]"}]}], "}"}], 
+                    "}"}], ",", 
+                    RowBox[{"PlotStyle", "\[Rule]", 
+                    RowBox[{"Darker", "[", "Green", "]"}]}], ",", 
+                    RowBox[{"PlotMarkers", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"\"\<\[FilledCircle]\>\"", ",", "Small"}], 
+                    "}"}]}]}], "]"}]}], "*)"}], "\[IndentingNewLine]", "]"}], 
+                "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "]"}], 
+              ",", "\[IndentingNewLine]", 
+              RowBox[{"Grid", "[", 
+               RowBox[{"{", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\!\(\*SubscriptBox[\(f\), \(0\)]\)\>\"", ",", 
+                    "labelSize"}], "]"}], ",", 
+                   RowBox[{"Panel", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", 
+                    RowBox[{"f", "[", 
+                    RowBox[{
+                    RowBox[{"Vin", "[", 
+                    RowBox[{"Ic", ",", "Il", ",", "pqua"}], "]"}], ",", 
+                    RowBox[{"\[Tau]", "[", 
+                    RowBox[{"Il", ",", " ", "ptau"}], "]"}], ",", " ", "0"}], 
+                    "]"}], "]"}], ",", 
+                    RowBox[{"Background", "\[Rule]", "LightGray"}]}], "]"}]}],
+                   "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Style", "[", 
+                    RowBox[{"\"\<f\>\"", ",", "labelSize"}], "]"}], ",", 
+                   RowBox[{"Panel", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", 
+                    RowBox[{"f", "[", 
+                    RowBox[{
+                    RowBox[{"Vin", "[", 
+                    RowBox[{"Ic", ",", "Il", ",", "pqua"}], "]"}], ",", 
+                    RowBox[{"\[Tau]", "[", 
+                    RowBox[{"Il", ",", " ", "ptau"}], "]"}], ",", " ", 
+                    RowBox[{"tref", "[", 
+                    RowBox[{"Iref", ",", " ", "pref"}], "]"}]}], "]"}], "]"}],
+                     ",", 
+                    RowBox[{"Background", "\[Rule]", "LightGray"}]}], "]"}]}],
+                   "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\!\(\*SubscriptBox[\(\[CapitalDelta]f\), \
+\(ref\)]\)\>\"", ",", "labelSize"}], "]"}], ",", 
+                   RowBox[{"Panel", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", 
+                    RowBox[{
+                    RowBox[{"f", "[", 
+                    RowBox[{
+                    RowBox[{"Vin", "[", 
+                    RowBox[{"Ic", ",", "Il", ",", "pqua"}], "]"}], ",", 
+                    RowBox[{"\[Tau]", "[", 
+                    RowBox[{"Il", ",", " ", "ptau"}], "]"}], ",", " ", "0"}], 
+                    "]"}], "-", 
+                    RowBox[{"f", "[", 
+                    RowBox[{
+                    RowBox[{"Vin", "[", 
+                    RowBox[{"Ic", ",", "Il", ",", "pqua"}], "]"}], ",", 
+                    RowBox[{"\[Tau]", "[", 
+                    RowBox[{"Il", ",", " ", "ptau"}], "]"}], ",", " ", 
+                    RowBox[{"tref", "[", 
+                    RowBox[{"Iref", ",", " ", "pref"}], "]"}]}], "]"}]}], 
+                    "]"}], ",", 
+                    RowBox[{"Background", "\[Rule]", "LightGray"}]}], "]"}]}],
+                   "}"}]}], "\[IndentingNewLine]", "}"}], "]"}]}], 
+             "\[IndentingNewLine]", "}"}], "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"Alignment", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"Left", ",", "Left", ",", "Right"}], "}"}]}]}], "]"}], 
+         "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"Grid", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"{", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"Grid", "[", 
+               RowBox[{
+                RowBox[{"{", "\[IndentingNewLine]", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\!\(\*SubscriptBox[\(v\), \(m_max\)]\)\>\"", ",", 
+                    "labelSize"}], "]"}], ",", 
+                    RowBox[{"Slider", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "vmMax", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0.", ",", "20"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"InputField", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "vmMax", "]"}], ",", 
+                    RowBox[{"FieldSize", "\[Rule]", "5"}]}], "]"}]}], "}"}], 
+                  ",", "\[IndentingNewLine]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\!\(\*SubscriptBox[OverscriptBox[\(v\), \(.\)], \
+\(min\)]\)\>\"", ",", "labelSize"}], "]"}], ",", 
+                    RowBox[{"Slider", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "vdotMin", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "10"}], ",", "0"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"InputField", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "vdotMin", "]"}], ",", 
+                    RowBox[{"FieldSize", "\[Rule]", "5"}]}], "]"}]}], "}"}], 
+                  ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\!\(\*SubscriptBox[OverscriptBox[\(v\), \(.\)], \
+\(max\)]\)\>\"", ",", "labelSize"}], "]"}], ",", 
+                    RowBox[{"Slider", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "vdotMax", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"10", ",", "200"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"InputField", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "vdotMax", "]"}], ",", 
+                    RowBox[{"FieldSize", "\[Rule]", "5"}]}], "]"}]}], "}"}]}],
+                  "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"Alignment", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"Left", ",", "Center", ",", "Left"}], "}"}]}], ",", 
+                RowBox[{"Spacings", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"1", ",", "1", ",", "1"}], "}"}], ",", "0.5"}], 
+                  "}"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"Grid", "[", 
+               RowBox[{
+                RowBox[{"{", "\[IndentingNewLine]", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\!\(\*SubscriptBox[\(v\), \(in_max\)]\)\>\"", ",", 
+                    "labelSize"}], "]"}], ",", 
+                    RowBox[{"Slider", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "vinMax", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0.5", ",", "100"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"InputField", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "vinMax", "]"}], ",", 
+                    RowBox[{"FieldSize", "\[Rule]", "5"}]}], "]"}]}], "}"}], 
+                  ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<f(\!\(\*SubscriptBox[\(v\), \
+\(in\)]\)\!\(\*SubscriptBox[\()\), \(max\)]\)\>\"", ",", "labelSize"}], "]"}],
+                     ",", 
+                    RowBox[{"Slider", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "fMax", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"10", ",", "1000"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"InputField", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "fMax", "]"}], ",", 
+                    RowBox[{"FieldSize", "\[Rule]", "5"}]}], "]"}]}], "}"}]}],
+                  "}"}], ",", 
+                RowBox[{"Alignment", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"Left", ",", "Center", ",", "Left"}], "}"}]}], ",", 
+                RowBox[{"Spacings", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"1", ",", "1", ",", "2"}], "}"}], ",", "0.5"}], 
+                  "}"}]}]}], "]"}]}], "\[IndentingNewLine]", "}"}], "}"}], 
+           ",", "\[IndentingNewLine]", 
+           RowBox[{"Alignment", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"Left", ",", "Left", ",", "Right"}], "}"}]}], ",", 
+           RowBox[{"Spacings", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"18", ",", "0"}], "}"}]}]}], "]"}], "}"}]}], 
+       "\[IndentingNewLine]", "}"}], ",", 
+      RowBox[{"Alignment", "\[Rule]", 
+       RowBox[{"{", "Center", "}"}]}]}], "]"}], "\[IndentingNewLine]", 
+    "]"}]}], "\[IndentingNewLine]", "]"}]}], "Input",
+ InitializationCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{{3.560265230207899*^9, 3.5602653040712843`*^9}, {
+   3.5607190817831473`*^9, 3.5607191596671476`*^9}, {3.5607202556361475`*^9, 
+   3.5607202808391476`*^9}, {3.564436989128248*^9, 3.564436989487018*^9}, {
+   3.5644370198888845`*^9, 3.564437034894834*^9}, {3.566930971341337*^9, 
+   3.566930974383337*^9}, {3.567189638388069*^9, 3.5671896906178694`*^9}, {
+   3.567189722535469*^9, 3.567189746980669*^9}, {3.5671897796314692`*^9, 
+   3.567189817820269*^9}, {3.567190153012269*^9, 3.567190191107469*^9}, 
+   3.5675463510583296`*^9, {3.568044396949066*^9, 3.568044405685066*^9}, {
+   3.5680445443306665`*^9, 3.568044594484666*^9}, {3.568044631534666*^9, 
+   3.5680447394710665`*^9}, {3.568044855146066*^9, 3.5680448823368664`*^9}, {
+   3.568044923099666*^9, 3.568044929745266*^9}, {3.5680449602588663`*^9, 
+   3.5680450115370665`*^9}, {3.568045224795866*^9, 3.5680452946838665`*^9}, {
+   3.568045427190266*^9, 3.568045439420666*^9}, {3.568146805959733*^9, 
+   3.568146835927333*^9}, {3.568563381792055*^9, 3.5685634528690553`*^9}, {
+   3.568563510324055*^9, 3.5685635507950554`*^9}, {3.570832232769886*^9, 
+   3.570832235250286*^9}, {3.57157993772742*^9, 3.5715799706434197`*^9}, {
+   3.5715800091598196`*^9, 3.5715800886262197`*^9}, {3.5715801276886196`*^9, 
+   3.5715801376258197`*^9}, {3.57158016976182*^9, 3.57158017480062*^9}, {
+   3.57158024921262*^9, 3.57158025933702*^9}, {3.573997808441142*^9, 
+   3.5739978473321915`*^9}, 3.573997908658592*^9, {3.5739979451784267`*^9, 
+   3.5739979647565517`*^9}, {3.5739980251289387`*^9, 
+   3.5739980871861367`*^9}, {3.573998133456033*^9, 3.5739981380736628`*^9}, 
+   3.573998168353457*^9, {3.573998202221274*^9, 3.573998268335498*^9}, {
+   3.5739983895794754`*^9, 3.5739984861141825`*^9}, {3.573998761526187*^9, 
+   3.573998829917025*^9}, {3.5739989364337473`*^9, 3.5739991118355093`*^9}, {
+   3.573999180865952*^9, 3.5739991810999537`*^9}, {3.5739992545440617`*^9, 
+   3.5739993817628775`*^9}, {3.573999641502348*^9, 3.573999646353979*^9}, {
+   3.5740019404461355`*^9, 3.574002041222781*^9}, {3.574002123826311*^9, 
+   3.574002147819265*^9}, {3.5740022128716817`*^9, 3.5740023923976326`*^9}, {
+   3.5740024296038713`*^9, 3.574002589552696*^9}, {3.5740027048218355`*^9, 
+   3.574002708051056*^9}, {3.5740027769410973`*^9, 3.574002778064305*^9}, {
+   3.5740028500743666`*^9, 3.5740029963897047`*^9}, {3.5740030506312523`*^9, 
+   3.5740030814414496`*^9}, {3.5740031617195644`*^9, 
+   3.5740032088318663`*^9}, {3.591025146632236*^9, 3.591025147630636*^9}, {
+   3.591025279637836*^9, 3.591025395483436*^9}, {3.5910254269954357`*^9, 
+   3.591025481720236*^9}, {3.591025534105036*^9, 3.591025553012236*^9}, {
+   3.5913877709818783`*^9, 3.591387771527878*^9}, {3.5913878452690783`*^9, 
+   3.591387845752678*^9}, {3.591387915640678*^9, 3.591387934672678*^9}, {
+   3.5999423957314634`*^9, 3.5999424047854633`*^9}, {3.599942844664463*^9, 
+   3.5999428699364634`*^9}, {3.599942907532463*^9, 3.599942919575663*^9}, {
+   3.599942977716863*^9, 3.5999430093068633`*^9}, {3.599943052456463*^9, 
+   3.599943133451663*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  DynamicModuleBox[{$CellContext`Ic$$ = 
+   7.447400000000001*^-14, $CellContext`Il$$ = 
+   2.23892*^-13, $CellContext`Iref$$ = 7.333, $CellContext`pqua$$ = 
+   1.50316, $CellContext`ptau$$ = 3.35839*^-15, $CellContext`pref$$ = 
+   0.022, $CellContext`vmMax$$ = 5, $CellContext`vdotMin$$ = 
+   0, $CellContext`vdotMax$$ = 20, $CellContext`vinMax$$ = 
+   2, $CellContext`fMax$$ = 50, $CellContext`ilitMax$$ = 3}, 
+   PanelBox[
+    TagBox[GridBox[{
+       {
+        TagBox[GridBox[{
+           {
+            TagBox[GridBox[{
+               {
+                StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(I\\), \\(c\\)]\\)\"\>",
+                 StripOnInput->False,
+                 FontSize->16], 
+                SliderBox[Dynamic[$CellContext`Ic$$], {0.01, 5}], 
+                InputFieldBox[Dynamic[$CellContext`Ic$$],
+                 FieldSize->5]},
+               {
+                StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(I\\), \\(l\\)]\\)\"\>",
+                 StripOnInput->False,
+                 FontSize->16], 
+                SliderBox[Dynamic[$CellContext`Il$$], {0.01, 1, 0.005}], 
+                InputFieldBox[Dynamic[$CellContext`Il$$],
+                 FieldSize->5]},
+               {
+                
+                StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(I\\), \
+\\(ref\\)]\\)\"\>",
+                 StripOnInput->False,
+                 FontSize->16], 
+                SliderBox[Dynamic[$CellContext`Iref$$], {0.01, 10}], 
+                InputFieldBox[Dynamic[$CellContext`Iref$$],
+                 FieldSize->5]}
+              },
+              AutoDelete->False,
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Left}}, "Rows" -> {{Center}}, 
+                "ItemsIndexed" -> {Left}},
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+              GridBoxSpacings->{"Columns" -> {1, 1, 2}, "Rows" -> {{0.5}}}],
+             "Grid"], 
+            TagBox[GridBox[{
+               {
+                
+                StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(\[Rho]\\), \
+\\(qua\\)]\\)\"\>",
+                 StripOnInput->False,
+                 FontSize->16], 
+                SliderBox[Dynamic[$CellContext`pqua$$], {0.5, 6}], 
+                InputFieldBox[Dynamic[$CellContext`pqua$$],
+                 FieldSize->5]},
+               {
+                
+                StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(\[Rho]\\), \
+\\(tau\\)]\\)\"\>",
+                 StripOnInput->False,
+                 FontSize->16], 
+                SliderBox[Dynamic[$CellContext`ptau$$], {0.0001, 0.005}], 
+                InputFieldBox[Dynamic[$CellContext`ptau$$],
+                 FieldSize->5]},
+               {
+                
+                StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(\[Rho]\\), \
+\\(ref\\)]\\)\"\>",
+                 StripOnInput->False,
+                 FontSize->16], 
+                SliderBox[Dynamic[$CellContext`pref$$], {0., 0.2}], 
+                InputFieldBox[Dynamic[$CellContext`pref$$],
+                 FieldSize->5]}
+              },
+              AutoDelete->False,
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Left}}, "Rows" -> {{Center}}, 
+                "ItemsIndexed" -> {Left}},
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+              GridBoxSpacings->{"Columns" -> {1, 1, 2}, "Rows" -> {{0.5}}}],
+             "Grid"], 
+            TagBox[GridBox[{
+               {
+                StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(v\\), \\(in\\)]\\)\"\>",
+                 StripOnInput->False,
+                 FontSize->16], 
+                PanelBox[
+                 DynamicBox[ToBoxes[
+                   $CellContext`Vin[$CellContext`Ic$$, $CellContext`Il$$, \
+$CellContext`pqua$$], TraditionalForm],
+                  ImageSizeCache->{45., {0., 8.}}],
+                 Background->GrayLevel[0.85]]},
+               {
+                
+                StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(\[Tau]\\), \\(m\\)]\\)\
+\"\>",
+                 StripOnInput->False,
+                 FontSize->16], 
+                PanelBox[
+                 DynamicBox[ToBoxes[
+                   $CellContext`\[Tau][$CellContext`Il$$, \
+$CellContext`ptau$$], TraditionalForm],
+                  ImageSizeCache->{27., {0., 8.}}],
+                 Background->GrayLevel[0.85]]},
+               {
+                
+                StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(t\\), \
+\\(ref\\)]\\)\"\>",
+                 StripOnInput->False,
+                 FontSize->16], 
+                PanelBox[
+                 DynamicBox[ToBoxes[
+                   $CellContext`tref[$CellContext`Iref$$, \
+$CellContext`pref$$], TraditionalForm],
+                  ImageSizeCache->{57., {0., 8.}}],
+                 Background->GrayLevel[0.85]]}
+              },
+              AutoDelete->False,
+              GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Left}}},
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+              GridBoxSpacings->{"Columns" -> {{1}}, "Rows" -> {{0}}}],
+             "Grid"], 
+            TagBox[GridBox[{
+               {
+                StyleBox["\<\"f\"\>",
+                 StripOnInput->False,
+                 FontSize->16], 
+                PanelBox[
+                 DynamicBox[ToBoxes[
+                   $CellContext`f[
+                    $CellContext`Vin[$CellContext`Ic$$, $CellContext`Il$$, \
+$CellContext`pqua$$], 
+                    $CellContext`\[Tau][$CellContext`Il$$, \
+$CellContext`ptau$$], 
+                    $CellContext`tref[$CellContext`Iref$$, \
+$CellContext`pref$$]], TraditionalForm],
+                  ImageSizeCache->{75., {1., 8.}}],
+                 Background->GrayLevel[0.85]]},
+               {
+                
+                StyleBox["\<\"2/\\!\\(\\*SubscriptBox[\\(\[Rho]\\), \
+\\(qua\\)]\\)\"\>",
+                 StripOnInput->False,
+                 FontSize->16], 
+                PanelBox[
+                 DynamicBox[ToBoxes[2/$CellContext`pqua$$, TraditionalForm],
+                  ImageSizeCache->{39., {0., 8.}}],
+                 Background->GrayLevel[0.85]]},
+               {
+                
+                StyleBox["\<\"f(2/\\!\\(\\*SubscriptBox[\\(\[Rho]\\), \
+\\(qua\\)]\\))\"\>",
+                 StripOnInput->False,
+                 FontSize->16], 
+                PanelBox[
+                 DynamicBox[ToBoxes[
+                   $CellContext`f[
+                    $CellContext`Vin[$CellContext`Ic$$, $CellContext`Il$$, 
+                    2/$CellContext`pqua$$], 
+                    $CellContext`\[Tau][$CellContext`Il$$, \
+$CellContext`ptau$$], 
+                    $CellContext`tref[$CellContext`Iref$$, \
+$CellContext`pref$$]], TraditionalForm],
+                  ImageSizeCache->{75., {1., 8.}}],
+                 Background->GrayLevel[0.85]]}
+              },
+              AutoDelete->False,
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+             "Grid"]}
+          },
+          AutoDelete->False,
+          
+          GridBoxItemSize->{
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+          GridBoxSpacings->{"Columns" -> {{5}}, "Rows" -> {{0}}}],
+         "Grid"]},
+       {
+        TagBox[GridBox[{
+           {
+            PanelBox[
+             DynamicBox[ToBoxes[
+               Plot[{
+                 $CellContext`q[$CellContext`Vmem, $CellContext`Ic$$, \
+$CellContext`Il$$, 
+                  $CellContext`\[Tau][$CellContext`Il$$, \
+$CellContext`ptau$$], $CellContext`pqua$$]}, {$CellContext`Vmem, 
+                 0, $CellContext`vmMax$$}, 
+                PlotRange -> {$CellContext`vdotMin$$, $CellContext`vdotMax$$},
+                 PlotLabel -> 
+                Style["Bifurcation Model", $CellContext`titleLabelSize], 
+                AxesLabel -> {
+                  Style[
+                  "\!\(\*SubscriptBox[\(v\), \(m\)]\)", \
+$CellContext`labelSize], 
+                  Style[
+                  "\!\(\*OverscriptBox[\(v\), \(.\)]\)", \
+$CellContext`labelSize]}, ImageSize -> 500], TraditionalForm],
+              ImageSizeCache->{450., {157., 160.}}]], 
+            PanelBox[
+             DynamicBox[ToBoxes[
+               Show[
+                Plot[{
+                  Piecewise[{{0, $CellContext`vin <= 0}, {
+                    $CellContext`f[$CellContext`vin, 
+                    $CellContext`\[Tau][$CellContext`Il$$, \
+$CellContext`ptau$$], 
+                    $CellContext`tref[$CellContext`Iref$$, \
+$CellContext`pref$$]], $CellContext`vin > 0.5}}], 
+                  Piecewise[{{0, $CellContext`vin <= 0}, {
+                    $CellContext`f[$CellContext`vin, 
+                    $CellContext`\[Tau][$CellContext`Il$$, \
+$CellContext`ptau$$], 0], $CellContext`vin > 0.5}}], 
+                  $CellContext`f[
+                   $CellContext`Vin[$CellContext`Ic$$, $CellContext`Il$$, \
+$CellContext`pqua$$], 
+                   $CellContext`\[Tau][$CellContext`Il$$, \
+$CellContext`ptau$$], 
+                   $CellContext`tref[$CellContext`Iref$$, \
+$CellContext`pref$$]], 
+                  $CellContext`f[
+                   $CellContext`Vin[$CellContext`Ic$$, $CellContext`Il$$, \
+$CellContext`pqua$$], 
+                   $CellContext`\[Tau][$CellContext`Il$$, \
+$CellContext`ptau$$], 0]}, {$CellContext`vin, 0, $CellContext`vinMax$$}, 
+                 AxesOrigin -> {0, 0}, PlotRange -> {0, $CellContext`fMax$$}, 
+                 PlotLabel -> 
+                 Style["Quadratic Neuron Firing Rate", \
+$CellContext`titleLabelSize], PlotStyle -> {Blue, 
+                   Darker[Red], {Dashed, Blue}, {Dashed, 
+                    Darker[Red]}}, AxesLabel -> {
+                   Style[
+                   "\!\(\*SubscriptBox[\(v\), \(in\)]\)", \
+$CellContext`labelSize], 
+                   Style[
+                   "f(\!\(\*SubscriptBox[\(v\), \(in\)]\))", \
+$CellContext`labelSize]}, ImageSize -> 500], 
+                ListPlot[{{
+                   $CellContext`Vin[$CellContext`Ic$$, $CellContext`Il$$, \
+$CellContext`pqua$$], 
+                   $CellContext`f[
+                    $CellContext`Vin[$CellContext`Ic$$, $CellContext`Il$$, \
+$CellContext`pqua$$], 
+                    $CellContext`\[Tau][$CellContext`Il$$, \
+$CellContext`ptau$$], 0]}}, PlotStyle -> Darker[Green], 
+                 PlotMarkers -> {"\[FilledCircle]", Small}], 
+                ListPlot[{{
+                   $CellContext`Vin[$CellContext`Ic$$, $CellContext`Il$$, \
+$CellContext`pqua$$], 
+                   $CellContext`f[
+                    $CellContext`Vin[$CellContext`Ic$$, $CellContext`Il$$, \
+$CellContext`pqua$$], 
+                    $CellContext`\[Tau][$CellContext`Il$$, \
+$CellContext`ptau$$], 
+                    $CellContext`tref[$CellContext`Iref$$, \
+$CellContext`pref$$]]}}, PlotStyle -> Darker[Green], 
+                 PlotMarkers -> {"\[FilledCircle]", Small}]], TraditionalForm],
+              ImageSizeCache->{450., {156., 159.}}]], 
+            PanelBox[
+             DynamicBox[ToBoxes[
+               Show[
+                Plot[{Null, 
+                  $CellContext`f[
+                   $CellContext`Vin[$CellContext`Ic$$, $CellContext`Ilit, \
+$CellContext`pqua$$], 
+                   $CellContext`\[Tau][$CellContext`Ilit, \
+$CellContext`ptau$$], 
+                   $CellContext`tref[$CellContext`Iref$$, \
+$CellContext`pref$$]], 
+                  $CellContext`f[
+                   $CellContext`Vin[$CellContext`Ic$$, $CellContext`Ilit, \
+$CellContext`pqua$$], 
+                   $CellContext`\[Tau][$CellContext`Ilit, \
+$CellContext`ptau$$], 0]}, {$CellContext`Ilit, 0, $CellContext`ilitMax$$}, 
+                 AxesOrigin -> {0, 0}, PlotRange -> {0, $CellContext`fMax$$}, 
+                 PlotLabel -> 
+                 Style["Quadratic Neuron Firing Rate", \
+$CellContext`titleLabelSize], PlotStyle -> {
+                   Darker[Red], Blue}, AxesLabel -> {
+                   Style[
+                   "\!\(\*SubscriptBox[\(I\), \(lk\)]\)", \
+$CellContext`labelSize], 
+                   Style[
+                   "f(\!\(\*SubscriptBox[\(I\), \(lk\)]\))", \
+$CellContext`labelSize]}, ImageSize -> 500]], TraditionalForm],
+              ImageSizeCache->{450., {156., 160.}}]], 
+            TagBox[GridBox[{
+               {
+                StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(f\\), \\(0\\)]\\)\"\>",
+                 StripOnInput->False,
+                 FontSize->16], 
+                PanelBox[
+                 DynamicBox[ToBoxes[
+                   $CellContext`f[
+                    $CellContext`Vin[$CellContext`Ic$$, $CellContext`Il$$, \
+$CellContext`pqua$$], 
+                    $CellContext`\[Tau][$CellContext`Il$$, \
+$CellContext`ptau$$], 0], TraditionalForm],
+                  ImageSizeCache->{75., {1., 8.}}],
+                 Background->GrayLevel[0.85]]},
+               {
+                StyleBox["\<\"f\"\>",
+                 StripOnInput->False,
+                 FontSize->16], 
+                PanelBox[
+                 DynamicBox[ToBoxes[
+                   $CellContext`f[
+                    $CellContext`Vin[$CellContext`Ic$$, $CellContext`Il$$, \
+$CellContext`pqua$$], 
+                    $CellContext`\[Tau][$CellContext`Il$$, \
+$CellContext`ptau$$], 
+                    $CellContext`tref[$CellContext`Iref$$, \
+$CellContext`pref$$]], TraditionalForm],
+                  ImageSizeCache->{75., {1., 8.}}],
+                 Background->GrayLevel[0.85]]},
+               {
+                
+                StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(\[CapitalDelta]f\\), \
+\\(ref\\)]\\)\"\>",
+                 StripOnInput->False,
+                 FontSize->16], 
+                PanelBox[
+                 DynamicBox[ToBoxes[$CellContext`f[
+                    $CellContext`Vin[$CellContext`Ic$$, $CellContext`Il$$, \
+$CellContext`pqua$$], 
+                    $CellContext`\[Tau][$CellContext`Il$$, \
+$CellContext`ptau$$], 0] - $CellContext`f[
+                    $CellContext`Vin[$CellContext`Ic$$, $CellContext`Il$$, \
+$CellContext`pqua$$], 
+                    $CellContext`\[Tau][$CellContext`Il$$, \
+$CellContext`ptau$$], 
+                    $CellContext`tref[$CellContext`Iref$$, \
+$CellContext`pref$$]], TraditionalForm],
+                  ImageSizeCache->{68., {1., 8.}}],
+                 Background->GrayLevel[0.85]]}
+              },
+              AutoDelete->False,
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+             "Grid"]}
+          },
+          AutoDelete->False,
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Left}}, "Rows" -> {{Left}}, 
+            "ItemsIndexed" -> {Right}},
+          
+          GridBoxItemSize->{
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+         "Grid"]},
+       {
+        TagBox[GridBox[{
+           {
+            TagBox[GridBox[{
+               {
+                
+                StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(v\\), \
+\\(m_max\\)]\\)\"\>",
+                 StripOnInput->False,
+                 FontSize->16], 
+                SliderBox[Dynamic[$CellContext`vmMax$$], {0., 20}], 
+                InputFieldBox[Dynamic[$CellContext`vmMax$$],
+                 FieldSize->5]},
+               {
+                
+                StyleBox["\<\"\\!\\(\\*SubscriptBox[OverscriptBox[\\(v\\), \
+\\(.\\)], \\(min\\)]\\)\"\>",
+                 StripOnInput->False,
+                 FontSize->16], 
+                SliderBox[Dynamic[$CellContext`vdotMin$$], {-10, 0}], 
+                InputFieldBox[Dynamic[$CellContext`vdotMin$$],
+                 FieldSize->5]},
+               {
+                
+                StyleBox["\<\"\\!\\(\\*SubscriptBox[OverscriptBox[\\(v\\), \
+\\(.\\)], \\(max\\)]\\)\"\>",
+                 StripOnInput->False,
+                 FontSize->16], 
+                SliderBox[Dynamic[$CellContext`vdotMax$$], {10, 200}], 
+                InputFieldBox[Dynamic[$CellContext`vdotMax$$],
+                 FieldSize->5]}
+              },
+              AutoDelete->False,
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Left}}, "Rows" -> {{Center}}, 
+                "ItemsIndexed" -> {Left}},
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+              GridBoxSpacings->{"Columns" -> {1, 1, 1}, "Rows" -> {{0.5}}}],
+             "Grid"], 
+            TagBox[GridBox[{
+               {
+                
+                StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(v\\), \\(in_max\\)]\\)\
+\"\>",
+                 StripOnInput->False,
+                 FontSize->16], 
+                SliderBox[Dynamic[$CellContext`vinMax$$], {0.5, 100}], 
+                InputFieldBox[Dynamic[$CellContext`vinMax$$],
+                 FieldSize->5]},
+               {
+                
+                StyleBox["\<\"f(\\!\\(\\*SubscriptBox[\\(v\\), \
+\\(in\\)]\\)\\!\\(\\*SubscriptBox[\\()\\), \\(max\\)]\\)\"\>",
+                 StripOnInput->False,
+                 FontSize->16], 
+                SliderBox[Dynamic[$CellContext`fMax$$], {10, 1000}], 
+                InputFieldBox[Dynamic[$CellContext`fMax$$],
+                 FieldSize->5]}
+              },
+              AutoDelete->False,
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Left}}, "Rows" -> {{Center}}, 
+                "ItemsIndexed" -> {Left}},
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+              GridBoxSpacings->{"Columns" -> {1, 1, 2}, "Rows" -> {{0.5}}}],
+             "Grid"]}
+          },
+          AutoDelete->False,
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Left}}, "Rows" -> {{Left}}, 
+            "ItemsIndexed" -> {Right}},
+          
+          GridBoxItemSize->{
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+          GridBoxSpacings->{"Columns" -> {{18}}, "Rows" -> {{0}}}],
+         "Grid"]}
+      },
+      AutoDelete->False,
+      GridBoxAlignment->{"Columns" -> {{Center}}},
+      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+     "Grid"]],
+   DynamicModuleValues:>{}], TraditionalForm]], "Output",
+ InitializationCell->True,
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.572363825260239*^9, {3.573919837801405*^9, 3.5739198397202168`*^9}, {
+   3.573997722046788*^9, 3.573997723747199*^9}, 3.5739978486113997`*^9, 
+   3.5739979656301575`*^9, 3.5739980272193527`*^9, {3.5739980729120455`*^9, 
+   3.5739980880597425`*^9}, 3.573998768109429*^9, 3.57399900743864*^9, {
+   3.5739991006658382`*^9, 3.573999112397113*^9}, 3.5739991819111586`*^9, {
+   3.5739992708929667`*^9, 3.5739993190972757`*^9}, {3.573999349486271*^9, 
+   3.5739993824960823`*^9}, 3.5739996471339836`*^9, 3.574002042096387*^9, {
+   3.574002124933918*^9, 3.5740021488800716`*^9}, {3.5740024346583033`*^9, 
+   3.574002443643961*^9}, 3.5740025092891817`*^9, {3.5740025702085724`*^9, 
+   3.5740025901455*^9}, 3.574002708877861*^9, 3.57400277887551*^9, {
+   3.574002871462104*^9, 3.5740029448137736`*^9}, 3.574002997466111*^9, 
+   3.5740030821746545`*^9, {3.574003177101263*^9, 3.5740032097678723`*^9}, {
+   3.5740086906423006`*^9, 3.5740086921867003`*^9}, {3.5740846387950573`*^9, 
+   3.574084641313057*^9}, 3.574089317773915*^9, {3.574694911853315*^9, 
+   3.574694913569315*^9}, 3.576007011699464*^9, 3.582310846790555*^9, {
+   3.582567105941554*^9, 3.582567107571554*^9}, {3.5826501794998364`*^9, 
+   3.582650180983985*^9}, 3.5829121743563175`*^9, {3.583091585797684*^9, 
+   3.5830915905331573`*^9}, 3.5898321674288006`*^9, 3.5905209974779415`*^9, 
+   3.591025486493836*^9, 3.591025554275836*^9, {3.5913768694863153`*^9, 
+   3.5913768823305473`*^9}, 3.591387776753878*^9, 3.5913878469694777`*^9, 
+   3.5913879360766783`*^9, 3.5926175497338314`*^9, {3.5926700718825884`*^9, 
+   3.5926700801953096`*^9}, 3.598714962513733*^9, 3.5987924054556284`*^9, 
+   3.5999409585122633`*^9, 3.599942431642463*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TabView", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\"\<Theoretical (Dimensionless)\>\"", "\[Rule]", 
+      RowBox[{"Row", "[", 
+       RowBox[{"{", "\"\<Hello\>\"", "}"}], "]"}]}], ",", 
+     RowBox[{
+     "\"\<Applied Stacked Bias (\!\(\*SubscriptBox[\(I\), \(c\)]\))\>\"", 
+      "\[Rule]", " ", 
+      RowBox[{"Row", "[", 
+       RowBox[{"{", "\"\<Stacked Bias\>\"", "}"}], "]"}]}], ",", " ", 
+     RowBox[{
+     "\"\<Applied Dual Bias (\!\(\*SubscriptBox[\(I\), \(in\)]\))\>\"", 
+      "\[Rule]", "\"\<Dual Bias\>\""}]}], "}"}], ",", "1"}], "]"}]], "Input",
+ CellAutoOverwrite->False,
+ CellChangeTimes->{{3.599943245880863*^9, 3.5999433610088634`*^9}, {
+  3.5999434089788632`*^9, 3.5999434377764635`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TabViewBox[{{1,"\<\"Theoretical (Dimensionless)\"\>"->
+   TemplateBox[{"\"Hello\""},
+    "RowDefault"]}, {
+   2,"\<\"Applied Stacked Bias (\\!\\(\\*SubscriptBox[\\(I\\), \\(c\\)]\\))\"\
+\>"->
+   TemplateBox[{"\"Stacked Bias\""},
+    "RowDefault"]}, {
+   3,"\<\"Applied Dual Bias (\\!\\(\\*SubscriptBox[\\(I\\), \
+\\(in\\)]\\))\"\>"->"\<\"Dual Bias\"\>"}}, 1], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.5999432668472633`*^9, 3.599943336532463*^9}, {
+  3.599943405156863*^9, 3.599943438821663*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["V", "in"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " vs H Plot"
+}], "Subsection",
+ CellAutoOverwrite->False,
+ CellChangeTimes->{{3.599941170906063*^9, 3.599941191875063*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"h", "[", "vin", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"vin", ",", ".5", ",", "0"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.569786134091612*^9, 3.5697862394706116`*^9}, {
+  3.5697862782990117`*^9, 3.569786296972212*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      SqrtBox["2"], " ", "\[Pi]"}], 
+     SqrtBox[
+      RowBox[{"vin", "-", "0.5`"}]]], "-", "2", "+", 
+    InterpretationBox[
+     RowBox[{"O", "(", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"vin", "-", "0.5`"}], ")"}], "1"], ")"}],
+     SeriesData[$CellContext`vin, 0.5, {}, -1, 2, 2],
+     Editable->False]}],
+   SeriesData[$CellContext`vin, 0.5, {2^Rational[1, 2] Pi, -2}, -1, 2, 2],
+   Editable->False], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.569786158100012*^9, 3.5697862400478115`*^9}, {
+  3.569786278923012*^9, 3.569786297986212*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"h", "[", "vin", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"vin", ",", "0", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.569786073329612*^9, 3.5697861095060115`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  GraphicsBox[{{}, {}, 
+    {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1: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
+oe89MhYIhO6NCRno30OD/wEc6voZ
+      "]], 
+     LineBox[{{0.49979658112147485`, -1.0524169201410218`}, {
+      0.4998034629940311, 4.13256570088484}}]}},
+   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+   Axes->True,
+   AxesLabel->{None, None},
+   AxesOrigin->{0, 0},
+   Method->{},
+   PlotRange->{{0, 10}, {-1.0524169201410218`, 4.13256570088484}},
+   PlotRangeClipping->True,
+   PlotRangePadding->{
+     Scaled[0.02], 
+     Scaled[0.02]}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.5697860949044113`*^9, 3.5697861099272118`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Solve for Voltage Membrane", "Subsection",
+ CellAutoOverwrite->False,
+ CellChangeTimes->{{3.599942254590463*^9, 3.599942266248463*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"solution", "=", 
+  RowBox[{"DSolve", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"Vm", "'"}], "[", "t", "]"}], "\[Tau]"}], "==", 
+       RowBox[{
+        RowBox[{
+         FractionBox["1", "2"], 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"Vm", "[", "t", "]"}], ")"}], "2"]}], "-", 
+        RowBox[{"Vm", "[", "t", "]"}], "+", 
+        RowBox[{"Vin", "[", 
+         RowBox[{"Ic", ",", "Il", ",", "pqua"}], "]"}]}]}], ",", " ", 
+      RowBox[{
+       RowBox[{"Vm", "[", "0", "]"}], "\[Equal]", "1"}]}], "}"}], ",", 
+    RowBox[{"Vm", "[", "t", "]"}], ",", "t"}], "]"}]}]], "Input",
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.5681485192931333`*^9, {3.571506182329667*^9, 3.571506183047456*^9}, {
+   3.599941300490063*^9, 3.599941302993063*^9}, {3.5999413798760633`*^9, 
+   3.5999413805680633`*^9}, {3.5999418351470633`*^9, 
+   3.5999418357398634`*^9}, {3.599942024687063*^9, 3.599942040255863*^9}, {
+   3.599942099114663*^9, 3.599942099613863*^9}, {3.599942151109463*^9, 
+   3.599942170391063*^9}, {3.5999422015130634`*^9, 3.599942201934263*^9}, {
+   3.5999423262994633`*^9, 3.599942340034463*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"Solve", "::", "ifun"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"Inverse functions are being used by \
+\[NoBreak]\\!\\(TraditionalForm\\`Solve\\)\[NoBreak], so some solutions may \
+not be found; use Reduce for complete solution information. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Solve/ifun\\\", \
+ButtonNote -> \\\"Solve::ifun\\\"]\\)\"\>"}], TraditionalForm]], "Message", \
+"MSG",
+ CellChangeTimes->{
+  3.568148520182333*^9, 3.571506183718432*^9, 3.599941304460063*^9, 
+   3.599941382592063*^9, 3.599941841901863*^9, 3.599942041129463*^9, {
+   3.599942164307063*^9, 3.599942171139863*^9}, 3.599942203166663*^9, 
+   3.599942340784463*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Vm", "(", "t", ")"}], "\[Rule]", 
+     FractionBox[
+      RowBox[{
+       RowBox[{
+        SqrtBox[
+         RowBox[{
+          RowBox[{"2", " ", 
+           SuperscriptBox["Ic", "2"], " ", "pqua"}], "-", 
+          SuperscriptBox["Il", "2"]}]], " ", 
+        RowBox[{"tan", "(", 
+         FractionBox[
+          RowBox[{"t", " ", 
+           SqrtBox[
+            RowBox[{
+             RowBox[{"2", " ", 
+              SuperscriptBox["Ic", "2"], " ", "pqua"}], "-", 
+             SuperscriptBox["Il", "2"]}]]}], 
+          RowBox[{"2", " ", "Il", " ", "\[Tau]"}]], ")"}]}], "+", "Il"}], 
+      "Il"]}], "}"}], "}"}], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.568148520229133*^9, 3.5715061837340364`*^9, 3.599941304504063*^9, 
+   3.5999413826340632`*^9, 3.5999418419954634`*^9, 3.599942041238663*^9, {
+   3.599942164416263*^9, 3.599942171202263*^9}, 3.5999422032134633`*^9, 
+   3.599942340820463*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetOptions", "[", 
+   RowBox[{"Plot", ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", "400"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"solution", "=", 
+     RowBox[{
+      RowBox[{"DSolve", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"Vm", "'"}], "[", "t", "]"}], "\[Tau]"}], "==", 
+           RowBox[{
+            RowBox[{
+             FractionBox["1", "2"], 
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{"Vm", "[", "t", "]"}], ")"}], "2"]}], "-", 
+            RowBox[{"Vm", "[", "t", "]"}], "+", 
+            RowBox[{"Vin", "[", 
+             RowBox[{"Ic", ",", "Il", ",", "pqua"}], "]"}]}]}], ",", " ", 
+          RowBox[{
+           RowBox[{"Vm", "[", "0", "]"}], "\[Equal]", "1"}]}], "}"}], ",", 
+        RowBox[{"Vm", "[", "t", "]"}], ",", "t"}], "]"}], "[", 
+      RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Plot", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Vm", "[", "t", "]"}], "/.", "solution"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"t", ",", "0", ",", "10"}], "}"}]}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Tau]", ",", ".01"}], "}"}], ",", "0", ",", "1", ",", ".05", 
+     ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"Ic", ",", ".1"}], "}"}], ",", "0.01", ",", ".3", ",", ".01", 
+     ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"Il", ",", ".1"}], "}"}], ",", "0.01", ",", ".2", ",", ".005", 
+     ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"pqua", ",", ".51"}], "}"}], ",", "0.5", ",", "6", ",", ".25", 
+     ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"TrackedSymbols", "\[RuleDelayed]", 
+    RowBox[{"{", 
+     RowBox[{"\[Tau]", ",", "Ic", ",", "Il", ",", "pqua"}], "}"}]}]}], 
+  "]"}]}], "Input",
+ CellAutoOverwrite->False,
+ CellChangeTimes->{{3.56087762641952*^9, 3.560877812266103*^9}, 
+   3.5608779251303883`*^9, {3.5608780723561087`*^9, 3.5608781067455473`*^9}, 
+   3.5608803751793685`*^9, {3.5608810367445183`*^9, 3.5608811294357862`*^9}, {
+   3.560881188915734*^9, 3.5608812119850407`*^9}, 3.560881391980038*^9, {
+   3.560881591659004*^9, 3.560881643290167*^9}, {3.560882106129446*^9, 
+   3.560882142432076*^9}, {3.5608825364494734`*^9, 3.560882558765705*^9}, {
+   3.5608826028951178`*^9, 3.5608826204668746`*^9}, {3.5608829136441894`*^9, 
+   3.5608829259154167`*^9}, {3.5608832931581373`*^9, 3.560883440043824*^9}, {
+   3.560884014050219*^9, 3.5608840152653403`*^9}, {3.5608854445202513`*^9, 
+   3.560885449475747*^9}, 3.561408413655575*^9, {3.5681302908497467`*^9, 
+   3.5681303014109464`*^9}, {3.570476056079178*^9, 3.5704760567187777`*^9}, {
+   3.5715059839663467`*^9, 3.571505999367594*^9}, {3.5715060297497764`*^9, 
+   3.5715060711796627`*^9}, {3.5715061049937468`*^9, 
+   3.5715061122028413`*^9}, {3.5999422757854633`*^9, 3.5999422924634633`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Cubic Neuron", "Section",
+ CellChangeTimes->{{3.5584703871203547`*^9, 3.558470394816124*^9}, {
+  3.55847042667931*^9, 3.5584704274783897`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Bifurcation Model", "Subsection",
+ CellChangeTimes->{{3.558470402615904*^9, 3.558470404344076*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"c", "[", 
+   RowBox[{"Vm_", ",", " ", "Vin_", ",", "\[Tau]_"}], "]"}], " ", ":=", 
+  FractionBox[
+   RowBox[{" ", 
+    RowBox[{
+     RowBox[{
+      FractionBox["1", "3"], 
+      SuperscriptBox["Vm", "3"]}], "-", "Vm", " ", "+", " ", "Vin"}]}], 
+   "\[Tau]"]}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c", "[", 
+       RowBox[{"Vm", ",", "Vin", ",", "\[Tau]"}], "]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"Vm", ",", 
+       RowBox[{"-", "2"}], ",", "3"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Vin", ",", 
+     RowBox[{"Range", "[", 
+      RowBox[{"0", ",", " ", "2", ",", 
+       RowBox[{"1", "/", "3"}]}], "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Tau]", ",", "0.005", ",", ".2", ",", ".005", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
+  "]"}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.5584704325268946`*^9, 3.5584704366543074`*^9}, {
+  3.5584704745520964`*^9, 3.558470483948036*^9}, {3.5607792504903636`*^9, 
+  3.560779251322447*^9}, {3.564437233427405*^9, 3.564437233739403*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FormBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`Vin$$ = 0, $CellContext`\[Tau]$$ = 0.005, 
+      Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+      Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ =
+       1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+        Hold[$CellContext`Vin$$], {0, 
+         Rational[1, 3], 
+         Rational[2, 3], 1, 
+         Rational[4, 3], 
+         Rational[5, 3], 2}}, {
+        Hold[$CellContext`\[Tau]$$], 0.005, 0.2, 0.005}}, Typeset`size$$ = {
+      324., {99., 102.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      Typeset`skipInitDone$$ = True, $CellContext`Vin$76413$$ = 
+      0, $CellContext`\[Tau]$76414$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, TraditionalForm, 
+        "Variables" :> {$CellContext`Vin$$ = 0, $CellContext`\[Tau]$$ = 
+          0.005}, "ControllerVariables" :> {
+          Hold[$CellContext`Vin$$, $CellContext`Vin$76413$$, 0], 
+          Hold[$CellContext`\[Tau]$$, $CellContext`\[Tau]$76414$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> Plot[{
+           $CellContext`c[$CellContext`Vm, $CellContext`Vin$$, $CellContext`\
+\[Tau]$$]}, {$CellContext`Vm, -2, 3}], 
+        "Specifications" :> {{$CellContext`Vin$$, {0, 
+            Rational[1, 3], 
+            Rational[2, 3], 1, 
+            Rational[4, 3], 
+            Rational[5, 3], 2}}, {$CellContext`\[Tau]$$, 0.005, 0.2, 0.005, 
+           Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+       ImageSizeCache->{369., {158., 165.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    TraditionalForm],
+   Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.5608706202969775`*^9, {3.5608706588548326`*^9, 3.560870687707718*^9}, 
+   3.561216438861915*^9, 3.5644146504270535`*^9, {3.5644371857073107`*^9, 
+   3.564437223864666*^9}, 3.5650142107567587`*^9, 3.5669303763725367`*^9, 
+   3.5671890323060694`*^9, 3.5684727143623343`*^9, 3.568562603025055*^9, 
+   3.5697860469656115`*^9, 3.5699426564122767`*^9, 3.5704759084719777`*^9, 
+   3.570832164597886*^9, 3.570897119293785*^9, 3.570899779363516*^9, 
+   3.571505847671791*^9, 3.57157955907082*^9, 3.572363677450239*^9, 
+   3.5739198394862156`*^9, 3.5739977234663973`*^9, 3.5740086917967005`*^9, 
+   3.574084640906057*^9, 3.5740893185019875`*^9, 3.5746949131169147`*^9, 
+   3.576007013489464*^9, 3.5823108483517113`*^9, 3.5825671071815543`*^9, 
+   3.58265018073796*^9, 3.5829121758283176`*^9, 3.583091589445049*^9, 
+   3.5898321694412007`*^9, 3.591376870500744*^9, 3.5926175516240206`*^9, 
+   3.59871496363694*^9, 3.599940959729063*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[Pi]", "+", 
+      RowBox[{"2", 
+       RowBox[{"ArcCot", "[", 
+        SqrtBox[
+         RowBox[{
+          RowBox[{"-", "1"}], "+", 
+          RowBox[{"2", "Vin"}]}]], "]"}]}]}], 
+     SqrtBox[
+      RowBox[{
+       RowBox[{"-", "1"}], "+", 
+       RowBox[{"2", "Vin"}]}]]], "\[Equal]", "\[Infinity]"}], ",", " ", 
+   "Vin"}], "]"}]], "Input",
+ CellChangeTimes->{{3.582310817365613*^9, 3.582310830619938*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"Solve", "::", "infc"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"The system \[NoBreak]\\!\\(TraditionalForm\\`\\(\\(\[Pi] \
++ \\(\\(2\\\\ \\(\\(\\(\\(cot\\^\\(-1\\)\\)\\)(\\(\\(\\@\\(\\(\\(-1\\)\\) + \
+\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\))\\)\\)\\)\\)\\)\\/\\@\\(\\(\\(-1\\)\\) \
++ \\(\\(2\\\\ Vin\\)\\)\\) \[LongEqual] \[Infinity]\\)\\)\[NoBreak] contains \
+an infinite object \
+\[NoBreak]\\!\\(TraditionalForm\\`\[Infinity]\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
+\\\"Solve::infc\\\"]\\)\"\>"}], TraditionalForm]], "Message", "MSG",
+ CellChangeTimes->{3.58231084854473*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       RowBox[{"2", " ", 
+        RowBox[{
+         SuperscriptBox["cot", 
+          RowBox[{"-", "1"}]], "(", 
+         SqrtBox[
+          RowBox[{
+           RowBox[{"2", " ", "Vin"}], "-", "1"}]], ")"}]}], "+", "\[Pi]"}], 
+      SqrtBox[
+       RowBox[{
+        RowBox[{"2", " ", "Vin"}], "-", "1"}]]], "\[LongEqual]", 
+     "\[Infinity]"}], ",", "Vin"}], "]"}], TraditionalForm]], "Output",
+ CellChangeTimes->{3.5823108486247387`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ArcCot", "[", "0", "]"}]], "Input",
+ CellChangeTimes->{{3.5823117893368*^9, 3.582311795849451*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox["\[Pi]", "2"], TraditionalForm]], "Output",
+ CellChangeTimes->{3.582311797545621*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowToolbars->{"RulerBar", "EditBar"},
+WindowSize->{1239, 1356},
+WindowMargins->{{57, Automatic}, {Automatic, 22}},
+CellContext->Notebook,
+Magnification->0.8999999761581421,
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Default.nb"]], 
+   Cell[
+    StyleData["Title"], FontFamily -> "Arial", FontSize -> 28, FontWeight -> 
+    "Bold", FontSlant -> "Plain", 
+    FontVariations -> {"StrikeThrough" -> False, "Underline" -> False}], 
+   Cell[
+    StyleData["Subtitle"], FontFamily -> "Arial", FontSize -> 22, FontWeight -> 
+    "Plain", FontSlant -> "Plain", 
+    FontVariations -> {"StrikeThrough" -> False, "Underline" -> False}], 
+   Cell[
+    StyleData["Subsubtitle"], FontFamily -> "Arial", FontSize -> 16, 
+    FontWeight -> "Plain", FontSlant -> "Plain", 
+    FontVariations -> {"StrikeThrough" -> False, "Underline" -> False}], 
+   Cell[
+    StyleData["Section"]], 
+   Cell[
+    StyleData["Subsection"]], 
+   Cell[
+    StyleData["Subsubsection"]], 
+   Cell[
+    StyleData["Text"]], 
+   Cell[
+    StyleData["Code"]], 
+   Cell[
+    StyleData["Input"]], 
+   Cell[
+    StyleData["Output"]], 
+   Cell[
+    StyleData["Item"]], 
+   Cell[
+    StyleData["ItemParagraph"]], 
+   Cell[
+    StyleData["Subitem"]], 
+   Cell[
+    StyleData["SubitemParagraph"]], 
+   Cell[
+    StyleData["Subsubitem"]], 
+   Cell[
+    StyleData["SubsubitemParagraph"]], 
+   Cell[
+    StyleData["ItemNumbered"]], 
+   Cell[
+    StyleData["SubitemNumbered"]], 
+   Cell[
+    StyleData["SubsubitemNumbered"]], 
+   Cell[
+    StyleData["InlineFormula"]], 
+   Cell[
+    StyleData["DisplayFormula"]], 
+   Cell[
+    StyleData["DisplayFormulaNumbered"]], 
+   Cell[
+    StyleData["Program"]]}, Visible -> False, FrontEndVersion -> 
+  "9.0 for Microsoft Windows (64-bit) (January 25, 2013)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 393, 6, 43, "Title"],
+Cell[CellGroupData[{
+Cell[997, 32, 255, 3, 76, "Section"],
+Cell[CellGroupData[{
+Cell[1277, 39, 218, 3, 44, "Subsection"],
+Cell[1498, 44, 2384, 63, 202, "Text"],
+Cell[CellGroupData[{
+Cell[3907, 111, 40647, 867, 2026, "Input",
+ InitializationCell->True],
+Cell[44557, 980, 20132, 476, 567, "Output",
+ InitializationCell->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64726, 1461, 753, 18, 50, "Input"],
+Cell[65482, 1481, 531, 12, 70, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[66062, 1499, 247, 8, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[66334, 1511, 294, 7, 29, "Input"],
+Cell[66631, 1520, 661, 19, 55, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[67329, 1544, 241, 6, 29, "Input"],
+Cell[67573, 1552, 8461, 146, 209, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[76083, 1704, 141, 2, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[76249, 1710, 1224, 30, 42, "Input"],
+Cell[77476, 1742, 799, 17, 19, "Message"],
+Cell[78278, 1761, 994, 28, 82, "Output"]
+}, Open  ]],
+Cell[79287, 1792, 3370, 80, 137, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[82706, 1878, 149, 2, 76, "Section"],
+Cell[CellGroupData[{
+Cell[82880, 1884, 105, 1, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[83010, 1889, 1203, 33, 72, "Input",
+ InitializationCell->True],
+Cell[84216, 1924, 3171, 61, 338, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[87424, 1990, 504, 17, 61, "Input"],
+Cell[87931, 2009, 807, 16, 45, "Message"],
+Cell[88741, 2027, 545, 18, 58, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[89323, 2050, 123, 2, 29, "Input"],
+Cell[89449, 2054, 123, 3, 42, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
