@@ -1,0 +1,2602 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[    175186,       2593]
+NotebookOptionsPosition[      7057,        171]
+NotebookOutlinePosition[    174725,       2579]
+CellTagsIndexPosition[    174682,       2576]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["Trigonometric Functions",
+ FontSize->24]], "Title",
+ CellChangeTimes->{{3.458229456160112*^9, 3.4582294588793316`*^9}}],
+
+Cell[TextData[StyleBox["Understanding the Characteristics and Behavior of \
+Trigonometric Functions",
+ FontSize->16]], "Subtitle",
+ CellChangeTimes->{{3.4582294643646545`*^9, 3.4582294730224004`*^9}}],
+
+Cell["Professor Stein", "TeacherName",
+ CellChangeTimes->{{3.4582294923851204`*^9, 3.458229494197934*^9}},
+ FontSize->12],
+
+Cell["Precalculus & Trigonometry", "ClassName",
+ CellChangeTimes->{{3.4582294978704433`*^9, 3.458229501480442*^9}},
+ FontSize->12],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Lab Exercise",
+ FontSize->12]], "Subsection",
+ CellChangeTimes->{{3.457269248476753*^9, 3.457269257724622*^9}, {
+  3.4582296039825263`*^9, 3.4582296059516163`*^9}}],
+
+Cell["\<\
+Examine the following model and use it to answer the questions below.\
+\>", "Text",
+ CellChangeTimes->{{3.4572690405243998`*^9, 3.457269092506096*^9}, {
+  3.4572692527726383`*^9, 3.4572692753768044`*^9}, {3.458229620860442*^9, 
+  3.4582296347847233`*^9}, {3.486114707609375*^9, 3.486114709609375*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FormBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`a$$ = 1, $CellContext`c$$ = 
+      0, $CellContext`f$$ = 1, $CellContext`function$$ = 
+      Sin, $CellContext`p$$ = 0, Typeset`show$$ = True, 
+      Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+      "\"untitled\"", Typeset`specs$$ = {{{
+         Hold[$CellContext`f$$], 1, "frequency"}, 1, 5}, {{
+         Hold[$CellContext`a$$], 1, "amplitude"}, -5, 5}, {{
+         Hold[$CellContext`p$$], 0, "horizontal shift"}, -3, 3}, {{
+         Hold[$CellContext`c$$], 0, "vertical shift"}, -2, 2}, {
+        Hold[$CellContext`function$$], {Sin, Cos, Tan, Csc, Sec, Cot}}}, 
+      Typeset`size$$ = {300., {98., 102.}}, Typeset`update$$ = 0, 
+      Typeset`initDone$$, Typeset`skipInitDone$$ = 
+      False, $CellContext`f$3597$$ = 0, $CellContext`a$3598$$ = 
+      0, $CellContext`p$3599$$ = 0, $CellContext`c$3600$$ = 
+      0, $CellContext`function$3601$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, TraditionalForm, 
+        "Variables" :> {$CellContext`a$$ = 1, $CellContext`c$$ = 
+          0, $CellContext`f$$ = 1, $CellContext`function$$ = 
+          Sin, $CellContext`p$$ = 0}, "ControllerVariables" :> {
+          Hold[$CellContext`f$$, $CellContext`f$3597$$, 0], 
+          Hold[$CellContext`a$$, $CellContext`a$3598$$, 0], 
+          Hold[$CellContext`p$$, $CellContext`p$3599$$, 0], 
+          Hold[$CellContext`c$$, $CellContext`c$3600$$, 0], 
+          Hold[$CellContext`function$$, $CellContext`function$3601$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> 
+        Plot[$CellContext`a$$ $CellContext`function$$[$CellContext`f$$ \
+($CellContext`x - $CellContext`p$$)] + $CellContext`c$$, {$CellContext`x, (-2)
+             Pi, 2 Pi}, 
+          Ticks -> {{(-2) Pi, -(3 (Pi/2)), -Pi, -(Pi/2), Pi/2, Pi, 3 (Pi/2), 
+             2 Pi}, True}, PlotStyle -> {
+            Thickness[0.008], 
+            Hue[0.6]}, PlotRange -> {-6, 6}, PlotLabel -> Style[
+            ToExpression[
+             StringJoin[
+              ToString[$CellContext`a$$], "*", 
+              ToString[$CellContext`function$$], "[", 
+              ToString[$CellContext`f$$], "* (x - ", 
+              ToString[$CellContext`p$$], ")] + ", 
+              ToString[$CellContext`c$$]]], 14, Bold], GridLines -> Automatic,
+           LabelStyle -> Directive[FontFamily -> "Helvetica", FontSize -> 12],
+           ImageSize -> {300, 200}], 
+        "Specifications" :> {{{$CellContext`f$$, 1, "frequency"}, 1, 5, 
+           Appearance -> "Labeled", ControlPlacement -> 
+           Left}, {{$CellContext`a$$, 1, "amplitude"}, -5, 5, Appearance -> 
+           "Labeled", ControlPlacement -> 
+           Left}, {{$CellContext`p$$, 0, "horizontal shift"}, -3, 3, 
+           Appearance -> "Labeled", ControlPlacement -> 
+           Left}, {{$CellContext`c$$, 0, "vertical shift"}, -2, 2, Appearance -> 
+           "Labeled", ControlPlacement -> Left}, {$CellContext`function$$, {
+           Sin, Cos, Tan, Csc, Sec, Cot}, ControlPlacement -> Left}}, 
+        "Options" :> {}, "DefaultOptions" :> {ControlPlacement -> Top}],
+       ImageSizeCache->{671., {126., 133.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      Initialization:>({Attributes[PlotRange] = {ReadProtected}}; 
+       Typeset`initDone$$ = True),
+      SynchronousInitialization->True,
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    TraditionalForm],
+   Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
+ CellFrame->{{0, 0}, {0, 0}},
+ ShowCellBracket->True,
+ CellMargins->{{29, 16}, {10, 0}},
+ ShowCellLabel->False,
+ CellChangeTimes->{{3.490047697046875*^9, 3.490047706453125*^9}, 
+   3.496315523078125*^9, 3.49631572975*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+  "What", " ", "happens", " ", "as", " ", "you", " ", "drag", " ", "the", " ",
+    "frequency", " ", "slider", " ", "through", " ", "the", " ", "possible", 
+   " ", "range", " ", "of", " ", 
+   RowBox[{"values", "?"}]}], TraditionalForm]], "MathCaption",
+ CellChangeTimes->{{3.458229780351405*^9, 3.4582298010558558`*^9}}],
+
+Cell["", "Answer"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+  "What", " ", "interesting", " ", "behavior", " ", "do", " ", "you", " ", 
+   "notice", " ", "as", " ", "you", " ", "drag", " ", "the", " ", "amplitude",
+    " ", 
+   RowBox[{"slider", "?"}]}], TraditionalForm]], "MathCaption",
+ CellChangeTimes->{{3.4582298066968412`*^9, 3.4582298587314215`*^9}}],
+
+Cell["", "Answer"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+  "Explain", " ", "why", " ", "you", " ", "think", " ", "the", " ", "above", 
+   " ", "phenomenon", " ", 
+   RowBox[{"occurs", "."}]}], TraditionalForm]], "MathCaption",
+ CellChangeTimes->{{3.45726914798656*^9, 3.457269174259482*^9}, {
+  3.4572693124936533`*^9, 3.4572693264438314`*^9}, {3.4582298423241215`*^9, 
+  3.458229868185151*^9}}],
+
+Cell["", "Answer"]
+}, Open  ]]
+}, Open  ]]
+},
+AutoGeneratedPackage->None,
+WindowSize->{792, 453},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Microsoft Windows (32-bit) (October 15, 2010)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Default.nb"]], 
+   Cell[
+    StyleData[StyleDefinitions -> "StyleMenuClear.nb"]], 
+   Cell[
+    CellGroupData[{
+      Cell["Style Environment Names", "Section"], 
+      Cell[
+       StyleData[All, "Working"], DockedCells -> {
+         Cell[
+          GraphicsData[
+          "Bitmap", 
+           "CF5dJ6E]HGAYHf4PAg9QL6QYHg<PAVmbKF5d0`40006Q00006B0010400?l00000o`\
+00003o\n00000?ooMk[^X_mg^^h00003oobX=?okZS_onjXk00ConZU;\
+00ConZUDooVUDoojZEConZUD\n\
+1_oiXeT8ooVNFP03oo^UH_oiZF3on[IV00GonKUY0_oi_6T00ooi_VKonKaYooZiI@03ooV]\n\
+I004ooViJOol/F7onJUPooVlJ@;onKi[00Gon/AZooVnJool[VOonKiVoo[4JP02oo[>K@03\n\
+oo[CK?ojcVgon]AX00;on]AX00?on]Q_oo[JK?ojf6l00_ojfV`00oojcVSon/YTooViG005\n\
+ooZnH0;on/9Q00Gon/5Voo[5IOojaFGon/EUoo[:I002oo[5I@06oo[:I?ojbFWon/iXoo[>\n\
+J?ojbFWon/iX0_ojcVd01?ojdfcon]5aoo[ALOojdG42oo[EL@05oo[EMOokfGKon]V2oo[I\n\
+P_okg7X00_ojfH83oo[ISP04oo[IT_ojfHkon^21oo_PNP?on^Ee00Gon^E`oo[ZL_ojiG3o\n\
+n^Yboo_YN@03oo[/N@;on^em00?on^Yboo[YJoojgUP01OojgUP00oojhegon]iHoo[SG@03\n\
+oo[SG@Won^QR0oojjF/4oo[ZLP03oo[/NOojl7gon_B200;on_B200?onOR<oo[eROoin8`0\n\
+0_oin8`00ooimi?onOR<ooWhS003ooWgT`03ooWhVooimYWonORK00;onORK00?on?JOooOf\n\
+X_ogmZ800ooemJD00oocm:KomOFUoo?dYP03oo?dYPKol_BY1oo`m:d00oo`m:ookoBbonod\n\
+/P03onod/P;okoBc1oo]lkD7oncc^0Oojo:j1ooVl[D8onGa^0Koho6j00?ohO2lomo___oO\n\
+kkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7\n\
+olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@04ojGD\n\
+jonTdncoY=?/ojCCk0?oXM7/0_nJcNh2oiO;k`04oiG:konAb>ooTLS_oi78k`;oSLK`1On:\n\
+aO07ohG2l@?oPL3`1?n0_o000omn_^ooOKk_ogfnk`04ogfnk`OoO;g_2_mk_>l9ogNjkP00\n\
+00Coo:Pdoo^Z>oojZT?onZY31?ojZD/01?ojZEConJECooVUDoojZE@5ooVSF@OonIiJ00Co\n\
+nJ=Ioo^UH_oi[FCon[IV1?oi^FT03Ooj^FGonKaYooViJOoi_VKonKaYooZfI_oiZFKonJeT\n\
+ooVaI_oj]VKoo;1UooVYH?oi_6T00_oi_V/01_oja6[onKi[ooVaI_oi_6Won/5Voo[9J@;o\n\
+n/i]00Gon]=/oo[DJ?ojf6oon]AXoo[HK`04oo[JK004oo[DJ?ojcVSon/EQoo[2H@Con[iP\n\
+0_oj`V400ooj`FKon/9Qoo[5I@03oo[5I@04oo[:I?ojaFGon/YToo[9J@;on/iX0oojcVd4\n\
+oo[AL@;on]Ea00?on]Eeoo_IM_okfGH01?ojfH82oo[ISP?on]VB00Won^21oo_PN_ojiGGo\n\
+n^E`oo[UMOojiG3on^Yboo[UL?ojjW800_okjGT3oo[/N@05oo[`OOojjW;on^E`oo[SGOoj\n\
+gV801?ojgUP00oojhegon]iHoo[SG@03oo[SG@03oo[XH_ojhegon^QR00Kon^QR1?ojjF/3\n\
+oo[ZLP;on^ai0oojm882oo[eR@ConOR<00?onONCooWhS?oimi<00_oimi<00ooin9_onOJI\n\
+ooWhV`02ooWhV`03ooWhW_ohmYoomoJR00KomOFU0oocm:H6oo;dZ@Ool?B]00?ol?B_onod\n\
+/_o_m;801?o_m;800oo_m;?okO>eongc]@05ongc]@Ook?>h1oo[l[X7onKb]@SoiO6h1_oS\n\
+lKX00ooQl;cognnnomo__P05omo__PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Oo\n\
+d^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7\n\
+ok3IiPOoZmKY00CoYMC[ojCCk?nTdncoY=?/0onQdN`2oi[=kP;oUl__00?oUL[_oi78konA\n\
+b>l00_n=a_06oh[5l0OoQL;a0on1`?04oh2ol003ogjnkomm_^ooOKk_00CoOKk_1oml_Nl:\n\
+og^lk`WoMk[^00001?okZS_onZY3ooZZ@oojZT<3ooZYB`?onZUD0_oiYE<00ooiXeWonJEC\n\
+ooVSF@02ooVSF@GonIiJ00GonJ=IooVYH?oj]6Won[AYooVgK005ooViJ@;on[UU00_onKaY\n\
+ooVnI_oi^FWonK5Voo^UH_oj]6WonKUYooVaI_oi[F3onJ=IooVlJ@02ooVnJ`03oo[8LOoj\n\
+a6[onKi[00;onK5V00Oon/5Voo[9JOojcVSon]=/oo[HKoojfVcon]Q_00?on]Y/1OojgG00\n\
+1?ojdfcon/YToo[2HOoj`Ed5oo[2H@03oo[5IOoj`V7on/EU00;on/EU00Con/UYoo[5IOoj\n\
+bFWon/U]0_ojcVd01oojdG7on/i]oo[>KOojdfcon/i]oo[ALOojeGD00_ojeG400oojeGGo\n\
+n]=loo[IPP03oo[IPP;on]V>0_ojfI800ooihI;on^21oo_PNP03oo[QL@03oo[UL?ojiGGo\n\
+n^Ee00ConnUi0oojk7T2oo[]O@;on_1m00?on^Yboo[TI?ojgUP01?ojgUP4oo[SG@04oo[X\n\
+H_ojhegon^QRoo[XHP?on^AT00?on^QRoo[YJoojj6800_ojjF/4oo[ZLP04oo[/NOojl7go\n\
+n_61oo[dQP?on_F90_oin8`6ooWgT`;onOJI00ConONCooWhVoohmYoon?JO0_ogmZ86ooGe\n\
+Y@?oloBV1_obm:T7oo3d[@03oo3d[oo_m;;okoBb00CokoBb00?okoBcongc]Oo]lkD01Oo]\n\
+lkD7oncc^0Oojo:j00?ojO:monKb]OoVl[D01?oVl[D8onGa^0Koho6j00?ohO2lomo___oO\n\
+kkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7\n\
+olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@04ojGD\n\
+jonTdncoY=?/ojCCk0;oXM7/00CoW]3/oi[=k_nJcNkoUl__0_nEb^l2oi78k`;oSLK`1_n:\n\
+aO07ohG2l@?oPL3`0on0_o000omo__3oOKk_ogfnk`05ogfnk`OoO;g_2_mk_>l9ogNjkP00\n\
+0_okZS/2ooZZ@`ConZU;00KonJECooZYE?oiYE?onJECooVSFOoiYE<3ooVSF@?onIiJ00Co\n\
+njERooVYH?oi/FKon[AY1?oi^FT6ooVlJ@;onKiV00WonK5VooVYI_oiZFKon[IVooViJOoi\n\
+[FConJePooVSFOoi_V/00_oja6X02_ojb77on/U]oo[9KOoj^FGon[IVoobdH_oi_VKon/EU\n\
+oo[HKooje6P3oo[JK0?on]e`00Son^9Zoo[QLOojhG7on^5aoo[ML?ojfVcon]AXoo[>J0?o\n\
+n/9Q1?oj`FH2oo[5I@06oo[:I?ojaFGon/UYoo[9JOojbFgon/iX1OojcVd2oo[AL@Gon]Ee\n\
+1?ojfH82oo[ISP?on]VB00?on^21oo_PN_ojhG400_ojhG44oo[UM@?onnUi0oojk7T01Ooj\n\
+kGgon^aioo[]OOojkGgon_1m00;on^ai00?on^Yboo[YJooji6@00_ojgUP2oo[SG@03oo[N\n\
+H_ojhegon^=M00;on^=M00Gon^AToo[XH_oji6Con^AToo[XHP03oo[YJ`Gon^Yb00?on^ai\n\
+oo[`OOojm8800oojmHT00oojmHgon_F9ooWeT@02ooWeT@?onONC0_oimYT00ooimIgon?JO\n\
+ooSfW`03ooSfW`03ooOfX_oemJGomOFU00;omOFU1?ocm:H6oo;dZ@Ool?B]00?ol?B_onod\n\
+/_o_m;801?o_m;800oo_m;?okO>eongc]@05ongc]@Ook?>h1oo[l[X3onWb_@Coi_:e2?oU\n\
+lKP6on?a^P03on7`_?oOkkkognnn00Gognnn1_oLk/800ooKk/?ofNc5omW/a@05omW/a@Oo\n\
+eN[91ooBjLd7olkWd0OobnKD1oo8i=P7olCRf`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47\n\
+okGKi0Oo/=WV1on[e^T00onUe>_oY=?/ojCCk003oj7Ak004oik@k?nJcNkoUl__oiO;k`;o\n\
+UL[_0_nAb>l2ohg6l0KoR/G`1on5`_42oh70l0CoP;o`00?oOkk`ogfnkomm_^l01Omm_^l7\n\
+ogbmk`[oNkc_2Omg^^h000;onjXk0oojZT<3ooZYB`ConJEC1?oiXeT2ooVNFP05ooVSFOok\n\
+YF;onJUPooV]I?oj]VH01?oi^FT9ooVlJ@03ooV]I?oiZFKonJUV00;onKUY00?onJeTooVY\n\
+H?oiXeT00ooja6X2oo[9K@08oo[>KOoja6[onKiVoobaHOoj]VKon[iPoo[>J?oje6P3oo[J\n\
+K005oo[RJ_ojgG3on]e`oo[RJ_ojgG001?ojhG401OojgG3on]Q_oo[>J?ojaFGon/9Q00Co\n\
+n/5V0oojaFD4oo[9J@03oo[>J?ojcVgon/i]00?on/i]0_ojdG43oo[EM@03oo[CO?ojfH;o\n\
+n]B300?on]V20_ojfHh2oo[ITP06oo[IS_ojh87onmajoo[QMOojhG7on^5e1OojiGD3oo_Y\n\
+N@Con^ai0_ojkGd4oo[`O@03oo[ZL_ojjF_on^AT00;on^=M00Kon]iRoo[NF?ojgV;on^=M\n\
+oo[NH_ojhed3oo[TI003oo[XH_oji6Con^U[00;on^U[1?ojjW83oo[/N@03oo[`OOojmHWo\n\
+n_F900;on_F90_ojmHd2ooWeT@?onONC00?on_JEooWfVOoimId01OohmYl00oogmZ;omOFU\n\
+ooGeY@02ooGeY@ColoBV1_obm:T7oo3d[@03oo3d[oo_m;;okoBb00CokoBb00?okoBcongc\n\
+]Oo]lkD01Oo]lkD7oncc^0Oojo:j1?oYl[d3onKb]@SoiO6h1_oSlKX00ooQl;cognnnomo_\n\
+_P05omo__PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Ood^W=1oo>im07ol_Ve0Oo\n\
+b>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY00?oYMC[\n\
+ojCCk?nTdn`00onQdN`01OnNd>coV/g^oiO;konGbnooUL[_00?oTLS_00?oSLK`oh[5l?n:\n\
+aO001On:aO07ohG2l@;oPL3`1?n0_o000omo__3oOKk_ogfnk`05ogfnk`OoO;g_2_mk_>l9\n\
+ogNjkP0000?oo:Pdoo^Z>ookZS/00oojZT<3ooZYB`GonJEC0_oiXeT01OoiWU[onJ=IooVY\n\
+H?oj]6WonKM/00OonKUY1Ooi_6T01_oi_VKonKUYooVaI_omYV_onJUVooVaIP;onKaY00?o\n\
+nJeTooVYH?oiYE<00_oja6X00oojbFWon/U]oo[>K@02oo[>K@07oo[9KOoj]F3oo;ARooVb\n\
+H?oj_V3on/YToo[JK002oo[ML0Oon^5a00Oon^Eeoo[QMOojiGGon^Eeoo[UN_ojdfcon/UY\n\
+00Con/5V1?ojaFD4oo[9J@05oo[>KOojbFgon/i]oo[ALOojcVd01OojeGD2oo[CO0;on]V2\n\
+00Con]B3oo[IP_ojfHkon]V>0_ojfI801oojfHkonmajoo_MMOojgG3on^5aoo[QMOojhG40\n\
+0oojiGD7oo_YN@03oo[/NOojkGgon_1m00?on_1m1?ojlH400oojjW;on^9Zoo[NHP05oo[N\n\
+HP?on^AT00Oon^9Zoo[TI?ojiG3on^E`oo[YJoojjW;on^E`00;on^Yb0ookjGT01?ojk7Wo\n\
+n_28oo[`R?ojmHd2oo[eR@05oo[eSOoimI7onOFAooWeTOojmYD00_oimYT00oojmYGonOJI\n\
+ooWeW@02ooSfW`?omoJR00?omOFUooKdZOoemJD00_oemJD3oo?dYPKol_BY1oo`m:d00oo`\n\
+m:ookoBbonod/P02onod/P?okoBc1oo]lkD7oncc^0Oojo:j1?oYl[d3onKb]@SoiO6h1_oS\n\
+lKX00ooQl;cognnnomo__P05omo__PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Oo\n\
+d^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7\n\
+ok3IiPOoZmKY00?oYMC[ojCCk?nTdn`00onQdN`01OnNd>coV/g^oiO;konGbnooUL[_00?o\n\
+TLS_00?oSLK`oh[5l?n:aO001On:aO07ohG2l@;oPL3`1?n0_o000omo__3oOKk_ogfnk`05\n\
+ogfnk`OoO;g_2_mk_>l9ogNjkP0000Coo:Pdoo^Z>ookZS_onjXk0_ojZT<00oojZD_oo:92\n\
+ooZQB`04ooVUD`ConJ=I00ConJeTooVaI_oj]6WonKM/1ooi^FT6ooVlJ@0<ooZdJOoi[FCo\n\
+njERooVYI_oj]VKonKaYooViJOoi[F3onZUDooVSFOoj`FKon/AZ0_ojbFd2oo[>K@0;oo[C\n\
+K?ojcVgonKiVooZiIOol]6;on[QQoo[5HOojbVCon]AXoo[JK?ojhVX01OojhG45oo[UM@05\n\
+oo[UN_okgGGon]Eaoo[9KOojbFT00_oj`FH00oojaFGon/AZoo[9J@03oo[9J@05oo[5IOoj\n\
+bFWon/i]oo[9KOojdG400_ojcVd00oojdGKon]5aoo[AL@02oo[EM@;on]=l0_ojfH801?oj\n\
+e8[on]V2oo[IS_ojfHh3oo[ITP06oo_LN_okgGGonmeeoo[QLOojhGGon^5a1_ojiGD4oo_Y\n\
+N@04oo[/NOojkGgon^emoo[]O@;on_1m0oojlH400oojm8;on_1moo[/N@02oo[UL00<oo[R\n\
+J_ojgV;on]iRoo[NH_oji6Con]iRoo[TI?ojhV[on^AToo[UL?ojhV[on^U[0_ojiG000ook\n\
+jGWon^Eeoo_YN@02oo_YN@07oo[/NOojkX;on^j2oo[aSOojmHWonO>?oo[eS@03ooWeT@;o\n\
+n_JE1?oimYT2ooSfW`?omoJR1OoemJD3oo?dYPKol_BY1oo`m:d00oo`m:ookoBbonod/P02\n\
+onod/P?okoBc1oo]lkD7oncc^0Oojo:j1_oYl[d00ooVl[GoiO6honGa^006onGa^0Koho6j\n\
+00?ohO2lomo___oOkkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Y\n\
+c@Ooc^O@1oo;i]@7olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`\n\
+fNH7oj_Fj@03ojGDjonTdncoY=?/00?oXM7/00GoW]3/oi[=k_nGbnooUl__oiG:k`03oi78\n\
+k`03ohg6l?n:aO3oR/G`00GoR/G`1_n5`_43oh70l0?oP;o`00?oOkk`ogjnkomm_^l01_mm\n\
+_^l7ogbmk`[oNkc_2Omg^^h00003oofR:oolZ3Coo:Pd00;onjXk00Coo:92ooZZ@oojZT?o\n\
+o:920_ojXD/00ooiXeWonZ5;ooVSF@02ooVSF@05ooVYH?oj]6WonKM/ooViJOoi]f`00ooi\n\
+^FT01?oi_6WonKUYooViJOoi^FT5ooVlJ@05ooViJOoi/FKonJUPoo^UH_oi[F@00_oi_V/0\n\
+1ooi^FWonJUPooZ[FooiYE?on[iPoo[4J_ojbFd00_ojcVd04OojdG7on]=/oo[CK?ojaFGo\n\
+nKiVoobdH_oj]VKonKULoo[1GOojcVSon]Y/oo[RJ_ojhG7on^5eoo[QLOojiGGon^E`00Go\n\
+n^Ee0_ojiGX01?okh7[on]Eeoo[9KOoj`FH3oo[4JP?on/UY0_ojaFD00oojbFWon/i]oo[>\n\
+K@03oo[>K@?on]5a00Gon]Eeoo[AM_ojeGGon]=loo[DP`02oo[IPP03oo[DR_ojfHkon]VB\n\
+00;on]VB00Kon]V>oo_LN_okg7[on]e`oo[QLOokgGD2oo[QL@Con^Ee00Con^E`oo[UMOok\n\
+jGWon^Um0_ojk7T4oo[]O@04oo[`OOojl8Con_61oo[aP@;on_B200Gon_B6oo[dP_ojl7go\n\
+n^5aoo[RJP04oo[NHP?on^9Z00?on^AToo[UL?ojhVX00_ojiG02oo[UM@08oo[UN_okjGWo\n\
+n^Umoo[YOOojk7Won^V1oo[]QOojlHd2ooWcS`03oo[eSOoimI7onOFA00;onONC1?oimYT2\n\
+ooSfW`?omoJR1OoemJD3oo?dYPKol_BY1oo`m:d00oo`m:ookoBbonod/P03onod/P;okoBc\n\
+1oo]lkD7oncc^0Oojo:j1_oYl[d00ooVl[GoiO6honGa^006onGa^0Koho6j00?ohO2lomo_\n\
+__oOkkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;\n\
+i]@7olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@03\n\
+ojGDjonTdncoXM7/00;oXM7/0_nNd>`01?nJcNkoUl__oiG:konEb^l3oi78k`03ohg6l?n:\n\
+aO3oR/G`00GoR/G`1_n5`_42oh70l0CoP;o`00?oOkk`ogjnkomm_^l01_mm_^l7ogbmk`[o\n\
+Nkc_2Omg^^h000?oo:Pd0_okZS/3oobR@PConZ5;00ConIiJooVSFOolZf7onK5V0ooi]f`2\n\
+ooViJ@;onKaY0_oi^FT2ooVlJ@03ooVnJooi_6WonKaY00?onKaY00WonJUPooVYI_oiZFKo\n\
+nJUPooVaI_oi_V_on/AZooViJOoiZF000_ojZE@01ooj^67on/5Voo[>KOojcVSon/i]oo[D\n\
+J?ojdf`00_ojf6l02oojbVCon[iPooVnI_oj_V3onKiVooViG?oj`Egon/YToo[JK?ojiG3o\n\
+n^5e00Kon^Ee0oojiGX01OojjGgon^Enoo[UO_ojhWgon/U]00;on/UY00?on/5Voo[5IOoj\n\
+a6X00_oja6X01oojbFWon/U]oo[9KOojc7;on]5aoo[<L_ojdG400oojdGH01oojeGGon]=l\n\
+oo[CO?ojfH;on]B3oo[IP_oje8X00_ojfHh2oo[ITP06oo[IS_okg7[onmeeoo[ML?ojhG7o\n\
+nmee0oojhGD4oo[UM@;onnUi1OojjGd2oo[]O@03oo[`OOojl8Con_2400;on_2400?on_61\n\
+oo[dQ_ojm8800_ojm8801?ojm8Kon_61oo[UL?ojhVX2oo[NHP05oo[RJ_ojgV;on^9Zoo[R\n\
+J_ojhG400oojiGD02oojiG[on^Eeoo[UN_ojiG[on^Umoo[YPOojjGgon^V1oo[`Q?ojl8So\n\
+nO>?00?onOFA00Gon_JEooWaU_ojmYGonOJIooWeW@03ooSfW`05ooOfX_ohljComoJRooGe\n\
+YOogmZ800_oemJD2ooKdZ@03oo?dY_obm:Wol_BY00Gol_BY1oo`m:d00oo`m:ookoBbonod\n\
+/P04onod/P03onod/oo]lkGokO>e00GokO>e1Oo/lkP9on_b^POojO:m2?oUlKP6on?a^P03\n\
+on7`_?oOkkkognnn00Gognnn1_oLk/800ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooBjLd7\n\
+olkWd0OobnKD1oo8i=P7olCRf`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo/=WV\n\
+1on[e^T00onUe>_oY=?/oj7Ak002oj7Ak0;oW]3/00CoV/g^oiO;konEb^ooUL[_0onAb>l0\n\
+0on=a_3oR/G`oh[5l005oh[5l0KoQL;a0_n1`?04oh2ol003ognnl?mn_^ooOKk_00KoOKk_\n\
+1oml_Nl:og^lk`WoMk[^0005oobX=004oo^Q>oolXT;oo:92oobR@P?onZ5;00ConJ=IooV]\n\
+H?oi/FKon[AY0ooi]f`2ooViJ@KonKaY00OonKi[ooVlJOoi_6WonKaYooViJOoj]VKonJUP\n\
+00;onJUV00[onJePooVbH?oi_V_onKi[ooViJOoiZF3onZ]KooZYE?oi]E_on/5V0_ojcVd2\n\
+oo[CK0;on]Q_00Kon]Y/oo[DJ?ojbVCon[UUooZnH?oi_VH2ooZnH004oo[5HOojcVSon]AX\n\
+oo[QL@?on^Ee00?on^Ejoo[UMOokjGT00oojiGX02?ojjGgon^Enoo[YPOojiGkon]Eeoo[A\n\
+LOojbFgon/EU0ooja6X01?ojbFWon/U]oo[>KOojbFd2oo[<LP03oo[ALOojdGKon]5f00;o\n\
+n]5f0oojdg`2oo[DP`03oo[IP_oje8[on]B:00?on]VB00?on]V>oo_IM_okgGD00_ojgG02\n\
+oo_MM@?on^5e00Con^Eeoo[UN_ojiGGon^Ej0_okjGT4oo[YO@?on^em0oojkX82oo[aP@;o\n\
+n_B21?ojm8H02?ojkGgon^aioo[UMOojhV[on]e`oo[RJ_ojhG7on^9Z0_ojhG401?ojhGGo\n\
+n^Eeoo[UMOojiGD2oo[UNP04oo[YOOojjH7on^V1oo[YP@;on^f500Son_6=ooWcSooimI7o\n\
+n_JEooWaU_ojmYGonO:JooWfV@;onOFM0oohmYl01OogmZ;on?>TooGeYOoemJGom_BY00;o\n\
+mOFU0_ofm:T7oo;dZ@Ool?B]00?ol?B_onod/_o_m;801?o_m;800oo_m;?okO>eongc]@05\n\
+ongc]@Ook?>h1oo[l[X9onWb_@KoiO6h1_oSlKX00ooQl;cognnnomo__P05omo__PKog>k2\n\
+00?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Ood^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2\n\
+hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY00?oYMC[ojCCk?nQdN`00_nQ\n\
+dN`2oik@k004oi[=k_nGbnooUL[_oiG:k`?oTLS_00?oSLK`oh[5l?n:aO001On:aO06ohG2\n\
+l@;oPL3`1?n0_o000omo__3oO[k_ogfnk`06ogfnk`OoO;g_2_mk_>l9ogNjkP0000GooJ8[\n\
+oobX=?olXc7oo:PdoobS<@02oo^Q>`;oo:920oojXD/00ooi[FCon[AYooVgK003ooVgK003\n\
+ooViJOoi]fconKUY00GonKaY00SonKi[ooVlJOoi_6WonKaYooVnJooj]VKonK5VooVYH0;o\n\
+nJUV00_onK9PooZeH?oi_V_onKiVooViJOoiZF3onZ]KooZYE?oi]E_on/9Qoo[>K@03oo[C\n\
+K00:oo[HKoojfVcon]Y/oo[JK?oje6SonKULooZnH?oj`FKonKiVoo[1IP;on/9Q00?on/YT\n\
+oo[ML?ojhG400_ojiGD01?ojiG[on^Eeoo[UN_ojiGX3oo[YO@?on^V100?on^Umoo_IM_oj\n\
+bFd00ooja6X2oo[9K@06oo[>KOojbFgon/i]oo[9KOojc7;on]5a1OojdGH2oo[CO0?on]B3\n\
+0_oje8X4oo[ITP;onmUf00Gon]e`oo_MMOojgG3on]e`oo_PNP02oo[QM@04oo[UN_okh7[o\n\
+n^Ejoo[UNP?onnUi0oojjGd00oojkGgon^j2oo[]O@03oo[^PP03oo[`OOojlH7on_6100;o\n\
+n_B61?ojmHT01_ojm8Kon_B2oo[QLOojhG7on]Y/oo[ML0Con^5a00?on^5eoo[UMOojiGD0\n\
+0_ojiGX03?ojjGgon^Enoo[YPOojjHKon^V1oo[YQ_ojl8Son_6=ooWcSoojmYGonO6FooWf\n\
+V@;onO:J0_oimId4ooSfW`03ooScY?oemJGom_BY00;om_BY00?omOFUooKdZOofm:T01oob\n\
+m:T7oo3d[@03oo3d[oo_m;;okoBb00CokoBb00?okoBcongc]Oo]lkD01Oo]lkD7oncc^0Oo\n\
+jo:j1ooYl[d00ooWl<7ojO:monO``@05onGa^0Koho6j00?ohO2lomo___oOkkh01OoOkkh6\n\
+omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K\n\
+00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@03ojGDjonTdncoXM7/\n\
+00;oXM7/0_nNd>`00onJcNkoUl__oiG:k`04oi78k`03ohg6l?n:aO3oR/G`00GoR/G`1_n5\n\
+`_42oh70l0CoP;o`00?oOkk`ogjnkomm_^l01_mm_^l7ogbmk`[oNkc_2Omg^^h000?ooJ8[\n\
+0_olXc42oo^Q>`05oobR@_okXC_onZ5;ooVNF_oi/FH00_oj]6T2ooVgK003ooViJOoi]fco\n\
+nKUY00?onKUY0ooi_6T01ooi^FWonKaYooVnJooi_V_onKaYooZfI_oi[F@00_okYF803Ooi\n\
+ZF3onJePooVbH?oj^FGon/5VooZiIOoi/V3onJePooZ[FoojZECon[9FooZnH?ojcVP00_oj\n\
+df`2oo[HK`;on]Y/0_ojgG001Ooj`V7on/EUoo[1I_oj`FKon/AZ00;on/EU00Gon/EQoo[1\n\
+GOojbVCon/iXoo[UM@03oo[UNP03oo[YOOojjH7on^Um00Con^V10oojjHH00oojdG7on/i]\n\
+oo[4JP02oo[9K@03oo[9JOojbFgon/U]00?on/U]00?on/aboo[AM_ojdG400oojdGH00ooj\n\
+dgcon]B3oo[IPP02oo[DRP07oo[IS_ojdi;on]VBoo[CT_ojfI;onmajoo_IMP04oo_MM@?o\n\
+n^5e00Gonn1joo[UN_ojiG[on^Ejoo[UOP02oo[YO@05oo[UN_ojjGgon^Umoo[YPOojkGd0\n\
+0oojkX84oo[`Q0Con_B61?ojmHT02?oin8con_F9oo[`Q?ojhG7on^5eoo[ML?ojhG7on^E`\n\
+0_ojhGD00ookh7[on^Enoo[UOP03oo[UOP?on^F200?onNB5oo[ZRoojjX/01OoilYX4ooWe\n\
+W@03ooScY?ogmZ;on?>T00Oom_BY00?oloB/oo;dZOobm:T01?obm:T8oo3d[@GokoBb0_o_\n\
+m;<7ongc]@Ook?>h1oo[l[X7onWb_@;oio3100?ojO:monO``OoYl[d00ooUlKP6on?a^P03\n\
+on7`_?oOkkkognnn00Gognnn1_oLk/800ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooBjLd7\n\
+olkWd0OobnKD1oo8i=P7olCRf`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo/=WV\n\
+1on[e^T00onUe>_oY=?/ojCCk002oj7Ak0;oW]3/00CoV/g^oiO;konEb^ooUL[_0onAb>l0\n\
+0on=a_3oR/G`oh[5l005oh[5l0KoQL;a0_n1`?04oh2ol003ognnl?mn_^ooOKk_00KoOKk_\n\
+1oml_Nl:og^lk`WoMk[^0004oofR:`08oofO<_okXC_onj4koo^Q>oolXT;onZ5;ooVSFOoi\n\
+/FH2ooZdJ@?onKM/00?on[IVooVgK?oi^FT00_oi^FT5ooVlJ@;onKi[00ConKaYooVaI_oi\n\
+[FConjER0_oiZF003?oi[F3on[EPooZiIOoj`FKon[UUooVbH?oi[F3onZ]KooR]Eooj/UKo\n\
+n/5Moo[>J0;on]=/0_ojf6l02?ojfVcon]e`oo[ML?ojgG3on/YToo[5IOoj`V7on/5V0_oj\n\
+a6X2oo[5I@0:oo[1GOojbVCon/YToo[ML?ojhGGonn1joo[UN_ojjGgon^V1oo[YO@Con^V1\n\
+0oojjHH2oo[EM@?on/U]00Gon/UYoo[9KOojbFgon/aboo[9K@02oo[<LP04oo[ALOojdGKo\n\
+n]5foo[AMP;on]=l00_on]B3oo[DR_oje8[on]B:oo[IS_ojdi;on]VBoo[CT_ojfI;onmaj\n\
+oo_IMP05oo_MM@;on^5e00Son^9moo[QMOojiG[on^Ejoo[UO_ojjGgon^Enoo[UNP;on^Um\n\
+0_ojjH43oo[^PPCon_241?ojm8H4oo[eR@06ooWhS?ojmHWon_B6oo[UN_ojiGGon^5e0_oj\n\
+hG42oo[QM@03oo_PN_ojhWgon^9m00?on^En0oojiH800ooii8Gon^Z;ooWYT@02ooWaUP?o\n\
+nO:J0ooimId01_ohmYoon?>TooScY?ohljCom_BYooScY0Gom_BY00ColoB/oo;dZOobm:Wo\n\
+loB/0oobm:T7oo3d[@03oo3d[oo_m;;okoBb00?okoBb0_o_m;<7ongc]@Ook?>h1oo[l[X7\n\
+onWb_@?oio3100?ojO:monO``OoYl[d00_oUlKP6on?a^P03on7`_?oOkkkognnn00Gognnn\n\
+1_oLk/800ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooBjLd7olkWd0OobnKD1oo8i=P7olCR\n\
+f`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo/=WV1on[e^T00onUe>_oY=?/oj7A\n\
+k002oj7Ak0;oW]3/00?oV/g^oiO;konEb^l01?nAb>l00on=a_3oR/G`oh[5l005oh[5l0Ko\n\
+QL;a0_n1`?03oh2ol0;oOkk`00?oO[k_ogfnkomm_^l01Omm_^l7ogbmk`[oNkc_2Omg^^h0\n\
+00?ooJ8[0oolXc401ookXC_oo:92ooVUDooiZF3ooJe[ooVaI_oj]6T00_oi]f`00ooj]VKo\n\
+nKM/ooZfIP03ooViJ@?onKaY0ooi_V/2ooVlJ@0HooZfI_oiZF3onJUPooVYH?oi[FConJeP\n\
+ooZ[Fooj^FGonKiVoo[1I_oj]F3onK9PooV`G?oj/UKon:eGooZbE_oj_V3on/YToo[CK?oj\n\
+e6Son]Q_oo[JK?ojf6oon]Y/0oojgG000oojcVSon[iPooVnIP04oo[4JP;on/EU00Gon/9Q\n\
+oo[5HOojcVgon]Q_oo[UNP03oo[YO@Con^V11?ojjHH00oojiH;on/i]oo[9K@03oo[9K@03\n\
+oo[8LOojc7;on/ab00?on/ab00Con]5aoo[AM_ojdgcon]=l0_oje8<01?ojfH;on]B:oo[D\n\
+R_ojfI82oo[CTP03oo[IT_ojdi;onmaj00;onmUf1?okgGD01?okh7[on^5eoo_PN_okh7X3\n\
+oo[UNP06oo[UO_ojjGgon^Umoo[YOOojjH7on^Um0oojjH400oojkX;on^f5oo[]Q@02oo[`\n\
+Q0Gon_B60_ojmHT02ooin8con_F9ooWhS?oin8con_F9oo[dQ_ojkX;on^9moo_PN_okg7[o\n\
+nmee00;onn1j0_ojhWd2oo[UOP05oo[UP_oii8GonNB5oo[YQ_oii8D00_ojjX/2ooWaUP?o\n\
+nO:J0_oimId3ooScY003ooKdZOohljCon?>T00Kom_BY1?ocm:`00oobm:WoloB/oo3d[@06\n\
+oo3d[@03oo3d[oo_m;;okoBb00CokoBb00?okoBcongc]Oo]lkD01Oo]lkD7oncc^0Oojo:j\n\
+1ooYl[d4onO``@04onWb_OoWl<7ojO:monGa^0Koho6j00?ohO2lomo___oOkkh01OoOkkh6\n\
+omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K\n\
+00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@03ojGDjonTdncoY=?/\n\
+00;oXM7/0_nNd>`01?nJcNkoUl__oiG:konEb^l3oi78k`03ohg6l?n:aO3oR/G`00GoR/G`\n\
+1_n5`_42oh70l0CoP;o`00?oOkk`ogjnkomm_^l01_mm_^l7ogbmk`[oNkc_2Omg^^h000?o\n\
+oJ8[0oomWc802?olXT;onJECoob[HOoi[FCoo;1UooV]H?oi/FKonKM/0ooj]VH4ooViJ@?o\n\
+nKaY0ooi_V/00ooi_6WonK5VooV]H003ooVYH0;onJeP00GonK1LooVlJOoj`FKon/5VooZe\n\
+H003ooV`G009ooR]Eooj/UKon[UGoo[1GOojcVSon]=/oo[JK?ojf6oon]Y/00;on]e`00Co\n\
+nmeeoo[QMOojdfcon/EQ0_oj`FH2oo[9K@?on/UY0_ojaFD01_ojbVCon/iXoo[>KOojeG7o\n\
+n^9moo[UOPCon^V11OojjHH01_oii8Gon]5foo[9KOoja6[on/U]oo[8L@;on/U]0oojc780\n\
+0oojdG7on/aboo[AMP02oo[CO0;on]B30_oje8X4oo[CTP07oo[IT_ojfH;onmUfoo_IM_ok\n\
+gGGonmUfoo_MM@02oo_PNP06oo[QMOokh7[on^5eoo[ROOojiG[on^9m0oojiGh2oo[YO@?o\n\
+n^V11?ojkX83oo[`Q004oo[dQ_ojlH7on_24oo[dQP?on_F91?oin8`2ooWeT@09oo[aSOoj\n\
+l8SonNB5oo[ROOokg7[onn1joo[PPOojhWgon^2100GonNB50_oihh`3ooWYT@;onO:J0_oi\n\
+lIl00ooimIgon?>TooScY003ooScY0Com_BY00?on?:/ooKdZOoeljh01_ocm:`6oo3d[@03\n\
+oo3c[oo`m:ookoBb00GokoBb00?okoBcongc]Oo]lkD01Oo]lkD7oncc^0Oojo:j1ooYl[d8\n\
+onO``@Koho6j00?ohO2lomo___oOkkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc5\n\
+1ooEj/T7om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[M\n\
+h@Oo]M_T1on`fNH7oj_Fj@03ojGDjonTdncoXM7/00;oXM7/0_nNd>`01?nJcNkoUl__oiG:\n\
+konEb^l3oi78k`03ohg6l?n:aO3oR/G`00GoR/G`1On5`_400on1`?3oQL;aoh70l004oh2o\n\
+l003ognnl?mn_^ooOKk_00KoOKk_1oml_Nl:og^lk`WoMk[^0003oofR:`?ooIlb00OonZ5;\n\
+ooZYE?ol[VOoo:iWooVaI_ol[Ukoo;1U00?on[AY00?on[IVooZiIOoi^FT00_oi^FT6ooVl\n\
+J@03ooViJOoi[F3onJeP00;onJUP00GonJePooV]I?oi/5conK1LooVnIP02oo[1IP05ooZe\n\
+H?oi/5conK1LooZbE_oh[EL00_oj/UH01_oj`Egon/iXoo[CK?ojfVcon]Q_oo[JK0;on]e`\n\
+00Oonmeeoo[QMOojf6oon/iXoo[5IOoj`FKon/UY00;on/U]0oojbFT02oojbVCon/UYoo[:\n\
+I?ojbVCon/i]oo_IM_okh7[on^9moo[YPOojiH;on^V100Con^V60_ojjX/00ookfGKon]5a\n\
+oo[9K@02oo[9K@03oo[8LOojbFgon/Qa00;on/ab00?on]5aoo[<L_ojdGH00_ojdg`2oo[D\n\
+P`;on]B:00?on]V>oo[CT_ojdi800_ojdi800ooje8?onmUfoo[HK`02oo_IMP;onmee00?o\n\
+nn1joo[QMOokh7X00_okh7X2oo[RO@Con^En00?on^Umoo[YPOojjH400_ojjH400oojkHGo\n\
+n^j2oo[^PP05oo[`Q0;on_B60oojmHT3ooWhS0ConONC00?onOFAoo[ZRoojjHH01Oojh846\n\
+ooWTQ@;onN><0_oijI42ooWbVPGonO6O0oohlj@3ooSbZ@04ooKdZOohlZcon?:/ooGc[POo\n\
+loB/00Col?>_oo3d[Oo`m:gol?B]0_o`ljl00oo`m:ookoBbonod/P04onod/P03onod/oo]\n\
+lkGokO>e00GokO>e1oo/lkP7on_b^POojO:m1_oWl<401?oYl[goio31onO``OoWl<44on?a\n\
+^P03on7`_?oOkkkognnn00Gognnn1_oLk/800ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooB\n\
+jLd7olkWd0OobnKD1oo8i=P7olCRf`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo\n\
+/=WV1on[e^T00onUe>_oY=?/oj7Ak002oj7Ak0;oW]3/00CoV/g^oiO;konEb^ooUL[_0onA\n\
+b>l00on=a_3oR/G`oh[5l005oh[5l0KoQL;a0_n1`?03oh2ol0;oOkk`00?oO[k_ogfnkomm\n\
+_^l01Omm_^l7ogbmk`[oNkc_2Omg^^h000;ooJ8[00goo:<aoofO<_okXC_onJECoo^UH_on\n\
+ZFKoo:iWoob`IOoj]6Woo;5QoobdH_oj]VKon[AY00?on[IV00?on[UUooViJOoi_6T01Ooi\n\
+_6T00ooj^FGonJePooVYH002ooVYH0;onJeP0_oi/V001ooi]E_on/5Voo[1I_oj^67onKEK\n\
+ooVbH?oi]E/01?oj/UH01_oj^EOon/iXoo[HKoojfVcon]e`oo_MM@;on]e`00Oonmeeoo[Q\n\
+MOojhGGon^5eoo[:I?oj`V7on/AZ00Gon/U]1?ojbFT01_ojaFGon/AZoo[9KOojdG7onmaj\n\
+ooWTQ@?on^V600?on^Z;oo[YQ_ojjX/00_ojjX/01ooii8Gon]5aoo[<L_oja6[on/Qaoo[9\n\
+KOojb7400oojc782oo[AMP03oo[CO?oje8?on]B300?on]B:1Oojdi800oojfH;onmUfoo_I\n\
+MP02oo_IMP05oo[HKookg7[onmeeoo_MMOokg7X00_okh7X01OojhWgon^Enoo[UO_ojiG[o\n\
+n^En00;on^Ej00Kon^Enoo[YPOojjH7on^V1oo[YQ_ojjH43oo[]Q@;on_2400Con_28oo[e\n\
+ROojm8Kon_B60_ojmHT01OojmHgon_F9oo[eSOojmHgonOFA00ConONC0_ojmYD00ooii8Go\n\
+nN26oo[PP@03oo[PP@ConNB50ooihh`2ooWYT@09ooW[V_oilIoonO6OooWaWooimIgonO6O\n\
+ooSfWoohljCon?:Y00Kon?:/0ooeljh4oo?d[005oo3c[ooalk7ol?>_oo3c[oo`m:l00oo`\n\
+ljl2onoc/PCokoBb00?okoBcongc]Oo]lkD01Oo]lkD7oncc^0Oojo:j1ooYl[d;onO``@?o\n\
+ho6j00?ohO2lomo___oOkkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7\n\
+om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T\n\
+1on`fNH7oj_Fj@03ojGDjonTdncoXM7/00;oXM7/0_nNd>`01?nJcNkoUl__oiG:konEb^l3\n\
+oi78k`03ohg6l?n:aO3oR/G`00GoR/G`1_n5`_42oh70l0CoP;o`00?oOkk`ogjnkomm_^l0\n\
+1_mm_^l7ogbmk`[oNkc_2Omg^^h00006oofO<_omXR_ooIlboobR@_ojXD_onjER0_onZFH0\n\
+1OolZf7oo:iNoobaHOol/6GonK5V00;oo;AR0_oj]VH2ooZiI@03ooZhHOoj^FGonKaY00?o\n\
+nKaY00?on[EPooVbH?oiZF000_ojZe/2ooV]H0;onK9P0_oi]E/00ooj`FKon/AZooViG004\n\
+ooVeF`Con[9F00Gon/YToo[CK?ojf6oon]Q_oo_MM@02oo[ML0?on^5e00Kon^Eeoo[>J?oj\n\
+bFWon/EUoo[4J_ojbFd2oo[>K@06oo[9KOojcVgon/UYoo[9KOojbFWon/U]0oojbFT01Ooj\n\
+c7;on]5aoo_IM_ojh87onNB500?on^Z;00Kon^V6oo[ZRoojjX_onNB5oo[IP_ojc782oo[8\n\
+L@;on/ab00Gon/ejoo[<L_ojdGKon/ejoo[CO003oo[DP`?on]B:1?ojdi801_oje8?onmUf\n\
+oo[HKookfGKon]Q_oo_IMP;onmee00?onn1joo_LN_okh7X00_okh7X00oojhWgon^Enoo[U\n\
+OP03oo[UOPKon^V10oojkHD2oo[`Q0?on_2800?on_B6oo[eROojmHT00oojmHd3ooWgT`?o\n\
+n_JE00GonOJIoo[fUOoilIKon_6=oo[`R002ooWTQ@?onN260ooihh`00ooijI7onN><ooWY\n\
+T@02ooWYT@03ooW[V_oilIoonO6O00;onO6O00Con?:YooScY?ohlZWon?:Y1OohlZ`6ooGc\n\
+[P05oo?d[?oalk7ol?>_oo3c[ooalk400oo`ljl00oo`m:ooko>bonoc/P02onoc/P03onod\n\
+/_o_m;?okoBc00OokO>e1oo/lkP7on_b^POojO:m3OoWl<400ooSlK[ohO2lomo__P06omo_\n\
+_PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Ood^W=1oo>im07ol_Ve0Oob>CH1oo4\n\
+h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY00?oYMC[ojCCk?nQ\n\
+dN`00_nQdN`2oik@k004oi[=k_nGbnooUL[_oiG:k`?oTLS_00?oSLK`oh[5l?n:aO001On:\n\
+aO06ohG2l@;oPL3`1?n0_o000omo__3oO[k_ogfnk`06ogfnk`OoO;g_2_mk_>l9ogNjkP00\n\
+0oomWc801?ojXD_onJ=IoojYI_onZFH2oob[H@;oo:iN00?oo;1UoobaHOol/F400_oj]F00\n\
+1?ol]6;on[UUooZhHOoj^642ooZiI@;onKaY00ConKiVooVbH?oi/5conJ=I0_ojZe/2ooV]\n\
+H0;onK9P0_oi]E/00ooj`FKon/AZooViG004ooVeF`Con[9F00Kon/YToo[>J?ojf6oon]Y/\n\
+oo_MMOojf6l2oo[QM@05oo[QLOojiGGon^Eeoo[>KOojbV@00_oja6X01_ojbFgon/i]oo[>\n\
+KOojcVgon/U]oo[>K@;on/U]00?on/i]oo[>J?ojbFT00_ojbFT01?ojbFgon]5aoo[PPOoi\n\
+i8D3oo[ZR`07oo[YQ_ojjX_on^Z;oo[ZRoojh87on/ejoo[8L@02oo[<LP05oo[=N_ojc7;o\n\
+n/aboo[AM_ojcGX00ooje8<3oo[DRPGon]>B00Won]B3oo[EMOojeGGonmUfoo[HKookfGKo\n\
+nmeeoo_LN_okgGD01Ookh7X3oo[RO@;on^F21?ojjH400oojkGgon^Umoo[]Q@02oo[]Q@03\n\
+oo[^P_ojl8Con_2800;on_2800Con_B6oo[eROojlHgon_F=0_oimI43ooWgT`;on_JE00So\n\
+nOJIoo[fUOoimYWonOJIooWeTOoilhoon^F2ooWTQ@?onN2600KonN6BooWSS?oihhcon^Z;\n\
+ooWYTOoihh`2ooWYT@05ooW[V_oilY[onO6OooWaWoohk:@01?ohlZT5ooSb[0?omO>^0_oe\n\
+lk42ooGc[P;olO>a0_o`m:l2oo7c/@03oo3c[oo`m:ooko>b00?oko>b00?okoBconoc/_o_\n\
+lk801oo]lkD7oncc^0Oojo:j1ooYl[d=onO``@03on?a^_oQl;cognnn00Kognnn1_oLk/80\n\
+0ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooBjLd7olkWd0OobnKD1oo8i=P7olCRf`03ol;Q\n\
+gOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo/=WV1on[e^T00onUe>_oY=?/ojCCk003oj7A\n\
+k005oik@k?nJcNkoUl__oiO;konEb^l00onAb>l00on=a_3oR/G`oh[5l005oh[5l0KoQL;a\n\
+0_n1`?04oh2ol003ognnl?mn_^ooOKk_00KoOKk_1oml_Nl:og^lk`WoMk[^00001_omXR_o\n\
+o:92oo^UH_onZFKooJI[oof]J`?oo:iW0_ol/6D3oobaH@06oobdH_oj]VKon[EPooZeH?oj\n\
+^67on[IV0_oj^FD00ooi_6WonKEKooV`G003ooZ[F`03ooR]Eooi/5conK9P00;on[EP00Oo\n\
+nK1LooViG?oi^Econ/9QooVnI_oj^EOonKUL00?onKEK00Son[UGooZbE_oi]E_onKEKoo[1\n\
+GOojaF7onmUfoo[ML0;onmee0oojhGD02oojiG[on^5eoo[QLOojf6oon/5Voo[9JOojbFgo\n\
+n/i]oo[9KOojc7;on/U]00Oon/i]00?on/iXoo[9KOojbFT00_ojbFd01oojc7;on]V2ooWP\n\
+Q_ojjX_onNVAoo[ZRooijI400_ojjX/00oojc7;on/Qaoo[8L@02oo[8L@Gon/ej00Con]B3\n\
+oo[DR_oje8[on]B:1Oojdi801_oje8?on]=loo[ELOojeG7onmUfoo_MM@;onmaj00Conmee\n\
+oo_LN_okg7[onmee0_okh7X01?ojhWgon^Enoo[UO_ojiH82oo[UOP03oo[UP_ojjH7on^V1\n\
+00?on^V10_ojkHD3oo[`Q0?on_2800Con_F9oo[eSOojmHgon_F=1?oimI42oo[fU@ConOJI\n\
+00KonORKooWhW_oin9konOFMooWYTOoihh`2ooWPQP05ooWSS?oihI;onN><ooWQT_oihh`0\n\
+0ooihI801OoihY[onN^JooS/Y?ohljConO6O00?on?:Y0oohlZ`00oohlJoon?:/ooGc/@07\n\
+ooGc/@?olO>a00Kol?>_oo7c/Ooalk7olO>aonoc/_o_m;<5onoc/POokO>e1oo/lkP7on_b\n\
+^POojO:m3ooWl<400ooLk/;ognnnomo__P04omo__PKog>k200?ofnk3omW/aOoIk<D01OoI\n\
+k<D7omGZb@Ood^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo\n\
+^]gQ1onefn@7ok3IiPOoZmKY00?oYMC[ojCCk?nTdn`00onQdN`01OnNd>coV/g^oiO;konG\n\
+bnooUL[_00?oTLS_00?oSLK`oh[5l?n:aO001On:aO06ohG2l@;oPL3`1?n0_o02ognnl0Oo\n\
+OKk_1oml_Nl:og^lk`WoMk[^00000oolXT;onJECoofVJ`02oofVJ`;ooZUV00CooJe[oob^\n\
+Iool/6Goo;1U0ool/F42oobdHP04ooZeH?oj^67on[QQooZhH@;on[UU00WonKEKooZbE_oh\n\
+[EOonZUDooZ[FoojZEConZ]KooV`G?oi/V000_oj]F000ooi]E_onKULooZnH002ooZnH003\n\
+ooViG?oi]E_onKUL00;onKUL0ooi]E/01_oj^EOonKULoo[5HOojf6oon]e`oo_MM@Con^5e\n\
+00Kon^Ejoo_PN_ojhGGonmUfoo[5IOojbFT3oo[9K@06oo[<L_ojcVgon/i]oo[ALOojcVgo\n\
+n]5a1OojcVd3oo[9K@06oo[<L_ojdGKon]=loo[IP_oih8KonN><0_ojjX/01?oijI7on]V2\n\
+oo[AM_ojbFd2oo[8L@Con/ej00?on]B3oo[DR_oje8X00_oje8X5oo[CTP03oo[DR_ojdgco\n\
+n]5a00?onmUf0ookg7X00ookgGGonmajoo_PNP02oo_PNP;on^9m00Oon^Enoo[UP_ojiGko\n\
+n^Enoo[UP_ojjH7on^F200;on^V100?on^f5oo[YQ_ojkHD01_ojl8P00oojlHgonO>?oo[e\n\
+S@02oo[eS@03oo[fUOoimI7on_JE00;on_JE0_oimYT3ooWhV`;onORN00OonOFMooWaU_oi\n\
+jI7onNVAooWSS?oihI;onN2600ConN6B1?oihYX00ooiji[on>bTooS/Y003ooSbZ@Con?:/\n\
+00?on?6_ooGc/Ooelk401_oelk47oo7c/@;olO>e0oo_lk800oo`m;Koko>bongc]@06ongc\n\
+]@Ook?>h1oo[l[X7onWb_A7oio3100?og>k2omo___oOkkh00_oOkkh6omc^`P03om_^`ooI\n\
+k<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K00?o`^7MokoPg_no\n\
+h=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@03ojGDjonTdncoY=?/00?oXM7/00CoW]3/\n\
+oi[=k_nGbnooUl__0_nEb^l2oi78k`03ohg6l?n:aO3oR/G`00GoR/G`1_n5`_43oh70l0?o\n\
+P;o`0_mo__07ogfnk`OoO;g_2_mk_>l9ogNjkP0000?onIiJoo^UH_omYV/00oomYV/01_on\n\
+ZFKooJe[oob^Iool[VOoo;1UoobaH@;oo;AR0_ol/F400ool]6;on[QQooZhH@02ooZhH@03\n\
+ooZnH?oh[EOon:eG00?onZUD00Con:eGooZ[Fooi/5conK9P0_oj]F000ooi]E_onKULooZn\n\
+H002ooZnH0;onKUL00?on[QQooViG?oi^E`00_oi]E/01ooj^EOonKULooZiEooj`V7on]Y/\n\
+oo[ML?okgGD00oojhGD01ookh7[on^Ejoo[QMOojiG[on^5eoo[9KOojbFT00_oja6X01Ooj\n\
+bFgon/aboo[ALOojdG7on/i]00Kon]5a1?ojcVd01oojbFgon/Qaoo[<L_ojc7;on]B3oo[I\n\
+P_ojjX/00_oijI400oojjX_on]V2oo[9K@02oo[8L@Kon/ej00Con]B3oo[DR_oje8[ol<V8\n\
+1?ojdi800ooje8?on]=loo[EL@05oo_IMP03oo_LN_okgGGonmaj00?onn1j0oojhWd2oo[U\n\
+PP04oo[ROOojjH7on^F2oo[YP@;on^V60oojkHD00oojl8Son^f5oo[`R003oo[`R0;on_6=\n\
+00ConO>?oo[eSOoilhoonONC1?ojmYD00ooimYWonORKooWhV`03ooWhV`?onORN00GonOFM\n\
+ooWaU_oihI;onN><oo[ISP03ooWQTP03ooWRV_oihI;onN:J00?onN:J0oohk:@3ooSbZ@;o\n\
+n?:/00?on?6_ooSb[?ofl[<00oofl[<4ooGc/@?olO>a00?olO>eoo7c/Ooalk401_oalkD0\n\
+0oo_lk;ol?Bfongc]@06ongc]@Ook?>h1oo[l[X7onWb_@goio3100Gohn[2onO``OoLk/;o\n\
+io31omc^`P04omo__PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Ood^W=1oo>im07\n\
+ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY\n\
+00?oYMC[ojCCk?nTdn`00onQdN`00onNd>coV/g^oi[=kP02oiO;k`04oiG:konAb>ooTLS_\n\
+ohg6l0OoR/G`1_n5`_43oh70l0CoP;o`00?oOkk`ogfnkomm_^l01Omm_^l7ogbmk`[oNkc_\n\
+2Omg^^h000GooZQd00WooJI[oof]Joom[F_ooJe[oob^Iool/6Gon[IVoobaHOol[Uh00ool\n\
+]6801Ooj]F3on[QQooZeH?oj/UKonZU;00;onZUD00KonJ=IooZYE?oh[EOon:eGooV`G?oi\n\
+]E/2ooZhH@05ooVeFooj^EOon[iPoo[1I_oj_V000_oi^E`00ooj_V3onKULooViG006ooVi\n\
+G004ooZnH?ojbVCon]Y/oo[QM@;onn1j00?on^5eoo_PN_ojiGX00oojiGX00ookgGGon/UY\n\
+oo[1IP02oo[9K@03oo[>KOojdG7on]5a00Won]5a00Con/i]oo[ALOojdG7on/i]1?ojc782\n\
+oo[=NP04oo[CO?ojfH;onN26ooWSS0?on/Qa00?on/aboo[=N_ojcGX00ooje8<2oo[DRPKo\n\
+n]>B00?on]=loo[AM_okfGH00_okfGH00ookg7[onmeeoo_LNP02oo_LNPConn1j0_ojhWd2\n\
+oo[UOPCon^F21oojjHH01_ojkHGon_28oo[`R?ojl8Son_6=ooWcS`?onOFA0oojmYD00ooi\n\
+mYWon_JEooWfV@03ooWfV@03ooWhVooin9konORQ00GonORQ00?onO6OooW[V_oihI801Ooi\n\
+hI85ooWRVP;on>bT0_ohlZ`2ooSa[`;on?:/0_ohlJl5ooKb/`OolO>e00?oko>boo7c]Ooa\n\
+lkD01OoalkD01Oo]lkGolO>eoo7c]Oo]lkGolO>e00;okO>e1oo/lkP7on_b^POojO:m3_oW\n\
+l<400ooSj/;oio31on?Z`P02onO``@03omc^`_oOkkkognnn00Kog>k200?ofnk3omW/aOoI\n\
+k<D01OoIk<D7omGZb@Ood^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05\n\
+okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY00CoYMC[ojCCk?nTdncoY=?/0_nQdN`01OnNd>co\n\
+V/g^oi[=k_nGbnooUL[_00CoTLS_00?oSLK`oh[5l?n:aO001?n:aO07ohG2l@;oPL3`1?n0\n\
+_o000omo__3oOKk_ogfnk`05ogfnk`OoO;g_2_mk_>l9ogNjkP001OonZ7@02OomYV_ooJe[\n\
+oof]Joom[F_oo:iWoob`IOoj]6WonK5VooV]H003ooVaIP;onK9P00?onK1LooR]EoodZ4h0\n\
+1OobYET3oo6^H0?ol;=T00?okkINonnfIOo__W002_o_]VD02?o`/fCokkIUonnfIOo_`V_o\n\
+l=5monoJOoo_g87okmYo1?o_g842onoPP`04onoJOoo`a7_okki`onnnL0?ol<Qh3Oo_c7T5\n\
+oo38N0;ol<Ak00Gol<V8oo3CROo`dhWol=>9onnnL005oo34N`;ol<V800?ol<VFoo39R?o`\n\
+bIH01_o`bIH00oo`bHSoklaioo3AO@03oo3AO@Ool=J20oo`fXD00oo`gX[ol=Z5oo3NRP03\n\
+oo3NRPGol>:=0oo`i8l3oo3XS`;ol>^F1Oo`kIX8oo3`X@Soko2X00?on>bToo3IWOo`fId0\n\
+0oo`fId2onoIWPCokmVS0oo_hjh00oo[j;_okn>^on_X^`0<on_X^`04on?Z`_o[j;_ohn[2\n\
+on_X^`Cohn[200CogNG3on?Z`_oMiL?ohn[25_oMiL<01_oJhl[ogNG3om[Sb_oMiL?of^?:\n\
+omgU`aGof^?:00?od^;7om7RbOoAh/T01OoAh/T7oloPb`kobmo@0_o5g=H01?o;gm3oaMcF\n\
+olGLe_o;gm09olGLeP06ol3Jg?o5g=Ko`=[LolGLe_o0f]coaMcF2?o0f]`>ok_Gg`ko]=CS\n\
+2_n]dNL5ojC>j@;oV/g^0_nGbnl00onEb^ooTLS_oi78k`04oi34kP03ohc3kon@a>koS<?_\n\
+00CoS<?_00KoQL;aohc3kon5`_7oQL;aoh70l?n5`_44oh70l003oh2ol?mo_NkoOkg^00_o\n\
+Okg^2_mo_>d9ogNjkP00"], "Graphics", CellMargins -> {{0, 0}, {0, 0}}, 
+          CellFrameMargins -> 0, ImageSize -> {417, 25}, ImageMargins -> 0, 
+          Background -> RGBColor[0.466667, 0.729412, 0.933333]]}, 
+       CellBracketOptions -> {
+        "Color" -> RGBColor[0.466667, 0.729412, 0.933333]}], 
+      Cell[
+       StyleData[All, "Presentation"], DockedCells -> {
+         Cell[
+          GraphicsData[
+          "Bitmap", 
+           "CF5dJ6E]HGAYHf4PAg9QL6QYHg<PAVmbKF5d0`40006Q00006B0010400?l00000o`\
+00003o\n00000?ooMk[^X_mg^^h00003oobX=?okZS_onjXk00ConZU;\
+00ConZUDooVUDoojZEConZUD\n\
+1_oiXeT8ooVNFP03oo^UH_oiZF3on[IV00GonKUY0_oi_6T00ooi_VKonKaYooZiI@03ooV]\n\
+I004ooViJOol/F7onJUPooVlJ@;onKi[00Gon/AZooVnJool[VOonKiVoo[4JP02oo[>K@03\n\
+oo[CK?ojcVgon]AX00;on]AX00?on]Q_oo[JK?ojf6l00_ojfV`00oojcVSon/YTooViG005\n\
+ooZnH0;on/9Q00Gon/5Voo[5IOojaFGon/EUoo[:I002oo[5I@06oo[:I?ojbFWon/iXoo[>\n\
+J?ojbFWon/iX0_ojcVd01?ojdfcon]5aoo[ALOojdG42oo[EL@05oo[EMOokfGKon]V2oo[I\n\
+P_okg7X00_ojfH83oo[ISP04oo[IT_ojfHkon^21oo_PNP?on^Ee00Gon^E`oo[ZL_ojiG3o\n\
+n^Yboo_YN@03oo[/N@;on^em00?on^Yboo[YJoojgUP01OojgUP00oojhegon]iHoo[SG@03\n\
+oo[SG@Won^QR0oojjF/4oo[ZLP03oo[/NOojl7gon_B200;on_B200?onOR<oo[eROoin8`0\n\
+0_oin8`00ooimi?onOR<ooWhS003ooWgT`03ooWhVooimYWonORK00;onORK00?on?JOooOf\n\
+X_ogmZ800ooemJD00oocm:KomOFUoo?dYP03oo?dYPKol_BY1oo`m:d00oo`m:ookoBbonod\n\
+/P03onod/P;okoBc1oo]lkD7oncc^0Oojo:j1ooVl[D8onGa^0Koho6j00?ohO2lomo___oO\n\
+kkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7\n\
+olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@04ojGD\n\
+jonTdncoY=?/ojCCk0?oXM7/0_nJcNh2oiO;k`04oiG:konAb>ooTLS_oi78k`;oSLK`1On:\n\
+aO07ohG2l@?oPL3`1?n0_o000omn_^ooOKk_ogfnk`04ogfnk`OoO;g_2_mk_>l9ogNjkP00\n\
+00Coo:Pdoo^Z>oojZT?onZY31?ojZD/01?ojZEConJECooVUDoojZE@5ooVSF@OonIiJ00Co\n\
+nJ=Ioo^UH_oi[FCon[IV1?oi^FT03Ooj^FGonKaYooViJOoi_VKonKaYooZfI_oiZFKonJeT\n\
+ooVaI_oj]VKoo;1UooVYH?oi_6T00_oi_V/01_oja6[onKi[ooVaI_oi_6Won/5Voo[9J@;o\n\
+n/i]00Gon]=/oo[DJ?ojf6oon]AXoo[HK`04oo[JK004oo[DJ?ojcVSon/EQoo[2H@Con[iP\n\
+0_oj`V400ooj`FKon/9Qoo[5I@03oo[5I@04oo[:I?ojaFGon/YToo[9J@;on/iX0oojcVd4\n\
+oo[AL@;on]Ea00?on]Eeoo_IM_okfGH01?ojfH82oo[ISP?on]VB00Won^21oo_PN_ojiGGo\n\
+n^E`oo[UMOojiG3on^Yboo[UL?ojjW800_okjGT3oo[/N@05oo[`OOojjW;on^E`oo[SGOoj\n\
+gV801?ojgUP00oojhegon]iHoo[SG@03oo[SG@03oo[XH_ojhegon^QR00Kon^QR1?ojjF/3\n\
+oo[ZLP;on^ai0oojm882oo[eR@ConOR<00?onONCooWhS?oimi<00_oimi<00ooin9_onOJI\n\
+ooWhV`02ooWhV`03ooWhW_ohmYoomoJR00KomOFU0oocm:H6oo;dZ@Ool?B]00?ol?B_onod\n\
+/_o_m;801?o_m;800oo_m;?okO>eongc]@05ongc]@Ook?>h1oo[l[X7onKb]@SoiO6h1_oS\n\
+lKX00ooQl;cognnnomo__P05omo__PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Oo\n\
+d^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7\n\
+ok3IiPOoZmKY00CoYMC[ojCCk?nTdncoY=?/0onQdN`2oi[=kP;oUl__00?oUL[_oi78konA\n\
+b>l00_n=a_06oh[5l0OoQL;a0on1`?04oh2ol003ogjnkomm_^ooOKk_00CoOKk_1oml_Nl:\n\
+og^lk`WoMk[^00001?okZS_onZY3ooZZ@oojZT<3ooZYB`?onZUD0_oiYE<00ooiXeWonJEC\n\
+ooVSF@02ooVSF@GonIiJ00GonJ=IooVYH?oj]6Won[AYooVgK005ooViJ@;on[UU00_onKaY\n\
+ooVnI_oi^FWonK5Voo^UH_oj]6WonKUYooVaI_oi[F3onJ=IooVlJ@02ooVnJ`03oo[8LOoj\n\
+a6[onKi[00;onK5V00Oon/5Voo[9JOojcVSon]=/oo[HKoojfVcon]Q_00?on]Y/1OojgG00\n\
+1?ojdfcon/YToo[2HOoj`Ed5oo[2H@03oo[5IOoj`V7on/EU00;on/EU00Con/UYoo[5IOoj\n\
+bFWon/U]0_ojcVd01oojdG7on/i]oo[>KOojdfcon/i]oo[ALOojeGD00_ojeG400oojeGGo\n\
+n]=loo[IPP03oo[IPP;on]V>0_ojfI800ooihI;on^21oo_PNP03oo[QL@03oo[UL?ojiGGo\n\
+n^Ee00ConnUi0oojk7T2oo[]O@;on_1m00?on^Yboo[TI?ojgUP01?ojgUP4oo[SG@04oo[X\n\
+H_ojhegon^QRoo[XHP?on^AT00?on^QRoo[YJoojj6800_ojjF/4oo[ZLP04oo[/NOojl7go\n\
+n_61oo[dQP?on_F90_oin8`6ooWgT`;onOJI00ConONCooWhVoohmYoon?JO0_ogmZ86ooGe\n\
+Y@?oloBV1_obm:T7oo3d[@03oo3d[oo_m;;okoBb00CokoBb00?okoBcongc]Oo]lkD01Oo]\n\
+lkD7oncc^0Oojo:j00?ojO:monKb]OoVl[D01?oVl[D8onGa^0Koho6j00?ohO2lomo___oO\n\
+kkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7\n\
+olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@04ojGD\n\
+jonTdncoY=?/ojCCk0;oXM7/00CoW]3/oi[=k_nJcNkoUl__0_nEb^l2oi78k`;oSLK`1_n:\n\
+aO07ohG2l@?oPL3`0on0_o000omo__3oOKk_ogfnk`05ogfnk`OoO;g_2_mk_>l9ogNjkP00\n\
+0_okZS/2ooZZ@`ConZU;00KonJECooZYE?oiYE?onJECooVSFOoiYE<3ooVSF@?onIiJ00Co\n\
+njERooVYH?oi/FKon[AY1?oi^FT6ooVlJ@;onKiV00WonK5VooVYI_oiZFKon[IVooViJOoi\n\
+[FConJePooVSFOoi_V/00_oja6X02_ojb77on/U]oo[9KOoj^FGon[IVoobdH_oi_VKon/EU\n\
+oo[HKooje6P3oo[JK0?on]e`00Son^9Zoo[QLOojhG7on^5aoo[ML?ojfVcon]AXoo[>J0?o\n\
+n/9Q1?oj`FH2oo[5I@06oo[:I?ojaFGon/UYoo[9JOojbFgon/iX1OojcVd2oo[AL@Gon]Ee\n\
+1?ojfH82oo[ISP?on]VB00?on^21oo_PN_ojhG400_ojhG44oo[UM@?onnUi0oojk7T01Ooj\n\
+kGgon^aioo[]OOojkGgon_1m00;on^ai00?on^Yboo[YJooji6@00_ojgUP2oo[SG@03oo[N\n\
+H_ojhegon^=M00;on^=M00Gon^AToo[XH_oji6Con^AToo[XHP03oo[YJ`Gon^Yb00?on^ai\n\
+oo[`OOojm8800oojmHT00oojmHgon_F9ooWeT@02ooWeT@?onONC0_oimYT00ooimIgon?JO\n\
+ooSfW`03ooSfW`03ooOfX_oemJGomOFU00;omOFU1?ocm:H6oo;dZ@Ool?B]00?ol?B_onod\n\
+/_o_m;801?o_m;800oo_m;?okO>eongc]@05ongc]@Ook?>h1oo[l[X3onWb_@Coi_:e2?oU\n\
+lKP6on?a^P03on7`_?oOkkkognnn00Gognnn1_oLk/800ooKk/?ofNc5omW/a@05omW/a@Oo\n\
+eN[91ooBjLd7olkWd0OobnKD1oo8i=P7olCRf`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47\n\
+okGKi0Oo/=WV1on[e^T00onUe>_oY=?/ojCCk003oj7Ak004oik@k?nJcNkoUl__oiO;k`;o\n\
+UL[_0_nAb>l2ohg6l0KoR/G`1on5`_42oh70l0CoP;o`00?oOkk`ogfnkomm_^l01Omm_^l7\n\
+ogbmk`[oNkc_2Omg^^h000;onjXk0oojZT<3ooZYB`ConJEC1?oiXeT2ooVNFP05ooVSFOok\n\
+YF;onJUPooV]I?oj]VH01?oi^FT9ooVlJ@03ooV]I?oiZFKonJUV00;onKUY00?onJeTooVY\n\
+H?oiXeT00ooja6X2oo[9K@08oo[>KOoja6[onKiVoobaHOoj]VKon[iPoo[>J?oje6P3oo[J\n\
+K005oo[RJ_ojgG3on]e`oo[RJ_ojgG001?ojhG401OojgG3on]Q_oo[>J?ojaFGon/9Q00Co\n\
+n/5V0oojaFD4oo[9J@03oo[>J?ojcVgon/i]00?on/i]0_ojdG43oo[EM@03oo[CO?ojfH;o\n\
+n]B300?on]V20_ojfHh2oo[ITP06oo[IS_ojh87onmajoo[QMOojhG7on^5e1OojiGD3oo_Y\n\
+N@Con^ai0_ojkGd4oo[`O@03oo[ZL_ojjF_on^AT00;on^=M00Kon]iRoo[NF?ojgV;on^=M\n\
+oo[NH_ojhed3oo[TI003oo[XH_oji6Con^U[00;on^U[1?ojjW83oo[/N@03oo[`OOojmHWo\n\
+n_F900;on_F90_ojmHd2ooWeT@?onONC00?on_JEooWfVOoimId01OohmYl00oogmZ;omOFU\n\
+ooGeY@02ooGeY@ColoBV1_obm:T7oo3d[@03oo3d[oo_m;;okoBb00CokoBb00?okoBcongc\n\
+]Oo]lkD01Oo]lkD7oncc^0Oojo:j1?oYl[d3onKb]@SoiO6h1_oSlKX00ooQl;cognnnomo_\n\
+_P05omo__PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Ood^W=1oo>im07ol_Ve0Oo\n\
+b>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY00?oYMC[\n\
+ojCCk?nTdn`00onQdN`01OnNd>coV/g^oiO;konGbnooUL[_00?oTLS_00?oSLK`oh[5l?n:\n\
+aO001On:aO07ohG2l@;oPL3`1?n0_o000omo__3oOKk_ogfnk`05ogfnk`OoO;g_2_mk_>l9\n\
+ogNjkP0000?oo:Pdoo^Z>ookZS/00oojZT<3ooZYB`GonJEC0_oiXeT01OoiWU[onJ=IooVY\n\
+H?oj]6WonKM/00OonKUY1Ooi_6T01_oi_VKonKUYooVaI_omYV_onJUVooVaIP;onKaY00?o\n\
+nJeTooVYH?oiYE<00_oja6X00oojbFWon/U]oo[>K@02oo[>K@07oo[9KOoj]F3oo;ARooVb\n\
+H?oj_V3on/YToo[JK002oo[ML0Oon^5a00Oon^Eeoo[QMOojiGGon^Eeoo[UN_ojdfcon/UY\n\
+00Con/5V1?ojaFD4oo[9J@05oo[>KOojbFgon/i]oo[ALOojcVd01OojeGD2oo[CO0;on]V2\n\
+00Con]B3oo[IP_ojfHkon]V>0_ojfI801oojfHkonmajoo_MMOojgG3on^5aoo[QMOojhG40\n\
+0oojiGD7oo_YN@03oo[/NOojkGgon_1m00?on_1m1?ojlH400oojjW;on^9Zoo[NHP05oo[N\n\
+HP?on^AT00Oon^9Zoo[TI?ojiG3on^E`oo[YJoojjW;on^E`00;on^Yb0ookjGT01?ojk7Wo\n\
+n_28oo[`R?ojmHd2oo[eR@05oo[eSOoimI7onOFAooWeTOojmYD00_oimYT00oojmYGonOJI\n\
+ooWeW@02ooSfW`?omoJR00?omOFUooKdZOoemJD00_oemJD3oo?dYPKol_BY1oo`m:d00oo`\n\
+m:ookoBbonod/P02onod/P?okoBc1oo]lkD7oncc^0Oojo:j1?oYl[d3onKb]@SoiO6h1_oS\n\
+lKX00ooQl;cognnnomo__P05omo__PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Oo\n\
+d^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7\n\
+ok3IiPOoZmKY00?oYMC[ojCCk?nTdn`00onQdN`01OnNd>coV/g^oiO;konGbnooUL[_00?o\n\
+TLS_00?oSLK`oh[5l?n:aO001On:aO07ohG2l@;oPL3`1?n0_o000omo__3oOKk_ogfnk`05\n\
+ogfnk`OoO;g_2_mk_>l9ogNjkP0000Coo:Pdoo^Z>ookZS_onjXk0_ojZT<00oojZD_oo:92\n\
+ooZQB`04ooVUD`ConJ=I00ConJeTooVaI_oj]6WonKM/1ooi^FT6ooVlJ@0<ooZdJOoi[FCo\n\
+njERooVYI_oj]VKonKaYooViJOoi[F3onZUDooVSFOoj`FKon/AZ0_ojbFd2oo[>K@0;oo[C\n\
+K?ojcVgonKiVooZiIOol]6;on[QQoo[5HOojbVCon]AXoo[JK?ojhVX01OojhG45oo[UM@05\n\
+oo[UN_okgGGon]Eaoo[9KOojbFT00_oj`FH00oojaFGon/AZoo[9J@03oo[9J@05oo[5IOoj\n\
+bFWon/i]oo[9KOojdG400_ojcVd00oojdGKon]5aoo[AL@02oo[EM@;on]=l0_ojfH801?oj\n\
+e8[on]V2oo[IS_ojfHh3oo[ITP06oo_LN_okgGGonmeeoo[QLOojhGGon^5a1_ojiGD4oo_Y\n\
+N@04oo[/NOojkGgon^emoo[]O@;on_1m0oojlH400oojm8;on_1moo[/N@02oo[UL00<oo[R\n\
+J_ojgV;on]iRoo[NH_oji6Con]iRoo[TI?ojhV[on^AToo[UL?ojhV[on^U[0_ojiG000ook\n\
+jGWon^Eeoo_YN@02oo_YN@07oo[/NOojkX;on^j2oo[aSOojmHWonO>?oo[eS@03ooWeT@;o\n\
+n_JE1?oimYT2ooSfW`?omoJR1OoemJD3oo?dYPKol_BY1oo`m:d00oo`m:ookoBbonod/P02\n\
+onod/P?okoBc1oo]lkD7oncc^0Oojo:j1_oYl[d00ooVl[GoiO6honGa^006onGa^0Koho6j\n\
+00?ohO2lomo___oOkkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Y\n\
+c@Ooc^O@1oo;i]@7olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`\n\
+fNH7oj_Fj@03ojGDjonTdncoY=?/00?oXM7/00GoW]3/oi[=k_nGbnooUl__oiG:k`03oi78\n\
+k`03ohg6l?n:aO3oR/G`00GoR/G`1_n5`_43oh70l0?oP;o`00?oOkk`ogjnkomm_^l01_mm\n\
+_^l7ogbmk`[oNkc_2Omg^^h00003oofR:oolZ3Coo:Pd00;onjXk00Coo:92ooZZ@oojZT?o\n\
+o:920_ojXD/00ooiXeWonZ5;ooVSF@02ooVSF@05ooVYH?oj]6WonKM/ooViJOoi]f`00ooi\n\
+^FT01?oi_6WonKUYooViJOoi^FT5ooVlJ@05ooViJOoi/FKonJUPoo^UH_oi[F@00_oi_V/0\n\
+1ooi^FWonJUPooZ[FooiYE?on[iPoo[4J_ojbFd00_ojcVd04OojdG7on]=/oo[CK?ojaFGo\n\
+nKiVoobdH_oj]VKonKULoo[1GOojcVSon]Y/oo[RJ_ojhG7on^5eoo[QLOojiGGon^E`00Go\n\
+n^Ee0_ojiGX01?okh7[on]Eeoo[9KOoj`FH3oo[4JP?on/UY0_ojaFD00oojbFWon/i]oo[>\n\
+K@03oo[>K@?on]5a00Gon]Eeoo[AM_ojeGGon]=loo[DP`02oo[IPP03oo[DR_ojfHkon]VB\n\
+00;on]VB00Kon]V>oo_LN_okg7[on]e`oo[QLOokgGD2oo[QL@Con^Ee00Con^E`oo[UMOok\n\
+jGWon^Um0_ojk7T4oo[]O@04oo[`OOojl8Con_61oo[aP@;on_B200Gon_B6oo[dP_ojl7go\n\
+n^5aoo[RJP04oo[NHP?on^9Z00?on^AToo[UL?ojhVX00_ojiG02oo[UM@08oo[UN_okjGWo\n\
+n^Umoo[YOOojk7Won^V1oo[]QOojlHd2ooWcS`03oo[eSOoimI7onOFA00;onONC1?oimYT2\n\
+ooSfW`?omoJR1OoemJD3oo?dYPKol_BY1oo`m:d00oo`m:ookoBbonod/P03onod/P;okoBc\n\
+1oo]lkD7oncc^0Oojo:j1_oYl[d00ooVl[GoiO6honGa^006onGa^0Koho6j00?ohO2lomo_\n\
+__oOkkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;\n\
+i]@7olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@03\n\
+ojGDjonTdncoXM7/00;oXM7/0_nNd>`01?nJcNkoUl__oiG:konEb^l3oi78k`03ohg6l?n:\n\
+aO3oR/G`00GoR/G`1_n5`_42oh70l0CoP;o`00?oOkk`ogjnkomm_^l01_mm_^l7ogbmk`[o\n\
+Nkc_2Omg^^h000?oo:Pd0_okZS/3oobR@PConZ5;00ConIiJooVSFOolZf7onK5V0ooi]f`2\n\
+ooViJ@;onKaY0_oi^FT2ooVlJ@03ooVnJooi_6WonKaY00?onKaY00WonJUPooVYI_oiZFKo\n\
+nJUPooVaI_oi_V_on/AZooViJOoiZF000_ojZE@01ooj^67on/5Voo[>KOojcVSon/i]oo[D\n\
+J?ojdf`00_ojf6l02oojbVCon[iPooVnI_oj_V3onKiVooViG?oj`Egon/YToo[JK?ojiG3o\n\
+n^5e00Kon^Ee0oojiGX01OojjGgon^Enoo[UO_ojhWgon/U]00;on/UY00?on/5Voo[5IOoj\n\
+a6X00_oja6X01oojbFWon/U]oo[9KOojc7;on]5aoo[<L_ojdG400oojdGH01oojeGGon]=l\n\
+oo[CO?ojfH;on]B3oo[IP_oje8X00_ojfHh2oo[ITP06oo[IS_okg7[onmeeoo[ML?ojhG7o\n\
+nmee0oojhGD4oo[UM@;onnUi1OojjGd2oo[]O@03oo[`OOojl8Con_2400;on_2400?on_61\n\
+oo[dQ_ojm8800_ojm8801?ojm8Kon_61oo[UL?ojhVX2oo[NHP05oo[RJ_ojgV;on^9Zoo[R\n\
+J_ojhG400oojiGD02oojiG[on^Eeoo[UN_ojiG[on^Umoo[YPOojjGgon^V1oo[`Q?ojl8So\n\
+nO>?00?onOFA00Gon_JEooWaU_ojmYGonOJIooWeW@03ooSfW`05ooOfX_ohljComoJRooGe\n\
+YOogmZ800_oemJD2ooKdZ@03oo?dY_obm:Wol_BY00Gol_BY1oo`m:d00oo`m:ookoBbonod\n\
+/P04onod/P03onod/oo]lkGokO>e00GokO>e1Oo/lkP9on_b^POojO:m2?oUlKP6on?a^P03\n\
+on7`_?oOkkkognnn00Gognnn1_oLk/800ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooBjLd7\n\
+olkWd0OobnKD1oo8i=P7olCRf`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo/=WV\n\
+1on[e^T00onUe>_oY=?/oj7Ak002oj7Ak0;oW]3/00CoV/g^oiO;konEb^ooUL[_0onAb>l0\n\
+0on=a_3oR/G`oh[5l005oh[5l0KoQL;a0_n1`?04oh2ol003ognnl?mn_^ooOKk_00KoOKk_\n\
+1oml_Nl:og^lk`WoMk[^0005oobX=004oo^Q>oolXT;oo:92oobR@P?onZ5;00ConJ=IooV]\n\
+H?oi/FKon[AY0ooi]f`2ooViJ@KonKaY00OonKi[ooVlJOoi_6WonKaYooViJOoj]VKonJUP\n\
+00;onJUV00[onJePooVbH?oi_V_onKi[ooViJOoiZF3onZ]KooZYE?oi]E_on/5V0_ojcVd2\n\
+oo[CK0;on]Q_00Kon]Y/oo[DJ?ojbVCon[UUooZnH?oi_VH2ooZnH004oo[5HOojcVSon]AX\n\
+oo[QL@?on^Ee00?on^Ejoo[UMOokjGT00oojiGX02?ojjGgon^Enoo[YPOojiGkon]Eeoo[A\n\
+LOojbFgon/EU0ooja6X01?ojbFWon/U]oo[>KOojbFd2oo[<LP03oo[ALOojdGKon]5f00;o\n\
+n]5f0oojdg`2oo[DP`03oo[IP_oje8[on]B:00?on]VB00?on]V>oo_IM_okgGD00_ojgG02\n\
+oo_MM@?on^5e00Con^Eeoo[UN_ojiGGon^Ej0_okjGT4oo[YO@?on^em0oojkX82oo[aP@;o\n\
+n_B21?ojm8H02?ojkGgon^aioo[UMOojhV[on]e`oo[RJ_ojhG7on^9Z0_ojhG401?ojhGGo\n\
+n^Eeoo[UMOojiGD2oo[UNP04oo[YOOojjH7on^V1oo[YP@;on^f500Son_6=ooWcSooimI7o\n\
+n_JEooWaU_ojmYGonO:JooWfV@;onOFM0oohmYl01OogmZ;on?>TooGeYOoemJGom_BY00;o\n\
+mOFU0_ofm:T7oo;dZ@Ool?B]00?ol?B_onod/_o_m;801?o_m;800oo_m;?okO>eongc]@05\n\
+ongc]@Ook?>h1oo[l[X9onWb_@KoiO6h1_oSlKX00ooQl;cognnnomo__P05omo__PKog>k2\n\
+00?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Ood^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2\n\
+hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY00?oYMC[ojCCk?nQdN`00_nQ\n\
+dN`2oik@k004oi[=k_nGbnooUL[_oiG:k`?oTLS_00?oSLK`oh[5l?n:aO001On:aO06ohG2\n\
+l@;oPL3`1?n0_o000omo__3oO[k_ogfnk`06ogfnk`OoO;g_2_mk_>l9ogNjkP0000GooJ8[\n\
+oobX=?olXc7oo:PdoobS<@02oo^Q>`;oo:920oojXD/00ooi[FCon[AYooVgK003ooVgK003\n\
+ooViJOoi]fconKUY00GonKaY00SonKi[ooVlJOoi_6WonKaYooVnJooj]VKonK5VooVYH0;o\n\
+nJUV00_onK9PooZeH?oi_V_onKiVooViJOoiZF3onZ]KooZYE?oi]E_on/9Qoo[>K@03oo[C\n\
+K00:oo[HKoojfVcon]Y/oo[JK?oje6SonKULooZnH?oj`FKonKiVoo[1IP;on/9Q00?on/YT\n\
+oo[ML?ojhG400_ojiGD01?ojiG[on^Eeoo[UN_ojiGX3oo[YO@?on^V100?on^Umoo_IM_oj\n\
+bFd00ooja6X2oo[9K@06oo[>KOojbFgon/i]oo[9KOojc7;on]5a1OojdGH2oo[CO0?on]B3\n\
+0_oje8X4oo[ITP;onmUf00Gon]e`oo_MMOojgG3on]e`oo_PNP02oo[QM@04oo[UN_okh7[o\n\
+n^Ejoo[UNP?onnUi0oojjGd00oojkGgon^j2oo[]O@03oo[^PP03oo[`OOojlH7on_6100;o\n\
+n_B61?ojmHT01_ojm8Kon_B2oo[QLOojhG7on]Y/oo[ML0Con^5a00?on^5eoo[UMOojiGD0\n\
+0_ojiGX03?ojjGgon^Enoo[YPOojjHKon^V1oo[YQ_ojl8Son_6=ooWcSoojmYGonO6FooWf\n\
+V@;onO:J0_oimId4ooSfW`03ooScY?oemJGom_BY00;om_BY00?omOFUooKdZOofm:T01oob\n\
+m:T7oo3d[@03oo3d[oo_m;;okoBb00CokoBb00?okoBcongc]Oo]lkD01Oo]lkD7oncc^0Oo\n\
+jo:j1ooYl[d00ooWl<7ojO:monO``@05onGa^0Koho6j00?ohO2lomo___oOkkh01OoOkkh6\n\
+omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K\n\
+00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@03ojGDjonTdncoXM7/\n\
+00;oXM7/0_nNd>`00onJcNkoUl__oiG:k`04oi78k`03ohg6l?n:aO3oR/G`00GoR/G`1_n5\n\
+`_42oh70l0CoP;o`00?oOkk`ogjnkomm_^l01_mm_^l7ogbmk`[oNkc_2Omg^^h000?ooJ8[\n\
+0_olXc42oo^Q>`05oobR@_okXC_onZ5;ooVNF_oi/FH00_oj]6T2ooVgK003ooViJOoi]fco\n\
+nKUY00?onKUY0ooi_6T01ooi^FWonKaYooVnJooi_V_onKaYooZfI_oi[F@00_okYF803Ooi\n\
+ZF3onJePooVbH?oj^FGon/5VooZiIOoi/V3onJePooZ[FoojZECon[9FooZnH?ojcVP00_oj\n\
+df`2oo[HK`;on]Y/0_ojgG001Ooj`V7on/EUoo[1I_oj`FKon/AZ00;on/EU00Gon/EQoo[1\n\
+GOojbVCon/iXoo[UM@03oo[UNP03oo[YOOojjH7on^Um00Con^V10oojjHH00oojdG7on/i]\n\
+oo[4JP02oo[9K@03oo[9JOojbFgon/U]00?on/U]00?on/aboo[AM_ojdG400oojdGH00ooj\n\
+dgcon]B3oo[IPP02oo[DRP07oo[IS_ojdi;on]VBoo[CT_ojfI;onmajoo_IMP04oo_MM@?o\n\
+n^5e00Gonn1joo[UN_ojiG[on^Ejoo[UOP02oo[YO@05oo[UN_ojjGgon^Umoo[YPOojkGd0\n\
+0oojkX84oo[`Q0Con_B61?ojmHT02?oin8con_F9oo[`Q?ojhG7on^5eoo[ML?ojhG7on^E`\n\
+0_ojhGD00ookh7[on^Enoo[UOP03oo[UOP?on^F200?onNB5oo[ZRoojjX/01OoilYX4ooWe\n\
+W@03ooScY?ogmZ;on?>T00Oom_BY00?oloB/oo;dZOobm:T01?obm:T8oo3d[@GokoBb0_o_\n\
+m;<7ongc]@Ook?>h1oo[l[X7onWb_@;oio3100?ojO:monO``OoYl[d00ooUlKP6on?a^P03\n\
+on7`_?oOkkkognnn00Gognnn1_oLk/800ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooBjLd7\n\
+olkWd0OobnKD1oo8i=P7olCRf`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo/=WV\n\
+1on[e^T00onUe>_oY=?/ojCCk002oj7Ak0;oW]3/00CoV/g^oiO;konEb^ooUL[_0onAb>l0\n\
+0on=a_3oR/G`oh[5l005oh[5l0KoQL;a0_n1`?04oh2ol003ognnl?mn_^ooOKk_00KoOKk_\n\
+1oml_Nl:og^lk`WoMk[^0004oofR:`08oofO<_okXC_onj4koo^Q>oolXT;onZ5;ooVSFOoi\n\
+/FH2ooZdJ@?onKM/00?on[IVooVgK?oi^FT00_oi^FT5ooVlJ@;onKi[00ConKaYooVaI_oi\n\
+[FConjER0_oiZF003?oi[F3on[EPooZiIOoj`FKon[UUooVbH?oi[F3onZ]KooR]Eooj/UKo\n\
+n/5Moo[>J0;on]=/0_ojf6l02?ojfVcon]e`oo[ML?ojgG3on/YToo[5IOoj`V7on/5V0_oj\n\
+a6X2oo[5I@0:oo[1GOojbVCon/YToo[ML?ojhGGonn1joo[UN_ojjGgon^V1oo[YO@Con^V1\n\
+0oojjHH2oo[EM@?on/U]00Gon/UYoo[9KOojbFgon/aboo[9K@02oo[<LP04oo[ALOojdGKo\n\
+n]5foo[AMP;on]=l00_on]B3oo[DR_oje8[on]B:oo[IS_ojdi;on]VBoo[CT_ojfI;onmaj\n\
+oo_IMP05oo_MM@;on^5e00Son^9moo[QMOojiG[on^Ejoo[UO_ojjGgon^Enoo[UNP;on^Um\n\
+0_ojjH43oo[^PPCon_241?ojm8H4oo[eR@06ooWhS?ojmHWon_B6oo[UN_ojiGGon^5e0_oj\n\
+hG42oo[QM@03oo_PN_ojhWgon^9m00?on^En0oojiH800ooii8Gon^Z;ooWYT@02ooWaUP?o\n\
+nO:J0ooimId01_ohmYoon?>TooScY?ohljCom_BYooScY0Gom_BY00ColoB/oo;dZOobm:Wo\n\
+loB/0oobm:T7oo3d[@03oo3d[oo_m;;okoBb00?okoBb0_o_m;<7ongc]@Ook?>h1oo[l[X7\n\
+onWb_@?oio3100?ojO:monO``OoYl[d00_oUlKP6on?a^P03on7`_?oOkkkognnn00Gognnn\n\
+1_oLk/800ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooBjLd7olkWd0OobnKD1oo8i=P7olCR\n\
+f`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo/=WV1on[e^T00onUe>_oY=?/oj7A\n\
+k002oj7Ak0;oW]3/00?oV/g^oiO;konEb^l01?nAb>l00on=a_3oR/G`oh[5l005oh[5l0Ko\n\
+QL;a0_n1`?03oh2ol0;oOkk`00?oO[k_ogfnkomm_^l01Omm_^l7ogbmk`[oNkc_2Omg^^h0\n\
+00?ooJ8[0oolXc401ookXC_oo:92ooVUDooiZF3ooJe[ooVaI_oj]6T00_oi]f`00ooj]VKo\n\
+nKM/ooZfIP03ooViJ@?onKaY0ooi_V/2ooVlJ@0HooZfI_oiZF3onJUPooVYH?oi[FConJeP\n\
+ooZ[Fooj^FGonKiVoo[1I_oj]F3onK9PooV`G?oj/UKon:eGooZbE_oj_V3on/YToo[CK?oj\n\
+e6Son]Q_oo[JK?ojf6oon]Y/0oojgG000oojcVSon[iPooVnIP04oo[4JP;on/EU00Gon/9Q\n\
+oo[5HOojcVgon]Q_oo[UNP03oo[YO@Con^V11?ojjHH00oojiH;on/i]oo[9K@03oo[9K@03\n\
+oo[8LOojc7;on/ab00?on/ab00Con]5aoo[AM_ojdgcon]=l0_oje8<01?ojfH;on]B:oo[D\n\
+R_ojfI82oo[CTP03oo[IT_ojdi;onmaj00;onmUf1?okgGD01?okh7[on^5eoo_PN_okh7X3\n\
+oo[UNP06oo[UO_ojjGgon^Umoo[YOOojjH7on^Um0oojjH400oojkX;on^f5oo[]Q@02oo[`\n\
+Q0Gon_B60_ojmHT02ooin8con_F9ooWhS?oin8con_F9oo[dQ_ojkX;on^9moo_PN_okg7[o\n\
+nmee00;onn1j0_ojhWd2oo[UOP05oo[UP_oii8GonNB5oo[YQ_oii8D00_ojjX/2ooWaUP?o\n\
+nO:J0_oimId3ooScY003ooKdZOohljCon?>T00Kom_BY1?ocm:`00oobm:WoloB/oo3d[@06\n\
+oo3d[@03oo3d[oo_m;;okoBb00CokoBb00?okoBcongc]Oo]lkD01Oo]lkD7oncc^0Oojo:j\n\
+1ooYl[d4onO``@04onWb_OoWl<7ojO:monGa^0Koho6j00?ohO2lomo___oOkkh01OoOkkh6\n\
+omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K\n\
+00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@03ojGDjonTdncoY=?/\n\
+00;oXM7/0_nNd>`01?nJcNkoUl__oiG:konEb^l3oi78k`03ohg6l?n:aO3oR/G`00GoR/G`\n\
+1_n5`_42oh70l0CoP;o`00?oOkk`ogjnkomm_^l01_mm_^l7ogbmk`[oNkc_2Omg^^h000?o\n\
+oJ8[0oomWc802?olXT;onJECoob[HOoi[FCoo;1UooV]H?oi/FKonKM/0ooj]VH4ooViJ@?o\n\
+nKaY0ooi_V/00ooi_6WonK5VooV]H003ooVYH0;onJeP00GonK1LooVlJOoj`FKon/5VooZe\n\
+H003ooV`G009ooR]Eooj/UKon[UGoo[1GOojcVSon]=/oo[JK?ojf6oon]Y/00;on]e`00Co\n\
+nmeeoo[QMOojdfcon/EQ0_oj`FH2oo[9K@?on/UY0_ojaFD01_ojbVCon/iXoo[>KOojeG7o\n\
+n^9moo[UOPCon^V11OojjHH01_oii8Gon]5foo[9KOoja6[on/U]oo[8L@;on/U]0oojc780\n\
+0oojdG7on/aboo[AMP02oo[CO0;on]B30_oje8X4oo[CTP07oo[IT_ojfH;onmUfoo_IM_ok\n\
+gGGonmUfoo_MM@02oo_PNP06oo[QMOokh7[on^5eoo[ROOojiG[on^9m0oojiGh2oo[YO@?o\n\
+n^V11?ojkX83oo[`Q004oo[dQ_ojlH7on_24oo[dQP?on_F91?oin8`2ooWeT@09oo[aSOoj\n\
+l8SonNB5oo[ROOokg7[onn1joo[PPOojhWgon^2100GonNB50_oihh`3ooWYT@;onO:J0_oi\n\
+lIl00ooimIgon?>TooScY003ooScY0Com_BY00?on?:/ooKdZOoeljh01_ocm:`6oo3d[@03\n\
+oo3c[oo`m:ookoBb00GokoBb00?okoBcongc]Oo]lkD01Oo]lkD7oncc^0Oojo:j1ooYl[d8\n\
+onO``@Koho6j00?ohO2lomo___oOkkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc5\n\
+1ooEj/T7om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[M\n\
+h@Oo]M_T1on`fNH7oj_Fj@03ojGDjonTdncoXM7/00;oXM7/0_nNd>`01?nJcNkoUl__oiG:\n\
+konEb^l3oi78k`03ohg6l?n:aO3oR/G`00GoR/G`1On5`_400on1`?3oQL;aoh70l004oh2o\n\
+l003ognnl?mn_^ooOKk_00KoOKk_1oml_Nl:og^lk`WoMk[^0003oofR:`?ooIlb00OonZ5;\n\
+ooZYE?ol[VOoo:iWooVaI_ol[Ukoo;1U00?on[AY00?on[IVooZiIOoi^FT00_oi^FT6ooVl\n\
+J@03ooViJOoi[F3onJeP00;onJUP00GonJePooV]I?oi/5conK1LooVnIP02oo[1IP05ooZe\n\
+H?oi/5conK1LooZbE_oh[EL00_oj/UH01_oj`Egon/iXoo[CK?ojfVcon]Q_oo[JK0;on]e`\n\
+00Oonmeeoo[QMOojf6oon/iXoo[5IOoj`FKon/UY00;on/U]0oojbFT02oojbVCon/UYoo[:\n\
+I?ojbVCon/i]oo_IM_okh7[on^9moo[YPOojiH;on^V100Con^V60_ojjX/00ookfGKon]5a\n\
+oo[9K@02oo[9K@03oo[8LOojbFgon/Qa00;on/ab00?on]5aoo[<L_ojdGH00_ojdg`2oo[D\n\
+P`;on]B:00?on]V>oo[CT_ojdi800_ojdi800ooje8?onmUfoo[HK`02oo_IMP;onmee00?o\n\
+nn1joo[QMOokh7X00_okh7X2oo[RO@Con^En00?on^Umoo[YPOojjH400_ojjH400oojkHGo\n\
+n^j2oo[^PP05oo[`Q0;on_B60oojmHT3ooWhS0ConONC00?onOFAoo[ZRoojjHH01Oojh846\n\
+ooWTQ@;onN><0_oijI42ooWbVPGonO6O0oohlj@3ooSbZ@04ooKdZOohlZcon?:/ooGc[POo\n\
+loB/00Col?>_oo3d[Oo`m:gol?B]0_o`ljl00oo`m:ookoBbonod/P04onod/P03onod/oo]\n\
+lkGokO>e00GokO>e1oo/lkP7on_b^POojO:m1_oWl<401?oYl[goio31onO``OoWl<44on?a\n\
+^P03on7`_?oOkkkognnn00Gognnn1_oLk/800ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooB\n\
+jLd7olkWd0OobnKD1oo8i=P7olCRf`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo\n\
+/=WV1on[e^T00onUe>_oY=?/oj7Ak002oj7Ak0;oW]3/00CoV/g^oiO;konEb^ooUL[_0onA\n\
+b>l00on=a_3oR/G`oh[5l005oh[5l0KoQL;a0_n1`?03oh2ol0;oOkk`00?oO[k_ogfnkomm\n\
+_^l01Omm_^l7ogbmk`[oNkc_2Omg^^h000;ooJ8[00goo:<aoofO<_okXC_onJECoo^UH_on\n\
+ZFKoo:iWoob`IOoj]6Woo;5QoobdH_oj]VKon[AY00?on[IV00?on[UUooViJOoi_6T01Ooi\n\
+_6T00ooj^FGonJePooVYH002ooVYH0;onJeP0_oi/V001ooi]E_on/5Voo[1I_oj^67onKEK\n\
+ooVbH?oi]E/01?oj/UH01_oj^EOon/iXoo[HKoojfVcon]e`oo_MM@;on]e`00Oonmeeoo[Q\n\
+MOojhGGon^5eoo[:I?oj`V7on/AZ00Gon/U]1?ojbFT01_ojaFGon/AZoo[9KOojdG7onmaj\n\
+ooWTQ@?on^V600?on^Z;oo[YQ_ojjX/00_ojjX/01ooii8Gon]5aoo[<L_oja6[on/Qaoo[9\n\
+KOojb7400oojc782oo[AMP03oo[CO?oje8?on]B300?on]B:1Oojdi800oojfH;onmUfoo_I\n\
+MP02oo_IMP05oo[HKookg7[onmeeoo_MMOokg7X00_okh7X01OojhWgon^Enoo[UO_ojiG[o\n\
+n^En00;on^Ej00Kon^Enoo[YPOojjH7on^V1oo[YQ_ojjH43oo[]Q@;on_2400Con_28oo[e\n\
+ROojm8Kon_B60_ojmHT01OojmHgon_F9oo[eSOojmHgonOFA00ConONC0_ojmYD00ooii8Go\n\
+nN26oo[PP@03oo[PP@ConNB50ooihh`2ooWYT@09ooW[V_oilIoonO6OooWaWooimIgonO6O\n\
+ooSfWoohljCon?:Y00Kon?:/0ooeljh4oo?d[005oo3c[ooalk7ol?>_oo3c[oo`m:l00oo`\n\
+ljl2onoc/PCokoBb00?okoBcongc]Oo]lkD01Oo]lkD7oncc^0Oojo:j1ooYl[d;onO``@?o\n\
+ho6j00?ohO2lomo___oOkkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7\n\
+om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T\n\
+1on`fNH7oj_Fj@03ojGDjonTdncoXM7/00;oXM7/0_nNd>`01?nJcNkoUl__oiG:konEb^l3\n\
+oi78k`03ohg6l?n:aO3oR/G`00GoR/G`1_n5`_42oh70l0CoP;o`00?oOkk`ogjnkomm_^l0\n\
+1_mm_^l7ogbmk`[oNkc_2Omg^^h00006oofO<_omXR_ooIlboobR@_ojXD_onjER0_onZFH0\n\
+1OolZf7oo:iNoobaHOol/6GonK5V00;oo;AR0_oj]VH2ooZiI@03ooZhHOoj^FGonKaY00?o\n\
+nKaY00?on[EPooVbH?oiZF000_ojZe/2ooV]H0;onK9P0_oi]E/00ooj`FKon/AZooViG004\n\
+ooVeF`Con[9F00Gon/YToo[CK?ojf6oon]Q_oo_MM@02oo[ML0?on^5e00Kon^Eeoo[>J?oj\n\
+bFWon/EUoo[4J_ojbFd2oo[>K@06oo[9KOojcVgon/UYoo[9KOojbFWon/U]0oojbFT01Ooj\n\
+c7;on]5aoo_IM_ojh87onNB500?on^Z;00Kon^V6oo[ZRoojjX_onNB5oo[IP_ojc782oo[8\n\
+L@;on/ab00Gon/ejoo[<L_ojdGKon/ejoo[CO003oo[DP`?on]B:1?ojdi801_oje8?onmUf\n\
+oo[HKookfGKon]Q_oo_IMP;onmee00?onn1joo_LN_okh7X00_okh7X00oojhWgon^Enoo[U\n\
+OP03oo[UOPKon^V10oojkHD2oo[`Q0?on_2800?on_B6oo[eROojmHT00oojmHd3ooWgT`?o\n\
+n_JE00GonOJIoo[fUOoilIKon_6=oo[`R002ooWTQ@?onN260ooihh`00ooijI7onN><ooWY\n\
+T@02ooWYT@03ooW[V_oilIoonO6O00;onO6O00Con?:YooScY?ohlZWon?:Y1OohlZ`6ooGc\n\
+[P05oo?d[?oalk7ol?>_oo3c[ooalk400oo`ljl00oo`m:ooko>bonoc/P02onoc/P03onod\n\
+/_o_m;?okoBc00OokO>e1oo/lkP7on_b^POojO:m3OoWl<400ooSlK[ohO2lomo__P06omo_\n\
+_PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Ood^W=1oo>im07ol_Ve0Oob>CH1oo4\n\
+h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY00?oYMC[ojCCk?nQ\n\
+dN`00_nQdN`2oik@k004oi[=k_nGbnooUL[_oiG:k`?oTLS_00?oSLK`oh[5l?n:aO001On:\n\
+aO06ohG2l@;oPL3`1?n0_o000omo__3oO[k_ogfnk`06ogfnk`OoO;g_2_mk_>l9ogNjkP00\n\
+0oomWc801?ojXD_onJ=IoojYI_onZFH2oob[H@;oo:iN00?oo;1UoobaHOol/F400_oj]F00\n\
+1?ol]6;on[UUooZhHOoj^642ooZiI@;onKaY00ConKiVooVbH?oi/5conJ=I0_ojZe/2ooV]\n\
+H0;onK9P0_oi]E/00ooj`FKon/AZooViG004ooVeF`Con[9F00Kon/YToo[>J?ojf6oon]Y/\n\
+oo_MMOojf6l2oo[QM@05oo[QLOojiGGon^Eeoo[>KOojbV@00_oja6X01_ojbFgon/i]oo[>\n\
+KOojcVgon/U]oo[>K@;on/U]00?on/i]oo[>J?ojbFT00_ojbFT01?ojbFgon]5aoo[PPOoi\n\
+i8D3oo[ZR`07oo[YQ_ojjX_on^Z;oo[ZRoojh87on/ejoo[8L@02oo[<LP05oo[=N_ojc7;o\n\
+n/aboo[AM_ojcGX00ooje8<3oo[DRPGon]>B00Won]B3oo[EMOojeGGonmUfoo[HKookfGKo\n\
+nmeeoo_LN_okgGD01Ookh7X3oo[RO@;on^F21?ojjH400oojkGgon^Umoo[]Q@02oo[]Q@03\n\
+oo[^P_ojl8Con_2800;on_2800Con_B6oo[eROojlHgon_F=0_oimI43ooWgT`;on_JE00So\n\
+nOJIoo[fUOoimYWonOJIooWeTOoilhoon^F2ooWTQ@?onN2600KonN6BooWSS?oihhcon^Z;\n\
+ooWYTOoihh`2ooWYT@05ooW[V_oilY[onO6OooWaWoohk:@01?ohlZT5ooSb[0?omO>^0_oe\n\
+lk42ooGc[P;olO>a0_o`m:l2oo7c/@03oo3c[oo`m:ooko>b00?oko>b00?okoBconoc/_o_\n\
+lk801oo]lkD7oncc^0Oojo:j1ooYl[d=onO``@03on?a^_oQl;cognnn00Kognnn1_oLk/80\n\
+0ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooBjLd7olkWd0OobnKD1oo8i=P7olCRf`03ol;Q\n\
+gOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo/=WV1on[e^T00onUe>_oY=?/ojCCk003oj7A\n\
+k005oik@k?nJcNkoUl__oiO;konEb^l00onAb>l00on=a_3oR/G`oh[5l005oh[5l0KoQL;a\n\
+0_n1`?04oh2ol003ognnl?mn_^ooOKk_00KoOKk_1oml_Nl:og^lk`WoMk[^00001_omXR_o\n\
+o:92oo^UH_onZFKooJI[oof]J`?oo:iW0_ol/6D3oobaH@06oobdH_oj]VKon[EPooZeH?oj\n\
+^67on[IV0_oj^FD00ooi_6WonKEKooV`G003ooZ[F`03ooR]Eooi/5conK9P00;on[EP00Oo\n\
+nK1LooViG?oi^Econ/9QooVnI_oj^EOonKUL00?onKEK00Son[UGooZbE_oi]E_onKEKoo[1\n\
+GOojaF7onmUfoo[ML0;onmee0oojhGD02oojiG[on^5eoo[QLOojf6oon/5Voo[9JOojbFgo\n\
+n/i]oo[9KOojc7;on/U]00Oon/i]00?on/iXoo[9KOojbFT00_ojbFd01oojc7;on]V2ooWP\n\
+Q_ojjX_onNVAoo[ZRooijI400_ojjX/00oojc7;on/Qaoo[8L@02oo[8L@Gon/ej00Con]B3\n\
+oo[DR_oje8[on]B:1Oojdi801_oje8?on]=loo[ELOojeG7onmUfoo_MM@;onmaj00Conmee\n\
+oo_LN_okg7[onmee0_okh7X01?ojhWgon^Enoo[UO_ojiH82oo[UOP03oo[UP_ojjH7on^V1\n\
+00?on^V10_ojkHD3oo[`Q0?on_2800Con_F9oo[eSOojmHgon_F=1?oimI42oo[fU@ConOJI\n\
+00KonORKooWhW_oin9konOFMooWYTOoihh`2ooWPQP05ooWSS?oihI;onN><ooWQT_oihh`0\n\
+0ooihI801OoihY[onN^JooS/Y?ohljConO6O00?on?:Y0oohlZ`00oohlJoon?:/ooGc/@07\n\
+ooGc/@?olO>a00Kol?>_oo7c/Ooalk7olO>aonoc/_o_m;<5onoc/POokO>e1oo/lkP7on_b\n\
+^POojO:m3ooWl<400ooLk/;ognnnomo__P04omo__PKog>k200?ofnk3omW/aOoIk<D01OoI\n\
+k<D7omGZb@Ood^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo\n\
+^]gQ1onefn@7ok3IiPOoZmKY00?oYMC[ojCCk?nTdn`00onQdN`01OnNd>coV/g^oiO;konG\n\
+bnooUL[_00?oTLS_00?oSLK`oh[5l?n:aO001On:aO06ohG2l@;oPL3`1?n0_o02ognnl0Oo\n\
+OKk_1oml_Nl:og^lk`WoMk[^00000oolXT;onJECoofVJ`02oofVJ`;ooZUV00CooJe[oob^\n\
+Iool/6Goo;1U0ool/F42oobdHP04ooZeH?oj^67on[QQooZhH@;on[UU00WonKEKooZbE_oh\n\
+[EOonZUDooZ[FoojZEConZ]KooV`G?oi/V000_oj]F000ooi]E_onKULooZnH002ooZnH003\n\
+ooViG?oi]E_onKUL00;onKUL0ooi]E/01_oj^EOonKULoo[5HOojf6oon]e`oo_MM@Con^5e\n\
+00Kon^Ejoo_PN_ojhGGonmUfoo[5IOojbFT3oo[9K@06oo[<L_ojcVgon/i]oo[ALOojcVgo\n\
+n]5a1OojcVd3oo[9K@06oo[<L_ojdGKon]=loo[IP_oih8KonN><0_ojjX/01?oijI7on]V2\n\
+oo[AM_ojbFd2oo[8L@Con/ej00?on]B3oo[DR_oje8X00_oje8X5oo[CTP03oo[DR_ojdgco\n\
+n]5a00?onmUf0ookg7X00ookgGGonmajoo_PNP02oo_PNP;on^9m00Oon^Enoo[UP_ojiGko\n\
+n^Enoo[UP_ojjH7on^F200;on^V100?on^f5oo[YQ_ojkHD01_ojl8P00oojlHgonO>?oo[e\n\
+S@02oo[eS@03oo[fUOoimI7on_JE00;on_JE0_oimYT3ooWhV`;onORN00OonOFMooWaU_oi\n\
+jI7onNVAooWSS?oihI;onN2600ConN6B1?oihYX00ooiji[on>bTooS/Y003ooSbZ@Con?:/\n\
+00?on?6_ooGc/Ooelk401_oelk47oo7c/@;olO>e0oo_lk800oo`m;Koko>bongc]@06ongc\n\
+]@Ook?>h1oo[l[X7onWb_A7oio3100?og>k2omo___oOkkh00_oOkkh6omc^`P03om_^`ooI\n\
+k<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K00?o`^7MokoPg_no\n\
+h=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@03ojGDjonTdncoY=?/00?oXM7/00CoW]3/\n\
+oi[=k_nGbnooUl__0_nEb^l2oi78k`03ohg6l?n:aO3oR/G`00GoR/G`1_n5`_43oh70l0?o\n\
+P;o`0_mo__07ogfnk`OoO;g_2_mk_>l9ogNjkP0000?onIiJoo^UH_omYV/00oomYV/01_on\n\
+ZFKooJe[oob^Iool[VOoo;1UoobaH@;oo;AR0_ol/F400ool]6;on[QQooZhH@02ooZhH@03\n\
+ooZnH?oh[EOon:eG00?onZUD00Con:eGooZ[Fooi/5conK9P0_oj]F000ooi]E_onKULooZn\n\
+H002ooZnH0;onKUL00?on[QQooViG?oi^E`00_oi]E/01ooj^EOonKULooZiEooj`V7on]Y/\n\
+oo[ML?okgGD00oojhGD01ookh7[on^Ejoo[QMOojiG[on^5eoo[9KOojbFT00_oja6X01Ooj\n\
+bFgon/aboo[ALOojdG7on/i]00Kon]5a1?ojcVd01oojbFgon/Qaoo[<L_ojc7;on]B3oo[I\n\
+P_ojjX/00_oijI400oojjX_on]V2oo[9K@02oo[8L@Kon/ej00Con]B3oo[DR_oje8[ol<V8\n\
+1?ojdi800ooje8?on]=loo[EL@05oo_IMP03oo_LN_okgGGonmaj00?onn1j0oojhWd2oo[U\n\
+PP04oo[ROOojjH7on^F2oo[YP@;on^V60oojkHD00oojl8Son^f5oo[`R003oo[`R0;on_6=\n\
+00ConO>?oo[eSOoilhoonONC1?ojmYD00ooimYWonORKooWhV`03ooWhV`?onORN00GonOFM\n\
+ooWaU_oihI;onN><oo[ISP03ooWQTP03ooWRV_oihI;onN:J00?onN:J0oohk:@3ooSbZ@;o\n\
+n?:/00?on?6_ooSb[?ofl[<00oofl[<4ooGc/@?olO>a00?olO>eoo7c/Ooalk401_oalkD0\n\
+0oo_lk;ol?Bfongc]@06ongc]@Ook?>h1oo[l[X7onWb_@goio3100Gohn[2onO``OoLk/;o\n\
+io31omc^`P04omo__PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Ood^W=1oo>im07\n\
+ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY\n\
+00?oYMC[ojCCk?nTdn`00onQdN`00onNd>coV/g^oi[=kP02oiO;k`04oiG:konAb>ooTLS_\n\
+ohg6l0OoR/G`1_n5`_43oh70l0CoP;o`00?oOkk`ogfnkomm_^l01Omm_^l7ogbmk`[oNkc_\n\
+2Omg^^h000GooZQd00WooJI[oof]Joom[F_ooJe[oob^Iool/6Gon[IVoobaHOol[Uh00ool\n\
+]6801Ooj]F3on[QQooZeH?oj/UKonZU;00;onZUD00KonJ=IooZYE?oh[EOon:eGooV`G?oi\n\
+]E/2ooZhH@05ooVeFooj^EOon[iPoo[1I_oj_V000_oi^E`00ooj_V3onKULooViG006ooVi\n\
+G004ooZnH?ojbVCon]Y/oo[QM@;onn1j00?on^5eoo_PN_ojiGX00oojiGX00ookgGGon/UY\n\
+oo[1IP02oo[9K@03oo[>KOojdG7on]5a00Won]5a00Con/i]oo[ALOojdG7on/i]1?ojc782\n\
+oo[=NP04oo[CO?ojfH;onN26ooWSS0?on/Qa00?on/aboo[=N_ojcGX00ooje8<2oo[DRPKo\n\
+n]>B00?on]=loo[AM_okfGH00_okfGH00ookg7[onmeeoo_LNP02oo_LNPConn1j0_ojhWd2\n\
+oo[UOPCon^F21oojjHH01_ojkHGon_28oo[`R?ojl8Son_6=ooWcS`?onOFA0oojmYD00ooi\n\
+mYWon_JEooWfV@03ooWfV@03ooWhVooin9konORQ00GonORQ00?onO6OooW[V_oihI801Ooi\n\
+hI85ooWRVP;on>bT0_ohlZ`2ooSa[`;on?:/0_ohlJl5ooKb/`OolO>e00?oko>boo7c]Ooa\n\
+lkD01OoalkD01Oo]lkGolO>eoo7c]Oo]lkGolO>e00;okO>e1oo/lkP7on_b^POojO:m3_oW\n\
+l<400ooSj/;oio31on?Z`P02onO``@03omc^`_oOkkkognnn00Kog>k200?ofnk3omW/aOoI\n\
+k<D01OoIk<D7omGZb@Ood^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05\n\
+okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY00CoYMC[ojCCk?nTdncoY=?/0_nQdN`01OnNd>co\n\
+V/g^oi[=k_nGbnooUL[_00CoTLS_00?oSLK`oh[5l?n:aO001?n:aO07ohG2l@;oPL3`1?n0\n\
+_o000omo__3oOKk_ogfnk`05ogfnk`OoO;g_2_mk_>l9ogNjkP001OonZ7@02OomYV_ooJe[\n\
+oof]Joom[F_oo:iWoob`IOoj]6WonK5VooV]H003ooVaIP;onK9P00?onK1LooR]EoodZ4h0\n\
+1OobYET3oo6^H0?ol;=T00?okkINonnfIOo__W002_o_]VD02?o`/fCokkIUonnfIOo_`V_o\n\
+l=5monoJOoo_g87okmYo1?o_g842onoPP`04onoJOoo`a7_okki`onnnL0?ol<Qh3Oo_c7T5\n\
+oo38N0;ol<Ak00Gol<V8oo3CROo`dhWol=>9onnnL005oo34N`;ol<V800?ol<VFoo39R?o`\n\
+bIH01_o`bIH00oo`bHSoklaioo3AO@03oo3AO@Ool=J20oo`fXD00oo`gX[ol=Z5oo3NRP03\n\
+oo3NRPGol>:=0oo`i8l3oo3XS`;ol>^F1Oo`kIX8oo3`X@Soko2X00?on>bToo3IWOo`fId0\n\
+0oo`fId2onoIWPCokmVS0oo_hjh00oo[j;_okn>^on_X^`0<on_X^`04on?Z`_o[j;_ohn[2\n\
+on_X^`Cohn[200CogNG3on?Z`_oMiL?ohn[25_oMiL<01_oJhl[ogNG3om[Sb_oMiL?of^?:\n\
+omgU`aGof^?:00?od^;7om7RbOoAh/T01OoAh/T7oloPb`kobmo@0_o5g=H01?o;gm3oaMcF\n\
+olGLe_o;gm09olGLeP06ol3Jg?o5g=Ko`=[LolGLe_o0f]coaMcF2?o0f]`>ok_Gg`ko]=CS\n\
+2_n]dNL5ojC>j@;oV/g^0_nGbnl00onEb^ooTLS_oi78k`04oi34kP03ohc3kon@a>koS<?_\n\
+00CoS<?_00KoQL;aohc3kon5`_7oQL;aoh70l?n5`_44oh70l003oh2ol?mo_NkoOkg^00_o\n\
+Okg^2_mo_>d9ogNjkP00"], "Graphics", CellMargins -> {{0, 0}, {0, 0}}, 
+          CellFrameMargins -> 0, ImageSize -> {417, 25}, ImageMargins -> 0, 
+          Background -> RGBColor[0.466667, 0.729412, 0.933333]]}, 
+       ShowGroupOpener -> True], 
+      Cell[
+       StyleData[
+       All, "SlideShow", StyleDefinitions -> StyleData[All, "Presentation"]], 
+       PageWidth -> WindowWidth, DockedCells -> {
+         FEPrivate`FrontEndResource["FEExpressions", "SlideshowToolbar"], 
+         Cell[
+          GraphicsData[
+          "Bitmap", 
+           "CF5dJ6E]HGAYHf4PAg9QL6QYHg<PAVmbKF5d0`40006Q00006B0010400?l00000o`\
+00003o\n00000?ooMk[^X_mg^^h00003oobX=?okZS_onjXk00ConZU;\
+00ConZUDooVUDoojZEConZUD\n\
+1_oiXeT8ooVNFP03oo^UH_oiZF3on[IV00GonKUY0_oi_6T00ooi_VKonKaYooZiI@03ooV]\n\
+I004ooViJOol/F7onJUPooVlJ@;onKi[00Gon/AZooVnJool[VOonKiVoo[4JP02oo[>K@03\n\
+oo[CK?ojcVgon]AX00;on]AX00?on]Q_oo[JK?ojf6l00_ojfV`00oojcVSon/YTooViG005\n\
+ooZnH0;on/9Q00Gon/5Voo[5IOojaFGon/EUoo[:I002oo[5I@06oo[:I?ojbFWon/iXoo[>\n\
+J?ojbFWon/iX0_ojcVd01?ojdfcon]5aoo[ALOojdG42oo[EL@05oo[EMOokfGKon]V2oo[I\n\
+P_okg7X00_ojfH83oo[ISP04oo[IT_ojfHkon^21oo_PNP?on^Ee00Gon^E`oo[ZL_ojiG3o\n\
+n^Yboo_YN@03oo[/N@;on^em00?on^Yboo[YJoojgUP01OojgUP00oojhegon]iHoo[SG@03\n\
+oo[SG@Won^QR0oojjF/4oo[ZLP03oo[/NOojl7gon_B200;on_B200?onOR<oo[eROoin8`0\n\
+0_oin8`00ooimi?onOR<ooWhS003ooWgT`03ooWhVooimYWonORK00;onORK00?on?JOooOf\n\
+X_ogmZ800ooemJD00oocm:KomOFUoo?dYP03oo?dYPKol_BY1oo`m:d00oo`m:ookoBbonod\n\
+/P03onod/P;okoBc1oo]lkD7oncc^0Oojo:j1ooVl[D8onGa^0Koho6j00?ohO2lomo___oO\n\
+kkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7\n\
+olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@04ojGD\n\
+jonTdncoY=?/ojCCk0?oXM7/0_nJcNh2oiO;k`04oiG:konAb>ooTLS_oi78k`;oSLK`1On:\n\
+aO07ohG2l@?oPL3`1?n0_o000omn_^ooOKk_ogfnk`04ogfnk`OoO;g_2_mk_>l9ogNjkP00\n\
+00Coo:Pdoo^Z>oojZT?onZY31?ojZD/01?ojZEConJECooVUDoojZE@5ooVSF@OonIiJ00Co\n\
+nJ=Ioo^UH_oi[FCon[IV1?oi^FT03Ooj^FGonKaYooViJOoi_VKonKaYooZfI_oiZFKonJeT\n\
+ooVaI_oj]VKoo;1UooVYH?oi_6T00_oi_V/01_oja6[onKi[ooVaI_oi_6Won/5Voo[9J@;o\n\
+n/i]00Gon]=/oo[DJ?ojf6oon]AXoo[HK`04oo[JK004oo[DJ?ojcVSon/EQoo[2H@Con[iP\n\
+0_oj`V400ooj`FKon/9Qoo[5I@03oo[5I@04oo[:I?ojaFGon/YToo[9J@;on/iX0oojcVd4\n\
+oo[AL@;on]Ea00?on]Eeoo_IM_okfGH01?ojfH82oo[ISP?on]VB00Won^21oo_PN_ojiGGo\n\
+n^E`oo[UMOojiG3on^Yboo[UL?ojjW800_okjGT3oo[/N@05oo[`OOojjW;on^E`oo[SGOoj\n\
+gV801?ojgUP00oojhegon]iHoo[SG@03oo[SG@03oo[XH_ojhegon^QR00Kon^QR1?ojjF/3\n\
+oo[ZLP;on^ai0oojm882oo[eR@ConOR<00?onONCooWhS?oimi<00_oimi<00ooin9_onOJI\n\
+ooWhV`02ooWhV`03ooWhW_ohmYoomoJR00KomOFU0oocm:H6oo;dZ@Ool?B]00?ol?B_onod\n\
+/_o_m;801?o_m;800oo_m;?okO>eongc]@05ongc]@Ook?>h1oo[l[X7onKb]@SoiO6h1_oS\n\
+lKX00ooQl;cognnnomo__P05omo__PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Oo\n\
+d^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7\n\
+ok3IiPOoZmKY00CoYMC[ojCCk?nTdncoY=?/0onQdN`2oi[=kP;oUl__00?oUL[_oi78konA\n\
+b>l00_n=a_06oh[5l0OoQL;a0on1`?04oh2ol003ogjnkomm_^ooOKk_00CoOKk_1oml_Nl:\n\
+og^lk`WoMk[^00001?okZS_onZY3ooZZ@oojZT<3ooZYB`?onZUD0_oiYE<00ooiXeWonJEC\n\
+ooVSF@02ooVSF@GonIiJ00GonJ=IooVYH?oj]6Won[AYooVgK005ooViJ@;on[UU00_onKaY\n\
+ooVnI_oi^FWonK5Voo^UH_oj]6WonKUYooVaI_oi[F3onJ=IooVlJ@02ooVnJ`03oo[8LOoj\n\
+a6[onKi[00;onK5V00Oon/5Voo[9JOojcVSon]=/oo[HKoojfVcon]Q_00?on]Y/1OojgG00\n\
+1?ojdfcon/YToo[2HOoj`Ed5oo[2H@03oo[5IOoj`V7on/EU00;on/EU00Con/UYoo[5IOoj\n\
+bFWon/U]0_ojcVd01oojdG7on/i]oo[>KOojdfcon/i]oo[ALOojeGD00_ojeG400oojeGGo\n\
+n]=loo[IPP03oo[IPP;on]V>0_ojfI800ooihI;on^21oo_PNP03oo[QL@03oo[UL?ojiGGo\n\
+n^Ee00ConnUi0oojk7T2oo[]O@;on_1m00?on^Yboo[TI?ojgUP01?ojgUP4oo[SG@04oo[X\n\
+H_ojhegon^QRoo[XHP?on^AT00?on^QRoo[YJoojj6800_ojjF/4oo[ZLP04oo[/NOojl7go\n\
+n_61oo[dQP?on_F90_oin8`6ooWgT`;onOJI00ConONCooWhVoohmYoon?JO0_ogmZ86ooGe\n\
+Y@?oloBV1_obm:T7oo3d[@03oo3d[oo_m;;okoBb00CokoBb00?okoBcongc]Oo]lkD01Oo]\n\
+lkD7oncc^0Oojo:j00?ojO:monKb]OoVl[D01?oVl[D8onGa^0Koho6j00?ohO2lomo___oO\n\
+kkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7\n\
+olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@04ojGD\n\
+jonTdncoY=?/ojCCk0;oXM7/00CoW]3/oi[=k_nJcNkoUl__0_nEb^l2oi78k`;oSLK`1_n:\n\
+aO07ohG2l@?oPL3`0on0_o000omo__3oOKk_ogfnk`05ogfnk`OoO;g_2_mk_>l9ogNjkP00\n\
+0_okZS/2ooZZ@`ConZU;00KonJECooZYE?oiYE?onJECooVSFOoiYE<3ooVSF@?onIiJ00Co\n\
+njERooVYH?oi/FKon[AY1?oi^FT6ooVlJ@;onKiV00WonK5VooVYI_oiZFKon[IVooViJOoi\n\
+[FConJePooVSFOoi_V/00_oja6X02_ojb77on/U]oo[9KOoj^FGon[IVoobdH_oi_VKon/EU\n\
+oo[HKooje6P3oo[JK0?on]e`00Son^9Zoo[QLOojhG7on^5aoo[ML?ojfVcon]AXoo[>J0?o\n\
+n/9Q1?oj`FH2oo[5I@06oo[:I?ojaFGon/UYoo[9JOojbFgon/iX1OojcVd2oo[AL@Gon]Ee\n\
+1?ojfH82oo[ISP?on]VB00?on^21oo_PN_ojhG400_ojhG44oo[UM@?onnUi0oojk7T01Ooj\n\
+kGgon^aioo[]OOojkGgon_1m00;on^ai00?on^Yboo[YJooji6@00_ojgUP2oo[SG@03oo[N\n\
+H_ojhegon^=M00;on^=M00Gon^AToo[XH_oji6Con^AToo[XHP03oo[YJ`Gon^Yb00?on^ai\n\
+oo[`OOojm8800oojmHT00oojmHgon_F9ooWeT@02ooWeT@?onONC0_oimYT00ooimIgon?JO\n\
+ooSfW`03ooSfW`03ooOfX_oemJGomOFU00;omOFU1?ocm:H6oo;dZ@Ool?B]00?ol?B_onod\n\
+/_o_m;801?o_m;800oo_m;?okO>eongc]@05ongc]@Ook?>h1oo[l[X3onWb_@Coi_:e2?oU\n\
+lKP6on?a^P03on7`_?oOkkkognnn00Gognnn1_oLk/800ooKk/?ofNc5omW/a@05omW/a@Oo\n\
+eN[91ooBjLd7olkWd0OobnKD1oo8i=P7olCRf`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47\n\
+okGKi0Oo/=WV1on[e^T00onUe>_oY=?/ojCCk003oj7Ak004oik@k?nJcNkoUl__oiO;k`;o\n\
+UL[_0_nAb>l2ohg6l0KoR/G`1on5`_42oh70l0CoP;o`00?oOkk`ogfnkomm_^l01Omm_^l7\n\
+ogbmk`[oNkc_2Omg^^h000;onjXk0oojZT<3ooZYB`ConJEC1?oiXeT2ooVNFP05ooVSFOok\n\
+YF;onJUPooV]I?oj]VH01?oi^FT9ooVlJ@03ooV]I?oiZFKonJUV00;onKUY00?onJeTooVY\n\
+H?oiXeT00ooja6X2oo[9K@08oo[>KOoja6[onKiVoobaHOoj]VKon[iPoo[>J?oje6P3oo[J\n\
+K005oo[RJ_ojgG3on]e`oo[RJ_ojgG001?ojhG401OojgG3on]Q_oo[>J?ojaFGon/9Q00Co\n\
+n/5V0oojaFD4oo[9J@03oo[>J?ojcVgon/i]00?on/i]0_ojdG43oo[EM@03oo[CO?ojfH;o\n\
+n]B300?on]V20_ojfHh2oo[ITP06oo[IS_ojh87onmajoo[QMOojhG7on^5e1OojiGD3oo_Y\n\
+N@Con^ai0_ojkGd4oo[`O@03oo[ZL_ojjF_on^AT00;on^=M00Kon]iRoo[NF?ojgV;on^=M\n\
+oo[NH_ojhed3oo[TI003oo[XH_oji6Con^U[00;on^U[1?ojjW83oo[/N@03oo[`OOojmHWo\n\
+n_F900;on_F90_ojmHd2ooWeT@?onONC00?on_JEooWfVOoimId01OohmYl00oogmZ;omOFU\n\
+ooGeY@02ooGeY@ColoBV1_obm:T7oo3d[@03oo3d[oo_m;;okoBb00CokoBb00?okoBcongc\n\
+]Oo]lkD01Oo]lkD7oncc^0Oojo:j1?oYl[d3onKb]@SoiO6h1_oSlKX00ooQl;cognnnomo_\n\
+_P05omo__PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Ood^W=1oo>im07ol_Ve0Oo\n\
+b>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY00?oYMC[\n\
+ojCCk?nTdn`00onQdN`01OnNd>coV/g^oiO;konGbnooUL[_00?oTLS_00?oSLK`oh[5l?n:\n\
+aO001On:aO07ohG2l@;oPL3`1?n0_o000omo__3oOKk_ogfnk`05ogfnk`OoO;g_2_mk_>l9\n\
+ogNjkP0000?oo:Pdoo^Z>ookZS/00oojZT<3ooZYB`GonJEC0_oiXeT01OoiWU[onJ=IooVY\n\
+H?oj]6WonKM/00OonKUY1Ooi_6T01_oi_VKonKUYooVaI_omYV_onJUVooVaIP;onKaY00?o\n\
+nJeTooVYH?oiYE<00_oja6X00oojbFWon/U]oo[>K@02oo[>K@07oo[9KOoj]F3oo;ARooVb\n\
+H?oj_V3on/YToo[JK002oo[ML0Oon^5a00Oon^Eeoo[QMOojiGGon^Eeoo[UN_ojdfcon/UY\n\
+00Con/5V1?ojaFD4oo[9J@05oo[>KOojbFgon/i]oo[ALOojcVd01OojeGD2oo[CO0;on]V2\n\
+00Con]B3oo[IP_ojfHkon]V>0_ojfI801oojfHkonmajoo_MMOojgG3on^5aoo[QMOojhG40\n\
+0oojiGD7oo_YN@03oo[/NOojkGgon_1m00?on_1m1?ojlH400oojjW;on^9Zoo[NHP05oo[N\n\
+HP?on^AT00Oon^9Zoo[TI?ojiG3on^E`oo[YJoojjW;on^E`00;on^Yb0ookjGT01?ojk7Wo\n\
+n_28oo[`R?ojmHd2oo[eR@05oo[eSOoimI7onOFAooWeTOojmYD00_oimYT00oojmYGonOJI\n\
+ooWeW@02ooSfW`?omoJR00?omOFUooKdZOoemJD00_oemJD3oo?dYPKol_BY1oo`m:d00oo`\n\
+m:ookoBbonod/P02onod/P?okoBc1oo]lkD7oncc^0Oojo:j1?oYl[d3onKb]@SoiO6h1_oS\n\
+lKX00ooQl;cognnnomo__P05omo__PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Oo\n\
+d^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7\n\
+ok3IiPOoZmKY00?oYMC[ojCCk?nTdn`00onQdN`01OnNd>coV/g^oiO;konGbnooUL[_00?o\n\
+TLS_00?oSLK`oh[5l?n:aO001On:aO07ohG2l@;oPL3`1?n0_o000omo__3oOKk_ogfnk`05\n\
+ogfnk`OoO;g_2_mk_>l9ogNjkP0000Coo:Pdoo^Z>ookZS_onjXk0_ojZT<00oojZD_oo:92\n\
+ooZQB`04ooVUD`ConJ=I00ConJeTooVaI_oj]6WonKM/1ooi^FT6ooVlJ@0<ooZdJOoi[FCo\n\
+njERooVYI_oj]VKonKaYooViJOoi[F3onZUDooVSFOoj`FKon/AZ0_ojbFd2oo[>K@0;oo[C\n\
+K?ojcVgonKiVooZiIOol]6;on[QQoo[5HOojbVCon]AXoo[JK?ojhVX01OojhG45oo[UM@05\n\
+oo[UN_okgGGon]Eaoo[9KOojbFT00_oj`FH00oojaFGon/AZoo[9J@03oo[9J@05oo[5IOoj\n\
+bFWon/i]oo[9KOojdG400_ojcVd00oojdGKon]5aoo[AL@02oo[EM@;on]=l0_ojfH801?oj\n\
+e8[on]V2oo[IS_ojfHh3oo[ITP06oo_LN_okgGGonmeeoo[QLOojhGGon^5a1_ojiGD4oo_Y\n\
+N@04oo[/NOojkGgon^emoo[]O@;on_1m0oojlH400oojm8;on_1moo[/N@02oo[UL00<oo[R\n\
+J_ojgV;on]iRoo[NH_oji6Con]iRoo[TI?ojhV[on^AToo[UL?ojhV[on^U[0_ojiG000ook\n\
+jGWon^Eeoo_YN@02oo_YN@07oo[/NOojkX;on^j2oo[aSOojmHWonO>?oo[eS@03ooWeT@;o\n\
+n_JE1?oimYT2ooSfW`?omoJR1OoemJD3oo?dYPKol_BY1oo`m:d00oo`m:ookoBbonod/P02\n\
+onod/P?okoBc1oo]lkD7oncc^0Oojo:j1_oYl[d00ooVl[GoiO6honGa^006onGa^0Koho6j\n\
+00?ohO2lomo___oOkkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Y\n\
+c@Ooc^O@1oo;i]@7olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`\n\
+fNH7oj_Fj@03ojGDjonTdncoY=?/00?oXM7/00GoW]3/oi[=k_nGbnooUl__oiG:k`03oi78\n\
+k`03ohg6l?n:aO3oR/G`00GoR/G`1_n5`_43oh70l0?oP;o`00?oOkk`ogjnkomm_^l01_mm\n\
+_^l7ogbmk`[oNkc_2Omg^^h00003oofR:oolZ3Coo:Pd00;onjXk00Coo:92ooZZ@oojZT?o\n\
+o:920_ojXD/00ooiXeWonZ5;ooVSF@02ooVSF@05ooVYH?oj]6WonKM/ooViJOoi]f`00ooi\n\
+^FT01?oi_6WonKUYooViJOoi^FT5ooVlJ@05ooViJOoi/FKonJUPoo^UH_oi[F@00_oi_V/0\n\
+1ooi^FWonJUPooZ[FooiYE?on[iPoo[4J_ojbFd00_ojcVd04OojdG7on]=/oo[CK?ojaFGo\n\
+nKiVoobdH_oj]VKonKULoo[1GOojcVSon]Y/oo[RJ_ojhG7on^5eoo[QLOojiGGon^E`00Go\n\
+n^Ee0_ojiGX01?okh7[on]Eeoo[9KOoj`FH3oo[4JP?on/UY0_ojaFD00oojbFWon/i]oo[>\n\
+K@03oo[>K@?on]5a00Gon]Eeoo[AM_ojeGGon]=loo[DP`02oo[IPP03oo[DR_ojfHkon]VB\n\
+00;on]VB00Kon]V>oo_LN_okg7[on]e`oo[QLOokgGD2oo[QL@Con^Ee00Con^E`oo[UMOok\n\
+jGWon^Um0_ojk7T4oo[]O@04oo[`OOojl8Con_61oo[aP@;on_B200Gon_B6oo[dP_ojl7go\n\
+n^5aoo[RJP04oo[NHP?on^9Z00?on^AToo[UL?ojhVX00_ojiG02oo[UM@08oo[UN_okjGWo\n\
+n^Umoo[YOOojk7Won^V1oo[]QOojlHd2ooWcS`03oo[eSOoimI7onOFA00;onONC1?oimYT2\n\
+ooSfW`?omoJR1OoemJD3oo?dYPKol_BY1oo`m:d00oo`m:ookoBbonod/P03onod/P;okoBc\n\
+1oo]lkD7oncc^0Oojo:j1_oYl[d00ooVl[GoiO6honGa^006onGa^0Koho6j00?ohO2lomo_\n\
+__oOkkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;\n\
+i]@7olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@03\n\
+ojGDjonTdncoXM7/00;oXM7/0_nNd>`01?nJcNkoUl__oiG:konEb^l3oi78k`03ohg6l?n:\n\
+aO3oR/G`00GoR/G`1_n5`_42oh70l0CoP;o`00?oOkk`ogjnkomm_^l01_mm_^l7ogbmk`[o\n\
+Nkc_2Omg^^h000?oo:Pd0_okZS/3oobR@PConZ5;00ConIiJooVSFOolZf7onK5V0ooi]f`2\n\
+ooViJ@;onKaY0_oi^FT2ooVlJ@03ooVnJooi_6WonKaY00?onKaY00WonJUPooVYI_oiZFKo\n\
+nJUPooVaI_oi_V_on/AZooViJOoiZF000_ojZE@01ooj^67on/5Voo[>KOojcVSon/i]oo[D\n\
+J?ojdf`00_ojf6l02oojbVCon[iPooVnI_oj_V3onKiVooViG?oj`Egon/YToo[JK?ojiG3o\n\
+n^5e00Kon^Ee0oojiGX01OojjGgon^Enoo[UO_ojhWgon/U]00;on/UY00?on/5Voo[5IOoj\n\
+a6X00_oja6X01oojbFWon/U]oo[9KOojc7;on]5aoo[<L_ojdG400oojdGH01oojeGGon]=l\n\
+oo[CO?ojfH;on]B3oo[IP_oje8X00_ojfHh2oo[ITP06oo[IS_okg7[onmeeoo[ML?ojhG7o\n\
+nmee0oojhGD4oo[UM@;onnUi1OojjGd2oo[]O@03oo[`OOojl8Con_2400;on_2400?on_61\n\
+oo[dQ_ojm8800_ojm8801?ojm8Kon_61oo[UL?ojhVX2oo[NHP05oo[RJ_ojgV;on^9Zoo[R\n\
+J_ojhG400oojiGD02oojiG[on^Eeoo[UN_ojiG[on^Umoo[YPOojjGgon^V1oo[`Q?ojl8So\n\
+nO>?00?onOFA00Gon_JEooWaU_ojmYGonOJIooWeW@03ooSfW`05ooOfX_ohljComoJRooGe\n\
+YOogmZ800_oemJD2ooKdZ@03oo?dY_obm:Wol_BY00Gol_BY1oo`m:d00oo`m:ookoBbonod\n\
+/P04onod/P03onod/oo]lkGokO>e00GokO>e1Oo/lkP9on_b^POojO:m2?oUlKP6on?a^P03\n\
+on7`_?oOkkkognnn00Gognnn1_oLk/800ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooBjLd7\n\
+olkWd0OobnKD1oo8i=P7olCRf`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo/=WV\n\
+1on[e^T00onUe>_oY=?/oj7Ak002oj7Ak0;oW]3/00CoV/g^oiO;konEb^ooUL[_0onAb>l0\n\
+0on=a_3oR/G`oh[5l005oh[5l0KoQL;a0_n1`?04oh2ol003ognnl?mn_^ooOKk_00KoOKk_\n\
+1oml_Nl:og^lk`WoMk[^0005oobX=004oo^Q>oolXT;oo:92oobR@P?onZ5;00ConJ=IooV]\n\
+H?oi/FKon[AY0ooi]f`2ooViJ@KonKaY00OonKi[ooVlJOoi_6WonKaYooViJOoj]VKonJUP\n\
+00;onJUV00[onJePooVbH?oi_V_onKi[ooViJOoiZF3onZ]KooZYE?oi]E_on/5V0_ojcVd2\n\
+oo[CK0;on]Q_00Kon]Y/oo[DJ?ojbVCon[UUooZnH?oi_VH2ooZnH004oo[5HOojcVSon]AX\n\
+oo[QL@?on^Ee00?on^Ejoo[UMOokjGT00oojiGX02?ojjGgon^Enoo[YPOojiGkon]Eeoo[A\n\
+LOojbFgon/EU0ooja6X01?ojbFWon/U]oo[>KOojbFd2oo[<LP03oo[ALOojdGKon]5f00;o\n\
+n]5f0oojdg`2oo[DP`03oo[IP_oje8[on]B:00?on]VB00?on]V>oo_IM_okgGD00_ojgG02\n\
+oo_MM@?on^5e00Con^Eeoo[UN_ojiGGon^Ej0_okjGT4oo[YO@?on^em0oojkX82oo[aP@;o\n\
+n_B21?ojm8H02?ojkGgon^aioo[UMOojhV[on]e`oo[RJ_ojhG7on^9Z0_ojhG401?ojhGGo\n\
+n^Eeoo[UMOojiGD2oo[UNP04oo[YOOojjH7on^V1oo[YP@;on^f500Son_6=ooWcSooimI7o\n\
+n_JEooWaU_ojmYGonO:JooWfV@;onOFM0oohmYl01OogmZ;on?>TooGeYOoemJGom_BY00;o\n\
+mOFU0_ofm:T7oo;dZ@Ool?B]00?ol?B_onod/_o_m;801?o_m;800oo_m;?okO>eongc]@05\n\
+ongc]@Ook?>h1oo[l[X9onWb_@KoiO6h1_oSlKX00ooQl;cognnnomo__P05omo__PKog>k2\n\
+00?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Ood^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2\n\
+hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY00?oYMC[ojCCk?nQdN`00_nQ\n\
+dN`2oik@k004oi[=k_nGbnooUL[_oiG:k`?oTLS_00?oSLK`oh[5l?n:aO001On:aO06ohG2\n\
+l@;oPL3`1?n0_o000omo__3oO[k_ogfnk`06ogfnk`OoO;g_2_mk_>l9ogNjkP0000GooJ8[\n\
+oobX=?olXc7oo:PdoobS<@02oo^Q>`;oo:920oojXD/00ooi[FCon[AYooVgK003ooVgK003\n\
+ooViJOoi]fconKUY00GonKaY00SonKi[ooVlJOoi_6WonKaYooVnJooj]VKonK5VooVYH0;o\n\
+nJUV00_onK9PooZeH?oi_V_onKiVooViJOoiZF3onZ]KooZYE?oi]E_on/9Qoo[>K@03oo[C\n\
+K00:oo[HKoojfVcon]Y/oo[JK?oje6SonKULooZnH?oj`FKonKiVoo[1IP;on/9Q00?on/YT\n\
+oo[ML?ojhG400_ojiGD01?ojiG[on^Eeoo[UN_ojiGX3oo[YO@?on^V100?on^Umoo_IM_oj\n\
+bFd00ooja6X2oo[9K@06oo[>KOojbFgon/i]oo[9KOojc7;on]5a1OojdGH2oo[CO0?on]B3\n\
+0_oje8X4oo[ITP;onmUf00Gon]e`oo_MMOojgG3on]e`oo_PNP02oo[QM@04oo[UN_okh7[o\n\
+n^Ejoo[UNP?onnUi0oojjGd00oojkGgon^j2oo[]O@03oo[^PP03oo[`OOojlH7on_6100;o\n\
+n_B61?ojmHT01_ojm8Kon_B2oo[QLOojhG7on]Y/oo[ML0Con^5a00?on^5eoo[UMOojiGD0\n\
+0_ojiGX03?ojjGgon^Enoo[YPOojjHKon^V1oo[YQ_ojl8Son_6=ooWcSoojmYGonO6FooWf\n\
+V@;onO:J0_oimId4ooSfW`03ooScY?oemJGom_BY00;om_BY00?omOFUooKdZOofm:T01oob\n\
+m:T7oo3d[@03oo3d[oo_m;;okoBb00CokoBb00?okoBcongc]Oo]lkD01Oo]lkD7oncc^0Oo\n\
+jo:j1ooYl[d00ooWl<7ojO:monO``@05onGa^0Koho6j00?ohO2lomo___oOkkh01OoOkkh6\n\
+omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K\n\
+00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@03ojGDjonTdncoXM7/\n\
+00;oXM7/0_nNd>`00onJcNkoUl__oiG:k`04oi78k`03ohg6l?n:aO3oR/G`00GoR/G`1_n5\n\
+`_42oh70l0CoP;o`00?oOkk`ogjnkomm_^l01_mm_^l7ogbmk`[oNkc_2Omg^^h000?ooJ8[\n\
+0_olXc42oo^Q>`05oobR@_okXC_onZ5;ooVNF_oi/FH00_oj]6T2ooVgK003ooViJOoi]fco\n\
+nKUY00?onKUY0ooi_6T01ooi^FWonKaYooVnJooi_V_onKaYooZfI_oi[F@00_okYF803Ooi\n\
+ZF3onJePooVbH?oj^FGon/5VooZiIOoi/V3onJePooZ[FoojZECon[9FooZnH?ojcVP00_oj\n\
+df`2oo[HK`;on]Y/0_ojgG001Ooj`V7on/EUoo[1I_oj`FKon/AZ00;on/EU00Gon/EQoo[1\n\
+GOojbVCon/iXoo[UM@03oo[UNP03oo[YOOojjH7on^Um00Con^V10oojjHH00oojdG7on/i]\n\
+oo[4JP02oo[9K@03oo[9JOojbFgon/U]00?on/U]00?on/aboo[AM_ojdG400oojdGH00ooj\n\
+dgcon]B3oo[IPP02oo[DRP07oo[IS_ojdi;on]VBoo[CT_ojfI;onmajoo_IMP04oo_MM@?o\n\
+n^5e00Gonn1joo[UN_ojiG[on^Ejoo[UOP02oo[YO@05oo[UN_ojjGgon^Umoo[YPOojkGd0\n\
+0oojkX84oo[`Q0Con_B61?ojmHT02?oin8con_F9oo[`Q?ojhG7on^5eoo[ML?ojhG7on^E`\n\
+0_ojhGD00ookh7[on^Enoo[UOP03oo[UOP?on^F200?onNB5oo[ZRoojjX/01OoilYX4ooWe\n\
+W@03ooScY?ogmZ;on?>T00Oom_BY00?oloB/oo;dZOobm:T01?obm:T8oo3d[@GokoBb0_o_\n\
+m;<7ongc]@Ook?>h1oo[l[X7onWb_@;oio3100?ojO:monO``OoYl[d00ooUlKP6on?a^P03\n\
+on7`_?oOkkkognnn00Gognnn1_oLk/800ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooBjLd7\n\
+olkWd0OobnKD1oo8i=P7olCRf`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo/=WV\n\
+1on[e^T00onUe>_oY=?/ojCCk002oj7Ak0;oW]3/00CoV/g^oiO;konEb^ooUL[_0onAb>l0\n\
+0on=a_3oR/G`oh[5l005oh[5l0KoQL;a0_n1`?04oh2ol003ognnl?mn_^ooOKk_00KoOKk_\n\
+1oml_Nl:og^lk`WoMk[^0004oofR:`08oofO<_okXC_onj4koo^Q>oolXT;onZ5;ooVSFOoi\n\
+/FH2ooZdJ@?onKM/00?on[IVooVgK?oi^FT00_oi^FT5ooVlJ@;onKi[00ConKaYooVaI_oi\n\
+[FConjER0_oiZF003?oi[F3on[EPooZiIOoj`FKon[UUooVbH?oi[F3onZ]KooR]Eooj/UKo\n\
+n/5Moo[>J0;on]=/0_ojf6l02?ojfVcon]e`oo[ML?ojgG3on/YToo[5IOoj`V7on/5V0_oj\n\
+a6X2oo[5I@0:oo[1GOojbVCon/YToo[ML?ojhGGonn1joo[UN_ojjGgon^V1oo[YO@Con^V1\n\
+0oojjHH2oo[EM@?on/U]00Gon/UYoo[9KOojbFgon/aboo[9K@02oo[<LP04oo[ALOojdGKo\n\
+n]5foo[AMP;on]=l00_on]B3oo[DR_oje8[on]B:oo[IS_ojdi;on]VBoo[CT_ojfI;onmaj\n\
+oo_IMP05oo_MM@;on^5e00Son^9moo[QMOojiG[on^Ejoo[UO_ojjGgon^Enoo[UNP;on^Um\n\
+0_ojjH43oo[^PPCon_241?ojm8H4oo[eR@06ooWhS?ojmHWon_B6oo[UN_ojiGGon^5e0_oj\n\
+hG42oo[QM@03oo_PN_ojhWgon^9m00?on^En0oojiH800ooii8Gon^Z;ooWYT@02ooWaUP?o\n\
+nO:J0ooimId01_ohmYoon?>TooScY?ohljCom_BYooScY0Gom_BY00ColoB/oo;dZOobm:Wo\n\
+loB/0oobm:T7oo3d[@03oo3d[oo_m;;okoBb00?okoBb0_o_m;<7ongc]@Ook?>h1oo[l[X7\n\
+onWb_@?oio3100?ojO:monO``OoYl[d00_oUlKP6on?a^P03on7`_?oOkkkognnn00Gognnn\n\
+1_oLk/800ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooBjLd7olkWd0OobnKD1oo8i=P7olCR\n\
+f`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo/=WV1on[e^T00onUe>_oY=?/oj7A\n\
+k002oj7Ak0;oW]3/00?oV/g^oiO;konEb^l01?nAb>l00on=a_3oR/G`oh[5l005oh[5l0Ko\n\
+QL;a0_n1`?03oh2ol0;oOkk`00?oO[k_ogfnkomm_^l01Omm_^l7ogbmk`[oNkc_2Omg^^h0\n\
+00?ooJ8[0oolXc401ookXC_oo:92ooVUDooiZF3ooJe[ooVaI_oj]6T00_oi]f`00ooj]VKo\n\
+nKM/ooZfIP03ooViJ@?onKaY0ooi_V/2ooVlJ@0HooZfI_oiZF3onJUPooVYH?oi[FConJeP\n\
+ooZ[Fooj^FGonKiVoo[1I_oj]F3onK9PooV`G?oj/UKon:eGooZbE_oj_V3on/YToo[CK?oj\n\
+e6Son]Q_oo[JK?ojf6oon]Y/0oojgG000oojcVSon[iPooVnIP04oo[4JP;on/EU00Gon/9Q\n\
+oo[5HOojcVgon]Q_oo[UNP03oo[YO@Con^V11?ojjHH00oojiH;on/i]oo[9K@03oo[9K@03\n\
+oo[8LOojc7;on/ab00?on/ab00Con]5aoo[AM_ojdgcon]=l0_oje8<01?ojfH;on]B:oo[D\n\
+R_ojfI82oo[CTP03oo[IT_ojdi;onmaj00;onmUf1?okgGD01?okh7[on^5eoo_PN_okh7X3\n\
+oo[UNP06oo[UO_ojjGgon^Umoo[YOOojjH7on^Um0oojjH400oojkX;on^f5oo[]Q@02oo[`\n\
+Q0Gon_B60_ojmHT02ooin8con_F9ooWhS?oin8con_F9oo[dQ_ojkX;on^9moo_PN_okg7[o\n\
+nmee00;onn1j0_ojhWd2oo[UOP05oo[UP_oii8GonNB5oo[YQ_oii8D00_ojjX/2ooWaUP?o\n\
+nO:J0_oimId3ooScY003ooKdZOohljCon?>T00Kom_BY1?ocm:`00oobm:WoloB/oo3d[@06\n\
+oo3d[@03oo3d[oo_m;;okoBb00CokoBb00?okoBcongc]Oo]lkD01Oo]lkD7oncc^0Oojo:j\n\
+1ooYl[d4onO``@04onWb_OoWl<7ojO:monGa^0Koho6j00?ohO2lomo___oOkkh01OoOkkh6\n\
+omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K\n\
+00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@03ojGDjonTdncoY=?/\n\
+00;oXM7/0_nNd>`01?nJcNkoUl__oiG:konEb^l3oi78k`03ohg6l?n:aO3oR/G`00GoR/G`\n\
+1_n5`_42oh70l0CoP;o`00?oOkk`ogjnkomm_^l01_mm_^l7ogbmk`[oNkc_2Omg^^h000?o\n\
+oJ8[0oomWc802?olXT;onJECoob[HOoi[FCoo;1UooV]H?oi/FKonKM/0ooj]VH4ooViJ@?o\n\
+nKaY0ooi_V/00ooi_6WonK5VooV]H003ooVYH0;onJeP00GonK1LooVlJOoj`FKon/5VooZe\n\
+H003ooV`G009ooR]Eooj/UKon[UGoo[1GOojcVSon]=/oo[JK?ojf6oon]Y/00;on]e`00Co\n\
+nmeeoo[QMOojdfcon/EQ0_oj`FH2oo[9K@?on/UY0_ojaFD01_ojbVCon/iXoo[>KOojeG7o\n\
+n^9moo[UOPCon^V11OojjHH01_oii8Gon]5foo[9KOoja6[on/U]oo[8L@;on/U]0oojc780\n\
+0oojdG7on/aboo[AMP02oo[CO0;on]B30_oje8X4oo[CTP07oo[IT_ojfH;onmUfoo_IM_ok\n\
+gGGonmUfoo_MM@02oo_PNP06oo[QMOokh7[on^5eoo[ROOojiG[on^9m0oojiGh2oo[YO@?o\n\
+n^V11?ojkX83oo[`Q004oo[dQ_ojlH7on_24oo[dQP?on_F91?oin8`2ooWeT@09oo[aSOoj\n\
+l8SonNB5oo[ROOokg7[onn1joo[PPOojhWgon^2100GonNB50_oihh`3ooWYT@;onO:J0_oi\n\
+lIl00ooimIgon?>TooScY003ooScY0Com_BY00?on?:/ooKdZOoeljh01_ocm:`6oo3d[@03\n\
+oo3c[oo`m:ookoBb00GokoBb00?okoBcongc]Oo]lkD01Oo]lkD7oncc^0Oojo:j1ooYl[d8\n\
+onO``@Koho6j00?ohO2lomo___oOkkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc5\n\
+1ooEj/T7om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[M\n\
+h@Oo]M_T1on`fNH7oj_Fj@03ojGDjonTdncoXM7/00;oXM7/0_nNd>`01?nJcNkoUl__oiG:\n\
+konEb^l3oi78k`03ohg6l?n:aO3oR/G`00GoR/G`1On5`_400on1`?3oQL;aoh70l004oh2o\n\
+l003ognnl?mn_^ooOKk_00KoOKk_1oml_Nl:og^lk`WoMk[^0003oofR:`?ooIlb00OonZ5;\n\
+ooZYE?ol[VOoo:iWooVaI_ol[Ukoo;1U00?on[AY00?on[IVooZiIOoi^FT00_oi^FT6ooVl\n\
+J@03ooViJOoi[F3onJeP00;onJUP00GonJePooV]I?oi/5conK1LooVnIP02oo[1IP05ooZe\n\
+H?oi/5conK1LooZbE_oh[EL00_oj/UH01_oj`Egon/iXoo[CK?ojfVcon]Q_oo[JK0;on]e`\n\
+00Oonmeeoo[QMOojf6oon/iXoo[5IOoj`FKon/UY00;on/U]0oojbFT02oojbVCon/UYoo[:\n\
+I?ojbVCon/i]oo_IM_okh7[on^9moo[YPOojiH;on^V100Con^V60_ojjX/00ookfGKon]5a\n\
+oo[9K@02oo[9K@03oo[8LOojbFgon/Qa00;on/ab00?on]5aoo[<L_ojdGH00_ojdg`2oo[D\n\
+P`;on]B:00?on]V>oo[CT_ojdi800_ojdi800ooje8?onmUfoo[HK`02oo_IMP;onmee00?o\n\
+nn1joo[QMOokh7X00_okh7X2oo[RO@Con^En00?on^Umoo[YPOojjH400_ojjH400oojkHGo\n\
+n^j2oo[^PP05oo[`Q0;on_B60oojmHT3ooWhS0ConONC00?onOFAoo[ZRoojjHH01Oojh846\n\
+ooWTQ@;onN><0_oijI42ooWbVPGonO6O0oohlj@3ooSbZ@04ooKdZOohlZcon?:/ooGc[POo\n\
+loB/00Col?>_oo3d[Oo`m:gol?B]0_o`ljl00oo`m:ookoBbonod/P04onod/P03onod/oo]\n\
+lkGokO>e00GokO>e1oo/lkP7on_b^POojO:m1_oWl<401?oYl[goio31onO``OoWl<44on?a\n\
+^P03on7`_?oOkkkognnn00Gognnn1_oLk/800ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooB\n\
+jLd7olkWd0OobnKD1oo8i=P7olCRf`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo\n\
+/=WV1on[e^T00onUe>_oY=?/oj7Ak002oj7Ak0;oW]3/00CoV/g^oiO;konEb^ooUL[_0onA\n\
+b>l00on=a_3oR/G`oh[5l005oh[5l0KoQL;a0_n1`?03oh2ol0;oOkk`00?oO[k_ogfnkomm\n\
+_^l01Omm_^l7ogbmk`[oNkc_2Omg^^h000;ooJ8[00goo:<aoofO<_okXC_onJECoo^UH_on\n\
+ZFKoo:iWoob`IOoj]6Woo;5QoobdH_oj]VKon[AY00?on[IV00?on[UUooViJOoi_6T01Ooi\n\
+_6T00ooj^FGonJePooVYH002ooVYH0;onJeP0_oi/V001ooi]E_on/5Voo[1I_oj^67onKEK\n\
+ooVbH?oi]E/01?oj/UH01_oj^EOon/iXoo[HKoojfVcon]e`oo_MM@;on]e`00Oonmeeoo[Q\n\
+MOojhGGon^5eoo[:I?oj`V7on/AZ00Gon/U]1?ojbFT01_ojaFGon/AZoo[9KOojdG7onmaj\n\
+ooWTQ@?on^V600?on^Z;oo[YQ_ojjX/00_ojjX/01ooii8Gon]5aoo[<L_oja6[on/Qaoo[9\n\
+KOojb7400oojc782oo[AMP03oo[CO?oje8?on]B300?on]B:1Oojdi800oojfH;onmUfoo_I\n\
+MP02oo_IMP05oo[HKookg7[onmeeoo_MMOokg7X00_okh7X01OojhWgon^Enoo[UO_ojiG[o\n\
+n^En00;on^Ej00Kon^Enoo[YPOojjH7on^V1oo[YQ_ojjH43oo[]Q@;on_2400Con_28oo[e\n\
+ROojm8Kon_B60_ojmHT01OojmHgon_F9oo[eSOojmHgonOFA00ConONC0_ojmYD00ooii8Go\n\
+nN26oo[PP@03oo[PP@ConNB50ooihh`2ooWYT@09ooW[V_oilIoonO6OooWaWooimIgonO6O\n\
+ooSfWoohljCon?:Y00Kon?:/0ooeljh4oo?d[005oo3c[ooalk7ol?>_oo3c[oo`m:l00oo`\n\
+ljl2onoc/PCokoBb00?okoBcongc]Oo]lkD01Oo]lkD7oncc^0Oojo:j1ooYl[d;onO``@?o\n\
+ho6j00?ohO2lomo___oOkkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7\n\
+om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T\n\
+1on`fNH7oj_Fj@03ojGDjonTdncoXM7/00;oXM7/0_nNd>`01?nJcNkoUl__oiG:konEb^l3\n\
+oi78k`03ohg6l?n:aO3oR/G`00GoR/G`1_n5`_42oh70l0CoP;o`00?oOkk`ogjnkomm_^l0\n\
+1_mm_^l7ogbmk`[oNkc_2Omg^^h00006oofO<_omXR_ooIlboobR@_ojXD_onjER0_onZFH0\n\
+1OolZf7oo:iNoobaHOol/6GonK5V00;oo;AR0_oj]VH2ooZiI@03ooZhHOoj^FGonKaY00?o\n\
+nKaY00?on[EPooVbH?oiZF000_ojZe/2ooV]H0;onK9P0_oi]E/00ooj`FKon/AZooViG004\n\
+ooVeF`Con[9F00Gon/YToo[CK?ojf6oon]Q_oo_MM@02oo[ML0?on^5e00Kon^Eeoo[>J?oj\n\
+bFWon/EUoo[4J_ojbFd2oo[>K@06oo[9KOojcVgon/UYoo[9KOojbFWon/U]0oojbFT01Ooj\n\
+c7;on]5aoo_IM_ojh87onNB500?on^Z;00Kon^V6oo[ZRoojjX_onNB5oo[IP_ojc782oo[8\n\
+L@;on/ab00Gon/ejoo[<L_ojdGKon/ejoo[CO003oo[DP`?on]B:1?ojdi801_oje8?onmUf\n\
+oo[HKookfGKon]Q_oo_IMP;onmee00?onn1joo_LN_okh7X00_okh7X00oojhWgon^Enoo[U\n\
+OP03oo[UOPKon^V10oojkHD2oo[`Q0?on_2800?on_B6oo[eROojmHT00oojmHd3ooWgT`?o\n\
+n_JE00GonOJIoo[fUOoilIKon_6=oo[`R002ooWTQ@?onN260ooihh`00ooijI7onN><ooWY\n\
+T@02ooWYT@03ooW[V_oilIoonO6O00;onO6O00Con?:YooScY?ohlZWon?:Y1OohlZ`6ooGc\n\
+[P05oo?d[?oalk7ol?>_oo3c[ooalk400oo`ljl00oo`m:ooko>bonoc/P02onoc/P03onod\n\
+/_o_m;?okoBc00OokO>e1oo/lkP7on_b^POojO:m3OoWl<400ooSlK[ohO2lomo__P06omo_\n\
+_PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Ood^W=1oo>im07ol_Ve0Oob>CH1oo4\n\
+h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY00?oYMC[ojCCk?nQ\n\
+dN`00_nQdN`2oik@k004oi[=k_nGbnooUL[_oiG:k`?oTLS_00?oSLK`oh[5l?n:aO001On:\n\
+aO06ohG2l@;oPL3`1?n0_o000omo__3oO[k_ogfnk`06ogfnk`OoO;g_2_mk_>l9ogNjkP00\n\
+0oomWc801?ojXD_onJ=IoojYI_onZFH2oob[H@;oo:iN00?oo;1UoobaHOol/F400_oj]F00\n\
+1?ol]6;on[UUooZhHOoj^642ooZiI@;onKaY00ConKiVooVbH?oi/5conJ=I0_ojZe/2ooV]\n\
+H0;onK9P0_oi]E/00ooj`FKon/AZooViG004ooVeF`Con[9F00Kon/YToo[>J?ojf6oon]Y/\n\
+oo_MMOojf6l2oo[QM@05oo[QLOojiGGon^Eeoo[>KOojbV@00_oja6X01_ojbFgon/i]oo[>\n\
+KOojcVgon/U]oo[>K@;on/U]00?on/i]oo[>J?ojbFT00_ojbFT01?ojbFgon]5aoo[PPOoi\n\
+i8D3oo[ZR`07oo[YQ_ojjX_on^Z;oo[ZRoojh87on/ejoo[8L@02oo[<LP05oo[=N_ojc7;o\n\
+n/aboo[AM_ojcGX00ooje8<3oo[DRPGon]>B00Won]B3oo[EMOojeGGonmUfoo[HKookfGKo\n\
+nmeeoo_LN_okgGD01Ookh7X3oo[RO@;on^F21?ojjH400oojkGgon^Umoo[]Q@02oo[]Q@03\n\
+oo[^P_ojl8Con_2800;on_2800Con_B6oo[eROojlHgon_F=0_oimI43ooWgT`;on_JE00So\n\
+nOJIoo[fUOoimYWonOJIooWeTOoilhoon^F2ooWTQ@?onN2600KonN6BooWSS?oihhcon^Z;\n\
+ooWYTOoihh`2ooWYT@05ooW[V_oilY[onO6OooWaWoohk:@01?ohlZT5ooSb[0?omO>^0_oe\n\
+lk42ooGc[P;olO>a0_o`m:l2oo7c/@03oo3c[oo`m:ooko>b00?oko>b00?okoBconoc/_o_\n\
+lk801oo]lkD7oncc^0Oojo:j1ooYl[d=onO``@03on?a^_oQl;cognnn00Kognnn1_oLk/80\n\
+0ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooBjLd7olkWd0OobnKD1oo8i=P7olCRf`03ol;Q\n\
+gOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo/=WV1on[e^T00onUe>_oY=?/ojCCk003oj7A\n\
+k005oik@k?nJcNkoUl__oiO;konEb^l00onAb>l00on=a_3oR/G`oh[5l005oh[5l0KoQL;a\n\
+0_n1`?04oh2ol003ognnl?mn_^ooOKk_00KoOKk_1oml_Nl:og^lk`WoMk[^00001_omXR_o\n\
+o:92oo^UH_onZFKooJI[oof]J`?oo:iW0_ol/6D3oobaH@06oobdH_oj]VKon[EPooZeH?oj\n\
+^67on[IV0_oj^FD00ooi_6WonKEKooV`G003ooZ[F`03ooR]Eooi/5conK9P00;on[EP00Oo\n\
+nK1LooViG?oi^Econ/9QooVnI_oj^EOonKUL00?onKEK00Son[UGooZbE_oi]E_onKEKoo[1\n\
+GOojaF7onmUfoo[ML0;onmee0oojhGD02oojiG[on^5eoo[QLOojf6oon/5Voo[9JOojbFgo\n\
+n/i]oo[9KOojc7;on/U]00Oon/i]00?on/iXoo[9KOojbFT00_ojbFd01oojc7;on]V2ooWP\n\
+Q_ojjX_onNVAoo[ZRooijI400_ojjX/00oojc7;on/Qaoo[8L@02oo[8L@Gon/ej00Con]B3\n\
+oo[DR_oje8[on]B:1Oojdi801_oje8?on]=loo[ELOojeG7onmUfoo_MM@;onmaj00Conmee\n\
+oo_LN_okg7[onmee0_okh7X01?ojhWgon^Enoo[UO_ojiH82oo[UOP03oo[UP_ojjH7on^V1\n\
+00?on^V10_ojkHD3oo[`Q0?on_2800Con_F9oo[eSOojmHgon_F=1?oimI42oo[fU@ConOJI\n\
+00KonORKooWhW_oin9konOFMooWYTOoihh`2ooWPQP05ooWSS?oihI;onN><ooWQT_oihh`0\n\
+0ooihI801OoihY[onN^JooS/Y?ohljConO6O00?on?:Y0oohlZ`00oohlJoon?:/ooGc/@07\n\
+ooGc/@?olO>a00Kol?>_oo7c/Ooalk7olO>aonoc/_o_m;<5onoc/POokO>e1oo/lkP7on_b\n\
+^POojO:m3ooWl<400ooLk/;ognnnomo__P04omo__PKog>k200?ofnk3omW/aOoIk<D01OoI\n\
+k<D7omGZb@Ood^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo\n\
+^]gQ1onefn@7ok3IiPOoZmKY00?oYMC[ojCCk?nTdn`00onQdN`01OnNd>coV/g^oiO;konG\n\
+bnooUL[_00?oTLS_00?oSLK`oh[5l?n:aO001On:aO06ohG2l@;oPL3`1?n0_o02ognnl0Oo\n\
+OKk_1oml_Nl:og^lk`WoMk[^00000oolXT;onJECoofVJ`02oofVJ`;ooZUV00CooJe[oob^\n\
+Iool/6Goo;1U0ool/F42oobdHP04ooZeH?oj^67on[QQooZhH@;on[UU00WonKEKooZbE_oh\n\
+[EOonZUDooZ[FoojZEConZ]KooV`G?oi/V000_oj]F000ooi]E_onKULooZnH002ooZnH003\n\
+ooViG?oi]E_onKUL00;onKUL0ooi]E/01_oj^EOonKULoo[5HOojf6oon]e`oo_MM@Con^5e\n\
+00Kon^Ejoo_PN_ojhGGonmUfoo[5IOojbFT3oo[9K@06oo[<L_ojcVgon/i]oo[ALOojcVgo\n\
+n]5a1OojcVd3oo[9K@06oo[<L_ojdGKon]=loo[IP_oih8KonN><0_ojjX/01?oijI7on]V2\n\
+oo[AM_ojbFd2oo[8L@Con/ej00?on]B3oo[DR_oje8X00_oje8X5oo[CTP03oo[DR_ojdgco\n\
+n]5a00?onmUf0ookg7X00ookgGGonmajoo_PNP02oo_PNP;on^9m00Oon^Enoo[UP_ojiGko\n\
+n^Enoo[UP_ojjH7on^F200;on^V100?on^f5oo[YQ_ojkHD01_ojl8P00oojlHgonO>?oo[e\n\
+S@02oo[eS@03oo[fUOoimI7on_JE00;on_JE0_oimYT3ooWhV`;onORN00OonOFMooWaU_oi\n\
+jI7onNVAooWSS?oihI;onN2600ConN6B1?oihYX00ooiji[on>bTooS/Y003ooSbZ@Con?:/\n\
+00?on?6_ooGc/Ooelk401_oelk47oo7c/@;olO>e0oo_lk800oo`m;Koko>bongc]@06ongc\n\
+]@Ook?>h1oo[l[X7onWb_A7oio3100?og>k2omo___oOkkh00_oOkkh6omc^`P03om_^`ooI\n\
+k<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K00?o`^7MokoPg_no\n\
+h=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@03ojGDjonTdncoY=?/00?oXM7/00CoW]3/\n\
+oi[=k_nGbnooUl__0_nEb^l2oi78k`03ohg6l?n:aO3oR/G`00GoR/G`1_n5`_43oh70l0?o\n\
+P;o`0_mo__07ogfnk`OoO;g_2_mk_>l9ogNjkP0000?onIiJoo^UH_omYV/00oomYV/01_on\n\
+ZFKooJe[oob^Iool[VOoo;1UoobaH@;oo;AR0_ol/F400ool]6;on[QQooZhH@02ooZhH@03\n\
+ooZnH?oh[EOon:eG00?onZUD00Con:eGooZ[Fooi/5conK9P0_oj]F000ooi]E_onKULooZn\n\
+H002ooZnH0;onKUL00?on[QQooViG?oi^E`00_oi]E/01ooj^EOonKULooZiEooj`V7on]Y/\n\
+oo[ML?okgGD00oojhGD01ookh7[on^Ejoo[QMOojiG[on^5eoo[9KOojbFT00_oja6X01Ooj\n\
+bFgon/aboo[ALOojdG7on/i]00Kon]5a1?ojcVd01oojbFgon/Qaoo[<L_ojc7;on]B3oo[I\n\
+P_ojjX/00_oijI400oojjX_on]V2oo[9K@02oo[8L@Kon/ej00Con]B3oo[DR_oje8[ol<V8\n\
+1?ojdi800ooje8?on]=loo[EL@05oo_IMP03oo_LN_okgGGonmaj00?onn1j0oojhWd2oo[U\n\
+PP04oo[ROOojjH7on^F2oo[YP@;on^V60oojkHD00oojl8Son^f5oo[`R003oo[`R0;on_6=\n\
+00ConO>?oo[eSOoilhoonONC1?ojmYD00ooimYWonORKooWhV`03ooWhV`?onORN00GonOFM\n\
+ooWaU_oihI;onN><oo[ISP03ooWQTP03ooWRV_oihI;onN:J00?onN:J0oohk:@3ooSbZ@;o\n\
+n?:/00?on?6_ooSb[?ofl[<00oofl[<4ooGc/@?olO>a00?olO>eoo7c/Ooalk401_oalkD0\n\
+0oo_lk;ol?Bfongc]@06ongc]@Ook?>h1oo[l[X7onWb_@goio3100Gohn[2onO``OoLk/;o\n\
+io31omc^`P04omo__PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Ood^W=1oo>im07\n\
+ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY\n\
+00?oYMC[ojCCk?nTdn`00onQdN`00onNd>coV/g^oi[=kP02oiO;k`04oiG:konAb>ooTLS_\n\
+ohg6l0OoR/G`1_n5`_43oh70l0CoP;o`00?oOkk`ogfnkomm_^l01Omm_^l7ogbmk`[oNkc_\n\
+2Omg^^h000GooZQd00WooJI[oof]Joom[F_ooJe[oob^Iool/6Gon[IVoobaHOol[Uh00ool\n\
+]6801Ooj]F3on[QQooZeH?oj/UKonZU;00;onZUD00KonJ=IooZYE?oh[EOon:eGooV`G?oi\n\
+]E/2ooZhH@05ooVeFooj^EOon[iPoo[1I_oj_V000_oi^E`00ooj_V3onKULooViG006ooVi\n\
+G004ooZnH?ojbVCon]Y/oo[QM@;onn1j00?on^5eoo_PN_ojiGX00oojiGX00ookgGGon/UY\n\
+oo[1IP02oo[9K@03oo[>KOojdG7on]5a00Won]5a00Con/i]oo[ALOojdG7on/i]1?ojc782\n\
+oo[=NP04oo[CO?ojfH;onN26ooWSS0?on/Qa00?on/aboo[=N_ojcGX00ooje8<2oo[DRPKo\n\
+n]>B00?on]=loo[AM_okfGH00_okfGH00ookg7[onmeeoo_LNP02oo_LNPConn1j0_ojhWd2\n\
+oo[UOPCon^F21oojjHH01_ojkHGon_28oo[`R?ojl8Son_6=ooWcS`?onOFA0oojmYD00ooi\n\
+mYWon_JEooWfV@03ooWfV@03ooWhVooin9konORQ00GonORQ00?onO6OooW[V_oihI801Ooi\n\
+hI85ooWRVP;on>bT0_ohlZ`2ooSa[`;on?:/0_ohlJl5ooKb/`OolO>e00?oko>boo7c]Ooa\n\
+lkD01OoalkD01Oo]lkGolO>eoo7c]Oo]lkGolO>e00;okO>e1oo/lkP7on_b^POojO:m3_oW\n\
+l<400ooSj/;oio31on?Z`P02onO``@03omc^`_oOkkkognnn00Kog>k200?ofnk3omW/aOoI\n\
+k<D01OoIk<D7omGZb@Ood^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05\n\
+okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY00CoYMC[ojCCk?nTdncoY=?/0_nQdN`01OnNd>co\n\
+V/g^oi[=k_nGbnooUL[_00CoTLS_00?oSLK`oh[5l?n:aO001?n:aO07ohG2l@;oPL3`1?n0\n\
+_o000omo__3oOKk_ogfnk`05ogfnk`OoO;g_2_mk_>l9ogNjkP001OonZ7@02OomYV_ooJe[\n\
+oof]Joom[F_oo:iWoob`IOoj]6WonK5VooV]H003ooVaIP;onK9P00?onK1LooR]EoodZ4h0\n\
+1OobYET3oo6^H0?ol;=T00?okkINonnfIOo__W002_o_]VD02?o`/fCokkIUonnfIOo_`V_o\n\
+l=5monoJOoo_g87okmYo1?o_g842onoPP`04onoJOoo`a7_okki`onnnL0?ol<Qh3Oo_c7T5\n\
+oo38N0;ol<Ak00Gol<V8oo3CROo`dhWol=>9onnnL005oo34N`;ol<V800?ol<VFoo39R?o`\n\
+bIH01_o`bIH00oo`bHSoklaioo3AO@03oo3AO@Ool=J20oo`fXD00oo`gX[ol=Z5oo3NRP03\n\
+oo3NRPGol>:=0oo`i8l3oo3XS`;ol>^F1Oo`kIX8oo3`X@Soko2X00?on>bToo3IWOo`fId0\n\
+0oo`fId2onoIWPCokmVS0oo_hjh00oo[j;_okn>^on_X^`0<on_X^`04on?Z`_o[j;_ohn[2\n\
+on_X^`Cohn[200CogNG3on?Z`_oMiL?ohn[25_oMiL<01_oJhl[ogNG3om[Sb_oMiL?of^?:\n\
+omgU`aGof^?:00?od^;7om7RbOoAh/T01OoAh/T7oloPb`kobmo@0_o5g=H01?o;gm3oaMcF\n\
+olGLe_o;gm09olGLeP06ol3Jg?o5g=Ko`=[LolGLe_o0f]coaMcF2?o0f]`>ok_Gg`ko]=CS\n\
+2_n]dNL5ojC>j@;oV/g^0_nGbnl00onEb^ooTLS_oi78k`04oi34kP03ohc3kon@a>koS<?_\n\
+00CoS<?_00KoQL;aohc3kon5`_7oQL;aoh70l?n5`_44oh70l003oh2ol?mo_NkoOkg^00_o\n\
+Okg^2_mo_>d9ogNjkP00"], "Graphics", CellMargins -> {{0, 0}, {0, 0}}, 
+          CellFrameMargins -> 0, ImageSize -> {417, 25}, ImageMargins -> 0, 
+          Background -> RGBColor[0.466667, 0.729412, 0.933333]]}, 
+       ScrollingOptions -> {
+        "PagewiseDisplay" -> True, "VerticalScrollRange" -> Fit}, 
+       MenuSortingValue -> 1300], 
+      Cell[
+       StyleData[All, "Condensed"], DockedCells -> {
+         Cell[
+          GraphicsData[
+          "Bitmap", 
+           "CF5dJ6E]HGAYHf4PAg9QL6QYHg<PAVmbKF5d0`40006Q00006B0010400?l00000o`\
+00003o\n00000?ooMk[^X_mg^^h00003oobX=?okZS_onjXk00ConZU;\
+00ConZUDooVUDoojZEConZUD\n\
+1_oiXeT8ooVNFP03oo^UH_oiZF3on[IV00GonKUY0_oi_6T00ooi_VKonKaYooZiI@03ooV]\n\
+I004ooViJOol/F7onJUPooVlJ@;onKi[00Gon/AZooVnJool[VOonKiVoo[4JP02oo[>K@03\n\
+oo[CK?ojcVgon]AX00;on]AX00?on]Q_oo[JK?ojf6l00_ojfV`00oojcVSon/YTooViG005\n\
+ooZnH0;on/9Q00Gon/5Voo[5IOojaFGon/EUoo[:I002oo[5I@06oo[:I?ojbFWon/iXoo[>\n\
+J?ojbFWon/iX0_ojcVd01?ojdfcon]5aoo[ALOojdG42oo[EL@05oo[EMOokfGKon]V2oo[I\n\
+P_okg7X00_ojfH83oo[ISP04oo[IT_ojfHkon^21oo_PNP?on^Ee00Gon^E`oo[ZL_ojiG3o\n\
+n^Yboo_YN@03oo[/N@;on^em00?on^Yboo[YJoojgUP01OojgUP00oojhegon]iHoo[SG@03\n\
+oo[SG@Won^QR0oojjF/4oo[ZLP03oo[/NOojl7gon_B200;on_B200?onOR<oo[eROoin8`0\n\
+0_oin8`00ooimi?onOR<ooWhS003ooWgT`03ooWhVooimYWonORK00;onORK00?on?JOooOf\n\
+X_ogmZ800ooemJD00oocm:KomOFUoo?dYP03oo?dYPKol_BY1oo`m:d00oo`m:ookoBbonod\n\
+/P03onod/P;okoBc1oo]lkD7oncc^0Oojo:j1ooVl[D8onGa^0Koho6j00?ohO2lomo___oO\n\
+kkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7\n\
+olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@04ojGD\n\
+jonTdncoY=?/ojCCk0?oXM7/0_nJcNh2oiO;k`04oiG:konAb>ooTLS_oi78k`;oSLK`1On:\n\
+aO07ohG2l@?oPL3`1?n0_o000omn_^ooOKk_ogfnk`04ogfnk`OoO;g_2_mk_>l9ogNjkP00\n\
+00Coo:Pdoo^Z>oojZT?onZY31?ojZD/01?ojZEConJECooVUDoojZE@5ooVSF@OonIiJ00Co\n\
+nJ=Ioo^UH_oi[FCon[IV1?oi^FT03Ooj^FGonKaYooViJOoi_VKonKaYooZfI_oiZFKonJeT\n\
+ooVaI_oj]VKoo;1UooVYH?oi_6T00_oi_V/01_oja6[onKi[ooVaI_oi_6Won/5Voo[9J@;o\n\
+n/i]00Gon]=/oo[DJ?ojf6oon]AXoo[HK`04oo[JK004oo[DJ?ojcVSon/EQoo[2H@Con[iP\n\
+0_oj`V400ooj`FKon/9Qoo[5I@03oo[5I@04oo[:I?ojaFGon/YToo[9J@;on/iX0oojcVd4\n\
+oo[AL@;on]Ea00?on]Eeoo_IM_okfGH01?ojfH82oo[ISP?on]VB00Won^21oo_PN_ojiGGo\n\
+n^E`oo[UMOojiG3on^Yboo[UL?ojjW800_okjGT3oo[/N@05oo[`OOojjW;on^E`oo[SGOoj\n\
+gV801?ojgUP00oojhegon]iHoo[SG@03oo[SG@03oo[XH_ojhegon^QR00Kon^QR1?ojjF/3\n\
+oo[ZLP;on^ai0oojm882oo[eR@ConOR<00?onONCooWhS?oimi<00_oimi<00ooin9_onOJI\n\
+ooWhV`02ooWhV`03ooWhW_ohmYoomoJR00KomOFU0oocm:H6oo;dZ@Ool?B]00?ol?B_onod\n\
+/_o_m;801?o_m;800oo_m;?okO>eongc]@05ongc]@Ook?>h1oo[l[X7onKb]@SoiO6h1_oS\n\
+lKX00ooQl;cognnnomo__P05omo__PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Oo\n\
+d^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7\n\
+ok3IiPOoZmKY00CoYMC[ojCCk?nTdncoY=?/0onQdN`2oi[=kP;oUl__00?oUL[_oi78konA\n\
+b>l00_n=a_06oh[5l0OoQL;a0on1`?04oh2ol003ogjnkomm_^ooOKk_00CoOKk_1oml_Nl:\n\
+og^lk`WoMk[^00001?okZS_onZY3ooZZ@oojZT<3ooZYB`?onZUD0_oiYE<00ooiXeWonJEC\n\
+ooVSF@02ooVSF@GonIiJ00GonJ=IooVYH?oj]6Won[AYooVgK005ooViJ@;on[UU00_onKaY\n\
+ooVnI_oi^FWonK5Voo^UH_oj]6WonKUYooVaI_oi[F3onJ=IooVlJ@02ooVnJ`03oo[8LOoj\n\
+a6[onKi[00;onK5V00Oon/5Voo[9JOojcVSon]=/oo[HKoojfVcon]Q_00?on]Y/1OojgG00\n\
+1?ojdfcon/YToo[2HOoj`Ed5oo[2H@03oo[5IOoj`V7on/EU00;on/EU00Con/UYoo[5IOoj\n\
+bFWon/U]0_ojcVd01oojdG7on/i]oo[>KOojdfcon/i]oo[ALOojeGD00_ojeG400oojeGGo\n\
+n]=loo[IPP03oo[IPP;on]V>0_ojfI800ooihI;on^21oo_PNP03oo[QL@03oo[UL?ojiGGo\n\
+n^Ee00ConnUi0oojk7T2oo[]O@;on_1m00?on^Yboo[TI?ojgUP01?ojgUP4oo[SG@04oo[X\n\
+H_ojhegon^QRoo[XHP?on^AT00?on^QRoo[YJoojj6800_ojjF/4oo[ZLP04oo[/NOojl7go\n\
+n_61oo[dQP?on_F90_oin8`6ooWgT`;onOJI00ConONCooWhVoohmYoon?JO0_ogmZ86ooGe\n\
+Y@?oloBV1_obm:T7oo3d[@03oo3d[oo_m;;okoBb00CokoBb00?okoBcongc]Oo]lkD01Oo]\n\
+lkD7oncc^0Oojo:j00?ojO:monKb]OoVl[D01?oVl[D8onGa^0Koho6j00?ohO2lomo___oO\n\
+kkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7\n\
+olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@04ojGD\n\
+jonTdncoY=?/ojCCk0;oXM7/00CoW]3/oi[=k_nJcNkoUl__0_nEb^l2oi78k`;oSLK`1_n:\n\
+aO07ohG2l@?oPL3`0on0_o000omo__3oOKk_ogfnk`05ogfnk`OoO;g_2_mk_>l9ogNjkP00\n\
+0_okZS/2ooZZ@`ConZU;00KonJECooZYE?oiYE?onJECooVSFOoiYE<3ooVSF@?onIiJ00Co\n\
+njERooVYH?oi/FKon[AY1?oi^FT6ooVlJ@;onKiV00WonK5VooVYI_oiZFKon[IVooViJOoi\n\
+[FConJePooVSFOoi_V/00_oja6X02_ojb77on/U]oo[9KOoj^FGon[IVoobdH_oi_VKon/EU\n\
+oo[HKooje6P3oo[JK0?on]e`00Son^9Zoo[QLOojhG7on^5aoo[ML?ojfVcon]AXoo[>J0?o\n\
+n/9Q1?oj`FH2oo[5I@06oo[:I?ojaFGon/UYoo[9JOojbFgon/iX1OojcVd2oo[AL@Gon]Ee\n\
+1?ojfH82oo[ISP?on]VB00?on^21oo_PN_ojhG400_ojhG44oo[UM@?onnUi0oojk7T01Ooj\n\
+kGgon^aioo[]OOojkGgon_1m00;on^ai00?on^Yboo[YJooji6@00_ojgUP2oo[SG@03oo[N\n\
+H_ojhegon^=M00;on^=M00Gon^AToo[XH_oji6Con^AToo[XHP03oo[YJ`Gon^Yb00?on^ai\n\
+oo[`OOojm8800oojmHT00oojmHgon_F9ooWeT@02ooWeT@?onONC0_oimYT00ooimIgon?JO\n\
+ooSfW`03ooSfW`03ooOfX_oemJGomOFU00;omOFU1?ocm:H6oo;dZ@Ool?B]00?ol?B_onod\n\
+/_o_m;801?o_m;800oo_m;?okO>eongc]@05ongc]@Ook?>h1oo[l[X3onWb_@Coi_:e2?oU\n\
+lKP6on?a^P03on7`_?oOkkkognnn00Gognnn1_oLk/800ooKk/?ofNc5omW/a@05omW/a@Oo\n\
+eN[91ooBjLd7olkWd0OobnKD1oo8i=P7olCRf`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47\n\
+okGKi0Oo/=WV1on[e^T00onUe>_oY=?/ojCCk003oj7Ak004oik@k?nJcNkoUl__oiO;k`;o\n\
+UL[_0_nAb>l2ohg6l0KoR/G`1on5`_42oh70l0CoP;o`00?oOkk`ogfnkomm_^l01Omm_^l7\n\
+ogbmk`[oNkc_2Omg^^h000;onjXk0oojZT<3ooZYB`ConJEC1?oiXeT2ooVNFP05ooVSFOok\n\
+YF;onJUPooV]I?oj]VH01?oi^FT9ooVlJ@03ooV]I?oiZFKonJUV00;onKUY00?onJeTooVY\n\
+H?oiXeT00ooja6X2oo[9K@08oo[>KOoja6[onKiVoobaHOoj]VKon[iPoo[>J?oje6P3oo[J\n\
+K005oo[RJ_ojgG3on]e`oo[RJ_ojgG001?ojhG401OojgG3on]Q_oo[>J?ojaFGon/9Q00Co\n\
+n/5V0oojaFD4oo[9J@03oo[>J?ojcVgon/i]00?on/i]0_ojdG43oo[EM@03oo[CO?ojfH;o\n\
+n]B300?on]V20_ojfHh2oo[ITP06oo[IS_ojh87onmajoo[QMOojhG7on^5e1OojiGD3oo_Y\n\
+N@Con^ai0_ojkGd4oo[`O@03oo[ZL_ojjF_on^AT00;on^=M00Kon]iRoo[NF?ojgV;on^=M\n\
+oo[NH_ojhed3oo[TI003oo[XH_oji6Con^U[00;on^U[1?ojjW83oo[/N@03oo[`OOojmHWo\n\
+n_F900;on_F90_ojmHd2ooWeT@?onONC00?on_JEooWfVOoimId01OohmYl00oogmZ;omOFU\n\
+ooGeY@02ooGeY@ColoBV1_obm:T7oo3d[@03oo3d[oo_m;;okoBb00CokoBb00?okoBcongc\n\
+]Oo]lkD01Oo]lkD7oncc^0Oojo:j1?oYl[d3onKb]@SoiO6h1_oSlKX00ooQl;cognnnomo_\n\
+_P05omo__PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Ood^W=1oo>im07ol_Ve0Oo\n\
+b>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY00?oYMC[\n\
+ojCCk?nTdn`00onQdN`01OnNd>coV/g^oiO;konGbnooUL[_00?oTLS_00?oSLK`oh[5l?n:\n\
+aO001On:aO07ohG2l@;oPL3`1?n0_o000omo__3oOKk_ogfnk`05ogfnk`OoO;g_2_mk_>l9\n\
+ogNjkP0000?oo:Pdoo^Z>ookZS/00oojZT<3ooZYB`GonJEC0_oiXeT01OoiWU[onJ=IooVY\n\
+H?oj]6WonKM/00OonKUY1Ooi_6T01_oi_VKonKUYooVaI_omYV_onJUVooVaIP;onKaY00?o\n\
+nJeTooVYH?oiYE<00_oja6X00oojbFWon/U]oo[>K@02oo[>K@07oo[9KOoj]F3oo;ARooVb\n\
+H?oj_V3on/YToo[JK002oo[ML0Oon^5a00Oon^Eeoo[QMOojiGGon^Eeoo[UN_ojdfcon/UY\n\
+00Con/5V1?ojaFD4oo[9J@05oo[>KOojbFgon/i]oo[ALOojcVd01OojeGD2oo[CO0;on]V2\n\
+00Con]B3oo[IP_ojfHkon]V>0_ojfI801oojfHkonmajoo_MMOojgG3on^5aoo[QMOojhG40\n\
+0oojiGD7oo_YN@03oo[/NOojkGgon_1m00?on_1m1?ojlH400oojjW;on^9Zoo[NHP05oo[N\n\
+HP?on^AT00Oon^9Zoo[TI?ojiG3on^E`oo[YJoojjW;on^E`00;on^Yb0ookjGT01?ojk7Wo\n\
+n_28oo[`R?ojmHd2oo[eR@05oo[eSOoimI7onOFAooWeTOojmYD00_oimYT00oojmYGonOJI\n\
+ooWeW@02ooSfW`?omoJR00?omOFUooKdZOoemJD00_oemJD3oo?dYPKol_BY1oo`m:d00oo`\n\
+m:ookoBbonod/P02onod/P?okoBc1oo]lkD7oncc^0Oojo:j1?oYl[d3onKb]@SoiO6h1_oS\n\
+lKX00ooQl;cognnnomo__P05omo__PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Oo\n\
+d^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7\n\
+ok3IiPOoZmKY00?oYMC[ojCCk?nTdn`00onQdN`01OnNd>coV/g^oiO;konGbnooUL[_00?o\n\
+TLS_00?oSLK`oh[5l?n:aO001On:aO07ohG2l@;oPL3`1?n0_o000omo__3oOKk_ogfnk`05\n\
+ogfnk`OoO;g_2_mk_>l9ogNjkP0000Coo:Pdoo^Z>ookZS_onjXk0_ojZT<00oojZD_oo:92\n\
+ooZQB`04ooVUD`ConJ=I00ConJeTooVaI_oj]6WonKM/1ooi^FT6ooVlJ@0<ooZdJOoi[FCo\n\
+njERooVYI_oj]VKonKaYooViJOoi[F3onZUDooVSFOoj`FKon/AZ0_ojbFd2oo[>K@0;oo[C\n\
+K?ojcVgonKiVooZiIOol]6;on[QQoo[5HOojbVCon]AXoo[JK?ojhVX01OojhG45oo[UM@05\n\
+oo[UN_okgGGon]Eaoo[9KOojbFT00_oj`FH00oojaFGon/AZoo[9J@03oo[9J@05oo[5IOoj\n\
+bFWon/i]oo[9KOojdG400_ojcVd00oojdGKon]5aoo[AL@02oo[EM@;on]=l0_ojfH801?oj\n\
+e8[on]V2oo[IS_ojfHh3oo[ITP06oo_LN_okgGGonmeeoo[QLOojhGGon^5a1_ojiGD4oo_Y\n\
+N@04oo[/NOojkGgon^emoo[]O@;on_1m0oojlH400oojm8;on_1moo[/N@02oo[UL00<oo[R\n\
+J_ojgV;on]iRoo[NH_oji6Con]iRoo[TI?ojhV[on^AToo[UL?ojhV[on^U[0_ojiG000ook\n\
+jGWon^Eeoo_YN@02oo_YN@07oo[/NOojkX;on^j2oo[aSOojmHWonO>?oo[eS@03ooWeT@;o\n\
+n_JE1?oimYT2ooSfW`?omoJR1OoemJD3oo?dYPKol_BY1oo`m:d00oo`m:ookoBbonod/P02\n\
+onod/P?okoBc1oo]lkD7oncc^0Oojo:j1_oYl[d00ooVl[GoiO6honGa^006onGa^0Koho6j\n\
+00?ohO2lomo___oOkkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Y\n\
+c@Ooc^O@1oo;i]@7olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`\n\
+fNH7oj_Fj@03ojGDjonTdncoY=?/00?oXM7/00GoW]3/oi[=k_nGbnooUl__oiG:k`03oi78\n\
+k`03ohg6l?n:aO3oR/G`00GoR/G`1_n5`_43oh70l0?oP;o`00?oOkk`ogjnkomm_^l01_mm\n\
+_^l7ogbmk`[oNkc_2Omg^^h00003oofR:oolZ3Coo:Pd00;onjXk00Coo:92ooZZ@oojZT?o\n\
+o:920_ojXD/00ooiXeWonZ5;ooVSF@02ooVSF@05ooVYH?oj]6WonKM/ooViJOoi]f`00ooi\n\
+^FT01?oi_6WonKUYooViJOoi^FT5ooVlJ@05ooViJOoi/FKonJUPoo^UH_oi[F@00_oi_V/0\n\
+1ooi^FWonJUPooZ[FooiYE?on[iPoo[4J_ojbFd00_ojcVd04OojdG7on]=/oo[CK?ojaFGo\n\
+nKiVoobdH_oj]VKonKULoo[1GOojcVSon]Y/oo[RJ_ojhG7on^5eoo[QLOojiGGon^E`00Go\n\
+n^Ee0_ojiGX01?okh7[on]Eeoo[9KOoj`FH3oo[4JP?on/UY0_ojaFD00oojbFWon/i]oo[>\n\
+K@03oo[>K@?on]5a00Gon]Eeoo[AM_ojeGGon]=loo[DP`02oo[IPP03oo[DR_ojfHkon]VB\n\
+00;on]VB00Kon]V>oo_LN_okg7[on]e`oo[QLOokgGD2oo[QL@Con^Ee00Con^E`oo[UMOok\n\
+jGWon^Um0_ojk7T4oo[]O@04oo[`OOojl8Con_61oo[aP@;on_B200Gon_B6oo[dP_ojl7go\n\
+n^5aoo[RJP04oo[NHP?on^9Z00?on^AToo[UL?ojhVX00_ojiG02oo[UM@08oo[UN_okjGWo\n\
+n^Umoo[YOOojk7Won^V1oo[]QOojlHd2ooWcS`03oo[eSOoimI7onOFA00;onONC1?oimYT2\n\
+ooSfW`?omoJR1OoemJD3oo?dYPKol_BY1oo`m:d00oo`m:ookoBbonod/P03onod/P;okoBc\n\
+1oo]lkD7oncc^0Oojo:j1_oYl[d00ooVl[GoiO6honGa^006onGa^0Koho6j00?ohO2lomo_\n\
+__oOkkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;\n\
+i]@7olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@03\n\
+ojGDjonTdncoXM7/00;oXM7/0_nNd>`01?nJcNkoUl__oiG:konEb^l3oi78k`03ohg6l?n:\n\
+aO3oR/G`00GoR/G`1_n5`_42oh70l0CoP;o`00?oOkk`ogjnkomm_^l01_mm_^l7ogbmk`[o\n\
+Nkc_2Omg^^h000?oo:Pd0_okZS/3oobR@PConZ5;00ConIiJooVSFOolZf7onK5V0ooi]f`2\n\
+ooViJ@;onKaY0_oi^FT2ooVlJ@03ooVnJooi_6WonKaY00?onKaY00WonJUPooVYI_oiZFKo\n\
+nJUPooVaI_oi_V_on/AZooViJOoiZF000_ojZE@01ooj^67on/5Voo[>KOojcVSon/i]oo[D\n\
+J?ojdf`00_ojf6l02oojbVCon[iPooVnI_oj_V3onKiVooViG?oj`Egon/YToo[JK?ojiG3o\n\
+n^5e00Kon^Ee0oojiGX01OojjGgon^Enoo[UO_ojhWgon/U]00;on/UY00?on/5Voo[5IOoj\n\
+a6X00_oja6X01oojbFWon/U]oo[9KOojc7;on]5aoo[<L_ojdG400oojdGH01oojeGGon]=l\n\
+oo[CO?ojfH;on]B3oo[IP_oje8X00_ojfHh2oo[ITP06oo[IS_okg7[onmeeoo[ML?ojhG7o\n\
+nmee0oojhGD4oo[UM@;onnUi1OojjGd2oo[]O@03oo[`OOojl8Con_2400;on_2400?on_61\n\
+oo[dQ_ojm8800_ojm8801?ojm8Kon_61oo[UL?ojhVX2oo[NHP05oo[RJ_ojgV;on^9Zoo[R\n\
+J_ojhG400oojiGD02oojiG[on^Eeoo[UN_ojiG[on^Umoo[YPOojjGgon^V1oo[`Q?ojl8So\n\
+nO>?00?onOFA00Gon_JEooWaU_ojmYGonOJIooWeW@03ooSfW`05ooOfX_ohljComoJRooGe\n\
+YOogmZ800_oemJD2ooKdZ@03oo?dY_obm:Wol_BY00Gol_BY1oo`m:d00oo`m:ookoBbonod\n\
+/P04onod/P03onod/oo]lkGokO>e00GokO>e1Oo/lkP9on_b^POojO:m2?oUlKP6on?a^P03\n\
+on7`_?oOkkkognnn00Gognnn1_oLk/800ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooBjLd7\n\
+olkWd0OobnKD1oo8i=P7olCRf`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo/=WV\n\
+1on[e^T00onUe>_oY=?/oj7Ak002oj7Ak0;oW]3/00CoV/g^oiO;konEb^ooUL[_0onAb>l0\n\
+0on=a_3oR/G`oh[5l005oh[5l0KoQL;a0_n1`?04oh2ol003ognnl?mn_^ooOKk_00KoOKk_\n\
+1oml_Nl:og^lk`WoMk[^0005oobX=004oo^Q>oolXT;oo:92oobR@P?onZ5;00ConJ=IooV]\n\
+H?oi/FKon[AY0ooi]f`2ooViJ@KonKaY00OonKi[ooVlJOoi_6WonKaYooViJOoj]VKonJUP\n\
+00;onJUV00[onJePooVbH?oi_V_onKi[ooViJOoiZF3onZ]KooZYE?oi]E_on/5V0_ojcVd2\n\
+oo[CK0;on]Q_00Kon]Y/oo[DJ?ojbVCon[UUooZnH?oi_VH2ooZnH004oo[5HOojcVSon]AX\n\
+oo[QL@?on^Ee00?on^Ejoo[UMOokjGT00oojiGX02?ojjGgon^Enoo[YPOojiGkon]Eeoo[A\n\
+LOojbFgon/EU0ooja6X01?ojbFWon/U]oo[>KOojbFd2oo[<LP03oo[ALOojdGKon]5f00;o\n\
+n]5f0oojdg`2oo[DP`03oo[IP_oje8[on]B:00?on]VB00?on]V>oo_IM_okgGD00_ojgG02\n\
+oo_MM@?on^5e00Con^Eeoo[UN_ojiGGon^Ej0_okjGT4oo[YO@?on^em0oojkX82oo[aP@;o\n\
+n_B21?ojm8H02?ojkGgon^aioo[UMOojhV[on]e`oo[RJ_ojhG7on^9Z0_ojhG401?ojhGGo\n\
+n^Eeoo[UMOojiGD2oo[UNP04oo[YOOojjH7on^V1oo[YP@;on^f500Son_6=ooWcSooimI7o\n\
+n_JEooWaU_ojmYGonO:JooWfV@;onOFM0oohmYl01OogmZ;on?>TooGeYOoemJGom_BY00;o\n\
+mOFU0_ofm:T7oo;dZ@Ool?B]00?ol?B_onod/_o_m;801?o_m;800oo_m;?okO>eongc]@05\n\
+ongc]@Ook?>h1oo[l[X9onWb_@KoiO6h1_oSlKX00ooQl;cognnnomo__P05omo__PKog>k2\n\
+00?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Ood^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2\n\
+hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY00?oYMC[ojCCk?nQdN`00_nQ\n\
+dN`2oik@k004oi[=k_nGbnooUL[_oiG:k`?oTLS_00?oSLK`oh[5l?n:aO001On:aO06ohG2\n\
+l@;oPL3`1?n0_o000omo__3oO[k_ogfnk`06ogfnk`OoO;g_2_mk_>l9ogNjkP0000GooJ8[\n\
+oobX=?olXc7oo:PdoobS<@02oo^Q>`;oo:920oojXD/00ooi[FCon[AYooVgK003ooVgK003\n\
+ooViJOoi]fconKUY00GonKaY00SonKi[ooVlJOoi_6WonKaYooVnJooj]VKonK5VooVYH0;o\n\
+nJUV00_onK9PooZeH?oi_V_onKiVooViJOoiZF3onZ]KooZYE?oi]E_on/9Qoo[>K@03oo[C\n\
+K00:oo[HKoojfVcon]Y/oo[JK?oje6SonKULooZnH?oj`FKonKiVoo[1IP;on/9Q00?on/YT\n\
+oo[ML?ojhG400_ojiGD01?ojiG[on^Eeoo[UN_ojiGX3oo[YO@?on^V100?on^Umoo_IM_oj\n\
+bFd00ooja6X2oo[9K@06oo[>KOojbFgon/i]oo[9KOojc7;on]5a1OojdGH2oo[CO0?on]B3\n\
+0_oje8X4oo[ITP;onmUf00Gon]e`oo_MMOojgG3on]e`oo_PNP02oo[QM@04oo[UN_okh7[o\n\
+n^Ejoo[UNP?onnUi0oojjGd00oojkGgon^j2oo[]O@03oo[^PP03oo[`OOojlH7on_6100;o\n\
+n_B61?ojmHT01_ojm8Kon_B2oo[QLOojhG7on]Y/oo[ML0Con^5a00?on^5eoo[UMOojiGD0\n\
+0_ojiGX03?ojjGgon^Enoo[YPOojjHKon^V1oo[YQ_ojl8Son_6=ooWcSoojmYGonO6FooWf\n\
+V@;onO:J0_oimId4ooSfW`03ooScY?oemJGom_BY00;om_BY00?omOFUooKdZOofm:T01oob\n\
+m:T7oo3d[@03oo3d[oo_m;;okoBb00CokoBb00?okoBcongc]Oo]lkD01Oo]lkD7oncc^0Oo\n\
+jo:j1ooYl[d00ooWl<7ojO:monO``@05onGa^0Koho6j00?ohO2lomo___oOkkh01OoOkkh6\n\
+omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K\n\
+00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@03ojGDjonTdncoXM7/\n\
+00;oXM7/0_nNd>`00onJcNkoUl__oiG:k`04oi78k`03ohg6l?n:aO3oR/G`00GoR/G`1_n5\n\
+`_42oh70l0CoP;o`00?oOkk`ogjnkomm_^l01_mm_^l7ogbmk`[oNkc_2Omg^^h000?ooJ8[\n\
+0_olXc42oo^Q>`05oobR@_okXC_onZ5;ooVNF_oi/FH00_oj]6T2ooVgK003ooViJOoi]fco\n\
+nKUY00?onKUY0ooi_6T01ooi^FWonKaYooVnJooi_V_onKaYooZfI_oi[F@00_okYF803Ooi\n\
+ZF3onJePooVbH?oj^FGon/5VooZiIOoi/V3onJePooZ[FoojZECon[9FooZnH?ojcVP00_oj\n\
+df`2oo[HK`;on]Y/0_ojgG001Ooj`V7on/EUoo[1I_oj`FKon/AZ00;on/EU00Gon/EQoo[1\n\
+GOojbVCon/iXoo[UM@03oo[UNP03oo[YOOojjH7on^Um00Con^V10oojjHH00oojdG7on/i]\n\
+oo[4JP02oo[9K@03oo[9JOojbFgon/U]00?on/U]00?on/aboo[AM_ojdG400oojdGH00ooj\n\
+dgcon]B3oo[IPP02oo[DRP07oo[IS_ojdi;on]VBoo[CT_ojfI;onmajoo_IMP04oo_MM@?o\n\
+n^5e00Gonn1joo[UN_ojiG[on^Ejoo[UOP02oo[YO@05oo[UN_ojjGgon^Umoo[YPOojkGd0\n\
+0oojkX84oo[`Q0Con_B61?ojmHT02?oin8con_F9oo[`Q?ojhG7on^5eoo[ML?ojhG7on^E`\n\
+0_ojhGD00ookh7[on^Enoo[UOP03oo[UOP?on^F200?onNB5oo[ZRoojjX/01OoilYX4ooWe\n\
+W@03ooScY?ogmZ;on?>T00Oom_BY00?oloB/oo;dZOobm:T01?obm:T8oo3d[@GokoBb0_o_\n\
+m;<7ongc]@Ook?>h1oo[l[X7onWb_@;oio3100?ojO:monO``OoYl[d00ooUlKP6on?a^P03\n\
+on7`_?oOkkkognnn00Gognnn1_oLk/800ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooBjLd7\n\
+olkWd0OobnKD1oo8i=P7olCRf`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo/=WV\n\
+1on[e^T00onUe>_oY=?/ojCCk002oj7Ak0;oW]3/00CoV/g^oiO;konEb^ooUL[_0onAb>l0\n\
+0on=a_3oR/G`oh[5l005oh[5l0KoQL;a0_n1`?04oh2ol003ognnl?mn_^ooOKk_00KoOKk_\n\
+1oml_Nl:og^lk`WoMk[^0004oofR:`08oofO<_okXC_onj4koo^Q>oolXT;onZ5;ooVSFOoi\n\
+/FH2ooZdJ@?onKM/00?on[IVooVgK?oi^FT00_oi^FT5ooVlJ@;onKi[00ConKaYooVaI_oi\n\
+[FConjER0_oiZF003?oi[F3on[EPooZiIOoj`FKon[UUooVbH?oi[F3onZ]KooR]Eooj/UKo\n\
+n/5Moo[>J0;on]=/0_ojf6l02?ojfVcon]e`oo[ML?ojgG3on/YToo[5IOoj`V7on/5V0_oj\n\
+a6X2oo[5I@0:oo[1GOojbVCon/YToo[ML?ojhGGonn1joo[UN_ojjGgon^V1oo[YO@Con^V1\n\
+0oojjHH2oo[EM@?on/U]00Gon/UYoo[9KOojbFgon/aboo[9K@02oo[<LP04oo[ALOojdGKo\n\
+n]5foo[AMP;on]=l00_on]B3oo[DR_oje8[on]B:oo[IS_ojdi;on]VBoo[CT_ojfI;onmaj\n\
+oo_IMP05oo_MM@;on^5e00Son^9moo[QMOojiG[on^Ejoo[UO_ojjGgon^Enoo[UNP;on^Um\n\
+0_ojjH43oo[^PPCon_241?ojm8H4oo[eR@06ooWhS?ojmHWon_B6oo[UN_ojiGGon^5e0_oj\n\
+hG42oo[QM@03oo_PN_ojhWgon^9m00?on^En0oojiH800ooii8Gon^Z;ooWYT@02ooWaUP?o\n\
+nO:J0ooimId01_ohmYoon?>TooScY?ohljCom_BYooScY0Gom_BY00ColoB/oo;dZOobm:Wo\n\
+loB/0oobm:T7oo3d[@03oo3d[oo_m;;okoBb00?okoBb0_o_m;<7ongc]@Ook?>h1oo[l[X7\n\
+onWb_@?oio3100?ojO:monO``OoYl[d00_oUlKP6on?a^P03on7`_?oOkkkognnn00Gognnn\n\
+1_oLk/800ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooBjLd7olkWd0OobnKD1oo8i=P7olCR\n\
+f`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo/=WV1on[e^T00onUe>_oY=?/oj7A\n\
+k002oj7Ak0;oW]3/00?oV/g^oiO;konEb^l01?nAb>l00on=a_3oR/G`oh[5l005oh[5l0Ko\n\
+QL;a0_n1`?03oh2ol0;oOkk`00?oO[k_ogfnkomm_^l01Omm_^l7ogbmk`[oNkc_2Omg^^h0\n\
+00?ooJ8[0oolXc401ookXC_oo:92ooVUDooiZF3ooJe[ooVaI_oj]6T00_oi]f`00ooj]VKo\n\
+nKM/ooZfIP03ooViJ@?onKaY0ooi_V/2ooVlJ@0HooZfI_oiZF3onJUPooVYH?oi[FConJeP\n\
+ooZ[Fooj^FGonKiVoo[1I_oj]F3onK9PooV`G?oj/UKon:eGooZbE_oj_V3on/YToo[CK?oj\n\
+e6Son]Q_oo[JK?ojf6oon]Y/0oojgG000oojcVSon[iPooVnIP04oo[4JP;on/EU00Gon/9Q\n\
+oo[5HOojcVgon]Q_oo[UNP03oo[YO@Con^V11?ojjHH00oojiH;on/i]oo[9K@03oo[9K@03\n\
+oo[8LOojc7;on/ab00?on/ab00Con]5aoo[AM_ojdgcon]=l0_oje8<01?ojfH;on]B:oo[D\n\
+R_ojfI82oo[CTP03oo[IT_ojdi;onmaj00;onmUf1?okgGD01?okh7[on^5eoo_PN_okh7X3\n\
+oo[UNP06oo[UO_ojjGgon^Umoo[YOOojjH7on^Um0oojjH400oojkX;on^f5oo[]Q@02oo[`\n\
+Q0Gon_B60_ojmHT02ooin8con_F9ooWhS?oin8con_F9oo[dQ_ojkX;on^9moo_PN_okg7[o\n\
+nmee00;onn1j0_ojhWd2oo[UOP05oo[UP_oii8GonNB5oo[YQ_oii8D00_ojjX/2ooWaUP?o\n\
+nO:J0_oimId3ooScY003ooKdZOohljCon?>T00Kom_BY1?ocm:`00oobm:WoloB/oo3d[@06\n\
+oo3d[@03oo3d[oo_m;;okoBb00CokoBb00?okoBcongc]Oo]lkD01Oo]lkD7oncc^0Oojo:j\n\
+1ooYl[d4onO``@04onWb_OoWl<7ojO:monGa^0Koho6j00?ohO2lomo___oOkkh01OoOkkh6\n\
+omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K\n\
+00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@03ojGDjonTdncoY=?/\n\
+00;oXM7/0_nNd>`01?nJcNkoUl__oiG:konEb^l3oi78k`03ohg6l?n:aO3oR/G`00GoR/G`\n\
+1_n5`_42oh70l0CoP;o`00?oOkk`ogjnkomm_^l01_mm_^l7ogbmk`[oNkc_2Omg^^h000?o\n\
+oJ8[0oomWc802?olXT;onJECoob[HOoi[FCoo;1UooV]H?oi/FKonKM/0ooj]VH4ooViJ@?o\n\
+nKaY0ooi_V/00ooi_6WonK5VooV]H003ooVYH0;onJeP00GonK1LooVlJOoj`FKon/5VooZe\n\
+H003ooV`G009ooR]Eooj/UKon[UGoo[1GOojcVSon]=/oo[JK?ojf6oon]Y/00;on]e`00Co\n\
+nmeeoo[QMOojdfcon/EQ0_oj`FH2oo[9K@?on/UY0_ojaFD01_ojbVCon/iXoo[>KOojeG7o\n\
+n^9moo[UOPCon^V11OojjHH01_oii8Gon]5foo[9KOoja6[on/U]oo[8L@;on/U]0oojc780\n\
+0oojdG7on/aboo[AMP02oo[CO0;on]B30_oje8X4oo[CTP07oo[IT_ojfH;onmUfoo_IM_ok\n\
+gGGonmUfoo_MM@02oo_PNP06oo[QMOokh7[on^5eoo[ROOojiG[on^9m0oojiGh2oo[YO@?o\n\
+n^V11?ojkX83oo[`Q004oo[dQ_ojlH7on_24oo[dQP?on_F91?oin8`2ooWeT@09oo[aSOoj\n\
+l8SonNB5oo[ROOokg7[onn1joo[PPOojhWgon^2100GonNB50_oihh`3ooWYT@;onO:J0_oi\n\
+lIl00ooimIgon?>TooScY003ooScY0Com_BY00?on?:/ooKdZOoeljh01_ocm:`6oo3d[@03\n\
+oo3c[oo`m:ookoBb00GokoBb00?okoBcongc]Oo]lkD01Oo]lkD7oncc^0Oojo:j1ooYl[d8\n\
+onO``@Koho6j00?ohO2lomo___oOkkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc5\n\
+1ooEj/T7om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[M\n\
+h@Oo]M_T1on`fNH7oj_Fj@03ojGDjonTdncoXM7/00;oXM7/0_nNd>`01?nJcNkoUl__oiG:\n\
+konEb^l3oi78k`03ohg6l?n:aO3oR/G`00GoR/G`1On5`_400on1`?3oQL;aoh70l004oh2o\n\
+l003ognnl?mn_^ooOKk_00KoOKk_1oml_Nl:og^lk`WoMk[^0003oofR:`?ooIlb00OonZ5;\n\
+ooZYE?ol[VOoo:iWooVaI_ol[Ukoo;1U00?on[AY00?on[IVooZiIOoi^FT00_oi^FT6ooVl\n\
+J@03ooViJOoi[F3onJeP00;onJUP00GonJePooV]I?oi/5conK1LooVnIP02oo[1IP05ooZe\n\
+H?oi/5conK1LooZbE_oh[EL00_oj/UH01_oj`Egon/iXoo[CK?ojfVcon]Q_oo[JK0;on]e`\n\
+00Oonmeeoo[QMOojf6oon/iXoo[5IOoj`FKon/UY00;on/U]0oojbFT02oojbVCon/UYoo[:\n\
+I?ojbVCon/i]oo_IM_okh7[on^9moo[YPOojiH;on^V100Con^V60_ojjX/00ookfGKon]5a\n\
+oo[9K@02oo[9K@03oo[8LOojbFgon/Qa00;on/ab00?on]5aoo[<L_ojdGH00_ojdg`2oo[D\n\
+P`;on]B:00?on]V>oo[CT_ojdi800_ojdi800ooje8?onmUfoo[HK`02oo_IMP;onmee00?o\n\
+nn1joo[QMOokh7X00_okh7X2oo[RO@Con^En00?on^Umoo[YPOojjH400_ojjH400oojkHGo\n\
+n^j2oo[^PP05oo[`Q0;on_B60oojmHT3ooWhS0ConONC00?onOFAoo[ZRoojjHH01Oojh846\n\
+ooWTQ@;onN><0_oijI42ooWbVPGonO6O0oohlj@3ooSbZ@04ooKdZOohlZcon?:/ooGc[POo\n\
+loB/00Col?>_oo3d[Oo`m:gol?B]0_o`ljl00oo`m:ookoBbonod/P04onod/P03onod/oo]\n\
+lkGokO>e00GokO>e1oo/lkP7on_b^POojO:m1_oWl<401?oYl[goio31onO``OoWl<44on?a\n\
+^P03on7`_?oOkkkognnn00Gognnn1_oLk/800ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooB\n\
+jLd7olkWd0OobnKD1oo8i=P7olCRf`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo\n\
+/=WV1on[e^T00onUe>_oY=?/oj7Ak002oj7Ak0;oW]3/00CoV/g^oiO;konEb^ooUL[_0onA\n\
+b>l00on=a_3oR/G`oh[5l005oh[5l0KoQL;a0_n1`?03oh2ol0;oOkk`00?oO[k_ogfnkomm\n\
+_^l01Omm_^l7ogbmk`[oNkc_2Omg^^h000;ooJ8[00goo:<aoofO<_okXC_onJECoo^UH_on\n\
+ZFKoo:iWoob`IOoj]6Woo;5QoobdH_oj]VKon[AY00?on[IV00?on[UUooViJOoi_6T01Ooi\n\
+_6T00ooj^FGonJePooVYH002ooVYH0;onJeP0_oi/V001ooi]E_on/5Voo[1I_oj^67onKEK\n\
+ooVbH?oi]E/01?oj/UH01_oj^EOon/iXoo[HKoojfVcon]e`oo_MM@;on]e`00Oonmeeoo[Q\n\
+MOojhGGon^5eoo[:I?oj`V7on/AZ00Gon/U]1?ojbFT01_ojaFGon/AZoo[9KOojdG7onmaj\n\
+ooWTQ@?on^V600?on^Z;oo[YQ_ojjX/00_ojjX/01ooii8Gon]5aoo[<L_oja6[on/Qaoo[9\n\
+KOojb7400oojc782oo[AMP03oo[CO?oje8?on]B300?on]B:1Oojdi800oojfH;onmUfoo_I\n\
+MP02oo_IMP05oo[HKookg7[onmeeoo_MMOokg7X00_okh7X01OojhWgon^Enoo[UO_ojiG[o\n\
+n^En00;on^Ej00Kon^Enoo[YPOojjH7on^V1oo[YQ_ojjH43oo[]Q@;on_2400Con_28oo[e\n\
+ROojm8Kon_B60_ojmHT01OojmHgon_F9oo[eSOojmHgonOFA00ConONC0_ojmYD00ooii8Go\n\
+nN26oo[PP@03oo[PP@ConNB50ooihh`2ooWYT@09ooW[V_oilIoonO6OooWaWooimIgonO6O\n\
+ooSfWoohljCon?:Y00Kon?:/0ooeljh4oo?d[005oo3c[ooalk7ol?>_oo3c[oo`m:l00oo`\n\
+ljl2onoc/PCokoBb00?okoBcongc]Oo]lkD01Oo]lkD7oncc^0Oojo:j1ooYl[d;onO``@?o\n\
+ho6j00?ohO2lomo___oOkkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7\n\
+om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T\n\
+1on`fNH7oj_Fj@03ojGDjonTdncoXM7/00;oXM7/0_nNd>`01?nJcNkoUl__oiG:konEb^l3\n\
+oi78k`03ohg6l?n:aO3oR/G`00GoR/G`1_n5`_42oh70l0CoP;o`00?oOkk`ogjnkomm_^l0\n\
+1_mm_^l7ogbmk`[oNkc_2Omg^^h00006oofO<_omXR_ooIlboobR@_ojXD_onjER0_onZFH0\n\
+1OolZf7oo:iNoobaHOol/6GonK5V00;oo;AR0_oj]VH2ooZiI@03ooZhHOoj^FGonKaY00?o\n\
+nKaY00?on[EPooVbH?oiZF000_ojZe/2ooV]H0;onK9P0_oi]E/00ooj`FKon/AZooViG004\n\
+ooVeF`Con[9F00Gon/YToo[CK?ojf6oon]Q_oo_MM@02oo[ML0?on^5e00Kon^Eeoo[>J?oj\n\
+bFWon/EUoo[4J_ojbFd2oo[>K@06oo[9KOojcVgon/UYoo[9KOojbFWon/U]0oojbFT01Ooj\n\
+c7;on]5aoo_IM_ojh87onNB500?on^Z;00Kon^V6oo[ZRoojjX_onNB5oo[IP_ojc782oo[8\n\
+L@;on/ab00Gon/ejoo[<L_ojdGKon/ejoo[CO003oo[DP`?on]B:1?ojdi801_oje8?onmUf\n\
+oo[HKookfGKon]Q_oo_IMP;onmee00?onn1joo_LN_okh7X00_okh7X00oojhWgon^Enoo[U\n\
+OP03oo[UOPKon^V10oojkHD2oo[`Q0?on_2800?on_B6oo[eROojmHT00oojmHd3ooWgT`?o\n\
+n_JE00GonOJIoo[fUOoilIKon_6=oo[`R002ooWTQ@?onN260ooihh`00ooijI7onN><ooWY\n\
+T@02ooWYT@03ooW[V_oilIoonO6O00;onO6O00Con?:YooScY?ohlZWon?:Y1OohlZ`6ooGc\n\
+[P05oo?d[?oalk7ol?>_oo3c[ooalk400oo`ljl00oo`m:ooko>bonoc/P02onoc/P03onod\n\
+/_o_m;?okoBc00OokO>e1oo/lkP7on_b^POojO:m3OoWl<400ooSlK[ohO2lomo__P06omo_\n\
+_PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Ood^W=1oo>im07ol_Ve0Oob>CH1oo4\n\
+h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY00?oYMC[ojCCk?nQ\n\
+dN`00_nQdN`2oik@k004oi[=k_nGbnooUL[_oiG:k`?oTLS_00?oSLK`oh[5l?n:aO001On:\n\
+aO06ohG2l@;oPL3`1?n0_o000omo__3oO[k_ogfnk`06ogfnk`OoO;g_2_mk_>l9ogNjkP00\n\
+0oomWc801?ojXD_onJ=IoojYI_onZFH2oob[H@;oo:iN00?oo;1UoobaHOol/F400_oj]F00\n\
+1?ol]6;on[UUooZhHOoj^642ooZiI@;onKaY00ConKiVooVbH?oi/5conJ=I0_ojZe/2ooV]\n\
+H0;onK9P0_oi]E/00ooj`FKon/AZooViG004ooVeF`Con[9F00Kon/YToo[>J?ojf6oon]Y/\n\
+oo_MMOojf6l2oo[QM@05oo[QLOojiGGon^Eeoo[>KOojbV@00_oja6X01_ojbFgon/i]oo[>\n\
+KOojcVgon/U]oo[>K@;on/U]00?on/i]oo[>J?ojbFT00_ojbFT01?ojbFgon]5aoo[PPOoi\n\
+i8D3oo[ZR`07oo[YQ_ojjX_on^Z;oo[ZRoojh87on/ejoo[8L@02oo[<LP05oo[=N_ojc7;o\n\
+n/aboo[AM_ojcGX00ooje8<3oo[DRPGon]>B00Won]B3oo[EMOojeGGonmUfoo[HKookfGKo\n\
+nmeeoo_LN_okgGD01Ookh7X3oo[RO@;on^F21?ojjH400oojkGgon^Umoo[]Q@02oo[]Q@03\n\
+oo[^P_ojl8Con_2800;on_2800Con_B6oo[eROojlHgon_F=0_oimI43ooWgT`;on_JE00So\n\
+nOJIoo[fUOoimYWonOJIooWeTOoilhoon^F2ooWTQ@?onN2600KonN6BooWSS?oihhcon^Z;\n\
+ooWYTOoihh`2ooWYT@05ooW[V_oilY[onO6OooWaWoohk:@01?ohlZT5ooSb[0?omO>^0_oe\n\
+lk42ooGc[P;olO>a0_o`m:l2oo7c/@03oo3c[oo`m:ooko>b00?oko>b00?okoBconoc/_o_\n\
+lk801oo]lkD7oncc^0Oojo:j1ooYl[d=onO``@03on?a^_oQl;cognnn00Kognnn1_oLk/80\n\
+0ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooBjLd7olkWd0OobnKD1oo8i=P7olCRf`03ol;Q\n\
+gOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo/=WV1on[e^T00onUe>_oY=?/ojCCk003oj7A\n\
+k005oik@k?nJcNkoUl__oiO;konEb^l00onAb>l00on=a_3oR/G`oh[5l005oh[5l0KoQL;a\n\
+0_n1`?04oh2ol003ognnl?mn_^ooOKk_00KoOKk_1oml_Nl:og^lk`WoMk[^00001_omXR_o\n\
+o:92oo^UH_onZFKooJI[oof]J`?oo:iW0_ol/6D3oobaH@06oobdH_oj]VKon[EPooZeH?oj\n\
+^67on[IV0_oj^FD00ooi_6WonKEKooV`G003ooZ[F`03ooR]Eooi/5conK9P00;on[EP00Oo\n\
+nK1LooViG?oi^Econ/9QooVnI_oj^EOonKUL00?onKEK00Son[UGooZbE_oi]E_onKEKoo[1\n\
+GOojaF7onmUfoo[ML0;onmee0oojhGD02oojiG[on^5eoo[QLOojf6oon/5Voo[9JOojbFgo\n\
+n/i]oo[9KOojc7;on/U]00Oon/i]00?on/iXoo[9KOojbFT00_ojbFd01oojc7;on]V2ooWP\n\
+Q_ojjX_onNVAoo[ZRooijI400_ojjX/00oojc7;on/Qaoo[8L@02oo[8L@Gon/ej00Con]B3\n\
+oo[DR_oje8[on]B:1Oojdi801_oje8?on]=loo[ELOojeG7onmUfoo_MM@;onmaj00Conmee\n\
+oo_LN_okg7[onmee0_okh7X01?ojhWgon^Enoo[UO_ojiH82oo[UOP03oo[UP_ojjH7on^V1\n\
+00?on^V10_ojkHD3oo[`Q0?on_2800Con_F9oo[eSOojmHgon_F=1?oimI42oo[fU@ConOJI\n\
+00KonORKooWhW_oin9konOFMooWYTOoihh`2ooWPQP05ooWSS?oihI;onN><ooWQT_oihh`0\n\
+0ooihI801OoihY[onN^JooS/Y?ohljConO6O00?on?:Y0oohlZ`00oohlJoon?:/ooGc/@07\n\
+ooGc/@?olO>a00Kol?>_oo7c/Ooalk7olO>aonoc/_o_m;<5onoc/POokO>e1oo/lkP7on_b\n\
+^POojO:m3ooWl<400ooLk/;ognnnomo__P04omo__PKog>k200?ofnk3omW/aOoIk<D01OoI\n\
+k<D7omGZb@Ood^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo\n\
+^]gQ1onefn@7ok3IiPOoZmKY00?oYMC[ojCCk?nTdn`00onQdN`01OnNd>coV/g^oiO;konG\n\
+bnooUL[_00?oTLS_00?oSLK`oh[5l?n:aO001On:aO06ohG2l@;oPL3`1?n0_o02ognnl0Oo\n\
+OKk_1oml_Nl:og^lk`WoMk[^00000oolXT;onJECoofVJ`02oofVJ`;ooZUV00CooJe[oob^\n\
+Iool/6Goo;1U0ool/F42oobdHP04ooZeH?oj^67on[QQooZhH@;on[UU00WonKEKooZbE_oh\n\
+[EOonZUDooZ[FoojZEConZ]KooV`G?oi/V000_oj]F000ooi]E_onKULooZnH002ooZnH003\n\
+ooViG?oi]E_onKUL00;onKUL0ooi]E/01_oj^EOonKULoo[5HOojf6oon]e`oo_MM@Con^5e\n\
+00Kon^Ejoo_PN_ojhGGonmUfoo[5IOojbFT3oo[9K@06oo[<L_ojcVgon/i]oo[ALOojcVgo\n\
+n]5a1OojcVd3oo[9K@06oo[<L_ojdGKon]=loo[IP_oih8KonN><0_ojjX/01?oijI7on]V2\n\
+oo[AM_ojbFd2oo[8L@Con/ej00?on]B3oo[DR_oje8X00_oje8X5oo[CTP03oo[DR_ojdgco\n\
+n]5a00?onmUf0ookg7X00ookgGGonmajoo_PNP02oo_PNP;on^9m00Oon^Enoo[UP_ojiGko\n\
+n^Enoo[UP_ojjH7on^F200;on^V100?on^f5oo[YQ_ojkHD01_ojl8P00oojlHgonO>?oo[e\n\
+S@02oo[eS@03oo[fUOoimI7on_JE00;on_JE0_oimYT3ooWhV`;onORN00OonOFMooWaU_oi\n\
+jI7onNVAooWSS?oihI;onN2600ConN6B1?oihYX00ooiji[on>bTooS/Y003ooSbZ@Con?:/\n\
+00?on?6_ooGc/Ooelk401_oelk47oo7c/@;olO>e0oo_lk800oo`m;Koko>bongc]@06ongc\n\
+]@Ook?>h1oo[l[X7onWb_A7oio3100?og>k2omo___oOkkh00_oOkkh6omc^`P03om_^`ooI\n\
+k<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K00?o`^7MokoPg_no\n\
+h=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@03ojGDjonTdncoY=?/00?oXM7/00CoW]3/\n\
+oi[=k_nGbnooUl__0_nEb^l2oi78k`03ohg6l?n:aO3oR/G`00GoR/G`1_n5`_43oh70l0?o\n\
+P;o`0_mo__07ogfnk`OoO;g_2_mk_>l9ogNjkP0000?onIiJoo^UH_omYV/00oomYV/01_on\n\
+ZFKooJe[oob^Iool[VOoo;1UoobaH@;oo;AR0_ol/F400ool]6;on[QQooZhH@02ooZhH@03\n\
+ooZnH?oh[EOon:eG00?onZUD00Con:eGooZ[Fooi/5conK9P0_oj]F000ooi]E_onKULooZn\n\
+H002ooZnH0;onKUL00?on[QQooViG?oi^E`00_oi]E/01ooj^EOonKULooZiEooj`V7on]Y/\n\
+oo[ML?okgGD00oojhGD01ookh7[on^Ejoo[QMOojiG[on^5eoo[9KOojbFT00_oja6X01Ooj\n\
+bFgon/aboo[ALOojdG7on/i]00Kon]5a1?ojcVd01oojbFgon/Qaoo[<L_ojc7;on]B3oo[I\n\
+P_ojjX/00_oijI400oojjX_on]V2oo[9K@02oo[8L@Kon/ej00Con]B3oo[DR_oje8[ol<V8\n\
+1?ojdi800ooje8?on]=loo[EL@05oo_IMP03oo_LN_okgGGonmaj00?onn1j0oojhWd2oo[U\n\
+PP04oo[ROOojjH7on^F2oo[YP@;on^V60oojkHD00oojl8Son^f5oo[`R003oo[`R0;on_6=\n\
+00ConO>?oo[eSOoilhoonONC1?ojmYD00ooimYWonORKooWhV`03ooWhV`?onORN00GonOFM\n\
+ooWaU_oihI;onN><oo[ISP03ooWQTP03ooWRV_oihI;onN:J00?onN:J0oohk:@3ooSbZ@;o\n\
+n?:/00?on?6_ooSb[?ofl[<00oofl[<4ooGc/@?olO>a00?olO>eoo7c/Ooalk401_oalkD0\n\
+0oo_lk;ol?Bfongc]@06ongc]@Ook?>h1oo[l[X7onWb_@goio3100Gohn[2onO``OoLk/;o\n\
+io31omc^`P04omo__PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Ood^W=1oo>im07\n\
+ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY\n\
+00?oYMC[ojCCk?nTdn`00onQdN`00onNd>coV/g^oi[=kP02oiO;k`04oiG:konAb>ooTLS_\n\
+ohg6l0OoR/G`1_n5`_43oh70l0CoP;o`00?oOkk`ogfnkomm_^l01Omm_^l7ogbmk`[oNkc_\n\
+2Omg^^h000GooZQd00WooJI[oof]Joom[F_ooJe[oob^Iool/6Gon[IVoobaHOol[Uh00ool\n\
+]6801Ooj]F3on[QQooZeH?oj/UKonZU;00;onZUD00KonJ=IooZYE?oh[EOon:eGooV`G?oi\n\
+]E/2ooZhH@05ooVeFooj^EOon[iPoo[1I_oj_V000_oi^E`00ooj_V3onKULooViG006ooVi\n\
+G004ooZnH?ojbVCon]Y/oo[QM@;onn1j00?on^5eoo_PN_ojiGX00oojiGX00ookgGGon/UY\n\
+oo[1IP02oo[9K@03oo[>KOojdG7on]5a00Won]5a00Con/i]oo[ALOojdG7on/i]1?ojc782\n\
+oo[=NP04oo[CO?ojfH;onN26ooWSS0?on/Qa00?on/aboo[=N_ojcGX00ooje8<2oo[DRPKo\n\
+n]>B00?on]=loo[AM_okfGH00_okfGH00ookg7[onmeeoo_LNP02oo_LNPConn1j0_ojhWd2\n\
+oo[UOPCon^F21oojjHH01_ojkHGon_28oo[`R?ojl8Son_6=ooWcS`?onOFA0oojmYD00ooi\n\
+mYWon_JEooWfV@03ooWfV@03ooWhVooin9konORQ00GonORQ00?onO6OooW[V_oihI801Ooi\n\
+hI85ooWRVP;on>bT0_ohlZ`2ooSa[`;on?:/0_ohlJl5ooKb/`OolO>e00?oko>boo7c]Ooa\n\
+lkD01OoalkD01Oo]lkGolO>eoo7c]Oo]lkGolO>e00;okO>e1oo/lkP7on_b^POojO:m3_oW\n\
+l<400ooSj/;oio31on?Z`P02onO``@03omc^`_oOkkkognnn00Kog>k200?ofnk3omW/aOoI\n\
+k<D01OoIk<D7omGZb@Ood^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05\n\
+okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY00CoYMC[ojCCk?nTdncoY=?/0_nQdN`01OnNd>co\n\
+V/g^oi[=k_nGbnooUL[_00CoTLS_00?oSLK`oh[5l?n:aO001?n:aO07ohG2l@;oPL3`1?n0\n\
+_o000omo__3oOKk_ogfnk`05ogfnk`OoO;g_2_mk_>l9ogNjkP001OonZ7@02OomYV_ooJe[\n\
+oof]Joom[F_oo:iWoob`IOoj]6WonK5VooV]H003ooVaIP;onK9P00?onK1LooR]EoodZ4h0\n\
+1OobYET3oo6^H0?ol;=T00?okkINonnfIOo__W002_o_]VD02?o`/fCokkIUonnfIOo_`V_o\n\
+l=5monoJOoo_g87okmYo1?o_g842onoPP`04onoJOoo`a7_okki`onnnL0?ol<Qh3Oo_c7T5\n\
+oo38N0;ol<Ak00Gol<V8oo3CROo`dhWol=>9onnnL005oo34N`;ol<V800?ol<VFoo39R?o`\n\
+bIH01_o`bIH00oo`bHSoklaioo3AO@03oo3AO@Ool=J20oo`fXD00oo`gX[ol=Z5oo3NRP03\n\
+oo3NRPGol>:=0oo`i8l3oo3XS`;ol>^F1Oo`kIX8oo3`X@Soko2X00?on>bToo3IWOo`fId0\n\
+0oo`fId2onoIWPCokmVS0oo_hjh00oo[j;_okn>^on_X^`0<on_X^`04on?Z`_o[j;_ohn[2\n\
+on_X^`Cohn[200CogNG3on?Z`_oMiL?ohn[25_oMiL<01_oJhl[ogNG3om[Sb_oMiL?of^?:\n\
+omgU`aGof^?:00?od^;7om7RbOoAh/T01OoAh/T7oloPb`kobmo@0_o5g=H01?o;gm3oaMcF\n\
+olGLe_o;gm09olGLeP06ol3Jg?o5g=Ko`=[LolGLe_o0f]coaMcF2?o0f]`>ok_Gg`ko]=CS\n\
+2_n]dNL5ojC>j@;oV/g^0_nGbnl00onEb^ooTLS_oi78k`04oi34kP03ohc3kon@a>koS<?_\n\
+00CoS<?_00KoQL;aohc3kon5`_7oQL;aoh70l?n5`_44oh70l003oh2ol?mo_NkoOkg^00_o\n\
+Okg^2_mo_>d9ogNjkP00"], "Graphics", CellMargins -> {{0, 0}, {0, 0}}, 
+          CellFrameMargins -> 0, ImageSize -> {417, 25}, ImageMargins -> 0, 
+          Background -> RGBColor[0.466667, 0.729412, 0.933333]]}], 
+      Cell[
+       StyleData[All, "Printout"], DockedCells -> {
+         Cell[
+          GraphicsData[
+          "Bitmap", 
+           
+           "CF5dJ6E]HGAYHf4PAg9QL6QYHg<PAVmbKF5d0`40006Q00006B0010400?l00000o`\
+00003o\n00000?ooMk[^X_mg^^h00003oobX=?okZS_onjXk00ConZU;\
+00ConZUDooVUDoojZEConZUD\n\
+1_oiXeT8ooVNFP03oo^UH_oiZF3on[IV00GonKUY0_oi_6T00ooi_VKonKaYooZiI@03ooV]\n\
+I004ooViJOol/F7onJUPooVlJ@;onKi[00Gon/AZooVnJool[VOonKiVoo[4JP02oo[>K@03\n\
+oo[CK?ojcVgon]AX00;on]AX00?on]Q_oo[JK?ojf6l00_ojfV`00oojcVSon/YTooViG005\n\
+ooZnH0;on/9Q00Gon/5Voo[5IOojaFGon/EUoo[:I002oo[5I@06oo[:I?ojbFWon/iXoo[>\n\
+J?ojbFWon/iX0_ojcVd01?ojdfcon]5aoo[ALOojdG42oo[EL@05oo[EMOokfGKon]V2oo[I\n\
+P_okg7X00_ojfH83oo[ISP04oo[IT_ojfHkon^21oo_PNP?on^Ee00Gon^E`oo[ZL_ojiG3o\n\
+n^Yboo_YN@03oo[/N@;on^em00?on^Yboo[YJoojgUP01OojgUP00oojhegon]iHoo[SG@03\n\
+oo[SG@Won^QR0oojjF/4oo[ZLP03oo[/NOojl7gon_B200;on_B200?onOR<oo[eROoin8`0\n\
+0_oin8`00ooimi?onOR<ooWhS003ooWgT`03ooWhVooimYWonORK00;onORK00?on?JOooOf\n\
+X_ogmZ800ooemJD00oocm:KomOFUoo?dYP03oo?dYPKol_BY1oo`m:d00oo`m:ookoBbonod\n\
+/P03onod/P;okoBc1oo]lkD7oncc^0Oojo:j1ooVl[D8onGa^0Koho6j00?ohO2lomo___oO\n\
+kkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7\n\
+olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@04ojGD\n\
+jonTdncoY=?/ojCCk0?oXM7/0_nJcNh2oiO;k`04oiG:konAb>ooTLS_oi78k`;oSLK`1On:\n\
+aO07ohG2l@?oPL3`1?n0_o000omn_^ooOKk_ogfnk`04ogfnk`OoO;g_2_mk_>l9ogNjkP00\n\
+00Coo:Pdoo^Z>oojZT?onZY31?ojZD/01?ojZEConJECooVUDoojZE@5ooVSF@OonIiJ00Co\n\
+nJ=Ioo^UH_oi[FCon[IV1?oi^FT03Ooj^FGonKaYooViJOoi_VKonKaYooZfI_oiZFKonJeT\n\
+ooVaI_oj]VKoo;1UooVYH?oi_6T00_oi_V/01_oja6[onKi[ooVaI_oi_6Won/5Voo[9J@;o\n\
+n/i]00Gon]=/oo[DJ?ojf6oon]AXoo[HK`04oo[JK004oo[DJ?ojcVSon/EQoo[2H@Con[iP\n\
+0_oj`V400ooj`FKon/9Qoo[5I@03oo[5I@04oo[:I?ojaFGon/YToo[9J@;on/iX0oojcVd4\n\
+oo[AL@;on]Ea00?on]Eeoo_IM_okfGH01?ojfH82oo[ISP?on]VB00Won^21oo_PN_ojiGGo\n\
+n^E`oo[UMOojiG3on^Yboo[UL?ojjW800_okjGT3oo[/N@05oo[`OOojjW;on^E`oo[SGOoj\n\
+gV801?ojgUP00oojhegon]iHoo[SG@03oo[SG@03oo[XH_ojhegon^QR00Kon^QR1?ojjF/3\n\
+oo[ZLP;on^ai0oojm882oo[eR@ConOR<00?onONCooWhS?oimi<00_oimi<00ooin9_onOJI\n\
+ooWhV`02ooWhV`03ooWhW_ohmYoomoJR00KomOFU0oocm:H6oo;dZ@Ool?B]00?ol?B_onod\n\
+/_o_m;801?o_m;800oo_m;?okO>eongc]@05ongc]@Ook?>h1oo[l[X7onKb]@SoiO6h1_oS\n\
+lKX00ooQl;cognnnomo__P05omo__PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Oo\n\
+d^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7\n\
+ok3IiPOoZmKY00CoYMC[ojCCk?nTdncoY=?/0onQdN`2oi[=kP;oUl__00?oUL[_oi78konA\n\
+b>l00_n=a_06oh[5l0OoQL;a0on1`?04oh2ol003ogjnkomm_^ooOKk_00CoOKk_1oml_Nl:\n\
+og^lk`WoMk[^00001?okZS_onZY3ooZZ@oojZT<3ooZYB`?onZUD0_oiYE<00ooiXeWonJEC\n\
+ooVSF@02ooVSF@GonIiJ00GonJ=IooVYH?oj]6Won[AYooVgK005ooViJ@;on[UU00_onKaY\n\
+ooVnI_oi^FWonK5Voo^UH_oj]6WonKUYooVaI_oi[F3onJ=IooVlJ@02ooVnJ`03oo[8LOoj\n\
+a6[onKi[00;onK5V00Oon/5Voo[9JOojcVSon]=/oo[HKoojfVcon]Q_00?on]Y/1OojgG00\n\
+1?ojdfcon/YToo[2HOoj`Ed5oo[2H@03oo[5IOoj`V7on/EU00;on/EU00Con/UYoo[5IOoj\n\
+bFWon/U]0_ojcVd01oojdG7on/i]oo[>KOojdfcon/i]oo[ALOojeGD00_ojeG400oojeGGo\n\
+n]=loo[IPP03oo[IPP;on]V>0_ojfI800ooihI;on^21oo_PNP03oo[QL@03oo[UL?ojiGGo\n\
+n^Ee00ConnUi0oojk7T2oo[]O@;on_1m00?on^Yboo[TI?ojgUP01?ojgUP4oo[SG@04oo[X\n\
+H_ojhegon^QRoo[XHP?on^AT00?on^QRoo[YJoojj6800_ojjF/4oo[ZLP04oo[/NOojl7go\n\
+n_61oo[dQP?on_F90_oin8`6ooWgT`;onOJI00ConONCooWhVoohmYoon?JO0_ogmZ86ooGe\n\
+Y@?oloBV1_obm:T7oo3d[@03oo3d[oo_m;;okoBb00CokoBb00?okoBcongc]Oo]lkD01Oo]\n\
+lkD7oncc^0Oojo:j00?ojO:monKb]OoVl[D01?oVl[D8onGa^0Koho6j00?ohO2lomo___oO\n\
+kkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7\n\
+olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@04ojGD\n\
+jonTdncoY=?/ojCCk0;oXM7/00CoW]3/oi[=k_nJcNkoUl__0_nEb^l2oi78k`;oSLK`1_n:\n\
+aO07ohG2l@?oPL3`0on0_o000omo__3oOKk_ogfnk`05ogfnk`OoO;g_2_mk_>l9ogNjkP00\n\
+0_okZS/2ooZZ@`ConZU;00KonJECooZYE?oiYE?onJECooVSFOoiYE<3ooVSF@?onIiJ00Co\n\
+njERooVYH?oi/FKon[AY1?oi^FT6ooVlJ@;onKiV00WonK5VooVYI_oiZFKon[IVooViJOoi\n\
+[FConJePooVSFOoi_V/00_oja6X02_ojb77on/U]oo[9KOoj^FGon[IVoobdH_oi_VKon/EU\n\
+oo[HKooje6P3oo[JK0?on]e`00Son^9Zoo[QLOojhG7on^5aoo[ML?ojfVcon]AXoo[>J0?o\n\
+n/9Q1?oj`FH2oo[5I@06oo[:I?ojaFGon/UYoo[9JOojbFgon/iX1OojcVd2oo[AL@Gon]Ee\n\
+1?ojfH82oo[ISP?on]VB00?on^21oo_PN_ojhG400_ojhG44oo[UM@?onnUi0oojk7T01Ooj\n\
+kGgon^aioo[]OOojkGgon_1m00;on^ai00?on^Yboo[YJooji6@00_ojgUP2oo[SG@03oo[N\n\
+H_ojhegon^=M00;on^=M00Gon^AToo[XH_oji6Con^AToo[XHP03oo[YJ`Gon^Yb00?on^ai\n\
+oo[`OOojm8800oojmHT00oojmHgon_F9ooWeT@02ooWeT@?onONC0_oimYT00ooimIgon?JO\n\
+ooSfW`03ooSfW`03ooOfX_oemJGomOFU00;omOFU1?ocm:H6oo;dZ@Ool?B]00?ol?B_onod\n\
+/_o_m;801?o_m;800oo_m;?okO>eongc]@05ongc]@Ook?>h1oo[l[X3onWb_@Coi_:e2?oU\n\
+lKP6on?a^P03on7`_?oOkkkognnn00Gognnn1_oLk/800ooKk/?ofNc5omW/a@05omW/a@Oo\n\
+eN[91ooBjLd7olkWd0OobnKD1oo8i=P7olCRf`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47\n\
+okGKi0Oo/=WV1on[e^T00onUe>_oY=?/ojCCk003oj7Ak004oik@k?nJcNkoUl__oiO;k`;o\n\
+UL[_0_nAb>l2ohg6l0KoR/G`1on5`_42oh70l0CoP;o`00?oOkk`ogfnkomm_^l01Omm_^l7\n\
+ogbmk`[oNkc_2Omg^^h000;onjXk0oojZT<3ooZYB`ConJEC1?oiXeT2ooVNFP05ooVSFOok\n\
+YF;onJUPooV]I?oj]VH01?oi^FT9ooVlJ@03ooV]I?oiZFKonJUV00;onKUY00?onJeTooVY\n\
+H?oiXeT00ooja6X2oo[9K@08oo[>KOoja6[onKiVoobaHOoj]VKon[iPoo[>J?oje6P3oo[J\n\
+K005oo[RJ_ojgG3on]e`oo[RJ_ojgG001?ojhG401OojgG3on]Q_oo[>J?ojaFGon/9Q00Co\n\
+n/5V0oojaFD4oo[9J@03oo[>J?ojcVgon/i]00?on/i]0_ojdG43oo[EM@03oo[CO?ojfH;o\n\
+n]B300?on]V20_ojfHh2oo[ITP06oo[IS_ojh87onmajoo[QMOojhG7on^5e1OojiGD3oo_Y\n\
+N@Con^ai0_ojkGd4oo[`O@03oo[ZL_ojjF_on^AT00;on^=M00Kon]iRoo[NF?ojgV;on^=M\n\
+oo[NH_ojhed3oo[TI003oo[XH_oji6Con^U[00;on^U[1?ojjW83oo[/N@03oo[`OOojmHWo\n\
+n_F900;on_F90_ojmHd2ooWeT@?onONC00?on_JEooWfVOoimId01OohmYl00oogmZ;omOFU\n\
+ooGeY@02ooGeY@ColoBV1_obm:T7oo3d[@03oo3d[oo_m;;okoBb00CokoBb00?okoBcongc\n\
+]Oo]lkD01Oo]lkD7oncc^0Oojo:j1?oYl[d3onKb]@SoiO6h1_oSlKX00ooQl;cognnnomo_\n\
+_P05omo__PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Ood^W=1oo>im07ol_Ve0Oo\n\
+b>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY00?oYMC[\n\
+ojCCk?nTdn`00onQdN`01OnNd>coV/g^oiO;konGbnooUL[_00?oTLS_00?oSLK`oh[5l?n:\n\
+aO001On:aO07ohG2l@;oPL3`1?n0_o000omo__3oOKk_ogfnk`05ogfnk`OoO;g_2_mk_>l9\n\
+ogNjkP0000?oo:Pdoo^Z>ookZS/00oojZT<3ooZYB`GonJEC0_oiXeT01OoiWU[onJ=IooVY\n\
+H?oj]6WonKM/00OonKUY1Ooi_6T01_oi_VKonKUYooVaI_omYV_onJUVooVaIP;onKaY00?o\n\
+nJeTooVYH?oiYE<00_oja6X00oojbFWon/U]oo[>K@02oo[>K@07oo[9KOoj]F3oo;ARooVb\n\
+H?oj_V3on/YToo[JK002oo[ML0Oon^5a00Oon^Eeoo[QMOojiGGon^Eeoo[UN_ojdfcon/UY\n\
+00Con/5V1?ojaFD4oo[9J@05oo[>KOojbFgon/i]oo[ALOojcVd01OojeGD2oo[CO0;on]V2\n\
+00Con]B3oo[IP_ojfHkon]V>0_ojfI801oojfHkonmajoo_MMOojgG3on^5aoo[QMOojhG40\n\
+0oojiGD7oo_YN@03oo[/NOojkGgon_1m00?on_1m1?ojlH400oojjW;on^9Zoo[NHP05oo[N\n\
+HP?on^AT00Oon^9Zoo[TI?ojiG3on^E`oo[YJoojjW;on^E`00;on^Yb0ookjGT01?ojk7Wo\n\
+n_28oo[`R?ojmHd2oo[eR@05oo[eSOoimI7onOFAooWeTOojmYD00_oimYT00oojmYGonOJI\n\
+ooWeW@02ooSfW`?omoJR00?omOFUooKdZOoemJD00_oemJD3oo?dYPKol_BY1oo`m:d00oo`\n\
+m:ookoBbonod/P02onod/P?okoBc1oo]lkD7oncc^0Oojo:j1?oYl[d3onKb]@SoiO6h1_oS\n\
+lKX00ooQl;cognnnomo__P05omo__PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Oo\n\
+d^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7\n\
+ok3IiPOoZmKY00?oYMC[ojCCk?nTdn`00onQdN`01OnNd>coV/g^oiO;konGbnooUL[_00?o\n\
+TLS_00?oSLK`oh[5l?n:aO001On:aO07ohG2l@;oPL3`1?n0_o000omo__3oOKk_ogfnk`05\n\
+ogfnk`OoO;g_2_mk_>l9ogNjkP0000Coo:Pdoo^Z>ookZS_onjXk0_ojZT<00oojZD_oo:92\n\
+ooZQB`04ooVUD`ConJ=I00ConJeTooVaI_oj]6WonKM/1ooi^FT6ooVlJ@0<ooZdJOoi[FCo\n\
+njERooVYI_oj]VKonKaYooViJOoi[F3onZUDooVSFOoj`FKon/AZ0_ojbFd2oo[>K@0;oo[C\n\
+K?ojcVgonKiVooZiIOol]6;on[QQoo[5HOojbVCon]AXoo[JK?ojhVX01OojhG45oo[UM@05\n\
+oo[UN_okgGGon]Eaoo[9KOojbFT00_oj`FH00oojaFGon/AZoo[9J@03oo[9J@05oo[5IOoj\n\
+bFWon/i]oo[9KOojdG400_ojcVd00oojdGKon]5aoo[AL@02oo[EM@;on]=l0_ojfH801?oj\n\
+e8[on]V2oo[IS_ojfHh3oo[ITP06oo_LN_okgGGonmeeoo[QLOojhGGon^5a1_ojiGD4oo_Y\n\
+N@04oo[/NOojkGgon^emoo[]O@;on_1m0oojlH400oojm8;on_1moo[/N@02oo[UL00<oo[R\n\
+J_ojgV;on]iRoo[NH_oji6Con]iRoo[TI?ojhV[on^AToo[UL?ojhV[on^U[0_ojiG000ook\n\
+jGWon^Eeoo_YN@02oo_YN@07oo[/NOojkX;on^j2oo[aSOojmHWonO>?oo[eS@03ooWeT@;o\n\
+n_JE1?oimYT2ooSfW`?omoJR1OoemJD3oo?dYPKol_BY1oo`m:d00oo`m:ookoBbonod/P02\n\
+onod/P?okoBc1oo]lkD7oncc^0Oojo:j1_oYl[d00ooVl[GoiO6honGa^006onGa^0Koho6j\n\
+00?ohO2lomo___oOkkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Y\n\
+c@Ooc^O@1oo;i]@7olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`\n\
+fNH7oj_Fj@03ojGDjonTdncoY=?/00?oXM7/00GoW]3/oi[=k_nGbnooUl__oiG:k`03oi78\n\
+k`03ohg6l?n:aO3oR/G`00GoR/G`1_n5`_43oh70l0?oP;o`00?oOkk`ogjnkomm_^l01_mm\n\
+_^l7ogbmk`[oNkc_2Omg^^h00003oofR:oolZ3Coo:Pd00;onjXk00Coo:92ooZZ@oojZT?o\n\
+o:920_ojXD/00ooiXeWonZ5;ooVSF@02ooVSF@05ooVYH?oj]6WonKM/ooViJOoi]f`00ooi\n\
+^FT01?oi_6WonKUYooViJOoi^FT5ooVlJ@05ooViJOoi/FKonJUPoo^UH_oi[F@00_oi_V/0\n\
+1ooi^FWonJUPooZ[FooiYE?on[iPoo[4J_ojbFd00_ojcVd04OojdG7on]=/oo[CK?ojaFGo\n\
+nKiVoobdH_oj]VKonKULoo[1GOojcVSon]Y/oo[RJ_ojhG7on^5eoo[QLOojiGGon^E`00Go\n\
+n^Ee0_ojiGX01?okh7[on]Eeoo[9KOoj`FH3oo[4JP?on/UY0_ojaFD00oojbFWon/i]oo[>\n\
+K@03oo[>K@?on]5a00Gon]Eeoo[AM_ojeGGon]=loo[DP`02oo[IPP03oo[DR_ojfHkon]VB\n\
+00;on]VB00Kon]V>oo_LN_okg7[on]e`oo[QLOokgGD2oo[QL@Con^Ee00Con^E`oo[UMOok\n\
+jGWon^Um0_ojk7T4oo[]O@04oo[`OOojl8Con_61oo[aP@;on_B200Gon_B6oo[dP_ojl7go\n\
+n^5aoo[RJP04oo[NHP?on^9Z00?on^AToo[UL?ojhVX00_ojiG02oo[UM@08oo[UN_okjGWo\n\
+n^Umoo[YOOojk7Won^V1oo[]QOojlHd2ooWcS`03oo[eSOoimI7onOFA00;onONC1?oimYT2\n\
+ooSfW`?omoJR1OoemJD3oo?dYPKol_BY1oo`m:d00oo`m:ookoBbonod/P03onod/P;okoBc\n\
+1oo]lkD7oncc^0Oojo:j1_oYl[d00ooVl[GoiO6honGa^006onGa^0Koho6j00?ohO2lomo_\n\
+__oOkkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;\n\
+i]@7olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@03\n\
+ojGDjonTdncoXM7/00;oXM7/0_nNd>`01?nJcNkoUl__oiG:konEb^l3oi78k`03ohg6l?n:\n\
+aO3oR/G`00GoR/G`1_n5`_42oh70l0CoP;o`00?oOkk`ogjnkomm_^l01_mm_^l7ogbmk`[o\n\
+Nkc_2Omg^^h000?oo:Pd0_okZS/3oobR@PConZ5;00ConIiJooVSFOolZf7onK5V0ooi]f`2\n\
+ooViJ@;onKaY0_oi^FT2ooVlJ@03ooVnJooi_6WonKaY00?onKaY00WonJUPooVYI_oiZFKo\n\
+nJUPooVaI_oi_V_on/AZooViJOoiZF000_ojZE@01ooj^67on/5Voo[>KOojcVSon/i]oo[D\n\
+J?ojdf`00_ojf6l02oojbVCon[iPooVnI_oj_V3onKiVooViG?oj`Egon/YToo[JK?ojiG3o\n\
+n^5e00Kon^Ee0oojiGX01OojjGgon^Enoo[UO_ojhWgon/U]00;on/UY00?on/5Voo[5IOoj\n\
+a6X00_oja6X01oojbFWon/U]oo[9KOojc7;on]5aoo[<L_ojdG400oojdGH01oojeGGon]=l\n\
+oo[CO?ojfH;on]B3oo[IP_oje8X00_ojfHh2oo[ITP06oo[IS_okg7[onmeeoo[ML?ojhG7o\n\
+nmee0oojhGD4oo[UM@;onnUi1OojjGd2oo[]O@03oo[`OOojl8Con_2400;on_2400?on_61\n\
+oo[dQ_ojm8800_ojm8801?ojm8Kon_61oo[UL?ojhVX2oo[NHP05oo[RJ_ojgV;on^9Zoo[R\n\
+J_ojhG400oojiGD02oojiG[on^Eeoo[UN_ojiG[on^Umoo[YPOojjGgon^V1oo[`Q?ojl8So\n\
+nO>?00?onOFA00Gon_JEooWaU_ojmYGonOJIooWeW@03ooSfW`05ooOfX_ohljComoJRooGe\n\
+YOogmZ800_oemJD2ooKdZ@03oo?dY_obm:Wol_BY00Gol_BY1oo`m:d00oo`m:ookoBbonod\n\
+/P04onod/P03onod/oo]lkGokO>e00GokO>e1Oo/lkP9on_b^POojO:m2?oUlKP6on?a^P03\n\
+on7`_?oOkkkognnn00Gognnn1_oLk/800ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooBjLd7\n\
+olkWd0OobnKD1oo8i=P7olCRf`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo/=WV\n\
+1on[e^T00onUe>_oY=?/oj7Ak002oj7Ak0;oW]3/00CoV/g^oiO;konEb^ooUL[_0onAb>l0\n\
+0on=a_3oR/G`oh[5l005oh[5l0KoQL;a0_n1`?04oh2ol003ognnl?mn_^ooOKk_00KoOKk_\n\
+1oml_Nl:og^lk`WoMk[^0005oobX=004oo^Q>oolXT;oo:92oobR@P?onZ5;00ConJ=IooV]\n\
+H?oi/FKon[AY0ooi]f`2ooViJ@KonKaY00OonKi[ooVlJOoi_6WonKaYooViJOoj]VKonJUP\n\
+00;onJUV00[onJePooVbH?oi_V_onKi[ooViJOoiZF3onZ]KooZYE?oi]E_on/5V0_ojcVd2\n\
+oo[CK0;on]Q_00Kon]Y/oo[DJ?ojbVCon[UUooZnH?oi_VH2ooZnH004oo[5HOojcVSon]AX\n\
+oo[QL@?on^Ee00?on^Ejoo[UMOokjGT00oojiGX02?ojjGgon^Enoo[YPOojiGkon]Eeoo[A\n\
+LOojbFgon/EU0ooja6X01?ojbFWon/U]oo[>KOojbFd2oo[<LP03oo[ALOojdGKon]5f00;o\n\
+n]5f0oojdg`2oo[DP`03oo[IP_oje8[on]B:00?on]VB00?on]V>oo_IM_okgGD00_ojgG02\n\
+oo_MM@?on^5e00Con^Eeoo[UN_ojiGGon^Ej0_okjGT4oo[YO@?on^em0oojkX82oo[aP@;o\n\
+n_B21?ojm8H02?ojkGgon^aioo[UMOojhV[on]e`oo[RJ_ojhG7on^9Z0_ojhG401?ojhGGo\n\
+n^Eeoo[UMOojiGD2oo[UNP04oo[YOOojjH7on^V1oo[YP@;on^f500Son_6=ooWcSooimI7o\n\
+n_JEooWaU_ojmYGonO:JooWfV@;onOFM0oohmYl01OogmZ;on?>TooGeYOoemJGom_BY00;o\n\
+mOFU0_ofm:T7oo;dZ@Ool?B]00?ol?B_onod/_o_m;801?o_m;800oo_m;?okO>eongc]@05\n\
+ongc]@Ook?>h1oo[l[X9onWb_@KoiO6h1_oSlKX00ooQl;cognnnomo__P05omo__PKog>k2\n\
+00?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Ood^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2\n\
+hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY00?oYMC[ojCCk?nQdN`00_nQ\n\
+dN`2oik@k004oi[=k_nGbnooUL[_oiG:k`?oTLS_00?oSLK`oh[5l?n:aO001On:aO06ohG2\n\
+l@;oPL3`1?n0_o000omo__3oO[k_ogfnk`06ogfnk`OoO;g_2_mk_>l9ogNjkP0000GooJ8[\n\
+oobX=?olXc7oo:PdoobS<@02oo^Q>`;oo:920oojXD/00ooi[FCon[AYooVgK003ooVgK003\n\
+ooViJOoi]fconKUY00GonKaY00SonKi[ooVlJOoi_6WonKaYooVnJooj]VKonK5VooVYH0;o\n\
+nJUV00_onK9PooZeH?oi_V_onKiVooViJOoiZF3onZ]KooZYE?oi]E_on/9Qoo[>K@03oo[C\n\
+K00:oo[HKoojfVcon]Y/oo[JK?oje6SonKULooZnH?oj`FKonKiVoo[1IP;on/9Q00?on/YT\n\
+oo[ML?ojhG400_ojiGD01?ojiG[on^Eeoo[UN_ojiGX3oo[YO@?on^V100?on^Umoo_IM_oj\n\
+bFd00ooja6X2oo[9K@06oo[>KOojbFgon/i]oo[9KOojc7;on]5a1OojdGH2oo[CO0?on]B3\n\
+0_oje8X4oo[ITP;onmUf00Gon]e`oo_MMOojgG3on]e`oo_PNP02oo[QM@04oo[UN_okh7[o\n\
+n^Ejoo[UNP?onnUi0oojjGd00oojkGgon^j2oo[]O@03oo[^PP03oo[`OOojlH7on_6100;o\n\
+n_B61?ojmHT01_ojm8Kon_B2oo[QLOojhG7on]Y/oo[ML0Con^5a00?on^5eoo[UMOojiGD0\n\
+0_ojiGX03?ojjGgon^Enoo[YPOojjHKon^V1oo[YQ_ojl8Son_6=ooWcSoojmYGonO6FooWf\n\
+V@;onO:J0_oimId4ooSfW`03ooScY?oemJGom_BY00;om_BY00?omOFUooKdZOofm:T01oob\n\
+m:T7oo3d[@03oo3d[oo_m;;okoBb00CokoBb00?okoBcongc]Oo]lkD01Oo]lkD7oncc^0Oo\n\
+jo:j1ooYl[d00ooWl<7ojO:monO``@05onGa^0Koho6j00?ohO2lomo___oOkkh01OoOkkh6\n\
+omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K\n\
+00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@03ojGDjonTdncoXM7/\n\
+00;oXM7/0_nNd>`00onJcNkoUl__oiG:k`04oi78k`03ohg6l?n:aO3oR/G`00GoR/G`1_n5\n\
+`_42oh70l0CoP;o`00?oOkk`ogjnkomm_^l01_mm_^l7ogbmk`[oNkc_2Omg^^h000?ooJ8[\n\
+0_olXc42oo^Q>`05oobR@_okXC_onZ5;ooVNF_oi/FH00_oj]6T2ooVgK003ooViJOoi]fco\n\
+nKUY00?onKUY0ooi_6T01ooi^FWonKaYooVnJooi_V_onKaYooZfI_oi[F@00_okYF803Ooi\n\
+ZF3onJePooVbH?oj^FGon/5VooZiIOoi/V3onJePooZ[FoojZECon[9FooZnH?ojcVP00_oj\n\
+df`2oo[HK`;on]Y/0_ojgG001Ooj`V7on/EUoo[1I_oj`FKon/AZ00;on/EU00Gon/EQoo[1\n\
+GOojbVCon/iXoo[UM@03oo[UNP03oo[YOOojjH7on^Um00Con^V10oojjHH00oojdG7on/i]\n\
+oo[4JP02oo[9K@03oo[9JOojbFgon/U]00?on/U]00?on/aboo[AM_ojdG400oojdGH00ooj\n\
+dgcon]B3oo[IPP02oo[DRP07oo[IS_ojdi;on]VBoo[CT_ojfI;onmajoo_IMP04oo_MM@?o\n\
+n^5e00Gonn1joo[UN_ojiG[on^Ejoo[UOP02oo[YO@05oo[UN_ojjGgon^Umoo[YPOojkGd0\n\
+0oojkX84oo[`Q0Con_B61?ojmHT02?oin8con_F9oo[`Q?ojhG7on^5eoo[ML?ojhG7on^E`\n\
+0_ojhGD00ookh7[on^Enoo[UOP03oo[UOP?on^F200?onNB5oo[ZRoojjX/01OoilYX4ooWe\n\
+W@03ooScY?ogmZ;on?>T00Oom_BY00?oloB/oo;dZOobm:T01?obm:T8oo3d[@GokoBb0_o_\n\
+m;<7ongc]@Ook?>h1oo[l[X7onWb_@;oio3100?ojO:monO``OoYl[d00ooUlKP6on?a^P03\n\
+on7`_?oOkkkognnn00Gognnn1_oLk/800ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooBjLd7\n\
+olkWd0OobnKD1oo8i=P7olCRf`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo/=WV\n\
+1on[e^T00onUe>_oY=?/ojCCk002oj7Ak0;oW]3/00CoV/g^oiO;konEb^ooUL[_0onAb>l0\n\
+0on=a_3oR/G`oh[5l005oh[5l0KoQL;a0_n1`?04oh2ol003ognnl?mn_^ooOKk_00KoOKk_\n\
+1oml_Nl:og^lk`WoMk[^0004oofR:`08oofO<_okXC_onj4koo^Q>oolXT;onZ5;ooVSFOoi\n\
+/FH2ooZdJ@?onKM/00?on[IVooVgK?oi^FT00_oi^FT5ooVlJ@;onKi[00ConKaYooVaI_oi\n\
+[FConjER0_oiZF003?oi[F3on[EPooZiIOoj`FKon[UUooVbH?oi[F3onZ]KooR]Eooj/UKo\n\
+n/5Moo[>J0;on]=/0_ojf6l02?ojfVcon]e`oo[ML?ojgG3on/YToo[5IOoj`V7on/5V0_oj\n\
+a6X2oo[5I@0:oo[1GOojbVCon/YToo[ML?ojhGGonn1joo[UN_ojjGgon^V1oo[YO@Con^V1\n\
+0oojjHH2oo[EM@?on/U]00Gon/UYoo[9KOojbFgon/aboo[9K@02oo[<LP04oo[ALOojdGKo\n\
+n]5foo[AMP;on]=l00_on]B3oo[DR_oje8[on]B:oo[IS_ojdi;on]VBoo[CT_ojfI;onmaj\n\
+oo_IMP05oo_MM@;on^5e00Son^9moo[QMOojiG[on^Ejoo[UO_ojjGgon^Enoo[UNP;on^Um\n\
+0_ojjH43oo[^PPCon_241?ojm8H4oo[eR@06ooWhS?ojmHWon_B6oo[UN_ojiGGon^5e0_oj\n\
+hG42oo[QM@03oo_PN_ojhWgon^9m00?on^En0oojiH800ooii8Gon^Z;ooWYT@02ooWaUP?o\n\
+nO:J0ooimId01_ohmYoon?>TooScY?ohljCom_BYooScY0Gom_BY00ColoB/oo;dZOobm:Wo\n\
+loB/0oobm:T7oo3d[@03oo3d[oo_m;;okoBb00?okoBb0_o_m;<7ongc]@Ook?>h1oo[l[X7\n\
+onWb_@?oio3100?ojO:monO``OoYl[d00_oUlKP6on?a^P03on7`_?oOkkkognnn00Gognnn\n\
+1_oLk/800ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooBjLd7olkWd0OobnKD1oo8i=P7olCR\n\
+f`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo/=WV1on[e^T00onUe>_oY=?/oj7A\n\
+k002oj7Ak0;oW]3/00?oV/g^oiO;konEb^l01?nAb>l00on=a_3oR/G`oh[5l005oh[5l0Ko\n\
+QL;a0_n1`?03oh2ol0;oOkk`00?oO[k_ogfnkomm_^l01Omm_^l7ogbmk`[oNkc_2Omg^^h0\n\
+00?ooJ8[0oolXc401ookXC_oo:92ooVUDooiZF3ooJe[ooVaI_oj]6T00_oi]f`00ooj]VKo\n\
+nKM/ooZfIP03ooViJ@?onKaY0ooi_V/2ooVlJ@0HooZfI_oiZF3onJUPooVYH?oi[FConJeP\n\
+ooZ[Fooj^FGonKiVoo[1I_oj]F3onK9PooV`G?oj/UKon:eGooZbE_oj_V3on/YToo[CK?oj\n\
+e6Son]Q_oo[JK?ojf6oon]Y/0oojgG000oojcVSon[iPooVnIP04oo[4JP;on/EU00Gon/9Q\n\
+oo[5HOojcVgon]Q_oo[UNP03oo[YO@Con^V11?ojjHH00oojiH;on/i]oo[9K@03oo[9K@03\n\
+oo[8LOojc7;on/ab00?on/ab00Con]5aoo[AM_ojdgcon]=l0_oje8<01?ojfH;on]B:oo[D\n\
+R_ojfI82oo[CTP03oo[IT_ojdi;onmaj00;onmUf1?okgGD01?okh7[on^5eoo_PN_okh7X3\n\
+oo[UNP06oo[UO_ojjGgon^Umoo[YOOojjH7on^Um0oojjH400oojkX;on^f5oo[]Q@02oo[`\n\
+Q0Gon_B60_ojmHT02ooin8con_F9ooWhS?oin8con_F9oo[dQ_ojkX;on^9moo_PN_okg7[o\n\
+nmee00;onn1j0_ojhWd2oo[UOP05oo[UP_oii8GonNB5oo[YQ_oii8D00_ojjX/2ooWaUP?o\n\
+nO:J0_oimId3ooScY003ooKdZOohljCon?>T00Kom_BY1?ocm:`00oobm:WoloB/oo3d[@06\n\
+oo3d[@03oo3d[oo_m;;okoBb00CokoBb00?okoBcongc]Oo]lkD01Oo]lkD7oncc^0Oojo:j\n\
+1ooYl[d4onO``@04onWb_OoWl<7ojO:monGa^0Koho6j00?ohO2lomo___oOkkh01OoOkkh6\n\
+omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K\n\
+00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@03ojGDjonTdncoY=?/\n\
+00;oXM7/0_nNd>`01?nJcNkoUl__oiG:konEb^l3oi78k`03ohg6l?n:aO3oR/G`00GoR/G`\n\
+1_n5`_42oh70l0CoP;o`00?oOkk`ogjnkomm_^l01_mm_^l7ogbmk`[oNkc_2Omg^^h000?o\n\
+oJ8[0oomWc802?olXT;onJECoob[HOoi[FCoo;1UooV]H?oi/FKonKM/0ooj]VH4ooViJ@?o\n\
+nKaY0ooi_V/00ooi_6WonK5VooV]H003ooVYH0;onJeP00GonK1LooVlJOoj`FKon/5VooZe\n\
+H003ooV`G009ooR]Eooj/UKon[UGoo[1GOojcVSon]=/oo[JK?ojf6oon]Y/00;on]e`00Co\n\
+nmeeoo[QMOojdfcon/EQ0_oj`FH2oo[9K@?on/UY0_ojaFD01_ojbVCon/iXoo[>KOojeG7o\n\
+n^9moo[UOPCon^V11OojjHH01_oii8Gon]5foo[9KOoja6[on/U]oo[8L@;on/U]0oojc780\n\
+0oojdG7on/aboo[AMP02oo[CO0;on]B30_oje8X4oo[CTP07oo[IT_ojfH;onmUfoo_IM_ok\n\
+gGGonmUfoo_MM@02oo_PNP06oo[QMOokh7[on^5eoo[ROOojiG[on^9m0oojiGh2oo[YO@?o\n\
+n^V11?ojkX83oo[`Q004oo[dQ_ojlH7on_24oo[dQP?on_F91?oin8`2ooWeT@09oo[aSOoj\n\
+l8SonNB5oo[ROOokg7[onn1joo[PPOojhWgon^2100GonNB50_oihh`3ooWYT@;onO:J0_oi\n\
+lIl00ooimIgon?>TooScY003ooScY0Com_BY00?on?:/ooKdZOoeljh01_ocm:`6oo3d[@03\n\
+oo3c[oo`m:ookoBb00GokoBb00?okoBcongc]Oo]lkD01Oo]lkD7oncc^0Oojo:j1ooYl[d8\n\
+onO``@Koho6j00?ohO2lomo___oOkkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc5\n\
+1ooEj/T7om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[M\n\
+h@Oo]M_T1on`fNH7oj_Fj@03ojGDjonTdncoXM7/00;oXM7/0_nNd>`01?nJcNkoUl__oiG:\n\
+konEb^l3oi78k`03ohg6l?n:aO3oR/G`00GoR/G`1On5`_400on1`?3oQL;aoh70l004oh2o\n\
+l003ognnl?mn_^ooOKk_00KoOKk_1oml_Nl:og^lk`WoMk[^0003oofR:`?ooIlb00OonZ5;\n\
+ooZYE?ol[VOoo:iWooVaI_ol[Ukoo;1U00?on[AY00?on[IVooZiIOoi^FT00_oi^FT6ooVl\n\
+J@03ooViJOoi[F3onJeP00;onJUP00GonJePooV]I?oi/5conK1LooVnIP02oo[1IP05ooZe\n\
+H?oi/5conK1LooZbE_oh[EL00_oj/UH01_oj`Egon/iXoo[CK?ojfVcon]Q_oo[JK0;on]e`\n\
+00Oonmeeoo[QMOojf6oon/iXoo[5IOoj`FKon/UY00;on/U]0oojbFT02oojbVCon/UYoo[:\n\
+I?ojbVCon/i]oo_IM_okh7[on^9moo[YPOojiH;on^V100Con^V60_ojjX/00ookfGKon]5a\n\
+oo[9K@02oo[9K@03oo[8LOojbFgon/Qa00;on/ab00?on]5aoo[<L_ojdGH00_ojdg`2oo[D\n\
+P`;on]B:00?on]V>oo[CT_ojdi800_ojdi800ooje8?onmUfoo[HK`02oo_IMP;onmee00?o\n\
+nn1joo[QMOokh7X00_okh7X2oo[RO@Con^En00?on^Umoo[YPOojjH400_ojjH400oojkHGo\n\
+n^j2oo[^PP05oo[`Q0;on_B60oojmHT3ooWhS0ConONC00?onOFAoo[ZRoojjHH01Oojh846\n\
+ooWTQ@;onN><0_oijI42ooWbVPGonO6O0oohlj@3ooSbZ@04ooKdZOohlZcon?:/ooGc[POo\n\
+loB/00Col?>_oo3d[Oo`m:gol?B]0_o`ljl00oo`m:ookoBbonod/P04onod/P03onod/oo]\n\
+lkGokO>e00GokO>e1oo/lkP7on_b^POojO:m1_oWl<401?oYl[goio31onO``OoWl<44on?a\n\
+^P03on7`_?oOkkkognnn00Gognnn1_oLk/800ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooB\n\
+jLd7olkWd0OobnKD1oo8i=P7olCRf`03ol;QgOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo\n\
+/=WV1on[e^T00onUe>_oY=?/oj7Ak002oj7Ak0;oW]3/00CoV/g^oiO;konEb^ooUL[_0onA\n\
+b>l00on=a_3oR/G`oh[5l005oh[5l0KoQL;a0_n1`?03oh2ol0;oOkk`00?oO[k_ogfnkomm\n\
+_^l01Omm_^l7ogbmk`[oNkc_2Omg^^h000;ooJ8[00goo:<aoofO<_okXC_onJECoo^UH_on\n\
+ZFKoo:iWoob`IOoj]6Woo;5QoobdH_oj]VKon[AY00?on[IV00?on[UUooViJOoi_6T01Ooi\n\
+_6T00ooj^FGonJePooVYH002ooVYH0;onJeP0_oi/V001ooi]E_on/5Voo[1I_oj^67onKEK\n\
+ooVbH?oi]E/01?oj/UH01_oj^EOon/iXoo[HKoojfVcon]e`oo_MM@;on]e`00Oonmeeoo[Q\n\
+MOojhGGon^5eoo[:I?oj`V7on/AZ00Gon/U]1?ojbFT01_ojaFGon/AZoo[9KOojdG7onmaj\n\
+ooWTQ@?on^V600?on^Z;oo[YQ_ojjX/00_ojjX/01ooii8Gon]5aoo[<L_oja6[on/Qaoo[9\n\
+KOojb7400oojc782oo[AMP03oo[CO?oje8?on]B300?on]B:1Oojdi800oojfH;onmUfoo_I\n\
+MP02oo_IMP05oo[HKookg7[onmeeoo_MMOokg7X00_okh7X01OojhWgon^Enoo[UO_ojiG[o\n\
+n^En00;on^Ej00Kon^Enoo[YPOojjH7on^V1oo[YQ_ojjH43oo[]Q@;on_2400Con_28oo[e\n\
+ROojm8Kon_B60_ojmHT01OojmHgon_F9oo[eSOojmHgonOFA00ConONC0_ojmYD00ooii8Go\n\
+nN26oo[PP@03oo[PP@ConNB50ooihh`2ooWYT@09ooW[V_oilIoonO6OooWaWooimIgonO6O\n\
+ooSfWoohljCon?:Y00Kon?:/0ooeljh4oo?d[005oo3c[ooalk7ol?>_oo3c[oo`m:l00oo`\n\
+ljl2onoc/PCokoBb00?okoBcongc]Oo]lkD01Oo]lkD7oncc^0Oojo:j1ooYl[d;onO``@?o\n\
+ho6j00?ohO2lomo___oOkkh01OoOkkh6omc^`P03om_^`ooIk<GofNc500GofNc51ooEj/T7\n\
+om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K00?o`^7MokoPg_noh=h01Onoh=h7ok[Mh@Oo]M_T\n\
+1on`fNH7oj_Fj@03ojGDjonTdncoXM7/00;oXM7/0_nNd>`01?nJcNkoUl__oiG:konEb^l3\n\
+oi78k`03ohg6l?n:aO3oR/G`00GoR/G`1_n5`_42oh70l0CoP;o`00?oOkk`ogjnkomm_^l0\n\
+1_mm_^l7ogbmk`[oNkc_2Omg^^h00006oofO<_omXR_ooIlboobR@_ojXD_onjER0_onZFH0\n\
+1OolZf7oo:iNoobaHOol/6GonK5V00;oo;AR0_oj]VH2ooZiI@03ooZhHOoj^FGonKaY00?o\n\
+nKaY00?on[EPooVbH?oiZF000_ojZe/2ooV]H0;onK9P0_oi]E/00ooj`FKon/AZooViG004\n\
+ooVeF`Con[9F00Gon/YToo[CK?ojf6oon]Q_oo_MM@02oo[ML0?on^5e00Kon^Eeoo[>J?oj\n\
+bFWon/EUoo[4J_ojbFd2oo[>K@06oo[9KOojcVgon/UYoo[9KOojbFWon/U]0oojbFT01Ooj\n\
+c7;on]5aoo_IM_ojh87onNB500?on^Z;00Kon^V6oo[ZRoojjX_onNB5oo[IP_ojc782oo[8\n\
+L@;on/ab00Gon/ejoo[<L_ojdGKon/ejoo[CO003oo[DP`?on]B:1?ojdi801_oje8?onmUf\n\
+oo[HKookfGKon]Q_oo_IMP;onmee00?onn1joo_LN_okh7X00_okh7X00oojhWgon^Enoo[U\n\
+OP03oo[UOPKon^V10oojkHD2oo[`Q0?on_2800?on_B6oo[eROojmHT00oojmHd3ooWgT`?o\n\
+n_JE00GonOJIoo[fUOoilIKon_6=oo[`R002ooWTQ@?onN260ooihh`00ooijI7onN><ooWY\n\
+T@02ooWYT@03ooW[V_oilIoonO6O00;onO6O00Con?:YooScY?ohlZWon?:Y1OohlZ`6ooGc\n\
+[P05oo?d[?oalk7ol?>_oo3c[ooalk400oo`ljl00oo`m:ooko>bonoc/P02onoc/P03onod\n\
+/_o_m;?okoBc00OokO>e1oo/lkP7on_b^POojO:m3OoWl<400ooSlK[ohO2lomo__P06omo_\n\
+_PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Ood^W=1oo>im07ol_Ve0Oob>CH1oo4\n\
+h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY00?oYMC[ojCCk?nQ\n\
+dN`00_nQdN`2oik@k004oi[=k_nGbnooUL[_oiG:k`?oTLS_00?oSLK`oh[5l?n:aO001On:\n\
+aO06ohG2l@;oPL3`1?n0_o000omo__3oO[k_ogfnk`06ogfnk`OoO;g_2_mk_>l9ogNjkP00\n\
+0oomWc801?ojXD_onJ=IoojYI_onZFH2oob[H@;oo:iN00?oo;1UoobaHOol/F400_oj]F00\n\
+1?ol]6;on[UUooZhHOoj^642ooZiI@;onKaY00ConKiVooVbH?oi/5conJ=I0_ojZe/2ooV]\n\
+H0;onK9P0_oi]E/00ooj`FKon/AZooViG004ooVeF`Con[9F00Kon/YToo[>J?ojf6oon]Y/\n\
+oo_MMOojf6l2oo[QM@05oo[QLOojiGGon^Eeoo[>KOojbV@00_oja6X01_ojbFgon/i]oo[>\n\
+KOojcVgon/U]oo[>K@;on/U]00?on/i]oo[>J?ojbFT00_ojbFT01?ojbFgon]5aoo[PPOoi\n\
+i8D3oo[ZR`07oo[YQ_ojjX_on^Z;oo[ZRoojh87on/ejoo[8L@02oo[<LP05oo[=N_ojc7;o\n\
+n/aboo[AM_ojcGX00ooje8<3oo[DRPGon]>B00Won]B3oo[EMOojeGGonmUfoo[HKookfGKo\n\
+nmeeoo_LN_okgGD01Ookh7X3oo[RO@;on^F21?ojjH400oojkGgon^Umoo[]Q@02oo[]Q@03\n\
+oo[^P_ojl8Con_2800;on_2800Con_B6oo[eROojlHgon_F=0_oimI43ooWgT`;on_JE00So\n\
+nOJIoo[fUOoimYWonOJIooWeTOoilhoon^F2ooWTQ@?onN2600KonN6BooWSS?oihhcon^Z;\n\
+ooWYTOoihh`2ooWYT@05ooW[V_oilY[onO6OooWaWoohk:@01?ohlZT5ooSb[0?omO>^0_oe\n\
+lk42ooGc[P;olO>a0_o`m:l2oo7c/@03oo3c[oo`m:ooko>b00?oko>b00?okoBconoc/_o_\n\
+lk801oo]lkD7oncc^0Oojo:j1ooYl[d=onO``@03on?a^_oQl;cognnn00Kognnn1_oLk/80\n\
+0ooKk/?ofNc5omW/a@05omW/a@OoeN[91ooBjLd7olkWd0OobnKD1oo8i=P7olCRf`03ol;Q\n\
+gOnoh=ko_n3N00Go_n3N1onjgN47okGKi0Oo/=WV1on[e^T00onUe>_oY=?/ojCCk003oj7A\n\
+k005oik@k?nJcNkoUl__oiO;konEb^l00onAb>l00on=a_3oR/G`oh[5l005oh[5l0KoQL;a\n\
+0_n1`?04oh2ol003ognnl?mn_^ooOKk_00KoOKk_1oml_Nl:og^lk`WoMk[^00001_omXR_o\n\
+o:92oo^UH_onZFKooJI[oof]J`?oo:iW0_ol/6D3oobaH@06oobdH_oj]VKon[EPooZeH?oj\n\
+^67on[IV0_oj^FD00ooi_6WonKEKooV`G003ooZ[F`03ooR]Eooi/5conK9P00;on[EP00Oo\n\
+nK1LooViG?oi^Econ/9QooVnI_oj^EOonKUL00?onKEK00Son[UGooZbE_oi]E_onKEKoo[1\n\
+GOojaF7onmUfoo[ML0;onmee0oojhGD02oojiG[on^5eoo[QLOojf6oon/5Voo[9JOojbFgo\n\
+n/i]oo[9KOojc7;on/U]00Oon/i]00?on/iXoo[9KOojbFT00_ojbFd01oojc7;on]V2ooWP\n\
+Q_ojjX_onNVAoo[ZRooijI400_ojjX/00oojc7;on/Qaoo[8L@02oo[8L@Gon/ej00Con]B3\n\
+oo[DR_oje8[on]B:1Oojdi801_oje8?on]=loo[ELOojeG7onmUfoo_MM@;onmaj00Conmee\n\
+oo_LN_okg7[onmee0_okh7X01?ojhWgon^Enoo[UO_ojiH82oo[UOP03oo[UP_ojjH7on^V1\n\
+00?on^V10_ojkHD3oo[`Q0?on_2800Con_F9oo[eSOojmHgon_F=1?oimI42oo[fU@ConOJI\n\
+00KonORKooWhW_oin9konOFMooWYTOoihh`2ooWPQP05ooWSS?oihI;onN><ooWQT_oihh`0\n\
+0ooihI801OoihY[onN^JooS/Y?ohljConO6O00?on?:Y0oohlZ`00oohlJoon?:/ooGc/@07\n\
+ooGc/@?olO>a00Kol?>_oo7c/Ooalk7olO>aonoc/_o_m;<5onoc/POokO>e1oo/lkP7on_b\n\
+^POojO:m3ooWl<400ooLk/;ognnnomo__P04omo__PKog>k200?ofnk3omW/aOoIk<D01OoI\n\
+k<D7omGZb@Ood^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo\n\
+^]gQ1onefn@7ok3IiPOoZmKY00?oYMC[ojCCk?nTdn`00onQdN`01OnNd>coV/g^oiO;konG\n\
+bnooUL[_00?oTLS_00?oSLK`oh[5l?n:aO001On:aO06ohG2l@;oPL3`1?n0_o02ognnl0Oo\n\
+OKk_1oml_Nl:og^lk`WoMk[^00000oolXT;onJECoofVJ`02oofVJ`;ooZUV00CooJe[oob^\n\
+Iool/6Goo;1U0ool/F42oobdHP04ooZeH?oj^67on[QQooZhH@;on[UU00WonKEKooZbE_oh\n\
+[EOonZUDooZ[FoojZEConZ]KooV`G?oi/V000_oj]F000ooi]E_onKULooZnH002ooZnH003\n\
+ooViG?oi]E_onKUL00;onKUL0ooi]E/01_oj^EOonKULoo[5HOojf6oon]e`oo_MM@Con^5e\n\
+00Kon^Ejoo_PN_ojhGGonmUfoo[5IOojbFT3oo[9K@06oo[<L_ojcVgon/i]oo[ALOojcVgo\n\
+n]5a1OojcVd3oo[9K@06oo[<L_ojdGKon]=loo[IP_oih8KonN><0_ojjX/01?oijI7on]V2\n\
+oo[AM_ojbFd2oo[8L@Con/ej00?on]B3oo[DR_oje8X00_oje8X5oo[CTP03oo[DR_ojdgco\n\
+n]5a00?onmUf0ookg7X00ookgGGonmajoo_PNP02oo_PNP;on^9m00Oon^Enoo[UP_ojiGko\n\
+n^Enoo[UP_ojjH7on^F200;on^V100?on^f5oo[YQ_ojkHD01_ojl8P00oojlHgonO>?oo[e\n\
+S@02oo[eS@03oo[fUOoimI7on_JE00;on_JE0_oimYT3ooWhV`;onORN00OonOFMooWaU_oi\n\
+jI7onNVAooWSS?oihI;onN2600ConN6B1?oihYX00ooiji[on>bTooS/Y003ooSbZ@Con?:/\n\
+00?on?6_ooGc/Ooelk401_oelk47oo7c/@;olO>e0oo_lk800oo`m;Koko>bongc]@06ongc\n\
+]@Ook?>h1oo[l[X7onWb_A7oio3100?og>k2omo___oOkkh00_oOkkh6omc^`P03om_^`ooI\n\
+k<GofNc500GofNc51ooEj/T7om;Yc@Ooc^O@1oo;i]@7olSTf0Ooa>;K00?o`^7MokoPg_no\n\
+h=h01Onoh=h7ok[Mh@Oo]M_T1on`fNH7oj_Fj@03ojGDjonTdncoY=?/00?oXM7/00CoW]3/\n\
+oi[=k_nGbnooUl__0_nEb^l2oi78k`03ohg6l?n:aO3oR/G`00GoR/G`1_n5`_43oh70l0?o\n\
+P;o`0_mo__07ogfnk`OoO;g_2_mk_>l9ogNjkP0000?onIiJoo^UH_omYV/00oomYV/01_on\n\
+ZFKooJe[oob^Iool[VOoo;1UoobaH@;oo;AR0_ol/F400ool]6;on[QQooZhH@02ooZhH@03\n\
+ooZnH?oh[EOon:eG00?onZUD00Con:eGooZ[Fooi/5conK9P0_oj]F000ooi]E_onKULooZn\n\
+H002ooZnH0;onKUL00?on[QQooViG?oi^E`00_oi]E/01ooj^EOonKULooZiEooj`V7on]Y/\n\
+oo[ML?okgGD00oojhGD01ookh7[on^Ejoo[QMOojiG[on^5eoo[9KOojbFT00_oja6X01Ooj\n\
+bFgon/aboo[ALOojdG7on/i]00Kon]5a1?ojcVd01oojbFgon/Qaoo[<L_ojc7;on]B3oo[I\n\
+P_ojjX/00_oijI400oojjX_on]V2oo[9K@02oo[8L@Kon/ej00Con]B3oo[DR_oje8[ol<V8\n\
+1?ojdi800ooje8?on]=loo[EL@05oo_IMP03oo_LN_okgGGonmaj00?onn1j0oojhWd2oo[U\n\
+PP04oo[ROOojjH7on^F2oo[YP@;on^V60oojkHD00oojl8Son^f5oo[`R003oo[`R0;on_6=\n\
+00ConO>?oo[eSOoilhoonONC1?ojmYD00ooimYWonORKooWhV`03ooWhV`?onORN00GonOFM\n\
+ooWaU_oihI;onN><oo[ISP03ooWQTP03ooWRV_oihI;onN:J00?onN:J0oohk:@3ooSbZ@;o\n\
+n?:/00?on?6_ooSb[?ofl[<00oofl[<4ooGc/@?olO>a00?olO>eoo7c/Ooalk401_oalkD0\n\
+0oo_lk;ol?Bfongc]@06ongc]@Ook?>h1oo[l[X7onWb_@goio3100Gohn[2onO``OoLk/;o\n\
+io31omc^`P04omo__PKog>k200?ofnk3omW/aOoIk<D01OoIk<D7omGZb@Ood^W=1oo>im07\n\
+ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY\n\
+00?oYMC[ojCCk?nTdn`00onQdN`00onNd>coV/g^oi[=kP02oiO;k`04oiG:konAb>ooTLS_\n\
+ohg6l0OoR/G`1_n5`_43oh70l0CoP;o`00?oOkk`ogfnkomm_^l01Omm_^l7ogbmk`[oNkc_\n\
+2Omg^^h000GooZQd00WooJI[oof]Joom[F_ooJe[oob^Iool/6Gon[IVoobaHOol[Uh00ool\n\
+]6801Ooj]F3on[QQooZeH?oj/UKonZU;00;onZUD00KonJ=IooZYE?oh[EOon:eGooV`G?oi\n\
+]E/2ooZhH@05ooVeFooj^EOon[iPoo[1I_oj_V000_oi^E`00ooj_V3onKULooViG006ooVi\n\
+G004ooZnH?ojbVCon]Y/oo[QM@;onn1j00?on^5eoo_PN_ojiGX00oojiGX00ookgGGon/UY\n\
+oo[1IP02oo[9K@03oo[>KOojdG7on]5a00Won]5a00Con/i]oo[ALOojdG7on/i]1?ojc782\n\
+oo[=NP04oo[CO?ojfH;onN26ooWSS0?on/Qa00?on/aboo[=N_ojcGX00ooje8<2oo[DRPKo\n\
+n]>B00?on]=loo[AM_okfGH00_okfGH00ookg7[onmeeoo_LNP02oo_LNPConn1j0_ojhWd2\n\
+oo[UOPCon^F21oojjHH01_ojkHGon_28oo[`R?ojl8Son_6=ooWcS`?onOFA0oojmYD00ooi\n\
+mYWon_JEooWfV@03ooWfV@03ooWhVooin9konORQ00GonORQ00?onO6OooW[V_oihI801Ooi\n\
+hI85ooWRVP;on>bT0_ohlZ`2ooSa[`;on?:/0_ohlJl5ooKb/`OolO>e00?oko>boo7c]Ooa\n\
+lkD01OoalkD01Oo]lkGolO>eoo7c]Oo]lkGolO>e00;okO>e1oo/lkP7on_b^POojO:m3_oW\n\
+l<400ooSj/;oio31on?Z`P02onO``@03omc^`_oOkkkognnn00Kog>k200?ofnk3omW/aOoI\n\
+k<D01OoIk<D7omGZb@Ood^W=1oo>im07ol_Ve0Oob>CH1oo4h]/00oo2hMgo_n3NokoPgP05\n\
+okoPgPOo^]gQ1onefn@7ok3IiPOoZmKY00CoYMC[ojCCk?nTdncoY=?/0_nQdN`01OnNd>co\n\
+V/g^oi[=k_nGbnooUL[_00CoTLS_00?oSLK`oh[5l?n:aO001?n:aO07ohG2l@;oPL3`1?n0\n\
+_o000omo__3oOKk_ogfnk`05ogfnk`OoO;g_2_mk_>l9ogNjkP001OonZ7@02OomYV_ooJe[\n\
+oof]Joom[F_oo:iWoob`IOoj]6WonK5VooV]H003ooVaIP;onK9P00?onK1LooR]EoodZ4h0\n\
+1OobYET3oo6^H0?ol;=T00?okkINonnfIOo__W002_o_]VD02?o`/fCokkIUonnfIOo_`V_o\n\
+l=5monoJOoo_g87okmYo1?o_g842onoPP`04onoJOoo`a7_okki`onnnL0?ol<Qh3Oo_c7T5\n\
+oo38N0;ol<Ak00Gol<V8oo3CROo`dhWol=>9onnnL005oo34N`;ol<V800?ol<VFoo39R?o`\n\
+bIH01_o`bIH00oo`bHSoklaioo3AO@03oo3AO@Ool=J20oo`fXD00oo`gX[ol=Z5oo3NRP03\n\
+oo3NRPGol>:=0oo`i8l3oo3XS`;ol>^F1Oo`kIX8oo3`X@Soko2X00?on>bToo3IWOo`fId0\n\
+0oo`fId2onoIWPCokmVS0oo_hjh00oo[j;_okn>^on_X^`0<on_X^`04on?Z`_o[j;_ohn[2\n\
+on_X^`Cohn[200CogNG3on?Z`_oMiL?ohn[25_oMiL<01_oJhl[ogNG3om[Sb_oMiL?of^?:\n\
+omgU`aGof^?:00?od^;7om7RbOoAh/T01OoAh/T7oloPb`kobmo@0_o5g=H01?o;gm3oaMcF\n\
+olGLe_o;gm09olGLeP06ol3Jg?o5g=Ko`=[LolGLe_o0f]coaMcF2?o0f]`>ok_Gg`ko]=CS\n\
+2_n]dNL5ojC>j@;oV/g^0_nGbnl00onEb^ooTLS_oi78k`04oi34kP03ohc3kon@a>koS<?_\n\
+00CoS<?_00KoQL;aohc3kon5`_7oQL;aoh70l?n5`_44oh70l003oh2ol?mo_NkoOkg^00_o\n\
+Okg^2_mo_>d9ogNjkP00"], "Graphics", CellMargins -> {{0, 0}, {0, 0}}, 
+          CellFrameMargins -> 0, ImageSize -> {417, 25}, ImageMargins -> 0, 
+          Background -> RGBColor[0.466667, 0.729412, 0.933333]]}, Background -> 
+       GrayLevel[0.8]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Notebook Options Settings", "Section"], 
+      Cell[
+      "The options defined for the style below will be used at the Notebook \
+level.", "Text"], 
+      Cell[
+       StyleData["Notebook"], PageHeaders -> {{
+          Cell[
+           TextData[{
+             CounterBox["Page"]}], "PageNumber"], None, 
+          Cell[
+           TextData[{
+             ValueBox["FileName"]}], "Header"]}, {
+          Cell[
+           TextData[{
+             ValueBox["FileName"]}], "Header"], None, 
+          Cell[
+           TextData[{
+             CounterBox["Page"]}], "PageNumber"]}}, 
+       AutoStyleOptions -> {
+        "UndefinedSymbolStyle" -> {
+          FontColor -> RGBColor[0.0627, 0.1176, 0.647]}}, StyleMenuListing -> 
+       None, Background -> RGBColor[0.992157, 0.984314, 0.941176]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Title and Section Cells", "Section"], 
+      Cell[
+       StyleData["Title"], CellMargins -> {{24, Inherited}, {0, 12}}, 
+       MenuSortingValue -> 1000, MenuCommandKey -> "1", FontFamily -> 
+       "Helvetica", FontWeight -> "Bold", FontColor -> 
+       RGBColor[0.145098, 0.545098, 0.858824], Fontsize -> 30], 
+      Cell[
+       StyleData["Subtitle"], CellMargins -> {{24, Inherited}, {12, 12}}, 
+       MenuSortingValue -> 1100, MenuCommandKey -> "2", FontFamily -> 
+       "Helvetica", FontWeight -> "Bold", FontColor -> 
+       RGBColor[0.301961, 0.631373, 0.890196], Fontsize -> 14], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Section"], CellFrame -> {{0, 0}, {0, 0.5}}, 
+          CellMargins -> {{24, Inherited}, {6, 24}}, MenuSortingValue -> 1300,
+           MenuCommandKey -> "4", FontFamily -> "Helvetica", FontSize -> 18, 
+          FontWeight -> "Bold", FontColor -> 
+          RGBColor[0.87451, 0.411765, 0.0745098], Background -> 
+          RGBColor[0.992157, 0.984314, 0.941176]], 
+         Cell[
+          StyleData["Section", "SlideShow"], FontSize -> 26], 
+         Cell[
+          StyleData["Section", "Printout"], 
+          CellMargins -> {{36, Inherited}, {Inherited, 18}}, FontSize -> 12], 
+         Cell[
+          StyleData["Section", "ColorPrintout"], 
+          CellMargins -> {{36, Inherited}, {Inherited, 18}}, FontSize -> 12]},
+         Closed]], 
+      Cell[
+       StyleData["Subsection"], 
+       CellMargins -> {{38, Inherited}, {Inherited, 18}}, MenuSortingValue -> 
+       1310, MenuCommandKey -> "5"], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Subsubsection"], CellDingbat -> 
+          Cell["\[EmptySmallSquare]"], 
+          CellMargins -> {{50, Inherited}, {2, 18}}, MenuSortingValue -> 1320,
+           MenuCommandKey -> "6", FontFamily -> "Helvetica", FontSize -> 13, 
+          FontWeight -> "Bold", FontColor -> 
+          RGBColor[0.909804, 0.596078, 0.25098]], 
+         Cell[
+          StyleData["Subsubsection", "Presentation"], 
+          CellMargins -> {{80, Inherited}, {3, 15}}, FontSize -> 24], 
+         Cell[
+          StyleData["Subsubsection", "Printout"], 
+          CellMargins -> {{36, Inherited}, {Inherited, 12}}, FontSize -> 10], 
+         Cell[
+          StyleData["Subsubsection", "ColorPrintout"], 
+          CellMargins -> {{36, Inherited}, {Inherited, 12}}, FontSize -> 10]},
+         Closed]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Heading cells", "Section"], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["LabelStyle"], CellSize -> {136, Inherited}, CellBaseline -> 
+          Baseline, TextAlignment -> Right, FontFamily -> "Helvetica", 
+          FontWeight -> "Bold"], 
+         Cell[
+          StyleData["LabelStyle", "SlideShow"], 
+          CellSize -> {148, Inherited}]}, Open]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["LabelStyleShort"], CellSize -> {64, Inherited}, 
+          CellBaseline -> Baseline, TextAlignment -> Right, FontFamily -> 
+          "Helvetica", FontWeight -> "Bold"], 
+         Cell[
+          StyleData["LabelStyleShort", "SlideShow"], 
+          CellSize -> {72, Inherited}, CellBaseline -> Baseline, 
+          TextAlignment -> Right, FontFamily -> "Helvetica", FontWeight -> 
+          "Bold"]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["TeacherName"], CellMargins -> {{24, Inherited}, {6, 24}},
+           CellFrameMargins -> 0, CellFrameLabels -> {{
+             Cell[
+              TextData["Teacher: "], "LabelStyleShort"], None}, {None, None}},
+           CellFrameLabelMargins -> 0, MenuSortingValue -> 1200, FontFamily -> 
+          "Helvetica", FontSize -> 14, FontWeight -> "Plain", FontSlant -> 
+          "Plain"], 
+         Cell[
+          StyleData["TeacherName", "SlideShow"], FontSize -> 16]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ClassName"], CellMargins -> {{24, Inherited}, {6, 0}}, 
+          CellFrameMargins -> 0, CellFrameLabels -> {{
+             Cell[
+              TextData["Class:     "], "LabelStyleShort"], None}, {
+            None, None}}, CellFrameLabelMargins -> 0, MenuSortingValue -> 
+          1210, FontFamily -> "Helvetica", FontSize -> 14, FontWeight -> 
+          "Plain", FontSlant -> "Plain"], 
+         Cell[
+          StyleData["ClassName", "SlideShow"], FontSize -> 16]}, Closed]], 
+      Cell[
+       StyleData["Course"], CellMargins -> {{24, Inherited}, {0, 7}}, 
+       CellFrameMargins -> 0, CellFrameLabels -> {{
+          Cell[
+           TextData["Course: "], "LabelStyle"], None}, {None, None}}, 
+       CellFrameLabelMargins -> 0, MenuSortingValue -> 1400, FontFamily -> 
+       "Helvetica", FontSize -> 14, FontWeight -> "Plain", FontSlant -> 
+       "Plain"], 
+      Cell[
+       StyleData["ActivityLength"], CellMargins -> {{24, Inherited}, {0, 7}}, 
+       CellFrameMargins -> 0, CellFrameLabels -> {{
+          Cell[
+           TextData["Activity Length: "], "LabelStyle"], None}, {None, None}},
+        CellFrameLabelMargins -> 0, MenuSortingValue -> 1410, FontFamily -> 
+       "Helvetica", FontSize -> 14, FontWeight -> "Plain", FontSlant -> 
+       "Plain"], 
+      Cell[
+       StyleData["NCTMStandard"], CellMargins -> {{24, Inherited}, {0, 7}}, 
+       CellFrameMargins -> 0, CellFrameLabels -> {{
+          Cell[
+           TextData["NCTM Standard: "], "LabelStyle"], None}, {None, None}}, 
+       CellFrameLabelMargins -> 0, MenuSortingValue -> 1420, FontFamily -> 
+       "Helvetica", FontSize -> 14, FontWeight -> "Plain", FontSlant -> 
+       "Plain"], 
+      Cell[
+       StyleData["Prerequisites"], CellMargins -> {{24, Inherited}, {0, 7}}, 
+       CellFrameMargins -> 0, CellFrameLabels -> {{
+          Cell[
+           TextData["Prerequisites: "], "LabelStyle"], None}, {None, None}}, 
+       CellFrameLabelMargins -> 0, MenuSortingValue -> 1430, FontFamily -> 
+       "Helvetica", FontSize -> 14, FontWeight -> "Plain", FontSlant -> 
+       "Plain"], 
+      Cell[
+       StyleData["Objectives"], CellMargins -> {{24, Inherited}, {0, 7}}, 
+       CellFrameMargins -> 0, CellFrameLabels -> {{
+          Cell[
+           TextData["Objectives: "], "LabelStyle"], None}, {None, None}}, 
+       CellFrameLabelMargins -> 0, MenuSortingValue -> 1440, FontFamily -> 
+       "Helvetica", FontSize -> 14, FontWeight -> "Plain", FontSlant -> 
+       "Plain"], 
+      Cell[
+       StyleData["ActivityType"], CellMargins -> {{24, Inherited}, {0, 7}}, 
+       CellFrameMargins -> 0, CellFrameLabels -> {{
+          Cell[
+           TextData["Type of Activity: "], "LabelStyle"], None}, {
+         None, None}}, CellFrameLabelMargins -> 0, MenuSortingValue -> 1450, 
+       FontFamily -> "Helvetica", FontSize -> 14, FontWeight -> "Plain", 
+       FontSlant -> "Plain"], 
+      Cell[
+       StyleData["ReferenceMaterial"], 
+       CellMargins -> {{24, Inherited}, {0, 7}}, CellFrameMargins -> 0, 
+       CellFrameLabels -> {{
+          Cell[
+           TextData["Reference Material: "], "LabelStyle"], None}, {
+         None, None}}, CellFrameLabelMargins -> 0, MenuSortingValue -> 1450, 
+       FontFamily -> "Helvetica", FontSize -> 14, FontWeight -> "Plain", 
+       FontSlant -> "Plain"]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Body Text", "Section"], 
+      Cell[
+       CellGroupData[{
+         Cell["Display", "Subsection"], 
+         Cell[
+          StyleData["Text"], 
+          CellMargins -> {{38, Inherited}, {Inherited, Inherited}}, 
+          CounterIncrements -> "Text", MenuSortingValue -> 1600, 
+          MenuCommandKey -> "7", FontFamily -> "Helvetica", FontColor -> 
+          RGBColor[0.196078, 0.196078, 0.196078]], 
+         Cell[
+          CellGroupData[{
+            Cell[
+             StyleData["MathCaption"], CellFrame -> {{0, 0}, {0, 0.5}}, 
+             CellMargins -> {{68, 12}, {0, 20}}, PageBreakBelow -> False, 
+             CellFrameMargins -> {{8, 8}, {8, 2}}, CellFrameColor -> 
+             RGBColor[0.819455, 0.804242, 0.663142], CellFrameLabelMargins -> 
+             4, LineSpacing -> {1, 4}, ParagraphSpacing -> {0, 8}, 
+             MenuSortingValue -> 1600, MenuCommandKey -> "8", FontFamily -> 
+             "Helvetica", FontSize -> 12], 
+            Cell[
+             StyleData["MathCaption", "Presentation"], FontSize -> 24], 
+            Cell[
+             StyleData["MathCaption", "SlideShow"], 
+             CellMargins -> {{72, 36}, {0, 36}}, FontSize -> 19], 
+            Cell[
+             StyleData["MathCaption", "Printout"], 
+             CellMargins -> {{54, 0}, {0, 14}}, Hyphenation -> True, 
+             FontFamily -> "Times", FontSize -> 10, FontColor -> 
+             GrayLevel[0]]}, Open]], 
+         Cell[
+          StyleData["Example"], CellDingbat -> Cell[
+            TextData["Example"], FontWeight -> "Bold"], 
+          CellMargins -> {{94, Inherited}, {0, 18}}, MenuSortingValue -> 1600,
+           FontFamily -> "Helvetica", FontColor -> 
+          RGBColor[0.196078, 0.196078, 0.196078]], 
+         Cell[
+          StyleData["Answer"], CellFrame -> 1., 
+          CellMargins -> {{68, Inherited}, {Inherited, 6}}, CellFrameMargins -> 
+          10, CellFrameLabels -> {{
+             Cell[
+              TextData["Answer:"], "LabelStyleShort"], None}, {None, None}}, 
+          MenuSortingValue -> 1600, FontFamily -> "Helvetica", FontColor -> 
+          RGBColor[0.196078, 0.196078, 0.196078], Background -> 
+          GrayLevel[1]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell["Lists", "Subsection"], 
+         Cell[
+          CellGroupData[{
+            Cell["Bulleted", "Subsubsubsection"], 
+            Cell[
+             CellGroupData[{
+               Cell[
+                StyleData["Item"], CellMargins -> {{78, 10}, {7, 7}}, 
+                MenuSortingValue -> 1610, FontFamily -> "Helvetica", 
+                FontColor -> RGBColor[0.145098, 0.545098, 0.858824]], 
+               Cell[
+                StyleData["Item", "Presentation"], 
+                CellMargins -> {{86, 10}, {10, 10}}, FontSize -> 24]}, 
+              Closed]], 
+            Cell[
+             CellGroupData[{
+               Cell[
+                StyleData["Subitem"], CellMargins -> {{102, 12}, {1, 2}}, 
+                MenuSortingValue -> 1620, FontFamily -> "Helvetica", FontSize -> 
+                10, FontColor -> RGBColor[0.466667, 0.729412, 0.933333]], 
+               Cell[
+                StyleData["Subitem", "Presentation"], 
+                CellMargins -> {{110, 12}, {2, 3}}, FontSize -> 20]}, 
+              Closed]]}, Open]]}, Closed]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Input and Output Cells", "Section"], 
+      Cell[
+      "The cells in this section define styles used for input and output to \
+the kernel.  Be careful when modifying, renaming, or removing these styles, \
+because the front end associates special meanings with these style names.", 
+       "Text"], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Input"], CellFrame -> {{2, 2}, {0, 2}}, 
+          CellMargins -> {{66, 10}, {0, 7}}, CellFrameColor -> 
+          RGBColor[0.796078, 0.901961, 0.831373], MenuCommandKey -> "9", 
+          Background -> RGBColor[0.94902, 1., 0.866667]], 
+         Cell[
+          StyleData["Input", "Presentation"], CellFrame -> {{4, 4}, {0, 4}}, 
+          CellMargins -> {{80, 10}, {0, 10}}, 
+          CellFrameMargins -> {{10, 10}, {12, 12}}, FontSize -> 20], 
+         Cell[
+          StyleData["Input", "Printout"], 
+          CellMargins -> {{36, Inherited}, {0, Inherited}}, 
+          LinebreakAdjustments -> {0.85, 2, 10, 1, 1}, FontSize -> 14, 
+          Background -> GrayLevel[0.8]], 
+         Cell[
+          StyleData["Input", "ColorPrintout"], 
+          CellMargins -> {{36, Inherited}, {0, Inherited}}, 
+          LinebreakAdjustments -> {0.85, 2, 10, 1, 1}, FontSize -> 14]}, 
+        Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Output"], CellFrame -> {{2, 2}, {2, 0}}, 
+          CellMargins -> {{66, 10}, {7, 0}}, CellFrameColor -> 
+          RGBColor[0.796078, 0.901961, 0.831373], Background -> GrayLevel[1]], 
+         Cell[
+          StyleData["Output", "Presentation"], CellFrame -> {{4, 4}, {4, 0}}, 
+          CellMargins -> {{80, 10}, {10, 0}}, 
+          CellFrameMargins -> {{10, 10}, {12, 12}}, FontSize -> 20], 
+         Cell[
+          StyleData["Output", "Printout"], 
+          CellMargins -> {{36, Inherited}, {Inherited, 0}}, FontSize -> 10, 
+          Background -> GrayLevel[0.900008]], 
+         Cell[
+          StyleData["Output", "ColorPrintout"], 
+          CellMargins -> {{36, Inherited}, {Inherited, 0}}, FontSize -> 10]}, 
+        Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["InputOnly"], CellFrame -> 2, CellFrameColor -> 
+          RGBColor[0.796078, 0.901961, 0.831373], Background -> 
+          RGBColor[0.94902, 1., 0.866667]], 
+         Cell[
+          StyleData["InputOnly", "Presentation"], CellFrame -> 4, 
+          CellMargins -> {{80, 10}, {6, 9}}, 
+          CellFrameMargins -> {{10, 10}, {12, 12}}, FontSize -> 20], 
+         Cell[
+          StyleData["InputOnly", "Printout"], 
+          CellMargins -> {{36, Inherited}, {0, Inherited}}, 
+          LinebreakAdjustments -> {0.85, 2, 10, 1, 1}, FontSize -> 14, 
+          Background -> GrayLevel[0.8]], 
+         Cell[
+          StyleData["InputOnly", "ColorPrintout"], 
+          CellMargins -> {{36, Inherited}, {0, Inherited}}, 
+          LinebreakAdjustments -> {0.85, 2, 10, 1, 1}, FontSize -> 14]}, 
+        Closed]], 
+      Cell[
+       StyleData["CellLabel"], FontColor -> 
+       RGBColor[0.772549, 0.521569, 0.203922]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Formulas and Programming", "Section"], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["DisplayFormula"], 
+          CellMargins -> {{66, Inherited}, {Inherited, Inherited}}], 
+         Cell[
+          StyleData["DisplayFormula", "Presentation"], 
+          CellMargins -> {{80, Inherited}, {Inherited 1.5, Inherited 1.5}}, 
+          FontSize -> 24]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["DisplayFormulaNumbered"], 
+          CellMargins -> {{66, Inherited}, {Inherited, Inherited}}], 
+         Cell[
+          StyleData["DisplayFormulaNumbered", "Presentation"], 
+          CellMargins -> {{80, Inherited}, {Inherited 1.5, Inherited 1.5}}, 
+          FontSize -> 24]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Program"], 
+          CellMargins -> {{66, Inherited}, {Inherited, Inherited}}], 
+         Cell[
+          StyleData["Program", "Presentation"], 
+          CellMargins -> {{80, Inherited}, {Inherited 1.5, Inherited 1.5}}, 
+          FontSize -> 24]}, Closed]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Inline Formatting", "Section"], 
+      Cell[
+       CellGroupData[{
+         Cell["Hyperlinks", "Subsection"], 
+         Cell[
+         "The following styles are for linking automatically to the new \
+on-line help system.", "Text"], 
+         Cell[
+          StyleData["FunctionLink"], FontColor -> 
+          RGBColor[0.329412, 0.65098, 0.94902]], 
+         Cell[
+          StyleData["GuideLink", StyleDefinitions -> StyleData["Link"]], 
+          FontColor -> RGBColor[0.329412, 0.65098, 0.94902]], 
+         Cell[
+          StyleData["TutorialLink", StyleDefinitions -> StyleData["Link"]], 
+          FontColor -> RGBColor[0.329412, 0.65098, 0.94902]], 
+         Cell[
+          StyleData["Link"], StyleMenuListing -> None, ButtonStyleMenuListing -> 
+          Automatic, FontColor -> RGBColor[0.329412, 0.65098, 0.94902], 
+          ButtonBoxOptions -> {
+           Active -> True, Appearance -> {Automatic, None}, ButtonExpandable -> 
+            False, ButtonFunction :> (Documentation`HelpLookup[#]& ), 
+            ButtonNote -> ButtonData, Evaluator -> Automatic, ImageSize -> 
+            Full, Method -> "Preemptive"}], 
+         Cell[
+          StyleData["MessageLink", StyleDefinitions -> StyleData["Link"]], 
+          FontColor -> RGBColor[0.329412, 0.65098, 0.94902], 
+          ButtonBoxOptions -> {BaselinePosition -> Baseline}], 
+         Cell[
+          StyleData["Hyperlink", StyleDefinitions -> StyleData["Link"]], 
+          FontColor -> RGBColor[0.329412, 0.65098, 0.94902], 
+          ButtonBoxOptions -> {ButtonFunction :> (FrontEndExecute[{
+               NotebookLocate[#2]}]& ), Evaluator -> None, Method -> 
+            "Queued"}]}, Closed]]}, Closed]]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (32-bit) (October 15, 2010)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"],
+PrivateNotebookOptions -> {"NotebookAuthor" -> ""}
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 143, 2, 41, "Title"],
+Cell[713, 26, 200, 3, 43, "Subtitle"],
+Cell[916, 31, 121, 2, 45, "TeacherName"],
+Cell[1040, 35, 130, 2, 21, "ClassName"],
+Cell[CellGroupData[{
+Cell[1195, 41, 188, 3, 37, "Subsection"],
+Cell[1386, 46, 311, 5, 23, "Text"],
+Cell[1700, 53, 4194, 80, 287, "Output"],
+Cell[5897, 135, 357, 7, 37, "MathCaption"],
+Cell[6257, 144, 18, 0, 47, "Answer"],
+Cell[6278, 146, 333, 7, 37, "MathCaption"],
+Cell[6614, 155, 18, 0, 47, "Answer"],
+Cell[6635, 157, 373, 8, 37, "MathCaption"],
+Cell[7011, 167, 18, 0, 47, "Answer"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

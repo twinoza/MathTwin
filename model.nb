@@ -1,0 +1,2568 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     79772,       2559]
+NotebookOptionsPosition[     71410,       2330]
+NotebookOutlinePosition[     73859,       2397]
+CellTagsIndexPosition[     73367,       2382]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Soma", "Section",
+ CellChangeTimes->{{3.522956253582913*^9, 3.5229562540304728`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Dimensionless model", "Subsection",
+ CellChangeTimes->{{3.522957354768735*^9, 3.5229573576249*^9}}],
+
+Cell["Soma dynamics can be expressed as", "Text",
+ CellChangeTimes->{{3.5229562647936773`*^9, 3.522956281049211*^9}, {
+  3.5231353225110483`*^9, 3.523135326707395*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Tau]", 
+   OverscriptBox[
+    SubscriptBox["x", "m"], "."]}], "=", 
+  RowBox[{
+   RowBox[{"-", 
+    SubscriptBox["x", "m"]}], "+", 
+   FractionBox[
+    SuperscriptBox[
+     SubscriptBox["x", "m"], "2"], "K"], "+", 
+   SubscriptBox["x", "0"]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.522956453161734*^9, 3.522956496411065*^9}, {
+   3.5229565681397877`*^9, 3.522956569693685*^9}, 3.5229568231328707`*^9, {
+   3.5229574259045153`*^9, 3.522957434974803*^9}, 3.52295918573556*^9, {
+   3.5231354038982763`*^9, 3.52313541026744*^9}, 3.523135482476026*^9, {
+   3.523135724222139*^9, 3.523135724847096*^9}},
+ CellTags->"soma_dless_model"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox[
+    SubscriptBox["x", "m"], "."], TraditionalForm]]],
+ " = 0 should have only one solution for bifurcation i.e."
+}], "Text",
+ CellChangeTimes->{{3.522956511330029*^9, 3.5229565752264357`*^9}, {
+  3.522956743359909*^9, 3.522956800630897*^9}, {3.5231354131338673`*^9, 
+  3.523135413156846*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"1", "-", 
+   RowBox[{"(", 
+    RowBox[{"4", " ", 
+     FractionBox["1", "K"], " ", 
+     SubscriptBox["x", "0"]}], ")"}]}], "=", "0"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Implies]", 
+   SubscriptBox["x", 
+    RowBox[{"0", "th"}]]}], "=", 
+  FractionBox["K", "4"]}]}], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.522956590145014*^9, 3.5229566090943327`*^9}, {
+   3.522956656113277*^9, 3.522956715952154*^9}, {3.5229571269832277`*^9, 
+   3.52295712983455*^9}, {3.522957239326152*^9, 3.522957241995833*^9}, {
+   3.522959156117704*^9, 3.5229591567005777`*^9}, {3.522959190606283*^9, 
+   3.5229591953781967`*^9}, 3.523135341613986*^9, {3.523135729183028*^9, 
+   3.523135742891526*^9}}],
+
+Cell["Soma threshold is then given by", "Text",
+ CellChangeTimes->{{3.523135177278082*^9, 3.5231351867177763`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  SubscriptBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[DifferentialD]", 
+      OverscriptBox[
+       SubscriptBox["x", "m"], "."]}], 
+     RowBox[{"\[DifferentialD]", 
+      SubscriptBox["x", "m"]}]], "\[RightFloor]"}], 
+   RowBox[{
+    SubscriptBox["x", "m"], "=", 
+    SubscriptBox["x", "th"]}]], "=", "0"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Implies]", 
+   SubscriptBox["x", "th"]}], "=", 
+  FractionBox["K", "2"]}]}], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.5231352019973717`*^9, 3.523135245485787*^9}, {
+  3.523135417747849*^9, 3.5231354237267303`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Derivation:", "Subsubsection",
+ CellChangeTimes->{{3.522956829670863*^9, 3.52295683269646*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"xd", "=", 
+   RowBox[{
+    RowBox[{"-", "x"}], "+", 
+    FractionBox[
+     SuperscriptBox["x", "2"], "K"], "+", "x0"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ax", "=", 
+   RowBox[{"Coefficient", "[", 
+    RowBox[{"xd", ",", "x", ",", "2"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"bx", "=", 
+   RowBox[{"Coefficient", "[", 
+    RowBox[{"xd", ",", "x", ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"cx", "=", 
+   RowBox[{"Coefficient", "[", 
+    RowBox[{"xd", ",", "x", ",", "0"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"x0th", "=", 
+  RowBox[{"x0", "/.", 
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        SuperscriptBox["bx", "2"], "-", 
+        RowBox[{"4", " ", "ax", " ", "cx"}]}], "\[Equal]", "0"}], ",", " ", 
+      "x0"}], "]"}], "[", 
+    RowBox[{"[", "1", "]"}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"xth", "=", 
+  RowBox[{"x", "/.", 
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"D", "[", 
+        RowBox[{"xd", ",", "x"}], "]"}], "\[Equal]", "0"}], ",", " ", "x"}], 
+     "]"}], "[", 
+    RowBox[{"[", "1", "]"}], "]"}]}]}]}], "Input",
+ CellChangeTimes->{{3.522956835379455*^9, 3.522956976234043*^9}, {
+   3.522957076431065*^9, 3.5229571057640457`*^9}, {3.522957164699111*^9, 
+   3.52295716886244*^9}, 3.522958878105405*^9, {3.523135116399111*^9, 
+   3.523135159214772*^9}}],
+
+Cell[BoxData[
+ FractionBox["K", "4"]], "Output",
+ CellChangeTimes->{
+  3.522957098716639*^9, {3.522957150418726*^9, 3.522957171252705*^9}, 
+   3.5229588820581512`*^9, 3.523135159528702*^9}],
+
+Cell[BoxData[
+ FractionBox["K", "2"]], "Output",
+ CellChangeTimes->{
+  3.522957098716639*^9, {3.522957150418726*^9, 3.522957171252705*^9}, 
+   3.5229588820581512`*^9, 3.523135159529872*^9}]
+}, Open  ]]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Circuit model", "Subsection",
+ CellChangeTimes->{{3.522957370832955*^9, 3.522957373430703*^9}}],
+
+Cell["Circuit model of soma is given by", "Text",
+ CellChangeTimes->{{3.52295745282591*^9, 3.5229574590409937`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   FractionBox[
+    RowBox[{" ", 
+     RowBox[{"C", " ", 
+      SubscriptBox["V", "T"]}]}], "\[Kappa]"], 
+   RowBox[{"(", 
+    RowBox[{"-", 
+     FractionBox["1", 
+      SubscriptBox["i", "m"]]}], ")"}], 
+   SubscriptBox[
+    OverscriptBox["i", "."], "m"]}], "=", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["w", "leaksoma"], 
+    SubscriptBox["i", "leaksoma"]}], "-", 
+   RowBox[{
+    SuperscriptBox["\[Beta]", "'"], 
+    FractionBox[
+     SubscriptBox[
+      SuperscriptBox["i", "2"], "c"], 
+     SubscriptBox["i", "m"]]}], "-", 
+   FractionBox[
+    SubscriptBox["i", "m"], 
+    SuperscriptBox["\[Alpha]", "'"]]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Implies]", 
+   RowBox[{
+    FractionBox[
+     RowBox[{" ", 
+      RowBox[{"C", " ", 
+       SubscriptBox["V", "T"]}]}], 
+     RowBox[{
+      SubscriptBox["w", "leaksoma"], "\[Kappa]"}]], 
+    RowBox[{"(", 
+     RowBox[{"-", 
+      FractionBox["1", 
+       SubscriptBox["i", "m"]]}], ")"}], 
+    SubscriptBox[
+     OverscriptBox["i", "."], "m"]}]}], "=", 
+  RowBox[{
+   SubscriptBox["i", "leaksoma"], "-", 
+   RowBox[{"\[Beta]", 
+    FractionBox[
+     SubscriptBox[
+      SuperscriptBox["i", "2"], "c"], 
+     SubscriptBox["i", "m"]]}], "-", 
+   FractionBox[
+    SubscriptBox["i", "m"], "\[Alpha]"]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Implies]", 
+   RowBox[{
+    FractionBox[
+     RowBox[{" ", 
+      RowBox[{"C", " ", 
+       SubscriptBox["V", "T"]}]}], 
+     RowBox[{
+      SubscriptBox["w", "leaksoma"], " ", "\[Kappa]", " ", 
+      SubscriptBox["i", "leaksoma"]}]], 
+    SubscriptBox[
+     OverscriptBox["i", "."], "m"]}]}], "=", 
+  RowBox[{
+   RowBox[{"-", 
+    SubscriptBox["i", "m"]}], "+", 
+   RowBox[{"\[Beta]", 
+    FractionBox[
+     SubscriptBox[
+      SuperscriptBox["i", "2"], "c"], 
+     SubscriptBox["i", "leaksoma"]]}], "+", 
+   FractionBox[
+    SubscriptBox[
+     SuperscriptBox["i", "2"], "m"], 
+    RowBox[{"\[Alpha]", " ", 
+     SubscriptBox["i", "leaksoma"]}]]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Implies]", 
+   RowBox[{
+    FractionBox[
+     SubsuperscriptBox["\[Tau]", "s", "'"], 
+     SubscriptBox["i", "leaksoma"]], 
+    SubscriptBox[
+     OverscriptBox["i", "."], 
+     RowBox[{"m", "'"}]]}]}], "=", 
+  RowBox[{
+   RowBox[{"-", 
+    SubscriptBox["i", 
+     RowBox[{"m", "'"}]]}], "+", 
+   FractionBox[
+    SubscriptBox[
+     SuperscriptBox["i", "2"], "c"], 
+    SubscriptBox["i", "leak"]], "+", 
+   RowBox[{
+    FractionBox["\[Beta]", "\[Alpha]"], 
+    FractionBox[
+     SubscriptBox[
+      SuperscriptBox["i", "2"], 
+      RowBox[{"m", "'"}]], 
+     SubscriptBox["i", "leaksoma"]]}]}]}]}], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.522957475479968*^9, 3.52295755638631*^9}, {
+  3.522957592328121*^9, 3.52295761338706*^9}, {3.522957658278681*^9, 
+  3.5229577432441187`*^9}, {3.5229578570590277`*^9, 3.5229578610882473`*^9}, {
+  3.523055121487152*^9, 3.523055122585566*^9}, {3.52305515737626*^9, 
+  3.523055183121739*^9}, {3.523055217180975*^9, 3.52305522885495*^9}, {
+  3.523055565703171*^9, 3.523055582148447*^9}, {3.523136029822893*^9, 
+  3.523136049024665*^9}, {3.523136729363742*^9, 3.523136738020046*^9}, {
+  3.523212436098382*^9, 3.523212441499395*^9}, {3.523212541707448*^9, 
+  3.523212591988509*^9}, {3.5232126455110292`*^9, 3.5232126466015787`*^9}, {
+  3.523212963564046*^9, 3.523213001211659*^9}, {3.523242685937829*^9, 
+  3.523242722162322*^9}, {3.5232428175419083`*^9, 3.523242828291462*^9}, {
+  3.523242941732016*^9, 3.52324294270747*^9}},
+ CellTags->"soma_circuit_model"],
+
+Cell[TextData[{
+ "where, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Tau]", "s", "'"], "=", 
+    FractionBox[
+     RowBox[{" ", 
+      RowBox[{"C", " ", 
+       SubscriptBox["V", "T"]}]}], 
+     RowBox[{
+      SubscriptBox["w", "leaksoma"], " ", "\[Kappa]"}]]}], TraditionalForm]]],
+ "and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["i", "m"], "=", 
+    RowBox[{"\[Beta]", " ", 
+     SubscriptBox["i", 
+      RowBox[{"m", "'"}]]}]}], TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.5232427627781963`*^9, 3.523242788097559*^9}, {
+  3.523242843877183*^9, 3.5232428764050303`*^9}, {3.523242948124758*^9, 
+  3.523242948482051*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["From circuit to dimensionless:", "Subsection",
+ CellChangeTimes->{{3.522958945137479*^9, 3.5229589517429256`*^9}}],
+
+Cell["Soma threshold is given by ", "Text",
+ CellChangeTimes->{{3.523134310334416*^9, 3.523134313517322*^9}, 
+   3.523134379917327*^9, {3.523134643885233*^9, 3.523134646847722*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  SubscriptBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[DifferentialD]", 
+      SubscriptBox[
+       OverscriptBox["i", "."], 
+       RowBox[{"m", "'"}]]}], 
+     RowBox[{"\[DifferentialD]", 
+      SubscriptBox["i", 
+       RowBox[{"m", "'"}]]}]], "\[RightFloor]"}], 
+   RowBox[{
+    SubscriptBox["i", 
+     RowBox[{"m", "'"}]], "=", 
+    SubscriptBox["i", "mth"]}]], "=", "0"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Implies]", 
+   SubscriptBox["i", "mth"]}], "=", 
+  FractionBox[
+   RowBox[{
+    SubscriptBox["i", "leaksoma"], " ", "\[Alpha]"}], 
+   RowBox[{"2", " ", "\[Beta]"}]]}]}], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.523134401396949*^9, 3.523134469357059*^9}, 
+   3.523134539374166*^9, {3.523134623874796*^9, 3.523134687790607*^9}, {
+   3.5231367459841537`*^9, 3.523136750545686*^9}, {3.523242737878124*^9, 
+   3.523242743875889*^9}, {3.523293762308117*^9, 3.523293762669435*^9}}],
+
+Cell[TextData[{
+ "By substituting ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["i", "m"], TraditionalForm]]],
+ " with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["\[Alpha]", "\[Beta]"], 
+    FractionBox[
+     SubscriptBox["i", "leaksoma"], "2"], 
+    SubscriptBox["x", "m"]}], TraditionalForm]]],
+ " into (",
+ 
+ CounterBox["DisplayFormulaNumbered", "soma_circuit_model"],
+ ") , we get"
+}], "Text",
+ CellChangeTimes->{{3.5229592419752283`*^9, 3.522959285762589*^9}, {
+   3.5229594288748217`*^9, 3.522959535772773*^9}, {3.522959573438128*^9, 
+   3.5229595917272377`*^9}, 3.522959659852461*^9, {3.522959732636714*^9, 
+   3.522959760385613*^9}, {3.5229598855803833`*^9, 3.522959903569779*^9}, {
+   3.523055607309291*^9, 3.523055610873691*^9}, {3.523134799597043*^9, 
+   3.523134827921453*^9}, 3.523134879114876*^9, {3.5231350091530323`*^9, 
+   3.523135009153262*^9}, {3.523135651505377*^9, 3.523135652195455*^9}, {
+   3.523136744649371*^9, 3.523136744649598*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Tau]", 
+   SubscriptBox[
+    OverscriptBox["x", "."], "m"]}], "=", 
+  RowBox[{
+   RowBox[{"-", 
+    SubscriptBox["x", "m"]}], "+", 
+   FractionBox[
+    SubscriptBox[
+     SuperscriptBox["x", "2"], "m"], "2"], "+", 
+   RowBox[{
+    FractionBox["\[Beta]", "\[Alpha]"], 
+    FractionBox[
+     RowBox[{"2", " ", 
+      SubscriptBox[
+       SuperscriptBox["i", "2"], "c"]}], 
+     SubscriptBox[
+      SuperscriptBox["i", "2"], "leaksoma"]]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Implies]", 
+   SubscriptBox["x", "0"]}], "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     SuperscriptBox[
+      SubscriptBox["i", "c"], "2"], " "}], 
+    SubscriptBox["i", "leaksoma"]], 
+   FractionBox["\[Beta]", "\[Alpha]"], 
+   FractionBox["2", 
+    SubscriptBox["i", "leaksoma"]]}]}]}], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.522958997671607*^9, 3.522959024293519*^9}, {
+   3.52295905670043*^9, 3.522959091892186*^9}, {3.5230556442490053`*^9, 
+   3.523055802758795*^9}, 3.523055968400272*^9, {3.523134907713353*^9, 
+   3.5231349124311523`*^9}, {3.523135012309486*^9, 3.52313504349195*^9}, {
+   3.523136741699492*^9, 3.523136743613676*^9}, {3.5231380791157084`*^9, 
+   3.5231380797412243`*^9}, {3.523138381729025*^9, 3.52313838313221*^9}}],
+
+Cell[TextData[{
+ "which is the same as (",
+ 
+ CounterBox["DisplayFormulaNumbered", "soma_dless_model"],
+ ") with K=2"
+}], "Text",
+ CellChangeTimes->{{3.523135511389449*^9, 3.523135513645941*^9}, {
+  3.523135631320531*^9, 3.5231356471671047`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Derivation:", "Subsubsection",
+ CellChangeTimes->{{3.522957871687544*^9, 3.522957875718923*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"imd", "=", 
+   RowBox[{
+    RowBox[{"-", "im"}], "+", 
+    RowBox[{"\[Beta]", 
+     FractionBox[
+      SuperscriptBox["ic", "2"], "ileaksoma"]}], "+", 
+    RowBox[{
+     FractionBox["1", "\[Alpha]"], 
+     FractionBox[
+      SuperscriptBox["im", "2"], 
+      RowBox[{" ", "ileaksoma"}]]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"imdp", "=", 
+  RowBox[{"Collect", "[", 
+   RowBox[{
+    RowBox[{"Simplify", "[", 
+     RowBox[{
+      RowBox[{
+       FractionBox["1", "\[Beta]"], "imd"}], "/.", 
+      RowBox[{"im", "\[Rule]", " ", 
+       RowBox[{"imp", " ", "\[Beta]"}]}]}], "]"}], ",", "imp"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"imth", "=", 
+  RowBox[{"imp", "/.", 
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"D", "[", 
+        RowBox[{"imdp", ",", "imp"}], "]"}], "\[Equal]", "0"}], ",", " ", 
+      "imp"}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "1"}], "]"}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"imdpp", "=", 
+  RowBox[{"Collect", "[", 
+   RowBox[{
+    RowBox[{"Simplify", "[", 
+     RowBox[{
+      RowBox[{
+       FractionBox["1", "imth"], " ", "imdp"}], "/.", 
+      RowBox[{"imp", "\[Rule]", " ", 
+       RowBox[{"impp", " ", "imth"}]}]}], "]"}], ",", "impp"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"imppth", "=", 
+  RowBox[{"impp", "/.", 
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"D", "[", 
+        RowBox[{"imdpp", ",", "impp"}], "]"}], "\[Equal]", "0"}], ",", " ", 
+      "impp"}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "1"}], "]"}], "]"}]}]}]}], "Input",
+ CellChangeTimes->{{3.522957902848176*^9, 3.5229579346689453`*^9}, {
+   3.52295798265379*^9, 3.5229579888986464`*^9}, {3.522958087415909*^9, 
+   3.522958195618905*^9}, {3.522958227752657*^9, 3.5229582726569233`*^9}, {
+   3.5229583368323793`*^9, 3.522958342810639*^9}, {3.523055249970687*^9, 
+   3.5230553962374487`*^9}, {3.5230554342244463`*^9, 3.523055434576705*^9}, {
+   3.5230554790611553`*^9, 3.5230554933267183`*^9}, {3.5230555346204863`*^9, 
+   3.523055538410192*^9}, {3.5231343215384483`*^9, 3.523134375557783*^9}, {
+   3.523134514054591*^9, 3.523134526121269*^9}, {3.523134779661008*^9, 
+   3.523134788569974*^9}, 3.523137690908936*^9, {3.523137763517824*^9, 
+   3.523137814609098*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   SuperscriptBox["ic", "2"], "ileaksoma"], "-", "imp", "+", 
+  FractionBox[
+   RowBox[{
+    SuperscriptBox["imp", "2"], " ", "\[Beta]"}], 
+   RowBox[{"ileaksoma", " ", "\[Alpha]"}]]}]], "Output",
+ CellChangeTimes->{{3.522958135994171*^9, 3.522958196351317*^9}, 
+   3.5229582352654*^9, 3.522958273340344*^9, 3.52295834374643*^9, {
+   3.523055380539913*^9, 3.523055398081849*^9}, 3.523055435414702*^9, {
+   3.523055511428797*^9, 3.523055539806793*^9}, {3.5231343531756887`*^9, 
+   3.52313437707568*^9}, 3.523134531560598*^9, {3.5231347802007933`*^9, 
+   3.523134789119464*^9}, 3.523137692070478*^9, 3.523137818461782*^9}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"ileaksoma", " ", "\[Alpha]"}], 
+  RowBox[{"2", " ", "\[Beta]"}]]], "Output",
+ CellChangeTimes->{{3.522958135994171*^9, 3.522958196351317*^9}, 
+   3.5229582352654*^9, 3.522958273340344*^9, 3.52295834374643*^9, {
+   3.523055380539913*^9, 3.523055398081849*^9}, 3.523055435414702*^9, {
+   3.523055511428797*^9, 3.523055539806793*^9}, {3.5231343531756887`*^9, 
+   3.52313437707568*^9}, 3.523134531560598*^9, {3.5231347802007933`*^9, 
+   3.523134789119464*^9}, 3.523137692070478*^9, 3.523137818478806*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "impp"}], "+", 
+  FractionBox[
+   SuperscriptBox["impp", "2"], "2"], "+", 
+  FractionBox[
+   RowBox[{"2", " ", 
+    SuperscriptBox["ic", "2"], " ", "\[Beta]"}], 
+   RowBox[{
+    SuperscriptBox["ileaksoma", "2"], " ", "\[Alpha]"}]]}]], "Output",
+ CellChangeTimes->{{3.522958135994171*^9, 3.522958196351317*^9}, 
+   3.5229582352654*^9, 3.522958273340344*^9, 3.52295834374643*^9, {
+   3.523055380539913*^9, 3.523055398081849*^9}, 3.523055435414702*^9, {
+   3.523055511428797*^9, 3.523055539806793*^9}, {3.5231343531756887`*^9, 
+   3.52313437707568*^9}, 3.523134531560598*^9, {3.5231347802007933`*^9, 
+   3.523134789119464*^9}, 3.523137692070478*^9, 3.5231378184804697`*^9}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{{3.522958135994171*^9, 3.522958196351317*^9}, 
+   3.5229582352654*^9, 3.522958273340344*^9, 3.52295834374643*^9, {
+   3.523055380539913*^9, 3.523055398081849*^9}, 3.523055435414702*^9, {
+   3.523055511428797*^9, 3.523055539806793*^9}, {3.5231343531756887`*^9, 
+   3.52313437707568*^9}, 3.523134531560598*^9, {3.5231347802007933`*^9, 
+   3.523134789119464*^9}, 3.523137692070478*^9, 3.523137818481797*^9}]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Dendrite \[Rule] Soma", "Section",
+ CellChangeTimes->{{3.523136242414361*^9, 3.523136251486291*^9}, {
+  3.5231364250233517`*^9, 3.523136436127486*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Dimensionless model", "Subsection",
+ CellChangeTimes->{{3.5231382807987127`*^9, 3.5231382832126007`*^9}}],
+
+Cell["Dimensionless model of dendrite with soma may be given by:", "Text",
+ CellChangeTimes->{{3.5231382916284733`*^9, 3.523138301662746*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Tau]", 
+   OverscriptBox[
+    SubscriptBox["x", "m"], "."]}], "=", 
+  RowBox[{
+   RowBox[{"-", 
+    SubscriptBox["x", "m"]}], "+", 
+   FractionBox[
+    SuperscriptBox[
+     SubscriptBox["x", "m"], "2"], "2"], "+", 
+   SubscriptBox["x", "0"], "+", 
+   SubscriptBox["x", "d"]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.523138315036932*^9, 3.5231383321810637`*^9}, 
+   3.523213644661908*^9, {3.523214918287422*^9, 3.523214927183082*^9}, {
+   3.5232150050832787`*^9, 3.523215009929715*^9}},
+ CellTags->"soma_dend_dless_model"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Circuit model", "Subsection",
+ CellChangeTimes->{{3.52313645718211*^9, 3.5231364600619717`*^9}}],
+
+Cell[TextData[{
+ "Let us consider a fictitious unit-size transistor which provides a current ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["i", "d"], TraditionalForm]]],
+ ". Since dendrite is connected to soma through a diode drop and since \
+dendrite model  (",
+ 
+ CounterBox["DisplayFormulaNumbered", "dend_circuit_model"],
+ ") has matched diode drops, let us introduce the diode current ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["i", "0"], TraditionalForm]]],
+ ". Then the dendrite connected to soma is given by"
+}], "Text",
+ CellChangeTimes->{{3.523136447086053*^9, 3.523136660847258*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   FractionBox[
+    RowBox[{"C", " ", 
+     SubscriptBox["V", "T"]}], 
+    RowBox[{
+     SubscriptBox["w", "leaksoma"], " ", "\[Kappa]", " ", 
+     SubscriptBox["i", "leaksoma"]}]], 
+   SubscriptBox[
+    OverscriptBox["i", "."], "m"]}], "=", 
+  RowBox[{
+   RowBox[{"-", 
+    SubscriptBox["i", "m"]}], "+", 
+   FractionBox[
+    SubscriptBox[
+     SuperscriptBox["i", "2"], "c"], 
+    SubscriptBox["i", "leaksoma"]], "+", 
+   RowBox[{
+    FractionBox["\[Beta]", "\[Alpha]"], 
+    FractionBox[
+     SubscriptBox[
+      SuperscriptBox["i", "2"], "m"], 
+     SubscriptBox["i", "leaksoma"]]}], "+", 
+   RowBox[{"\[Epsilon]", 
+    FractionBox[
+     RowBox[{
+      SubscriptBox["i", "0"], 
+      SubscriptBox["i", "d"]}], 
+     SubscriptBox["i", "leaksoma"]]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Implies]", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"C", " ", 
+      SubscriptBox["V", "T"]}], 
+     RowBox[{
+      SubscriptBox["w", "leaksoma"], " ", "\[Kappa]", " ", 
+      SubscriptBox["i", "leaksoma"]}]], 
+    SubscriptBox[
+     OverscriptBox["i", "."], "m"]}]}], "=", 
+  RowBox[{
+   RowBox[{"-", 
+    SubscriptBox["i", "m"]}], "+", 
+   FractionBox[
+    SubscriptBox[
+     SuperscriptBox["i", "2"], "c"], 
+    SubscriptBox["i", "leaksoma"]], "+", 
+   RowBox[{
+    FractionBox["\[Beta]", "\[Alpha]"], 
+    FractionBox[
+     SubscriptBox[
+      SuperscriptBox["i", "2"], "m"], 
+     SubscriptBox["i", "leaksoma"]]}], "+", 
+   RowBox[{
+    SubscriptBox["\[Epsilon]", "c"], 
+    FractionBox[
+     SubscriptBox["i", "d"], 
+     SubscriptBox["i", "leaksoma"]]}]}]}]}], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.523136680178314*^9, 3.5231367199081707`*^9}, {
+   3.523136785471436*^9, 3.523136790043483*^9}, 3.5231369045011883`*^9, {
+   3.5231369904003687`*^9, 3.523137009122634*^9}, {3.523137061677647*^9, 
+   3.523137062349556*^9}, {3.523137475492957*^9, 3.523137477192399*^9}, {
+   3.523137942994667*^9, 3.523137982164366*^9}, {3.5232136923724337`*^9, 
+   3.523213701453381*^9}},
+ CellTags->"soma_dend_circuit_model"],
+
+Cell[TextData[{
+ "where ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Epsilon]", "c"], TraditionalForm]]],
+ " has dimension of current and is equal to \[Epsilon] \[Times] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["i", "0"], TraditionalForm]]],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.523137020767551*^9, 3.523137051773488*^9}, {
+   3.52313710050912*^9, 3.523137109506948*^9}, 3.523137198365972*^9, {
+   3.523137239067423*^9, 3.523137239076013*^9}, {3.523137320012209*^9, 
+   3.523137354831019*^9}, {3.523137480323772*^9, 3.523137523185882*^9}, {
+   3.5231375646131573`*^9, 3.523137597468317*^9}, {3.523138055618438*^9, 
+   3.52313805612976*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Circuit to dimensionless model", "Subsection",
+ CellChangeTimes->{{3.5231380409415913`*^9, 3.523138045372424*^9}, {
+  3.5231382405087957`*^9, 3.523138245535553*^9}}],
+
+Cell[TextData[{
+ "Normalizing (",
+ 
+ CounterBox["DisplayFormulaNumbered", "soma_dend_circuit_model"],
+ ") with ",
+ Cell[BoxData[
+  SubscriptBox["i", "mth"]], "DisplayFormulaNumbered",
+  CellChangeTimes->{{3.523134401396949*^9, 3.523134469357059*^9}, 
+    3.523134539374166*^9, {3.523134623874796*^9, 3.523134687790607*^9}, {
+    3.5231367459841537`*^9, 3.523136750545686*^9}}],
+ ", we get"
+}], "Text",
+ CellChangeTimes->{3.523138061077175*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Tau]", 
+   SubscriptBox[
+    OverscriptBox["x", "."], "m"]}], "=", 
+  RowBox[{
+   RowBox[{"-", 
+    SubscriptBox["x", "m"]}], "+", 
+   FractionBox[
+    SubscriptBox[
+     SuperscriptBox["x", "2"], "m"], "2"], "+", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"2", "\[Beta]"}], "\[Alpha]"], 
+    FractionBox[
+     SubscriptBox[
+      SuperscriptBox["i", "2"], "c"], 
+     SubsuperscriptBox["i", "leaksoma", "2"]]}], "+", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"2", "\[Beta]"}], "\[Alpha]"], 
+    FractionBox[
+     RowBox[{
+      SubscriptBox["\[Epsilon]", "c"], " ", 
+      SubscriptBox["i", "d"]}], 
+     RowBox[{
+      SubsuperscriptBox["i", "leaksoma", "2"], 
+      " "}]]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Implies]", 
+    SubscriptBox["x", "0"]}], "=", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"2", "\[Beta]"}], "\[Alpha]"], 
+    FractionBox[
+     SubscriptBox[
+      SuperscriptBox["i", "2"], "c"], 
+     SubsuperscriptBox["i", "leaksoma", "2"]]}]}], ",", 
+  "and"}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["x", "d"], "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"2", "\[Beta]"}], "\[Alpha]"], 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["\[Epsilon]", "c"], " ", 
+     SubscriptBox["i", "d"]}], 
+    RowBox[{
+     SubsuperscriptBox["i", "leaksoma", "2"], 
+     " "}]]}]}]}], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.523138103251807*^9, 3.523138219040511*^9}, {
+  3.523138364099524*^9, 3.5231384095180807`*^9}, {3.52321504043084*^9, 
+  3.52321504126558*^9}},
+ CellTags->"soma_dend_conn"],
+
+Cell[CellGroupData[{
+
+Cell["Derivation:", "Subsubsection",
+ CellChangeTimes->{{3.523137605742394*^9, 3.52313760742162*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"imdendd", "=", 
+   RowBox[{
+    RowBox[{"-", "im"}], "+", 
+    FractionBox[
+     SuperscriptBox["ic", "2"], "ileaksoma"], "+", 
+    RowBox[{
+     FractionBox["\[Beta]", "\[Alpha]"], 
+     FractionBox[
+      SuperscriptBox["im", "2"], "ileaksoma"]}], "+", 
+    RowBox[{"\[Epsilon]c", " ", 
+     FractionBox["id", "ileaksoma"]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"imdenddp", "=", 
+  RowBox[{"Collect", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      FractionBox["1", "imth"], " ", "imdendd"}], "/.", 
+     RowBox[{"{", 
+      RowBox[{"im", "\[Rule]", 
+       RowBox[{"xm", " ", "imth"}]}], "}"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"xm", ",", " ", "ileaksoma"}], "}"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.523137615639434*^9, 3.523137672128708*^9}, {
+  3.5231377148809*^9, 3.5231377528535013`*^9}, {3.523137862877117*^9, 
+  3.523137916831855*^9}, {3.52313796109336*^9, 3.523137966798335*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "xm"}], "+", 
+  FractionBox[
+   SuperscriptBox["xm", "2"], "2"], "+", 
+  FractionBox[
+   RowBox[{"2", " ", "\[Beta]", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["ic", "2"], "+", 
+      RowBox[{"id", " ", "\[Epsilon]c"}]}], ")"}]}], 
+   RowBox[{
+    SuperscriptBox["ileaksoma", "2"], " ", "\[Alpha]"}]]}]], "Output",
+ CellChangeTimes->{{3.523137673908161*^9, 3.523137702325074*^9}, {
+   3.523137745027176*^9, 3.523137753151634*^9}, {3.523137878935648*^9, 
+   3.523137917228126*^9}, 3.523137968592909*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ FormBox[
+  SubsuperscriptBox["\[Tau]", "d", "'"], TraditionalForm]], "Input"]
+}, Closed]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Dendrite (w/o channel)", "Section",
+ CellChangeTimes->{{3.523135297326048*^9, 3.52313529839754*^9}, {
+  3.523138602287236*^9, 3.523138609518609*^9}, {3.523243268635051*^9, 
+  3.5232432795438004`*^9}, {3.5232437647960043`*^9, 3.523243768938431*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Dimensionless model", "Subsection",
+ CellChangeTimes->{{3.5231353048617973`*^9, 3.52313530814255*^9}}],
+
+Cell["Dendrite may be modelled as", "Text",
+ CellChangeTimes->{{3.523135679917308*^9, 3.523135684653448*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Tau]", " ", 
+   SubscriptBox[
+    OverscriptBox["x", "."], "d"]}], "=", 
+  RowBox[{
+   RowBox[{"-", 
+    SubscriptBox["x", "d"]}], "+", 
+   SubscriptBox["x", "d0"]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.5231356905489197`*^9, 3.523135718649796*^9}, {
+  3.523135752497862*^9, 3.5231357558012543`*^9}, {3.523243370549993*^9, 
+  3.5232434060465307`*^9}, {3.5232437742061*^9, 3.5232437765654383`*^9}},
+ CellTags->"dend_woch_dless_model"],
+
+Cell["which is just an LPF", "Text",
+ CellChangeTimes->{{3.5231357817095613`*^9, 3.523135787182644*^9}, {
+   3.523243450172336*^9, 3.523243457217037*^9}, {3.523243780755246*^9, 
+   3.523243783441353*^9}, 3.523248524404023*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Circuit model", "Subsection",
+ CellChangeTimes->{{3.5231358075502777`*^9, 3.52313580945341*^9}}],
+
+Cell["Circuit model of the dendrite may be derived as follows", "Text",
+ CellChangeTimes->{{3.5231358743819647`*^9, 3.523135885517508*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   FractionBox[
+    RowBox[{"C", " ", 
+     SubscriptBox["V", "T"]}], "\[Kappa]"], 
+   RowBox[{"(", 
+    RowBox[{"-", 
+     FractionBox["1", 
+      SubscriptBox["i", "d"]]}], ")"}], 
+   SubscriptBox[
+    OverscriptBox["i", "."], "d"]}], "=", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["w", "leakdend"], 
+    SubscriptBox["i", "leakdend"]}], "-", 
+   RowBox[{
+    SubsuperscriptBox["\[Beta]", "d", "'"], 
+    FractionBox[
+     SubsuperscriptBox["i", "backdend", "2"], 
+     SubscriptBox["i", "d"]]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Implies]", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"C", " ", 
+      SubscriptBox["V", "T"]}], 
+     RowBox[{
+      SubscriptBox["w", "leakdend"], "\[Kappa]"}]], 
+    RowBox[{"(", 
+     RowBox[{"-", 
+      FractionBox["1", 
+       SubscriptBox["i", "d"]]}], ")"}], 
+    SubscriptBox[
+     OverscriptBox["i", "."], "d"]}]}], "=", 
+  RowBox[{
+   SubscriptBox["i", "leakdend"], "-", 
+   RowBox[{
+    SubscriptBox["\[Beta]", "d"], 
+    FractionBox[
+     SubsuperscriptBox["i", "backdend", "2"], 
+     SubscriptBox["i", "d"]]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Implies]", 
+   RowBox[{
+    FractionBox[
+     RowBox[{" ", 
+      SubsuperscriptBox["\[Tau]", "d", "'"]}], 
+     SubscriptBox["i", "leakdend"]], 
+    SubscriptBox[
+     OverscriptBox["i", "."], "d"]}]}], "=", 
+  RowBox[{
+   RowBox[{"-", 
+    SubscriptBox["i", "d"]}], "+", 
+   RowBox[{
+    SubscriptBox["\[Beta]", "d"], 
+    FractionBox[
+     SubsuperscriptBox["i", "backdend", "2"], 
+     SubscriptBox["i", "leakdend"]]}]}]}]}], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.523135890178273*^9, 3.523135975015574*^9}, {
+  3.5231360643026943`*^9, 3.523136115993998*^9}, {3.523213512784074*^9, 
+  3.523213573499814*^9}, {3.5232430306967897`*^9, 3.523243041774946*^9}, {
+  3.523243507722938*^9, 3.523243695341406*^9}, {3.523243792247651*^9, 
+  3.5232438434268293`*^9}},
+ CellTags->"dend_woch_circuit_model"],
+
+Cell[TextData[{
+ "where, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Tau]", "d", "'"], "=", 
+    FractionBox[
+     RowBox[{" ", 
+      RowBox[{"C", " ", 
+       SubscriptBox["V", "T"]}]}], 
+     RowBox[{
+      SubscriptBox["w", "leakdend"], " ", "\[Kappa]", " "}]]}], 
+   TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.523242990713636*^9, 3.523243011926806*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Calibration strategy", "Subsection",
+ CellChangeTimes->{{3.523243871522258*^9, 3.5232438757377033`*^9}, {
+  3.523247329413316*^9, 3.523247333954958*^9}}],
+
+Cell[TextData[{
+ "From (",
+ 
+ CounterBox["DisplayFormulaNumbered"],
+ "), steady state ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["i", "dsteady"], TraditionalForm]]],
+ "=",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox["\[Beta]", "d"], 
+   FractionBox[
+    SubsuperscriptBox["i", "backdend", "2"], 
+    SubscriptBox["i", "leakdend"]]}]], "DisplayFormulaNumbered",
+  CellChangeTimes->{{3.523135890178273*^9, 3.523135975015574*^9}, {
+   3.5231360643026943`*^9, 3.523136115993998*^9}, {3.523213512784074*^9, 
+   3.523213573499814*^9}, {3.5232430306967897`*^9, 3.523243041774946*^9}, {
+   3.523243507722938*^9, 3.523243695341406*^9}, {3.523243792247651*^9, 
+   3.5232438434268293`*^9}}],
+ ". Substituting this ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["i", "d"], TraditionalForm]]],
+ " into (",
+ 
+ CounterBox["DisplayFormulaNumbered", "soma_dend_conn"],
+ ") we have"
+}], "Text",
+ CellChangeTimes->{{3.523243957369426*^9, 3.5232439865386868`*^9}, {
+  3.5232442480674877`*^9, 3.523244290873887*^9}, {3.523244359691226*^9, 
+  3.523244378273452*^9}, {3.523246748997381*^9, 3.5232467503477163`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["x", "d"], "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"2", "\[Beta]"}], "\[Alpha]"], 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["\[Epsilon]", "c"], " "}], 
+    RowBox[{
+     SubsuperscriptBox["i", "leaksoma", "2"], " "}]], 
+   SubscriptBox["\[Beta]", "d"], 
+   FractionBox[
+    SubsuperscriptBox["i", "backdend", "2"], 
+    SubscriptBox["i", "leakdend"]]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.5232443914147387`*^9, 3.523244405730644*^9}},
+ CellTags->"dend_woch_transformation"],
+
+Cell[TextData[{
+ "When dendrite model is specified with a saturation current ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "d0"], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["i", "backdend"], TraditionalForm]]],
+ " is calculated from (",
+ 
+ CounterBox["DisplayFormulaNumbered", "dend_woch_transformation"],
+ ")"
+}], "Text",
+ CellChangeTimes->{{3.523244432713922*^9, 3.5232444962975893`*^9}, {
+  3.5232445510798893`*^9, 3.523244568772438*^9}}],
+
+Cell[TextData[{
+ "Thus the normalizing factor for dendrite model is : ",
+ Cell[BoxData[
+  RowBox[{
+   FractionBox[
+    RowBox[{"2", "\[Beta]"}], "\[Alpha]"], 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["\[Epsilon]", "c"], " "}], 
+    RowBox[{
+     SubsuperscriptBox["i", "leaksoma", "2"], " "}]]}]], 
+  "DisplayFormulaNumbered",
+  CellChangeTimes->{{3.5232443914147387`*^9, 3.523244405730644*^9}}]
+}], "Text",
+ CellChangeTimes->{{3.523247795874949*^9, 3.5232478352101717`*^9}, {
+   3.523247867554982*^9, 3.523247886436595*^9}, 3.52324802547992*^9, {
+   3.523248633644902*^9, 3.5232486539450817`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Dendrite (with channel)", "Section",
+ CellChangeTimes->{{3.523135297326048*^9, 3.52313529839754*^9}, {
+  3.523138602287236*^9, 3.523138609518609*^9}, {3.523243268635051*^9, 
+  3.5232432795438004`*^9}, {3.5232461312371483`*^9, 3.523246131641514*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Dimensionless model", "Subsection",
+ CellChangeTimes->{{3.5231353048617973`*^9, 3.52313530814255*^9}}],
+
+Cell["Dendrite may be modelled as", "Text",
+ CellChangeTimes->{{3.523135679917308*^9, 3.523135684653448*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Tau]", " ", 
+   SubscriptBox[
+    OverscriptBox["x", "."], "d"]}], "=", 
+  RowBox[{
+   RowBox[{"-", 
+    SubscriptBox["x", "d"]}], "+", 
+   SubscriptBox["x", "d0"], "+", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["g", "ch1"], "+", 
+      SubscriptBox["g", "ch2"]}], ")"}], 
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["x", "erev"], "-", 
+      SubscriptBox["x", "d"]}], ")"}]}]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.5231356905489197`*^9, 3.523135718649796*^9}, {
+  3.523135752497862*^9, 3.5231357558012543`*^9}, {3.523243370549993*^9, 
+  3.5232434060465307`*^9}, {3.523246135597788*^9, 3.523246139393482*^9}, {
+  3.523297879836853*^9, 3.5232978820046864`*^9}},
+ CellTags->"dend_dless_model"],
+
+Cell["which has conductance based ion-channel", "Text",
+ CellChangeTimes->{{3.5231357817095613`*^9, 3.523135787182644*^9}, {
+  3.523243450172336*^9, 3.523243457217037*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Circuit model", "Subsection",
+ CellChangeTimes->{{3.5231358075502777`*^9, 3.52313580945341*^9}}],
+
+Cell["Circuit model of the dendrite may be derived as follows", "Text",
+ CellChangeTimes->{{3.5231358743819647`*^9, 3.523135885517508*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   FractionBox[
+    RowBox[{"C", " ", 
+     SubscriptBox["V", "T"]}], "\[Kappa]"], 
+   RowBox[{"(", 
+    RowBox[{"-", 
+     FractionBox["1", 
+      SubscriptBox["i", "d"]]}], ")"}], 
+   SubscriptBox[
+    OverscriptBox["i", "."], "d"]}], "=", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["w", "leakdend"], 
+    SubscriptBox["i", "leakdend"]}], "-", 
+   RowBox[{
+    SubsuperscriptBox["\[Beta]", "d", "'"], 
+    FractionBox[
+     SubsuperscriptBox["i", "backdend", "2"], 
+     SubscriptBox["i", "d"]]}], "-", 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["w", "ij"], " ", 
+     SubscriptBox["i", "0"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", 
+        SubscriptBox["i", "d"]}], "+", 
+       SubscriptBox["i", "erev"]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["i", "ch1"], "+", 
+       SubscriptBox["i", "ch2"]}], ")"}]}], 
+    RowBox[{
+     SubscriptBox["i", "erev"], 
+     SubscriptBox["i", "d"]}]]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Implies]", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"C", " ", 
+      SubscriptBox["V", "T"]}], 
+     RowBox[{
+      SubscriptBox["w", "leakdend"], "\[Kappa]"}]], 
+    RowBox[{"(", 
+     RowBox[{"-", 
+      FractionBox["1", 
+       SubscriptBox["i", "d"]]}], ")"}], 
+    SubscriptBox[
+     OverscriptBox["i", "."], "d"]}]}], "=", 
+  RowBox[{
+   SubscriptBox["i", "leakdend"], "-", 
+   RowBox[{
+    SubscriptBox["\[Beta]", "d"], 
+    FractionBox[
+     SubsuperscriptBox["i", "backdend", "2"], 
+     SubscriptBox["i", "d"]]}], "-", 
+   RowBox[{
+    SubscriptBox["\[Alpha]", "cd"], 
+    FractionBox[
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         SubscriptBox["i", "d"]}], "+", 
+        SubscriptBox["i", "erev"]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["i", "ch1"], "+", 
+        SubscriptBox["i", "ch2"]}], ")"}]}], 
+     RowBox[{
+      SubscriptBox["i", "erev"], 
+      SubscriptBox["i", "d"]}]]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Implies]", 
+   RowBox[{
+    FractionBox[
+     RowBox[{" ", 
+      SubsuperscriptBox["\[Tau]", "d", "'"]}], 
+     SubscriptBox["i", "leakdend"]], 
+    SubscriptBox[
+     OverscriptBox["i", "."], "d"]}]}], "=", 
+  RowBox[{
+   RowBox[{"-", 
+    SubscriptBox["i", "d"]}], "+", 
+   RowBox[{
+    SubscriptBox["\[Beta]", "d"], 
+    FractionBox[
+     SubsuperscriptBox["i", "backdend", "2"], 
+     SubscriptBox["i", "leakdend"]]}], "+", 
+   RowBox[{
+    SubscriptBox["\[Alpha]", "cd"], 
+    FractionBox[
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         SubscriptBox["i", "d"]}], "+", 
+        SubscriptBox["i", "erev"]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["i", "ch1"], "+", 
+        SubscriptBox["i", "ch2"]}], ")"}]}], 
+     RowBox[{
+      SubscriptBox["i", "erev"], 
+      SubscriptBox["i", "leakdend"]}]]}]}]}]}], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.523135890178273*^9, 3.523135975015574*^9}, {
+   3.5231360643026943`*^9, 3.523136115993998*^9}, {3.523213512784074*^9, 
+   3.523213573499814*^9}, {3.5232430306967897`*^9, 3.523243041774946*^9}, {
+   3.523243507722938*^9, 3.523243695341406*^9}, {3.523246151527577*^9, 
+   3.5232461778422832`*^9}, 3.523246536708819*^9, {3.5232481296622477`*^9, 
+   3.5232481352735243`*^9}},
+ CellTags->"dend_circuit_model"],
+
+Cell[TextData[{
+ "where, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Tau]", "d", "'"], "=", 
+    FractionBox[
+     RowBox[{" ", 
+      RowBox[{"C", " ", 
+       SubscriptBox["V", "T"]}]}], 
+     RowBox[{
+      SubscriptBox["w", "leakdend"], " ", "\[Kappa]", " "}]]}], 
+   TraditionalForm]]],
+ "and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Alpha]", "cd"], "=", 
+    FractionBox[
+     RowBox[{
+      SubscriptBox["w", "ij"], " ", 
+      SubscriptBox["i", "0"]}], 
+     SubscriptBox["w", "leakdend"]]}], TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.523242990713636*^9, 3.523243011926806*^9}, {
+  3.523246346856621*^9, 3.52324636817452*^9}, {3.523248139145913*^9, 
+  3.523248139869359*^9}}],
+
+Cell["\<\
+In the absence of background dendritic, the above equation becomes\
+\>", "Text",
+ CellChangeTimes->{{3.551210118736281*^9, 3.551210131315929*^9}, {
+  3.551210427368197*^9, 3.551210431190119*^9}, {3.551210472767241*^9, 
+  3.551210480661064*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   FractionBox[
+    RowBox[{" ", 
+     SubsuperscriptBox["\[Tau]", "d", "'"]}], 
+    SubscriptBox["i", "leakdend"]], 
+   SubscriptBox[
+    OverscriptBox["i", "."], "d"]}], "=", 
+  RowBox[{
+   RowBox[{"-", 
+    SubscriptBox["i", "d"]}], "+", 
+   RowBox[{
+    SubscriptBox["\[Alpha]", "cd"], 
+    FractionBox[
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         SubscriptBox["i", "d"]}], "+", 
+        SubscriptBox["i", "erev"]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["i", "ch1"], "+", 
+        SubscriptBox["i", "ch2"]}], ")"}]}], 
+     RowBox[{
+      SubscriptBox["i", "erev"], 
+      SubscriptBox["i", "leakdend"]}]]}]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.5512101562111073`*^9, 3.551210184918503*^9}, {
+   3.551210233720633*^9, 3.55121025984591*^9}, 3.551210423662692*^9, 
+   3.551210485398048*^9, {3.5512106723614388`*^9, 3.551210675534503*^9}}],
+
+Cell[TextData[{
+ "Using the normalization from eq:",
+ ButtonBox["soma_dend _conn,",
+  BaseStyle->"Hyperlink",
+  ButtonData->"soma_dend_conn"]
+}], "Text",
+ CellChangeTimes->{{3.5512104905258417`*^9, 3.551210508676094*^9}, {
+   3.551210538700255*^9, 3.551210549209094*^9}, 3.551210583693063*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   FractionBox[
+    RowBox[{" ", 
+     SubsuperscriptBox["\[Tau]", "d", "'"]}], 
+    SubscriptBox["i", "leakdend"]], 
+   SubscriptBox[
+    OverscriptBox["x", "."], "d"]}], "=", 
+  RowBox[{
+   RowBox[{"-", 
+    SubscriptBox["x", "d"]}], "+", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        FractionBox[
+         RowBox[{"2", "\[Beta]"}], "\[Alpha]"], 
+        FractionBox[
+         RowBox[{
+          SubscriptBox["\[Epsilon]", "c"], " "}], 
+         RowBox[{
+          SubsuperscriptBox["i", "leaksoma", "2"], " "}]], 
+        SubscriptBox["i", "erev"]}], "-", 
+       SubscriptBox["x", "d"]}], ")"}], " ", 
+     SubscriptBox["\[Alpha]", "cd"], 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["i", "ch1"], "+", 
+       SubscriptBox["i", "ch2"]}], ")"}]}], 
+    RowBox[{
+     SubscriptBox["i", "erev"], 
+     SubscriptBox["i", "leakdend"]}]]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.5512101562111073`*^9, 3.551210184918503*^9}, {
+   3.551210233720633*^9, 3.55121025984591*^9}, 3.551210423662692*^9, 
+   3.551210485398048*^9, {3.551210606466673*^9, 3.5512106251422443`*^9}, {
+   3.551210684096035*^9, 3.551210726015168*^9}, {3.551210868035125*^9, 
+   3.551210871772295*^9}},
+ CellTags->"dend_channel_type1_normalized_form"],
+
+Cell["which under steady state becomes", "Text",
+ CellChangeTimes->{{3.551210914854341*^9, 3.5512109576209497`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   FractionBox[
+    RowBox[{" ", 
+     SubsuperscriptBox["\[Tau]", "d", "'"]}], 
+    SubscriptBox["i", "leakdend"]], 
+   SubscriptBox[
+    OverscriptBox["x", "."], "d"]}], "=", 
+  RowBox[{
+   RowBox[{"-", 
+    SubscriptBox["x", "d"]}], "+", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        FractionBox[
+         RowBox[{"2", "\[Beta]"}], "\[Alpha]"], 
+        FractionBox[
+         RowBox[{
+          SubscriptBox["\[Epsilon]", "c"], " "}], 
+         RowBox[{
+          SubsuperscriptBox["i", "leaksoma", "2"], " "}]], 
+        SubscriptBox["i", "erev"]}], "-", 
+       SubscriptBox["x", "d"]}], ")"}], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["k", "c1"], 
+        SubscriptBox["i", "max1"]}], "+", 
+       RowBox[{
+        SubscriptBox["k", "c2"], 
+        SubscriptBox["i", "max2"]}]}], ")"}]}], 
+    RowBox[{
+     SubscriptBox["i", "erev"], 
+     SubscriptBox["i", "leakdend"]}]]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.551210970073091*^9, 3.551211012968584*^9}}],
+
+Cell[TextData[{
+ "Comparing with eq:",
+ ButtonBox["soma_dless _model",
+  BaseStyle->"Hyperlink",
+  ButtonData->"soma_dless_model"],
+ ", we have"
+}], "Text",
+ CellChangeTimes->{{3.551211031708531*^9, 3.551211051306172*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  SubscriptBox["x", "erev"], "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"2", "\[Beta]"}], "\[Alpha]"], 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["\[Epsilon]", "c"], " "}], 
+    RowBox[{
+     SubsuperscriptBox["i", "leaksoma", "2"], " "}]], 
+   SubscriptBox["i", "erev"]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["g", "ch1max"], "=", 
+  FractionBox[
+   RowBox[{
+    SubscriptBox["k", "c1"], 
+    SubscriptBox["i", "max1"]}], 
+   RowBox[{
+    SubscriptBox["i", "erev"], 
+    SubscriptBox["i", "leakdend"]}]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["g", "ch2max"], "=", 
+  FractionBox[
+   RowBox[{
+    SubscriptBox["k", "c2"], 
+    SubscriptBox["i", "max2"]}], 
+   RowBox[{
+    SubscriptBox["i", "erev"], 
+    SubscriptBox["i", "leakdend"]}]]}]}], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.551211059341543*^9, 3.551211129095212*^9}, {
+  3.551211194882039*^9, 3.551211207754114*^9}}],
+
+Cell["\<\
+Under steady state for channel, we can write (assuming near-ideal design)\
+\>", "Text",
+ CellChangeTimes->{{3.551211531754982*^9, 3.5512115503520203`*^9}, {
+  3.551211588241253*^9, 3.5512116031116447`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  SubscriptBox["g", "ch1"], "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     SubscriptBox["k", "c1"], 
+     SubscriptBox["i", "max1"]}], 
+    RowBox[{
+     SubscriptBox["i", "erev"], 
+     SubscriptBox["i", "leakdend"]}]], 
+   FractionBox[
+    SubscriptBox["i", "m"], 
+    RowBox[{
+     SubscriptBox["i", "p"], "+", 
+     SubscriptBox["i", "m"]}]], "or", 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["k", "c1"], 
+     SubscriptBox["i", "max1"]}], 
+    RowBox[{
+     SubscriptBox["i", "erev"], 
+     SubscriptBox["i", "leakdend"]}]], 
+   FractionBox[
+    SubscriptBox["i", "p"], 
+    RowBox[{
+     SubscriptBox["i", "p"], "+", 
+     SubscriptBox["i", "m"]}]]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["g", "ch2"], "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     SubscriptBox["k", "c2"], 
+     SubscriptBox["i", "max2"]}], 
+    RowBox[{
+     SubscriptBox["i", "erev"], 
+     SubscriptBox["i", "leakdend"]}]], 
+   FractionBox[
+    SubscriptBox["i", "m"], 
+    RowBox[{
+     SubscriptBox["i", "p"], "+", 
+     SubscriptBox["i", "m"]}]], "or", 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["k", "c2"], 
+     SubscriptBox["i", "max2"]}], 
+    RowBox[{
+     SubscriptBox["i", "erev"], 
+     SubscriptBox["i", "leakdend"]}]], 
+   FractionBox[
+    SubscriptBox["i", "p"], 
+    RowBox[{
+     SubscriptBox["i", "p"], "+", 
+     SubscriptBox["i", "m"]}]]}]}]}], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.551211559883868*^9, 3.551211585917173*^9}, {
+  3.55121163594557*^9, 3.551211675274701*^9}}],
+
+Cell["That is,", "Text",
+ CellChangeTimes->{{3.551211745574821*^9, 3.551211746572839*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  SubscriptBox["g", "ch1"], "=", 
+  RowBox[{
+   SubscriptBox["g", "ch1max"], 
+   FractionBox[
+    SubscriptBox["i", "m"], 
+    RowBox[{
+     SubscriptBox["i", "p"], "+", 
+     SubscriptBox["i", "m"]}]], "or", " ", 
+   SubscriptBox["g", "ch1max"], 
+   FractionBox[
+    SubscriptBox["i", "p"], 
+    RowBox[{
+     SubscriptBox["i", "p"], "+", 
+     SubscriptBox["i", "m"]}]]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["g", "ch2"], "=", 
+  RowBox[{
+   SubscriptBox["g", "ch2max"], 
+   FractionBox[
+    SubscriptBox["i", "m"], 
+    RowBox[{
+     SubscriptBox["i", "p"], "+", 
+     SubscriptBox["i", "m"]}]], "or", " ", 
+   SubscriptBox["g", "ch2max"], 
+   FractionBox[
+    SubscriptBox["i", "p"], 
+    RowBox[{
+     SubscriptBox["i", "p"], "+", 
+     SubscriptBox["i", "m"]}]]}]}]}], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.551211761156296*^9, 3.5512117937271023`*^9}, 
+   3.551212060925646*^9}],
+
+Cell[TextData[{
+ "Now, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "th"], TraditionalForm]]],
+ "has the same normalization as ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "d"], TraditionalForm]]],
+ ". Hence,"
+}], "Text",
+ CellChangeTimes->{{3.551212066320607*^9, 3.551212090862114*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["x", "th"], "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"2", "\[Beta]"}], "\[Alpha]"], 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["\[Epsilon]", "c"], " "}], 
+    RowBox[{
+     SubsuperscriptBox["i", "leaksoma", "2"], " "}]], 
+   SubscriptBox["i", "th"]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.551212097489443*^9, 3.551212115179607*^9}}],
+
+Cell[TextData[{
+ "Then, slope when ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["i", "dend"], "=", 
+    SubscriptBox["i", "th"]}], TraditionalForm]]],
+ " is given by"
+}], "Text",
+ CellChangeTimes->{{3.5512287590776043`*^9, 3.551228762884156*^9}, {
+  3.5523299676917257`*^9, 3.552329984922512*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"d", 
+    RowBox[{"(", 
+     FractionBox[
+      SubscriptBox["i", "p"], 
+      RowBox[{
+       SubscriptBox["i", "p"], "+", 
+       SubscriptBox["i", "m"]}]], ")"}]}], 
+   RowBox[{"d", 
+    RowBox[{"(", 
+     SubscriptBox["x", "th"], ")"}]}]], "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox[
+     RowBox[{"d", 
+      RowBox[{"(", 
+       FractionBox[
+        SubscriptBox["i", "p"], 
+        RowBox[{
+         SubscriptBox["i", "p"], "+", 
+         SubscriptBox["i", "m"]}]], ")"}]}], 
+     RowBox[{"d", 
+      RowBox[{"(", 
+       SubscriptBox["i", "th"], ")"}]}]], 
+    FractionBox[
+     RowBox[{"d", 
+      RowBox[{"(", 
+       SubscriptBox["i", "th"], ")"}]}], 
+     RowBox[{"d", 
+      RowBox[{"(", 
+       SubscriptBox["x", "th"], ")"}]}]]}], "=", 
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"2", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         SubscriptBox["i", "th"]}], "+", 
+        SqrtBox[
+         RowBox[{
+          SubsuperscriptBox["i", "th", "2"], "+", 
+          RowBox[{"8", " ", 
+           SubsuperscriptBox["i", "q", "2"]}]}]]}], ")"}]}]], 
+    FractionBox["\[Alpha]", 
+     RowBox[{"2", "\[Beta]"}]], 
+    FractionBox[
+     SubsuperscriptBox["i", "leaksoma", "2"], 
+     SubscriptBox["\[Epsilon]", "c"]]}]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.551228768887665*^9, 3.551228837239056*^9}, 
+   3.5512303897737093`*^9, {3.552329853666438*^9, 3.552329890811245*^9}, {
+   3.552329951256896*^9, 3.552329961088381*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Circuit model 2", "Subsection",
+ CellChangeTimes->{{3.5242384305180893`*^9, 3.524238433285018*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   FractionBox[
+    RowBox[{"C", " ", 
+     SubscriptBox["V", "T"]}], "\[Kappa]"], 
+   RowBox[{"(", 
+    RowBox[{"-", 
+     FractionBox["1", 
+      SubscriptBox["i", "d"]]}], ")"}], 
+   SubscriptBox[
+    OverscriptBox["i", "."], "d"]}], "=", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["w", "leakdend"], 
+    SubscriptBox["i", "leakdend"]}], "-", 
+   RowBox[{
+    SubsuperscriptBox["\[Beta]", "d", "'"], 
+    FractionBox[
+     SubsuperscriptBox["i", "backdend", "2"], 
+     SubscriptBox["i", "d"]]}], "-", 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["w", "ij"], " ", 
+     SubscriptBox["i", "0"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", 
+         SubscriptBox["i", "d"]}], 
+        SubscriptBox["w", "l"]}], "+", 
+       RowBox[{
+        SubscriptBox["i", "erev"], 
+        SubscriptBox["w", "erev"]}]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["i", "ch1"], "+", 
+       SubscriptBox["i", "ch2"]}], ")"}]}], 
+    RowBox[{
+     SubscriptBox["i", "erev"], 
+     SubscriptBox["i", "d"], 
+     SubscriptBox["w", "erev"]}]]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Implies]", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"C", " ", 
+      SubscriptBox["V", "T"]}], 
+     RowBox[{
+      SubscriptBox["w", "leakdend"], "\[Kappa]"}]], 
+    RowBox[{"(", 
+     RowBox[{"-", 
+      FractionBox["1", 
+       SubscriptBox["i", "d"]]}], ")"}], 
+    SubscriptBox[
+     OverscriptBox["i", "."], "d"]}]}], "=", 
+  RowBox[{
+   SubscriptBox["i", "leakdend"], "-", 
+   RowBox[{
+    SubscriptBox["\[Beta]", "d"], 
+    FractionBox[
+     SubsuperscriptBox["i", "backdend", "2"], 
+     SubscriptBox["i", "d"]]}], "-", 
+   RowBox[{
+    SubscriptBox["\[Alpha]", "cd"], 
+    FractionBox[
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         SubscriptBox["i", "d"]}], "+", 
+        RowBox[{
+         SubscriptBox["i", "erev"], 
+         FractionBox[
+          SubscriptBox["w", "erev"], 
+          SubscriptBox["w", "l"]]}]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["i", "ch1"], "+", 
+        SubscriptBox["i", "ch2"]}], ")"}]}], 
+     RowBox[{
+      SubscriptBox["i", "erev"], 
+      SubscriptBox["i", "d"]}]]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Implies]", 
+   RowBox[{
+    FractionBox[
+     RowBox[{" ", 
+      SubsuperscriptBox["\[Tau]", "d", "'"]}], 
+     SubscriptBox["i", "leakdend"]], 
+    SubscriptBox[
+     OverscriptBox["i", "."], "d"]}]}], "=", 
+  RowBox[{
+   RowBox[{"-", 
+    SubscriptBox["i", "d"]}], "+", 
+   RowBox[{
+    SubscriptBox["\[Beta]", "d"], 
+    FractionBox[
+     SubsuperscriptBox["i", "backdend", "2"], 
+     SubscriptBox["i", "leakdend"]]}], "+", 
+   RowBox[{
+    SubscriptBox["\[Alpha]", "cd"], 
+    FractionBox[
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         SubscriptBox["i", "d"]}], "+", 
+        RowBox[{
+         SubscriptBox["i", "erev"], 
+         SubscriptBox["R", "erevl"]}]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["i", "ch1"], "+", 
+        SubscriptBox["i", "ch2"]}], ")"}]}], 
+     RowBox[{
+      SubscriptBox["i", "erev"], 
+      SubscriptBox["i", "leakdend"]}]]}]}]}]}], "DisplayFormulaNumbered",
+ CellChangeTimes->{
+  3.524238446722254*^9, {3.5242385164317427`*^9, 3.5242385308453817`*^9}, {
+   3.5242386095945883`*^9, 3.524238685533246*^9}, {3.524238733752079*^9, 
+   3.524238815827523*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Calibration strategy", "Subsection",
+ CellChangeTimes->{{3.5232473740499496`*^9, 3.523247376347131*^9}}],
+
+Cell[TextData[{
+ "Steady state value of dendrite is given by (use very short time constants \
+for ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["i", "ch1"], TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["i", "ch2"], TraditionalForm]]],
+ ")"
+}], "Text",
+ CellChangeTimes->{{3.5232446473622026`*^9, 3.5232446549536877`*^9}, {
+  3.523246655947164*^9, 3.523246670989565*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["i", "dsteady"], "=", 
+  FractionBox[
+   RowBox[{
+    SubscriptBox["i", "erev"], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox[
+        SubscriptBox["i", "backdend"], "2"], " ", 
+       SubscriptBox["\[Beta]", "d"]}], "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         SubscriptBox["i", "ch1"], "+", 
+         SubscriptBox["i", "ch2"]}], ")"}], " ", 
+       SubscriptBox["\[Alpha]", "cd"]}]}], ")"}]}], 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["i", "erev"], " ", 
+     SubscriptBox["i", "leakdend"]}], " ", "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["i", "ch1"], "+", 
+       SubscriptBox["i", "ch2"]}], ")"}], " ", 
+     SubscriptBox["\[Alpha]", "cd"]}]}]]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{
+  3.523245282605788*^9, 3.523245718933139*^9, {3.5232457581152287`*^9, 
+   3.523245823836664*^9}, 3.5232459067774277`*^9, 3.523246193898305*^9, {
+   3.5232462272364807`*^9, 3.523246324225679*^9}, {3.523248150033524*^9, 
+   3.523248153625461*^9}, {3.5242395876299067`*^9, 3.524239618016327*^9}}],
+
+Cell[TextData[{
+ "Substituting this into (",
+ 
+ CounterBox["DisplayFormulaNumbered", "soma_dend_conn"],
+ "), we get"
+}], "Text",
+ CellChangeTimes->{{3.523246725624105*^9, 3.5232467297854853`*^9}, {
+  3.523246788373661*^9, 3.523246806019109*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["x", "d"], "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"2", "\[Beta]"}], "\[Alpha]"], 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["\[Epsilon]", "c"], " "}], 
+    RowBox[{
+     SubsuperscriptBox["i", "leaksoma", "2"], " "}]], 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["i", "erev"], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox[
+         SubscriptBox["i", "backdend"], "2"], " ", 
+        SubscriptBox["\[Beta]", "d"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["i", "ch1"], "+", 
+          SubscriptBox["i", "ch2"]}], ")"}], " ", 
+        SubscriptBox["\[Alpha]", "cd"]}]}], ")"}]}], 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["i", "erev"], " ", 
+      SubscriptBox["i", "leakdend"]}], " ", "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["i", "ch1"], "+", 
+        SubscriptBox["i", "ch2"]}], ")"}], " ", 
+      SubscriptBox["\[Alpha]", "cd"]}]}]]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.523246824119767*^9, 3.5232468533992147`*^9}, {
+  3.523248157571783*^9, 3.523248159081377*^9}}],
+
+Cell[TextData[{
+ "Now, for the ion channels, ",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox["i", "ch"], "\[Rule]", 
+   RowBox[{
+    SuperscriptBox["k", "'"], " ", 
+    SubscriptBox["i", "max"], " "}]}]], "DisplayFormulaNumbered",
+  CellChangeTimes->{{3.523246824119767*^9, 3.5232468533992147`*^9}}],
+ "as ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["i", "th"], ">>", " ", 
+    SubscriptBox["i", "d"]}], TraditionalForm]]],
+ " (or ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["i", "th"], 
+    RowBox[{"<<", " ", 
+     SubscriptBox["i", "d"]}]}], TraditionalForm]]],
+ " for the opposing channel) . Then, the previous equation becomes"
+}], "Text",
+ CellChangeTimes->{{3.5232468614648027`*^9, 3.523246864866363*^9}, {
+  3.523246942188882*^9, 3.5232470605726147`*^9}, {3.523247094281084*^9, 
+  3.523247182694191*^9}, {3.523247480510676*^9, 3.5232474811021833`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["x", "d"], "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"2", "\[Beta]"}], "\[Alpha]"], 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["\[Epsilon]", "c"], " "}], 
+    RowBox[{
+     SubsuperscriptBox["i", "leaksoma", "2"], " "}]], 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["i", "erev"], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox[
+         SubscriptBox["i", "backdend"], "2"], " ", 
+        SubscriptBox["\[Beta]", "d"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubsuperscriptBox["k", "1", "'"], 
+           SubscriptBox["i", "max1"]}], "+", 
+          RowBox[{
+           SubsuperscriptBox["k", "2", "'"], 
+           SubscriptBox["i", "max2"]}]}], ")"}], " ", 
+        SubscriptBox["\[Alpha]", "cd"]}]}], ")"}]}], 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["i", "erev"], " ", 
+      SubscriptBox["i", "leakdend"]}], " ", "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         SubsuperscriptBox["k", "1", "'"], 
+         SubscriptBox["i", "max1"]}], "+", 
+        RowBox[{
+         SubsuperscriptBox["k", "2", "'"], 
+         SubscriptBox["i", "max2"]}]}], ")"}], " ", 
+      SubscriptBox["\[Alpha]", "cd"]}]}]]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.523246824119767*^9, 3.5232468533992147`*^9}, {
+  3.523247075086437*^9, 3.523247088961233*^9}, {3.523247214710194*^9, 
+  3.52324722341121*^9}, {3.5232474865857887`*^9, 3.5232475110785503`*^9}, {
+  3.523248160971945*^9, 3.5232481650067663`*^9}}],
+
+Cell[TextData[{
+ "There is no way to distinguish between ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["k", "1", "'"], TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Alpha]", "dc"], TraditionalForm]]],
+ ". Hence the previous equation may be re-written as"
+}], "Text",
+ CellChangeTimes->{{3.5232475442489653`*^9, 3.523247582448944*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["x", "d"], "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"2", "\[Beta]"}], "\[Alpha]"], 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["\[Epsilon]", "c"], " "}], 
+    RowBox[{
+     SubsuperscriptBox["i", "leaksoma", "2"], " "}]], 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["i", "erev"], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox[
+         SubscriptBox["i", "backdend"], "2"], " ", 
+        SubscriptBox["\[Beta]", "d"]}], "+", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SubscriptBox["k", "c1"], 
+          SubscriptBox["i", "max1"]}], "+", 
+         RowBox[{
+          SubscriptBox["k", "c2"], 
+          SubscriptBox["i", "max2"]}]}], ")"}]}], " ", ")"}]}], 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["i", "erev"], " ", 
+      SubscriptBox["i", "leakdend"]}], " ", "+", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["k", "c1"], 
+        SubscriptBox["i", "max1"]}], "+", 
+       RowBox[{
+        SubscriptBox["k", "c2"], 
+        SubscriptBox["i", "max2"]}]}], ")"}], 
+     " "}]]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.523247592798586*^9, 3.5232476278292913`*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "c1"], TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "c2"], TraditionalForm]]],
+ " may be extracted independently by setting ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["i", "max2"], TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["i", "max1"], TraditionalForm]]],
+ " to zero respectively."
+}], "Text",
+ CellChangeTimes->{{3.523247257170004*^9, 3.523247287331016*^9}, {
+  3.5232476321065607`*^9, 3.523247633775634*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Calibration strategy 2", "Subsection",
+ CellChangeTimes->{{3.5232473740499496`*^9, 3.523247376347131*^9}, {
+  3.524239623389943*^9, 3.524239623796402*^9}}],
+
+Cell[TextData[{
+ "Steady state value of dendrite is given by (use very short time constants \
+for ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["i", "ch1"], TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["i", "ch2"], TraditionalForm]]],
+ ")"
+}], "Text",
+ CellChangeTimes->{{3.5232446473622026`*^9, 3.5232446549536877`*^9}, {
+  3.523246655947164*^9, 3.523246670989565*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["i", "dsteady"], "=", 
+  FractionBox[
+   RowBox[{
+    SubscriptBox["R", "erevl"], 
+    SubscriptBox["i", "erev"], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox[
+        SubscriptBox["i", "backdend"], "2"], " ", 
+       FractionBox[
+        SubscriptBox["\[Beta]", "d"], 
+        SubscriptBox["R", "erevl"]]}], "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         SubscriptBox["i", "ch1"], "+", 
+         SubscriptBox["i", "ch2"]}], ")"}], " ", 
+       SubscriptBox["\[Alpha]", "cd"]}]}], ")"}]}], 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["i", "erev"], " ", 
+     SubscriptBox["i", "leakdend"]}], " ", "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["i", "ch1"], "+", 
+       SubscriptBox["i", "ch2"]}], ")"}], " ", 
+     SubscriptBox["\[Alpha]", "cd"]}]}]]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{
+  3.523245282605788*^9, 3.523245718933139*^9, {3.5232457581152287`*^9, 
+   3.523245823836664*^9}, 3.5232459067774277`*^9, 3.523246193898305*^9, {
+   3.5232462272364807`*^9, 3.523246324225679*^9}, {3.523248150033524*^9, 
+   3.523248153625461*^9}, {3.5242395876299067`*^9, 3.524239618016327*^9}, {
+   3.524239659568777*^9, 3.524239684336273*^9}}],
+
+Cell[TextData[{
+ "Substituting this into (",
+ 
+ CounterBox["DisplayFormulaNumbered", "soma_dend_conn"],
+ "), we get"
+}], "Text",
+ CellChangeTimes->{{3.523246725624105*^9, 3.5232467297854853`*^9}, {
+  3.523246788373661*^9, 3.523246806019109*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["x", "d"], "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"2", "\[Beta]"}], "\[Alpha]"], 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["\[Epsilon]", "c"], " "}], 
+    RowBox[{
+     SubsuperscriptBox["i", "leaksoma", "2"], " "}]], 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["R", "erevl"], 
+     SubscriptBox["i", "erev"], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox[
+         SubscriptBox["i", "backdend"], "2"], " ", 
+        FractionBox[
+         SubscriptBox["\[Beta]", "d"], 
+         SubscriptBox["R", "erevl"]]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["i", "ch1"], "+", 
+          SubscriptBox["i", "ch2"]}], ")"}], " ", 
+        SubscriptBox["\[Alpha]", "cd"]}]}], ")"}]}], 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["i", "erev"], " ", 
+      SubscriptBox["i", "leakdend"]}], " ", "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["i", "ch1"], "+", 
+        SubscriptBox["i", "ch2"]}], ")"}], " ", 
+      SubscriptBox["\[Alpha]", "cd"]}]}]]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.523246824119767*^9, 3.5232468533992147`*^9}, {
+  3.523248157571783*^9, 3.523248159081377*^9}, {3.524239721348309*^9, 
+  3.524239725560718*^9}}],
+
+Cell[TextData[{
+ "Now, for the ion channels, ",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox["i", "ch"], "\[Rule]", 
+   RowBox[{
+    SuperscriptBox["k", "'"], " ", 
+    SubscriptBox["i", "max"], " "}]}]], "DisplayFormulaNumbered",
+  CellChangeTimes->{{3.523246824119767*^9, 3.5232468533992147`*^9}}],
+ "as ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["i", "th"], ">>", " ", 
+    SubscriptBox["i", "d"]}], TraditionalForm]]],
+ " (or ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["i", "th"], 
+    RowBox[{"<<", " ", 
+     SubscriptBox["i", "d"]}]}], TraditionalForm]]],
+ " for the opposing channel) . Then, the previous equation becomes"
+}], "Text",
+ CellChangeTimes->{{3.5232468614648027`*^9, 3.523246864866363*^9}, {
+  3.523246942188882*^9, 3.5232470605726147`*^9}, {3.523247094281084*^9, 
+  3.523247182694191*^9}, {3.523247480510676*^9, 3.5232474811021833`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["x", "d"], "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"2", "\[Beta]"}], "\[Alpha]"], 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["\[Epsilon]", "c"], " "}], 
+    RowBox[{
+     SubsuperscriptBox["i", "leaksoma", "2"], " "}]], 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["R", "erevl"], 
+     SubscriptBox["i", "erev"], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox[
+         SubscriptBox["i", "backdend"], "2"], " ", 
+        FractionBox[
+         SubscriptBox["\[Beta]", "d"], 
+         SubscriptBox["R", "erevl"]]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubsuperscriptBox["k", "1", "'"], 
+           SubscriptBox["i", "max1"]}], "+", 
+          RowBox[{
+           SubsuperscriptBox["k", "2", "'"], 
+           SubscriptBox["i", "max2"]}]}], ")"}], " ", 
+        SubscriptBox["\[Alpha]", "cd"]}]}], ")"}]}], 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["i", "erev"], " ", 
+      SubscriptBox["i", "leakdend"]}], " ", "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         SubsuperscriptBox["k", "1", "'"], 
+         SubscriptBox["i", "max1"]}], "+", 
+        RowBox[{
+         SubsuperscriptBox["k", "2", "'"], 
+         SubscriptBox["i", "max2"]}]}], ")"}], " ", 
+      SubscriptBox["\[Alpha]", "cd"]}]}]]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.523246824119767*^9, 3.5232468533992147`*^9}, {
+  3.523247075086437*^9, 3.523247088961233*^9}, {3.523247214710194*^9, 
+  3.52324722341121*^9}, {3.5232474865857887`*^9, 3.5232475110785503`*^9}, {
+  3.523248160971945*^9, 3.5232481650067663`*^9}, {3.524239730311881*^9, 
+  3.524239735989429*^9}}],
+
+Cell[TextData[{
+ "There is no way to distinguish between ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["k", "1", "'"], TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Alpha]", "dc"], TraditionalForm]]],
+ ". Hence the previous equation may be re-written as"
+}], "Text",
+ CellChangeTimes->{{3.5232475442489653`*^9, 3.523247582448944*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["x", "d"], "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"2", "\[Beta]"}], "\[Alpha]"], 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["\[Epsilon]", "c"], " "}], 
+    RowBox[{
+     SubsuperscriptBox["i", "leaksoma", "2"], " "}]], 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["R", "erevl"], 
+     SubscriptBox["i", "erev"], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox[
+         SubscriptBox["i", "backdend"], "2"], " ", 
+        FractionBox[
+         SubscriptBox["\[Beta]", "d"], 
+         SubscriptBox["R", "erevl"]]}], "+", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SubscriptBox["k", "c1"], 
+          SubscriptBox["i", "max1"]}], "+", 
+         RowBox[{
+          SubscriptBox["k", "c2"], 
+          SubscriptBox["i", "max2"]}]}], ")"}]}], " ", ")"}]}], 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["i", "erev"], " ", 
+      SubscriptBox["i", "leakdend"]}], " ", "+", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["k", "c1"], 
+        SubscriptBox["i", "max1"]}], "+", 
+       RowBox[{
+        SubscriptBox["k", "c2"], 
+        SubscriptBox["i", "max2"]}]}], ")"}], 
+     " "}]]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.523247592798586*^9, 3.5232476278292913`*^9}, {
+  3.5242397423696632`*^9, 3.524239745856545*^9}}],
+
+Cell["or", "Text",
+ CellChangeTimes->{{3.524239773661386*^9, 3.5242397737974367`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["x", "d"], "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"2", "\[Beta]"}], "\[Alpha]"], 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["\[Epsilon]", "c"], " "}], 
+    RowBox[{
+     SubsuperscriptBox["i", "leaksoma", "2"], " "}]], 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["i", "erev"], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox[
+         SubscriptBox["i", "backdend"], "2"], " ", 
+        SubscriptBox["\[Beta]", "d"]}], "+", 
+       RowBox[{
+        SubscriptBox["R", "erevl"], 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["k", "c1"], 
+           SubscriptBox["i", "max1"]}], "+", 
+          RowBox[{
+           SubscriptBox["k", "c2"], 
+           SubscriptBox["i", "max2"]}]}], ")"}]}]}], " ", ")"}]}], 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["i", "erev"], " ", 
+      SubscriptBox["i", "leakdend"]}], " ", "+", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["k", "c1"], 
+        SubscriptBox["i", "max1"]}], "+", 
+       RowBox[{
+        SubscriptBox["k", "c2"], 
+        SubscriptBox["i", "max2"]}]}], ")"}], 
+     " "}]]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.524239780783326*^9, 3.524239797000339*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "c1"], TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "c2"], TraditionalForm]]],
+ " may be extracted independently by setting ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["i", "max2"], TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["i", "max1"], TraditionalForm]]],
+ " to zero respectively."
+}], "Text",
+ CellChangeTimes->{{3.523247257170004*^9, 3.523247287331016*^9}, {
+  3.5232476321065607`*^9, 3.523247633775634*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowToolbars->{"RulerBar", "EditBar"},
+WindowSize->{1089, 1326},
+WindowMargins->{{36, Automatic}, {Automatic, 13}},
+PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> True}},
+ShowSelection->True,
+ShowCellTags->True,
+Magnification:>FEPrivate`If[
+  FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.25, 1.25 Inherited],
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "soma_dless_model"->{
+  Cell[974, 34, 678, 17, 65, "DisplayFormulaNumbered",
+   CellTags->"soma_dless_model"]},
+ "soma_circuit_model"->{
+  Cell[5778, 182, 3547, 111, 209, "DisplayFormulaNumbered",
+   CellTags->"soma_circuit_model"]},
+ "soma_dend_dless_model"->{
+  Cell[19165, 574, 570, 16, 65, "DisplayFormulaNumbered",
+   CellTags->"soma_dend_dless_model"]},
+ "soma_dend_circuit_model"->{
+  Cell[20475, 615, 2066, 65, 115, "DisplayFormulaNumbered",
+   CellTags->"soma_dend_circuit_model"]},
+ "soma_dend_conn"->{
+  Cell[23850, 721, 1585, 55, 165, "DisplayFormulaNumbered",
+   CellTags->"soma_dend_conn"]},
+ "dend_woch_dless_model"->{
+  Cell[27769, 853, 484, 12, 44, "DisplayFormulaNumbered",
+   CellTags->"dend_woch_dless_model"]},
+ "dend_woch_circuit_model"->{
+  Cell[28766, 881, 1969, 64, 162, "DisplayFormulaNumbered",
+   CellTags->"dend_woch_circuit_model"]},
+ "dend_woch_transformation"->{
+  Cell[32420, 1003, 539, 16, 69, "DisplayFormulaNumbered",
+   CellTags->"dend_woch_transformation"]},
+ "dend_dless_model"->{
+  Cell[34592, 1073, 772, 22, 44, "DisplayFormulaNumbered",
+   CellTags->"dend_dless_model"]},
+ "dend_circuit_model"->{
+  Cell[35823, 1110, 3377, 113, 162, "DisplayFormulaNumbered",
+   CellTags->"dend_circuit_model"]},
+ "dend_channel_type1_normalized_form"->{
+  Cell[41459, 1301, 1316, 39, 85, "DisplayFormulaNumbered",
+   CellTags->"dend_channel_type1_normalized_form"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"soma_dless_model", 71974, 2346},
+ {"soma_circuit_model", 72089, 2349},
+ {"soma_dend_dless_model", 72214, 2352},
+ {"soma_dend_circuit_model", 72342, 2355},
+ {"soma_dend_conn", 72465, 2358},
+ {"dend_woch_dless_model", 72586, 2361},
+ {"dend_woch_circuit_model", 72714, 2364},
+ {"dend_woch_transformation", 72847, 2367},
+ {"dend_dless_model", 72972, 2370},
+ {"dend_circuit_model", 73091, 2373},
+ {"dend_channel_type1_normalized_form", 73231, 2376}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 91, 1, 88, "Section"],
+Cell[CellGroupData[{
+Cell[695, 27, 105, 1, 46, "Subsection"],
+Cell[803, 30, 168, 2, 34, "Text"],
+Cell[974, 34, 678, 17, 65, "DisplayFormulaNumbered",
+ CellTags->"soma_dless_model"],
+Cell[1655, 53, 352, 9, 34, "Text"],
+Cell[2010, 64, 732, 17, 84, "DisplayFormulaNumbered"],
+Cell[2745, 83, 115, 1, 34, "Text"],
+Cell[2863, 86, 610, 18, 92, "DisplayFormulaNumbered"],
+Cell[CellGroupData[{
+Cell[3498, 108, 101, 1, 32, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[3624, 113, 1486, 44, 601, "Input"],
+Cell[5113, 159, 189, 4, 175, "Output"],
+Cell[5305, 165, 189, 4, 175, "Output"]
+}, Open  ]]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5555, 176, 101, 1, 46, "Subsection"],
+Cell[5659, 179, 116, 1, 34, "Text"],
+Cell[5778, 182, 3547, 111, 209, "DisplayFormulaNumbered",
+ CellTags->"soma_circuit_model"],
+Cell[9328, 295, 668, 23, 50, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10033, 323, 120, 1, 46, "Subsection"],
+Cell[10156, 326, 181, 2, 34, "Text"],
+Cell[10340, 330, 938, 26, 106, "DisplayFormulaNumbered"],
+Cell[11281, 358, 972, 25, 47, "Text"],
+Cell[12256, 385, 1279, 36, 99, "DisplayFormulaNumbered"],
+Cell[13538, 423, 246, 7, 34, "Text"],
+Cell[CellGroupData[{
+Cell[13809, 434, 102, 1, 32, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[13936, 439, 2344, 64, 718, "Input"],
+Cell[16283, 505, 659, 13, 187, "Output"],
+Cell[16945, 520, 539, 9, 187, "Output"],
+Cell[17487, 531, 709, 15, 187, "Output"],
+Cell[18199, 548, 452, 6, 110, "Output"]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18724, 562, 157, 2, 88, "Section"],
+Cell[CellGroupData[{
+Cell[18906, 568, 111, 1, 46, "Subsection"],
+Cell[19020, 571, 142, 1, 34, "Text"],
+Cell[19165, 574, 570, 16, 65, "DisplayFormulaNumbered",
+ CellTags->"soma_dend_dless_model"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19772, 595, 102, 1, 46, "Subsection"],
+Cell[19877, 598, 595, 15, 55, "Text"],
+Cell[20475, 615, 2066, 65, 115, "DisplayFormulaNumbered",
+ CellTags->"soma_dend_circuit_model"],
+Cell[22544, 682, 649, 16, 34, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23230, 703, 171, 2, 46, "Subsection"],
+Cell[23404, 707, 443, 12, 34, "Text"],
+Cell[23850, 721, 1585, 55, 165, "DisplayFormulaNumbered",
+ CellTags->"soma_dend_conn"],
+Cell[CellGroupData[{
+Cell[25460, 780, 101, 1, 32, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[25586, 785, 952, 26, 316, "Input"],
+Cell[26541, 813, 558, 15, 188, "Output"]
+}, Open  ]],
+Cell[27114, 831, 92, 2, 112, "Input"]
+}, Closed]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27267, 840, 254, 3, 88, "Section"],
+Cell[CellGroupData[{
+Cell[27546, 847, 108, 1, 46, "Subsection"],
+Cell[27657, 850, 109, 1, 34, "Text"],
+Cell[27769, 853, 484, 12, 44, "DisplayFormulaNumbered",
+ CellTags->"dend_woch_dless_model"],
+Cell[28256, 867, 226, 3, 34, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28519, 875, 102, 1, 46, "Subsection"],
+Cell[28624, 878, 139, 1, 34, "Text"],
+Cell[28766, 881, 1969, 64, 162, "DisplayFormulaNumbered",
+ CellTags->"dend_woch_circuit_model"],
+Cell[30738, 947, 390, 14, 50, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31165, 966, 159, 2, 46, "Subsection"],
+Cell[31327, 970, 1090, 31, 52, "Text"],
+Cell[32420, 1003, 539, 16, 69, "DisplayFormulaNumbered",
+ CellTags->"dend_woch_transformation"],
+Cell[32962, 1021, 471, 15, 34, "Text"],
+Cell[33436, 1038, 604, 16, 47, "Text"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34089, 1060, 255, 3, 88, "Section"],
+Cell[CellGroupData[{
+Cell[34369, 1067, 108, 1, 46, "Subsection"],
+Cell[34480, 1070, 109, 1, 34, "Text"],
+Cell[34592, 1073, 772, 22, 44, "DisplayFormulaNumbered",
+ CellTags->"dend_dless_model"],
+Cell[35367, 1097, 172, 2, 34, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35576, 1104, 102, 1, 46, "Subsection"],
+Cell[35681, 1107, 139, 1, 34, "Text"],
+Cell[35823, 1110, 3377, 113, 162, "DisplayFormulaNumbered",
+ CellTags->"dend_circuit_model"],
+Cell[39203, 1225, 736, 26, 51, "Text"],
+Cell[39942, 1253, 254, 5, 34, "Text"],
+Cell[40199, 1260, 961, 30, 49, "DisplayFormulaNumbered"],
+Cell[41163, 1292, 293, 7, 34, "Text"],
+Cell[41459, 1301, 1316, 39, 85, "DisplayFormulaNumbered",
+ CellTags->"dend_channel_type1_normalized_form"],
+Cell[42778, 1342, 116, 1, 34, "Text"],
+Cell[42897, 1345, 1085, 37, 68, "DisplayFormulaNumbered"],
+Cell[43985, 1384, 222, 7, 34, "Text"],
+Cell[44210, 1393, 942, 31, 138, "DisplayFormulaNumbered"],
+Cell[45155, 1426, 216, 4, 34, "Text"],
+Cell[45374, 1432, 1536, 56, 99, "DisplayFormulaNumbered"],
+Cell[46913, 1490, 90, 1, 34, "Text"],
+Cell[47006, 1493, 934, 32, 99, "DisplayFormulaNumbered"],
+Cell[47943, 1527, 297, 11, 34, "Text"],
+Cell[48243, 1540, 395, 12, 49, "DisplayFormulaNumbered"],
+Cell[48641, 1554, 310, 10, 34, "Text"],
+Cell[48954, 1566, 1526, 52, 80, "DisplayFormulaNumbered"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[50517, 1623, 105, 1, 46, "Subsection"],
+Cell[50625, 1626, 3462, 121, 160, "DisplayFormulaNumbered"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[54124, 1752, 110, 1, 46, "Subsection"],
+Cell[54237, 1755, 396, 13, 34, "Text"],
+Cell[54636, 1770, 1115, 32, 51, "DisplayFormulaNumbered"],
+Cell[55754, 1804, 245, 7, 34, "Text"],
+Cell[56002, 1813, 1152, 37, 52, "DisplayFormulaNumbered"],
+Cell[57157, 1852, 885, 26, 34, "Text"],
+Cell[58045, 1880, 1569, 47, 52, "DisplayFormulaNumbered"],
+Cell[59617, 1929, 367, 11, 34, "Text"],
+Cell[59987, 1942, 1211, 41, 52, "DisplayFormulaNumbered"],
+Cell[61201, 1985, 538, 19, 34, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[61776, 2009, 161, 2, 46, "Subsection"],
+Cell[61940, 2013, 396, 13, 34, "Text"],
+Cell[62339, 2028, 1257, 36, 62, "DisplayFormulaNumbered"],
+Cell[63599, 2066, 245, 7, 34, "Text"],
+Cell[63847, 2075, 1296, 41, 64, "DisplayFormulaNumbered"],
+Cell[65146, 2118, 885, 26, 34, "Text"],
+Cell[66034, 2146, 1713, 51, 64, "DisplayFormulaNumbered"],
+Cell[67750, 2199, 367, 11, 34, "Text"],
+Cell[68120, 2212, 1357, 45, 64, "DisplayFormulaNumbered"],
+Cell[69480, 2259, 86, 1, 34, "Text"],
+Cell[69569, 2262, 1272, 43, 52, "DisplayFormulaNumbered"],
+Cell[70844, 2307, 538, 19, 34, "Text"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,132 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3945,        123]
+NotebookOptionsPosition[      3488,        102]
+NotebookOutlinePosition[      3831,        117]
+CellTagsIndexPosition[      3788,        114]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Vittoz Calculation", "Section",
+ CellChangeTimes->{{3.5618340219667645`*^9, 3.5618340245717645`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Beta]", "=", "248625.271262"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Kappa]", "=", " ", "0.728084151609"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Vdd", "=", "1.8"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Vt", "=", "0.028"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Vth", "=", "0.651764687328"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Vmin", "=", "0.13545"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Vmax", "=", "1.79033"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Vdiode", "=", "0.97204"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Vstep", "=", ".001"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Vittoz", "[", "v_", "]"}], ":=", 
+  RowBox[{"2", 
+   RowBox[{"(", 
+    RowBox[{"\[Beta]", "/", "\[Kappa]"}], ")"}], 
+   SuperscriptBox["Vt", "2"], 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"Log", "[", 
+      RowBox[{"1", "+", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{
+         FractionBox["\[Kappa]", "2"], 
+         RowBox[{"(", 
+          RowBox[{
+           FractionBox[
+            RowBox[{"Vdd", "-", "v"}], "Vt"], "-", 
+           FractionBox["Vth", "Vt"]}], ")"}]}]]}], "]"}], ")"}], 
+    "2"]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vrange", " ", "=", " ", 
+   RowBox[{"Range", "[", 
+    RowBox[{"Vdiode", ",", "Vmax", ",", "Vstep"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.5618340299397645`*^9, 3.5618343290737643`*^9}, {
+  3.561834546831764*^9, 3.5618345720067644`*^9}, {3.5618346135477643`*^9, 
+  3.5618346140747643`*^9}, {3.5618347162227645`*^9, 3.5618347177007647`*^9}, {
+  3.561834757017764*^9, 3.5618347571307645`*^9}, {3.5618350126787643`*^9, 
+  3.5618350127957644`*^9}, {3.5618350516187644`*^9, 3.5618350924147644`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"Min", "[", 
+    RowBox[{"Vittoz", "[", "vrange", "]"}], "]"}], ",", 
+   RowBox[{"Max", "[", 
+    RowBox[{"Vittoz", "[", "vrange", "]"}], "]"}]}], "}"}]], "Input",
+ CellChangeTimes->{{3.561834617338764*^9, 3.5618347107817645`*^9}, {
+  3.5618347638627644`*^9, 3.5618347829467645`*^9}, {3.5618350009107647`*^9, 
+  3.5618350277447643`*^9}, {3.5618350992407646`*^9, 3.5618351138617644`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{"0.00003025037250219301`", ",", "3051.293695849294`"}], "}"}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.561834635878764*^9, 3.5618347277247643`*^9, {3.561834772135764*^9, 
+   3.5618347845457644`*^9}, {3.5618350030237646`*^9, 3.561835057201764*^9}, {
+   3.5618350947597647`*^9, 3.5618351146597643`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.5618345810057645`*^9, 3.5618346112267647`*^9}}]
+}, Open  ]]
+},
+WindowSize->{707, 867},
+WindowMargins->{{24, Automatic}, {Automatic, 30}},
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (October 6, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 107, 1, 71, "Section"],
+Cell[689, 25, 1838, 47, 250, "Input"],
+Cell[CellGroupData[{
+Cell[2552, 76, 438, 9, 31, "Input"],
+Cell[2993, 87, 368, 8, 30, "Output"]
+}, Open  ]],
+Cell[3376, 98, 96, 1, 31, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
