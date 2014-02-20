@@ -1,0 +1,167 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      5945,        157]
+NotebookOptionsPosition[      5571,        139]
+NotebookOutlinePosition[      5934,        155]
+CellTagsIndexPosition[      5891,        152]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"foo", "[", 
+   RowBox[{"a_", ",", "\[Tau]1_", ",", "\[Tau]2_", ",", "s_"}], "]"}], ":=", 
+  FractionBox["1", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "a"], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"\[Tau]1", " ", "s"}], " ", "+", "1"}], ")"}]}], " ", "+", " ", 
+    FractionBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"\[Tau]1", " ", "s"}], " ", "+", "1"}], ")"}], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"\[Tau]2", " ", "s"}], " ", "+", " ", "1"}], 
+      ")"}]]}]]}]], "Input",
+ CellChangeTimes->{{3.601924455803378*^9, 3.601924592836525*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"LogLogPlot", "[", 
+    RowBox[{
+     RowBox[{"foo", "[", 
+      RowBox[{"a", ",", "\[Tau]1", ",", "\[Tau]2", ",", "s"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"s", ",", "1", ",", "1000"}], "}"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", "100", ",", "\"\<a\>\""}], "}"}], ",", "1", ",", 
+     "1000", ",", "1", ",", 
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Tau]1", ",", ".001", ",", "\"\<\[Tau]1\>\""}], "}"}], ",", 
+     ".001", ",", ".05", ",", ".001", ",", 
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Tau]2", ",", ".001", ",", "\"\<\[Tau]2\>\""}], "}"}], ",", 
+     ".001", ",", ".05", ",", ".001", ",", 
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}], 
+   "\[IndentingNewLine]", ",", 
+   RowBox[{"LabelStyle", "\[Rule]", "Medium"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.601924632586434*^9, 3.601924991824398*^9}, {
+  3.601925029284936*^9, 3.601925032550397*^9}, {3.601925106352523*^9, 
+  3.6019251073515882`*^9}, {3.6019252330291567`*^9, 3.601925233674795*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FormBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`a$$ = 100, $CellContext`\[Tau]1$$ = 
+      0.037000000000000005`, $CellContext`\[Tau]2$$ = 0.037000000000000005`, 
+      Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+      Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ =
+       1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+         Hold[$CellContext`a$$], 100, "a"}, 1, 1000, 1}, {{
+         Hold[$CellContext`\[Tau]1$$], 0.001, "\[Tau]1"}, 0.001, 0.05, 
+        0.001}, {{
+         Hold[$CellContext`\[Tau]2$$], 0.001, "\[Tau]2"}, 0.001, 0.05, 
+        0.001}}, Typeset`size$$ = {360., {109., 115.}}, Typeset`update$$ = 0, 
+      Typeset`initDone$$, Typeset`skipInitDone$$ = 
+      True, $CellContext`a$52744$$ = 0, $CellContext`\[Tau]1$52745$$ = 
+      0, $CellContext`\[Tau]2$52746$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, TraditionalForm, 
+        "Variables" :> {$CellContext`a$$ = 100, $CellContext`\[Tau]1$$ = 
+          0.001, $CellContext`\[Tau]2$$ = 0.001}, "ControllerVariables" :> {
+          Hold[$CellContext`a$$, $CellContext`a$52744$$, 0], 
+          Hold[$CellContext`\[Tau]1$$, $CellContext`\[Tau]1$52745$$, 0], 
+          Hold[$CellContext`\[Tau]2$$, $CellContext`\[Tau]2$52746$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> LogLogPlot[
+          $CellContext`foo[$CellContext`a$$, $CellContext`\[Tau]1$$, \
+$CellContext`\[Tau]2$$, $CellContext`s], {$CellContext`s, 1, 1000}], 
+        "Specifications" :> {{{$CellContext`a$$, 100, "a"}, 1, 1000, 1, 
+           Appearance -> {"Labeled", "Open"}}, {{$CellContext`\[Tau]1$$, 
+            0.001, "\[Tau]1"}, 0.001, 0.05, 0.001, 
+           Appearance -> {"Labeled", "Open"}}, {{$CellContext`\[Tau]2$$, 
+            0.001, "\[Tau]2"}, 0.001, 0.05, 0.001, 
+           Appearance -> {"Labeled", "Open"}}}, 
+        "Options" :> {LabelStyle -> Medium}, "DefaultOptions" :> {}],
+       ImageSizeCache->{407., {214., 221.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    TraditionalForm],
+   Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.601924993722628*^9, 3.601925033216598*^9, 
+  3.6019251088650923`*^9, 3.601925234268022*^9}]
+}, Open  ]]
+},
+WindowSize->{1205, 1489},
+WindowMargins->{{Automatic, 1335}, {Automatic, 14}},
+CellContext->Notebook,
+FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 616, 19, 72, "Input"],
+Cell[CellGroupData[{
+Cell[1198, 43, 1608, 40, 143, "Input"],
+Cell[2809, 85, 2746, 51, 485, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
