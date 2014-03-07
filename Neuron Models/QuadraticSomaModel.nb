@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    176898,       3991]
-NotebookOptionsPosition[    173972,       3885]
-NotebookOutlinePosition[    176029,       3959]
-CellTagsIndexPosition[    175986,       3956]
+NotebookDataLength[    176976,       3992]
+NotebookOptionsPosition[    174048,       3886]
+NotebookOutlinePosition[    176106,       3960]
+CellTagsIndexPosition[    176063,       3957]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2265,16 +2265,17 @@ Cell[BoxData[{
    3.599945858797682*^9, 3.599945890638282*^9}, {3.5999459423522816`*^9, 
    3.5999460071334815`*^9}, {3.5999460558484817`*^9, 
    3.5999460900054817`*^9}, {3.5999473446266813`*^9, 3.599947346639082*^9}, {
-   3.599951146500682*^9, 3.599951146641082*^9}}],
+   3.599951146500682*^9, 3.599951146641082*^9}, {3.603122399808676*^9, 
+   3.6031224043541203`*^9}}],
 
 Cell[BoxData[
  FormBox[
   TabViewBox[{{1,"\<\"Theoretical (Dimensionless)\"\>"->
-   DynamicModuleBox[{$CellContext`iin$$ = 0.51, $CellContext`tau$$ = 
-    0.015, $CellContext`tauref$$ = 0.001, Null$$, $CellContext`vmMax$$ = 
+   DynamicModuleBox[{$CellContext`iin$$ = 55, $CellContext`tau$$ = 
+    0.005, $CellContext`tauref$$ = 0.00001, Null$$, $CellContext`vmMax$$ = 
     5, $CellContext`vdotMin$$ = 0, $CellContext`vdotMax$$ = 
-    20, $CellContext`vinMax$$ = 2, $CellContext`fMax$$ = 
-    40, $CellContext`ilitMax$$ = 3}, 
+    20, $CellContext`vinMax$$ = 60, $CellContext`fMax$$ = 
+    672., $CellContext`ilitMax$$ = 3}, 
     PanelBox[
      TagBox[GridBox[{
         {
@@ -2330,7 +2331,7 @@ Cell[BoxData[
                   FontSize->12], 
                  PanelBox[
                   DynamicBox[ToBoxes[$CellContext`iin$$, TraditionalForm],
-                   ImageSizeCache->{25., {0., 8.}}],
+                   ImageSizeCache->{15., {0., 8.}}],
                   Background->GrayLevel[0.85]]},
                 {
                  
@@ -2350,7 +2351,7 @@ Cell[BoxData[
                   FontSize->12], 
                  PanelBox[
                   DynamicBox[ToBoxes[$CellContext`tauref$$, TraditionalForm],
-                   ImageSizeCache->{32., {0., 8.}}],
+                   ImageSizeCache->{46., {0., 8.}}],
                   Background->GrayLevel[0.85]]}
                },
                AutoDelete->False,
@@ -2369,7 +2370,7 @@ Cell[BoxData[
                   DynamicBox[ToBoxes[
                     $CellContext`f[$CellContext`iin$$, $CellContext`tau$$, \
 $CellContext`tauref$$], TraditionalForm],
-                   ImageSizeCache->{45., {0., 8.}}],
+                   ImageSizeCache->{39., {0., 8.}}],
                   Background->GrayLevel[0.85]]}
                },
                AutoDelete->False,
@@ -2439,7 +2440,7 @@ $CellContext`labelSize]}, ImageSize -> $CellContext`ImgSize],
 $CellContext`tauref$$]}}, PlotStyle -> Darker[Green], 
                   PlotMarkers -> {"\[FilledCircle]", Small}]], 
                 TraditionalForm],
-               ImageSizeCache->{270., {96., 99.}}]], 
+               ImageSizeCache->{270., {95., 99.}}]], 
              TagBox[GridBox[{
                 {
                  StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(f\\), \\(0\\)]\\)\"\>",
@@ -2449,7 +2450,7 @@ $CellContext`tauref$$]}}, PlotStyle -> Darker[Green],
                   DynamicBox[ToBoxes[
                     $CellContext`f[$CellContext`iin$$, $CellContext`tau$$, 0],
                      TraditionalForm],
-                   ImageSizeCache->{45., {0., 8.}}],
+                   ImageSizeCache->{46., {0., 8.}}],
                   Background->GrayLevel[0.85]]},
                 {
                  StyleBox["\<\"f\"\>",
@@ -2459,7 +2460,7 @@ $CellContext`tauref$$]}}, PlotStyle -> Darker[Green],
                   DynamicBox[ToBoxes[
                     $CellContext`f[$CellContext`iin$$, $CellContext`tau$$, \
 $CellContext`tauref$$], TraditionalForm],
-                   ImageSizeCache->{45., {0., 8.}}],
+                   ImageSizeCache->{39., {0., 8.}}],
                   Background->GrayLevel[0.85]]},
                 {
                  
@@ -2474,7 +2475,7 @@ $CellContext`tauref$$], TraditionalForm],
 $CellContext`tau$$, 
                     0] - $CellContext`f[$CellContext`iin$$, \
 $CellContext`tau$$, $CellContext`tauref$$], TraditionalForm],
-                   ImageSizeCache->{67., {0., 8.}}],
+                   ImageSizeCache->{46., {0., 8.}}],
                   Background->GrayLevel[0.85]]}
                },
                AutoDelete->False,
@@ -3497,7 +3498,7 @@ $CellContext`pref$$]], TraditionalForm],
    3.599946072548482*^9}, {3.5999473247522817`*^9, 3.5999473503830814`*^9}, 
    3.599947509612282*^9, 3.5999511477798815`*^9, {3.600455905698111*^9, 
    3.6004559068475237`*^9}, 3.6004565835990953`*^9, 3.600524857057756*^9, 
-   3.601223251300003*^9, 3.601317776572098*^9}]
+   3.601223251300003*^9, 3.601317776572098*^9, 3.60312237772731*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -3885,7 +3886,7 @@ Cell[BoxData[{
 },
 WindowToolbars->{"RulerBar", "EditBar"},
 WindowSize->{1268, 1395},
-WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
 CellContext->Notebook,
 Magnification->0.8999999761581421,
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
@@ -3966,30 +3967,30 @@ Cell[CellGroupData[{
 Cell[1277, 39, 218, 3, 39, "Subsection"],
 Cell[1498, 44, 2384, 63, 219, "Text"],
 Cell[CellGroupData[{
-Cell[3907, 111, 101970, 2156, 5909, "Input",
+Cell[3907, 111, 102022, 2157, 5909, "Input",
  InitializationCell->True],
-Cell[105880, 2269, 51284, 1230, 465, "Output"]
+Cell[105932, 2270, 51308, 1230, 465, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[157213, 3505, 247, 8, 24, "Subsection"],
+Cell[157289, 3506, 247, 8, 39, "Subsection"],
 Cell[CellGroupData[{
-Cell[157485, 3517, 294, 7, 17, "Input"],
-Cell[157782, 3526, 661, 19, 35, "Output"]
+Cell[157561, 3518, 294, 7, 28, "Input"],
+Cell[157858, 3527, 661, 19, 57, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[158480, 3550, 241, 6, 17, "Input"],
-Cell[158724, 3558, 8461, 146, 134, "Output"]
+Cell[158556, 3551, 241, 6, 28, "Input"],
+Cell[158800, 3559, 8461, 146, 207, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[167234, 3710, 141, 2, 24, "Subsection"],
+Cell[167310, 3711, 141, 2, 39, "Subsection"],
 Cell[CellGroupData[{
-Cell[167400, 3716, 1309, 31, 31, "Input"],
-Cell[168712, 3749, 799, 17, 11, "Message"],
-Cell[169514, 3768, 994, 28, 47, "Output"]
+Cell[167476, 3717, 1309, 31, 51, "Input"],
+Cell[168788, 3750, 799, 17, 20, "Message"],
+Cell[169590, 3769, 994, 28, 75, "Output"]
 }, Open  ]],
-Cell[170523, 3799, 3409, 81, 97, "Input"]
+Cell[170599, 3800, 3409, 81, 151, "Input"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
