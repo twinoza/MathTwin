@@ -1,3 +1,5 @@
 # Files to ignore for this git repository
 CalibrationManipulator/
+*.mres
+*.swp
 *.txt
