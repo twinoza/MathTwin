@@ -41,10 +41,10 @@ foreach my $fileName (@fileList) {
 open OUTFILE, ">SomaSimTauData.txt" || die "Couldn't open file SomaTauData.txt, $!";
 foreach my $row(@outMat) {
 	foreach my $val(@$row) {
-#		print $val, "\t";
+		print $val, "\t";
 		print OUTFILE $val, "\t";
 	}
-#	print "\n";
+	print "\n";
 	print OUTFILE "\n";
 }
 close OUTFILE;
