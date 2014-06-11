@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     91679,       2174]
-NotebookOptionsPosition[     89162,       2081]
-NotebookOutlinePosition[     89565,       2098]
-CellTagsIndexPosition[     89522,       2095]
+NotebookDataLength[    104311,       2440]
+NotebookOptionsPosition[    101103,       2331]
+NotebookOutlinePosition[    101506,       2348]
+CellTagsIndexPosition[    101463,       2345]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -235,7 +235,8 @@ Cell[BoxData[
    Editable->False], TraditionalForm]], "Print",
  CellChangeTimes->{3.603472831545042*^9, 3.6034739383794394`*^9, 
   3.603474434847756*^9, 3.60371615061661*^9, 3.604066048891225*^9, 
-  3.604066102898552*^9, 3.6060771429679127`*^9}],
+  3.604066102898552*^9, 3.6060771429679127`*^9, 3.608580534175497*^9, 
+  3.610989990006877*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -251,7 +252,8 @@ Cell[BoxData[
    Editable->False], TraditionalForm]], "Print",
  CellChangeTimes->{3.603472831545042*^9, 3.6034739383794394`*^9, 
   3.603474434847756*^9, 3.60371615061661*^9, 3.604066048891225*^9, 
-  3.604066102898552*^9, 3.606077143091831*^9}]
+  3.604066102898552*^9, 3.6060771429679127`*^9, 3.608580534175497*^9, 
+  3.610989990144569*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -1027,58 +1029,9 @@ Cell[BoxData[{
    3.6034724007685957`*^9}, 3.606077181306185*^9}],
 
 Cell[BoxData[
- FormBox[
-  RowBox[{"{", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"3.31582819163409`*^-15", " ", "t"}], "-", 
-     "0.043628787581044465`"}], ",", 
-    RowBox[{
-     RowBox[{"9.431922948389768`*^-15", " ", "t"}], "-", 
-     "0.10029306360362095`"}], ",", 
-    RowBox[{
-     RowBox[{"5.194654948080023`*^-15", " ", "t"}], "-", 
-     "0.0038562035537088113`"}], ",", 
-    RowBox[{
-     RowBox[{"5.283378844715756`*^-15", " ", "t"}], "+", 
-     "0.0000956004653373159`"}], ",", 
-    RowBox[{
-     RowBox[{"5.566167463207155`*^-15", " ", "t"}], "+", 
-     "0.00014667933558446848`"}], ",", 
-    RowBox[{
-     RowBox[{"5.781797797010236`*^-15", " ", "t"}], "+", 
-     "0.0001406703801096816`"}], ",", 
-    RowBox[{
-     RowBox[{"5.954284149320265`*^-15", " ", "t"}], "+", 
-     "0.00012715590510838613`"}], ",", 
-    RowBox[{
-     RowBox[{"6.102742556980968`*^-15", " ", "t"}], "+", 
-     "0.0001178506855727022`"}], ",", 
-    RowBox[{
-     RowBox[{"6.229085372528233`*^-15", " ", "t"}], "+", 
-     "0.0001104902601283955`"}], ",", 
-    RowBox[{
-     RowBox[{"6.448683840816072`*^-15", " ", "t"}], "+", 
-     "0.00009738452294152163`"}], ",", 
-    RowBox[{
-     RowBox[{"6.635529479540659`*^-15", " ", "t"}], "+", 
-     "0.00008581769445216626`"}], ",", 
-    RowBox[{
-     RowBox[{"6.7244917598835304`*^-15", " ", "t"}], "+", 
-     "0.00007861446515787546`"}], ",", 
-    RowBox[{
-     RowBox[{"7.014513249035176`*^-15", " ", "t"}], "+", 
-     "0.00006293400654030336`"}], ",", 
-    RowBox[{
-     RowBox[{"7.305422454469967`*^-15", " ", "t"}], "+", 
-     "0.00004865657055121546`"}], ",", 
-    RowBox[{
-     RowBox[{"8.076116071143975`*^-15", " ", "t"}], "+", 
-     "0.000014685446208240588`"}], ",", 
-    RowBox[{
-     RowBox[{"8.847654737547658`*^-15", " ", "t"}], "-", 
-     "0.000019374977110980273`"}]}], "}"}], TraditionalForm]], "Output",
- CellChangeTimes->{{3.6060771819681997`*^9, 3.606077195820552*^9}}]
+ FormBox["plotVals", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.6060771819681997`*^9, 3.606077195820552*^9}, 
+   3.608580535235468*^9, 3.610989990931123*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -1336,32 +1289,79 @@ Cell[BoxData[{
 
 Cell[BoxData[
  FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"Part", "::", "partw"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"Part \[NoBreak]\\!\\(TraditionalForm\\`1\\)\[NoBreak] of \
+\[NoBreak]\\!\\(TraditionalForm\\`\\({}\\)\\)\[NoBreak] does not exist. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/partw\\\", \
+ButtonNote -> \\\"Part::partw\\\"]\\)\"\>"}], TraditionalForm]], "Message", \
+"MSG",
+ CellChangeTimes->{
+  3.6085805355066843`*^9, {3.610989991270137*^9, 3.6109900108454647`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"Part", "::", "pspec"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"Part specification \
+\[NoBreak]\\!\\(TraditionalForm\\`\\(\\(\\({\\({}\\)}\\)\\) \
+\[LeftDoubleBracket] \\(\\(1, 1\\)\\) \[RightDoubleBracket]\\)\\)\[NoBreak] \
+is neither a machine-sized integer nor a list of machine-sized integers. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/pspec\\\", \
+ButtonNote -> \\\"Part::pspec\\\"]\\)\"\>"}], TraditionalForm]], "Message", \
+"MSG",
+ CellChangeTimes->{
+  3.6085805355066843`*^9, {3.610989991270137*^9, 3.610990010949018*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"Reverse", "::", "normal"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"Nonatomic expression expected at position \
+\[NoBreak]\\!\\(TraditionalForm\\`1\\)\[NoBreak] in \
+\[NoBreak]\\!\\(TraditionalForm\\`\\(Reverse[iInVals]\\)\\)\[NoBreak]. \\!\\(\
+\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/normal\\\", \
+ButtonNote -> \\\"Reverse::normal\\\"]\\)\"\>"}], TraditionalForm]], "Message",\
+ "MSG",
+ CellChangeTimes->{
+  3.6085805355066843`*^9, {3.610989991270137*^9, 3.61099001107484*^9}}],
+
+Cell[BoxData[
+ FormBox[
   TagBox[
    FormBox[
     StyleBox[
-     DynamicModuleBox[{$CellContext`curriIn$$ = 400, $CellContext`maxX$$ = 
-      1.*^13, $CellContext`maxY$$ = 0.05, Typeset`show$$ = True, 
-      Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-      "\"untitled\"", Typeset`specs$$ = {{{
-         Hold[$CellContext`curriIn$$], 400, 
-         "\!\(\*SubscriptBox[\(i\), \(in\)]\)"}, {
-        400, 200, 100, 75, 55, 50, 40, 30, 25, 20, 15, 10, 5, 1, 0.6, 
-         0.51}}, {{
+     DynamicModuleBox[{$CellContext`curriIn$$ = Part[$CellContext`iInVals, 
+       Part[{{}}, 1, 1]], $CellContext`maxX$$ = 1.*^13, $CellContext`maxY$$ = 
+      0.05, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+      Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ =
+       1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+         Hold[$CellContext`curriIn$$], 
+         Part[$CellContext`iInVals, 
+          Part[{{}}, 1, 1]], "\!\(\*SubscriptBox[\(i\), \(in\)]\)"}, 
+        Reverse[$CellContext`iInVals]}, {{
          Hold[$CellContext`maxX$$], 1.*^13, "Max X-axis value"}, 
         1000000000000, 100000000000000, 500000000000}, {{
          Hold[$CellContext`maxY$$], 0.05, "Max Y-axis value"}, 0.01, 1, 
-        0.005}}, Typeset`size$$ = {681., {342., 349.}}, Typeset`update$$ = 0, 
+        0.005}}, Typeset`size$$ = {921., {900., 907.}}, Typeset`update$$ = 0, 
       Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`curriIn$264007$$ = 0, $CellContext`maxX$264008$$ = 
-      0, $CellContext`maxY$264009$$ = 0}, 
+      True, $CellContext`maxX$400327$$ = 0, $CellContext`maxY$400328$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, 
-        "Variables" :> {$CellContext`curriIn$$ = 400, $CellContext`maxX$$ = 
+        "Variables" :> {$CellContext`curriIn$$ = Part[$CellContext`iInVals, 
+            Part[{{}}, 1, 1]], $CellContext`maxX$$ = 
           1.*^13, $CellContext`maxY$$ = 0.05}, "ControllerVariables" :> {
-          Hold[$CellContext`curriIn$$, $CellContext`curriIn$264007$$, 0], 
-          Hold[$CellContext`maxX$$, $CellContext`maxX$264008$$, 0], 
-          Hold[$CellContext`maxY$$, $CellContext`maxY$264009$$, 0]}, 
+          Hold[$CellContext`maxX$$, $CellContext`maxX$400327$$, 0], 
+          Hold[$CellContext`maxY$$, $CellContext`maxY$400328$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -1440,15 +1440,17 @@ SubscriptBox[\(I\), \(lk\)]]\)", "1/f"}, PlotStyle ->
                 ReplaceAll[$CellContext`m/$CellContext`IlkValues, 
                  Part[$CellContext`fitLineRules, $CellContext`currPlotNum]], 
                 Italic]}]}}]), 
-        "Specifications" :> {{{$CellContext`curriIn$$, 400, 
-            "\!\(\*SubscriptBox[\(i\), \(in\)]\)"}, {
-           400, 200, 100, 75, 55, 50, 40, 30, 25, 20, 15, 10, 5, 1, 0.6, 
-            0.51}}, {{$CellContext`maxX$$, 1.*^13, "Max X-axis value"}, 
-           1000000000000, 100000000000000, 500000000000, Appearance -> 
+        "Specifications" :> {{{$CellContext`curriIn$$, 
+            Part[$CellContext`iInVals, 
+             Part[{{}}, 1, 1]], "\!\(\*SubscriptBox[\(i\), \(in\)]\)"}, 
+           
+           Reverse[$CellContext`iInVals]}, {{$CellContext`maxX$$, 1.*^13, 
+            "Max X-axis value"}, 1000000000000, 100000000000000, 500000000000,
+            Appearance -> 
            "Open"}, {{$CellContext`maxY$$, 0.05, "Max Y-axis value"}, 0.01, 1,
             0.005, Appearance -> "Open"}}, 
         "Options" :> {LabelStyle -> Medium}, "DefaultOptions" :> {}],
-       ImageSizeCache->{728., {439., 446.}},
+       ImageSizeCache->{968., {995., 1002.}},
        SingleEvaluation->True],
       Deinitialization:>None,
       DynamicModuleValues:>{},
@@ -1466,7 +1468,254 @@ SubscriptBox[\(I\), \(lk\)]]\)", "1/f"}, PlotStyle ->
    3.604066050418975*^9, 3.604066104260034*^9, 3.604066139096817*^9, {
    3.606077144847869*^9, 3.606077157157518*^9}, 3.6060771998510723`*^9, {
    3.6061683161309767`*^9, 3.606168365683071*^9}, {3.606168444030818*^9, 
-   3.606168449101791*^9}}]
+   3.606168449101791*^9}, 3.608580537154481*^9, {3.6109899918889112`*^9, 
+   3.610990011872724*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"Part", "::", "partw"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"Part \[NoBreak]\\!\\(TraditionalForm\\`1\\)\[NoBreak] of \
+\[NoBreak]\\!\\(TraditionalForm\\`\\({}\\)\\)\[NoBreak] does not exist. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/partw\\\", \
+ButtonNote -> \\\"Part::partw\\\"]\\)\"\>"}], TraditionalForm]], "Message", \
+"MSG",
+ CellChangeTimes->{3.61099001246161*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"Part", "::", "pspec"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"Part specification \
+\[NoBreak]\\!\\(TraditionalForm\\`\\(\\(\\({}\\)\\) \[LeftDoubleBracket] 1 \
+\[RightDoubleBracket]\\)\\)\[NoBreak] is neither a machine-sized integer nor \
+a list of machine-sized integers. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/pspec\\\", \
+ButtonNote -> \\\"Part::pspec\\\"]\\)\"\>"}], TraditionalForm]], "Message", \
+"MSG",
+ CellChangeTimes->{3.6109900125922403`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"Part", "::", "pspec"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"Part specification \
+\[NoBreak]\\!\\(TraditionalForm\\`\\(\\(\\({}\\)\\) \[LeftDoubleBracket] 1 \
+\[RightDoubleBracket]\\)\\)\[NoBreak] is neither a machine-sized integer nor \
+a list of machine-sized integers. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/pspec\\\", \
+ButtonNote -> \\\"Part::pspec\\\"]\\)\"\>"}], TraditionalForm]], "Message", \
+"MSG",
+ CellChangeTimes->{3.6109900127856493`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"Part", "::", "pspec"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"Part specification \
+\[NoBreak]\\!\\(TraditionalForm\\`\\(\\(\\({}\\)\\) \[LeftDoubleBracket] 1 \
+\[RightDoubleBracket]\\)\\)\[NoBreak] is neither a machine-sized integer nor \
+a list of machine-sized integers. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/pspec\\\", \
+ButtonNote -> \\\"Part::pspec\\\"]\\)\"\>"}], TraditionalForm]], "Message", \
+"MSG",
+ CellChangeTimes->{3.610990012927079*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"General", "::", "stop"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(TraditionalForm\\`\\*StyleBox[\\(Part :: pspec\\), \
+\\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}], TraditionalForm]], "Message", \
+"MSG",
+ CellChangeTimes->{3.610990013102936*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"ListLinePlot", "::", "lpn"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"\[NoBreak]\\!\\(TraditionalForm\\`\\(plotVals \
+\[LeftDoubleBracket] \\(\\(\\(\\({}\\)\\) \[LeftDoubleBracket] 1 \
+\[RightDoubleBracket]\\)\\) \[RightDoubleBracket]\\)\\)\[NoBreak] is not a \
+list of numbers or pairs of numbers. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/ListLinePlot\\\", ButtonNote -> \
+\\\"ListLinePlot::lpn\\\"]\\)\"\>"}], TraditionalForm]], "Message", "MSG",
+ CellChangeTimes->{3.610990013393943*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"\[NoBreak]\\!\\(TraditionalForm\\`plotVals\\)\[NoBreak] \
+is not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
+\\)\"\>"}], TraditionalForm]], "Message", "MSG",
+ CellChangeTimes->{3.610990013709346*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"Show", "::", "gcomb"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"Could not combine the graphics objects in \
+\[NoBreak]\\!\\(TraditionalForm\\`\\(Show[\\(\\(\\(\\(ListLinePlot[\\(\\(\\(\\\
+(plotVals \[LeftDoubleBracket] \\(\\(\\(\\({}\\)\\) \[LeftDoubleBracket] 1 \
+\[RightDoubleBracket]\\)\\) \[RightDoubleBracket]\\)\\), \\(\\(PlotRange \
+\[Rule] \\(\\((\[NoBreak] \\*GridBox[{{\\\"0\\\", \\\"1.`*^13\\\"}, \
+{\\\"0\\\", \\\"0.05`\\\"}}, RowSpacings -> 1, ColumnSpacings -> 1, \
+RowAlignments -> Baseline, ColumnAlignments -> Center] \
+\[NoBreak])\\)\\)\\)\\), \\(\\(AxesLabel \[Rule] \
+\\(\\({\\\"\\\\!\\\\(\\\\*FractionBox[\\\\(h \\\\((\\\\*SubscriptBox[\\\\(i\\\
+\\), \\\\(in\\\\)])\\\\)\\\\), SubscriptBox[\\\\(I\\\\), \
+\\\\(lk\\\\)]]\\\\)\\\", \\\"1/f\\\"}\\)\\)\\)\\), \\(\\(PlotStyle \[Rule] \
+\\(\\(\\(\\((\[NoBreak] \\(\[LeftSkeleton] 1 \[RightSkeleton]\\) \
+\[NoBreak])\\)\\) \[LeftDoubleBracket] \\(\\(\\(\\({}\\)\\) \
+\[LeftDoubleBracket] 1 \[RightDoubleBracket]\\)\\) \
+\[RightDoubleBracket]\\)\\)\\)\\), \\(\\(ImageSize \[Rule] \
+500\\)\\)\\)\\)]\\)\\), \\(\\(ListPlot[\\(\\(plotVals, \\(\\(PlotStyle \
+\[Rule] \\(\\({\\(\\(RGBColor[\\(\\(0.23921568627450981`, \
+0.4196078431372549`, 0.5215686274509804`\\)\\)]\\)\\), \\(\\(\[LeftSkeleton] \
+17 \[RightSkeleton]\\)\\), \\(\\(Hue[\\(\\(0.22`, 1, 0.6`\\)\\)]\\)\\)}\\)\\)\
+\\)\\), \\(\\(ImageSize \[Rule] 500\\)\\)\\)\\)]\\)\\), \
+\\*GraphicsBox[List[], List[Rule[AspectRatio, NCache[Power[GoldenRatio, -1], \
+0.6180339887498948`]], Rule[Axes, True], Rule[AxesLabel, List[None, None]], \
+Rule[AxesOrigin, List[0, 0]], Rule[ImageSize, 500], Rule[Method, List[]], \
+Rule[PlotRange, List[List[0, 1.`*^13], List[0.`, 0.`]]], \
+Rule[PlotRangeClipping, True], Rule[PlotRangePadding, List[Scaled[0.02`], \
+Scaled[0.02`]]]]]\\)\\)]\\)\\)\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Show/gcomb\\\", ButtonNote -> \
+\\\"Show::gcomb\\\"]\\)\"\>"}], TraditionalForm]], "Message", "MSG",
+ CellChangeTimes->{3.610990013935491*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"ListLinePlot", "::", "lpn"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"\[NoBreak]\\!\\(TraditionalForm\\`\\(plotVals \
+\[LeftDoubleBracket] \\(\\(\\(\\({}\\)\\) \[LeftDoubleBracket] 1 \
+\[RightDoubleBracket]\\)\\) \[RightDoubleBracket]\\)\\)\[NoBreak] is not a \
+list of numbers or pairs of numbers. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/ListLinePlot\\\", ButtonNote -> \
+\\\"ListLinePlot::lpn\\\"]\\)\"\>"}], TraditionalForm]], "Message", "MSG",
+ CellChangeTimes->{3.6109900141259727`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"\[NoBreak]\\!\\(TraditionalForm\\`\\(plotVals \
+\[LeftDoubleBracket] \\(\\(\\(\\({}\\)\\) \[LeftDoubleBracket] 1 \
+\[RightDoubleBracket]\\)\\) \[RightDoubleBracket]\\)\\)\[NoBreak] is not a \
+list of numbers or pairs of numbers. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \
+\\\"ListPlot::lpn\\\"]\\)\"\>"}], TraditionalForm]], "Message", "MSG",
+ CellChangeTimes->{3.610990014320607*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"Show", "::", "gcomb"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"Could not combine the graphics objects in \
+\[NoBreak]\\!\\(TraditionalForm\\`\\(Show[\\(\\(\\(\\(ListLinePlot[\\(\\(\\(\\\
+(plotVals \[LeftDoubleBracket] \\(\\(\\(\\({}\\)\\) \[LeftDoubleBracket] 1 \
+\[RightDoubleBracket]\\)\\) \[RightDoubleBracket]\\)\\), \\(\\(PlotRange \
+\[Rule] \\(\\((\[NoBreak] \\*GridBox[{{\\\"0\\\", \\\"1.`*^13\\\"}, \
+{\\\"0\\\", \\\"0.05`\\\"}}, RowSpacings -> 1, ColumnSpacings -> 1, \
+RowAlignments -> Baseline, ColumnAlignments -> Center] \
+\[NoBreak])\\)\\)\\)\\), \\(\\(AxesLabel \[Rule] \
+\\(\\({\\\"\\\\!\\\\(\\\\*FractionBox[\\\\(h \\\\((\\\\*SubscriptBox[\\\\(i\\\
+\\), \\\\(in\\\\)])\\\\)\\\\), SubscriptBox[\\\\(I\\\\), \
+\\\\(lk\\\\)]]\\\\)\\\", \\\"1/f\\\"}\\)\\)\\)\\), \\(\\(PlotStyle \[Rule] \
+\\(\\(\\(\\((\[NoBreak] \\(\[LeftSkeleton] 1 \[RightSkeleton]\\) \
+\[NoBreak])\\)\\) \[LeftDoubleBracket] \\(\\(\\(\\({}\\)\\) \
+\[LeftDoubleBracket] 1 \[RightDoubleBracket]\\)\\) \
+\[RightDoubleBracket]\\)\\)\\)\\), \\(\\(ImageSize \[Rule] \
+500\\)\\)\\)\\)]\\)\\), \\(\\(ListPlot[\\(\\(\\(\\(plotVals \
+\[LeftDoubleBracket] \\(\\(\\(\\({}\\)\\) \[LeftDoubleBracket] 1 \
+\[RightDoubleBracket]\\)\\) \[RightDoubleBracket]\\)\\), \\(\\(PlotStyle \
+\[Rule] \\(\\(Directive[\\(\\(\\(\\(\\(\\({\\(\\(RGBColor[\\(\\(0.\
+23921568627450981`, 0.4196078431372549`, 0.5215686274509804`\\)\\)]\\)\\), \
+\\(\\(\[LeftSkeleton] 17 \[RightSkeleton]\\)\\), \\(\\(Hue[\\(\\(0.22`, 1, \
+0.6`\\)\\)]\\)\\)}\\)\\) \[LeftDoubleBracket] \\(\\(\\(\\({}\\)\\) \
+\[LeftDoubleBracket] 1 \[RightDoubleBracket]\\)\\) \
+\[RightDoubleBracket]\\)\\), \\(\\(PointSize[Large]\\)\\)\\)\\)]\\)\\)\\)\\), \
+\\(\\(ImageSize \[Rule] 500\\)\\)\\)\\)]\\)\\), \\*GraphicsBox[List[], \
+List[Rule[AspectRatio, NCache[Power[GoldenRatio, -1], 0.6180339887498948`]], \
+Rule[Axes, True], Rule[AxesLabel, List[None, None]], Rule[AxesOrigin, List[0, \
+0]], Rule[ImageSize, 500], Rule[Method, List[]], Rule[PlotRange, List[List[0, \
+1.`*^13], List[0.`, 0.`]]], Rule[PlotRangeClipping, True], \
+Rule[PlotRangePadding, List[Scaled[0.02`], Scaled[0.02`]]]]]\\)\\)]\\)\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Show/gcomb\\\", ButtonNote -> \
+\\\"Show::gcomb\\\"]\\)\"\>"}], TraditionalForm]], "Message", "MSG",
+ CellChangeTimes->{3.610990014483836*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"\[NoBreak]\\!\\(TraditionalForm\\`\\({\\(plotVals \
+\[LeftDoubleBracket] \\(\\(\\(\\({}\\)\\) \[LeftDoubleBracket] 1 \
+\[RightDoubleBracket]\\)\\) \[RightDoubleBracket]\\)}\\)\\)\[NoBreak] is \
+neither a list of replacement rules nor a valid dispatch table, and so cannot \
+be used for replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", ButtonNote -> \
+\\\"ReplaceAll::reps\\\"]\\)\"\>"}], TraditionalForm]], "Message", "MSG",
+ CellChangeTimes->{3.6109900146814413`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"\[NoBreak]\\!\\(TraditionalForm\\`\\({\\(plotVals \
+\[LeftDoubleBracket] \\(\\(\\(\\({}\\)\\) \[LeftDoubleBracket] 1 \
+\[RightDoubleBracket]\\)\\) \[RightDoubleBracket]\\)}\\)\\)\[NoBreak] is \
+neither a list of replacement rules nor a valid dispatch table, and so cannot \
+be used for replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", ButtonNote -> \
+\\\"ReplaceAll::reps\\\"]\\)\"\>"}], TraditionalForm]], "Message", "MSG",
+ CellChangeTimes->{3.610990014819994*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -1961,7 +2210,8 @@ Cell[BoxData[
    3.603207966042358*^9}, 3.60321150696136*^9, {3.603461286176721*^9, 
    3.603461304956263*^9}, {3.603461335695487*^9, 3.60346134892551*^9}, 
    3.6034651794427967`*^9, 3.603716153631991*^9, 3.6040660514417963`*^9, 
-   3.60406610530331*^9, 3.6060771459616013`*^9}]
+   3.60406610530331*^9, 3.6060771459616013`*^9, 3.6085805377252274`*^9, 
+   3.6109899934193153`*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -2081,7 +2331,7 @@ Cell[BoxData[
 },
 WindowToolbars->{"RulerBar", "EditBar"},
 WindowSize->{1125, 1449},
-WindowMargins->{{Automatic, 580}, {Automatic, 45}},
+WindowMargins->{{Automatic, 572}, {Automatic, 18}},
 CellContext->Notebook,
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
 StyleDefinitions->"Default.nb"
@@ -2117,63 +2367,79 @@ Cell[CellGroupData[{
 Cell[5854, 154, 2994, 62, 143, "Input",
  InitializationCell->True],
 Cell[CellGroupData[{
-Cell[8873, 220, 717, 17, 24, "Print"],
-Cell[9593, 239, 559, 14, 24, "Print"]
+Cell[8873, 220, 764, 18, 24, "Print"],
+Cell[9640, 240, 608, 15, 24, "Print"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10201, 259, 5253, 138, 430, "Input"],
+Cell[10297, 261, 5253, 138, 430, "Input"],
 Cell[CellGroupData[{
-Cell[15479, 401, 698, 18, 24, "Print"],
-Cell[16180, 421, 1455, 33, 51, "Print"],
-Cell[17638, 456, 896, 22, 24, "Print"],
-Cell[18537, 480, 4242, 92, 165, "Print"],
-Cell[22782, 574, 21603, 417, 674, "Print"]
+Cell[15575, 403, 698, 18, 24, "Print"],
+Cell[16276, 423, 1455, 33, 51, "Print"],
+Cell[17734, 458, 896, 22, 24, "Print"],
+Cell[18633, 482, 4242, 92, 165, "Print"],
+Cell[22878, 576, 21603, 417, 674, "Print"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[44446, 998, 114, 1, 45, "Subsection"],
+Cell[44542, 1000, 114, 1, 45, "Subsection"],
 Cell[CellGroupData[{
-Cell[44585, 1003, 789, 23, 55, "Input",
+Cell[44681, 1005, 789, 23, 55, "Input",
  InitializationCell->True],
-Cell[45377, 1028, 1919, 52, 112, "Output"]
+Cell[45473, 1030, 179, 3, 33, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[47345, 1086, 97, 1, 45, "Subsection"],
+Cell[45701, 1039, 97, 1, 45, "Subsection"],
 Cell[CellGroupData[{
-Cell[47467, 1091, 10921, 243, 899, "Input",
+Cell[45823, 1044, 10921, 243, 899, "Input",
  InitializationCell->True],
-Cell[58391, 1336, 6547, 132, 902, "Output"]
+Cell[56747, 1289, 595, 13, 24, "Message"],
+Cell[57345, 1304, 696, 15, 24, "Message"],
+Cell[58044, 1321, 639, 14, 24, "Message"],
+Cell[58686, 1337, 6632, 134, 2014, "Output"],
+Cell[65321, 1473, 541, 12, 24, "Message"],
+Cell[65865, 1487, 624, 14, 24, "Message"],
+Cell[66492, 1503, 624, 14, 24, "Message"],
+Cell[67119, 1519, 622, 14, 24, "Message"],
+Cell[67744, 1535, 581, 13, 24, "Message"],
+Cell[68328, 1550, 641, 13, 24, "Message"],
+Cell[68972, 1565, 504, 11, 24, "Message"],
+Cell[69479, 1578, 2147, 35, 423, "Message"],
+Cell[71629, 1615, 643, 13, 24, "Message"],
+Cell[72275, 1630, 629, 13, 24, "Message"],
+Cell[72907, 1645, 2476, 40, 423, "Message"],
+Cell[75386, 1687, 720, 14, 24, "Message"],
+Cell[76109, 1703, 718, 14, 24, "Message"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[64987, 1474, 375, 10, 45, "Subsection"],
+Cell[76876, 1723, 375, 10, 45, "Subsection"],
 Cell[CellGroupData[{
-Cell[65387, 1488, 97, 1, 32, "Input"],
-Cell[65487, 1491, 347, 7, 33, "Output"]
+Cell[77276, 1737, 97, 1, 32, "Input"],
+Cell[77376, 1740, 347, 7, 33, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[65871, 1503, 7377, 183, 602, "Input"],
-Cell[73251, 1688, 6160, 129, 403, "Output"]
+Cell[77760, 1752, 7377, 183, 602, "Input"],
+Cell[85140, 1937, 6160, 129, 403, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[79472, 1824, 95, 1, 81, "Section"],
+Cell[91361, 2073, 95, 1, 81, "Section"],
 Cell[CellGroupData[{
-Cell[79592, 1829, 101, 1, 45, "Subsection"],
-Cell[79696, 1832, 211, 4, 31, "Text"],
+Cell[91481, 2078, 101, 1, 45, "Subsection"],
+Cell[91585, 2081, 211, 4, 31, "Text"],
 Cell[CellGroupData[{
-Cell[79932, 1840, 1686, 44, 99, "Input",
+Cell[91821, 2089, 1686, 44, 99, "Input",
  InitializationCell->True],
-Cell[81621, 1886, 2992, 77, 47, "Output"]
+Cell[93510, 2135, 3044, 78, 47, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[84662, 1969, 113, 1, 45, "Subsection"],
-Cell[84778, 1972, 4356, 105, 360, "Input"]
+Cell[96603, 2219, 113, 1, 45, "Subsection"],
+Cell[96719, 2222, 4356, 105, 360, "Input"]
 }, Closed]]
 }, Open  ]]
 }
