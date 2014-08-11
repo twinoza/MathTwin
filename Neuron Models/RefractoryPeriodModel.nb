@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     59470,       1323]
-NotebookOptionsPosition[     58366,       1282]
-NotebookOutlinePosition[     58811,       1299]
-CellTagsIndexPosition[     58768,       1296]
+NotebookDataLength[     64181,       1410]
+NotebookOptionsPosition[     63048,       1368]
+NotebookOutlinePosition[     63485,       1385]
+CellTagsIndexPosition[     63442,       1382]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -23,22 +23,36 @@ Cell[CellGroupData[{
 Cell["Refractory Period Model", "Section",
  CellChangeTimes->{{3.5618354770787644`*^9, 3.5618354913547645`*^9}}],
 
+Cell[BoxData[
+ RowBox[{"Clear", "[", 
+  RowBox[{
+  "Ic", ",", "Il", ",", "pilkr", ",", "pqua", ",", "ptau", ",", "Vin", ",", 
+   "vin", ",", "\[Tau]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.616781740657954*^9, 3.616781786905177*^9}, {
+  3.616782174850638*^9, 3.61678218238018*^9}, {3.6167822135521393`*^9, 
+  3.616782214443392*^9}}],
+
 Cell[CellGroupData[{
 
 Cell[BoxData[{
  RowBox[{
   RowBox[{
    RowBox[{"vin", "[", 
-    RowBox[{"pqua_", ",", "Ic_", ",", "Il_"}], "]"}], ":=", 
+    RowBox[{"pqua_", ",", "pilkr_", ",", "Ic_", ",", "Il_"}], "]"}], ":=", 
    RowBox[{"pqua", " ", 
     RowBox[{"(", 
-     RowBox[{
-      SuperscriptBox["Ic", "2"], "/", 
-      SuperscriptBox["Il", "2"]}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+     FractionBox[
+      RowBox[{"Ic", "*", "Il"}], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"Il", "+", "pilkr"}], ")"}], "2"]], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"\[Tau]", "[", 
-   RowBox[{"ptau_", ",", "Il_"}], "]"}], ":=", 
-  RowBox[{"ptau", "/", "Il"}]}], "\[IndentingNewLine]", 
+   RowBox[{"ptau_", ",", "pilkr_", ",", "Il_"}], "]"}], ":=", 
+  RowBox[{"ptau", "/", 
+   RowBox[{"(", 
+    RowBox[{"Il", "+", "pilkr"}], ")"}]}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"h", "[", "Vin_", "]"}], ":=", 
@@ -65,14 +79,16 @@ Cell[BoxData[{
   RowBox[{
    RowBox[{"{", 
     RowBox[{
-     RowBox[{"Ic", "=", ".35"}], ",", 
-     RowBox[{"Il", "=", ".224"}], ",", 
+     RowBox[{"Ic", "=", "0.501077505514"}], ",", 
+     RowBox[{"Il", "=", "0.399939947803"}], ",", 
      RowBox[{"Iref", "=", "1.25"}], ",", 
-     RowBox[{"pqua", "=", "1.391022"}], ",", " ", 
-     RowBox[{"ptau", "=", "0.0011936"}], ",", 
-     RowBox[{"\[Tau]lo", "=", ".005"}], ",", " ", 
+     RowBox[{"pqua", "=", "1.07504875677"}], ",", 
+     RowBox[{"pilkr", "=", 
+      RowBox[{"-", "0.00535058440032"}]}], ",", " ", 
+     RowBox[{"ptau", "=", "0.000789178726806"}], ",", 
+     RowBox[{"\[Tau]lo", "=", ".002"}], ",", " ", 
      RowBox[{"\[Tau]hi", "=", ".040"}], ",", 
-     RowBox[{"vinlo", "=", "5"}], ",", " ", 
+     RowBox[{"vinlo", "=", "0.5"}], ",", " ", 
      RowBox[{"vinhi", "=", "20"}], ",", "  ", 
      RowBox[{"freqlo", "=", "20"}], ",", " ", 
      RowBox[{"freqhi", "=", "220"}]}], "}"}], ",", "\[IndentingNewLine]", 
@@ -115,9 +131,22 @@ Cell[BoxData[{
                RowBox[{
                 RowBox[{"Dynamic", "[", "ptau", "]"}], ",", 
                 RowBox[{"{", 
-                 RowBox[{".001", ",", ".00142", ",", ".00001"}], "}"}]}], 
+                 RowBox[{".0004", ",", ".00142", ",", ".00001"}], "}"}]}], 
                "]"}], ",", 
-              RowBox[{"Dynamic", "[", "ptau", "]"}]}], "}"}]}], 
+              RowBox[{"Dynamic", "[", "ptau", "]"}]}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<\>\"", ",", "\"\<\>\"", ",", "\"\<\>\"", ",", 
+              "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)\>\"", ",", 
+              RowBox[{"Slider", "[", 
+               RowBox[{
+                RowBox[{"Dynamic", "[", "pilkr", "]"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.01"}], ",", ".01", ",", ".00001"}], "}"}]}],
+                "]"}], ",", 
+              RowBox[{"Dynamic", "[", "pilkr", "]"}]}], "}"}]}], 
            "\[IndentingNewLine]", 
            RowBox[{"(*", 
             RowBox[{
@@ -149,12 +178,14 @@ Cell[BoxData[{
              "\"\<\\nInput Ranges\>\"", ",", "SpanFromLeft", ",", 
               "SpanFromLeft"}], "}"}], ",", "\[IndentingNewLine]", 
             RowBox[{"{", 
-             RowBox[{"\"\<\!\(\*SubscriptBox[\(\[Tau]\), \(lo\)]\)\>\"", ",", 
+             RowBox[{
+             "\"\<\!\(\*SubscriptBox[\(\[Tau]\), \(lo\)]\)\>\"", ",", 
               RowBox[{"Slider", "[", 
                RowBox[{
                 RowBox[{"Dynamic", "[", "\[Tau]lo", "]"}], ",", 
                 RowBox[{"{", 
                  RowBox[{"0", ",", ".01", ",", ".001"}], "}"}]}], "]"}], ",", 
+              
               RowBox[{"Dynamic", "[", "\[Tau]lo", "]"}], ",", 
               "\"\<\!\(\*SubscriptBox[\(\[Tau]\), \(hi\)]\)\>\"", ",", 
               RowBox[{"Slider", "[", 
@@ -171,7 +202,7 @@ Cell[BoxData[{
                RowBox[{
                 RowBox[{"Dynamic", "[", "vinlo", "]"}], ",", 
                 RowBox[{"{", 
-                 RowBox[{"0", ",", "10", ",", "1"}], "}"}]}], "]"}], ",", 
+                 RowBox[{"0.5", ",", "1", ",", "0.1"}], "}"}]}], "]"}], ",", 
               RowBox[{"Dynamic", "[", "vinlo", "]"}], ",", 
               "\"\<\!\(\*SubscriptBox[\(v\), \(in_hi\)]\)\>\"", ",", 
               RowBox[{"Slider", "[", 
@@ -222,11 +253,11 @@ Cell[BoxData[{
                  RowBox[{
                   RowBox[{
                    RowBox[{"\[Tau]", "[", 
-                    RowBox[{"ptau", ",", "Ilx"}], "]"}], "\[Equal]", 
-                   "\[Tau]lo"}], ",", 
+                    RowBox[{"ptau", ",", "pilkr", ",", "Ilx"}], "]"}], 
+                   "\[Equal]", "\[Tau]lo"}], ",", 
                   RowBox[{"{", 
-                   RowBox[{"Ilx", ",", "0.001"}], "}"}]}], "]"}], "]"}], 
-               "]"}], ",", 
+                   RowBox[{"Ilx", ",", "0.01"}], "}"}]}], "]"}], "]"}], "]"}],
+               ",", 
               RowBox[{"Dynamic", "[", 
                RowBox[{"\[Tau]lo", "*", "1000"}], "]"}], ",", "\"\<ms\>\"", 
               ",", 
@@ -236,11 +267,11 @@ Cell[BoxData[{
                  RowBox[{
                   RowBox[{
                    RowBox[{"\[Tau]", "[", 
-                    RowBox[{"ptau", ",", "Ilx"}], "]"}], "\[Equal]", 
-                   "\[Tau]hi"}], ",", 
+                    RowBox[{"ptau", ",", "pilkr", ",", "Ilx"}], "]"}], 
+                   "\[Equal]", "\[Tau]hi"}], ",", 
                   RowBox[{"{", 
-                   RowBox[{"Ilx", ",", "0.001"}], "}"}]}], "]"}], "]"}], 
-               "]"}], ",", 
+                   RowBox[{"Ilx", ",", "0.01"}], "}"}]}], "]"}], "]"}], "]"}],
+               ",", 
               RowBox[{"Dynamic", "[", 
                RowBox[{"\[Tau]hi", "*", "1000"}], "]"}], ",", "\"\<ms\>\""}], 
              "}"}], ",", "\[IndentingNewLine]", 
@@ -252,8 +283,8 @@ Cell[BoxData[{
                  RowBox[{
                   RowBox[{
                    RowBox[{"vin", "[", 
-                    RowBox[{"pqua", ",", "Ic", ",", "Ilx"}], "]"}], 
-                   "\[Equal]", "vinlo"}], ",", 
+                    RowBox[{"pqua", ",", "pilkr", ",", "Ic", ",", "Ilx"}], 
+                    "]"}], "\[Equal]", "vinlo"}], ",", 
                   RowBox[{"{", 
                    RowBox[{"Ilx", ",", "0.001"}], "}"}]}], "]"}], "]"}], 
                "]"}], ",", 
@@ -264,8 +295,8 @@ Cell[BoxData[{
                  RowBox[{
                   RowBox[{
                    RowBox[{"vin", "[", 
-                    RowBox[{"pqua", ",", "Ic", ",", "Ilx"}], "]"}], 
-                   "\[Equal]", "vinhi"}], ",", 
+                    RowBox[{"pqua", ",", "pilkr", ",", "Ic", ",", "Ilx"}], 
+                    "]"}], "\[Equal]", "vinhi"}], ",", 
                   RowBox[{"{", 
                    RowBox[{"Ilx", ",", "0.001"}], "}"}]}], "]"}], "]"}], 
                "]"}], ",", 
@@ -281,13 +312,14 @@ Cell[BoxData[{
                    RowBox[{"f0", "[", 
                     RowBox[{
                     RowBox[{"vin", "[", 
-                    RowBox[{"pqua", ",", "Ic", ",", "Ilx"}], "]"}], ",", 
+                    RowBox[{"pqua", ",", "pilkr", ",", "Ic", ",", "Ilx"}], 
+                    "]"}], ",", 
                     RowBox[{"\[Tau]", "[", 
-                    RowBox[{"ptau", ",", "Ilx"}], "]"}]}], "]"}], "\[Equal]", 
-                   "freqlo"}], ",", 
+                    RowBox[{"ptau", ",", "pilkr", ",", "Ilx"}], "]"}]}], 
+                    "]"}], "\[Equal]", "freqlo"}], ",", 
                   RowBox[{"{", 
-                   RowBox[{"Ilx", ",", "0.001"}], "}"}]}], "]"}], "]"}], 
-               "]"}], ",", 
+                   RowBox[{"Ilx", ",", "0.1"}], "}"}]}], "]"}], "]"}], "]"}], 
+              ",", 
               RowBox[{"Dynamic", "[", "freqlo", "]"}], ",", "\"\<Hz\>\"", ",", 
               RowBox[{"Dynamic", "[", 
                RowBox[{"First", "[", 
@@ -297,13 +329,14 @@ Cell[BoxData[{
                    RowBox[{"f0", "[", 
                     RowBox[{
                     RowBox[{"vin", "[", 
-                    RowBox[{"pqua", ",", "Ic", ",", "Ilx"}], "]"}], ",", 
+                    RowBox[{"pqua", ",", "pilkr", ",", "Ic", ",", "Ilx"}], 
+                    "]"}], ",", 
                     RowBox[{"\[Tau]", "[", 
-                    RowBox[{"ptau", ",", "Ilx"}], "]"}]}], "]"}], "\[Equal]", 
-                   "freqhi"}], ",", 
+                    RowBox[{"ptau", ",", "pilkr", ",", "Ilx"}], "]"}]}], 
+                    "]"}], "\[Equal]", "freqhi"}], ",", 
                   RowBox[{"{", 
-                   RowBox[{"Ilx", ",", "0.001"}], "}"}]}], "]"}], "]"}], 
-               "]"}], ",", 
+                   RowBox[{"Ilx", ",", "0.1"}], "}"}]}], "]"}], "]"}], "]"}], 
+              ",", 
               RowBox[{"Dynamic", "[", "freqhi", "]"}], ",", "\"\<Hz\>\""}], 
              "}"}]}], "\[IndentingNewLine]", "}"}], ",", 
           RowBox[{"Alignment", "\[Rule]", 
@@ -324,19 +357,23 @@ Cell[BoxData[{
              "\"\<\\nOutput Values\>\"", ",", "SpanFromLeft", ",", 
               "SpanFromLeft"}], "}"}], ",", "\[IndentingNewLine]", 
             RowBox[{"{", 
-             RowBox[{"\"\<\!\(\*SubscriptBox[\(\[Tau]\), \(m\)]\):\>\"", ",", 
+             RowBox[{
+             "\"\<\!\(\*SubscriptBox[\(\[Tau]\), \(m\)]\):\>\"", ",", 
               RowBox[{"Panel", "[", 
                RowBox[{
                 RowBox[{"Dynamic", "[", 
                  RowBox[{"\[Tau]", "[", 
-                  RowBox[{"ptau", ",", "Il"}], "]"}], "]"}], ",", 
+                  RowBox[{"ptau", ",", "pilkr", ",", "Il"}], "]"}], "]"}], 
+                ",", 
                 RowBox[{"Background", "\[Rule]", "LightGray"}]}], "]"}], ",", 
+              
               RowBox[{"Panel", "[", 
                RowBox[{
                 RowBox[{"Dynamic", "[", 
                  RowBox[{"1000", 
                   RowBox[{"\[Tau]", "[", 
-                   RowBox[{"ptau", ",", "Il"}], "]"}]}], "]"}], ",", 
+                   RowBox[{"ptau", ",", "pilkr", ",", "Il"}], "]"}]}], "]"}], 
+                ",", 
                 RowBox[{"Background", "\[Rule]", "LightGray"}]}], "]"}], ",", 
               " ", "\"\<ms\>\""}], "}"}], ",", "\[IndentingNewLine]", 
             RowBox[{"{", 
@@ -345,7 +382,8 @@ Cell[BoxData[{
                RowBox[{
                 RowBox[{"Dynamic", "[", 
                  RowBox[{"vin", "[", 
-                  RowBox[{"pqua", ",", "Ic", ",", "Il"}], "]"}], "]"}], ",", 
+                  RowBox[{"pqua", ",", "pilkr", ",", "Ic", ",", "Il"}], "]"}],
+                  "]"}], ",", 
                 RowBox[{"Background", "\[Rule]", "LightGray"}]}], "]"}], ",", 
               "\"\<h(\!\(\*SubscriptBox[\(v\), \(in\)]\)):\>\"", ",", 
               RowBox[{"Panel", "[", 
@@ -353,8 +391,8 @@ Cell[BoxData[{
                 RowBox[{"Dynamic", "[", 
                  RowBox[{"h", "[", 
                   RowBox[{"vin", "[", 
-                   RowBox[{"pqua", ",", "Ic", ",", "Il"}], "]"}], "]"}], 
-                 "]"}], ",", 
+                   RowBox[{"pqua", ",", "pilkr", ",", "Ic", ",", "Il"}], 
+                   "]"}], "]"}], "]"}], ",", 
                 RowBox[{"Background", "\[Rule]", "LightGray"}]}], "]"}]}], 
              "}"}], ",", "\[IndentingNewLine]", 
             RowBox[{"{", 
@@ -365,9 +403,11 @@ Cell[BoxData[{
                  RowBox[{"f0", "[", 
                   RowBox[{
                    RowBox[{"vin", "[", 
-                    RowBox[{"pqua", ",", "Ic", ",", "Il"}], "]"}], ",", 
+                    RowBox[{"pqua", ",", "pilkr", ",", "Ic", ",", "Il"}], 
+                    "]"}], ",", 
                    RowBox[{"\[Tau]", "[", 
-                    RowBox[{"ptau", ",", "Il"}], "]"}]}], "]"}], "]"}], ",", 
+                    RowBox[{"ptau", ",", "pilkr", ",", "Il"}], "]"}]}], "]"}],
+                  "]"}], ",", 
                 RowBox[{"Background", "\[Rule]", "LightGray"}]}], "]"}]}], 
              "}"}]}], "\[IndentingNewLine]", "}"}], ",", 
           RowBox[{"Alignment", "\[Rule]", 
@@ -391,13 +431,22 @@ Cell[BoxData[{
                  RowBox[{"f0", "[", 
                   RowBox[{
                    RowBox[{"vin", "[", 
-                    RowBox[{"pqua", ",", "Ic", ",", "Ilx"}], "]"}], ",", 
+                    RowBox[{"pqua", ",", "pilkr", ",", "Ic", ",", "Ilx"}], 
+                    "]"}], ",", 
                    RowBox[{"\[Tau]", "[", 
-                    RowBox[{"ptau", ",", "Ilx"}], "]"}]}], "]"}], ",", 
-                 "freqlo", ",", "freqhi"}], "}"}], ",", 
+                    RowBox[{"ptau", ",", "pilkr", ",", "Ilx"}], "]"}]}], 
+                  "]"}], ",", "freqlo", ",", "freqhi"}], "}"}], ",", 
                RowBox[{"{", 
-                RowBox[{"Ilx", ",", " ", "0", ",", "1"}], "}"}]}], " ", "]"}],
-              "]"}], "}"}], "\[IndentingNewLine]", "}"}], ",", 
+                RowBox[{"Ilx", ",", " ", "0", ",", "1"}], "}"}], " ", ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"ImageSize", "->", "400"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"AxesLabel", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<\!\(\*SubscriptBox[\(I\), \(l\)]\)\>\"", ",", 
+                  "\"\<\!\(\*SubscriptBox[\(f\), \(0\)]\)\>\""}], "}"}]}]}], 
+              "\[IndentingNewLine]", "]"}], "]"}], "}"}], 
+           "\[IndentingNewLine]", "}"}], ",", 
           RowBox[{"Alignment", "\[Rule]", 
            RowBox[{"{", "Center", "}"}]}], ",", 
           RowBox[{"Dividers", "\[Rule]", 
@@ -471,15 +520,27 @@ Cell[BoxData[{
    3.564945196935665*^9, 3.564945245810465*^9}, {3.5649452981172647`*^9, 
    3.564945314278865*^9}, {3.564945355540865*^9, 3.564945361812065*^9}, {
    3.564945393979265*^9, 3.564945476642465*^9}, {3.566756814824727*^9, 
-   3.566756838880235*^9}}],
+   3.566756838880235*^9}, {3.616781512292879*^9, 3.616781578153564*^9}, {
+   3.616781625859949*^9, 3.616781717315442*^9}, {3.616781835634121*^9, 
+   3.616781907947266*^9}, {3.6167820028554363`*^9, 3.616782014318074*^9}, {
+   3.6167820483200073`*^9, 3.6167820530288687`*^9}, {3.616782084990142*^9, 
+   3.616782101322155*^9}, {3.616782190534575*^9, 3.6167822091173697`*^9}, {
+   3.616782451734049*^9, 3.616782467690172*^9}, {3.6167825032304*^9, 
+   3.6167825034152117`*^9}, {3.616782584373909*^9, 3.6167826321440887`*^9}, 
+   3.616782678727251*^9, {3.616783041599201*^9, 3.616783047703874*^9}, {
+   3.6167830896013527`*^9, 3.616783106957429*^9}, {3.616783305138283*^9, 
+   3.616783306255958*^9}, {3.616783601815681*^9, 3.616783713841896*^9}, {
+   3.6167837448279743`*^9, 3.616783815351262*^9}, {3.616783869715386*^9, 
+   3.6167838972398243`*^9}, {3.6167841890837107`*^9, 3.616784212750141*^9}}],
 
 Cell[BoxData[
  FormBox[
-  DynamicModuleBox[{$CellContext`Ic$$ = 0.35, $CellContext`Il$$ = 
-   0.224, $CellContext`Iref$$ = 1.25, $CellContext`pqua$$ = 
-   1.391022, $CellContext`ptau$$ = 0.0011936, $CellContext`\[Tau]lo$$ = 
-   0.005, $CellContext`\[Tau]hi$$ = 0.04, $CellContext`vinlo$$ = 
-   5, $CellContext`vinhi$$ = 20, $CellContext`freqlo$$ = 
+  DynamicModuleBox[{$CellContext`Ic$$ = 0.501077505514, $CellContext`Il$$ = 
+   0.399939947803, $CellContext`Iref$$ = 1.25, $CellContext`pqua$$ = 
+   1.07504875677, $CellContext`pilkr$$ = -0.00535058440032, \
+$CellContext`ptau$$ = 0.000789178726806, $CellContext`\[Tau]lo$$ = 
+   0.002, $CellContext`\[Tau]hi$$ = 0.04, $CellContext`vinlo$$ = 
+   0.5, $CellContext`vinhi$$ = 20, $CellContext`freqlo$$ = 
    20, $CellContext`freqhi$$ = 220}, 
    TagBox[GridBox[{
       {
@@ -491,23 +552,30 @@ Cell[BoxData[
            DynamicBox[ToBoxes[$CellContext`Ic$$, TraditionalForm],
             
             ImageSizeCache->{
-             21., {0., 
-              9.}}], "\<\"\\!\\(\\*SubscriptBox[\\(\[Rho]\\), \\(qua\\)]\\)\"\
-\>", 
+             53., {0., 
+              10.}}], "\<\"\\!\\(\\*SubscriptBox[\\(\[Rho]\\), \
+\\(qua\\)]\\)\"\>", 
            SliderBox[Dynamic[$CellContext`pqua$$], {1, 2, 0.1}], 
            DynamicBox[ToBoxes[$CellContext`pqua$$, TraditionalForm],
-            ImageSizeCache->{39., {0., 9.}}]},
+            ImageSizeCache->{45., {0., 10.}}]},
           {"\<\"\\!\\(\\*SubscriptBox[\\(I\\), \\(l\\)]\\)\"\>", 
            InputFieldBox[Dynamic[$CellContext`Il$$]], 
            DynamicBox[ToBoxes[$CellContext`Il$$, TraditionalForm],
             
             ImageSizeCache->{
-             27., {0., 
+             47., {1., 
               9.}}], "\<\"\\!\\(\\*SubscriptBox[\\(\[Rho]\\), \\(tau\\)]\\)\"\
 \>", 
-           SliderBox[Dynamic[$CellContext`ptau$$], {0.001, 0.00142, 0.00001}], 
+           
+           SliderBox[Dynamic[$CellContext`ptau$$], {0.0004, 0.00142, 
+            0.00001}], 
            DynamicBox[ToBoxes[$CellContext`ptau$$, TraditionalForm],
-            ImageSizeCache->{51., {0., 9.}}]}
+            ImageSizeCache->{75., {1., 10.}}]},
+          {"\<\"\"\>", "\<\"\"\>", "\<\"\"\>", "\<\"\\!\\(\\*SubscriptBox[\\(\
+\[Rho]\\), \\(ilkr\\)]\\)\"\>", 
+           SliderBox[Dynamic[$CellContext`pilkr$$], {-0.01, 0.01, 0.00001}], 
+           DynamicBox[ToBoxes[$CellContext`pilkr$$, TraditionalForm],
+            ImageSizeCache->{78., {0., 10.}}]}
          },
          AutoDelete->False,
          GridBoxAlignment->{"Columns" -> {{Center}}},
@@ -525,32 +593,33 @@ Cell[BoxData[
            DynamicBox[ToBoxes[$CellContext`\[Tau]lo$$, TraditionalForm],
             
             ImageSizeCache->{
-             27., {0., 
+             33., {0., 
               9.}}], "\<\"\\!\\(\\*SubscriptBox[\\(\[Tau]\\), \
 \\(hi\\)]\\)\"\>", 
            SliderBox[Dynamic[$CellContext`\[Tau]hi$$], {0.03, 0.05, 0.005}], 
            DynamicBox[ToBoxes[$CellContext`\[Tau]hi$$, TraditionalForm],
-            ImageSizeCache->{21., {0., 9.}}]},
+            ImageSizeCache->{26., {0., 9.}}]},
           {"\<\"\\!\\(\\*SubscriptBox[\\(v\\), \\(in_lo\\)]\\)\"\>", 
-           SliderBox[Dynamic[$CellContext`vinlo$$], {0, 10, 1}], 
+           SliderBox[Dynamic[$CellContext`vinlo$$], {0.5, 1, 0.1}], 
            DynamicBox[ToBoxes[$CellContext`vinlo$$, TraditionalForm],
             
             ImageSizeCache->{
-             6., {0., 
-              9.}}], "\<\"\\!\\(\\*SubscriptBox[\\(v\\), \\(in_hi\\)]\\)\"\>", 
+             18., {0., 
+              10.}}], "\<\"\\!\\(\\*SubscriptBox[\\(v\\), \
+\\(in_hi\\)]\\)\"\>", 
            SliderBox[Dynamic[$CellContext`vinhi$$], {15, 25, 1}], 
            DynamicBox[ToBoxes[$CellContext`vinhi$$, TraditionalForm],
-            ImageSizeCache->{12., {0., 9.}}]},
+            ImageSizeCache->{16., {0., 9.}}]},
           {"\<\"\\!\\(\\*SubscriptBox[\\(f\\), \\(lo\\)]\\)\"\>", 
            SliderBox[Dynamic[$CellContext`freqlo$$], {0, 50, 5}], 
            DynamicBox[ToBoxes[$CellContext`freqlo$$, TraditionalForm],
             
             ImageSizeCache->{
-             12., {0., 
+             16., {0., 
               9.}}], "\<\"\\!\\(\\*SubscriptBox[\\(f\\), \\(hi\\)]\\)\"\>", 
            SliderBox[Dynamic[$CellContext`freqhi$$], {150, 250, 5}], 
            DynamicBox[ToBoxes[$CellContext`freqhi$$, TraditionalForm],
-            ImageSizeCache->{18., {0., 9.}}]}
+            ImageSizeCache->{23., {0., 9.}}]}
          },
          AutoDelete->False,
          GridBoxAlignment->{"Columns" -> {{Center}}},
@@ -569,60 +638,62 @@ Cell[BoxData[
              First[
               
               FindRoot[$CellContext`\[Tau][$CellContext`ptau$$, \
-$CellContext`Ilx] == $CellContext`\[Tau]lo$$, {$CellContext`Ilx, 0.001}]], 
-             TraditionalForm],
-            ImageSizeCache->{67., {0., 9.}}], 
+$CellContext`pilkr$$, $CellContext`Ilx] == $CellContext`\[Tau]lo$$, \
+{$CellContext`Ilx, 0.01}]], TraditionalForm],
+            ImageSizeCache->{83., {1., 9.}}], 
            DynamicBox[ToBoxes[$CellContext`\[Tau]lo$$ 1000, TraditionalForm],
-            ImageSizeCache->{9., {0., 9.}}], "\<\"ms\"\>", 
+            ImageSizeCache->{12., {0., 9.}}], "\<\"ms\"\>", 
            DynamicBox[ToBoxes[
              First[
               
               FindRoot[$CellContext`\[Tau][$CellContext`ptau$$, \
-$CellContext`Ilx] == $CellContext`\[Tau]hi$$, {$CellContext`Ilx, 0.001}]], 
-             TraditionalForm],
-            ImageSizeCache->{67., {0., 9.}}], 
+$CellContext`pilkr$$, $CellContext`Ilx] == $CellContext`\[Tau]hi$$, \
+{$CellContext`Ilx, 0.01}]], TraditionalForm],
+            ImageSizeCache->{96., {0., 10.}}], 
            DynamicBox[ToBoxes[$CellContext`\[Tau]hi$$ 1000, TraditionalForm],
-            ImageSizeCache->{15., {0., 9.}}], "\<\"ms\"\>"},
+            ImageSizeCache->{19., {0., 9.}}], "\<\"ms\"\>"},
           {"\<\"\\!\\(\\*SubscriptBox[\\(v\\), \\(in\\)]\\)\"\>", 
            DynamicBox[ToBoxes[
              First[
               
               FindRoot[$CellContext`vin[$CellContext`pqua$$, \
-$CellContext`Ic$$, $CellContext`Ilx] == $CellContext`vinlo$$, \
-{$CellContext`Ilx, 0.001}]], TraditionalForm],
-            ImageSizeCache->{73., {0., 9.}}], 
+$CellContext`pilkr$$, $CellContext`Ic$$, $CellContext`Ilx] == \
+$CellContext`vinlo$$, {$CellContext`Ilx, 0.001}]], TraditionalForm],
+            ImageSizeCache->{118., {0., 10.}}], 
            DynamicBox[ToBoxes[$CellContext`vinlo$$, TraditionalForm],
-            ImageSizeCache->{6., {0., 9.}}], "\<\"V\"\>", 
+            ImageSizeCache->{18., {0., 10.}}], "\<\"V\"\>", 
            DynamicBox[ToBoxes[
              First[
               
               FindRoot[$CellContext`vin[$CellContext`pqua$$, \
-$CellContext`Ic$$, $CellContext`Ilx] == $CellContext`vinhi$$, \
-{$CellContext`Ilx, 0.001}]], TraditionalForm],
-            ImageSizeCache->{79., {0., 9.}}], 
+$CellContext`pilkr$$, $CellContext`Ic$$, $CellContext`Ilx] == \
+$CellContext`vinhi$$, {$CellContext`Ilx, 0.001}]], TraditionalForm],
+            ImageSizeCache->{111., {1., 10.}}], 
            DynamicBox[ToBoxes[$CellContext`vinhi$$, TraditionalForm],
-            ImageSizeCache->{12., {0., 9.}}], "\<\"V\"\>"},
+            ImageSizeCache->{16., {0., 9.}}], "\<\"V\"\>"},
           {"\<\"\\!\\(\\*SubscriptBox[\\(f\\), \\(0\\)]\\)\"\>", 
            DynamicBox[ToBoxes[
              First[
               FindRoot[$CellContext`f0[
-                 $CellContext`vin[$CellContext`pqua$$, $CellContext`Ic$$, \
-$CellContext`Ilx], 
-                 $CellContext`\[Tau][$CellContext`ptau$$, $CellContext`Ilx]] == \
-$CellContext`freqlo$$, {$CellContext`Ilx, 0.001}]], TraditionalForm],
-            ImageSizeCache->{73., {0., 9.}}], 
+                 $CellContext`vin[$CellContext`pqua$$, $CellContext`pilkr$$, \
+$CellContext`Ic$$, $CellContext`Ilx], 
+                 $CellContext`\[Tau][$CellContext`ptau$$, \
+$CellContext`pilkr$$, $CellContext`Ilx]] == $CellContext`freqlo$$, \
+{$CellContext`Ilx, 0.1}]], TraditionalForm],
+            ImageSizeCache->{103., {0., 10.}}], 
            DynamicBox[ToBoxes[$CellContext`freqlo$$, TraditionalForm],
-            ImageSizeCache->{12., {0., 9.}}], "\<\"Hz\"\>", 
+            ImageSizeCache->{16., {0., 9.}}], "\<\"Hz\"\>", 
            DynamicBox[ToBoxes[
              First[
               FindRoot[$CellContext`f0[
-                 $CellContext`vin[$CellContext`pqua$$, $CellContext`Ic$$, \
-$CellContext`Ilx], 
-                 $CellContext`\[Tau][$CellContext`ptau$$, $CellContext`Ilx]] == \
-$CellContext`freqhi$$, {$CellContext`Ilx, 0.001}]], TraditionalForm],
-            ImageSizeCache->{112., {0., 12.}}], 
+                 $CellContext`vin[$CellContext`pqua$$, $CellContext`pilkr$$, \
+$CellContext`Ic$$, $CellContext`Ilx], 
+                 $CellContext`\[Tau][$CellContext`ptau$$, \
+$CellContext`pilkr$$, $CellContext`Ilx]] == $CellContext`freqhi$$, \
+{$CellContext`Ilx, 0.1}]], TraditionalForm],
+            ImageSizeCache->{90., {0., 10.}}], 
            DynamicBox[ToBoxes[$CellContext`freqhi$$, TraditionalForm],
-            ImageSizeCache->{18., {0., 9.}}], "\<\"Hz\"\>"}
+            ImageSizeCache->{23., {0., 9.}}], "\<\"Hz\"\>"}
          },
          AutoDelete->False,
          GridBoxAlignment->{"Columns" -> {{Center}}},
@@ -638,23 +709,23 @@ $CellContext`freqhi$$, {$CellContext`Ilx, 0.001}]], TraditionalForm],
           {"\<\"\\!\\(\\*SubscriptBox[\\(\[Tau]\\), \\(m\\)]\\):\"\>", 
            PanelBox[
             DynamicBox[ToBoxes[
-              $CellContext`\[Tau][$CellContext`ptau$$, $CellContext`Il$$], 
-              TraditionalForm],
-             ImageSizeCache->{57., {0., 9.}}],
+              $CellContext`\[Tau][$CellContext`ptau$$, $CellContext`pilkr$$, \
+$CellContext`Il$$], TraditionalForm],
+             ImageSizeCache->{34., {0., 8.}}],
             Background->GrayLevel[0.85]], 
            PanelBox[
             
             DynamicBox[ToBoxes[
-             1000 $CellContext`\[Tau][$CellContext`ptau$$, $CellContext`Il$$],
-               TraditionalForm],
-             ImageSizeCache->{39., {0., 9.}}],
+             1000 $CellContext`\[Tau][$CellContext`ptau$$, \
+$CellContext`pilkr$$, $CellContext`Il$$], TraditionalForm],
+             ImageSizeCache->{12., {0., 8.}}],
             Background->GrayLevel[0.85]], "\<\"ms\"\>"},
           {"\<\"\\!\\(\\*SubscriptBox[\\(v\\), \\(in\\)]\\):\"\>", 
            PanelBox[
             DynamicBox[ToBoxes[
-              $CellContext`vin[$CellContext`pqua$$, $CellContext`Ic$$, \
-$CellContext`Il$$], TraditionalForm],
-             ImageSizeCache->{39., {0., 9.}}],
+              $CellContext`vin[$CellContext`pqua$$, $CellContext`pilkr$$, \
+$CellContext`Ic$$, $CellContext`Il$$], TraditionalForm],
+             ImageSizeCache->{47., {0., 8.}}],
             
             Background->GrayLevel[
              0.85]], "\<\"h(\\!\\(\\*SubscriptBox[\\(v\\), \
@@ -662,19 +733,19 @@ $CellContext`Il$$], TraditionalForm],
            PanelBox[
             DynamicBox[ToBoxes[
               $CellContext`h[
-               $CellContext`vin[$CellContext`pqua$$, $CellContext`Ic$$, \
-$CellContext`Il$$]], TraditionalForm],
-             ImageSizeCache->{39., {0., 9.}}],
+               $CellContext`vin[$CellContext`pqua$$, $CellContext`pilkr$$, \
+$CellContext`Ic$$, $CellContext`Il$$]], TraditionalForm],
+             ImageSizeCache->{48., {0., 8.}}],
             Background->GrayLevel[0.85]]},
           {"\<\"\\!\\(\\*SubscriptBox[\\(f\\), \\(0\\)]\\):\"\>", 
            PanelBox[
             DynamicBox[ToBoxes[
               $CellContext`f0[
-               $CellContext`vin[$CellContext`pqua$$, $CellContext`Ic$$, \
-$CellContext`Il$$], 
-               $CellContext`\[Tau][$CellContext`ptau$$, $CellContext`Il$$]], 
-              TraditionalForm],
-             ImageSizeCache->{39., {0., 9.}}],
+               $CellContext`vin[$CellContext`pqua$$, $CellContext`pilkr$$, \
+$CellContext`Ic$$, $CellContext`Il$$], 
+               $CellContext`\[Tau][$CellContext`ptau$$, $CellContext`pilkr$$, \
+$CellContext`Il$$]], TraditionalForm],
+             ImageSizeCache->{25., {0., 8.}}],
             Background->GrayLevel[0.85]], "", ""}
          },
          AutoDelete->False,
@@ -690,12 +761,15 @@ $CellContext`Il$$],
            DynamicBox[ToBoxes[
              Plot[{
                $CellContext`f0[
-                $CellContext`vin[$CellContext`pqua$$, $CellContext`Ic$$, \
-$CellContext`Ilx], 
-                $CellContext`\[Tau][$CellContext`ptau$$, $CellContext`Ilx]], \
-$CellContext`freqlo$$, $CellContext`freqhi$$}, {$CellContext`Ilx, 0, 1}], 
-             TraditionalForm],
-            ImageSizeCache->{180., {48., 53.}}]}
+                $CellContext`vin[$CellContext`pqua$$, $CellContext`pilkr$$, \
+$CellContext`Ic$$, $CellContext`Ilx], 
+                $CellContext`\[Tau][$CellContext`ptau$$, \
+$CellContext`pilkr$$, $CellContext`Ilx]], $CellContext`freqlo$$, \
+$CellContext`freqhi$$}, {$CellContext`Ilx, 0, 1}, ImageSize -> 400, 
+              AxesLabel -> {
+               "\!\(\*SubscriptBox[\(I\), \(l\)]\)", 
+                "\!\(\*SubscriptBox[\(f\), \(0\)]\)"}], TraditionalForm],
+            ImageSizeCache->{400., {120., 126.}}]}
          },
          AutoDelete->False,
          GridBoxAlignment->{"Columns" -> {{Center}}},
@@ -713,7 +787,18 @@ $CellContext`freqlo$$, $CellContext`freqhi$$}, {$CellContext`Ilx, 0, 1}],
  CellChangeTimes->{
   3.5650223246235285`*^9, 3.565627621613771*^9, {3.5668280002145753`*^9, 
    3.5668280004173756`*^9}, {3.5668318023684845`*^9, 3.566831802820916*^9}, 
-   3.566931185326537*^9, {3.573919820157692*^9, 3.5739198204540935`*^9}}]
+   3.566931185326537*^9, {3.573919820157692*^9, 3.5739198204540935`*^9}, {
+   3.615816423973296*^9, 3.615816438506516*^9}, 3.6167814857154512`*^9, 
+   3.616781592608612*^9, 3.6167817199414682`*^9, 3.616781796479247*^9, 
+   3.616781837022092*^9, {3.616781878876288*^9, 3.616781902382833*^9}, 
+   3.616782016368492*^9, {3.616782049005776*^9, 3.6167820539839487`*^9}, {
+   3.6167820940154457`*^9, 3.6167821019471827`*^9}, 3.616782217190166*^9, {
+   3.616782461993494*^9, 3.616782504334523*^9}, 3.6167825871105022`*^9, {
+   3.6167826173491383`*^9, 3.616782634345265*^9}, 3.616782679191988*^9, 
+   3.6167830505996437`*^9, {3.6167830982830973`*^9, 3.616783108425366*^9}, 
+   3.6167833073357897`*^9, {3.616783605641842*^9, 3.616783714841193*^9}, {
+   3.6167837691709642`*^9, 3.6167838159405537`*^9}, 3.616783900447693*^9, 
+   3.6167841067048073`*^9, 3.6167842138004303`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -721,6 +806,7 @@ Cell[CellGroupData[{
 Cell[BoxData[{
  RowBox[{
   RowBox[{"\[Rho]ref", "=", ".0221613115123"}], ";"}], "\[IndentingNewLine]", 
+
  RowBox[{
   RowBox[{"irefInv", " ", "=", " ", 
    RowBox[{"Range", "[", 
@@ -756,7 +842,7 @@ Cell[BoxData[
    3.565021608531329*^9, 3.5650216651437287`*^9}, 3.5650217855991287`*^9, 
    3.565628736746971*^9, {3.565628771285371*^9, 3.5656287859025707`*^9}, 
    3.5665904024299526`*^9, 3.566591999677438*^9, {3.5668501670472956`*^9, 
-   3.566850194160965*^9}}],
+   3.566850194160965*^9}, 3.615816465108313*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -773,7 +859,7 @@ Cell[BoxData[
    3.565021608531329*^9, 3.5650216651437287`*^9}, 3.5650217855991287`*^9, 
    3.565628736746971*^9, {3.565628771285371*^9, 3.5656287859025707`*^9}, 
    3.5665904024299526`*^9, 3.566591999677438*^9, {3.5668501670472956`*^9, 
-   3.566850194176565*^9}}],
+   3.566850194160965*^9}, 3.61581646518721*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -793,7 +879,7 @@ Cell[BoxData[
    3.565021608531329*^9, 3.5650216651437287`*^9}, 3.5650217855991287`*^9, 
    3.565628736746971*^9, {3.565628771285371*^9, 3.5656287859025707`*^9}, 
    3.5665904024299526`*^9, 3.566591999677438*^9, {3.5668501670472956`*^9, 
-   3.566850194192166*^9}}]
+   3.566850194160965*^9}, 3.6158164652717876`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -827,7 +913,7 @@ Cell[BoxData[
  CellChangeTimes->{
   3.564953324385623*^9, 3.5650181855206084`*^9, 3.565018223147808*^9, 
    3.5650183080274086`*^9, {3.565021568049329*^9, 3.565021589031329*^9}, 
-   3.5665919643605537`*^9}],
+   3.5665919643605537`*^9, 3.615816468418625*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -846,7 +932,7 @@ Cell[BoxData[
  CellChangeTimes->{
   3.564953324385623*^9, 3.5650181855206084`*^9, 3.565018223147808*^9, 
    3.5650183080274086`*^9, {3.565021568049329*^9, 3.565021589031329*^9}, 
-   3.566591964376172*^9}]
+   3.5665919643605537`*^9, 3.615816468532926*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -878,7 +964,7 @@ Cell[BoxData[
     FractionBox["79", "3"], ",", 
     FractionBox["80", "3"], ",", "27"}], "}"}], TraditionalForm]], "Output",
  CellChangeTimes->{3.566759471184202*^9, 3.5667645032878027`*^9, 
-  3.566831807922476*^9}]
+  3.566831807922476*^9, 3.615816471701951*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1281,10 +1367,10 @@ Cell[BoxData[
 }, Open  ]]
 },
 WindowSize->{1685, 1328},
-WindowMargins->{{363, Automatic}, {55, Automatic}},
+WindowMargins->{{Automatic, 140}, {96, Automatic}},
 PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> True}},
 ShowSelection->True,
-FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -1299,30 +1385,31 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 112, 1, 71, "Section"],
+Cell[579, 22, 112, 1, 74, "Section"],
+Cell[694, 25, 334, 7, 30, "Input"],
 Cell[CellGroupData[{
-Cell[716, 27, 20815, 446, 806, "Input",
+Cell[1053, 36, 23365, 497, 987, "Input",
  InitializationCell->True],
-Cell[21534, 475, 10943, 240, 585, "Output"]
+Cell[24421, 535, 12602, 265, 735, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[32514, 720, 1153, 21, 92, "Input"],
-Cell[33670, 743, 766, 15, 30, "Output"],
-Cell[34439, 760, 828, 15, 30, "Output"],
-Cell[35270, 777, 932, 18, 30, "Output"]
+Cell[37060, 805, 1154, 22, 88, "Input"],
+Cell[38217, 829, 788, 15, 31, "Output"],
+Cell[39008, 846, 849, 15, 31, "Output"],
+Cell[39860, 863, 956, 18, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[36239, 800, 706, 13, 52, "Input"],
-Cell[36948, 815, 701, 14, 30, "Output"],
-Cell[37652, 831, 870, 17, 30, "Output"]
+Cell[40853, 886, 706, 13, 50, "Input"],
+Cell[41562, 901, 723, 14, 31, "Output"],
+Cell[42288, 917, 894, 17, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[38559, 853, 290, 6, 31, "Input"],
-Cell[38852, 861, 738, 19, 48, "Output"]
+Cell[43219, 939, 290, 6, 30, "Input"],
+Cell[43512, 947, 760, 19, 50, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[39627, 885, 334, 7, 31, "Input"],
-Cell[39964, 894, 18374, 384, 386, "Output"]
+Cell[44309, 971, 334, 7, 30, "Input"],
+Cell[44646, 980, 18374, 384, 408, "Output"]
 }, Open  ]]
 }, Open  ]]
 }
