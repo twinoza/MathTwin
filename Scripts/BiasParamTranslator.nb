@@ -1,0 +1,486 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     20078,        477]
+NotebookOptionsPosition[     19483,        452]
+NotebookOutlinePosition[     19861,        468]
+CellTagsIndexPosition[     19818,        465]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Calibration Bias Parameter Translator\
+\>", "Title",
+ CellChangeTimes->{{3.618076221666893*^9, 3.618076225873115*^9}, {
+  3.6180772996619368`*^9, 3.618077301244191*^9}}],
+
+Cell[TextData[{
+ "This notebook can be used to check/translate between a given ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["i", "in"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " value and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "c"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " value, and such for all the various variables in the Soma Calibration \
+process.  For this iteration of the translator, it will assume that the ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "lkr"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " path is included in the measurements, as per the latest implementation in \
+the C code.  The practical use of this notebook is to be able to double check \
+that the values the user wants for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["i", "in"], " ", "and", " ", "\[Tau]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " are actually set to accurate biases.  This will validate that the C code \
+is doing what is expected in SomaCalib.cpp"
+}], "Text",
+ CellChangeTimes->{{3.618076232594193*^9, 3.618076305810356*^9}, {
+  3.618076350332885*^9, 3.618076475165286*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Iinput", "[", 
+    RowBox[{"\[Iota]in_", ",", "Ilk_", ",", "pqua_", ",", "pIlkr_"}], "]"}], ":=", 
+   FractionBox[
+    RowBox[{"\[Iota]in", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"Ilk", "+", "pIlkr"}], ")"}], "2"]}], 
+    RowBox[{"pqua", " ", "Ilk"}]]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Ileak", "[", 
+    RowBox[{"\[Tau]m_", ",", "ptau_", ",", "pIlkr_"}], "]"}], ":=", 
+   RowBox[{
+    FractionBox["ptau", "\[Tau]m"], "-", "pIlkr"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Iref", "[", 
+     RowBox[{"tref_", ",", "pref_"}], "]"}], ":=", 
+    FractionBox["pref", "tref"]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Iota]inCalc", "[", 
+    RowBox[{"Iin_", ",", "Ilk_", ",", "pqua_", ",", "pIlkr_"}], "]"}], ":=", 
+   RowBox[{"pqua", " ", 
+    FractionBox[
+     RowBox[{"Iin", " ", "Ilk"}], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"Ilk", "+", "pIlkr"}], ")"}], "2"]]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Tau]Calc", "[", 
+    RowBox[{"Ilk_", ",", "ptau_", ",", "pIlkr_"}], "]"}], ":=", 
+   FractionBox["ptau", 
+    RowBox[{"Ilk", "+", "pIlkr"}]]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"trefCalc", "[", 
+    RowBox[{"Iref_", ",", "pref_"}], "]"}], ":=", 
+   FractionBox["pref", "Iref"]}], ";"}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.6180763113076153`*^9, 3.6180763457479467`*^9}, {
+  3.6180764916004887`*^9, 3.618076928378539*^9}, {3.618076980243742*^9, 
+  3.6180769957595387`*^9}, {3.618077094630405*^9, 3.618077162150826*^9}, {
+  3.618077202123273*^9, 3.61807720381349*^9}, {3.61807842130975*^9, 
+  3.618078422188758*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Grid", "[", 
+  RowBox[{"{", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{"Grid", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\): \>\"", ",", " ", 
+           "pqua"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+          "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(tau\)]\): \>\"", ",", " ", 
+           "ptau"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+          "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(ref\)]\): \>\"", ",", 
+           "pref"}], "}"}]}], "}"}], "]"}], ","}], "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Grid", "[", 
+        RowBox[{"{", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<\!\(\*SubscriptBox[\(I\), \(input\)]\): \>\"", ",", " ", 
+            RowBox[{"Iinput", "[", 
+             RowBox[{"\[Iota]in", ",", 
+              RowBox[{"Ileak", "[", 
+               RowBox[{"\[Tau]", ",", "ptau", ",", "pIlkr"}], "]"}], ",", 
+              "pqua", ",", "pIlkr"}], "]"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<\!\(\*SubscriptBox[\(I\), \(leak\)]\): \>\"", ",", 
+            RowBox[{"Ileak", "[", 
+             RowBox[{"\[Tau]", ",", "ptau", ",", "pIlkr"}], "]"}]}], "}"}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<\!\(\*SubscriptBox[\(I\), \(ref\)]\): \>\"", ",", 
+            RowBox[{"Iref", "[", 
+             RowBox[{"tref", ",", "pref"}], "]"}]}], "}"}]}], 
+         "\[IndentingNewLine]", "}"}], "]"}], ",", 
+       RowBox[{"(*", "Grid", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "\[Iota]in", ",", "0.5", ",", 
+           "\"\<\!\(\*SubscriptBox[\(i\), \(in\)]\)\>\""}], "}"}], ",", "0", 
+         ",", "5.0", ",", "0.05", ",", 
+         RowBox[{"Appearance", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}],
+        ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "\[Tau]", ",", "0.01", ",", 
+           "\"\<\!\(\*SubscriptBox[\(\[Tau]\), \(m\)]\)\>\""}], "}"}], ",", 
+         "0.001", ",", "0.050", ",", "0.001", ",", 
+         RowBox[{"Appearance", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}],
+        ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "tref", ",", "0.00001", ",", 
+           "\"\<\!\(\*SubscriptBox[\(t\), \(ref\)]\)\>\""}], "}"}], ",", 
+         "0.00001", ",", "0.02", ",", 
+         RowBox[{"Appearance", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}],
+        ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"pqua", ",", "1.1892567109"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"ptau", ",", "0.00048743502132"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"pref", ",", "0.030351398165671999"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"pIlkr", ",", "0.00385717327476"}], "}"}]}], 
+      "\[IndentingNewLine]", "]"}], 
+     RowBox[{"(*", "Manipulate", "*)"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Grid", "[", 
+        RowBox[{"{", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<\!\(\*SubscriptBox[\(\[Iota]\), \(in\)]\): \>\"", ",", " ", 
+            RowBox[{"\[Iota]inCalc", "[", 
+             RowBox[{"Iin", ",", "Ilk", ",", "pqua", ",", "pIlkr"}], "]"}]}], 
+           "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<\!\(\*SubscriptBox[\(\[Tau]\), \(m\)]\): \>\"", ",", 
+            RowBox[{"\[Tau]Calc", "[", 
+             RowBox[{"Ilk", ",", "ptau", ",", "pIlkr"}], "]"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<\!\(\*SubscriptBox[\(t\), \(ref\)]\): \>\"", ",", 
+            RowBox[{"trefCalc", "[", 
+             RowBox[{"Iref", ",", "pref"}], "]"}]}], "}"}]}], 
+         "\[IndentingNewLine]", "}"}], "]"}], ",", 
+       RowBox[{"(*", "Grid", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "Iin", ",", "87.6443", ",", 
+           "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\""}], "}"}], ",", "10", 
+         ",", "10000", ",", "10", ",", 
+         RowBox[{"Appearance", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}],
+        ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "Ilk", ",", "327.794", ",", 
+           "\"\<\!\(\*SubscriptBox[\(I\), \(lk\)]\)\>\""}], "}"}], ",", "100",
+          ",", "4000", ",", "10", ",", 
+         RowBox[{"Appearance", "\[Rule]", " ", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}],
+        ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "Iref", ",", "91.0799", ",", 
+           "\"\<\!\(\*SubscriptBox[\(I\), \(ref\)]\)\>\""}], "}"}], ",", "10",
+          ",", "10000", ",", "10", ",", 
+         RowBox[{"Appearance", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}],
+        ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"pqua", ",", "1.1892567109"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"ptau", ",", "0.00048743502132"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"pref", ",", "0.030351398165671999"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"pIlkr", ",", "0.00385717327476"}], "}"}]}], 
+      "\[IndentingNewLine]", "]"}]}], 
+    RowBox[{"(*", "Manipulate", "*)"}], "\[IndentingNewLine]", "}"}], "}"}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.618077050569892*^9, 3.618077068485839*^9}, {
+  3.61807721233374*^9, 3.618077256310404*^9}, {3.6180781749684772`*^9, 
+  3.618078176968486*^9}, {3.618078226638608*^9, 3.6180784809149847`*^9}, {
+  3.618078635720834*^9, 3.618078660922419*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[GridBox[{
+     {
+      TagBox[
+       FormBox[
+        StyleBox[
+         DynamicModuleBox[{$CellContext`pIlkr$$ = 
+          0.00385717327476, $CellContext`pqua$$ = 
+          1.1892567109, $CellContext`pref$$ = 
+          0.030351398165672, $CellContext`ptau$$ = 
+          0.00048743502132, $CellContext`tref$$ = 
+          0.00001, $CellContext`\[Iota]in$$ = 0.5, $CellContext`\[Tau]$$ = 
+          0.01, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+          Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, 
+          Typeset`animvar$$ = 1, Typeset`name$$ = "\"untitled\"", 
+          Typeset`specs$$ = {{{
+             Hold[$CellContext`\[Iota]in$$], 0.5, 
+             "\!\(\*SubscriptBox[\(i\), \(in\)]\)"}, 0, 5., 0.05}, {{
+             Hold[$CellContext`\[Tau]$$], 0.01, 
+             "\!\(\*SubscriptBox[\(\[Tau]\), \(m\)]\)"}, 0.001, 0.05, 
+            0.001}, {{
+             Hold[$CellContext`tref$$], 0.00001, 
+             "\!\(\*SubscriptBox[\(t\), \(ref\)]\)"}, 0.00001, 0.02}, {
+            Hold[$CellContext`pqua$$], 1.1892567109}, {
+            Hold[$CellContext`ptau$$], 0.00048743502132}, {
+            Hold[$CellContext`pref$$], 0.030351398165672}, {
+            Hold[$CellContext`pIlkr$$], 0.00385717327476}}, Typeset`size$$ = {
+          111., {23.5, 30.5}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+          Typeset`skipInitDone$$ = True, $CellContext`\[Iota]in$373$$ = 
+          0, $CellContext`\[Tau]$374$$ = 0, $CellContext`tref$375$$ = 0}, 
+          
+          DynamicBox[Manipulate`ManipulateBoxes[
+           1, TraditionalForm, 
+            "Variables" :> {$CellContext`pIlkr$$ = 
+              0.00385717327476, $CellContext`pqua$$ = 
+              1.1892567109, $CellContext`pref$$ = 
+              0.030351398165672, $CellContext`ptau$$ = 
+              0.00048743502132, $CellContext`tref$$ = 
+              0.00001, $CellContext`\[Iota]in$$ = 0.5, $CellContext`\[Tau]$$ = 
+              0.01}, "ControllerVariables" :> {
+              Hold[$CellContext`\[Iota]in$$, $CellContext`\[Iota]in$373$$, 0], 
+              Hold[$CellContext`\[Tau]$$, $CellContext`\[Tau]$374$$, 0], 
+              Hold[$CellContext`tref$$, $CellContext`tref$375$$, 0]}, 
+            "OtherVariables" :> {
+             Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+              Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+              Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+              Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> 
+            Grid[{{"\!\(\*SubscriptBox[\(I\), \(input\)]\): ", 
+                $CellContext`Iinput[$CellContext`\[Iota]in$$, 
+                 $CellContext`Ileak[$CellContext`\[Tau]$$, \
+$CellContext`ptau$$, $CellContext`pIlkr$$], $CellContext`pqua$$, \
+$CellContext`pIlkr$$]}, {"\!\(\*SubscriptBox[\(I\), \(leak\)]\): ", 
+                $CellContext`Ileak[$CellContext`\[Tau]$$, \
+$CellContext`ptau$$, $CellContext`pIlkr$$]}, {
+               "\!\(\*SubscriptBox[\(I\), \(ref\)]\): ", 
+                $CellContext`Iref[$CellContext`tref$$, \
+$CellContext`pref$$]}}], 
+            "Specifications" :> {{{$CellContext`\[Iota]in$$, 0.5, 
+                "\!\(\*SubscriptBox[\(i\), \(in\)]\)"}, 0, 5., 0.05, 
+               Appearance -> {"Labeled", "Open"}}, {{$CellContext`\[Tau]$$, 
+                0.01, "\!\(\*SubscriptBox[\(\[Tau]\), \(m\)]\)"}, 0.001, 0.05,
+                0.001, 
+               Appearance -> {"Labeled", "Open"}}, {{$CellContext`tref$$, 
+                0.00001, "\!\(\*SubscriptBox[\(t\), \(ref\)]\)"}, 0.00001, 
+               0.02, Appearance -> {"Labeled", "Open"}}, {$CellContext`pqua$$,
+                1.1892567109}, {$CellContext`ptau$$, 
+               0.00048743502132}, {$CellContext`pref$$, 
+               0.030351398165672}, {$CellContext`pIlkr$$, 0.00385717327476}}, 
+            "Options" :> {}, "DefaultOptions" :> {}],
+           ImageSizeCache->{325., {171., 178.}},
+           SingleEvaluation->True],
+          Deinitialization:>None,
+          DynamicModuleValues:>{},
+          SynchronousInitialization->True,
+          UnsavedVariables:>{Typeset`initDone$$},
+          UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+         Deployed->True,
+         StripOnInput->False],
+        TraditionalForm],
+       Manipulate`InterpretManipulate[1]], 
+      TagBox[
+       FormBox[
+        StyleBox[
+         DynamicModuleBox[{$CellContext`Iin$$ = 87.6443, $CellContext`Ilk$$ = 
+          327.794, $CellContext`Iref$$ = 91.0799, $CellContext`pIlkr$$ = 
+          0.00385717327476, $CellContext`pqua$$ = 
+          1.1892567109, $CellContext`pref$$ = 
+          0.030351398165672, $CellContext`ptau$$ = 0.00048743502132, 
+          Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+          Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, 
+          Typeset`animvar$$ = 1, Typeset`name$$ = "\"untitled\"", 
+          Typeset`specs$$ = {{{
+             Hold[$CellContext`Iin$$], 87.6443, 
+             "\!\(\*SubscriptBox[\(I\), \(in\)]\)"}, 10, 10000, 10}, {{
+             Hold[$CellContext`Ilk$$], 327.794, 
+             "\!\(\*SubscriptBox[\(I\), \(lk\)]\)"}, 100, 4000, 10}, {{
+             Hold[$CellContext`Iref$$], 91.0799, 
+             "\!\(\*SubscriptBox[\(I\), \(ref\)]\)"}, 10, 10000, 10}, {
+            Hold[$CellContext`pqua$$], 1.1892567109}, {
+            Hold[$CellContext`ptau$$], 0.00048743502132}, {
+            Hold[$CellContext`pref$$], 0.030351398165672}, {
+            Hold[$CellContext`pIlkr$$], 0.00385717327476}}, Typeset`size$$ = {
+          119., {24., 31.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+          Typeset`skipInitDone$$ = True, $CellContext`Iin$404$$ = 
+          0, $CellContext`Ilk$405$$ = 0, $CellContext`Iref$406$$ = 0}, 
+          
+          DynamicBox[Manipulate`ManipulateBoxes[
+           1, TraditionalForm, 
+            "Variables" :> {$CellContext`Iin$$ = 87.6443, $CellContext`Ilk$$ = 
+              327.794, $CellContext`Iref$$ = 91.0799, $CellContext`pIlkr$$ = 
+              0.00385717327476, $CellContext`pqua$$ = 
+              1.1892567109, $CellContext`pref$$ = 
+              0.030351398165672, $CellContext`ptau$$ = 0.00048743502132}, 
+            "ControllerVariables" :> {
+              Hold[$CellContext`Iin$$, $CellContext`Iin$404$$, 0], 
+              Hold[$CellContext`Ilk$$, $CellContext`Ilk$405$$, 0], 
+              Hold[$CellContext`Iref$$, $CellContext`Iref$406$$, 0]}, 
+            "OtherVariables" :> {
+             Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+              Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+              Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+              Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> 
+            Grid[{{"\!\(\*SubscriptBox[\(\[Iota]\), \(in\)]\): ", 
+                $CellContext`\[Iota]inCalc[$CellContext`Iin$$, \
+$CellContext`Ilk$$, $CellContext`pqua$$, $CellContext`pIlkr$$]}, {
+               "\!\(\*SubscriptBox[\(\[Tau]\), \(m\)]\): ", 
+                $CellContext`\[Tau]Calc[$CellContext`Ilk$$, \
+$CellContext`ptau$$, $CellContext`pIlkr$$]}, {
+               "\!\(\*SubscriptBox[\(t\), \(ref\)]\): ", 
+                $CellContext`trefCalc[$CellContext`Iref$$, \
+$CellContext`pref$$]}}], 
+            "Specifications" :> {{{$CellContext`Iin$$, 87.6443, 
+                "\!\(\*SubscriptBox[\(I\), \(in\)]\)"}, 10, 10000, 10, 
+               Appearance -> {"Labeled", "Open"}}, {{$CellContext`Ilk$$, 
+                327.794, "\!\(\*SubscriptBox[\(I\), \(lk\)]\)"}, 100, 4000, 
+               10, Appearance -> {"Labeled", "Open"}}, {{$CellContext`Iref$$, 
+                91.0799, "\!\(\*SubscriptBox[\(I\), \(ref\)]\)"}, 10, 10000, 
+               10, Appearance -> {"Labeled", "Open"}}, {$CellContext`pqua$$, 
+               1.1892567109}, {$CellContext`ptau$$, 
+               0.00048743502132}, {$CellContext`pref$$, 
+               0.030351398165672}, {$CellContext`pIlkr$$, 0.00385717327476}}, 
+            "Options" :> {}, "DefaultOptions" :> {}],
+           ImageSizeCache->{325., {171., 178.}},
+           SingleEvaluation->True],
+          Deinitialization:>None,
+          DynamicModuleValues:>{},
+          SynchronousInitialization->True,
+          UnsavedVariables:>{Typeset`initDone$$},
+          UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+         Deployed->True,
+         StripOnInput->False],
+        TraditionalForm],
+       Manipulate`InterpretManipulate[1]]}
+    },
+    AutoDelete->False,
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Grid"], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.6180784017690907`*^9, {3.618078481873137*^9, 3.61807848689606*^9}, 
+   3.6180786618757467`*^9, 3.61816114410047*^9}]
+}, Open  ]],
+
+Cell[BoxData["  "], "Input",
+ CellChangeTimes->{{3.618078701814989*^9, 3.618078702675479*^9}}]
+}, Open  ]]
+},
+WindowToolbars->{"RulerBar", "EditBar"},
+WindowSize->{1280, 1549},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 179, 4, 93, "Title"],
+Cell[761, 28, 1163, 29, 91, "Text"],
+Cell[1927, 59, 1817, 52, 333, "Input",
+ InitializationCell->True],
+Cell[CellGroupData[{
+Cell[3769, 115, 6809, 167, 717, "Input",
+ InitializationCell->True],
+Cell[10581, 284, 8777, 161, 366, "Output"]
+}, Open  ]],
+Cell[19373, 448, 94, 1, 32, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
