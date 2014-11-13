@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    134901,       2760]
-NotebookOptionsPosition[    133314,       2704]
-NotebookOutlinePosition[    133751,       2721]
-CellTagsIndexPosition[    133708,       2718]
+NotebookDataLength[    134938,       2761]
+NotebookOptionsPosition[    133353,       2705]
+NotebookOutlinePosition[    133788,       2722]
+CellTagsIndexPosition[    133745,       2719]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -540,23 +540,23 @@ Cell[BoxData[
            DynamicBox[ToBoxes[$CellContext`Ic$$, TraditionalForm],
             
             ImageSizeCache->{
-             54., {1., 
+             55., {0., 
               10.}}], "\<\"\\!\\(\\*SubscriptBox[\\(\[Rho]\\), \
 \\(qua\\)]\\)\"\>", 
            InputFieldBox[Dynamic[$CellContext`pqua$$]], 
            DynamicBox[ToBoxes[$CellContext`pqua$$, TraditionalForm],
-            ImageSizeCache->{46., {0., 10.}}]},
+            ImageSizeCache->{47., {0., 10.}}]},
           {"\<\"\\!\\(\\*SubscriptBox[\\(I\\), \\(l\\)]\\)\"\>", 
            InputFieldBox[Dynamic[$CellContext`Il$$]], 
            DynamicBox[ToBoxes[$CellContext`Il$$, TraditionalForm],
             
             ImageSizeCache->{
-             54., {1., 
+             55., {0., 
               10.}}], "\<\"\\!\\(\\*SubscriptBox[\\(\[Rho]\\), \
 \\(tau\\)]\\)\"\>", 
            InputFieldBox[Dynamic[$CellContext`ptau$$]], 
            DynamicBox[ToBoxes[$CellContext`ptau$$, TraditionalForm],
-            ImageSizeCache->{61., {1., 10.}}]},
+            ImageSizeCache->{62., {0., 10.}}]},
           {"\<\"\"\>", "\<\"\"\>", "\<\"\"\>", "\<\"\\!\\(\\*SubscriptBox[\\(\
 \[Rho]\\), \\(ilkr\\)]\\)\"\>", 
            InputFieldBox[Dynamic[$CellContext`pilkr$$]], 
@@ -579,33 +579,33 @@ Cell[BoxData[
            DynamicBox[ToBoxes[$CellContext`\[Tau]lo$$, TraditionalForm],
             
             ImageSizeCache->{
-             33., {0., 
-              9.}}], "\<\"\\!\\(\\*SubscriptBox[\\(\[Tau]\\), \
-\\(hi\\)]\\)\"\>", 
+             34., {0., 
+              10.}}], "\<\"\\!\\(\\*SubscriptBox[\\(\[Tau]\\), \\(hi\\)]\\)\"\
+\>", 
            SliderBox[Dynamic[$CellContext`\[Tau]hi$$], {0.03, 0.05, 0.005}], 
            DynamicBox[ToBoxes[$CellContext`\[Tau]hi$$, TraditionalForm],
-            ImageSizeCache->{26., {0., 9.}}]},
+            ImageSizeCache->{27., {0., 10.}}]},
           {"\<\"\\!\\(\\*SubscriptBox[\\(v\\), \\(in_lo\\)]\\)\"\>", 
            SliderBox[Dynamic[$CellContext`vinlo$$], {0.5, 1, 0.1}], 
            DynamicBox[ToBoxes[$CellContext`vinlo$$, TraditionalForm],
             
             ImageSizeCache->{
-             18., {0., 
+             20., {0., 
               10.}}], "\<\"\\!\\(\\*SubscriptBox[\\(v\\), \
 \\(in_hi\\)]\\)\"\>", 
            SliderBox[Dynamic[$CellContext`vinhi$$], {15, 25, 1}], 
            DynamicBox[ToBoxes[$CellContext`vinhi$$, TraditionalForm],
-            ImageSizeCache->{16., {0., 9.}}]},
+            ImageSizeCache->{16., {0., 10.}}]},
           {"\<\"\\!\\(\\*SubscriptBox[\\(f\\), \\(lo\\)]\\)\"\>", 
            SliderBox[Dynamic[$CellContext`freqlo$$], {0, 50, 5}], 
            DynamicBox[ToBoxes[$CellContext`freqlo$$, TraditionalForm],
             
             ImageSizeCache->{
              16., {0., 
-              9.}}], "\<\"\\!\\(\\*SubscriptBox[\\(f\\), \\(hi\\)]\\)\"\>", 
+              10.}}], "\<\"\\!\\(\\*SubscriptBox[\\(f\\), \\(hi\\)]\\)\"\>", 
            SliderBox[Dynamic[$CellContext`freqhi$$], {150, 250, 5}], 
            DynamicBox[ToBoxes[$CellContext`freqhi$$, TraditionalForm],
-            ImageSizeCache->{23., {0., 9.}}]}
+            ImageSizeCache->{23., {0., 10.}}]}
          },
          AutoDelete->False,
          GridBoxAlignment->{"Columns" -> {{Center}}},
@@ -626,18 +626,18 @@ Cell[BoxData[
               FindRoot[$CellContext`\[Tau][$CellContext`ptau$$, \
 $CellContext`pilkr$$, $CellContext`Ilx] == $CellContext`\[Tau]lo$$, \
 {$CellContext`Ilx, 0.01}]], TraditionalForm],
-            ImageSizeCache->{90., {0., 10.}}], 
+            ImageSizeCache->{94., {0., 11.}}], 
            DynamicBox[ToBoxes[$CellContext`\[Tau]lo$$ 1000, TraditionalForm],
-            ImageSizeCache->{12., {0., 9.}}], "\<\"ms\"\>", 
+            ImageSizeCache->{12., {0., 10.}}], "\<\"ms\"\>", 
            DynamicBox[ToBoxes[
              First[
               
               FindRoot[$CellContext`\[Tau][$CellContext`ptau$$, \
 $CellContext`pilkr$$, $CellContext`Ilx] == $CellContext`\[Tau]hi$$, \
 {$CellContext`Ilx, 0.01}]], TraditionalForm],
-            ImageSizeCache->{96., {1., 10.}}], 
+            ImageSizeCache->{101., {0., 11.}}], 
            DynamicBox[ToBoxes[$CellContext`\[Tau]hi$$ 1000, TraditionalForm],
-            ImageSizeCache->{19., {0., 9.}}], "\<\"ms\"\>"},
+            ImageSizeCache->{19., {0., 10.}}], "\<\"ms\"\>"},
           {"\<\"\\!\\(\\*SubscriptBox[\\(v\\), \\(in\\)]\\)\"\>", 
            DynamicBox[ToBoxes[
              First[
@@ -645,18 +645,18 @@ $CellContext`pilkr$$, $CellContext`Ilx] == $CellContext`\[Tau]hi$$, \
               FindRoot[$CellContext`vin[$CellContext`pqua$$, \
 $CellContext`pilkr$$, $CellContext`Ic$$, $CellContext`Ilx] == \
 $CellContext`vinlo$$, {$CellContext`Ilx, 0.001}]], TraditionalForm],
-            ImageSizeCache->{118., {1., 10.}}], 
+            ImageSizeCache->{122., {0., 11.}}], 
            DynamicBox[ToBoxes[$CellContext`vinlo$$, TraditionalForm],
-            ImageSizeCache->{18., {0., 10.}}], "\<\"V\"\>", 
+            ImageSizeCache->{20., {0., 10.}}], "\<\"V\"\>", 
            DynamicBox[ToBoxes[
              First[
               
               FindRoot[$CellContext`vin[$CellContext`pqua$$, \
 $CellContext`pilkr$$, $CellContext`Ic$$, $CellContext`Ilx] == \
 $CellContext`vinhi$$, {$CellContext`Ilx, 0.001}]], TraditionalForm],
-            ImageSizeCache->{111., {1., 10.}}], 
+            ImageSizeCache->{115., {0., 11.}}], 
            DynamicBox[ToBoxes[$CellContext`vinhi$$, TraditionalForm],
-            ImageSizeCache->{16., {0., 9.}}], "\<\"V\"\>"},
+            ImageSizeCache->{16., {0., 10.}}], "\<\"V\"\>"},
           {"\<\"\\!\\(\\*SubscriptBox[\\(f\\), \\(0\\)]\\)\"\>", 
            DynamicBox[ToBoxes[
              First[
@@ -666,9 +666,9 @@ $CellContext`Ic$$, $CellContext`Ilx],
                  $CellContext`\[Tau][$CellContext`ptau$$, \
 $CellContext`pilkr$$, $CellContext`Ilx]] == $CellContext`freqlo$$, \
 {$CellContext`Ilx, 0.1}]], TraditionalForm],
-            ImageSizeCache->{103., {0., 10.}}], 
+            ImageSizeCache->{107., {0., 11.}}], 
            DynamicBox[ToBoxes[$CellContext`freqlo$$, TraditionalForm],
-            ImageSizeCache->{16., {0., 9.}}], "\<\"Hz\"\>", 
+            ImageSizeCache->{16., {0., 10.}}], "\<\"Hz\"\>", 
            DynamicBox[ToBoxes[
              First[
               FindRoot[$CellContext`f0[
@@ -677,9 +677,9 @@ $CellContext`Ic$$, $CellContext`Ilx],
                  $CellContext`\[Tau][$CellContext`ptau$$, \
 $CellContext`pilkr$$, $CellContext`Ilx]] == $CellContext`freqhi$$, \
 {$CellContext`Ilx, 0.1}]], TraditionalForm],
-            ImageSizeCache->{90., {1., 10.}}], 
+            ImageSizeCache->{94., {0., 11.}}], 
            DynamicBox[ToBoxes[$CellContext`freqhi$$, TraditionalForm],
-            ImageSizeCache->{23., {0., 9.}}], "\<\"Hz\"\>"}
+            ImageSizeCache->{23., {0., 10.}}], "\<\"Hz\"\>"}
          },
          AutoDelete->False,
          GridBoxAlignment->{"Columns" -> {{Center}}},
@@ -755,7 +755,7 @@ $CellContext`freqhi$$, 150}, {$CellContext`Ilx, 0, 1}, ImageSize -> 400,
               AxesLabel -> {
                "\!\(\*SubscriptBox[\(I\), \(l\)]\)", 
                 "\!\(\*SubscriptBox[\(f\), \(0\)]\)"}], TraditionalForm],
-            ImageSizeCache->{400., {117., 122.}}]}
+            ImageSizeCache->{400., {120., 125.}}]}
          },
          AutoDelete->False,
          GridBoxAlignment->{"Columns" -> {{Center}}},
@@ -770,7 +770,8 @@ $CellContext`freqhi$$, 150}, {$CellContext`Ilx, 0, 1}, ImageSize -> 400,
      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
     "Grid"],
    DynamicModuleValues:>{}], TraditionalForm]], "Output",
- CellChangeTimes->{{3.617031447143725*^9, 3.61703144903388*^9}}]
+ CellChangeTimes->{{3.617031447143725*^9, 3.61703144903388*^9}, 
+   3.6213583057575617`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2706,7 +2707,7 @@ WindowSize->{1685, 1328},
 WindowMargins->{{Automatic, 144}, {Automatic, 47}},
 PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> True}},
 ShowSelection->True,
-FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -2724,42 +2725,42 @@ Cell[CellGroupData[{
 Cell[579, 22, 112, 1, 74, "Section"],
 Cell[694, 25, 334, 7, 30, "Input"],
 Cell[CellGroupData[{
-Cell[1053, 36, 22992, 486, 967, "Input",
+Cell[1053, 36, 22992, 486, 964, "Input",
  InitializationCell->True],
-Cell[24048, 524, 11513, 248, 731, "Output"]
+Cell[24048, 524, 11552, 249, 730, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[35598, 777, 517, 13, 75, "Input"],
-Cell[36118, 792, 320, 8, 31, "Output"],
-Cell[36441, 802, 419, 9, 31, "Output"]
+Cell[35637, 778, 517, 13, 75, "Input"],
+Cell[36157, 793, 320, 8, 31, "Output"],
+Cell[36480, 803, 419, 9, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[36897, 816, 341, 7, 30, "Input"],
-Cell[37241, 825, 319, 7, 31, "Output"]
+Cell[36936, 817, 341, 7, 30, "Input"],
+Cell[37280, 826, 319, 7, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[37597, 837, 7312, 164, 430, "Input"],
-Cell[44912, 1003, 1737, 34, 191, "Output"],
-Cell[46652, 1039, 60637, 1097, 263, "Output"]
+Cell[37636, 838, 7312, 164, 430, "Input"],
+Cell[44951, 1004, 1737, 34, 191, "Output"],
+Cell[46691, 1040, 60637, 1097, 263, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[107326, 2141, 1154, 22, 88, "Input"],
-Cell[108483, 2165, 788, 15, 31, "Output"],
-Cell[109274, 2182, 849, 15, 31, "Output"],
-Cell[110126, 2199, 956, 18, 31, "Output"]
+Cell[107365, 2142, 1154, 22, 88, "Input"],
+Cell[108522, 2166, 788, 15, 31, "Output"],
+Cell[109313, 2183, 849, 15, 31, "Output"],
+Cell[110165, 2200, 956, 18, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[111119, 2222, 706, 13, 50, "Input"],
-Cell[111828, 2237, 723, 14, 31, "Output"],
-Cell[112554, 2253, 894, 17, 31, "Output"]
+Cell[111158, 2223, 706, 13, 50, "Input"],
+Cell[111867, 2238, 723, 14, 31, "Output"],
+Cell[112593, 2254, 894, 17, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[113485, 2275, 290, 6, 30, "Input"],
-Cell[113778, 2283, 760, 19, 50, "Output"]
+Cell[113524, 2276, 290, 6, 30, "Input"],
+Cell[113817, 2284, 760, 19, 50, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[114575, 2307, 334, 7, 30, "Input"],
-Cell[114912, 2316, 18374, 384, 408, "Output"]
+Cell[114614, 2308, 334, 7, 30, "Input"],
+Cell[114951, 2317, 18374, 384, 408, "Output"]
 }, Open  ]]
 }, Open  ]]
 }

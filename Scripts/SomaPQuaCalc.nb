@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    367205,       8061]
-NotebookOptionsPosition[    359575,       7809]
-NotebookOutlinePosition[    359976,       7826]
-CellTagsIndexPosition[    359933,       7823]
+NotebookDataLength[    374093,       8163]
+NotebookOptionsPosition[    366587,       7914]
+NotebookOutlinePosition[    366988,       7931]
+CellTagsIndexPosition[    366945,       7928]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,9 +26,10 @@ Cell["Tau Soma Simulation Data Parser", "Section",
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"imgSizer", "=", "650"}], ";"}]], "Input",
+  RowBox[{"imgSizer", "=", "Full"}], ";"}]], "Input",
  InitializationCell->True,
- CellChangeTimes->{{3.606171432249769*^9, 3.606171445266354*^9}}],
+ CellChangeTimes->{{3.606171432249769*^9, 3.606171445266354*^9}, {
+  3.624739288240505*^9, 3.624739290093575*^9}}],
 
 Cell[CellGroupData[{
 
@@ -408,7 +409,8 @@ offset: \"\>",
    3.604414349023226*^9}, 3.6044143880326643`*^9, {3.604414423633443*^9, 
    3.6044144470552464`*^9}, 3.604415094709714*^9, 3.604848117262424*^9, 
    3.6048481673113832`*^9, 3.6053633933101187`*^9, 3.606171408387808*^9, 
-   3.606171496409725*^9, 3.6086440683111553`*^9}],
+   3.606171496409725*^9, 3.6086440683111553`*^9, 3.6213427792747583`*^9, 
+   3.624739307356763*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -429,7 +431,8 @@ is included: \"\>",
    3.604414349023226*^9}, 3.6044143880326643`*^9, {3.604414423633443*^9, 
    3.6044144470552464`*^9}, 3.604415094709714*^9, 3.604848117262424*^9, 
    3.6048481673113832`*^9, 3.6053633933101187`*^9, 3.606171408387808*^9, 
-   3.606171496409725*^9, 3.60864406850447*^9}],
+   3.606171496409725*^9, 3.6086440683111553`*^9, 3.6213427792747583`*^9, 
+   3.6247393075814734`*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -458,7 +461,8 @@ Cell[BoxData[
    3.604414349023226*^9}, 3.6044143880326643`*^9, {3.604414423633443*^9, 
    3.6044144470552464`*^9}, 3.604415094709714*^9, 3.604848117262424*^9, 
    3.6048481673113832`*^9, 3.6053633933101187`*^9, 3.606171408387808*^9, 
-   3.606171496409725*^9, 3.6086440691363087`*^9}]
+   3.606171496409725*^9, 3.6086440683111553`*^9, 3.6213427792747583`*^9, 
+   3.624739307857143*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -478,19 +482,19 @@ Cell[BoxData[
          Hold[$CellContext`yMin$$], -4.*^-14}, -1.*^-13, 1.*^-12, 
         1.0000000000000002`*^-14}, {{
          Hold[$CellContext`yMax$$], 3.5*^-13}, 1.*^-13, 1.*^-12, 
-        1.0000000000000002`*^-14}}, Typeset`size$$ = {898., {85., 23.}}, 
+        1.0000000000000002`*^-14}}, Typeset`size$$ = {1087., {338., 343.}}, 
       Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`xMin$30776$$ = 0, $CellContext`xMax$30777$$ = 
-      0, $CellContext`yMin$30778$$ = 0, $CellContext`yMax$30779$$ = 0}, 
+      True, $CellContext`xMin$140667$$ = 0, $CellContext`xMax$140668$$ = 
+      0, $CellContext`yMin$140669$$ = 0, $CellContext`yMax$140670$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, 
         "Variables" :> {$CellContext`xMax$$ = 3.5*^-13, $CellContext`xMin$$ = 
           0, $CellContext`yMax$$ = 3.5*^-13, $CellContext`yMin$$ = -4.*^-14}, 
         "ControllerVariables" :> {
-          Hold[$CellContext`xMin$$, $CellContext`xMin$30776$$, 0], 
-          Hold[$CellContext`xMax$$, $CellContext`xMax$30777$$, 0], 
-          Hold[$CellContext`yMin$$, $CellContext`yMin$30778$$, 0], 
-          Hold[$CellContext`yMax$$, $CellContext`yMax$30779$$, 0]}, 
+          Hold[$CellContext`xMin$$, $CellContext`xMin$140667$$, 0], 
+          Hold[$CellContext`xMax$$, $CellContext`xMax$140668$$, 0], 
+          Hold[$CellContext`yMin$$, $CellContext`yMin$140669$$, 0], 
+          Hold[$CellContext`yMax$$, $CellContext`yMax$140670$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -529,7 +533,7 @@ Cell[BoxData[
             3.5*^-13}, 1.*^-13, 1.*^-12, 1.0000000000000002`*^-14, 
            Appearance -> {"Labeled", "Open"}}}, "Options" :> {}, 
         "DefaultOptions" :> {}],
-       ImageSizeCache->{945., {178., 185.}},
+       ImageSizeCache->{1134., {463., 471.}},
        SingleEvaluation->True],
       Deinitialization:>None,
       DynamicModuleValues:>{},
@@ -545,61 +549,8 @@ Cell[BoxData[
    3.604414349411304*^9}, 3.6044143884878073`*^9, {3.604414423995346*^9, 
    3.604414447411749*^9}, 3.60441509505189*^9, 3.60484811780154*^9, 
    3.604848168397533*^9, 3.6053633941378813`*^9, 3.6061714092193937`*^9, 
-   3.606171497097711*^9, 3.608644069602119*^9}],
-
-Cell[BoxData[
- FormBox[
-  RowBox[{
-   StyleBox[
-    RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
-   RowBox[{
-   ":", " "}], "\<\"\[NoBreak]\\!\\(TraditionalForm\\`dataVals\\)\[NoBreak] \
-is not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
-\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
-\\)\"\>"}], TraditionalForm]], "Message", "MSG",
- CellChangeTimes->{3.6109920551381273`*^9}],
-
-Cell[BoxData[
- FormBox[
-  RowBox[{
-   StyleBox[
-    RowBox[{"Show", "::", "gcomb"}], "MessageName"], 
-   RowBox[{
-   ":", " "}], "\<\"Could not combine the graphics objects in \
-\[NoBreak]\\!\\(TraditionalForm\\`\\(Show[\\(\\(\\(\\(ListPlot[\\(\\(dataVals,\
- \\(\\(ImageSize \[Rule] imgSizer\\)\\), \\(\\(PlotRange \[Rule] \\(\\((\
-\[NoBreak] \\*GridBox[{{\\\"0\\\", \\\"3.5`*^-13\\\"}, {\\(-4.`*^-14\\), \
-\\\"3.5`*^-13\\\"}}, RowSpacings -> 1, ColumnSpacings -> 1, RowAlignments -> \
-Baseline, ColumnAlignments -> Center] \[NoBreak])\\)\\)\\)\\), \
-\\(\\(PlotStyle \[Rule] \\(\\(RGBColor[\\(\\(0.709133`, 0.747539`, \
-0.83711`\\)\\)]\\)\\)\\)\\), \\(\\(FrameLabel \[Rule] \\(\\({\\*StyleBox[\\\"\
-\\\\\\\"\\\\\\\\!\\\\\\\\(\\\\\\\\*SubscriptBox[\\\\\\\\(I\\\\\\\\), \
-\\\\\\\\(in\\\\\\\\)]\\\\\\\\)(A)\\\\\\\"\\\", Medium, Rule[FontFamily, \
-\\\"Helvetica\\\"], Rule[StripOnInput, False]], \
-\\*StyleBox[\\\"\\\\\\\"0.5*\\\\\\\\!\\\\\\\\(\\\\\\\\*SubscriptBox[\\\\\\\\(\
-I\\\\\\\\), \\\\\\\\(lk\\\\\\\\)]\\\\\\\\)(A)\\\\\\\"\\\", Medium, \
-Rule[FontFamily, \\\"Helvetica\\\"], Rule[StripOnInput, False]]}\\)\\)\\)\\), \
-\\(\\(Frame \[Rule] True\\)\\), \\(\\(LabelStyle \[Rule] \
-\\(\\(Directive[\\(\\(\\(\\(FontTracking \[Rule] \\\"Plain\\\"\\)\\), \
-\\(\\(FontSize \[Rule] 8\\)\\)\\)\\)]\\)\\)\\)\\), \\(\\(PlotLabel \[Rule] \
-\\*StyleBox[\\\"\\\\\\\"Bifurcation Curve from Simulated Neuron \
-Firing\\\\\\\"\\\", 13, Rule[FontTracking, \\\"Plain\\\"], Rule[StripOnInput, \
-False]]\\)\\), \\(\\(ImagePadding \[Rule] \\(\\((\[NoBreak] \
-\\*GridBox[{{\\\"80\\\", \\\"30\\\"}, {\\\"50\\\", \\\"10\\\"}}, RowSpacings \
--> 1, ColumnSpacings -> 1, RowAlignments -> Baseline, ColumnAlignments -> \
-Center] \[NoBreak])\\)\\)\\)\\), \\(\\(AxesOrigin \[Rule] \\(\\({0, \
-\\(\\(-4.`*^-14\\)\\)}\\)\\)\\)\\)\\)\\)]\\)\\), \\*GraphicsBox[List[], \
-List[Rule[AspectRatio, NCache[Power[GoldenRatio, -1], 0.6180339887498948`]], \
-Rule[Axes, True], Rule[AxesLabel, List[None, None]], Rule[AxesOrigin, List[0, \
-0]], Rule[Method, List[Rule[\\\"AxesInFront\\\", True]]], Rule[PlotRange, \
-List[List[0, 3.5`*^-13], List[0.`, 0.`]]], Rule[PlotRangeClipping, True], \
-Rule[PlotRangePadding, List[Scaled[0.02`], Scaled[0.02`]]]]]\\)\\)]\\)\\)\
-\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/Show/gcomb\\\", ButtonNote -> \
-\\\"Show::gcomb\\\"]\\)\"\>"}], TraditionalForm]], "Message", "MSG",
- CellChangeTimes->{3.610992055301783*^9}]
+   3.606171497097711*^9, 3.608644069602119*^9, 3.621342783091522*^9, 
+   3.6247393083667088`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1061,16 +1012,17 @@ Cell[BoxData[
     StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(\[Rho]\\), \\(qua\\)]\\) with no \
 offset: \"\>",
      StripOnInput->False,
-     FontWeight->Bold], "\[InvisibleSpace]", "1.0037043815208453`"}],
+     FontWeight->Bold], "\[InvisibleSpace]", "1.0037043815208455`"}],
    SequenceForm[
     Style["\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\) with no offset: ", Bold],
-     1.0037043815208453`],
+     1.0037043815208455`],
    Editable->False], TraditionalForm]], "Print",
  CellChangeTimes->{
   3.60443003595566*^9, 3.6048423566183662`*^9, 3.60484325669095*^9, 
    3.604843418646473*^9, 3.604843634366116*^9, 3.604848123148394*^9, {
    3.604848194060693*^9, 3.604848199443925*^9}, 3.60536335951268*^9, 
-   3.6061714174317617`*^9, 3.606171498518977*^9, 3.608644076557205*^9}],
+   3.6061714174317617`*^9, 3.606171498518977*^9, 3.608644076557205*^9, 
+   3.621342807931307*^9, 3.624739318503903*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -1079,17 +1031,18 @@ Cell[BoxData[
     StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(\[Rho]\\), \\(qua\\)]\\) if offset \
 is included: \"\>",
      StripOnInput->False,
-     FontWeight->Bold], "\[InvisibleSpace]", "1.1335059535557583`"}],
+     FontWeight->Bold], "\[InvisibleSpace]", "1.1335059535557586`"}],
    SequenceForm[
     Style[
     "\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\) if offset is included: ", 
-     Bold], 1.1335059535557583`],
+     Bold], 1.1335059535557586`],
    Editable->False], TraditionalForm]], "Print",
  CellChangeTimes->{
   3.60443003595566*^9, 3.6048423566183662`*^9, 3.60484325669095*^9, 
    3.604843418646473*^9, 3.604843634366116*^9, 3.604848123148394*^9, {
    3.604848194060693*^9, 3.604848199443925*^9}, 3.60536335951268*^9, 
-   3.6061714174317617`*^9, 3.606171498518977*^9, 3.608644076739382*^9}],
+   3.6061714174317617`*^9, 3.606171498518977*^9, 3.608644076557205*^9, 
+   3.621342807931307*^9, 3.62473931874314*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -1098,7 +1051,7 @@ Cell[BoxData[
     StyleBox["\<\"Total Offset: \"\>",
      StripOnInput->False,
      FontWeight->Bold], "\[InvisibleSpace]", 
-    TemplateBox[{RowBox[{"-", "22.641184089491404`"}]},
+    TemplateBox[{RowBox[{"-", "22.64118408949144`"}]},
      "QuantityUnit",
      DisplayFunction->(TooltipBox[
        StyleBox[
@@ -1110,13 +1063,14 @@ Cell[BoxData[
         RowBox[{#, ",", "\"Femtoamperes\""}], "]"}]& )]}],
    SequenceForm[
     Style["Total Offset: ", Bold], 
-    Quantity[-22.641184089491404`, "Femtoamperes"]],
+    Quantity[-22.64118408949144, "Femtoamperes"]],
    Editable->False], TraditionalForm]], "Print",
  CellChangeTimes->{
   3.60443003595566*^9, 3.6048423566183662`*^9, 3.60484325669095*^9, 
    3.604843418646473*^9, 3.604843634366116*^9, 3.604848123148394*^9, {
    3.604848194060693*^9, 3.604848199443925*^9}, 3.60536335951268*^9, 
-   3.6061714174317617`*^9, 3.606171498518977*^9, 3.608644076921633*^9}]
+   3.6061714174317617`*^9, 3.606171498518977*^9, 3.608644076557205*^9, 
+   3.621342807931307*^9, 3.6247393189779367`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -1136,19 +1090,19 @@ Cell[BoxData[
          Hold[$CellContext`yMin$$], -4.*^-14}, -1.*^-13, 1.*^-12, 
         1.0000000000000002`*^-14}, {{
          Hold[$CellContext`yMax$$], 3.5*^-13}, 1.*^-13, 1.*^-12, 
-        1.0000000000000002`*^-14}}, Typeset`size$$ = {650., {203., 209.}}, 
+        1.0000000000000002`*^-14}}, Typeset`size$$ = {1087., {338., 343.}}, 
       Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`xMin$31690$$ = 0, $CellContext`xMax$31691$$ = 
-      0, $CellContext`yMin$31692$$ = 0, $CellContext`yMax$31693$$ = 0}, 
+      True, $CellContext`xMin$143828$$ = 0, $CellContext`xMax$143829$$ = 
+      0, $CellContext`yMin$143830$$ = 0, $CellContext`yMax$143831$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, 
         "Variables" :> {$CellContext`xMax$$ = 3.5*^-13, $CellContext`xMin$$ = 
           0, $CellContext`yMax$$ = 3.5*^-13, $CellContext`yMin$$ = -4.*^-14}, 
         "ControllerVariables" :> {
-          Hold[$CellContext`xMin$$, $CellContext`xMin$31690$$, 0], 
-          Hold[$CellContext`xMax$$, $CellContext`xMax$31691$$, 0], 
-          Hold[$CellContext`yMin$$, $CellContext`yMin$31692$$, 0], 
-          Hold[$CellContext`yMax$$, $CellContext`yMax$31693$$, 0]}, 
+          Hold[$CellContext`xMin$$, $CellContext`xMin$143828$$, 0], 
+          Hold[$CellContext`xMax$$, $CellContext`xMax$143829$$, 0], 
+          Hold[$CellContext`yMin$$, $CellContext`yMin$143830$$, 0], 
+          Hold[$CellContext`yMax$$, $CellContext`yMax$143831$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -1188,7 +1142,7 @@ Cell[BoxData[
             3.5*^-13}, 1.*^-13, 1.*^-12, 1.0000000000000002`*^-14, 
            Appearance -> {"Labeled", "Open"}}}, "Options" :> {}, 
         "DefaultOptions" :> {}],
-       ImageSizeCache->{697., {330., 337.}},
+       ImageSizeCache->{1134., {463., 471.}},
        SingleEvaluation->True],
       Deinitialization:>None,
       DynamicModuleValues:>{},
@@ -1203,7 +1157,8 @@ Cell[BoxData[
   3.604430036373022*^9, 3.604842357091042*^9, 3.604843257219728*^9, 
    3.6048434191549177`*^9, 3.604843634947939*^9, 3.604848123800281*^9, {
    3.604848195055002*^9, 3.604848200719501*^9}, 3.605363360291209*^9, 
-   3.6061714182618093`*^9, 3.606171499403921*^9, 3.608644077324498*^9}]
+   3.6061714182618093`*^9, 3.606171499403921*^9, 3.608644077324498*^9, 
+   3.621342809270543*^9, 3.624739319491365*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -1219,8 +1174,7 @@ Cell[TextData[{
 to mismatch in the input current versus what is seen in the output LPF ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["I", "m"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["I", "m"], TraditionalForm]]],
  " current."
 }], "Text",
  CellChangeTimes->{{3.605363429857162*^9, 3.605363486945528*^9}}],
@@ -1359,7 +1313,7 @@ Cell[BoxData[
   RowBox[{"0.9816715516278058`", " ", "x"}], TraditionalForm]], "Output",
  CellChangeTimes->{{3.6044360076553297`*^9, 3.604436029774066*^9}, 
    3.604436193250424*^9, {3.6044362242080317`*^9, 3.604436238340728*^9}, 
-   3.606171500166346*^9}],
+   3.606171500166346*^9, 3.621342818737667*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -1368,12 +1322,13 @@ Cell[BoxData[
    "1.3153371514840863`*^-16"}], TraditionalForm]], "Output",
  CellChangeTimes->{{3.6044360076553297`*^9, 3.604436029774066*^9}, 
    3.604436193250424*^9, {3.6044362242080317`*^9, 3.604436238340728*^9}, 
-   3.606171500345566*^9}],
+   3.606171500166346*^9, 3.621342819125164*^9}],
 
 Cell[BoxData[
  FormBox[
   GraphicsBox[{{{}, 
-     {RGBColor[0.709133, 0.747539, 0.83711], PointBox[CompressedData["
+     {RGBColor[0.709133, 0.747539, 0.83711], PointSize[0.019444444444444445`],
+       AbsoluteThickness[1.6], PointBox[CompressedData["
 1:eJwBUQGu/iFib1JlAgAAABQAAAACAAAAFW4FivJjVj3CkZm0Ov1VPdCw6qQ+
 41I9EgxK3ASMUj32ORFQsGJQPStCePCTFlA9gBbAwjUFTT1JH/Iax31MPXj6
 0bkNG0o91EWIJ7OgST3uwf2xvcZHPc9W6VNCVkc9miWJytbeRT0iLEDP93ZF
@@ -1384,28 +1339,28 @@ Oj2CdFbUbBk6PR9Ld7dWmzk9npJGLlAfOT0xID/Ly7M4PV7H1nrvOzg9Apv4
 Pe3gNz3JXgo622w3PUXopAGgHzc9a8ID+AivNj37k44i
        "]]}, {}}, 
     GraphicsComplexBox[CompressedData["
-1:eJw1k21Q0wUAh4ECZJwkiMqLtLFTUNZAYMwB/9+UsU2Qt7HBYBvHBBQFsfGi
-VPgSULxF54Gcg8LgSMDrgj8BJ6ZNTc2B0Hh1BEgCdZXCnTMi5NVlH/jw3O+e
-T79Pj2uySnzMzMTEJOAN/++SxV7qUeGDQOk1B7usha81l7yvNr1DmkJfkK9t
-tzMFR7euTsuwg2l4Xd+Vf2xR7qnKZyud8Wvnlij3O06QLtaNldnRESzspgtJ
-V3T56rqaHrvBwljYtix3Q6llnfsHAgYYf/aUDd7wgH7SyXCLsg93vyg/syfb
-C46buQkXjvtg0ixdx7b2gbq049KVWhasRSMWJ/1YCMyhZEQb2ch8a7VHeZEN
-x286bZIC/GHZ/5d36l0OPNisB6z0QAydrt6f8kcAUnxqnOofAcMF5lpaADCn
-aXbxMTkI82bOqiH1APwdcoxK3yBwHC5PHpg5CBqVMWs4wkNJmMHqEyseGvvK
-/Zl5wVBRWigDLsHQeCVO+H3LR/Zad9TZUD4y/cen5roFsMkTntiXJMD3Kw/Z
-p9aE0HrseiioEOLL43VqESME1aEpmaM3D8Ehj6qYEYTCdOFtg2ogBB58uyx8
-eBjFQ+YdaWuhGO9snROqw9AYkBaSsS0MrgMsVQcZjie2nszZPeFYb2Dynz+N
-gOdOsbRHEoFcp4HzupVIOHeMidvSIxG0O+tT7g4RXM/eqVqsiYJ9VWbkIfKN
-jxdWTh4R4brkp163wGhcuPULjzcnAu3loGFuJBon/BK2xxdEQzbl3V2SLMa7
-i5WS7M1iKBs3XY15IcZvp5b296rF8BLUuFsWS+D78UXuMEMCHedcYsXWGIhG
-9eTTLgn8NjlyjS0xWNWGB9VGxCDDgzLIJ2KRs34aCRMxUNGzUn/oicXSrG5a
-fjQWxGJF044kKSjZ0marlViM7TSvPmyQ4jm3Qq8pkoJL9fFOKYtDbNOyG80l
-DpmvHg+00OLRf7+Keq89Dln0n2m61njYu00VpBLxIPaecxoRyvCMLrfQDMdD
-X5ivbdPLUHqseGGbUobAjpXc20ly+Cl/L2t9JsPJ28zB75blUM2rgv49L0ea
-8/UneSUK5Pa1JgdZKZDNb068vzsBXbV9vT82KlCUYzWxhfyb8KdyzKa1L4kX
-bcyv6kYVqO7UbDeNUyD9lZ63lZwhXsuufUR4TRMs4/v2DuQQYVtvPTRr1BGP
-bBpuuJL3COJM0ef9vJvEPNP8NYtsJ+jB8xbvVdYT/AzdZwqygdjob+N/w/8D
-8neWgw==
+1:eJw1k2lM0wcAxcE5hSJWrsEwzsJsQaqpK1A5/g8o0AIFpPSgF6PlGE5GxyQu
+MJbhRkYJLpmwRWRUQWHANqRQ4mTlxk1WFZDLc4qcCYfhkHHIYMx94MPLy+/T
+y+/Dc0pIE3yww8TExOd1/u+1XYcPJnF/942pdrA+/Xd5C2sg7weyzhQ1Jdom
+vbUpXtqozp1KtUaC2Lv90pIVNjrq1SzlflwuqSJc2hzBNPp151s7Y+xW6Vtc
+nRPYo27VlUM0uL3hcuWVnIYU30XbDA4dpIOfZPQ1uiGj4p2JJtIxlG4tK13T
+GejXV0Rln2TCTmHWybJgonHkwteXtB6opK6spXh6IHyKFxu9xUKhIMeg/JaF
+1H3qTZWPN4xzc5Tkdi8cYn9c75Hii/VlKjVx0gfneMxdZbcBjfIfPcUH8H9t
+wTQJgMpLPzmf7I/zzTVLSnc2jIYd/f6jAaCzLzybVwXi+Z7vNnPMA7FX4nnk
+aFYQLl8s3Ow9EATuY1a3Z00wcoUj7M/DgnFrdq5v9k8ObEPKZMfiOdCmmLmo
+N7jo/6j2V04BF61qKw2fHgqLLorqgSEENNP+sFFOGF5Idg6n3QvFhMnLOGTy
+sOZ4/MqpjTBMF9x+xC0Kxy92TzxT7cLhW1mgaNBF4Cln7O0Z1wiMUw2M6eFI
+eFd7BxqFkRhgFX/Ys34CfgGmfnUpJ2AhT/3Mz54PNckhe6U4CoPynUEhOj4s
+3+Rpnqr4aKtYbaP5RqOREnA8cJaP++Xa8dnBaKwOvU+SfhUN8kxJU16CAKRK
+95B0SwHSlqyKRHMCPCMT9DtFAqw3eDvu1gjBsUl9b4AuxE9NLfwCGxG+ZIqu
+Dt8QIidzgbF1TQTBTKK7NlKEs9lnO4MJMVZb6YzYJyKUczWSZqMYiiO0AXmS
+GAt/oMg+PgZi99CL5utixH/Dz+PNx8A5xrmrJTcG/+62dUrMl0BjdcieckCC
+Tm5U+zWKFD+flJI79RJU90ySe2qlKHscfDqZkOI30lHzQa4MbhPS5eYBKV6c
+v3e97r4M+STquJ1SBu7D6aTWeDmq7r6bWTslQ/fQ9db6V3IoqDzG8hdyfOr4
+lzErT4GxElc+21yB9OCquJvUWNzQ3r3T8aMCh23nevbpFgmyl3DledcCcaau
+4/vSBwpE7M+yNJUosLe4iWWjGyWG0m+qCcYI8ahMaOag6yda+9iGma0eQl2X
+W+Ok6ySmqprP9AYaiKLe6UUPnZ7Iqop7SC8sI6b2NGQrdFeJ7f9t72/zfwV0
+nF4=
      "], {{{}, 
        {RGBColor[
         0.9803921568627451, 0.37254901960784315`, 0.19215686274509805`], 
@@ -1417,14 +1372,17 @@ bBpuuJL3COJM0ef9vJvEPNP8NYtsJ+jB8xbvVdYT/AzdZwqygdjob+N/w/8D
           4, 3, 2, 51, 53, 54, 55, 56}}]]}, {}, {}}, {{}, {}, 
        {RGBColor[
         0.9803921568627451, 0.37254901960784315`, 0.19215686274509805`], 
+        AbsoluteThickness[1.6], Opacity[1.], 
         LineBox[{1, 57, 56, 55, 54, 53, 51, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 
          12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 
          29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 
          46, 47, 48, 49, 52, 50}]}}}]},
    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
-   Axes->True,
-   AxesOrigin->{8.215130000000001*^-14, 8.058880000000001*^-14},
-   Frame->True,
+   Axes->{True, True},
+   AxesLabel->{None, None},
+   AxesOrigin->{7.846324218750002*^-14, 0},
+   DisplayFunction->Identity,
+   Frame->{{True, True}, {True, True}},
    FrameLabel->{{
       FormBox[
        StyleBox[
@@ -1436,6 +1394,10 @@ bBpuuJL3COJM0ef9vJvEPNP8NYtsJ+jB8xbvVdYT/AzdZwqygdjob+N/w/8D
        "\"\\!\\(\\*SubscriptBox[\\(I\\), \\(in\\)]\\)(A)\"", Medium, 
         FontFamily -> "Helvetica", StripOnInput -> False], TraditionalForm], 
       None}},
+   FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+   GridLines->{None, None},
+   GridLinesStyle->Directive[
+     GrayLevel[0.5, 0.4]],
    ImagePadding->{{80, 30}, {50, 10}},
    ImageSize->650,
    LabelStyle->Directive[FontTracking -> "Plain", FontSize -> 8],
@@ -1445,13 +1407,17 @@ bBpuuJL3COJM0ef9vJvEPNP8NYtsJ+jB8xbvVdYT/AzdZwqygdjob+N/w/8D
      "\"Bifurcation Curve from Simulated Neuron Firing\"", 13, FontTracking -> 
       "Plain", StripOnInput -> False], TraditionalForm],
    PlotRange->{{8.215130000000001*^-14, 3.18187*^-13}, {
-    8.058880000000001*^-14, 3.1248500000000006`*^-13}},
+     0, 3.1248500000000006`*^-13}},
    PlotRangeClipping->True,
-   PlotRangePadding->{{4.720714*^-15, 4.720714*^-15}, {4.637924*^-15, 
-    4.637924*^-15}}], TraditionalForm]], "Output",
+   PlotRangePadding->{{
+      Scaled[0.02], 
+      Scaled[0.02]}, {
+      Scaled[0.02], 
+      Scaled[0.05]}},
+   Ticks->{Automatic, Automatic}], TraditionalForm]], "Output",
  CellChangeTimes->{{3.6044360076553297`*^9, 3.604436029774066*^9}, 
    3.604436193250424*^9, {3.6044362242080317`*^9, 3.604436238340728*^9}, 
-   3.606171500546328*^9}]
+   3.606171500166346*^9, 3.621342819690124*^9}]
 }, Open  ]],
 
 Cell[BoxData[""], "Input",
@@ -1463,8 +1429,7 @@ Cell[CellGroupData[{
 Cell[TextData[{
  Cell[BoxData[
   FormBox[
-   SubscriptBox["\[Rho]", "qua"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["\[Rho]", "qua"], TraditionalForm]]],
  " bifurcation plot as gotten from the SPICE simulation of a Soma with ",
  "VCVSources on the biases "
 }], "Subsection",
@@ -1479,14 +1444,12 @@ Observationally, using VCVS definitely increases the firing rate, but not by \
 a great deal.  With a simulation time of 10s, and precision of ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["\[Iota]", "in"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["\[Iota]", "in"], TraditionalForm]]],
  " down to the 10thousandths, the degree of this increase doesn\
 \[CloseCurlyQuote]t change the bifurcation current of ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["I", "in"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["I", "in"], TraditionalForm]]],
  "."
 }], "Text",
  CellChangeTimes->{{3.604759551576456*^9, 3.604759567554146*^9}, {
@@ -1854,7 +1817,8 @@ offset: \"\>",
    3.604414349023226*^9}, 3.6044143880326643`*^9, {3.604414423633443*^9, 
    3.6044144470552464`*^9}, 3.604415094709714*^9, 3.604758552813438*^9, 
    3.604765228154845*^9, 3.604848118609853*^9, 3.6048481721615677`*^9, 
-   3.605363265637848*^9, 3.606171501088336*^9, 3.608644107002817*^9}],
+   3.605363265637848*^9, 3.606171501088336*^9, 3.608644107002817*^9, 
+   3.6213428373781*^9, 3.624739332168169*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -1875,7 +1839,8 @@ is included: \"\>",
    3.604414349023226*^9}, 3.6044143880326643`*^9, {3.604414423633443*^9, 
    3.6044144470552464`*^9}, 3.604415094709714*^9, 3.604758552813438*^9, 
    3.604765228154845*^9, 3.604848118609853*^9, 3.6048481721615677`*^9, 
-   3.605363265637848*^9, 3.606171501088336*^9, 3.608644107200377*^9}],
+   3.605363265637848*^9, 3.606171501088336*^9, 3.608644107002817*^9, 
+   3.6213428373781*^9, 3.6247393324140778`*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -1904,7 +1869,8 @@ Cell[BoxData[
    3.604414349023226*^9}, 3.6044143880326643`*^9, {3.604414423633443*^9, 
    3.6044144470552464`*^9}, 3.604415094709714*^9, 3.604758552813438*^9, 
    3.604765228154845*^9, 3.604848118609853*^9, 3.6048481721615677`*^9, 
-   3.605363265637848*^9, 3.606171501088336*^9, 3.6086441074013977`*^9}]
+   3.605363265637848*^9, 3.606171501088336*^9, 3.608644107002817*^9, 
+   3.6213428373781*^9, 3.624739332778924*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -1924,19 +1890,19 @@ Cell[BoxData[
          Hold[$CellContext`yMin$$], -4.*^-14}, -1.*^-13, 1.*^-12, 
         1.0000000000000002`*^-14}, {{
          Hold[$CellContext`yMax$$], 3.5*^-13}, 1.*^-13, 1.*^-12, 
-        1.0000000000000002`*^-14}}, Typeset`size$$ = {650., {203., 209.}}, 
+        1.0000000000000002`*^-14}}, Typeset`size$$ = {1087., {338., 343.}}, 
       Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`xMin$33298$$ = 0, $CellContext`xMax$33299$$ = 
-      0, $CellContext`yMin$33300$$ = 0, $CellContext`yMax$33301$$ = 0}, 
+      True, $CellContext`xMin$147010$$ = 0, $CellContext`xMax$147011$$ = 
+      0, $CellContext`yMin$147012$$ = 0, $CellContext`yMax$147013$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, 
         "Variables" :> {$CellContext`xMax$$ = 3.5*^-13, $CellContext`xMin$$ = 
           0, $CellContext`yMax$$ = 3.5*^-13, $CellContext`yMin$$ = -4.*^-14}, 
         "ControllerVariables" :> {
-          Hold[$CellContext`xMin$$, $CellContext`xMin$33298$$, 0], 
-          Hold[$CellContext`xMax$$, $CellContext`xMax$33299$$, 0], 
-          Hold[$CellContext`yMin$$, $CellContext`yMin$33300$$, 0], 
-          Hold[$CellContext`yMax$$, $CellContext`yMax$33301$$, 0]}, 
+          Hold[$CellContext`xMin$$, $CellContext`xMin$147010$$, 0], 
+          Hold[$CellContext`xMax$$, $CellContext`xMax$147011$$, 0], 
+          Hold[$CellContext`yMin$$, $CellContext`yMin$147012$$, 0], 
+          Hold[$CellContext`yMax$$, $CellContext`yMax$147013$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -1976,7 +1942,7 @@ Cell[BoxData[
             3.5*^-13}, 1.*^-13, 1.*^-12, 1.0000000000000002`*^-14, 
            Appearance -> {"Labeled", "Open"}}}, "Options" :> {}, 
         "DefaultOptions" :> {}],
-       ImageSizeCache->{697., {330., 337.}},
+       ImageSizeCache->{1134., {463., 471.}},
        SingleEvaluation->True],
       Deinitialization:>None,
       DynamicModuleValues:>{},
@@ -1992,7 +1958,8 @@ Cell[BoxData[
    3.604414349411304*^9}, 3.6044143884878073`*^9, {3.604414423995346*^9, 
    3.604414447411749*^9}, 3.60441509505189*^9, 3.60475855325666*^9, 
    3.604765228611947*^9, 3.604848119040557*^9, 3.604848173613681*^9, 
-   3.6053632664031057`*^9, 3.606171501760132*^9, 3.60864410784725*^9}]
+   3.6053632664031057`*^9, 3.606171501760132*^9, 3.60864410784725*^9, 
+   3.621342838862369*^9, 3.624739333265274*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2472,7 +2439,8 @@ offset: \"\>",
    3.604414349023226*^9}, 3.6044143880326643`*^9, {3.604414423633443*^9, 
    3.6044144470552464`*^9}, 3.604415094709714*^9, 3.604758552813438*^9, 
    3.604773368070856*^9, 3.604848119880109*^9, 3.604848181935326*^9, 
-   3.605363300649961*^9, 3.606171502973634*^9, 3.608644117125503*^9}],
+   3.605363300649961*^9, 3.606171502973634*^9, 3.608644117125503*^9, 
+   3.6213428474607286`*^9, 3.624739365877653*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -2493,7 +2461,8 @@ is included: \"\>",
    3.604414349023226*^9}, 3.6044143880326643`*^9, {3.604414423633443*^9, 
    3.6044144470552464`*^9}, 3.604415094709714*^9, 3.604758552813438*^9, 
    3.604773368070856*^9, 3.604848119880109*^9, 3.604848181935326*^9, 
-   3.605363300649961*^9, 3.606171502973634*^9, 3.608644117324691*^9}],
+   3.605363300649961*^9, 3.606171502973634*^9, 3.608644117125503*^9, 
+   3.6213428474607286`*^9, 3.624739366093116*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -2522,7 +2491,8 @@ Cell[BoxData[
    3.604414349023226*^9}, 3.6044143880326643`*^9, {3.604414423633443*^9, 
    3.6044144470552464`*^9}, 3.604415094709714*^9, 3.604758552813438*^9, 
    3.604773368070856*^9, 3.604848119880109*^9, 3.604848181935326*^9, 
-   3.605363300649961*^9, 3.606171502973634*^9, 3.608644117525812*^9}]
+   3.605363300649961*^9, 3.606171502973634*^9, 3.608644117125503*^9, 
+   3.6213428474607286`*^9, 3.6247393663180428`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -2542,19 +2512,19 @@ Cell[BoxData[
          Hold[$CellContext`yMin$$], -4.*^-14}, -1.*^-13, 1.*^-12, 
         1.0000000000000002`*^-14}, {{
          Hold[$CellContext`yMax$$], 3.5*^-13}, 1.*^-13, 1.*^-12, 
-        1.0000000000000002`*^-14}}, Typeset`size$$ = {650., {203., 209.}}, 
+        1.0000000000000002`*^-14}}, Typeset`size$$ = {1087., {338., 343.}}, 
       Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`xMin$33512$$ = 0, $CellContext`xMax$33513$$ = 
-      0, $CellContext`yMin$33514$$ = 0, $CellContext`yMax$33515$$ = 0}, 
+      True, $CellContext`xMin$150148$$ = 0, $CellContext`xMax$150149$$ = 
+      0, $CellContext`yMin$150150$$ = 0, $CellContext`yMax$150151$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, 
         "Variables" :> {$CellContext`xMax$$ = 3.5*^-13, $CellContext`xMin$$ = 
           0, $CellContext`yMax$$ = 3.5*^-13, $CellContext`yMin$$ = -4.*^-14}, 
         "ControllerVariables" :> {
-          Hold[$CellContext`xMin$$, $CellContext`xMin$33512$$, 0], 
-          Hold[$CellContext`xMax$$, $CellContext`xMax$33513$$, 0], 
-          Hold[$CellContext`yMin$$, $CellContext`yMin$33514$$, 0], 
-          Hold[$CellContext`yMax$$, $CellContext`yMax$33515$$, 0]}, 
+          Hold[$CellContext`xMin$$, $CellContext`xMin$150148$$, 0], 
+          Hold[$CellContext`xMax$$, $CellContext`xMax$150149$$, 0], 
+          Hold[$CellContext`yMin$$, $CellContext`yMin$150150$$, 0], 
+          Hold[$CellContext`yMax$$, $CellContext`yMax$150151$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -2594,7 +2564,7 @@ Cell[BoxData[
             3.5*^-13}, 1.*^-13, 1.*^-12, 1.0000000000000002`*^-14, 
            Appearance -> {"Labeled", "Open"}}}, "Options" :> {}, 
         "DefaultOptions" :> {}],
-       ImageSizeCache->{697., {330., 337.}},
+       ImageSizeCache->{1134., {463., 471.}},
        SingleEvaluation->True],
       Deinitialization:>None,
       DynamicModuleValues:>{},
@@ -2610,7 +2580,8 @@ Cell[BoxData[
    3.604414349411304*^9}, 3.6044143884878073`*^9, {3.604414423995346*^9, 
    3.604414447411749*^9}, 3.60441509505189*^9, 3.60475855325666*^9, 
    3.6047733685617113`*^9, 3.604848120433691*^9, 3.604848184408434*^9, 
-   3.605363301517642*^9, 3.606171503927064*^9, 3.608644117945122*^9}]
+   3.605363301517642*^9, 3.606171503927064*^9, 3.608644117945122*^9, 
+   3.621342848926498*^9, 3.6247393668215733`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2727,29 +2698,24 @@ Cell[TextData[{
 to ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["I", "lk"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["I", "lk"], TraditionalForm]]],
  " that is a result of the refractory period.  The ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["I", "lk"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["I", "lk"], TraditionalForm]]],
  " currents are measured on the circuit side, as opposed to the bias side.  \
 With that said, the ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["I", "in"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["I", "in"], TraditionalForm]]],
  " currents are measured on the bias side, b/c the Soma circuitry results in ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["I", "m"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["I", "m"], TraditionalForm]]],
  " currents that are much greater than the ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["I", "in"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["I", "in"], TraditionalForm]]],
  " value b/c of the feedback circuitry."
 }], "Text",
  CellChangeTimes->{{3.604759551576456*^9, 3.604759567554146*^9}, {
@@ -3146,7 +3112,8 @@ is included: \"\>",
    3.604848121221497*^9, 3.604848189517887*^9, {3.60484871523468*^9, 
    3.604848750025906*^9}, 3.6048488046785*^9, 3.604848878138473*^9, 
    3.604849089718498*^9, 3.60617139062141*^9, 3.606171505237401*^9, 
-   3.608644159855513*^9}],
+   3.608644159855513*^9, 3.621342856384253*^9, 3.624737715831873*^9, 
+   3.6247393756184797`*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -3180,7 +3147,8 @@ Cell[BoxData[
    3.604848121221497*^9, 3.604848189517887*^9, {3.60484871523468*^9, 
    3.604848750025906*^9}, 3.6048488046785*^9, 3.604848878138473*^9, 
    3.604849089718498*^9, 3.60617139062141*^9, 3.606171505237401*^9, 
-   3.608644160079322*^9}]
+   3.608644159855513*^9, 3.621342856384253*^9, 3.624737715831873*^9, 
+   3.624739375862199*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -3200,19 +3168,19 @@ Cell[BoxData[
          Hold[$CellContext`yMin$$], -4.*^-14}, -1.*^-13, 1.*^-12, 
         1.0000000000000002`*^-14}, {{
          Hold[$CellContext`yMax$$], 3.5*^-13}, 1.*^-13, 1.*^-12, 
-        1.0000000000000002`*^-14}}, Typeset`size$$ = {650., {203., 209.}}, 
+        1.0000000000000002`*^-14}}, Typeset`size$$ = {1087., {338., 343.}}, 
       Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`xMin$34423$$ = 0, $CellContext`xMax$34424$$ = 
-      0, $CellContext`yMin$34425$$ = 0, $CellContext`yMax$34426$$ = 0}, 
+      True, $CellContext`xMin$150576$$ = 0, $CellContext`xMax$150577$$ = 
+      0, $CellContext`yMin$150578$$ = 0, $CellContext`yMax$150579$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, 
         "Variables" :> {$CellContext`xMax$$ = 3.5*^-13, $CellContext`xMin$$ = 
           0, $CellContext`yMax$$ = 3.5*^-13, $CellContext`yMin$$ = -4.*^-14}, 
         "ControllerVariables" :> {
-          Hold[$CellContext`xMin$$, $CellContext`xMin$34423$$, 0], 
-          Hold[$CellContext`xMax$$, $CellContext`xMax$34424$$, 0], 
-          Hold[$CellContext`yMin$$, $CellContext`yMin$34425$$, 0], 
-          Hold[$CellContext`yMax$$, $CellContext`yMax$34426$$, 0]}, 
+          Hold[$CellContext`xMin$$, $CellContext`xMin$150576$$, 0], 
+          Hold[$CellContext`xMax$$, $CellContext`xMax$150577$$, 0], 
+          Hold[$CellContext`yMin$$, $CellContext`yMin$150578$$, 0], 
+          Hold[$CellContext`yMax$$, $CellContext`yMax$150579$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -3252,7 +3220,7 @@ Cell[BoxData[
             3.5*^-13}, 1.*^-13, 1.*^-12, 1.0000000000000002`*^-14, 
            Appearance -> {"Labeled", "Open"}}}, "Options" :> {}, 
         "DefaultOptions" :> {}],
-       ImageSizeCache->{697., {330., 337.}},
+       ImageSizeCache->{1134., {463., 471.}},
        SingleEvaluation->True],
       Deinitialization:>None,
       DynamicModuleValues:>{},
@@ -3272,7 +3240,8 @@ Cell[BoxData[
    3.604848121703697*^9, 3.604848191276762*^9, {3.604848715846181*^9, 
    3.604848750547181*^9}, 3.604848805151215*^9, 3.60484887867454*^9, 
    3.6048490901730537`*^9, 3.6061713912493887`*^9, 3.606171506101365*^9, 
-   3.608644160519927*^9}]
+   3.608644160519927*^9, 3.621342857316741*^9, 3.624737716485374*^9, 
+   3.624739376324266*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -3834,7 +3803,8 @@ is included: \"\>",
    3.604848121221497*^9, 3.604848189517887*^9, {3.60484871523468*^9, 
    3.604848750025906*^9}, 3.6048488046785*^9, 3.604848878138473*^9, 
    3.604849089718498*^9, 3.604866401815734*^9, 3.606171507462295*^9, 
-   3.608644177398177*^9}],
+   3.608644177398177*^9, 3.621342869440868*^9, 3.624646317238599*^9, 
+   3.6247393848050222`*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -3868,7 +3838,8 @@ Cell[BoxData[
    3.604848121221497*^9, 3.604848189517887*^9, {3.60484871523468*^9, 
    3.604848750025906*^9}, 3.6048488046785*^9, 3.604848878138473*^9, 
    3.604849089718498*^9, 3.604866401815734*^9, 3.606171507462295*^9, 
-   3.608644177589026*^9}]
+   3.608644177398177*^9, 3.621342869440868*^9, 3.624646317238599*^9, 
+   3.624739385073111*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -3888,19 +3859,19 @@ Cell[BoxData[
          Hold[$CellContext`yMin$$], -4.*^-14}, -1.*^-13, 1.*^-12, 
         1.0000000000000002`*^-14}, {{
          Hold[$CellContext`yMax$$], 3.5*^-13}, 1.*^-13, 1.*^-12, 
-        1.0000000000000002`*^-14}}, Typeset`size$$ = {650., {203., 209.}}, 
+        1.0000000000000002`*^-14}}, Typeset`size$$ = {1087., {338., 343.}}, 
       Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`xMin$35334$$ = 0, $CellContext`xMax$35335$$ = 
-      0, $CellContext`yMin$35336$$ = 0, $CellContext`yMax$35337$$ = 0}, 
+      True, $CellContext`xMin$151004$$ = 0, $CellContext`xMax$151005$$ = 
+      0, $CellContext`yMin$151006$$ = 0, $CellContext`yMax$151007$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, 
         "Variables" :> {$CellContext`xMax$$ = 3.5*^-13, $CellContext`xMin$$ = 
           0, $CellContext`yMax$$ = 3.5*^-13, $CellContext`yMin$$ = -4.*^-14}, 
         "ControllerVariables" :> {
-          Hold[$CellContext`xMin$$, $CellContext`xMin$35334$$, 0], 
-          Hold[$CellContext`xMax$$, $CellContext`xMax$35335$$, 0], 
-          Hold[$CellContext`yMin$$, $CellContext`yMin$35336$$, 0], 
-          Hold[$CellContext`yMax$$, $CellContext`yMax$35337$$, 0]}, 
+          Hold[$CellContext`xMin$$, $CellContext`xMin$151004$$, 0], 
+          Hold[$CellContext`xMax$$, $CellContext`xMax$151005$$, 0], 
+          Hold[$CellContext`yMin$$, $CellContext`yMin$151006$$, 0], 
+          Hold[$CellContext`yMax$$, $CellContext`yMax$151007$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -3940,7 +3911,7 @@ Cell[BoxData[
             3.5*^-13}, 1.*^-13, 1.*^-12, 1.0000000000000002`*^-14, 
            Appearance -> {"Labeled", "Open"}}}, "Options" :> {}, 
         "DefaultOptions" :> {}],
-       ImageSizeCache->{697., {330., 337.}},
+       ImageSizeCache->{1134., {463., 471.}},
        SingleEvaluation->True],
       Deinitialization:>None,
       DynamicModuleValues:>{},
@@ -3960,7 +3931,8 @@ Cell[BoxData[
    3.604848121703697*^9, 3.604848191276762*^9, {3.604848715846181*^9, 
    3.604848750547181*^9}, 3.604848805151215*^9, 3.60484887867454*^9, 
    3.6048490901730537`*^9, 3.604866402267308*^9, 3.606171508308776*^9, 
-   3.608644177998835*^9}]
+   3.608644177998835*^9, 3.621342870376193*^9, 3.624646317944463*^9, 
+   3.624739385588035*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -4139,18 +4111,18 @@ With that said, the ",
  " value b/c of the feedback circuitry.  This section is the exact same test \
 as the previous section, but it measures each simulation for 100seconds, \
 instead of just 10 seconds.  In other words, now anything that has less than \
-0.1Hz firing rate is considered as not firing, whereas before it was 0.1Hz.  \
+0.01Hz firing rate is considered as not firing, whereas before it was 0.1Hz.  \
 Although the bifurcation line does shift further to the left/upwards, it \
 doesn\[CloseCurlyQuote]t move by much.  The slope is also, ever so trivially \
 closer to 1."
 }], "Text",
  CellChangeTimes->{{3.604759551576456*^9, 3.604759567554146*^9}, {
-  3.604759635095846*^9, 3.604759715771513*^9}, {3.6047597948205357`*^9, 
-  3.604759827709745*^9}, {3.6047741402646*^9, 3.6047741499297237`*^9}, {
-  3.604839499387863*^9, 3.604839506290402*^9}, {3.6048485460317907`*^9, 
-  3.604848687492689*^9}, {3.6048564508216333`*^9, 3.604856484466804*^9}, {
-  3.6048565192709427`*^9, 3.6048565349518347`*^9}, {3.604952242795377*^9, 
-  3.6049523359255867`*^9}}],
+   3.604759635095846*^9, 3.604759715771513*^9}, {3.6047597948205357`*^9, 
+   3.604759827709745*^9}, {3.6047741402646*^9, 3.6047741499297237`*^9}, {
+   3.604839499387863*^9, 3.604839506290402*^9}, {3.6048485460317907`*^9, 
+   3.604848687492689*^9}, {3.6048564508216333`*^9, 3.604856484466804*^9}, {
+   3.6048565192709427`*^9, 3.6048565349518347`*^9}, {3.604952242795377*^9, 
+   3.6049523359255867`*^9}, 3.624737844839985*^9}],
 
 Cell[CellGroupData[{
 
@@ -4256,17 +4228,45 @@ Cell[BoxData[{
 \>\"", ",", "Bold", ",", "15"}], "]"}], ",", 
    RowBox[{"mOffVCVSNoVanNoM62", "/.", "pQuaFitOffRulesVCVSNoVanNoM62"}]}], 
   "]"}], "\[IndentingNewLine]", 
- RowBox[{"Print", "[", 
-  RowBox[{
-   RowBox[{"Style", "[", 
-    RowBox[{"\"\<Total Offset: \>\"", ",", "Bold", ",", "15"}], "]"}], ",", 
+ RowBox[{
+  RowBox[{"Print", "[", 
    RowBox[{
-    RowBox[{"UnitConvert", "[", 
+    RowBox[{"Style", "[", 
+     RowBox[{"\"\<Total Offset: \>\"", ",", "Bold", ",", "15"}], "]"}], ",", 
+    RowBox[{
+     RowBox[{"UnitConvert", "[", 
+      RowBox[{
+       RowBox[{"Quantity", "[", 
+        RowBox[{"bVCVSNoVanNoM62", ",", "\"\<Amps\>\""}], "]"}], ",", 
+       "\"\<FemtoAmps\>\""}], "]"}], "/.", 
+     "pQuaFitOffRulesVCVSNoVanNoM62"}]}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"iInValuesVCVSNoVanNoM62", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"mVCVSNoVanNoM62", 
+     RowBox[{"(", " ", 
+      FractionBox[
+       RowBox[{"IinValsVCVSNoVanNoM62", " "}], "IlkValsVCVSNoVanNoM62"], 
+      ")"}]}], "/.", "pQuaFitRulesVCVSNoVanNoM62"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"Style", "[", 
+   RowBox[{
+   "\"\<Output from linear fit with no offset with non-linear axes\>\"", ",", 
+    "Bold", ",", "15"}], "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{
+    RowBox[{"Style", "[", 
      RowBox[{
-      RowBox[{"Quantity", "[", 
-       RowBox[{"bVCVSNoVanNoM62", ",", "\"\<Amps\>\""}], "]"}], ",", 
-      "\"\<FemtoAmps\>\""}], "]"}], "/.", "pQuaFitOffRulesVCVSNoVanNoM62"}]}],
-   "]"}], "\[IndentingNewLine]", 
+     "\"\<\!\(\*SubscriptBox[\(i\), \(in\)]\) values if \!\(\*SubscriptBox[\(\
+\[Rho]\), \(qua\)]\)=\>\"", ",", "Bold", ",", "15"}], "]"}], ",", 
+    RowBox[{"mVCVSNoVanNoM62", "/.", "pQuaFitRulesVCVSNoVanNoM62"}], ",", 
+    RowBox[{"Style", "[", 
+     RowBox[{"\"\<: \>\"", ",", "Bold", ",", "15"}], "]"}], ",", 
+    "iInValuesVCVSNoVanNoM62"}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{"Show", "[", "\[IndentingNewLine]", 
@@ -4558,7 +4558,10 @@ Cell[BoxData[{
    3.605043461655436*^9}, {3.605043491730097*^9, 3.605043535775236*^9}, {
    3.6050435685643053`*^9, 3.605043590806265*^9}, {3.6053627381466093`*^9, 
    3.605362781499256*^9}, {3.605362818848288*^9, 3.60536283244234*^9}, {
-   3.6061701948032207`*^9, 3.606170231483494*^9}, 3.60617148789869*^9}],
+   3.6061701948032207`*^9, 3.606170231483494*^9}, 3.60617148789869*^9, {
+   3.624739837696473*^9, 3.624739865957882*^9}, {3.6247398962784*^9, 
+   3.6247399710131283`*^9}, {3.624740059432165*^9, 3.624740059672991*^9}, {
+   3.624742524721677*^9, 3.624742531536622*^9}}],
 
 Cell[CellGroupData[{
 
@@ -4589,7 +4592,8 @@ offset: \"\>",
    3.6050198110165358`*^9, 3.605021331623555*^9, 3.605038860034935*^9, 
    3.60536278716957*^9, {3.605362821120804*^9, 3.6053628332033*^9}, {
    3.606170200981308*^9, 3.606170232360332*^9}, 3.606171509598797*^9, 
-   3.608644185840205*^9}],
+   3.608644185840205*^9, 3.621342881242382*^9, 3.6247393917494926`*^9, 
+   3.624739987534123*^9, 3.6247400611284733`*^9, 3.624742532304673*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -4618,7 +4622,8 @@ is included: \"\>",
    3.6050198110165358`*^9, 3.605021331623555*^9, 3.605038860034935*^9, 
    3.60536278716957*^9, {3.605362821120804*^9, 3.6053628332033*^9}, {
    3.606170200981308*^9, 3.606170232360332*^9}, 3.606171509598797*^9, 
-   3.60864418601475*^9}],
+   3.608644185840205*^9, 3.621342881242382*^9, 3.6247393917494926`*^9, 
+   3.624739987534123*^9, 3.6247400611284733`*^9, 3.624742532623041*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -4655,7 +4660,85 @@ Cell[BoxData[
    3.6050198110165358`*^9, 3.605021331623555*^9, 3.605038860034935*^9, 
    3.60536278716957*^9, {3.605362821120804*^9, 3.6053628332033*^9}, {
    3.606170200981308*^9, 3.606170232360332*^9}, 3.606171509598797*^9, 
-   3.6086441861985807`*^9}]
+   3.608644185840205*^9, 3.621342881242382*^9, 3.6247393917494926`*^9, 
+   3.624739987534123*^9, 3.6247400611284733`*^9, 3.624742532918024*^9}],
+
+Cell[BoxData[
+ FormBox[
+  StyleBox["\<\"Output from linear fit with no offset with non-linear \
+axes\"\>",
+   StripOnInput->False,
+   FontSize->15,
+   FontWeight->Bold], TraditionalForm]], "Print",
+ CellChangeTimes->{
+  3.604414085540572*^9, 3.604414124243257*^9, {3.604414172911067*^9, 
+   3.604414232730741*^9}, 3.604414276240417*^9, {3.604414308493517*^9, 
+   3.604414349023226*^9}, 3.6044143880326643`*^9, {3.604414423633443*^9, 
+   3.6044144470552464`*^9}, 3.604415094709714*^9, 3.604758552813438*^9, 
+   3.604773368070856*^9, 3.604779594165696*^9, 3.604783258296667*^9, 
+   3.6047841429390574`*^9, 3.604843667578504*^9, 3.60484372774501*^9, 
+   3.604848121221497*^9, 3.604848189517887*^9, {3.60484871523468*^9, 
+   3.604848750025906*^9}, 3.6048488046785*^9, 3.604848878138473*^9, 
+   3.604849089718498*^9, 3.604866401815734*^9, 3.604946490858471*^9, 
+   3.6050198110165358`*^9, 3.605021331623555*^9, 3.605038860034935*^9, 
+   3.60536278716957*^9, {3.605362821120804*^9, 3.6053628332033*^9}, {
+   3.606170200981308*^9, 3.606170232360332*^9}, 3.606171509598797*^9, 
+   3.608644185840205*^9, 3.621342881242382*^9, 3.6247393917494926`*^9, 
+   3.624739987534123*^9, 3.6247400611284733`*^9, 3.6247425332312403`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{
+    StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(i\\), \\(in\\)]\\) values if \
+\\!\\(\\*SubscriptBox[\\(\[Rho]\\), \\(qua\\)]\\)=\"\>",
+     StripOnInput->False,
+     FontSize->15,
+     FontWeight->Bold], "\[InvisibleSpace]", "1.1247488405978816`", 
+    "\[InvisibleSpace]", 
+    StyleBox["\<\": \"\>",
+     StripOnInput->False,
+     FontSize->15,
+     FontWeight->Bold], "\[InvisibleSpace]", 
+    RowBox[{"{", 
+     RowBox[{
+     "0.4941833452920099`", ",", "0.4953260764452321`", ",", 
+      "0.49651946628185595`", ",", "0.4977646542753965`", ",", 
+      "0.4990026769117188`", ",", "0.500291701021601`", ",", 
+      "0.5016267240463766`", ",", "0.5029594222353163`", ",", 
+      "0.5042821307590177`", ",", "0.5056499159683032`", ",", 
+      "0.5070109629348138`", ",", "0.5083669996047372`", ",", 
+      "0.5097657877003878`", ",", "0.5111557407172177`", ",", 
+      "0.5125396418261864`", ",", "0.5139661649831545`", ",", 
+      "0.5153352158944864`", ",", "0.5167473915063131`", ",", 
+      "0.518152297796225`", ",", "0.5195974148280503`"}], "}"}]}],
+   SequenceForm[
+    Style[
+    "\!\(\*SubscriptBox[\(i\), \(in\)]\) values if \
+\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)=", Bold, 15], 1.1247488405978816`, 
+    Style[": ", Bold, 15], {0.4941833452920099, 0.4953260764452321, 
+    0.49651946628185595`, 0.4977646542753965, 0.4990026769117188, 
+    0.500291701021601, 0.5016267240463766, 0.5029594222353163, 
+    0.5042821307590177, 0.5056499159683032, 0.5070109629348138, 
+    0.5083669996047372, 0.5097657877003878, 0.5111557407172177, 
+    0.5125396418261864, 0.5139661649831545, 0.5153352158944864, 
+    0.5167473915063131, 0.518152297796225, 0.5195974148280503}],
+   Editable->False], TraditionalForm]], "Print",
+ CellChangeTimes->{
+  3.604414085540572*^9, 3.604414124243257*^9, {3.604414172911067*^9, 
+   3.604414232730741*^9}, 3.604414276240417*^9, {3.604414308493517*^9, 
+   3.604414349023226*^9}, 3.6044143880326643`*^9, {3.604414423633443*^9, 
+   3.6044144470552464`*^9}, 3.604415094709714*^9, 3.604758552813438*^9, 
+   3.604773368070856*^9, 3.604779594165696*^9, 3.604783258296667*^9, 
+   3.6047841429390574`*^9, 3.604843667578504*^9, 3.60484372774501*^9, 
+   3.604848121221497*^9, 3.604848189517887*^9, {3.60484871523468*^9, 
+   3.604848750025906*^9}, 3.6048488046785*^9, 3.604848878138473*^9, 
+   3.604849089718498*^9, 3.604866401815734*^9, 3.604946490858471*^9, 
+   3.6050198110165358`*^9, 3.605021331623555*^9, 3.605038860034935*^9, 
+   3.60536278716957*^9, {3.605362821120804*^9, 3.6053628332033*^9}, {
+   3.606170200981308*^9, 3.606170232360332*^9}, 3.606171509598797*^9, 
+   3.608644185840205*^9, 3.621342881242382*^9, 3.6247393917494926`*^9, 
+   3.624739987534123*^9, 3.6247400611284733`*^9, 3.624742533547112*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -4675,19 +4758,19 @@ Cell[BoxData[
          Hold[$CellContext`yMin$$], -4.*^-14}, -1.*^-13, 1.*^-12, 
         1.0000000000000002`*^-14}, {{
          Hold[$CellContext`yMax$$], 3.5*^-13}, 1.*^-13, 1.*^-12, 
-        1.0000000000000002`*^-14}}, Typeset`size$$ = {650., {203., 209.}}, 
+        1.0000000000000002`*^-14}}, Typeset`size$$ = {1087., {338., 343.}}, 
       Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`xMin$35548$$ = 0, $CellContext`xMax$35549$$ = 
-      0, $CellContext`yMin$35550$$ = 0, $CellContext`yMax$35551$$ = 0}, 
+      True, $CellContext`xMin$169178$$ = 0, $CellContext`xMax$169179$$ = 
+      0, $CellContext`yMin$169180$$ = 0, $CellContext`yMax$169181$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, 
         "Variables" :> {$CellContext`xMax$$ = 3.5*^-13, $CellContext`xMin$$ = 
           0, $CellContext`yMax$$ = 3.5*^-13, $CellContext`yMin$$ = -4.*^-14}, 
         "ControllerVariables" :> {
-          Hold[$CellContext`xMin$$, $CellContext`xMin$35548$$, 0], 
-          Hold[$CellContext`xMax$$, $CellContext`xMax$35549$$, 0], 
-          Hold[$CellContext`yMin$$, $CellContext`yMin$35550$$, 0], 
-          Hold[$CellContext`yMax$$, $CellContext`yMax$35551$$, 0]}, 
+          Hold[$CellContext`xMin$$, $CellContext`xMin$169178$$, 0], 
+          Hold[$CellContext`xMax$$, $CellContext`xMax$169179$$, 0], 
+          Hold[$CellContext`yMin$$, $CellContext`yMin$169180$$, 0], 
+          Hold[$CellContext`yMax$$, $CellContext`yMax$169181$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -4727,7 +4810,7 @@ Cell[BoxData[
             3.5*^-13}, 1.*^-13, 1.*^-12, 1.0000000000000002`*^-14, 
            Appearance -> {"Labeled", "Open"}}}, "Options" :> {}, 
         "DefaultOptions" :> {}],
-       ImageSizeCache->{697., {330., 337.}},
+       ImageSizeCache->{1134., {463., 471.}},
        SingleEvaluation->True],
       Deinitialization:>None,
       DynamicModuleValues:>{},
@@ -4750,7 +4833,8 @@ Cell[BoxData[
    3.605019813126399*^9, 3.6050213348320227`*^9, 3.605038860527831*^9, 
    3.6053627877910852`*^9, {3.605362820849187*^9, 3.6053628338160353`*^9}, {
    3.606170202048586*^9, 3.606170233195822*^9}, 3.606171510598316*^9, 
-   3.608644186633507*^9}]
+   3.608644186633507*^9, 3.621342882592757*^9, 3.624739392805797*^9, 
+   3.624739989162739*^9, 3.6247400629077387`*^9, 3.624742533974609*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -4872,8 +4956,7 @@ Cell[TextData[{
  "Validation Bifurcation values for ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["\[Iota]", "in"], TraditionalForm]],
-  FormatType->"TraditionalForm"]
+   SubscriptBox["\[Iota]", "in"], TraditionalForm]]]
 }], "Subsubsection",
  CellChangeTimes->{{3.6053622448842363`*^9, 3.605362256608472*^9}, {
   3.60536229685629*^9, 3.605362300659272*^9}}],
@@ -4882,18 +4965,15 @@ Cell[TextData[{
  "Using the values that were extracted for ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["\[Rho]", "qua"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["\[Rho]", "qua"], TraditionalForm]]],
  " and offset, the bifurcation points are double checked for ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["I", "in"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["I", "in"], TraditionalForm]]],
  ".  The values below are the new bifurcation values when ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["I", "in"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["I", "in"], TraditionalForm]]],
  " is calculated as ",
  Cell[BoxData[
   FormBox[
@@ -4905,13 +4985,11 @@ Cell[TextData[{
        RowBox[{
         SubscriptBox["\[Iota]", "in"], 
         SubscriptBox["I", "lk"]}], ")"}], "-", "b"}], 
-     SubscriptBox["\[Rho]", "qua"]]}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+     SubscriptBox["\[Rho]", "qua"]]}], TraditionalForm]]],
  " with ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["\[Rho]", "qua"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["\[Rho]", "qua"], TraditionalForm]]],
  "=1.15517 and b=-4.95685f"
 }], "Text",
  CellChangeTimes->{{3.605363543703018*^9, 3.605363720431218*^9}}],
@@ -5025,7 +5103,7 @@ Cell[BoxData[
    3.606171512317485*^9}]
 }, Open  ]]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -5070,19 +5148,16 @@ contribution to ",
 of the bias currents on the bias side of the circuitry and includes the ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["I", "lkref"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["I", "lkref"], TraditionalForm]]],
  "current separately from the ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["I", "lk"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["I", "lk"], TraditionalForm]]],
  "current.  This is because this simulation uses a different scaling of the \
 y-axis derived from including ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["I", "lkref"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["I", "lkref"], TraditionalForm]]],
  " when deriving the model behavior of the circuit."
 }], "Text",
  CellChangeTimes->{{3.604759551576456*^9, 3.604759567554146*^9}, {
@@ -5158,7 +5233,7 @@ Cell[BoxData[
    3.6109065068383913`*^9, 3.6109066663623*^9, 3.610906877163188*^9, 
    3.610907135470828*^9, 3.610907573746387*^9, 3.610908194712111*^9, 
    3.610908692333897*^9, 3.610909093356838*^9, {3.61090941800493*^9, 
-   3.6109094359972477`*^9}, 3.6109963786109667`*^9}]
+   3.6109094359972477`*^9}, 3.6109963786109667`*^9, 3.621342903314958*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -5234,7 +5309,8 @@ Cell[BoxData[
    3.610908271526054*^9, 3.610908302400453*^9, {3.610908404266226*^9, 
    3.6109084189207573`*^9}, 3.610908702424865*^9, 3.610908874333542*^9, 
    3.610909104055154*^9, {3.610909211088628*^9, 3.610909222821343*^9}, 
-   3.610909334987952*^9, 3.610909427859316*^9}]
+   3.610909334987952*^9, 3.610909427859316*^9, 3.621342890763959*^9, 
+   3.624646099470355*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -5298,6 +5374,27 @@ Cell[BoxData[{
      SuperscriptBox["IlkrefVCVSNoVanNoA6", "2"], 
      RowBox[{"2", "*", "IlkValsVCVSNoVanNoA6"}]]}]}], 
   ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"yVals", " ", "=", " ", 
+    RowBox[{
+     FractionBox["1", "2"], "IlkValsVCVSNoVanNoA6", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"1", "+", " ", 
+        FractionBox["IlkrefVCVSNoVanNoA6", "IlkValsVCVSNoVanNoA6"]}], ")"}], 
+      "2"]}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"yVals", " ", "=", " ", 
+     RowBox[{
+      FractionBox["1", "2"], 
+      FractionBox[
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"IlkValsVCVSNoVanNoA6", "+", " ", "IlkrefVCVSNoVanNoA6"}], 
+         ")"}], "2"], "IlkValsVCVSNoVanNoA6"]}]}], ";"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"xVals", " ", "=", " ", "IinValsVCVSNoVanNoA6"}], 
   ";"}], "\[IndentingNewLine]", 
@@ -5397,8 +5494,8 @@ Cell[BoxData[{
           RowBox[{"Style", "[", 
            RowBox[{
            "\"\<0.5*(\!\(\*SubscriptBox[\(I\), \
-\(lk\)]\)+\!\(\*SuperscriptBox[SubscriptBox[\(I\), \(lkr\)], \
-\(2\)]\)/\!\(\*SubscriptBox[\(I\), \(lk\)]\))(A)\>\"", ",", "Medium", ",", 
+\(lk\)]\)+\!\(\*SubscriptBox[\(I\), \(lkr\)]\)\!\(\*SuperscriptBox[\()\), \(2\
+\)]\)/\!\(\*SubscriptBox[\(I\), \(lk\)]\)(A)\>\"", ",", "Medium", ",", 
             RowBox[{"FontFamily", "\[Rule]", "\"\<Helvetica\>\""}]}], "]"}]}],
           "}"}]}], ",", 
        RowBox[{"Frame", "\[Rule]", "True"}], ",", 
@@ -5663,7 +5760,9 @@ Cell[BoxData[{
    3.610918541675709*^9, 3.610918548742758*^9}, {3.610918713611059*^9, 
    3.6109187145288258`*^9}, {3.61091876969617*^9, 3.6109188204886417`*^9}, {
    3.6109188868152647`*^9, 3.6109188921735773`*^9}, {3.610920215593264*^9, 
-   3.610920257032024*^9}}],
+   3.610920257032024*^9}, {3.6247384386000338`*^9, 3.6247384908743153`*^9}, {
+   3.624738924552991*^9, 3.624738953782301*^9}, {3.624739000829062*^9, 
+   3.624739019701991*^9}, 3.624739544683751*^9}],
 
 Cell[CellGroupData[{
 
@@ -5675,11 +5774,11 @@ Cell[BoxData[
 is not included: \"\>",
      StripOnInput->False,
      FontSize->15,
-     FontWeight->Bold], "\[InvisibleSpace]", "2.223992090214994`"}],
+     FontWeight->Bold], "\[InvisibleSpace]", "2.366629405888631`"}],
    SequenceForm[
     Style[
     "\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\) if offset is not included: ", 
-     Bold, 15], 2.223992090214994],
+     Bold, 15], 2.366629405888631],
    Editable->False], TraditionalForm]], "Print",
  CellChangeTimes->{
   3.604414085540572*^9, 3.604414124243257*^9, {3.604414172911067*^9, 
@@ -5694,7 +5793,10 @@ is not included: \"\>",
    3.608644159855513*^9, {3.608652148806363*^9, 3.608652166424491*^9}, 
    3.608664292753984*^9, 3.610918642628562*^9, 3.6109187155152187`*^9, 
    3.610918852931477*^9, 3.610918893203476*^9, 3.610920257755528*^9, {
-   3.6109963812415323`*^9, 3.610996385033414*^9}}],
+   3.6109963812415323`*^9, 3.610996385033414*^9}, 3.6213428963157253`*^9, 
+   3.624646102950633*^9, 3.624646230658277*^9, 3.62473849363103*^9, 
+   3.62473853059533*^9, 3.624738954805641*^9, 3.624739020693637*^9, 
+   3.624739548076194*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -5704,11 +5806,11 @@ Cell[BoxData[
 is included: \"\>",
      StripOnInput->False,
      FontSize->15,
-     FontWeight->Bold], "\[InvisibleSpace]", "2.344158970630507`"}],
+     FontWeight->Bold], "\[InvisibleSpace]", "2.3441589706305077`"}],
    SequenceForm[
     Style[
     "\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\) if offset is included: ", Bold,
-      15], 2.344158970630507],
+      15], 2.3441589706305077`],
    Editable->False], TraditionalForm]], "Print",
  CellChangeTimes->{
   3.604414085540572*^9, 3.604414124243257*^9, {3.604414172911067*^9, 
@@ -5723,7 +5825,10 @@ is included: \"\>",
    3.608644159855513*^9, {3.608652148806363*^9, 3.608652166424491*^9}, 
    3.608664292753984*^9, 3.610918642628562*^9, 3.6109187155152187`*^9, 
    3.610918852931477*^9, 3.610918893203476*^9, 3.610920257755528*^9, {
-   3.6109963812415323`*^9, 3.610996385218069*^9}}],
+   3.6109963812415323`*^9, 3.610996385033414*^9}, 3.6213428963157253`*^9, 
+   3.624646102950633*^9, 3.624646230658277*^9, 3.62473849363103*^9, 
+   3.62473853059533*^9, 3.624738954805641*^9, 3.624739020693637*^9, 
+   3.624739548379917*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -5733,7 +5838,7 @@ Cell[BoxData[
      StripOnInput->False,
      FontSize->15,
      FontWeight->Bold], "\[InvisibleSpace]", 
-    TemplateBox[{RowBox[{"-", "9.418753547769818`"}]},
+    TemplateBox[{"1.7612464522301505`"},
      "QuantityUnit",
      DisplayFunction->(TooltipBox[
        StyleBox[
@@ -5745,7 +5850,7 @@ Cell[BoxData[
         RowBox[{#, ",", "\"Femtoamperes\""}], "]"}]& )]}],
    SequenceForm[
     Style["Total Offset: ", Bold, 15], 
-    Quantity[-9.418753547769818, "Femtoamperes"]],
+    Quantity[1.7612464522301505`, "Femtoamperes"]],
    Editable->False], TraditionalForm]], "Print",
  CellChangeTimes->{
   3.604414085540572*^9, 3.604414124243257*^9, {3.604414172911067*^9, 
@@ -5760,7 +5865,10 @@ Cell[BoxData[
    3.608644159855513*^9, {3.608652148806363*^9, 3.608652166424491*^9}, 
    3.608664292753984*^9, 3.610918642628562*^9, 3.6109187155152187`*^9, 
    3.610918852931477*^9, 3.610918893203476*^9, 3.610920257755528*^9, {
-   3.6109963812415323`*^9, 3.6109963853773613`*^9}}]
+   3.6109963812415323`*^9, 3.610996385033414*^9}, 3.6213428963157253`*^9, 
+   3.624646102950633*^9, 3.624646230658277*^9, 3.62473849363103*^9, 
+   3.62473853059533*^9, 3.624738954805641*^9, 3.624739020693637*^9, 
+   3.624739548706559*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -5781,20 +5889,20 @@ Cell[BoxData[
          Hold[$CellContext`yMin$$], -4.*^-14}, -1.*^-13, 1.*^-12, 
         1.0000000000000002`*^-14}, {{
          Hold[$CellContext`yMax$$], 3.5*^-13}, 1.*^-13, 1.*^-12, 
-        1.0000000000000002`*^-14}}, Typeset`size$$ = {650., {203., 209.}}, 
+        1.0000000000000002`*^-14}}, Typeset`size$$ = {1087., {338., 343.}}, 
       Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`xMin$4456$$ = 0, $CellContext`xMax$4457$$ = 
-      0, $CellContext`yMin$4458$$ = 0, $CellContext`yMax$4459$$ = 0}, 
+      True, $CellContext`xMin$152060$$ = 0, $CellContext`xMax$152061$$ = 
+      0, $CellContext`yMin$152062$$ = 0, $CellContext`yMax$152063$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, 
         "Variables" :> {$CellContext`xMax$$ = 
           1.5000000000000002`*^-13, $CellContext`xMin$$ = 
           0, $CellContext`yMax$$ = 3.5*^-13, $CellContext`yMin$$ = -4.*^-14}, 
         "ControllerVariables" :> {
-          Hold[$CellContext`xMin$$, $CellContext`xMin$4456$$, 0], 
-          Hold[$CellContext`xMax$$, $CellContext`xMax$4457$$, 0], 
-          Hold[$CellContext`yMin$$, $CellContext`yMin$4458$$, 0], 
-          Hold[$CellContext`yMax$$, $CellContext`yMax$4459$$, 0]}, 
+          Hold[$CellContext`xMin$$, $CellContext`xMin$152060$$, 0], 
+          Hold[$CellContext`xMax$$, $CellContext`xMax$152061$$, 0], 
+          Hold[$CellContext`yMin$$, $CellContext`yMin$152062$$, 0], 
+          Hold[$CellContext`yMax$$, $CellContext`yMax$152063$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -5811,10 +5919,9 @@ Cell[BoxData[
              "\!\(\*SubscriptBox[\(I\), \(in\)]\)(A)", Medium, FontFamily -> 
               "Helvetica"], 
              Style[
-             "0.5*(\!\(\*SubscriptBox[\(I\), \
-\(lk\)]\)+\!\(\*SuperscriptBox[SubscriptBox[\(I\), \(lkr\)], \
-\(2\)]\)/\!\(\*SubscriptBox[\(I\), \(lk\)]\))(A)", Medium, FontFamily -> 
-              "Helvetica"]}, Frame -> True, LabelStyle -> 
+             "0.5*(\!\(\*SubscriptBox[\(I\), \(lk\)]\)+\!\(\*SubscriptBox[\(I\
+\), \(lkr\)]\)\!\(\*SuperscriptBox[\()\), \(2\)]\)/\!\(\*SubscriptBox[\(I\), \
+\(lk\)]\)(A)", Medium, FontFamily -> "Helvetica"]}, Frame -> True, LabelStyle -> 
            Directive[FontTracking -> "Plain", FontSize -> 8], PlotLabel -> 
            Style["Bifurcation Curve from Simulated Neuron Firing", 13, 
              FontTracking -> "Plain"], ImagePadding -> {{80, 30}, {50, 10}}, 
@@ -5838,7 +5945,7 @@ Cell[BoxData[
             3.5*^-13}, 1.*^-13, 1.*^-12, 1.0000000000000002`*^-14, 
            Appearance -> {"Labeled", "Open"}}}, "Options" :> {}, 
         "DefaultOptions" :> {}],
-       ImageSizeCache->{697., {330., 337.}},
+       ImageSizeCache->{1134., {463., 471.}},
        SingleEvaluation->True],
       Deinitialization:>None,
       DynamicModuleValues:>{},
@@ -5861,9 +5968,12 @@ Cell[BoxData[
    3.608644160519927*^9, {3.608652148625792*^9, 3.608652166233025*^9}, 
    3.608664292579318*^9, 3.61091864329292*^9, 3.610918716186928*^9, 
    3.610918853530312*^9, 3.610918893835186*^9, 3.610920258745057*^9, {
-   3.610996383719091*^9, 3.610996385843017*^9}}]
+   3.610996383719091*^9, 3.610996385843017*^9}, 3.621342897568668*^9, 
+   3.62464610914326*^9, 3.624646231479466*^9, 3.624738494455307*^9, 
+   3.62473853143353*^9, 3.624738955794943*^9, 3.624739021533812*^9, 
+   3.6247395491987143`*^9}]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -5995,7 +6105,8 @@ Cell[BoxData[
    3.6109065068383913`*^9, 3.6109066663623*^9, 3.610906877163188*^9, 
    3.610907135470828*^9, 3.610907573746387*^9, 3.610908194712111*^9, 
    3.610908692333897*^9, 3.610909093356838*^9, {3.61090941800493*^9, 
-   3.6109094359972477`*^9}, 3.615142717160199*^9, 3.6152955751196527`*^9}]
+   3.6109094359972477`*^9}, 3.615142717160199*^9, 3.6152955751196527`*^9, 
+   3.62473796749229*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -6203,23 +6314,23 @@ Cell[BoxData[{
   RowBox[{"yVals", " ", "=", " ", "IinValsVCVSNoVanNoA6"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"dataValsVCVSNoVanNoA6", "=", 
+  RowBox[{"dataValsVCVSNoVanNoA6Flip", "=", 
    RowBox[{"Transpose", "[", 
     RowBox[{"{", 
      RowBox[{"xVals", ",", "yVals"}], "}"}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{"dataValsVCVSNoVanNoA6", "\[LeftDoubleBracket]", 
+   RowBox[{"dataValsVCVSNoVanNoA6Flip", "\[LeftDoubleBracket]", 
     RowBox[{";;", ",", "1"}], "\[RightDoubleBracket]"}], "/", 
-   RowBox[{"dataValsVCVSNoVanNoA6", "\[LeftDoubleBracket]", 
+   RowBox[{"dataValsVCVSNoVanNoA6Flip", "\[LeftDoubleBracket]", 
     RowBox[{";;", ",", "2"}], "\[RightDoubleBracket]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{"pQuaFitEqVCVSNoVanNoA6", "=", 
+   RowBox[{"pQuaFitEqVCVSNoVanNoA6Flip", "=", 
     RowBox[{"Fit", "[", 
-     RowBox[{"dataValsVCVSNoVanNoA6", ",", 
+     RowBox[{"dataValsVCVSNoVanNoA6Flip", ",", 
       RowBox[{"{", "x", "}"}], ",", "x"}], "]"}]}], ";"}], 
   "\[IndentingNewLine]", 
   RowBox[{"(*", 
@@ -6232,11 +6343,11 @@ Cell[BoxData[{
    "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{"pQuaFitRulesVCVSNoVanNoA6", "=", 
+   RowBox[{"pQuaFitRulesVCVSNoVanNoA6Flip", "=", 
     RowBox[{"FindFit", "[", 
-     RowBox[{"dataValsVCVSNoVanNoA6", ",", 
-      RowBox[{"mVCVSNoVanNoA6", " ", "x"}], ",", 
-      RowBox[{"{", "mVCVSNoVanNoA6", "}"}], ",", "x"}], "]"}]}], ";"}], 
+     RowBox[{"dataValsVCVSNoVanNoA6Flip", ",", 
+      RowBox[{"mVCVSNoVanNoA6Flip", " ", "x"}], ",", 
+      RowBox[{"{", "mVCVSNoVanNoA6Flip", "}"}], ",", "x"}], "]"}]}], ";"}], 
   "\[IndentingNewLine]", 
   RowBox[{"(*", 
    RowBox[{
@@ -6262,7 +6373,7 @@ included: \>\"", ",", "Bold", ",", "15"}], "]"}], ",",
   RowBox[{"iInValues", " ", "=", " ", 
    RowBox[{
     RowBox[{
-     FractionBox["1", "mVCVSNoVanNoA6"], 
+     FractionBox["1", "mVCVSNoVanNoA6Flip"], 
      RowBox[{"(", " ", 
       FractionBox[
        RowBox[{"IinValsVCVSNoVanNoA6", " "}], 
@@ -6271,7 +6382,7 @@ included: \>\"", ",", "Bold", ",", "15"}], "]"}], ",",
          RowBox[{"(", 
           RowBox[{"1", "+", 
            FractionBox["IlkrefVCVSNoVanNoA6", "IlkValsVCVSNoVanNoA6"]}], 
-          ")"}], "2"]}]], ")"}]}], "/.", "pQuaFitRulesVCVSNoVanNoA6"}]}], 
+          ")"}], "2"]}]], ")"}]}], "/.", "pQuaFitRulesVCVSNoVanNoA6Flip"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Print", "[", 
   RowBox[{"Style", "[", 
@@ -6286,8 +6397,8 @@ included: \>\"", ",", "Bold", ",", "15"}], "]"}], ",",
      "\"\<\!\(\*SubscriptBox[\(i\), \(in\)]\) values if \!\(\*SubscriptBox[\(\
 \[Rho]\), \(qua\)]\)=\>\"", ",", "Bold", ",", "15"}], "]"}], ",", 
     RowBox[{
-     RowBox[{"1", "/", "mVCVSNoVanNoA6"}], "/.", 
-     "pQuaFitRulesVCVSNoVanNoA6"}], ",", 
+     RowBox[{"1", "/", "mVCVSNoVanNoA6Flip"}], "/.", 
+     "pQuaFitRulesVCVSNoVanNoA6Flip"}], ",", 
     RowBox[{"Style", "[", 
      RowBox[{"\"\<: \>\"", ",", "Bold", ",", "15"}], "]"}], ",", 
     "iInValues"}], "]"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
@@ -6441,12 +6552,12 @@ included: \>\"", ",", "Bold", ",", "15"}], "]"}], ",",
   RowBox[{
    RowBox[{"Grid", "[", 
     RowBox[{"{", 
-     RowBox[{"{", "\[IndentingNewLine]", 
-      RowBox[{
+     RowBox[{
+      RowBox[{"{", "\[IndentingNewLine]", 
        RowBox[{"Show", "[", "\[IndentingNewLine]", 
         RowBox[{
          RowBox[{"ListPlot", "[", 
-          RowBox[{"dataValsVCVSNoVanNoA6", ",", 
+          RowBox[{"dataValsVCVSNoVanNoA6Flip", ",", 
            RowBox[{"ImageSize", "\[Rule]", "imgSizer"}], ",", 
            RowBox[{"PlotRange", "\[Rule]", 
             RowBox[{"{", 
@@ -6536,7 +6647,7 @@ included: \>\"", ",", "Bold", ",", "15"}], "]"}], ",",
                  "\[RightDoubleBracket]"}]}], "]"}]}]}], "]"}], ","}], "*)"}],
           "\[IndentingNewLine]", 
          RowBox[{"Plot", "[", 
-          RowBox[{"pQuaFitEqVCVSNoVanNoA6", ",", 
+          RowBox[{"pQuaFitEqVCVSNoVanNoA6Flip", ",", 
            RowBox[{"{", 
             RowBox[{"x", ",", "0", ",", "xMax"}], "}"}], ",", 
            RowBox[{"PlotStyle", "\[Rule]", 
@@ -6551,7 +6662,8 @@ included: \>\"", ",", "Bold", ",", "15"}], "]"}], ",",
               RowBox[{
               "dataStyle", "\[LeftDoubleBracket]", "6", 
                "\[RightDoubleBracket]"}]}], "]"}]}]}], "]"}]}], 
-        "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+        "\[IndentingNewLine]", "]"}], "}"}], ",", 
+      RowBox[{"{", "\[IndentingNewLine]", 
        RowBox[{"Show", "[", "\[IndentingNewLine]", 
         RowBox[{
          RowBox[{"ListPlot", "[", 
@@ -6670,7 +6782,7 @@ included: \>\"", ",", "Bold", ",", "15"}], "]"}], ",",
               "dataStyle", "\[LeftDoubleBracket]", "6", 
                "\[RightDoubleBracket]"}]}], "]"}]}], ",", 
            RowBox[{"ImageSize", "\[Rule]", "imgSizer"}]}], "]"}]}], 
-        "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "}"}], "}"}], 
+        "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "}"}]}], "}"}], 
     "]"}], ",", "\[IndentingNewLine]", 
    RowBox[{"{", 
     RowBox[{
@@ -6902,7 +7014,10 @@ included: \>\"", ",", "Bold", ",", "15"}], "]"}], ",",
    3.6114951361074333`*^9, 3.611495162172673*^9}, {3.611495208807205*^9, 
    3.6114953895328608`*^9}, {3.611495428485838*^9, 3.611495459809659*^9}, {
    3.61149549346518*^9, 3.611495700003538*^9}, {3.61149573309367*^9, 
-   3.611495812476432*^9}, {3.6114961364934797`*^9, 3.6114961774460173`*^9}}],
+   3.611495812476432*^9}, {3.6114961364934797`*^9, 3.6114961774460173`*^9}, {
+   3.624739641457285*^9, 3.6247397119820423`*^9}, {3.624740113528666*^9, 
+   3.624740115476645*^9}, {3.6247405112550383`*^9, 3.624740540452258*^9}, {
+   3.624740584502418*^9, 3.624740589021482*^9}}],
 
 Cell[CellGroupData[{
 
@@ -6943,7 +7058,10 @@ axes\"\>",
    3.611495210969387*^9, 3.611495231783421*^9}, {3.61149543277531*^9, 
    3.611495461225281*^9}, 3.6114956604134607`*^9, 3.6114957030252542`*^9, 
    3.611495816994485*^9, 3.611496199134078*^9, 3.6143473675792427`*^9, 
-   3.6152955822696943`*^9}],
+   3.6152955822696943`*^9, 3.624646143439165*^9, 3.6246574095837297`*^9, 
+   3.6247379755043497`*^9, 3.624738513756606*^9, 3.624739728291551*^9, 
+   3.6247401170635653`*^9, 3.624740294789277*^9, {3.6247405314018507`*^9, 
+   3.624740541578827*^9}, 3.624740589682184*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -7013,7 +7131,10 @@ Cell[BoxData[
    3.611495210969387*^9, 3.611495231783421*^9}, {3.61149543277531*^9, 
    3.611495461225281*^9}, 3.6114956604134607`*^9, 3.6114957030252542`*^9, 
    3.611495816994485*^9, 3.611496199134078*^9, 3.6143473675792427`*^9, 
-   3.615295582462764*^9}],
+   3.6152955822696943`*^9, 3.624646143439165*^9, 3.6246574095837297`*^9, 
+   3.6247379755043497`*^9, 3.624738513756606*^9, 3.624739728291551*^9, 
+   3.6247401170635653`*^9, 3.624740294789277*^9, {3.6247405314018507`*^9, 
+   3.624740541578827*^9}, 3.6247405899364862`*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -7051,64 +7172,10 @@ Cell[BoxData[
    3.611495210969387*^9, 3.611495231783421*^9}, {3.61149543277531*^9, 
    3.611495461225281*^9}, 3.6114956604134607`*^9, 3.6114957030252542`*^9, 
    3.611495816994485*^9, 3.611496199134078*^9, 3.6143473675792427`*^9, 
-   3.61529558263658*^9}],
-
-Cell[BoxData[
- FormBox[
-  StyleBox["\<\"Output from linear fit with no offset with non-linear \
-axes\"\>",
-   StripOnInput->False,
-   FontSize->15,
-   FontWeight->Bold], TraditionalForm]], "Print",
- CellChangeTimes->{3.615298773131439*^9}],
-
-Cell[BoxData[
- FormBox[
-  InterpretationBox[
-   RowBox[{
-    StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(i\\), \\(in\\)]\\) values if \
-\\!\\(\\*SubscriptBox[\\(\[Rho]\\), \\(qua\\)]\\)=\"\>",
-     StripOnInput->False,
-     FontSize->15,
-     FontWeight->Bold], "\[InvisibleSpace]", "2.366682254272473`", 
-    "\[InvisibleSpace]", 
-    StyleBox["\<\": \"\>",
-     StripOnInput->False,
-     FontSize->15,
-     FontWeight->Bold], "\[InvisibleSpace]", 
-    RowBox[{"{", 
-     RowBox[{
-     "0.5025345068179798`", ",", "0.5017607569252376`", ",", 
-      "0.5011058355317093`", ",", "0.500505344876677`", ",", 
-      "0.49996792069568435`", ",", "0.499429488656334`", ",", 
-      "0.4989508568324`", ",", "0.4984717065613049`", ",", 
-      "0.4980507399128116`", ",", "0.4976303694036301`", ",", 
-      "0.49721190728453923`", ",", "0.49679180958674846`", ",", 
-      "0.49643067725999046`", ",", "0.4960109822648414`", ",", 
-      "0.49564922443990034`", ",", "0.495289151297967`", ",", 
-      "0.4949288241921213`", ",", "0.49456871918525813`", ",", 
-      "0.4942053826786322`", ",", "0.49384447108483776`"}], "}"}]}],
-   SequenceForm[
-    Style[
-    "\!\(\*SubscriptBox[\(i\), \(in\)]\) values if \
-\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)=", Bold, 15], 2.366682254272473, 
-    Style[": ", Bold, 15], {0.5025345068179798, 0.5017607569252376, 
-    0.5011058355317093, 0.500505344876677, 0.49996792069568435`, 
-    0.499429488656334, 0.4989508568324, 0.4984717065613049, 
-    0.4980507399128116, 0.4976303694036301, 0.49721190728453923`, 
-    0.49679180958674846`, 0.49643067725999046`, 0.4960109822648414, 
-    0.49564922443990034`, 0.495289151297967, 0.4949288241921213, 
-    0.49456871918525813`, 0.4942053826786322, 0.49384447108483776`}],
-   Editable->False], TraditionalForm]], "Print",
- CellChangeTimes->{3.615298773299868*^9}],
-
-Cell[BoxData[
- FormBox[
-  StyleBox["\<\"Output from non-linear fit with linear axes\"\>",
-   StripOnInput->False,
-   FontSize->15,
-   FontWeight->Bold], TraditionalForm]], "Print",
- CellChangeTimes->{3.615298773655904*^9}],
+   3.6152955822696943`*^9, 3.624646143439165*^9, 3.6246574095837297`*^9, 
+   3.6247379755043497`*^9, 3.624738513756606*^9, 3.624739728291551*^9, 
+   3.6247401170635653`*^9, 3.624740294789277*^9, {3.6247405314018507`*^9, 
+   3.624740541578827*^9}, 3.624740590254156*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -7155,7 +7222,40 @@ Cell[BoxData[
     0.5001955180012524, 0.5003156411895433, 0.5004354768265735, 
     0.5005555777938623, 0.5006723310138298, 0.5007915463572679}],
    Editable->False], TraditionalForm]], "Print",
- CellChangeTimes->{3.615298773918338*^9}]
+ CellChangeTimes->{
+  3.604414085540572*^9, 3.604414124243257*^9, {3.604414172911067*^9, 
+   3.604414232730741*^9}, 3.604414276240417*^9, {3.604414308493517*^9, 
+   3.604414349023226*^9}, 3.6044143880326643`*^9, {3.604414423633443*^9, 
+   3.6044144470552464`*^9}, 3.604415094709714*^9, 3.604758552813438*^9, 
+   3.604773368070856*^9, 3.604779594165696*^9, 3.604783258296667*^9, 
+   3.6047841429390574`*^9, 3.604843667578504*^9, 3.60484372774501*^9, 
+   3.604848121221497*^9, 3.604848189517887*^9, {3.60484871523468*^9, 
+   3.604848750025906*^9}, 3.6048488046785*^9, 3.604848878138473*^9, 
+   3.604849089718498*^9, 3.60617139062141*^9, 3.606171505237401*^9, 
+   3.608644159855513*^9, {3.608652148806363*^9, 3.608652166424491*^9}, 
+   3.608664292753984*^9, 3.610918642628562*^9, 3.6109187155152187`*^9, 
+   3.610918852931477*^9, 3.610918893203476*^9, 3.61091990750634*^9, 
+   3.610920334952077*^9, 3.610920406524002*^9, 3.610996410240673*^9, 
+   3.610996544213087*^9, 3.6110857971280413`*^9, 3.611086085162468*^9, {
+   3.6110865327031116`*^9, 3.611086562288512*^9}, {3.611086763970381*^9, 
+   3.611086776446286*^9}, 3.611086848983745*^9, {3.6110868834758167`*^9, 
+   3.6110868984944677`*^9}, 3.6110869411895247`*^9, {3.6110888955334473`*^9, 
+   3.6110889226281233`*^9}, 3.611088994108266*^9, 3.611089222304431*^9, 
+   3.6110893141608887`*^9, 3.611089358795804*^9, {3.611089397432096*^9, 
+   3.611089422791477*^9}, 3.611089493892239*^9, {3.611089654193122*^9, 
+   3.6110897340941343`*^9}, {3.611089767529484*^9, 3.611089778792119*^9}, {
+   3.611089899384282*^9, 3.611090034154386*^9}, 3.611090908019895*^9, 
+   3.611090949706122*^9, 3.6110910007674513`*^9, {3.6110910995636997`*^9, 
+   3.611091122556205*^9}, 3.611091168338315*^9, 3.611091293222945*^9, 
+   3.6110913301183157`*^9, 3.6113231123747683`*^9, 3.611434683918024*^9, 
+   3.611434716770455*^9, 3.611495118773294*^9, 3.6114951665974407`*^9, {
+   3.611495210969387*^9, 3.611495231783421*^9}, {3.61149543277531*^9, 
+   3.611495461225281*^9}, 3.6114956604134607`*^9, 3.6114957030252542`*^9, 
+   3.611495816994485*^9, 3.611496199134078*^9, 3.6143473675792427`*^9, 
+   3.6152955822696943`*^9, 3.624646143439165*^9, 3.6246574095837297`*^9, 
+   3.6247379755043497`*^9, 3.624738513756606*^9, 3.624739728291551*^9, 
+   3.6247401170635653`*^9, 3.624740294789277*^9, {3.6247405314018507`*^9, 
+   3.624740541578827*^9}, 3.624740590568898*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -7175,19 +7275,19 @@ Cell[BoxData[
          Hold[$CellContext`yMin$$], -1.*^-14}, -1.*^-13, 1.*^-12, 
         1.0000000000000002`*^-14}, {{
          Hold[$CellContext`yMax$$], 2.*^-13}, 1.*^-13, 1.*^-12, 
-        1.0000000000000002`*^-14}}, Typeset`size$$ = {1309., {202.5, 209.5}}, 
+        1.0000000000000002`*^-14}}, Typeset`size$$ = {1087., {679.5, 687.5}}, 
       Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`xMin$23805$$ = 0, $CellContext`xMax$23806$$ = 
-      0, $CellContext`yMin$23807$$ = 0, $CellContext`yMax$23808$$ = 0}, 
+      True, $CellContext`xMin$161439$$ = 0, $CellContext`xMax$161440$$ = 
+      0, $CellContext`yMin$161441$$ = 0, $CellContext`yMax$161442$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, 
         "Variables" :> {$CellContext`xMax$$ = 7.5*^-13, $CellContext`xMin$$ = 
           0, $CellContext`yMax$$ = 2.*^-13, $CellContext`yMin$$ = -1.*^-14}, 
         "ControllerVariables" :> {
-          Hold[$CellContext`xMin$$, $CellContext`xMin$23805$$, 0], 
-          Hold[$CellContext`xMax$$, $CellContext`xMax$23806$$, 0], 
-          Hold[$CellContext`yMin$$, $CellContext`yMin$23807$$, 0], 
-          Hold[$CellContext`yMax$$, $CellContext`yMax$23808$$, 0]}, 
+          Hold[$CellContext`xMin$$, $CellContext`xMin$161439$$, 0], 
+          Hold[$CellContext`xMax$$, $CellContext`xMax$161440$$, 0], 
+          Hold[$CellContext`yMin$$, $CellContext`yMin$161441$$, 0], 
+          Hold[$CellContext`yMax$$, $CellContext`yMax$161442$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -7195,8 +7295,9 @@ Cell[BoxData[
           Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> Grid[{{
             Show[
              
-             ListPlot[$CellContext`dataValsVCVSNoVanNoA6, 
+             ListPlot[$CellContext`dataValsVCVSNoVanNoA6Flip, 
               ImageSize -> $CellContext`imgSizer, 
+              
               PlotRange -> {{$CellContext`xMin$$, $CellContext`xMax$$}, \
 {$CellContext`yMin$$, $CellContext`yMax$$}}, 
               PlotStyle -> $CellContext`dataStyle, FrameLabel -> {
@@ -7214,12 +7315,12 @@ Cell[BoxData[
               ImagePadding -> {{80, 30}, {50, 10}}, 
               AxesOrigin -> {$CellContext`xMin$$, $CellContext`yMin$$}], 
              
-             Plot[$CellContext`pQuaFitEqVCVSNoVanNoA6, {$CellContext`x, 
+             Plot[$CellContext`pQuaFitEqVCVSNoVanNoA6Flip, {$CellContext`x, 
                0, $CellContext`xMax$$}, PlotStyle -> 
               Part[$CellContext`dataStyle, 6], Filling -> Bottom, 
               FillingStyle -> Directive[
                 Opacity[0.2], 
-                Part[$CellContext`dataStyle, 6]]]], 
+                Part[$CellContext`dataStyle, 6]]]]}, {
             Show[
              
              ListPlot[$CellContext`dataValsRevisedVCVSNoVanNoA6, 
@@ -7241,6 +7342,7 @@ Cell[BoxData[
              Plot[
               
               ReplaceAll[(1/(
+                
                 2 $CellContext`pquaRevisedVCVSNoVanNoA6)) (($CellContext`x + \
 $CellContext`IlkrRevisedVCVSNoVanNoA6)^2/$CellContext`x), \
 $CellContext`pQuaFitRulesRevisedVCVSNoVanNoA6], {$CellContext`x, 
@@ -7261,7 +7363,7 @@ $CellContext`pQuaFitRulesRevisedVCVSNoVanNoA6], {$CellContext`x,
             2.*^-13}, 1.*^-13, 1.*^-12, 1.0000000000000002`*^-14, 
            Appearance -> {"Labeled", "Open"}}}, "Options" :> {}, 
         "DefaultOptions" :> {}],
-       ImageSizeCache->{1356., {331., 338.}},
+       ImageSizeCache->{1134., {807., 815.}},
        SingleEvaluation->True],
       Deinitialization:>None,
       DynamicModuleValues:>{},
@@ -7272,7 +7374,11 @@ $CellContext`pQuaFitRulesRevisedVCVSNoVanNoA6], {$CellContext`x,
      StripOnInput->False],
     TraditionalForm],
    Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
- CellChangeTimes->{3.615298774327203*^9}],
+ CellChangeTimes->{
+  3.615298774327203*^9, 3.624646144730624*^9, 3.624657410930345*^9, 
+   3.624737976736079*^9, 3.624738515083809*^9, 3.624739729645541*^9, 
+   3.624740118469946*^9, 3.6247402962159224`*^9, {3.624740531179673*^9, 
+   3.624740541345358*^9}, 3.6247405910977983`*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -7370,7 +7476,7 @@ Cell[BoxData[
          Hold[$CellContext`yMin$$], -1.*^-14}, -1.*^-13, 1.*^-12, 
         1.0000000000000002`*^-14}, {{
          Hold[$CellContext`yMax$$], 2.*^-13}, 1.*^-13, 1.*^-12, 
-        1.0000000000000002`*^-14}}, Typeset`size$$ = {1309., {202.5, 209.5}}, 
+        1.0000000000000002`*^-14}}, Typeset`size$$ = {1087., {333.5, 341.5}}, 
       Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
       True, $CellContext`xMin$19499$$ = 0, $CellContext`xMax$19500$$ = 
       0, $CellContext`yMin$19501$$ = 0, $CellContext`yMax$19502$$ = 0}, 
@@ -7456,7 +7562,7 @@ $CellContext`pQuaFitRulesRevisedVCVSNoVanNoA6], {$CellContext`x,
             2.*^-13}, 1.*^-13, 1.*^-12, 1.0000000000000002`*^-14, 
            Appearance -> {"Labeled", "Open"}}}, "Options" :> {}, 
         "DefaultOptions" :> {}],
-       ImageSizeCache->{1356., {331., 338.}},
+       ImageSizeCache->{1134., {461., 469.}},
        SingleEvaluation->True],
       Deinitialization:>None,
       DynamicModuleValues:>{},
@@ -7627,9 +7733,7 @@ Cell[BoxData[
 
 Cell[CellGroupData[{
 
-Cell["\<\
-Color Chooser (gotten from SomaPTauCalc.nb)\
-\>", "Subsection",
+Cell["Color Chooser (gotten from SomaPTauCalc.nb)", "Subsection",
  CellChangeTimes->{{3.603209036979546*^9, 3.603209039282784*^9}, 
    3.604260574897065*^9}],
 
@@ -7802,16 +7906,17 @@ Cell[BoxData[
    3.6048488204901342`*^9, 3.6048490768549356`*^9, 3.6050198051340218`*^9, 
    3.605021329906768*^9, 3.6061715131928167`*^9, 3.608644053752179*^9, 
    3.610992047885092*^9, 3.610996367614367*^9, 3.6113231054981613`*^9, 
-   3.6143473585305634`*^9, 3.615142703409813*^9, 3.615295570299265*^9}]
+   3.6143473585305634`*^9, 3.615142703409813*^9, 3.615295570299265*^9, 
+   3.621342724152151*^9, 3.6246459664817877`*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
 WindowToolbars->{"RulerBar", "EditBar"},
-WindowSize->{1545, 1549},
-WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+WindowSize->{1280, 1549},
+WindowMargins->{{Automatic, 1272}, {Automatic, 0}},
 CellContext->Notebook,
-FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -7826,240 +7931,237 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 166, 2, 81, "Section"],
-Cell[748, 26, 169, 4, 32, "Input",
+Cell[579, 22, 166, 2, 67, "Section"],
+Cell[748, 26, 219, 5, 32, "Input",
  InitializationCell->True],
 Cell[CellGroupData[{
-Cell[942, 34, 354, 8, 49, "Subsection"],
-Cell[1299, 44, 547, 8, 71, "Text"],
+Cell[992, 35, 354, 8, 51, "Subsection"],
+Cell[1349, 45, 547, 8, 71, "Text"],
 Cell[CellGroupData[{
-Cell[1871, 56, 13878, 332, 822, "Input"],
+Cell[1921, 57, 13878, 332, 822, "Input"],
 Cell[CellGroupData[{
-Cell[15774, 392, 850, 18, 27, "Print"],
-Cell[16627, 412, 864, 19, 27, "Print"],
-Cell[17494, 433, 1195, 27, 24, "Print"]
+Cell[15824, 393, 900, 19, 26, "Print"],
+Cell[16727, 414, 919, 20, 26, "Print"],
+Cell[17649, 436, 1245, 28, 23, "Print"]
 }, Open  ]],
-Cell[18704, 463, 4495, 84, 380, "Output"],
-Cell[23202, 549, 506, 11, 24, "Message"],
-Cell[23711, 562, 2507, 39, 135, "Message"]
+Cell[18909, 467, 4557, 85, 984, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[26255, 606, 1192, 20, 77, "Input"],
-Cell[27450, 628, 1009, 18, 33, "Output"]
+Cell[23503, 557, 1192, 20, 77, "Input"],
+Cell[24698, 579, 1009, 18, 33, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[28496, 651, 845, 14, 55, "Input"],
-Cell[29344, 667, 913, 16, 33, "Output"]
+Cell[25744, 602, 845, 14, 55, "Input"],
+Cell[26592, 618, 913, 16, 55, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[30306, 689, 524, 16, 67, "Subsection"],
-Cell[30833, 707, 594, 9, 71, "Text"],
+Cell[27554, 640, 524, 16, 71, "Subsection"],
+Cell[28081, 658, 594, 9, 71, "Text"],
 Cell[CellGroupData[{
-Cell[31452, 720, 14436, 332, 821, "Input"],
+Cell[28700, 671, 14436, 332, 821, "Input"],
 Cell[CellGroupData[{
-Cell[45913, 1056, 719, 16, 27, "Print"],
-Cell[46635, 1074, 739, 17, 27, "Print"],
-Cell[47377, 1093, 1067, 25, 24, "Print"]
+Cell[43161, 1007, 767, 17, 26, "Print"],
+Cell[43931, 1026, 786, 18, 26, "Print"],
+Cell[44720, 1046, 1114, 26, 23, "Print"]
 }, Open  ]],
-Cell[48459, 1121, 4465, 84, 684, "Output"]
+Cell[45849, 1075, 4523, 85, 984, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[52973, 1211, 295, 3, 37, "Subsection"],
-Cell[53271, 1216, 366, 9, 31, "Text"],
+Cell[50421, 1166, 295, 3, 39, "Subsection"],
+Cell[50719, 1171, 333, 8, 32, "Text"],
 Cell[CellGroupData[{
-Cell[53662, 1229, 4962, 125, 594, "Input"],
-Cell[58627, 1356, 265, 5, 33, "Output"],
-Cell[58895, 1363, 316, 7, 35, "Output"],
-Cell[59214, 1372, 4091, 81, 427, "Output"]
+Cell[51077, 1183, 4962, 125, 594, "Input"],
+Cell[56042, 1310, 287, 5, 31, "Output"],
+Cell[56332, 1317, 338, 7, 33, "Output"],
+Cell[56673, 1326, 4472, 93, 426, "Output"]
 }, Open  ]],
-Cell[63320, 1456, 68, 1, 32, "Input"]
+Cell[61160, 1422, 68, 1, 32, "Input"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[63425, 1462, 419, 10, 41, "Subsection"],
-Cell[63847, 1474, 934, 20, 71, "Text"],
+Cell[61265, 1428, 386, 9, 43, "Subsection"],
+Cell[61654, 1439, 868, 18, 73, "Text"],
 Cell[CellGroupData[{
-Cell[64806, 1498, 14136, 336, 822, "Input"],
+Cell[62547, 1461, 14136, 336, 822, "Input"],
 Cell[CellGroupData[{
-Cell[78967, 1838, 868, 18, 27, "Print"],
-Cell[79838, 1858, 888, 19, 27, "Print"],
-Cell[80729, 1879, 1218, 27, 24, "Print"]
+Cell[76708, 1801, 914, 19, 26, "Print"],
+Cell[77625, 1822, 936, 20, 26, "Print"],
+Cell[78564, 1844, 1262, 28, 23, "Print"]
 }, Open  ]],
-Cell[81962, 1909, 4536, 85, 684, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[86535, 1999, 1343, 22, 77, "Input"],
-Cell[87881, 2023, 1011, 18, 33, "Output"]
+Cell[79841, 1875, 4594, 86, 984, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[88929, 2046, 845, 14, 55, "Input"],
-Cell[89777, 2062, 913, 16, 33, "Output"]
+Cell[84472, 1966, 1343, 22, 77, "Input"],
+Cell[85818, 1990, 1011, 18, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[86866, 2013, 845, 14, 55, "Input"],
+Cell[87714, 2029, 913, 16, 55, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[90739, 2084, 670, 15, 67, "Subsection"],
-Cell[91412, 2101, 369, 6, 31, "Text"],
+Cell[88676, 2051, 670, 15, 71, "Subsection"],
+Cell[89349, 2068, 369, 6, 31, "Text"],
 Cell[CellGroupData[{
-Cell[91806, 2111, 15150, 341, 821, "Input"],
+Cell[89743, 2078, 15150, 341, 821, "Input"],
 Cell[CellGroupData[{
-Cell[106981, 2456, 866, 18, 27, "Print"],
-Cell[107850, 2476, 886, 19, 27, "Print"],
-Cell[108739, 2497, 1214, 27, 24, "Print"]
+Cell[104918, 2423, 916, 19, 26, "Print"],
+Cell[105837, 2444, 936, 20, 26, "Print"],
+Cell[106776, 2466, 1266, 28, 23, "Print"]
 }, Open  ]],
-Cell[109968, 2527, 4543, 85, 684, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[114548, 2617, 1016, 17, 77, "Input"],
-Cell[115567, 2636, 1009, 18, 33, "Output"]
+Cell[108057, 2497, 4603, 86, 984, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[116613, 2659, 845, 14, 55, "Input"],
-Cell[117461, 2675, 915, 16, 33, "Output"]
+Cell[112697, 2588, 1016, 17, 77, "Input"],
+Cell[113716, 2607, 1009, 18, 55, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[114762, 2630, 845, 14, 55, "Input"],
+Cell[115610, 2646, 915, 16, 55, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[118425, 2697, 899, 21, 67, "Subsection"],
-Cell[119327, 2720, 1421, 38, 71, "Text"],
+Cell[116574, 2668, 899, 21, 71, "Subsection"],
+Cell[117476, 2691, 1256, 33, 74, "Text"],
 Cell[CellGroupData[{
-Cell[120773, 2762, 16885, 358, 798, "Input"],
+Cell[118757, 2728, 16885, 358, 798, "Input"],
 Cell[CellGroupData[{
-Cell[137683, 3124, 1141, 24, 28, "Print"],
-Cell[138827, 3150, 1469, 32, 24, "Print"]
+Cell[135667, 3090, 1213, 25, 27, "Print"],
+Cell[136883, 3117, 1539, 33, 23, "Print"]
 }, Open  ]],
-Cell[140311, 3185, 4783, 89, 684, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[145131, 3279, 1161, 21, 143, "Input"],
-Cell[146295, 3302, 1349, 23, 33, "Output"]
+Cell[138437, 3153, 4863, 90, 984, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[147681, 3330, 1541, 23, 121, "Input"],
-Cell[149225, 3355, 1292, 22, 33, "Output"]
+Cell[143337, 3248, 1161, 21, 143, "Input"],
+Cell[144501, 3271, 1349, 23, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[145887, 3299, 1541, 23, 121, "Input"],
+Cell[147431, 3324, 1292, 22, 55, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[150566, 3383, 972, 21, 67, "Subsection"],
-Cell[151541, 3406, 1482, 35, 91, "Text"],
+Cell[148772, 3352, 972, 21, 71, "Subsection"],
+Cell[149747, 3375, 1482, 35, 94, "Text"],
 Cell[CellGroupData[{
-Cell[153048, 3445, 17416, 363, 842, "Input"],
+Cell[151254, 3414, 17416, 363, 842, "Input"],
 Cell[CellGroupData[{
-Cell[170489, 3812, 1145, 24, 28, "Print"],
-Cell[171637, 3838, 1470, 32, 24, "Print"]
+Cell[168695, 3781, 1217, 25, 27, "Print"],
+Cell[169915, 3808, 1540, 33, 23, "Print"]
 }, Open  ]],
-Cell[173122, 3873, 4791, 89, 717, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[177950, 3967, 2221, 33, 143, "Input"],
-Cell[180174, 4002, 1371, 23, 33, "Output"]
+Cell[171470, 3844, 4871, 90, 984, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[181582, 4030, 1590, 24, 121, "Input"],
-Cell[183175, 4056, 1314, 22, 33, "Output"]
+Cell[176378, 3939, 2221, 33, 143, "Input"],
+Cell[178602, 3974, 1371, 23, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[180010, 4002, 1590, 24, 121, "Input"],
+Cell[181603, 4028, 1314, 22, 55, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[184538, 4084, 1138, 24, 67, "Subsection"],
-Cell[185679, 4110, 1972, 42, 131, "Text"],
+Cell[182966, 4056, 1138, 24, 99, "Subsection"],
+Cell[184107, 4082, 2001, 42, 134, "Text"],
 Cell[CellGroupData[{
-Cell[187676, 4156, 19830, 404, 998, "Input"],
+Cell[186133, 4128, 21087, 435, 1160, "Input"],
 Cell[CellGroupData[{
-Cell[207531, 4564, 1343, 27, 28, "Print"],
-Cell[208877, 4593, 1354, 27, 28, "Print"],
-Cell[210234, 4622, 1688, 35, 24, "Print"]
+Cell[207245, 4567, 1461, 28, 27, "Print"],
+Cell[208709, 4597, 1473, 28, 27, "Print"],
+Cell[210185, 4627, 1804, 36, 23, "Print"],
+Cell[211992, 4665, 1215, 21, 27, "Print"],
+Cell[213210, 4688, 2794, 52, 47, "Print"]
 }, Open  ]],
-Cell[211937, 4660, 5013, 92, 684, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[216987, 4757, 3381, 51, 253, "Input"],
-Cell[220371, 4810, 1651, 27, 33, "Output"],
-Cell[222025, 4839, 1571, 26, 33, "Output"]
+Cell[216019, 4743, 5139, 93, 951, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[223633, 4870, 303, 8, 35, "Subsubsection"],
-Cell[223939, 4880, 1093, 36, 75, "Text"],
+Cell[221195, 4841, 3381, 51, 253, "Input"],
+Cell[224579, 4894, 1651, 27, 33, "Output"],
+Cell[226233, 4923, 1571, 26, 55, "Output"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[225057, 4920, 1817, 38, 275, "Input"],
-Cell[226877, 4960, 1589, 33, 88, "Output"],
-Cell[228469, 4995, 1463, 29, 88, "Output"]
+Cell[227841, 4954, 270, 7, 37, "Subsubsection"],
+Cell[228114, 4963, 928, 31, 74, "Text"],
+Cell[CellGroupData[{
+Cell[229067, 4998, 1817, 38, 275, "Input"],
+Cell[230887, 5038, 1589, 33, 88, "Output"],
+Cell[232479, 5073, 1463, 29, 88, "Output"]
 }, Open  ]]
 }, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[229993, 5031, 1035, 25, 67, "Subsection"],
-Cell[231031, 5058, 1369, 33, 71, "Text"],
-Cell[CellGroupData[{
-Cell[232425, 5095, 1415, 26, 143, "Input"],
-Cell[233843, 5123, 1995, 37, 57, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[235875, 5165, 2361, 43, 121, "Input"],
-Cell[238239, 5210, 1611, 26, 33, "Output"]
+Cell[234003, 5109, 1035, 25, 79, "Subsection"],
+Cell[235041, 5136, 1270, 30, 74, "Text"],
+Cell[CellGroupData[{
+Cell[236336, 5170, 1415, 26, 143, "Input"],
+Cell[237754, 5198, 2017, 37, 55, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[239887, 5241, 20491, 424, 1130, "Input"],
-Cell[CellGroupData[{
-Cell[260403, 5669, 1389, 27, 28, "Print"],
-Cell[261795, 5698, 1381, 27, 28, "Print"],
-Cell[263179, 5727, 1711, 35, 24, "Print"]
+Cell[239808, 5240, 2361, 43, 121, "Input"],
+Cell[242172, 5285, 1659, 27, 55, "Output"]
 }, Open  ]],
-Cell[264905, 5765, 5226, 98, 684, "Output"]
+Cell[CellGroupData[{
+Cell[243868, 5317, 21342, 447, 1217, "Input"],
+Cell[CellGroupData[{
+Cell[265235, 5768, 1577, 30, 27, "Print"],
+Cell[266815, 5800, 1572, 30, 27, "Print"],
+Cell[268390, 5832, 1884, 38, 23, "Print"]
+}, Open  ]],
+Cell[270289, 5873, 5429, 100, 951, "Output"]
 }, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[270180, 5869, 1112, 27, 67, "Subsection"],
-Cell[271295, 5898, 1270, 30, 71, "Text"],
-Cell[CellGroupData[{
-Cell[272590, 5932, 1415, 26, 143, "Input"],
-Cell[274008, 5960, 2017, 37, 33, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[276062, 6002, 2361, 43, 121, "Input"],
-Cell[278426, 6047, 1633, 26, 33, "Output"]
+Cell[275767, 5979, 1112, 27, 71, "Subsection"],
+Cell[276882, 6008, 1270, 30, 74, "Text"],
+Cell[CellGroupData[{
+Cell[278177, 6042, 1415, 26, 143, "Input"],
+Cell[279595, 6070, 2042, 38, 55, "Output"]
 }, Open  ]],
-Cell[280074, 6076, 2657, 69, 369, "Input",
+Cell[CellGroupData[{
+Cell[281674, 6113, 2361, 43, 121, "Input"],
+Cell[284038, 6158, 1633, 26, 55, "Output"]
+}, Open  ]],
+Cell[285686, 6187, 2657, 69, 391, "Input",
  InitializationCell->True],
 Cell[CellGroupData[{
-Cell[282756, 6149, 34714, 755, 2090, "Input"],
+Cell[288368, 6260, 35001, 759, 2280, "Input"],
 Cell[CellGroupData[{
-Cell[317495, 6908, 2341, 37, 29, "Print"],
-Cell[319839, 6947, 3927, 68, 49, "Print"],
-Cell[323769, 7017, 2321, 36, 29, "Print"],
-Cell[326093, 7055, 239, 7, 29, "Print"],
-Cell[326335, 7064, 1827, 38, 49, "Print"],
-Cell[328165, 7104, 222, 6, 29, "Print"],
-Cell[328390, 7112, 2144, 45, 51, "Print"]
+Cell[323394, 7023, 2583, 40, 27, "Print"],
+Cell[325980, 7065, 4173, 71, 47, "Print"],
+Cell[330156, 7138, 2566, 39, 27, "Print"],
+Cell[332725, 7179, 4488, 78, 50, "Print"]
 }, Open  ]],
-Cell[330549, 7160, 5986, 114, 686, "Output"],
-Cell[336538, 7276, 4316, 77, 51, "Print"],
-Cell[340857, 7355, 6132, 116, 686, "Output"]
+Cell[337228, 7260, 6277, 120, 1639, "Output"],
+Cell[343508, 7382, 4316, 77, 50, "Print"],
+Cell[347827, 7461, 6132, 116, 947, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[347050, 7478, 95, 1, 81, "Section"],
-Cell[347148, 7481, 389, 15, 78, "Input",
+Cell[354020, 7584, 95, 1, 67, "Section"],
+Cell[354118, 7587, 389, 15, 78, "Input",
  InitializationCell->True],
 Cell[CellGroupData[{
-Cell[347562, 7500, 683, 20, 55, "Input"],
-Cell[348248, 7522, 567, 14, 33, "Output"]
+Cell[354532, 7606, 683, 20, 55, "Input"],
+Cell[355218, 7628, 567, 14, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[348852, 7541, 108, 1, 45, "Subsection"],
+Cell[355822, 7647, 108, 1, 47, "Subsection"],
 Cell[CellGroupData[{
-Cell[348985, 7546, 254, 4, 35, "Subsubsection"],
-Cell[349242, 7552, 629, 12, 91, "Text"],
-Cell[349874, 7566, 2858, 57, 187, "Input",
+Cell[355955, 7652, 254, 4, 35, "Subsubsection"],
+Cell[356212, 7658, 629, 12, 91, "Text"],
+Cell[356844, 7672, 2858, 57, 187, "Input",
  InitializationCell->True]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[352781, 7629, 165, 4, 37, "Subsection"],
-Cell[352949, 7635, 211, 4, 31, "Text"],
+Cell[359751, 7735, 157, 2, 39, "Subsection"],
+Cell[359911, 7739, 211, 4, 31, "Text"],
 Cell[CellGroupData[{
-Cell[353185, 7643, 1795, 45, 99, "Input",
+Cell[360147, 7747, 1795, 45, 99, "Input",
  InitializationCell->True],
-Cell[354983, 7690, 4552, 114, 47, "Output"]
+Cell[361945, 7794, 4602, 115, 48, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
