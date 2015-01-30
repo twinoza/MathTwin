@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    938031,      20313]
-NotebookOptionsPosition[    923854,      19842]
-NotebookOutlinePosition[    924218,      19858]
-CellTagsIndexPosition[    924175,      19855]
+NotebookDataLength[   1046016,      22746]
+NotebookOptionsPosition[   1029754,      22207]
+NotebookOutlinePosition[   1030116,      22223]
+CellTagsIndexPosition[   1030073,      22220]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -31,8 +31,7 @@ Cell[TextData[{
  Cell[BoxData[
   FormBox[
    RowBox[{"h", "(", 
-    SubscriptBox["i", "in"], ")"}], TraditionalForm]],
-  FormatType->"TraditionalForm"]
+    SubscriptBox["i", "in"], ")"}], TraditionalForm]]]
 }], "Subsection",
  CellChangeTimes->{{3.625500975586851*^9, 3.625500997287445*^9}}],
 
@@ -108,7 +107,7 @@ Cell[BoxData[{
  InitializationCell->True,
  CellChangeTimes->{{3.6192150155149107`*^9, 3.61921508037906*^9}, {
   3.619215145477847*^9, 3.6192151679066277`*^9}, {3.6192152241396837`*^9, 
-  3.6192152245648537`*^9}}],
+  3.6192152245648537`*^9}, {3.6267281521249638`*^9, 3.626728182124975*^9}}],
 
 Cell[BoxData[
  FormBox[
@@ -146,7 +145,8 @@ Cell[BoxData[
    3.624388507580669*^9, 3.625422794917817*^9, 3.625431315466755*^9, {
    3.625435932478684*^9, 3.625435945569817*^9}, 3.625497040133198*^9, 
    3.6254979488823853`*^9, 3.626462781590962*^9, 3.6265367520320063`*^9, 
-   3.626617662970459*^9, 3.626707564399684*^9}],
+   3.626617662970459*^9, 3.626707564399684*^9, 3.626730406311247*^9, 
+   3.627848738834154*^9, 3.631472432145274*^9, 3.631566073143111*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -175,7 +175,8 @@ Cell[BoxData[
    3.624388507580669*^9, 3.625422794917817*^9, 3.625431315466755*^9, {
    3.625435932478684*^9, 3.625435945569817*^9}, 3.625497040133198*^9, 
    3.6254979488823853`*^9, 3.626462781590962*^9, 3.6265367520320063`*^9, 
-   3.626617662970459*^9, 3.626707565258724*^9}],
+   3.626617662970459*^9, 3.626707564399684*^9, 3.626730406311247*^9, 
+   3.627848738834154*^9, 3.631472432145274*^9, 3.631566074034707*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -211,7 +212,8 @@ Cell[BoxData[
    3.624388507580669*^9, 3.625422794917817*^9, 3.625431315466755*^9, {
    3.625435932478684*^9, 3.625435945569817*^9}, 3.625497040133198*^9, 
    3.6254979488823853`*^9, 3.626462781590962*^9, 3.6265367520320063`*^9, 
-   3.626617662970459*^9, 3.6267075656201897`*^9}],
+   3.626617662970459*^9, 3.626707564399684*^9, 3.626730406311247*^9, 
+   3.627848738834154*^9, 3.631472432145274*^9, 3.6315660744036922`*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -238,7 +240,8 @@ Cell[BoxData[
    3.624388507580669*^9, 3.625422794917817*^9, 3.625431315466755*^9, {
    3.625435932478684*^9, 3.625435945569817*^9}, 3.625497040133198*^9, 
    3.6254979488823853`*^9, 3.626462781590962*^9, 3.6265367520320063`*^9, 
-   3.626617662970459*^9, 3.626707565861771*^9}]
+   3.626617662970459*^9, 3.626707564399684*^9, 3.626730406311247*^9, 
+   3.627848738834154*^9, 3.631472432145274*^9, 3.6315660746528053`*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -2438,6 +2441,20 @@ Cell[BoxData[{
      RowBox[{"GenerateConditions", "\[Rule]", "False"}]}], 
     "]"}]}]}], "\[IndentingNewLine]", 
  RowBox[{
+  RowBox[{"ft2", "[", "iin_", "]"}], ":=", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"2", "iin"}], "-", "1"}], 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"\[Pi]", "+", 
+      RowBox[{"2", 
+       RowBox[{"ArcCot", "[", 
+        SqrtBox[
+         RowBox[{
+          RowBox[{"2", "iin"}], "-", "1"}]], "]"}]}]}], ")"}], 
+    "2"]]}], "\[IndentingNewLine]", 
+ RowBox[{
   RowBox[{"ft2Approx", "[", "order_", "]"}], ":=", 
   RowBox[{"Normal", "[", 
    RowBox[{"Series", "[", 
@@ -2470,7 +2487,7 @@ Cell[BoxData[{
    3.619385771749674*^9}, {3.620746569329361*^9, 3.620746580368689*^9}, 
    3.620746741381846*^9, {3.620747008739563*^9, 3.62074701066895*^9}, {
    3.626706989508107*^9, 3.626706989729496*^9}, {3.626707869388961*^9, 
-   3.626707881397139*^9}}],
+   3.626707881397139*^9}, {3.626728215840681*^9, 3.626728336781691*^9}}],
 
 Cell[CellGroupData[{
 
@@ -2832,9 +2849,10 @@ Cell[BoxData[
           SeriesData[$CellContext`iin, 0.5, {}, 2, 4, 2],
           Editable->False]}],
         SeriesData[$CellContext`iin, 0.5, {
-         Rational[1, 2] Pi^(-2), 2^Rational[1, 2] 
-          Pi^(-3) (-1 + $CellContext`\[Beta]0)^(-1) ($CellContext`\[Beta]0 - \
-$CellContext`\[Beta]f)/(-1 + $CellContext`\[Beta]f)}, 2, 4, 2],
+         Rational[1, 2] 
+          Pi^(-2), ((2^Rational[1, 2] 
+            Pi^(-3))/(-1 + $CellContext`\[Beta]0)) (($CellContext`\[Beta]0 - \
+$CellContext`\[Beta]f)/(-1 + $CellContext`\[Beta]f))}, 2, 4, 2],
         Editable->False]}]},
      {
       InterpretationBox[Cell[BoxData[
@@ -2962,8 +2980,9 @@ Series Approximation of \\!\\(\\*SuperscriptBox[\\(f\\), \\(2\\)]\\)\
           SeriesData[$CellContext`iin, 0.5, {}, 2, 6, 2],
           Editable->False]}],
         SeriesData[$CellContext`iin, 0.5, {
-         Rational[1, 2] Pi^(-2), 2^Rational[1, 2] Pi^(-3), 3 Pi^(-4), 
-          Rational[-2, 3] 2^Rational[1, 2] Pi^(-5) (-6 + Pi^2)}, 2, 6, 2],
+         Rational[1, 2] Pi^(-2), 2^Rational[1, 2] Pi^(-3), 3 
+          Pi^(-4), ((Rational[-2, 3] 2^Rational[1, 2]) Pi^(-5)) (-6 + Pi^2)}, 
+         2, 6, 2],
         Editable->False]}]},
      {
       RowBox[{
@@ -3090,10 +3109,11 @@ Series Approximation of \\!\\(\\*SuperscriptBox[\\(f\\), \\(2\\)]\\)\
           SeriesData[$CellContext`iin, 0.5, {}, 2, 8, 2],
           Editable->False]}],
         SeriesData[$CellContext`iin, 0.5, {
-         Rational[1, 2] Pi^(-2), 2^Rational[1, 2] Pi^(-3), 3 Pi^(-4), 
-          Rational[-2, 3] 2^Rational[1, 2] Pi^(-5) (-6 + Pi^2), 10 Pi^(-6) - 
-          4 Pi^(-4), Rational[4, 5] 2^Rational[1, 2] 
-          Pi^(-7) (15 - 10 Pi^2 + Pi^4)}, 2, 8, 2],
+         Rational[1, 2] Pi^(-2), 2^Rational[1, 2] Pi^(-3), 3 
+          Pi^(-4), ((Rational[-2, 3] 2^Rational[1, 2]) Pi^(-5)) (-6 + Pi^2), 
+          10 Pi^(-6) - 4 
+          Pi^(-4), ((Rational[4, 5] 2^Rational[1, 2]) Pi^(-7)) (15 - 10 Pi^2 + 
+           Pi^4)}, 2, 8, 2],
         Editable->False]}]},
      {
       RowBox[{
@@ -3276,13 +3296,13 @@ Series Approximation of \\!\\(\\*SuperscriptBox[\\(f\\), \\(2\\)]\\)\
           SeriesData[$CellContext`iin, 0.5, {}, 2, 10, 2],
           Editable->False]}],
         SeriesData[$CellContext`iin, 0.5, {
-         Rational[1, 2] Pi^(-2), 2^Rational[1, 2] Pi^(-3), 3 Pi^(-4), 
-          Rational[-2, 3] 2^Rational[1, 2] Pi^(-5) (-6 + Pi^2), 10 Pi^(-6) - 
-          4 Pi^(-4), Rational[4, 5] 2^Rational[1, 2] 
-          Pi^(-7) (15 - 10 Pi^2 + Pi^4), Rational[4, 15] 
-          Pi^(-8) (105 - 100 Pi^2 + 23 Pi^4), Rational[-8, 105] 
-          2^Rational[1, 2] Pi^(-9) (-420 + 525 Pi^2 - 196 Pi^4 + 15 Pi^6)}, 2,
-          10, 2],
+         Rational[1, 2] Pi^(-2), 2^Rational[1, 2] Pi^(-3), 3 
+          Pi^(-4), ((Rational[-2, 3] 2^Rational[1, 2]) Pi^(-5)) (-6 + Pi^2), 
+          10 Pi^(-6) - 4 
+          Pi^(-4), ((Rational[4, 5] 2^Rational[1, 2]) Pi^(-7)) (15 - 10 Pi^2 + 
+           Pi^4), (Rational[4, 15] Pi^(-8)) (105 - 100 Pi^2 + 
+           23 Pi^4), ((Rational[-8, 105] 2^Rational[1, 2]) Pi^(-9)) (-420 + 
+           525 Pi^2 - 196 Pi^4 + 15 Pi^6)}, 2, 10, 2],
         Editable->False]}]},
      {
       RowBox[{
@@ -3711,19 +3731,19 @@ Cell[BoxData[
   TagBox[
    FormBox[
     StyleBox[
-     DynamicModuleBox[{$CellContext`iin$$ = 0.52, Typeset`show$$ = True, 
+     DynamicModuleBox[{$CellContext`iin$$ = 0.804, Typeset`show$$ = True, 
       Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
       Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
       "\"untitled\"", Typeset`specs$$ = {{{
          Hold[$CellContext`iin$$], 0.52, 
          "\!\(\*SubscriptBox[\(i\), \(in\)]\)"}, 0.5, 0.85, 0.001}}, 
-      Typeset`size$$ = {390., {61., 69.}}, Typeset`update$$ = 0, 
+      Typeset`size$$ = {365., {61., 69.}}, Typeset`update$$ = 0, 
       Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`iin$55168$$ = 0}, 
+      True, $CellContext`iin$19624$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, "Variables" :> {$CellContext`iin$$ = 0.52}, 
         "ControllerVariables" :> {
-          Hold[$CellContext`iin$$, $CellContext`iin$55168$$, 0]}, 
+          Hold[$CellContext`iin$$, $CellContext`iin$19624$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -3753,7 +3773,7 @@ Approx:"],
         "Specifications" :> {{{$CellContext`iin$$, 0.52, 
             "\!\(\*SubscriptBox[\(i\), \(in\)]\)"}, 0.5, 0.85, 0.001, 
            Appearance -> "Open"}}, "Options" :> {}, "DefaultOptions" :> {}],
-       ImageSizeCache->{437., {116., 124.}},
+       ImageSizeCache->{412., {116., 124.}},
        SingleEvaluation->True],
       Deinitialization:>None,
       DynamicModuleValues:>{},
@@ -3766,7 +3786,9 @@ Approx:"],
    Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
  CellChangeTimes->{{3.626538583643601*^9, 3.626538601284449*^9}, 
    3.626617372297285*^9, 3.626617508747675*^9, 3.626617664921533*^9, 
-   3.6266177674081583`*^9, 3.626707567062168*^9, 3.6267079407735443`*^9}]
+   3.6266177674081583`*^9, 3.626707567062168*^9, 3.6267079407735443`*^9, 
+   3.626730409774572*^9, 3.6278487414267282`*^9, 3.631472434811282*^9, 
+   3.631566077162766*^9}]
 }, Open  ]],
 
 Cell[BoxData[""], "Input",
@@ -3926,7 +3948,8 @@ Cell[BoxData[
    3.626617668227804*^9, 3.626618028761279*^9, {3.626626905394322*^9, 
    3.626626964722752*^9}, {3.6266270827648163`*^9, 3.626627102112603*^9}, 
    3.6266272278342943`*^9, 3.6266275567988157`*^9, 3.62662773611119*^9, 
-   3.626707576015567*^9}]
+   3.626707576015567*^9, 3.626730419031827*^9, 3.6278487503868933`*^9, 
+   3.631472443928259*^9, 3.631566094401775*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -3956,7 +3979,7 @@ Cell[BoxData[
  CellChangeTimes->{3.626627249446666*^9, 3.6266275160683603`*^9, 
   3.626627724016492*^9, 3.6266309127129107`*^9}]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -4648,7 +4671,7 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"IlkRange", "=", 
    RowBox[{"Range", "[", 
-    RowBox[{"0.001", ",", "0.2", ",", "0.01"}], "]"}]}], 
+    RowBox[{"0.001", ",", "0.2", ",", "0.02"}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"IinRange", "=", 
@@ -4665,7 +4688,9 @@ Cell[BoxData[{
   RowBox[{"imgSize", "=", "Medium"}], ";"}]}], "Input",
  InitializationCell->True,
  CellChangeTimes->{
-  3.625515633395967*^9, {3.625515799799677*^9, 3.6255158002240343`*^9}}]
+  3.625515633395967*^9, {3.625515799799677*^9, 3.6255158002240343`*^9}, {
+   3.627849038967098*^9, 3.627849039983992*^9}, {3.627855639297669*^9, 
+   3.627855639731739*^9}, {3.6278556848957033`*^9, 3.627855685379404*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -6192,16 +6217,16 @@ Cell[BoxData[
          "\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)"}, 0.0005, 0.015, 
         0.0001}}, Typeset`size$$ = {729., {448., 456.}}, Typeset`update$$ = 0,
        Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`pquatmp$22320$$ = 0, $CellContext`ptautmp$22321$$ = 
-      0, $CellContext`pilkrtmp$22322$$ = 0}, 
+      True, $CellContext`pquatmp$58124$$ = 0, $CellContext`ptautmp$58125$$ = 
+      0, $CellContext`pilkrtmp$58126$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, 
         "Variables" :> {$CellContext`pilkrtmp$$ = 
           0.008, $CellContext`pquatmp$$ = 2, $CellContext`ptautmp$$ = 0.001}, 
         "ControllerVariables" :> {
-          Hold[$CellContext`pquatmp$$, $CellContext`pquatmp$22320$$, 0], 
-          Hold[$CellContext`ptautmp$$, $CellContext`ptautmp$22321$$, 0], 
-          Hold[$CellContext`pilkrtmp$$, $CellContext`pilkrtmp$22322$$, 0]}, 
+          Hold[$CellContext`pquatmp$$, $CellContext`pquatmp$58124$$, 0], 
+          Hold[$CellContext`ptautmp$$, $CellContext`ptautmp$58125$$, 0], 
+          Hold[$CellContext`pilkrtmp$$, $CellContext`pilkrtmp$58126$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -6432,7 +6457,9 @@ $CellContext`pilkrtmp$$]}, {$CellContext`f, 1.*^-8, 25},
    3.623089690956931*^9, 3.623164222832945*^9, 3.624388513297452*^9, 
    3.625422800380988*^9, 3.625431322401907*^9, 3.625435938021285*^9, 
    3.625497045788965*^9, 3.625497955088393*^9, 3.626462789472994*^9, 
-   3.626536759312014*^9, 3.626617668581547*^9, 3.626707576367311*^9}]
+   3.626536759312014*^9, 3.626617668581547*^9, 3.626707576367311*^9, 
+   3.626730419748165*^9, 3.627848750759156*^9, 3.631472444481637*^9, 
+   3.6315660948690577`*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -6768,7 +6795,7 @@ $CellContext`iInRange}, {$CellContext`j, $CellContext`IlkRange}]];
     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
    "Grid"], TraditionalForm]], "Output",
  CellChangeTimes->{3.625515503670684*^9, 3.625515866504511*^9}]
-}, Closed]]
+}, Open  ]]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -9343,7 +9370,8 @@ sjw=
    3.623089693139552*^9, 3.6243885157547503`*^9, 3.625422802653844*^9, 
    3.625431324848137*^9, 3.625435940492922*^9, 3.625497047441145*^9, 
    3.625497958084724*^9, 3.626462791406886*^9, 3.626536762313044*^9, 
-   3.626617670807013*^9, 3.6267075786025953`*^9}]
+   3.626617670807013*^9, 3.6267075786025953`*^9, 3.6267304218137712`*^9, 
+   3.627848753059094*^9, 3.631472446621685*^9, 3.631566096442629*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -10051,6 +10079,1788 @@ Cell[CellGroupData[{
 Cell[TextData[{
  Cell[BoxData[
   FormBox[
+   SuperscriptBox["2", "nd"], TraditionalForm]]],
+ " order approximation of ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", "2"], TraditionalForm]]]
+}], "Subsection",
+ CellChangeTimes->{{3.6267081907964487`*^9, 3.62670820220464*^9}, {
+  3.6315683575793257`*^9, 3.631568359975925*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Equation of ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "nd"], TraditionalForm]]],
+ " order approximation of ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", "2"], TraditionalForm]]],
+ " in terms of ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "in"], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "lk"], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Rho]", "qua"], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Rho]", "tau"], TraditionalForm]]],
+ ", and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Rho]", "ilkr"], TraditionalForm]]]
+}], "Subsubsection",
+ CellChangeTimes->{{3.6266309977347527`*^9, 3.626631069680242*^9}, {
+  3.6315683691565104`*^9, 3.631568373468534*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["f", "2"], "\[Equal]", 
+  RowBox[{
+   FractionBox[
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"Ilk", "+", "pilkr"}], ")"}], "2"], 
+    SuperscriptBox["ptau", "2"]], 
+   RowBox[{"ft2Approx2", "[", 
+    RowBox[{"IintoiIn", "[", 
+     RowBox[{"Iin", ",", "Ilk", ",", "pqua", ",", "pilkr"}], "]"}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.626631073094139*^9, 3.626631177049629*^9}, {
+   3.626631325639002*^9, 3.6266313458452063`*^9}, {3.626632614807612*^9, 
+   3.626632656297963*^9}, {3.626632710972453*^9, 3.62663272325788*^9}, {
+   3.626633466663925*^9, 3.626633499681308*^9}, 3.626707892904418*^9, {
+   3.626708241195031*^9, 3.6267082443213663`*^9}, {3.6267112155384617`*^9, 
+   3.626711232994667*^9}, {3.6267217294706984`*^9, 3.626721731257084*^9}, {
+   3.631568378999147*^9, 3.6315683800795803`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SuperscriptBox["f", "2"], "\[LongEqual]", 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"Ilk", "+", "pilkr"}], ")"}], "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{"2", " ", 
+          SqrtBox["2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            SuperscriptBox["\[Pi]", "2"], "-", "6"}], ")"}], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"Iin", " ", "Ilk", " ", "pqua"}], 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{"Ilk", "+", "pilkr"}], ")"}], "2"]], "-", "0.5`"}], 
+            ")"}], 
+           RowBox[{"5", "/", "2"}]]}], 
+         RowBox[{"3", " ", 
+          SuperscriptBox["\[Pi]", "5"]}]]}], "+", 
+       FractionBox[
+        RowBox[{"3", " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            FractionBox[
+             RowBox[{"Iin", " ", "Ilk", " ", "pqua"}], 
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{"Ilk", "+", "pilkr"}], ")"}], "2"]], "-", "0.5`"}], 
+           ")"}], "2"]}], 
+        SuperscriptBox["\[Pi]", "4"]], "+", 
+       FractionBox[
+        RowBox[{
+         SqrtBox["2"], " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            FractionBox[
+             RowBox[{"Iin", " ", "Ilk", " ", "pqua"}], 
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{"Ilk", "+", "pilkr"}], ")"}], "2"]], "-", "0.5`"}], 
+           ")"}], 
+          RowBox[{"3", "/", "2"}]]}], 
+        SuperscriptBox["\[Pi]", "3"]], "+", 
+       FractionBox[
+        RowBox[{
+         FractionBox[
+          RowBox[{"Iin", " ", "Ilk", " ", "pqua"}], 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"Ilk", "+", "pilkr"}], ")"}], "2"]], "-", "0.5`"}], 
+        RowBox[{"2", " ", 
+         SuperscriptBox["\[Pi]", "2"]}]]}], ")"}]}], 
+    SuperscriptBox["ptau", "2"]]}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.626631094560586*^9, 3.62663117751834*^9}, 
+   3.626631349153323*^9, 3.626632626494583*^9, {3.626632656923092*^9, 
+   3.626632674992608*^9}, {3.6266327139183893`*^9, 3.626632724051159*^9}, {
+   3.626633475167221*^9, 3.626633500724028*^9}, 3.626708245458468*^9, {
+   3.6267112241281557`*^9, 3.626711233667226*^9}, 3.626721732375939*^9, 
+   3.631568462114286*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Plot the ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "nd"], TraditionalForm]]],
+ " order approximation of ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", "2"], TraditionalForm]]],
+ " as a function of ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "in"], TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "lk"], TraditionalForm]]]
+}], "Subsubsection",
+ CellChangeTimes->{{3.62221213892764*^9, 3.622212176089459*^9}, {
+  3.624114752112743*^9, 3.6241147521799707`*^9}, {3.626706765586179*^9, 
+  3.626706790418027*^9}, {3.6315683907901163`*^9, 3.631568394190534*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"IlkRange", "=", 
+    RowBox[{"Range", "[", 
+     RowBox[{"0.001", ",", "0.2", ",", "0.04"}], "]"}]}], ";"}], "  ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "temporary", " ", "here", " ", "to", " ", "get", " ", "less", " ", 
+    "plots"}], " ", "*)"}]}]], "Input",
+ CellChangeTimes->{{3.626711856538438*^9, 3.626711880833198*^9}, {
+   3.626712087247946*^9, 3.626712107646317*^9}, {3.626712138110894*^9, 
+   3.626712141423996*^9}, {3.6267129746181803`*^9, 3.626712998595195*^9}, {
+   3.626713303158575*^9, 3.626713303622169*^9}, {3.626713670476574*^9, 
+   3.626713695726881*^9}, 3.626713859626059*^9, 3.626713892648088*^9, {
+   3.626716810391836*^9, 3.626716818087122*^9}, {3.626716960450086*^9, 
+   3.6267169611530533`*^9}, {3.626719808583194*^9, 3.626719890172928*^9}, 
+   3.626719920730139*^9, {3.626719952228804*^9, 3.626719983201284*^9}, {
+   3.626720199011031*^9, 3.626720273385233*^9}, {3.6267203217079144`*^9, 
+   3.626720355210268*^9}, {3.626720470501696*^9, 3.6267205029975433`*^9}, {
+   3.626720587900612*^9, 3.6267206999561872`*^9}, {3.626720850581061*^9, 
+   3.62672087462822*^9}, {3.626720918631323*^9, 3.6267209264573507`*^9}, 
+   3.626721045190476*^9, 3.626721157162212*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"pltEqns2", " ", "=", " ", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        FractionBox[
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"Ilk", "+", "pilkrManip"}], ")"}], "2"], "ptauManip"], 
+        RowBox[{"ft2Approx2", "[", 
+         RowBox[{"IintoiIn", "[", 
+          RowBox[{"Iin", ",", "Ilk", ",", "pquaManip", ",", "pilkrManip"}], 
+          "]"}], "]"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Ilk", ",", "IlkRange"}], "}"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{"data3rdOrder", "=", 
+       RowBox[{"Transpose", "[", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"iIntoIin", "[", 
+             RowBox[{"i", ",", "j", ",", "pquaManip", ",", "pilkrManip"}], 
+             "]"}], ",", 
+            RowBox[{"2", 
+             SuperscriptBox["\[Pi]", "2"], 
+             FractionBox[
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{"j", "+", "pilkrManip"}], ")"}], "2"], "ptauManip"], 
+             SuperscriptBox[
+              RowBox[{"fireTau", "[", 
+               RowBox[{"i", ",", "0", ",", "\[Infinity]"}], "]"}], "2"]}]}], 
+           "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"Range", "[", 
+             RowBox[{"0.501", ",", "0.801", ",", "0.05"}], "]"}]}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{"j", ",", "IlkRange"}], "}"}]}], "]"}], "]"}]}], ";"}], 
+     "*)"}], "\[IndentingNewLine]", 
+    RowBox[{"data2ndOrder", "=", 
+     RowBox[{"Transpose", "[", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"iIntoIin", "[", 
+           RowBox[{"i", ",", "j", ",", "pquaManip", ",", "pilkrManip"}], 
+           "]"}], ",", 
+          RowBox[{
+           FractionBox[
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{"j", "+", "pilkrManip"}], ")"}], "2"], "ptauManip"], 
+           RowBox[{"ft2", "[", "i", "]"}]}]}], "}"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", 
+          RowBox[{"Range", "[", 
+           RowBox[{"0.501", ",", "0.801", ",", "0.02"}], "]"}]}], "}"}], ",", 
+        
+        RowBox[{"{", 
+         RowBox[{"j", ",", "IlkRange"}], "}"}]}], "]"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"pfull2", "=", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"{", "pltEqns2", "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Iin", ",", " ", "0", ",", "0.3"}], "}"}], ",", 
+       RowBox[{"AxesLabel", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\"", ",", 
+          "\"\<\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
+       RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", "Automatic"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "Automatic"}], "}"}]}], "}"}]}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Grid", "[", 
+     RowBox[{"{", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{"Show", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Plot", "[", 
+          RowBox[{
+           RowBox[{"{", "pltEqns2", "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"Iin", ",", " ", "0", ",", "0.3"}], "}"}], ",", 
+           RowBox[{"AxesLabel", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\"", ",", 
+              "\"\<\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
+           
+           RowBox[{"ImageSize", "\[Rule]", "Full"}], ",", 
+           RowBox[{"PlotRange", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"0", ",", "xmax"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "ymax"}], "}"}]}], "}"}]}], ",", 
+           RowBox[{"Epilog", "\[Rule]", 
+            RowBox[{"Inset", "[", 
+             RowBox[{"pfull2", ",", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "ymax"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"Left", ",", "Top"}], "}"}]}], "]"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"ListPlot", "[", 
+          RowBox[{"data2ndOrder", ",", 
+           RowBox[{"AxesLabel", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\"", ",", 
+              "\"\<\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
+           
+           RowBox[{"ImageSize", "\[Rule]", "Full"}], ",", 
+           RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], 
+        "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "}"}], "}"}], 
+     "]"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "pquaManip", ",", "2", ",", 
+       "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)\>\""}], "}"}], ",", 
+     "0.5", ",", "4", ",", "0.001", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "ptauManip", ",", "0.001", ",", 
+       "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(tau\)]\)\>\""}], "}"}], ",", 
+     "0.0001", ",", "0.002", ",", "0.0001", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "pilkrManip", ",", "0.008", ",", 
+       "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)\>\""}], "}"}], ",", 
+     "0.0005", ",", "0.015", ",", "0.0001", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"xmax", ",", "0.08"}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"ymax", ",", "2"}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{
+  3.626717089939722*^9, {3.626718049874127*^9, 3.626718069934609*^9}, {
+   3.626718116385659*^9, 3.626718128624542*^9}, {3.626718382474184*^9, 
+   3.626718386366337*^9}, {3.626719556231153*^9, 3.62671978433267*^9}, {
+   3.626719898335711*^9, 3.626719902992757*^9}, {3.626719991641136*^9, 
+   3.6267200055159273`*^9}, {3.626720067324663*^9, 3.626720121724329*^9}, {
+   3.6267201703814697`*^9, 3.6267202122824383`*^9}, {3.626720891635734*^9, 
+   3.626721002904662*^9}, {3.626721051819641*^9, 3.626721087873954*^9}, {
+   3.626726144199986*^9, 3.626726160868327*^9}, {3.626726409242983*^9, 
+   3.6267264353856497`*^9}, {3.626726515659102*^9, 3.626726522373068*^9}, {
+   3.6267265659760847`*^9, 3.6267265861620703`*^9}, {3.626726623481332*^9, 
+   3.626726630358582*^9}, {3.6267266939761953`*^9, 3.626726697809165*^9}, {
+   3.62672730250766*^9, 3.626727328359426*^9}, {3.626727435650961*^9, 
+   3.626727589336439*^9}, {3.626727714123602*^9, 3.626727742739911*^9}, {
+   3.626727777927514*^9, 3.626727798262735*^9}, {3.6267278309700737`*^9, 
+   3.6267278381649513`*^9}, {3.6267279369805803`*^9, 3.62672795696842*^9}, 
+   3.626728398624941*^9, {3.6267284317496853`*^9, 3.6267284452791777`*^9}, {
+   3.626728495542673*^9, 3.626728496136114*^9}, {3.6267285391312838`*^9, 
+   3.626728583474338*^9}, {3.6267286548247766`*^9, 3.626728656847829*^9}, {
+   3.631568398395751*^9, 3.631568446235862*^9}, {3.631568493574278*^9, 
+   3.6315684940573673`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FormBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`pilkrManip$$ = 
+      0.008, $CellContext`pquaManip$$ = 2, $CellContext`ptauManip$$ = 
+      0.001, $CellContext`xmax$$ = 0.08, $CellContext`ymax$$ = 2, 
+      Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+      Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ =
+       1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+         Hold[$CellContext`pquaManip$$], 2, 
+         "\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)"}, 0.5, 4, 0.001}, {{
+         Hold[$CellContext`ptauManip$$], 0.001, 
+         "\!\(\*SubscriptBox[\(\[Rho]\), \(tau\)]\)"}, 0.0001, 0.002, 
+        0.0001}, {{
+         Hold[$CellContext`pilkrManip$$], 0.008, 
+         "\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)"}, 0.0005, 0.015, 
+        0.0001}, {
+        Hold[$CellContext`xmax$$], 0.08}, {
+        Hold[$CellContext`ymax$$], 2}}, Typeset`size$$ = {
+      1080., {334., 342.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      Typeset`skipInitDone$$ = True, $CellContext`pquaManip$81747$$ = 
+      0, $CellContext`ptauManip$81748$$ = 0, $CellContext`pilkrManip$81749$$ =
+       0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, TraditionalForm, 
+        "Variables" :> {$CellContext`pilkrManip$$ = 
+          0.008, $CellContext`pquaManip$$ = 2, $CellContext`ptauManip$$ = 
+          0.001, $CellContext`xmax$$ = 0.08, $CellContext`ymax$$ = 2}, 
+        "ControllerVariables" :> {
+          Hold[$CellContext`pquaManip$$, $CellContext`pquaManip$81747$$, 0], 
+          Hold[$CellContext`ptauManip$$, $CellContext`ptauManip$81748$$, 0], 
+          
+          Hold[$CellContext`pilkrManip$$, $CellContext`pilkrManip$81749$$, 
+           0]}, "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, 
+        "Body" :> ($CellContext`pltEqns2 = 
+          Table[(($CellContext`Ilk + \
+$CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) $CellContext`ft2Approx2[
+              $CellContext`IintoiIn[$CellContext`Iin, $CellContext`Ilk, \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Ilk, \
+$CellContext`IlkRange}]; $CellContext`data2ndOrder = Transpose[
+            Table[{
+              $CellContext`iIntoIin[$CellContext`i, $CellContext`j, \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$], (($CellContext`j + \
+$CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) \
+$CellContext`ft2[$CellContext`i]}, {$CellContext`i, 
+              Range[
+              0.501, 0.801, 
+               0.02]}, {$CellContext`j, $CellContext`IlkRange}]]; \
+$CellContext`pfull2 = 
+          Plot[{$CellContext`pltEqns2}, {$CellContext`Iin, 0, 0.3}, 
+            AxesLabel -> {
+             "\!\(\*SubscriptBox[\(I\), \(in\)]\)", 
+              "\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Medium, 
+            PlotRange -> {{0, Automatic}, {0, Automatic}}]; Grid[{{
+             Show[
+              
+              Plot[{$CellContext`pltEqns2}, {$CellContext`Iin, 0, 0.3}, 
+               AxesLabel -> {
+                "\!\(\*SubscriptBox[\(I\), \(in\)]\)", 
+                 "\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Full, 
+               PlotRange -> {{0, $CellContext`xmax$$}, {
+                 0, $CellContext`ymax$$}}, Epilog -> 
+               Inset[$CellContext`pfull2, {0, $CellContext`ymax$$}, {
+                 Left, Top}]], 
+              
+              ListPlot[$CellContext`data2ndOrder, 
+               AxesLabel -> {
+                "\!\(\*SubscriptBox[\(I\), \(in\)]\)", 
+                 "\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Full, 
+               PlotRange -> All]]}}]), 
+        "Specifications" :> {{{$CellContext`pquaManip$$, 2, 
+            "\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)"}, 0.5, 4, 0.001, 
+           Appearance -> 
+           "Open"}, {{$CellContext`ptauManip$$, 0.001, 
+            "\!\(\*SubscriptBox[\(\[Rho]\), \(tau\)]\)"}, 0.0001, 0.002, 
+           0.0001, Appearance -> 
+           "Open"}, {{$CellContext`pilkrManip$$, 0.008, 
+            "\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)"}, 0.0005, 0.015, 
+           0.0001, Appearance -> "Open"}, {$CellContext`xmax$$, 
+           0.08}, {$CellContext`ymax$$, 2}}, "Options" :> {}, 
+        "DefaultOptions" :> {}],
+       ImageSizeCache->{1127., {457., 465.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    TraditionalForm],
+   Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.6267170909281*^9, 3.626717915303318*^9, 3.626718387591332*^9, 
+   3.626719794114829*^9, 3.6267199037390614`*^9, 3.626720024754261*^9, {
+   3.6267200689413548`*^9, 3.626720091172882*^9}, 3.626720122663559*^9, {
+   3.626720173649776*^9, 3.6267201793922567`*^9}, 3.626720215342692*^9, {
+   3.62672093451679*^9, 3.626721004123115*^9}, 3.626721054196341*^9, 
+   3.626721088691523*^9, {3.626726145559289*^9, 3.626726161955474*^9}, 
+   3.626726536642981*^9, {3.626726572328017*^9, 3.626726589140061*^9}, 
+   3.62672663237535*^9, 3.626726699780505*^9, {3.626727306149713*^9, 
+   3.626727329361299*^9}, {3.6267274590806427`*^9, 3.626727487333527*^9}, {
+   3.6267275317144117`*^9, 3.626727591624213*^9}, {3.62672772309626*^9, 
+   3.626727745285581*^9}, {3.626727792726653*^9, 3.626727800772057*^9}, 
+   3.626727839391582*^9, 3.626728399744636*^9, {3.6267284386819353`*^9, 
+   3.626728446470704*^9}, {3.626728564991025*^9, 3.6267285861509867`*^9}, 
+   3.626728657865922*^9, 3.6278490500426188`*^9, {3.6315684712497683`*^9, 
+   3.63156849477859*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "LogLogPlot the ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "nd"], TraditionalForm]]],
+ " order approximation of ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", "2"], TraditionalForm]]],
+ " as a function of ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "in"], TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "lk"], TraditionalForm]]]
+}], "Subsubsection",
+ CellChangeTimes->{{3.62221213892764*^9, 3.622212176089459*^9}, {
+  3.624114752112743*^9, 3.6241147521799707`*^9}, {3.626706765586179*^9, 
+  3.626706790418027*^9}, {3.62733382557801*^9, 3.627333828264606*^9}, {
+  3.6315685078442287`*^9, 3.631568510337933*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"IlkRange", "=", 
+    RowBox[{"Range", "[", 
+     RowBox[{"0.001", ",", "0.2", ",", "0.04"}], "]"}]}], ";"}], "  ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "temporary", " ", "here", " ", "to", " ", "get", " ", "less", " ", 
+    "plots"}], " ", "*)"}]}]], "Input",
+ CellChangeTimes->{{3.626711856538438*^9, 3.626711880833198*^9}, {
+   3.626712087247946*^9, 3.626712107646317*^9}, {3.626712138110894*^9, 
+   3.626712141423996*^9}, {3.6267129746181803`*^9, 3.626712998595195*^9}, {
+   3.626713303158575*^9, 3.626713303622169*^9}, {3.626713670476574*^9, 
+   3.626713695726881*^9}, 3.626713859626059*^9, 3.626713892648088*^9, {
+   3.626716810391836*^9, 3.626716818087122*^9}, {3.626716960450086*^9, 
+   3.6267169611530533`*^9}, {3.626719808583194*^9, 3.626719890172928*^9}, 
+   3.626719920730139*^9, {3.626719952228804*^9, 3.626719983201284*^9}, {
+   3.626720199011031*^9, 3.626720273385233*^9}, {3.6267203217079144`*^9, 
+   3.626720355210268*^9}, {3.626720470501696*^9, 3.6267205029975433`*^9}, {
+   3.626720587900612*^9, 3.6267206999561872`*^9}, {3.626720850581061*^9, 
+   3.62672087462822*^9}, {3.626720918631323*^9, 3.6267209264573507`*^9}, 
+   3.626721045190476*^9, 3.626721157162212*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"pltEqns2", " ", "=", " ", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"Ilk", "+", "pilkrManip"}], ")"}], "2"], "/", 
+          "ptauManip"}], ")"}], 
+        RowBox[{"ft2Approx2", "[", 
+         RowBox[{"IintoiIn", "[", 
+          RowBox[{"Iin", ",", "Ilk", ",", "pquaManip", ",", "pilkrManip"}], 
+          "]"}], "]"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Ilk", ",", "IlkRange"}], "}"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{"data3rdOrder", "=", 
+       RowBox[{"Transpose", "[", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"iIntoIin", "[", 
+             RowBox[{"i", ",", "j", ",", "pquaManip", ",", "pilkrManip"}], 
+             "]"}], ",", 
+            RowBox[{"2", 
+             SuperscriptBox["\[Pi]", "2"], 
+             RowBox[{"(", 
+              RowBox[{
+               SuperscriptBox[
+                RowBox[{"(", 
+                 RowBox[{"j", "+", "pilkrManip"}], ")"}], "2"], "/", 
+               "ptauManip"}], ")"}], 
+             SuperscriptBox[
+              RowBox[{"fireTau", "[", 
+               RowBox[{"i", ",", "0", ",", "\[Infinity]"}], "]"}], "2"]}]}], 
+           "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"Range", "[", 
+             RowBox[{"0.501", ",", "0.801", ",", "0.05"}], "]"}]}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{"j", ",", "IlkRange"}], "}"}]}], "]"}], "]"}]}], ";"}], 
+     "*)"}], "\[IndentingNewLine]", 
+    RowBox[{"data2ndOrder", "=", 
+     RowBox[{"Transpose", "[", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"iIntoIin", "[", 
+           RowBox[{"i", ",", "j", ",", "pquaManip", ",", "pilkrManip"}], 
+           "]"}], ",", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{"j", "+", "pilkrManip"}], ")"}], "2"], "/", 
+             "ptauManip"}], ")"}], 
+           RowBox[{"ft2", "[", "i", "]"}]}]}], "}"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", 
+          RowBox[{"Range", "[", 
+           RowBox[{"0.501", ",", "0.801", ",", "0.05"}], "]"}]}], "}"}], ",", 
+        
+        RowBox[{"{", 
+         RowBox[{"j", ",", "IlkRange"}], "}"}]}], "]"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"pfull2", "=", 
+     RowBox[{"LogLogPlot", "[", 
+      RowBox[{
+       RowBox[{"{", "pltEqns2", "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Iin", ",", " ", "0.001", ",", "0.3"}], "}"}], ",", 
+       RowBox[{"AxesLabel", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\"", ",", 
+          "\"\<\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
+       RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0.001", ",", "Automatic"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"0.001", ",", "Automatic"}], "}"}]}], "}"}]}]}], "]"}]}], 
+    ";", "\[IndentingNewLine]", 
+    RowBox[{"Grid", "[", 
+     RowBox[{"{", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{"Show", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"LogLogPlot", "[", 
+          RowBox[{
+           RowBox[{"{", "pltEqns2", "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"Iin", ",", " ", "0.001", ",", "0.3"}], "}"}], ",", 
+           RowBox[{"AxesLabel", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\"", ",", 
+              "\"\<\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
+           
+           RowBox[{"ImageSize", "\[Rule]", "Full"}], ",", 
+           RowBox[{"PlotRange", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"0.001", ",", "xmax"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0.0000001", ",", "ymax"}], "}"}]}], "}"}]}], ",", 
+           RowBox[{"Epilog", "\[Rule]", 
+            RowBox[{"Inset", "[", 
+             RowBox[{"pfull", ",", 
+              RowBox[{"{", 
+               RowBox[{"0.00001", ",", "ymax"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"Left", ",", "Top"}], "}"}]}], "]"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"ListLogLogPlot", "[", 
+          RowBox[{"data2ndOrder", ",", 
+           RowBox[{"AxesLabel", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\"", ",", 
+              "\"\<\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
+           
+           RowBox[{"ImageSize", "\[Rule]", "Full"}], ",", 
+           RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], 
+        "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "}"}], "}"}], 
+     "]"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "pquaManip", ",", "2", ",", 
+       "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)\>\""}], "}"}], ",", 
+     "0.5", ",", "4", ",", "0.001", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "ptauManip", ",", "0.001", ",", 
+       "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(tau\)]\)\>\""}], "}"}], ",", 
+     "0.0001", ",", "0.002", ",", "0.0001", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "pilkrManip", ",", "0.008", ",", 
+       "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)\>\""}], "}"}], ",", 
+     "0.0005", ",", "0.015", ",", "0.0001", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"xmax", ",", "0.3"}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"ymax", ",", "5"}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{
+  3.626717089939722*^9, {3.626718049874127*^9, 3.626718069934609*^9}, {
+   3.626718116385659*^9, 3.626718128624542*^9}, {3.626718382474184*^9, 
+   3.626718386366337*^9}, {3.626719556231153*^9, 3.62671978433267*^9}, {
+   3.626719898335711*^9, 3.626719902992757*^9}, {3.626719991641136*^9, 
+   3.6267200055159273`*^9}, {3.626720067324663*^9, 3.626720121724329*^9}, {
+   3.6267201703814697`*^9, 3.6267202122824383`*^9}, {3.626720891635734*^9, 
+   3.626721002904662*^9}, {3.626721051819641*^9, 3.626721087873954*^9}, {
+   3.626726144199986*^9, 3.626726160868327*^9}, {3.626726409242983*^9, 
+   3.6267264353856497`*^9}, {3.626726515659102*^9, 3.626726522373068*^9}, {
+   3.6267265659760847`*^9, 3.6267265861620703`*^9}, {3.626726623481332*^9, 
+   3.626726630358582*^9}, {3.6267266939761953`*^9, 3.626726697809165*^9}, {
+   3.62672730250766*^9, 3.626727328359426*^9}, {3.626727435650961*^9, 
+   3.626727589336439*^9}, {3.626727714123602*^9, 3.626727742739911*^9}, {
+   3.626727777927514*^9, 3.626727798262735*^9}, {3.6267278309700737`*^9, 
+   3.6267278381649513`*^9}, {3.6267279369805803`*^9, 3.62672795696842*^9}, 
+   3.626728398624941*^9, {3.6267284317496853`*^9, 3.6267284452791777`*^9}, {
+   3.626728495542673*^9, 3.626728496136114*^9}, {3.6267285391312838`*^9, 
+   3.626728583474338*^9}, {3.6267286548247766`*^9, 3.626728656847829*^9}, {
+   3.627333835576288*^9, 3.627333845752838*^9}, {3.627337236231415*^9, 
+   3.627337262368987*^9}, {3.6273373051761847`*^9, 3.627337313820547*^9}, {
+   3.627338601892481*^9, 3.627338625927662*^9}, {3.627849079810161*^9, 
+   3.6278490858084393`*^9}, {3.627849144508683*^9, 3.627849152539206*^9}, {
+   3.627849556495965*^9, 3.627849581435601*^9}, {3.627849628412815*^9, 
+   3.627849639363765*^9}, {3.6278496782595797`*^9, 3.627849780414548*^9}, {
+   3.627849818835041*^9, 3.627849844909196*^9}, {3.6278498924959383`*^9, 
+   3.627849893025498*^9}, {3.627855673795198*^9, 3.6278556925146933`*^9}, {
+   3.631568539043849*^9, 3.631568570489954*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FormBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`pilkrManip$$ = 
+      0.008, $CellContext`pquaManip$$ = 2, $CellContext`ptauManip$$ = 
+      0.001, $CellContext`xmax$$ = 0.3, $CellContext`ymax$$ = 5, 
+      Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+      Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ =
+       1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+         Hold[$CellContext`pquaManip$$], 2, 
+         "\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)"}, 0.5, 4, 0.001}, {{
+         Hold[$CellContext`ptauManip$$], 0.001, 
+         "\!\(\*SubscriptBox[\(\[Rho]\), \(tau\)]\)"}, 0.0001, 0.002, 
+        0.0001}, {{
+         Hold[$CellContext`pilkrManip$$], 0.008, 
+         "\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)"}, 0.0005, 0.015, 
+        0.0001}, {
+        Hold[$CellContext`xmax$$], 0.3}, {
+        Hold[$CellContext`ymax$$], 5}}, Typeset`size$$ = {
+      1080., {331.5, 339.5}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      Typeset`skipInitDone$$ = True, $CellContext`pquaManip$83033$$ = 
+      0, $CellContext`ptauManip$83034$$ = 0, $CellContext`pilkrManip$83035$$ =
+       0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, TraditionalForm, 
+        "Variables" :> {$CellContext`pilkrManip$$ = 
+          0.008, $CellContext`pquaManip$$ = 2, $CellContext`ptauManip$$ = 
+          0.001, $CellContext`xmax$$ = 0.3, $CellContext`ymax$$ = 5}, 
+        "ControllerVariables" :> {
+          Hold[$CellContext`pquaManip$$, $CellContext`pquaManip$83033$$, 0], 
+          Hold[$CellContext`ptauManip$$, $CellContext`ptauManip$83034$$, 0], 
+          
+          Hold[$CellContext`pilkrManip$$, $CellContext`pilkrManip$83035$$, 
+           0]}, "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, 
+        "Body" :> ($CellContext`pltEqns2 = 
+          Table[(($CellContext`Ilk + \
+$CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) $CellContext`ft2Approx2[
+              $CellContext`IintoiIn[$CellContext`Iin, $CellContext`Ilk, \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Ilk, \
+$CellContext`IlkRange}]; $CellContext`data2ndOrder = Transpose[
+            Table[{
+              $CellContext`iIntoIin[$CellContext`i, $CellContext`j, \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$], (($CellContext`j + \
+$CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) \
+$CellContext`ft2[$CellContext`i]}, {$CellContext`i, 
+              Range[
+              0.501, 0.801, 
+               0.05]}, {$CellContext`j, $CellContext`IlkRange}]]; \
+$CellContext`pfull2 = 
+          LogLogPlot[{$CellContext`pltEqns2}, {$CellContext`Iin, 0.001, 0.3}, 
+            AxesLabel -> {
+             "\!\(\*SubscriptBox[\(I\), \(in\)]\)", 
+              "\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Medium, 
+            PlotRange -> {{0.001, Automatic}, {0.001, Automatic}}]; Grid[{{
+             Show[
+              
+              LogLogPlot[{$CellContext`pltEqns2}, {$CellContext`Iin, 0.001, 
+                0.3}, AxesLabel -> {
+                "\!\(\*SubscriptBox[\(I\), \(in\)]\)", 
+                 "\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Full, 
+               PlotRange -> {{0.001, $CellContext`xmax$$}, {
+                 1.*^-7, $CellContext`ymax$$}}, Epilog -> 
+               Inset[$CellContext`pfull, {0.00001, $CellContext`ymax$$}, {
+                 Left, Top}]], 
+              
+              ListLogLogPlot[$CellContext`data2ndOrder, 
+               AxesLabel -> {
+                "\!\(\*SubscriptBox[\(I\), \(in\)]\)", 
+                 "\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Full, 
+               PlotRange -> All]]}}]), 
+        "Specifications" :> {{{$CellContext`pquaManip$$, 2, 
+            "\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)"}, 0.5, 4, 0.001, 
+           Appearance -> 
+           "Open"}, {{$CellContext`ptauManip$$, 0.001, 
+            "\!\(\*SubscriptBox[\(\[Rho]\), \(tau\)]\)"}, 0.0001, 0.002, 
+           0.0001, Appearance -> 
+           "Open"}, {{$CellContext`pilkrManip$$, 0.008, 
+            "\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)"}, 0.0005, 0.015, 
+           0.0001, Appearance -> "Open"}, {$CellContext`xmax$$, 
+           0.3}, {$CellContext`ymax$$, 5}}, "Options" :> {}, 
+        "DefaultOptions" :> {}],
+       ImageSizeCache->{1127., {455., 463.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    TraditionalForm],
+   Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.627849583510892*^9, {3.6278496302893057`*^9, 3.627849640649413*^9}, {
+   3.627849691152266*^9, 3.627849781834366*^9}, {3.627849825647292*^9, 
+   3.6278498481661463`*^9}, 3.627849895296743*^9, 3.627855657939583*^9, 
+   3.627855698943679*^9, 3.6315685737059298`*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Contour Plot of the 2nd order approximation of ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", "2"], TraditionalForm]]],
+ " as a function of ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "in"], TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "lk"], TraditionalForm]]]
+}], "Subsubsection",
+ CellChangeTimes->{{3.626716878270361*^9, 3.626716915712171*^9}, {
+  3.62671802386779*^9, 3.6267180246873913`*^9}, {3.631568513586443*^9, 
+  3.631568516129121*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"pltEqns2", " ", "=", " ", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"Ilk", "+", "pilkrManip"}], ")"}], "2"], "/", 
+          "ptauManip"}], ")"}], 
+        RowBox[{"ft2Approx2", "[", 
+         RowBox[{"IintoiIn", "[", 
+          RowBox[{"Iin", ",", "Ilk", ",", "pquaManip", ",", "pilkrManip"}], 
+          "]"}], "]"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Ilk", ",", "IlkRange"}], "}"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Grid", "[", 
+     RowBox[{"{", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{"Show", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"ContourPlot", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{"Ilk", "+", "pilkrManip"}], ")"}], "2"], "/", 
+              "ptauManip"}], ")"}], 
+            RowBox[{"ft2Approx2", "[", 
+             RowBox[{"IintoiIn", "[", 
+              RowBox[{
+              "Iin", ",", "Ilk", ",", "pquaManip", ",", "pilkrManip"}], "]"}],
+              "]"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"Ilk", ",", " ", "0", ",", "0.2"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"Iin", ",", " ", "0", ",", "0.3"}], "}"}], ",", 
+           RowBox[{"FrameLabel", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<\!\(\*SubscriptBox[\(I\), \(lk\)]\)\>\"", ",", 
+              "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\""}], "}"}]}], ",", 
+           RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+           RowBox[{"PlotRange", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "Automatic"}], "}"}]}], ",", 
+           RowBox[{"ContourLabels", "\[Rule]", "All"}], ",", 
+           RowBox[{"RegionFunction", "\[Rule]", 
+            RowBox[{"Function", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"Ilk", ",", "Iin"}], "}"}], ",", 
+              RowBox[{
+               RowBox[{"IintoiIn", "[", 
+                RowBox[{
+                "Iin", ",", "Ilk", ",", "pquaManip", ",", "pilkrManip"}], 
+                "]"}], "<", "\[Pi]"}]}], "]"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Plot", "[", 
+          RowBox[{
+           RowBox[{"{", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"iIntoIin", "[", 
+              RowBox[{
+               FractionBox["1", "2"], ",", "Ilk", ",", "pquaManip", ",", 
+               "pilkrManip"}], "]"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"iIntoIin", "[", 
+              RowBox[{
+              "0.8", ",", "Ilk", ",", "pquaManip", ",", "pilkrManip"}], "]"}],
+              ",", "\[IndentingNewLine]", 
+             RowBox[{"iIntoIin", "[", 
+              RowBox[{
+              "\[Pi]", ",", "Ilk", ",", "pquaManip", ",", "pilkrManip"}], 
+              "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"Ilk", ",", "0.002", ",", "0.2"}], "}"}]}], "]"}]}], 
+        "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "}"}], "}"}], 
+     "]"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "pquaManip", ",", "2", ",", 
+       "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)\>\""}], "}"}], ",", 
+     "0.5", ",", "4", ",", "0.001", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "ptauManip", ",", "0.001", ",", 
+       "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(tau\)]\)\>\""}], "}"}], ",", 
+     "0.0001", ",", "0.002", ",", "0.0001", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "pilkrManip", ",", "0.008", ",", 
+       "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)\>\""}], "}"}], ",", 
+     "0.0005", ",", "0.015", ",", "0.0001", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.626716993003558*^9, 3.626717001900466*^9}, {
+  3.626717219451766*^9, 3.626717476734016*^9}, {3.6267175609494267`*^9, 
+  3.626717571384118*^9}, {3.626717724807372*^9, 3.626717726015726*^9}, {
+  3.6267293935138083`*^9, 3.6267293961977577`*^9}, {3.6267298616666317`*^9, 
+  3.626729897083687*^9}, {3.6267300076461563`*^9, 3.626730039786788*^9}, {
+  3.6267301213257437`*^9, 3.6267301224972687`*^9}, {3.626730171512519*^9, 
+  3.626730227579254*^9}, {3.62673032978997*^9, 3.6267303389326887`*^9}, {
+  3.626730528724556*^9, 3.6267305323003817`*^9}, {3.6315686203535643`*^9, 
+  3.631568630124282*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FormBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`pilkrManip$$ = 
+      0.008, $CellContext`pquaManip$$ = 2, $CellContext`ptauManip$$ = 0.001, 
+      Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+      Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ =
+       1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+         Hold[$CellContext`pquaManip$$], 2, 
+         "\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)"}, 0.5, 4, 0.001}, {{
+         Hold[$CellContext`ptauManip$$], 0.001, 
+         "\!\(\*SubscriptBox[\(\[Rho]\), \(tau\)]\)"}, 0.0001, 0.002, 
+        0.0001}, {{
+         Hold[$CellContext`pilkrManip$$], 0.008, 
+         "\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)"}, 0.0005, 0.015, 
+        0.0001}}, Typeset`size$$ = {360., {167.5, 175.5}}, Typeset`update$$ = 
+      0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+      True, $CellContext`pquaManip$94203$$ = 
+      0, $CellContext`ptauManip$94204$$ = 0, $CellContext`pilkrManip$94205$$ =
+       0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, TraditionalForm, 
+        "Variables" :> {$CellContext`pilkrManip$$ = 
+          0.008, $CellContext`pquaManip$$ = 2, $CellContext`ptauManip$$ = 
+          0.001}, "ControllerVariables" :> {
+          Hold[$CellContext`pquaManip$$, $CellContext`pquaManip$94203$$, 0], 
+          Hold[$CellContext`ptauManip$$, $CellContext`ptauManip$94204$$, 0], 
+          
+          Hold[$CellContext`pilkrManip$$, $CellContext`pilkrManip$94205$$, 
+           0]}, "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, 
+        "Body" :> ($CellContext`pltEqns2 = 
+          Table[(($CellContext`Ilk + \
+$CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) $CellContext`ft2Approx2[
+              $CellContext`IintoiIn[$CellContext`Iin, $CellContext`Ilk, \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Ilk, \
+$CellContext`IlkRange}]; Grid[{{
+             Show[
+              
+              ContourPlot[(($CellContext`Ilk + \
+$CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) $CellContext`ft2Approx2[
+                 $CellContext`IintoiIn[$CellContext`Iin, $CellContext`Ilk, \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Ilk, 0, 
+                0.2}, {$CellContext`Iin, 0, 0.3}, 
+               FrameLabel -> {
+                "\!\(\*SubscriptBox[\(I\), \(lk\)]\)", 
+                 "\!\(\*SubscriptBox[\(I\), \(in\)]\)"}, ImageSize -> Medium, 
+               PlotRange -> {0, Automatic}, ContourLabels -> All, 
+               RegionFunction -> 
+               Function[{$CellContext`Ilk$, $CellContext`Iin$}, \
+$CellContext`IintoiIn[$CellContext`Iin$, $CellContext`Ilk$, \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$] < Pi]], 
+              Plot[{
+                $CellContext`iIntoIin[
+                1/2, $CellContext`Ilk, $CellContext`pquaManip$$, \
+$CellContext`pilkrManip$$], 
+                $CellContext`iIntoIin[
+                0.8, $CellContext`Ilk, $CellContext`pquaManip$$, \
+$CellContext`pilkrManip$$], 
+                $CellContext`iIntoIin[
+                Pi, $CellContext`Ilk, $CellContext`pquaManip$$, \
+$CellContext`pilkrManip$$]}, {$CellContext`Ilk, 0.002, 0.2}]]}}]), 
+        "Specifications" :> {{{$CellContext`pquaManip$$, 2, 
+            "\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)"}, 0.5, 4, 0.001, 
+           Appearance -> 
+           "Open"}, {{$CellContext`ptauManip$$, 0.001, 
+            "\!\(\*SubscriptBox[\(\[Rho]\), \(tau\)]\)"}, 0.0001, 0.002, 
+           0.0001, Appearance -> 
+           "Open"}, {{$CellContext`pilkrManip$$, 0.008, 
+            "\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)"}, 0.0005, 0.015, 
+           0.0001, Appearance -> "Open"}}, "Options" :> {}, 
+        "DefaultOptions" :> {}],
+       ImageSizeCache->{407., {270., 278.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    TraditionalForm],
+   Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.6267170107644367`*^9, 3.626717346695917*^9, 3.6267173772237186`*^9, {
+   3.626717407584223*^9, 3.6267174778925877`*^9}, {3.626717564661399*^9, 
+   3.6267175721523314`*^9}, 3.626717727485136*^9, 3.6267294129366283`*^9, 
+   3.6267298996697273`*^9, {3.626730014782366*^9, 3.626730041271502*^9}, {
+   3.6267301246861677`*^9, 3.62673013137881*^9}, 3.626730205861452*^9, 
+   3.62673023604056*^9, {3.6267303336737823`*^9, 3.626730340008759*^9}, 
+   3.626730428512474*^9, 3.626730533326445*^9, 3.631568642488452*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "3D Plot of the ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "nd"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " order approximation of ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", "2"], TraditionalForm]]],
+ " as a function of ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "in"], TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "lk"], TraditionalForm]]]
+}], "Subsubsection",
+ CellChangeTimes->{{3.626716927091609*^9, 3.626716935476609*^9}, {
+  3.626718030241542*^9, 3.626718031282901*^9}, {3.6315685197023706`*^9, 
+  3.6315685231696672`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"pltEqns2", " ", "=", " ", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"Ilk", "+", "pilkrManip"}], ")"}], "2"], "/", 
+          "ptauManip"}], ")"}], 
+        RowBox[{"ft2Approx2", "[", 
+         RowBox[{"IintoiIn", "[", 
+          RowBox[{"Iin", ",", "Ilk", ",", "pquaManip", ",", "pilkrManip"}], 
+          "]"}], "]"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Ilk", ",", "IlkRange"}], "}"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Grid", "[", 
+     RowBox[{"{", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{"Plot3D", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{"Ilk", "+", "pilkrManip"}], ")"}], "2"], "/", 
+            "ptauManip"}], ")"}], 
+          RowBox[{"ft2Approx2", "[", 
+           RowBox[{"IintoiIn", "[", 
+            RowBox[{"Iin", ",", "Ilk", ",", "pquaManip", ",", "pilkrManip"}], 
+            "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{"Iin", ",", " ", "0", ",", "0.3"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"Ilk", ",", " ", "0", ",", "0.2"}], "}"}], ",", 
+         RowBox[{"AxesLabel", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\"", ",", 
+            "\"\<\!\(\*SubscriptBox[\(I\), \(lk\)]\)\>\"", ",", 
+            "\"\<\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
+         RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "Automatic"}], "}"}]}], ",", 
+         RowBox[{"RegionFunction", "\[Rule]", 
+          RowBox[{"Function", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"Iin", ",", "Ilk"}], "}"}], ",", 
+            RowBox[{
+             RowBox[{"IintoiIn", "[", 
+              RowBox[{
+              "Iin", ",", "Ilk", ",", "pquaManip", ",", "pilkrManip"}], "]"}],
+              "<", "\[Pi]"}]}], "]"}]}]}], "]"}], "\[IndentingNewLine]", 
+       "}"}], "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "pquaManip", ",", "2", ",", 
+       "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)\>\""}], "}"}], ",", 
+     "0.5", ",", "4", ",", "0.001", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "ptauManip", ",", "0.001", ",", 
+       "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(tau\)]\)\>\""}], "}"}], ",", 
+     "0.0001", ",", "0.002", ",", "0.0001", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "pilkrManip", ",", "0.008", ",", 
+       "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)\>\""}], "}"}], ",", 
+     "0.0005", ",", "0.015", ",", "0.0001", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.621973156210636*^9, 3.6219731635958567`*^9}, {
+   3.621973322495101*^9, 3.6219735578468733`*^9}, {3.621973603805828*^9, 
+   3.6219736160972*^9}, {3.621973649547986*^9, 3.6219737469205217`*^9}, {
+   3.6219739007288847`*^9, 3.62197390335716*^9}, {3.6219739341135893`*^9, 
+   3.621973940741405*^9}, {3.6219739764858427`*^9, 3.621974029158061*^9}, {
+   3.6219742217571783`*^9, 3.6219742589435043`*^9}, {3.621974300855672*^9, 
+   3.621974519919438*^9}, {3.621974563552579*^9, 3.6219745972013903`*^9}, {
+   3.6219746276041317`*^9, 3.6219746452898617`*^9}, {3.6219747145751266`*^9, 
+   3.621974767894122*^9}, {3.622209164397004*^9, 3.6222091922059107`*^9}, {
+   3.622209253764865*^9, 3.622209262513576*^9}, {3.622210584196608*^9, 
+   3.6222106081471577`*^9}, {3.622211391997023*^9, 3.622211477366049*^9}, {
+   3.622211557160893*^9, 3.622211595815446*^9}, {3.622211647849401*^9, 
+   3.622211648484034*^9}, {3.622211683558737*^9, 3.6222116842060966`*^9}, {
+   3.622211833429036*^9, 3.6222118589320097`*^9}, 3.6222119178394737`*^9, {
+   3.622212101277535*^9, 3.622212102950013*^9}, {3.622212303550426*^9, 
+   3.62221230473459*^9}, {3.62222552102463*^9, 3.622225549263596*^9}, {
+   3.622225590882629*^9, 3.62222568009449*^9}, {3.622225757417642*^9, 
+   3.622225758077742*^9}, {3.622225834519651*^9, 3.622225914796406*^9}, {
+   3.622225971741178*^9, 3.622225976691637*^9}, {3.6222260154462347`*^9, 
+   3.6222260365563097`*^9}, {3.6222294358692303`*^9, 3.622229557919386*^9}, {
+   3.622229590559059*^9, 3.622229678822497*^9}, {3.6222312733048973`*^9, 
+   3.622231273603441*^9}, {3.625515781080814*^9, 3.625515789204574*^9}, {
+   3.626710992487278*^9, 3.626711077308622*^9}, {3.626711250055707*^9, 
+   3.6267112704242363`*^9}, {3.626711308593584*^9, 3.626711326960374*^9}, {
+   3.626711362546129*^9, 3.626711488458191*^9}, {3.626711536588283*^9, 
+   3.6267116791685123`*^9}, {3.626711719512444*^9, 3.6267117238162823`*^9}, {
+   3.626711817369857*^9, 3.626711819458158*^9}, {3.6267119645223627`*^9, 
+   3.6267119915699797`*^9}, {3.626712039996819*^9, 3.62671204510224*^9}, 
+   3.626712159244705*^9, {3.6267122115215282`*^9, 3.6267123611529007`*^9}, {
+   3.6267124174208097`*^9, 3.626712436737575*^9}, {3.626712791422743*^9, 
+   3.626712839741872*^9}, {3.6267130568458557`*^9, 3.6267130897260733`*^9}, {
+   3.626713147752475*^9, 3.626713171131768*^9}, {3.6267132105026293`*^9, 
+   3.626713215242797*^9}, {3.626713407005534*^9, 3.626713488571087*^9}, {
+   3.626713518734221*^9, 3.626713578736724*^9}, {3.626713719454228*^9, 
+   3.626713752148946*^9}, {3.626713820117261*^9, 3.6267138440430803`*^9}, {
+   3.626716439261486*^9, 3.626716439696669*^9}, {3.626716507805751*^9, 
+   3.626716529369484*^9}, {3.6267165852955303`*^9, 3.62671659050408*^9}, {
+   3.626716781595739*^9, 3.626716784374321*^9}, {3.6267170741566057`*^9, 
+   3.6267170767485847`*^9}, {3.626729451285975*^9, 3.626729459898323*^9}, 
+   3.6267295467962008`*^9, {3.626730443299193*^9, 3.626730465424835*^9}, {
+   3.6267304994899273`*^9, 3.626730500663817*^9}, {3.626730540292347*^9, 
+   3.6267305439606047`*^9}, {3.631568693801379*^9, 3.631568702359447*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FormBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`pilkrManip$$ = 
+      0.008, $CellContext`pquaManip$$ = 2, $CellContext`ptauManip$$ = 0.001, 
+      Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+      Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ =
+       1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+         Hold[$CellContext`pquaManip$$], 2, 
+         "\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)"}, 0.5, 4, 0.001}, {{
+         Hold[$CellContext`ptauManip$$], 0.001, 
+         "\!\(\*SubscriptBox[\(\[Rho]\), \(tau\)]\)"}, 0.0001, 0.002, 
+        0.0001}, {{
+         Hold[$CellContext`pilkrManip$$], 0.008, 
+         "\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)"}, 0.0005, 0.015, 
+        0.0001}}, Typeset`size$$ = {360., {130.5, 138.5}}, Typeset`update$$ = 
+      0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+      True, $CellContext`pquaManip$94687$$ = 
+      0, $CellContext`ptauManip$94688$$ = 0, $CellContext`pilkrManip$94689$$ =
+       0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, TraditionalForm, 
+        "Variables" :> {$CellContext`pilkrManip$$ = 
+          0.008, $CellContext`pquaManip$$ = 2, $CellContext`ptauManip$$ = 
+          0.001}, "ControllerVariables" :> {
+          Hold[$CellContext`pquaManip$$, $CellContext`pquaManip$94687$$, 0], 
+          Hold[$CellContext`ptauManip$$, $CellContext`ptauManip$94688$$, 0], 
+          
+          Hold[$CellContext`pilkrManip$$, $CellContext`pilkrManip$94689$$, 
+           0]}, "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, 
+        "Body" :> ($CellContext`pltEqns2 = 
+          Table[(($CellContext`Ilk + \
+$CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) $CellContext`ft2Approx2[
+              $CellContext`IintoiIn[$CellContext`Iin, $CellContext`Ilk, \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Ilk, \
+$CellContext`IlkRange}]; Grid[{{
+             
+             Plot3D[(($CellContext`Ilk + \
+$CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) $CellContext`ft2Approx2[
+                $CellContext`IintoiIn[$CellContext`Iin, $CellContext`Ilk, \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Iin, 0, 
+               0.3}, {$CellContext`Ilk, 0, 0.2}, 
+              AxesLabel -> {
+               "\!\(\*SubscriptBox[\(I\), \(in\)]\)", 
+                "\!\(\*SubscriptBox[\(I\), \(lk\)]\)", 
+                "\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Medium, 
+              PlotRange -> {0, Automatic}, RegionFunction -> 
+              Function[{$CellContext`Iin$, $CellContext`Ilk$}, \
+$CellContext`IintoiIn[$CellContext`Iin$, $CellContext`Ilk$, \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$] < Pi]]}}]), 
+        "Specifications" :> {{{$CellContext`pquaManip$$, 2, 
+            "\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)"}, 0.5, 4, 0.001, 
+           Appearance -> 
+           "Open"}, {{$CellContext`ptauManip$$, 0.001, 
+            "\!\(\*SubscriptBox[\(\[Rho]\), \(tau\)]\)"}, 0.0001, 0.002, 
+           0.0001, Appearance -> 
+           "Open"}, {{$CellContext`pilkrManip$$, 0.008, 
+            "\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)"}, 0.0005, 0.015, 
+           0.0001, Appearance -> "Open"}}, "Options" :> {}, 
+        "DefaultOptions" :> {}],
+       ImageSizeCache->{407., {233., 241.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    TraditionalForm],
+   Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.6219734389639378`*^9, 3.621973481023086*^9}, 
+   3.6219735591882133`*^9, {3.6219736183745832`*^9, 3.621973627943756*^9}, 
+   3.621973660203755*^9, {3.621973714950624*^9, 3.621973747460945*^9}, 
+   3.621973904217594*^9, {3.621973935400424*^9, 3.621973941404277*^9}, {
+   3.621973999088719*^9, 3.6219740421522827`*^9}, 3.621974072849164*^9, 
+   3.621974211352932*^9, 3.621974260100397*^9, {3.6219743048836946`*^9, 
+   3.621974349169519*^9}, 3.621974394549933*^9, 3.621974446302978*^9, {
+   3.621974486924617*^9, 3.621974499753694*^9}, 3.6219746047380753`*^9, 
+   3.6219746461807213`*^9, 3.622209265879603*^9, {3.622210592819799*^9, 
+   3.6222106093740053`*^9}, 3.62221142365914*^9, {3.6222114580048733`*^9, 
+   3.622211478681485*^9}, {3.622211557570524*^9, 3.6222115636472197`*^9}, 
+   3.62221159689168*^9, 3.622211649283206*^9, 3.622211684793252*^9, 
+   3.62221178395722*^9, {3.6222118347034807`*^9, 3.6222118596179037`*^9}, 
+   3.622211918262248*^9, 3.622212106837146*^9, 3.622212309043229*^9, 
+   3.622225759514884*^9, {3.622225836137134*^9, 3.622225915418702*^9}, {
+   3.622226016622929*^9, 3.62222603755611*^9}, {3.6222295153318*^9, 
+   3.6222295591820593`*^9}, {3.622229591947609*^9, 3.62222960842527*^9}, 
+   3.6222296482664833`*^9, 3.622229680195526*^9, 3.622231274399439*^9, 
+   3.625515794132786*^9, 3.626711081189485*^9, {3.626711290999833*^9, 
+   3.6267113113886557`*^9}, {3.6267115710067787`*^9, 3.626711610366995*^9}, 
+   3.626711682156637*^9, 3.626711750064386*^9, 3.626711825816223*^9, 
+   3.626711885618002*^9, 3.626711993949236*^9, {3.62671214871603*^9, 
+   3.626712159745544*^9}, {3.6267122974431973`*^9, 3.626712318752142*^9}, 
+   3.626712363337378*^9, {3.6267124201509867`*^9, 3.6267124373894663`*^9}, {
+   3.626712825119548*^9, 3.626712840944859*^9}, {3.626712981712696*^9, 
+   3.626713003050761*^9}, 3.626713060384647*^9, 3.6267130905969677`*^9, {
+   3.62671315198428*^9, 3.626713173474455*^9}, 3.626713216296541*^9, {
+   3.626713471939663*^9, 3.6267134931739807`*^9}, {3.6267135453732853`*^9, 
+   3.626713580117064*^9}, 3.626713766791258*^9, {3.626713825193802*^9, 
+   3.6267138448050137`*^9}, 3.626716441897903*^9, {3.626716512714181*^9, 
+   3.626716531082399*^9}, 3.626716591551276*^9, 3.626716785866762*^9, 
+   3.626717078660673*^9, 3.626729461627795*^9, 3.626729548112275*^9, {
+   3.626730471819952*^9, 3.6267305015835667`*^9}, 3.626730544828834*^9, 
+   3.631568713059909*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "All ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "nd"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " order approximation plots of ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", "2"], TraditionalForm]]],
+ " as a function of ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "in"], TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "lk"], TraditionalForm]]]
+}], "Subsubsection",
+ CellChangeTimes->{{3.626716927091609*^9, 3.626716935476609*^9}, {
+  3.626718030241542*^9, 3.626718031282901*^9}, {3.626718499350998*^9, 
+  3.626718518641561*^9}, {3.631568527874638*^9, 3.6315685316669207`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"pltEqns2", " ", "=", " ", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"Ilk", "+", "pilkrManip"}], ")"}], "2"], "/", 
+          "ptauManip"}], ")"}], 
+        RowBox[{"ft2Approx2", "[", 
+         RowBox[{"IintoiIn", "[", 
+          RowBox[{"Iin", ",", "Ilk", ",", "pquaManip", ",", "pilkrManip"}], 
+          "]"}], "]"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Ilk", ",", "IlkRange"}], "}"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Ilks", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{"Ilk", ",", 
+       RowBox[{"{", 
+        RowBox[{"Ilk", ",", "IlkRange"}], "}"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Grid", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{"Show", "[", "\[IndentingNewLine]", 
+         RowBox[{"Plot", "[", 
+          RowBox[{
+           RowBox[{"{", "pltEqns2", "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"Iin", ",", " ", "0", ",", "0.3"}], "}"}], ",", 
+           RowBox[{"AxesLabel", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\"", ",", 
+              "\"\<\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
+           
+           RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+           RowBox[{"PlotRange", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "Automatic"}], "}"}]}]}], "]"}], 
+         "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "}"}], ",", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{"Show", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"ContourPlot", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               SuperscriptBox[
+                RowBox[{"(", 
+                 RowBox[{"Ilk", "+", "pilkrManip"}], ")"}], "2"], "/", 
+               "ptauManip"}], ")"}], 
+             RowBox[{"ft2Approx2", "[", 
+              RowBox[{"IintoiIn", "[", 
+               RowBox[{
+               "Iin", ",", "Ilk", ",", "pquaManip", ",", "pilkrManip"}], 
+               "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"Iin", ",", " ", "0", ",", "0.3"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"Ilk", ",", " ", "0", ",", "0.2"}], "}"}], ",", 
+            RowBox[{"FrameLabel", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\"", ",", 
+               "\"\<\!\(\*SubscriptBox[\(I\), \(lk\)]\)\>\""}], "}"}]}], ",", 
+            
+            RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+            RowBox[{"PlotRange", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "Automatic"}], "}"}]}], ",", 
+            RowBox[{"ContourLabels", "\[Rule]", "All"}], ",", 
+            RowBox[{"RegionFunction", "\[Rule]", 
+             RowBox[{"Function", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"Iin", ",", "Ilk"}], "}"}], ",", 
+               RowBox[{
+                RowBox[{"IintoiIn", "[", 
+                 RowBox[{
+                 "Iin", ",", "Ilk", ",", "pquaManip", ",", "pilkrManip"}], 
+                 "]"}], "<", "\[Pi]"}]}], "]"}]}]}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Plot", "[", 
+           RowBox[{"Ilks", ",", 
+            RowBox[{"{", 
+             RowBox[{"Iin", ",", "0", ",", "0.3"}], "}"}], ",", 
+            RowBox[{"PlotStyle", "\[Rule]", 
+             RowBox[{"{", "Dashed", "}"}]}]}], "]"}]}], "\[IndentingNewLine]",
+          "]"}], "\[IndentingNewLine]", "}"}], ",", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{"Plot3D", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{"Ilk", "+", "pilkrManip"}], ")"}], "2"], "/", 
+             "ptauManip"}], ")"}], 
+           RowBox[{"ft2Approx2", "[", 
+            RowBox[{"IintoiIn", "[", 
+             RowBox[{"Iin", ",", "Ilk", ",", "pquaManip", ",", "pilkrManip"}],
+              "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"Iin", ",", " ", "0", ",", "0.3"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"Ilk", ",", " ", "0", ",", "0.2"}], "}"}], ",", 
+          RowBox[{"AxesLabel", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\"", ",", 
+             "\"\<\!\(\*SubscriptBox[\(I\), \(lk\)]\)\>\"", ",", 
+             "\"\<\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
+          RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+          RowBox[{"PlotRange", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "Automatic"}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"RegionFunction", "\[Rule]", 
+           RowBox[{"Function", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"Iin", ",", "Ilk"}], "}"}], ",", 
+             RowBox[{
+              RowBox[{"IintoiIn", "[", 
+               RowBox[{
+               "Iin", ",", "Ilk", ",", "pquaManip", ",", "pilkrManip"}], 
+               "]"}], "<", "\[Pi]"}]}], "]"}]}]}], "]"}], 
+        "\[IndentingNewLine]", "}"}]}], "}"}], "]"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "pquaManip", ",", "2", ",", 
+       "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)\>\""}], "}"}], ",", 
+     "0.5", ",", "4", ",", "0.001", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "ptauManip", ",", "0.001", ",", 
+       "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(tau\)]\)\>\""}], "}"}], ",", 
+     "0.0001", ",", "0.002", ",", "0.0001", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "pilkrManip", ",", "0.008", ",", 
+       "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)\>\""}], "}"}], ",", 
+     "0.0005", ",", "0.015", ",", "0.0001", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.621973156210636*^9, 3.6219731635958567`*^9}, {
+   3.621973322495101*^9, 3.6219735578468733`*^9}, {3.621973603805828*^9, 
+   3.6219736160972*^9}, {3.621973649547986*^9, 3.6219737469205217`*^9}, {
+   3.6219739007288847`*^9, 3.62197390335716*^9}, {3.6219739341135893`*^9, 
+   3.621973940741405*^9}, {3.6219739764858427`*^9, 3.621974029158061*^9}, {
+   3.6219742217571783`*^9, 3.6219742589435043`*^9}, {3.621974300855672*^9, 
+   3.621974519919438*^9}, {3.621974563552579*^9, 3.6219745972013903`*^9}, {
+   3.6219746276041317`*^9, 3.6219746452898617`*^9}, {3.6219747145751266`*^9, 
+   3.621974767894122*^9}, {3.622209164397004*^9, 3.6222091922059107`*^9}, {
+   3.622209253764865*^9, 3.622209262513576*^9}, {3.622210584196608*^9, 
+   3.6222106081471577`*^9}, {3.622211391997023*^9, 3.622211477366049*^9}, {
+   3.622211557160893*^9, 3.622211595815446*^9}, {3.622211647849401*^9, 
+   3.622211648484034*^9}, {3.622211683558737*^9, 3.6222116842060966`*^9}, {
+   3.622211833429036*^9, 3.6222118589320097`*^9}, 3.6222119178394737`*^9, {
+   3.622212101277535*^9, 3.622212102950013*^9}, {3.622212303550426*^9, 
+   3.62221230473459*^9}, {3.62222552102463*^9, 3.622225549263596*^9}, {
+   3.622225590882629*^9, 3.62222568009449*^9}, {3.622225757417642*^9, 
+   3.622225758077742*^9}, {3.622225834519651*^9, 3.622225914796406*^9}, {
+   3.622225971741178*^9, 3.622225976691637*^9}, {3.6222260154462347`*^9, 
+   3.6222260365563097`*^9}, {3.6222294358692303`*^9, 3.622229557919386*^9}, {
+   3.622229590559059*^9, 3.622229678822497*^9}, {3.6222312733048973`*^9, 
+   3.622231273603441*^9}, {3.625515781080814*^9, 3.625515789204574*^9}, {
+   3.626710992487278*^9, 3.626711077308622*^9}, {3.626711250055707*^9, 
+   3.6267112704242363`*^9}, {3.626711308593584*^9, 3.626711326960374*^9}, {
+   3.626711362546129*^9, 3.626711488458191*^9}, {3.626711536588283*^9, 
+   3.6267116791685123`*^9}, {3.626711719512444*^9, 3.6267117238162823`*^9}, {
+   3.626711817369857*^9, 3.626711819458158*^9}, {3.6267119645223627`*^9, 
+   3.6267119915699797`*^9}, {3.626712039996819*^9, 3.62671204510224*^9}, 
+   3.626712159244705*^9, {3.6267122115215282`*^9, 3.6267123611529007`*^9}, {
+   3.6267124174208097`*^9, 3.626712436737575*^9}, {3.626712791422743*^9, 
+   3.626712839741872*^9}, {3.6267130568458557`*^9, 3.6267130897260733`*^9}, {
+   3.626713147752475*^9, 3.626713171131768*^9}, {3.6267132105026293`*^9, 
+   3.626713215242797*^9}, {3.626713407005534*^9, 3.626713488571087*^9}, {
+   3.626713518734221*^9, 3.626713578736724*^9}, {3.626713719454228*^9, 
+   3.626713752148946*^9}, {3.626713820117261*^9, 3.6267138440430803`*^9}, {
+   3.626716439261486*^9, 3.626716439696669*^9}, {3.626716507805751*^9, 
+   3.626716529369484*^9}, {3.6267165852955303`*^9, 3.62671659050408*^9}, {
+   3.626716781595739*^9, 3.626716784374321*^9}, {3.6267170741566057`*^9, 
+   3.6267170767485847`*^9}, {3.626718543682724*^9, 3.626718569343376*^9}, {
+   3.626718630056313*^9, 3.626718647124346*^9}, {3.626718782000032*^9, 
+   3.626718902297779*^9}, {3.626718943745529*^9, 3.6267189903189507`*^9}, {
+   3.626719022671894*^9, 3.626719063792873*^9}, {3.626719204061721*^9, 
+   3.626719221115543*^9}, {3.6267192783571577`*^9, 3.6267193171981783`*^9}, {
+   3.626719382246048*^9, 3.6267193833079557`*^9}, {3.626729490565308*^9, 
+   3.626729500997908*^9}, {3.626730576866701*^9, 3.6267305977609253`*^9}, {
+   3.6315687655933847`*^9, 3.631568782297647*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FormBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`pilkrManip$$ = 
+      0.008, $CellContext`pquaManip$$ = 2, $CellContext`ptauManip$$ = 0.001, 
+      Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+      Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ =
+       1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+         Hold[$CellContext`pquaManip$$], 2, 
+         "\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)"}, 0.5, 4, 0.001}, {{
+         Hold[$CellContext`ptauManip$$], 0.001, 
+         "\!\(\*SubscriptBox[\(\[Rho]\), \(tau\)]\)"}, 0.0001, 0.002, 
+        0.0001}, {{
+         Hold[$CellContext`pilkrManip$$], 0.008, 
+         "\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)"}, 0.0005, 0.015, 
+        0.0001}}, Typeset`size$$ = {360., {425.5, 433.5}}, Typeset`update$$ = 
+      0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+      True, $CellContext`pquaManip$95092$$ = 
+      0, $CellContext`ptauManip$95093$$ = 0, $CellContext`pilkrManip$95094$$ =
+       0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, TraditionalForm, 
+        "Variables" :> {$CellContext`pilkrManip$$ = 
+          0.008, $CellContext`pquaManip$$ = 2, $CellContext`ptauManip$$ = 
+          0.001}, "ControllerVariables" :> {
+          Hold[$CellContext`pquaManip$$, $CellContext`pquaManip$95092$$, 0], 
+          Hold[$CellContext`ptauManip$$, $CellContext`ptauManip$95093$$, 0], 
+          
+          Hold[$CellContext`pilkrManip$$, $CellContext`pilkrManip$95094$$, 
+           0]}, "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, 
+        "Body" :> ($CellContext`pltEqns2 = 
+          Table[(($CellContext`Ilk + \
+$CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) $CellContext`ft2Approx2[
+              $CellContext`IintoiIn[$CellContext`Iin, $CellContext`Ilk, \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Ilk, \
+$CellContext`IlkRange}]; $CellContext`Ilks = 
+          Table[$CellContext`Ilk, {$CellContext`Ilk, $CellContext`IlkRange}]; 
+         Grid[{{
+             Show[
+              
+              Plot[{$CellContext`pltEqns2}, {$CellContext`Iin, 0, 0.3}, 
+               AxesLabel -> {
+                "\!\(\*SubscriptBox[\(I\), \(in\)]\)", 
+                 "\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Medium,
+                PlotRange -> {0, Automatic}]]}, {
+             Show[
+              
+              ContourPlot[(($CellContext`Ilk + \
+$CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) $CellContext`ft2Approx2[
+                 $CellContext`IintoiIn[$CellContext`Iin, $CellContext`Ilk, \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Iin, 0, 
+                0.3}, {$CellContext`Ilk, 0, 0.2}, 
+               FrameLabel -> {
+                "\!\(\*SubscriptBox[\(I\), \(in\)]\)", 
+                 "\!\(\*SubscriptBox[\(I\), \(lk\)]\)"}, ImageSize -> Medium, 
+               PlotRange -> {0, Automatic}, ContourLabels -> All, 
+               RegionFunction -> 
+               Function[{$CellContext`Iin$, $CellContext`Ilk$}, \
+$CellContext`IintoiIn[$CellContext`Iin$, $CellContext`Ilk$, \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$] < Pi]], 
+              
+              Plot[$CellContext`Ilks, {$CellContext`Iin, 0, 0.3}, 
+               PlotStyle -> {Dashed}]]}, {
+             
+             Plot3D[(($CellContext`Ilk + \
+$CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) $CellContext`ft2Approx2[
+                $CellContext`IintoiIn[$CellContext`Iin, $CellContext`Ilk, \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Iin, 0, 
+               0.3}, {$CellContext`Ilk, 0, 0.2}, 
+              AxesLabel -> {
+               "\!\(\*SubscriptBox[\(I\), \(in\)]\)", 
+                "\!\(\*SubscriptBox[\(I\), \(lk\)]\)", 
+                "\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Medium, 
+              PlotRange -> {0, Automatic}, RegionFunction -> 
+              Function[{$CellContext`Iin$, $CellContext`Ilk$}, \
+$CellContext`IintoiIn[$CellContext`Iin$, $CellContext`Ilk$, \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$] < Pi]]}}]), 
+        "Specifications" :> {{{$CellContext`pquaManip$$, 2, 
+            "\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)"}, 0.5, 4, 0.001, 
+           Appearance -> 
+           "Open"}, {{$CellContext`ptauManip$$, 0.001, 
+            "\!\(\*SubscriptBox[\(\[Rho]\), \(tau\)]\)"}, 0.0001, 0.002, 
+           0.0001, Appearance -> 
+           "Open"}, {{$CellContext`pilkrManip$$, 0.008, 
+            "\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)"}, 0.0005, 0.015, 
+           0.0001, Appearance -> "Open"}}, "Options" :> {}, 
+        "DefaultOptions" :> {}],
+       ImageSizeCache->{407., {528., 536.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    TraditionalForm],
+   Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.6219734389639378`*^9, 3.621973481023086*^9}, 
+   3.6219735591882133`*^9, {3.6219736183745832`*^9, 3.621973627943756*^9}, 
+   3.621973660203755*^9, {3.621973714950624*^9, 3.621973747460945*^9}, 
+   3.621973904217594*^9, {3.621973935400424*^9, 3.621973941404277*^9}, {
+   3.621973999088719*^9, 3.6219740421522827`*^9}, 3.621974072849164*^9, 
+   3.621974211352932*^9, 3.621974260100397*^9, {3.6219743048836946`*^9, 
+   3.621974349169519*^9}, 3.621974394549933*^9, 3.621974446302978*^9, {
+   3.621974486924617*^9, 3.621974499753694*^9}, 3.6219746047380753`*^9, 
+   3.6219746461807213`*^9, 3.622209265879603*^9, {3.622210592819799*^9, 
+   3.6222106093740053`*^9}, 3.62221142365914*^9, {3.6222114580048733`*^9, 
+   3.622211478681485*^9}, {3.622211557570524*^9, 3.6222115636472197`*^9}, 
+   3.62221159689168*^9, 3.622211649283206*^9, 3.622211684793252*^9, 
+   3.62221178395722*^9, {3.6222118347034807`*^9, 3.6222118596179037`*^9}, 
+   3.622211918262248*^9, 3.622212106837146*^9, 3.622212309043229*^9, 
+   3.622225759514884*^9, {3.622225836137134*^9, 3.622225915418702*^9}, {
+   3.622226016622929*^9, 3.62222603755611*^9}, {3.6222295153318*^9, 
+   3.6222295591820593`*^9}, {3.622229591947609*^9, 3.62222960842527*^9}, 
+   3.6222296482664833`*^9, 3.622229680195526*^9, 3.622231274399439*^9, 
+   3.625515794132786*^9, 3.626711081189485*^9, {3.626711290999833*^9, 
+   3.6267113113886557`*^9}, {3.6267115710067787`*^9, 3.626711610366995*^9}, 
+   3.626711682156637*^9, 3.626711750064386*^9, 3.626711825816223*^9, 
+   3.626711885618002*^9, 3.626711993949236*^9, {3.62671214871603*^9, 
+   3.626712159745544*^9}, {3.6267122974431973`*^9, 3.626712318752142*^9}, 
+   3.626712363337378*^9, {3.6267124201509867`*^9, 3.6267124373894663`*^9}, {
+   3.626712825119548*^9, 3.626712840944859*^9}, {3.626712981712696*^9, 
+   3.626713003050761*^9}, 3.626713060384647*^9, 3.6267130905969677`*^9, {
+   3.62671315198428*^9, 3.626713173474455*^9}, 3.626713216296541*^9, {
+   3.626713471939663*^9, 3.6267134931739807`*^9}, {3.6267135453732853`*^9, 
+   3.626713580117064*^9}, 3.626713766791258*^9, {3.626713825193802*^9, 
+   3.6267138448050137`*^9}, 3.626716441897903*^9, {3.626716512714181*^9, 
+   3.626716531082399*^9}, 3.626716591551276*^9, 3.626716785866762*^9, 
+   3.626717078660673*^9, 3.6267185702256317`*^9, 3.626718647887129*^9, 
+   3.626718808565839*^9, {3.626718863511998*^9, 3.626718903037269*^9}, 
+   3.6267189460300837`*^9, {3.626718984891178*^9, 3.626718994725521*^9}, {
+   3.626719027869931*^9, 3.626719065460577*^9}, 3.6267193848955812`*^9, 
+   3.626729520407292*^9, 3.626730599819669*^9, 3.631568801711829*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{"Ilk", ",", 
+   RowBox[{"{", 
+    RowBox[{"Ilk", ",", "IlkRange"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.626718921836591*^9, 3.626718922887735*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{
+   "0.001`", ",", "0.041`", ",", "0.081`", ",", "0.121`", ",", "0.161`"}], 
+   "}"}], TraditionalForm]], "Output",
+ CellChangeTimes->{3.626718923279248*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
    SuperscriptBox["3", "rd"], TraditionalForm]],
   FormatType->"TraditionalForm"],
  " order approximation of ",
@@ -10104,7 +11914,8 @@ Cell[BoxData[
    FractionBox[
     SuperscriptBox[
      RowBox[{"(", 
-      RowBox[{"Ilk", "+", "pilkr"}], ")"}], "2"], "ptau"], 
+      RowBox[{"Ilk", "+", "pilkr"}], ")"}], "2"], 
+    SuperscriptBox["ptau", "2"]], 
    RowBox[{"ft2Approx3", "[", 
     RowBox[{"IintoiIn", "[", 
      RowBox[{"Iin", ",", "Ilk", ",", "pqua", ",", "pilkr"}], "]"}], 
@@ -10114,14 +11925,15 @@ Cell[BoxData[
    3.626632656297963*^9}, {3.626632710972453*^9, 3.62663272325788*^9}, {
    3.626633466663925*^9, 3.626633499681308*^9}, 3.626707892904418*^9, {
    3.626708241195031*^9, 3.6267082443213663`*^9}, {3.6267112155384617`*^9, 
-   3.626711232994667*^9}}],
+   3.626711232994667*^9}, {3.6267217294706984`*^9, 3.626721731257084*^9}}],
 
 Cell[BoxData[
  FormBox[
   RowBox[{
    SuperscriptBox["f", "2"], "\[LongEqual]", 
    RowBox[{
-    FractionBox["1", "ptau"], 
+    FractionBox["1", 
+     SuperscriptBox["ptau", "2"]], 
     RowBox[{
      SuperscriptBox[
       RowBox[{"(", 
@@ -10222,7 +12034,7 @@ Cell[BoxData[
    3.626631349153323*^9, 3.626632626494583*^9, {3.626632656923092*^9, 
    3.626632674992608*^9}, {3.6266327139183893`*^9, 3.626632724051159*^9}, {
    3.626633475167221*^9, 3.626633500724028*^9}, 3.626708245458468*^9, {
-   3.6267112241281557`*^9, 3.626711233667226*^9}}]
+   3.6267112241281557`*^9, 3.626711233667226*^9}, 3.626721732375939*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -10282,8 +12094,7 @@ Cell[BoxData[
     RowBox[{"pltEqns", " ", "=", " ", 
      RowBox[{"Table", "[", 
       RowBox[{
-       RowBox[{"2", 
-        SuperscriptBox["\[Pi]", "2"], 
+       RowBox[{
         FractionBox[
          SuperscriptBox[
           RowBox[{"(", 
@@ -10295,6 +12106,35 @@ Cell[BoxData[
        RowBox[{"{", 
         RowBox[{"Ilk", ",", "IlkRange"}], "}"}]}], "]"}]}], ";", 
     "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{"data3rdOrder", "=", 
+       RowBox[{"Transpose", "[", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"iIntoIin", "[", 
+             RowBox[{"i", ",", "j", ",", "pquaManip", ",", "pilkrManip"}], 
+             "]"}], ",", 
+            RowBox[{"2", 
+             SuperscriptBox["\[Pi]", "2"], 
+             FractionBox[
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{"j", "+", "pilkrManip"}], ")"}], "2"], "ptauManip"], 
+             SuperscriptBox[
+              RowBox[{"fireTau", "[", 
+               RowBox[{"i", ",", "0", ",", "\[Infinity]"}], "]"}], "2"]}]}], 
+           "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"Range", "[", 
+             RowBox[{"0.501", ",", "0.801", ",", "0.05"}], "]"}]}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{"j", ",", "IlkRange"}], "}"}]}], "]"}], "]"}]}], ";"}], 
+     "*)"}], "\[IndentingNewLine]", 
     RowBox[{"data3rdOrder", "=", 
      RowBox[{"Transpose", "[", 
       RowBox[{"Table", "[", 
@@ -10304,20 +12144,40 @@ Cell[BoxData[
           RowBox[{"iIntoIin", "[", 
            RowBox[{"i", ",", "j", ",", "pquaManip", ",", "pilkrManip"}], 
            "]"}], ",", 
-          RowBox[{"2", 
-           SuperscriptBox["\[Pi]", "2"], 
+          RowBox[{
            FractionBox[
             SuperscriptBox[
              RowBox[{"(", 
               RowBox[{"j", "+", "pilkrManip"}], ")"}], "2"], "ptauManip"], 
-           RowBox[{"ft2Approx3", "[", "i", "]"}]}]}], "}"}], ",", 
+           RowBox[{"ft2", "[", "i", "]"}]}]}], "}"}], ",", 
         "\[IndentingNewLine]", 
         RowBox[{"{", 
          RowBox[{"i", ",", 
           RowBox[{"Range", "[", 
-           RowBox[{"0.50", ",", "0.80", ",", "0.05"}], "]"}]}], "}"}], ",", 
+           RowBox[{"0.501", ",", "0.801", ",", "0.05"}], "]"}]}], "}"}], ",", 
+        
         RowBox[{"{", 
          RowBox[{"j", ",", "IlkRange"}], "}"}]}], "]"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"pfull", "=", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"{", "pltEqns", "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Iin", ",", " ", "0", ",", "0.3"}], "}"}], ",", 
+       RowBox[{"AxesLabel", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\"", ",", 
+          "\"\<\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
+       RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", "Automatic"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "Automatic"}], "}"}]}], "}"}]}]}], "]"}]}], ";", 
     "\[IndentingNewLine]", 
     RowBox[{"Grid", "[", 
      RowBox[{"{", 
@@ -10333,26 +12193,33 @@ Cell[BoxData[
             RowBox[{"{", 
              RowBox[{
              "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\"", ",", 
-              "\"\<2\!\(\*SuperscriptBox[\(\[Pi]\), \
-\(2\)]\)\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
-           RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+              "\"\<\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
+           
+           RowBox[{"ImageSize", "\[Rule]", "Full"}], ",", 
            RowBox[{"PlotRange", "\[Rule]", 
             RowBox[{"{", 
              RowBox[{
               RowBox[{"{", 
-               RowBox[{"0", ",", "All"}], "}"}], ",", 
+               RowBox[{"0", ",", "xmax"}], "}"}], ",", 
               RowBox[{"{", 
-               RowBox[{"0", ",", "Automatic"}], "}"}]}], "}"}]}]}], "]"}], 
-         ",", "\[IndentingNewLine]", 
+               RowBox[{"0", ",", "ymax"}], "}"}]}], "}"}]}], ",", 
+           RowBox[{"Epilog", "\[Rule]", 
+            RowBox[{"Inset", "[", 
+             RowBox[{"pfull", ",", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "ymax"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"Left", ",", "Top"}], "}"}]}], "]"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
          RowBox[{"ListPlot", "[", 
           RowBox[{"data3rdOrder", ",", 
            RowBox[{"AxesLabel", "\[Rule]", 
             RowBox[{"{", 
              RowBox[{
              "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\"", ",", 
-              "\"\<2\!\(\*SuperscriptBox[\(\[Pi]\), \
-\(2\)]\)\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
-           RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+              "\"\<\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
+           
+           RowBox[{"ImageSize", "\[Rule]", "Full"}], ",", 
            RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], 
         "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "}"}], "}"}], 
      "]"}]}], ",", "\[IndentingNewLine]", 
@@ -10381,8 +12248,13 @@ Cell[BoxData[
       "pilkrManip", ",", "0.008", ",", 
        "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)\>\""}], "}"}], ",", 
      "0.0005", ",", "0.015", ",", "0.0001", ",", 
-     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}]}], 
-  "\[IndentingNewLine]", "]"}]], "Input",
+     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"xmax", ",", "0.08"}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"ymax", ",", "2"}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
  CellChangeTimes->{
   3.626717089939722*^9, {3.626718049874127*^9, 3.626718069934609*^9}, {
    3.626718116385659*^9, 3.626718128624542*^9}, {3.626718382474184*^9, 
@@ -10390,7 +12262,18 @@ Cell[BoxData[
    3.626719898335711*^9, 3.626719902992757*^9}, {3.626719991641136*^9, 
    3.6267200055159273`*^9}, {3.626720067324663*^9, 3.626720121724329*^9}, {
    3.6267201703814697`*^9, 3.6267202122824383`*^9}, {3.626720891635734*^9, 
-   3.626721002904662*^9}, {3.626721051819641*^9, 3.626721087873954*^9}}],
+   3.626721002904662*^9}, {3.626721051819641*^9, 3.626721087873954*^9}, {
+   3.626726144199986*^9, 3.626726160868327*^9}, {3.626726409242983*^9, 
+   3.6267264353856497`*^9}, {3.626726515659102*^9, 3.626726522373068*^9}, {
+   3.6267265659760847`*^9, 3.6267265861620703`*^9}, {3.626726623481332*^9, 
+   3.626726630358582*^9}, {3.6267266939761953`*^9, 3.626726697809165*^9}, {
+   3.62672730250766*^9, 3.626727328359426*^9}, {3.626727435650961*^9, 
+   3.626727589336439*^9}, {3.626727714123602*^9, 3.626727742739911*^9}, {
+   3.626727777927514*^9, 3.626727798262735*^9}, {3.6267278309700737`*^9, 
+   3.6267278381649513`*^9}, {3.6267279369805803`*^9, 3.62672795696842*^9}, 
+   3.626728398624941*^9, {3.6267284317496853`*^9, 3.6267284452791777`*^9}, {
+   3.626728495542673*^9, 3.626728496136114*^9}, {3.6267285391312838`*^9, 
+   3.626728583474338*^9}, {3.6267286548247766`*^9, 3.626728656847829*^9}}],
 
 Cell[BoxData[
  FormBox[
@@ -10398,8 +12281,9 @@ Cell[BoxData[
    FormBox[
     StyleBox[
      DynamicModuleBox[{$CellContext`pilkrManip$$ = 
-      0.014, $CellContext`pquaManip$$ = 2.279, $CellContext`ptauManip$$ = 
-      0.001, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+      0.008, $CellContext`pquaManip$$ = 2, $CellContext`ptauManip$$ = 
+      0.001, $CellContext`xmax$$ = 0.08, $CellContext`ymax$$ = 2, 
+      Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
       Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ =
        1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
          Hold[$CellContext`pquaManip$$], 2, 
@@ -10409,56 +12293,63 @@ Cell[BoxData[
         0.0001}, {{
          Hold[$CellContext`pilkrManip$$], 0.008, 
          "\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)"}, 0.0005, 0.015, 
-        0.0001}}, Typeset`size$$ = {360., {111., 119.}}, Typeset`update$$ = 0,
-       Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`pquaManip$194749$$ = 
-      0, $CellContext`ptauManip$194750$$ = 
-      0, $CellContext`pilkrManip$194751$$ = 0}, 
+        0.0001}, {
+        Hold[$CellContext`xmax$$], 0.08}, {
+        Hold[$CellContext`ymax$$], 2}}, Typeset`size$$ = {
+      1080., {334., 342.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      Typeset`skipInitDone$$ = True, $CellContext`pquaManip$30643$$ = 
+      0, $CellContext`ptauManip$30644$$ = 0, $CellContext`pilkrManip$30645$$ =
+       0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, 
         "Variables" :> {$CellContext`pilkrManip$$ = 
           0.008, $CellContext`pquaManip$$ = 2, $CellContext`ptauManip$$ = 
-          0.001}, "ControllerVariables" :> {
-          Hold[$CellContext`pquaManip$$, $CellContext`pquaManip$194749$$, 0], 
+          0.001, $CellContext`xmax$$ = 0.08, $CellContext`ymax$$ = 2}, 
+        "ControllerVariables" :> {
+          Hold[$CellContext`pquaManip$$, $CellContext`pquaManip$30643$$, 0], 
+          Hold[$CellContext`ptauManip$$, $CellContext`ptauManip$30644$$, 0], 
           
-          Hold[$CellContext`ptauManip$$, $CellContext`ptauManip$194750$$, 0], 
-          
-          
-          Hold[$CellContext`pilkrManip$$, $CellContext`pilkrManip$194751$$, 
+          Hold[$CellContext`pilkrManip$$, $CellContext`pilkrManip$30645$$, 
            0]}, "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
           Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
           Typeset`initDone$$, Typeset`skipInitDone$$}, 
         "Body" :> ($CellContext`pltEqns = 
-          Table[2 Pi^2 (($CellContext`Ilk + \
+          Table[(($CellContext`Ilk + \
 $CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) $CellContext`ft2Approx3[
               $CellContext`IintoiIn[$CellContext`Iin, $CellContext`Ilk, \
 $CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Ilk, \
 $CellContext`IlkRange}]; $CellContext`data3rdOrder = Transpose[
             Table[{
               $CellContext`iIntoIin[$CellContext`i, $CellContext`j, \
-$CellContext`pquaManip$$, $CellContext`pilkrManip$$], 2 
-              Pi^2 (($CellContext`j + \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$], (($CellContext`j + \
 $CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) \
-$CellContext`ft2Approx3[$CellContext`i]}, {$CellContext`i, 
+$CellContext`ft2[$CellContext`i]}, {$CellContext`i, 
               Range[
-              0.5, 0.8, 0.05]}, {$CellContext`j, $CellContext`IlkRange}]]; 
-         Grid[{{
+              0.501, 0.801, 
+               0.05]}, {$CellContext`j, $CellContext`IlkRange}]]; \
+$CellContext`pfull = 
+          Plot[{$CellContext`pltEqns}, {$CellContext`Iin, 0, 0.3}, 
+            AxesLabel -> {
+             "\!\(\*SubscriptBox[\(I\), \(in\)]\)", 
+              "\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Medium, 
+            PlotRange -> {{0, Automatic}, {0, Automatic}}]; Grid[{{
              Show[
               
               Plot[{$CellContext`pltEqns}, {$CellContext`Iin, 0, 0.3}, 
                AxesLabel -> {
                 "\!\(\*SubscriptBox[\(I\), \(in\)]\)", 
-                 "2\!\(\*SuperscriptBox[\(\[Pi]\), \
-\(2\)]\)\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Medium, 
-               PlotRange -> {{0, All}, {0, Automatic}}], 
+                 "\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Full, 
+               PlotRange -> {{0, $CellContext`xmax$$}, {
+                 0, $CellContext`ymax$$}}, Epilog -> 
+               Inset[$CellContext`pfull, {0, $CellContext`ymax$$}, {
+                 Left, Top}]], 
               
               ListPlot[$CellContext`data3rdOrder, 
                AxesLabel -> {
                 "\!\(\*SubscriptBox[\(I\), \(in\)]\)", 
-                 "2\!\(\*SuperscriptBox[\(\[Pi]\), \
-\(2\)]\)\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Medium, 
+                 "\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Full, 
                PlotRange -> All]]}}]), 
         "Specifications" :> {{{$CellContext`pquaManip$$, 2, 
             "\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)"}, 0.5, 4, 0.001, 
@@ -10468,9 +12359,10 @@ $CellContext`ft2Approx3[$CellContext`i]}, {$CellContext`i,
            0.0001, Appearance -> 
            "Open"}, {{$CellContext`pilkrManip$$, 0.008, 
             "\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)"}, 0.0005, 0.015, 
-           0.0001, Appearance -> "Open"}}, "Options" :> {}, 
+           0.0001, Appearance -> "Open"}, {$CellContext`xmax$$, 
+           0.08}, {$CellContext`ymax$$, 2}}, "Options" :> {}, 
         "DefaultOptions" :> {}],
-       ImageSizeCache->{407., {213., 221.}},
+       ImageSizeCache->{1127., {457., 465.}},
        SingleEvaluation->True],
       Deinitialization:>None,
       DynamicModuleValues:>{},
@@ -10487,9 +12379,368 @@ $CellContext`ft2Approx3[$CellContext`i]}, {$CellContext`i,
    3.6267200689413548`*^9, 3.626720091172882*^9}, 3.626720122663559*^9, {
    3.626720173649776*^9, 3.6267201793922567`*^9}, 3.626720215342692*^9, {
    3.62672093451679*^9, 3.626721004123115*^9}, 3.626721054196341*^9, 
-   3.626721088691523*^9}]
+   3.626721088691523*^9, {3.626726145559289*^9, 3.626726161955474*^9}, 
+   3.626726536642981*^9, {3.626726572328017*^9, 3.626726589140061*^9}, 
+   3.62672663237535*^9, 3.626726699780505*^9, {3.626727306149713*^9, 
+   3.626727329361299*^9}, {3.6267274590806427`*^9, 3.626727487333527*^9}, {
+   3.6267275317144117`*^9, 3.626727591624213*^9}, {3.62672772309626*^9, 
+   3.626727745285581*^9}, {3.626727792726653*^9, 3.626727800772057*^9}, 
+   3.626727839391582*^9, 3.626728399744636*^9, {3.6267284386819353`*^9, 
+   3.626728446470704*^9}, {3.626728564991025*^9, 3.6267285861509867`*^9}, 
+   3.626728657865922*^9, 3.6278490500426188`*^9}]
 }, Open  ]]
 }, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "LogLogPlot the ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["3", "rd"], TraditionalForm]]],
+ " order approximation of ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", "2"], TraditionalForm]]],
+ " as a function of ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "in"], TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "lk"], TraditionalForm]]]
+}], "Subsubsection",
+ CellChangeTimes->{{3.62221213892764*^9, 3.622212176089459*^9}, {
+  3.624114752112743*^9, 3.6241147521799707`*^9}, {3.626706765586179*^9, 
+  3.626706790418027*^9}, {3.62733382557801*^9, 3.627333828264606*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"IlkRange", "=", 
+   RowBox[{"Range", "[", 
+    RowBox[{"0.001", ",", "0.2", ",", "0.04"}], "]"}]}], ";", "  ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "temporary", " ", "here", " ", "to", " ", "get", " ", "less", " ", 
+    "plots"}], " ", "*)"}]}]], "Input",
+ CellChangeTimes->{{3.626711856538438*^9, 3.626711880833198*^9}, {
+   3.626712087247946*^9, 3.626712107646317*^9}, {3.626712138110894*^9, 
+   3.626712141423996*^9}, {3.6267129746181803`*^9, 3.626712998595195*^9}, {
+   3.626713303158575*^9, 3.626713303622169*^9}, {3.626713670476574*^9, 
+   3.626713695726881*^9}, 3.626713859626059*^9, 3.626713892648088*^9, {
+   3.626716810391836*^9, 3.626716818087122*^9}, {3.626716960450086*^9, 
+   3.6267169611530533`*^9}, {3.626719808583194*^9, 3.626719890172928*^9}, 
+   3.626719920730139*^9, {3.626719952228804*^9, 3.626719983201284*^9}, {
+   3.626720199011031*^9, 3.626720273385233*^9}, {3.6267203217079144`*^9, 
+   3.626720355210268*^9}, {3.626720470501696*^9, 3.6267205029975433`*^9}, {
+   3.626720587900612*^9, 3.6267206999561872`*^9}, {3.626720850581061*^9, 
+   3.62672087462822*^9}, {3.626720918631323*^9, 3.6267209264573507`*^9}, 
+   3.626721045190476*^9, 3.626721157162212*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"pltEqns", " ", "=", " ", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        FractionBox[
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"Ilk", "+", "pilkrManip"}], ")"}], "2"], "ptauManip"], 
+        RowBox[{"ft2Approx3", "[", 
+         RowBox[{"IintoiIn", "[", 
+          RowBox[{"Iin", ",", "Ilk", ",", "pquaManip", ",", "pilkrManip"}], 
+          "]"}], "]"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Ilk", ",", "IlkRange"}], "}"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{"data3rdOrder", "=", 
+       RowBox[{"Transpose", "[", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"iIntoIin", "[", 
+             RowBox[{"i", ",", "j", ",", "pquaManip", ",", "pilkrManip"}], 
+             "]"}], ",", 
+            RowBox[{"2", 
+             SuperscriptBox["\[Pi]", "2"], 
+             FractionBox[
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{"j", "+", "pilkrManip"}], ")"}], "2"], "ptauManip"], 
+             SuperscriptBox[
+              RowBox[{"fireTau", "[", 
+               RowBox[{"i", ",", "0", ",", "\[Infinity]"}], "]"}], "2"]}]}], 
+           "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"Range", "[", 
+             RowBox[{"0.501", ",", "0.801", ",", "0.05"}], "]"}]}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{"j", ",", "IlkRange"}], "}"}]}], "]"}], "]"}]}], ";"}], 
+     "*)"}], "\[IndentingNewLine]", 
+    RowBox[{"data3rdOrder", "=", 
+     RowBox[{"Transpose", "[", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"iIntoIin", "[", 
+           RowBox[{"i", ",", "j", ",", "pquaManip", ",", "pilkrManip"}], 
+           "]"}], ",", 
+          RowBox[{
+           FractionBox[
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{"j", "+", "pilkrManip"}], ")"}], "2"], "ptauManip"], 
+           RowBox[{"ft2", "[", "i", "]"}]}]}], "}"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", 
+          RowBox[{"Range", "[", 
+           RowBox[{"0.501", ",", "0.801", ",", "0.05"}], "]"}]}], "}"}], ",", 
+        
+        RowBox[{"{", 
+         RowBox[{"j", ",", "IlkRange"}], "}"}]}], "]"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"pfull", "=", 
+     RowBox[{"LogLogPlot", "[", 
+      RowBox[{
+       RowBox[{"{", "pltEqns", "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Iin", ",", " ", "0.001", ",", "0.3"}], "}"}], ",", 
+       RowBox[{"AxesLabel", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\"", ",", 
+          "\"\<\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
+       RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0.001", ",", "Automatic"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"0.001", ",", "Automatic"}], "}"}]}], "}"}]}]}], "]"}]}], 
+    ";", "\[IndentingNewLine]", 
+    RowBox[{"Grid", "[", 
+     RowBox[{"{", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{"Show", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"LogLogPlot", "[", 
+          RowBox[{
+           RowBox[{"{", "pltEqns", "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"Iin", ",", " ", "0.001", ",", "0.3"}], "}"}], ",", 
+           RowBox[{"AxesLabel", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\"", ",", 
+              "\"\<\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
+           
+           RowBox[{"ImageSize", "\[Rule]", "Full"}], ",", 
+           RowBox[{"PlotRange", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"0.001", ",", "xmax"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0.0000001", ",", "ymax"}], "}"}]}], "}"}]}], ",", 
+           RowBox[{"Epilog", "\[Rule]", 
+            RowBox[{"Inset", "[", 
+             RowBox[{"pfull", ",", 
+              RowBox[{"{", 
+               RowBox[{"0.00001", ",", "ymax"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"Left", ",", "Top"}], "}"}]}], "]"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"ListLogLogPlot", "[", 
+          RowBox[{"data3rdOrder", ",", 
+           RowBox[{"AxesLabel", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\"", ",", 
+              "\"\<\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
+           
+           RowBox[{"ImageSize", "\[Rule]", "Full"}], ",", 
+           RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], 
+        "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "}"}], "}"}], 
+     "]"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "pquaManip", ",", "2", ",", 
+       "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)\>\""}], "}"}], ",", 
+     "0.5", ",", "4", ",", "0.001", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "ptauManip", ",", "0.001", ",", 
+       "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(tau\)]\)\>\""}], "}"}], ",", 
+     "0.0001", ",", "0.002", ",", "0.0001", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "pilkrManip", ",", "0.008", ",", 
+       "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)\>\""}], "}"}], ",", 
+     "0.0005", ",", "0.015", ",", "0.0001", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"xmax", ",", "0.3"}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"ymax", ",", "5"}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{
+  3.626717089939722*^9, {3.626718049874127*^9, 3.626718069934609*^9}, {
+   3.626718116385659*^9, 3.626718128624542*^9}, {3.626718382474184*^9, 
+   3.626718386366337*^9}, {3.626719556231153*^9, 3.62671978433267*^9}, {
+   3.626719898335711*^9, 3.626719902992757*^9}, {3.626719991641136*^9, 
+   3.6267200055159273`*^9}, {3.626720067324663*^9, 3.626720121724329*^9}, {
+   3.6267201703814697`*^9, 3.6267202122824383`*^9}, {3.626720891635734*^9, 
+   3.626721002904662*^9}, {3.626721051819641*^9, 3.626721087873954*^9}, {
+   3.626726144199986*^9, 3.626726160868327*^9}, {3.626726409242983*^9, 
+   3.6267264353856497`*^9}, {3.626726515659102*^9, 3.626726522373068*^9}, {
+   3.6267265659760847`*^9, 3.6267265861620703`*^9}, {3.626726623481332*^9, 
+   3.626726630358582*^9}, {3.6267266939761953`*^9, 3.626726697809165*^9}, {
+   3.62672730250766*^9, 3.626727328359426*^9}, {3.626727435650961*^9, 
+   3.626727589336439*^9}, {3.626727714123602*^9, 3.626727742739911*^9}, {
+   3.626727777927514*^9, 3.626727798262735*^9}, {3.6267278309700737`*^9, 
+   3.6267278381649513`*^9}, {3.6267279369805803`*^9, 3.62672795696842*^9}, 
+   3.626728398624941*^9, {3.6267284317496853`*^9, 3.6267284452791777`*^9}, {
+   3.626728495542673*^9, 3.626728496136114*^9}, {3.6267285391312838`*^9, 
+   3.626728583474338*^9}, {3.6267286548247766`*^9, 3.626728656847829*^9}, {
+   3.627333835576288*^9, 3.627333845752838*^9}, {3.627337236231415*^9, 
+   3.627337262368987*^9}, {3.6273373051761847`*^9, 3.627337313820547*^9}, {
+   3.627338601892481*^9, 3.627338625927662*^9}, {3.627849079810161*^9, 
+   3.6278490858084393`*^9}, {3.627849144508683*^9, 3.627849152539206*^9}, {
+   3.627849556495965*^9, 3.627849581435601*^9}, {3.627849628412815*^9, 
+   3.627849639363765*^9}, {3.6278496782595797`*^9, 3.627849780414548*^9}, {
+   3.627849818835041*^9, 3.627849844909196*^9}, {3.6278498924959383`*^9, 
+   3.627849893025498*^9}, {3.627855673795198*^9, 3.6278556925146933`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FormBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`pilkrManip$$ = 
+      0.008, $CellContext`pquaManip$$ = 2, $CellContext`ptauManip$$ = 
+      0.001, $CellContext`xmax$$ = 0.3, $CellContext`ymax$$ = 5, 
+      Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+      Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ =
+       1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+         Hold[$CellContext`pquaManip$$], 2, 
+         "\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)"}, 0.5, 4, 0.001}, {{
+         Hold[$CellContext`ptauManip$$], 0.001, 
+         "\!\(\*SubscriptBox[\(\[Rho]\), \(tau\)]\)"}, 0.0001, 0.002, 
+        0.0001}, {{
+         Hold[$CellContext`pilkrManip$$], 0.008, 
+         "\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)"}, 0.0005, 0.015, 
+        0.0001}, {
+        Hold[$CellContext`xmax$$], 0.3}, {
+        Hold[$CellContext`ymax$$], 5}}, Typeset`size$$ = {
+      1080., {331.5, 339.5}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      Typeset`skipInitDone$$ = True, $CellContext`pquaManip$98109$$ = 
+      0, $CellContext`ptauManip$98110$$ = 0, $CellContext`pilkrManip$98111$$ =
+       0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, TraditionalForm, 
+        "Variables" :> {$CellContext`pilkrManip$$ = 
+          0.008, $CellContext`pquaManip$$ = 2, $CellContext`ptauManip$$ = 
+          0.001, $CellContext`xmax$$ = 0.3, $CellContext`ymax$$ = 5}, 
+        "ControllerVariables" :> {
+          Hold[$CellContext`pquaManip$$, $CellContext`pquaManip$98109$$, 0], 
+          Hold[$CellContext`ptauManip$$, $CellContext`ptauManip$98110$$, 0], 
+          
+          Hold[$CellContext`pilkrManip$$, $CellContext`pilkrManip$98111$$, 
+           0]}, "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, 
+        "Body" :> ($CellContext`pltEqns = 
+          Table[(($CellContext`Ilk + \
+$CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) $CellContext`ft2Approx3[
+              $CellContext`IintoiIn[$CellContext`Iin, $CellContext`Ilk, \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Ilk, \
+$CellContext`IlkRange}]; $CellContext`data3rdOrder = Transpose[
+            Table[{
+              $CellContext`iIntoIin[$CellContext`i, $CellContext`j, \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$], (($CellContext`j + \
+$CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) \
+$CellContext`ft2[$CellContext`i]}, {$CellContext`i, 
+              Range[
+              0.501, 0.801, 
+               0.05]}, {$CellContext`j, $CellContext`IlkRange}]]; \
+$CellContext`pfull = 
+          LogLogPlot[{$CellContext`pltEqns}, {$CellContext`Iin, 0.001, 0.3}, 
+            AxesLabel -> {
+             "\!\(\*SubscriptBox[\(I\), \(in\)]\)", 
+              "\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Medium, 
+            PlotRange -> {{0.001, Automatic}, {0.001, Automatic}}]; Grid[{{
+             Show[
+              
+              LogLogPlot[{$CellContext`pltEqns}, {$CellContext`Iin, 0.001, 
+                0.3}, AxesLabel -> {
+                "\!\(\*SubscriptBox[\(I\), \(in\)]\)", 
+                 "\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Full, 
+               PlotRange -> {{0.001, $CellContext`xmax$$}, {
+                 1.*^-7, $CellContext`ymax$$}}, Epilog -> 
+               Inset[$CellContext`pfull, {0.00001, $CellContext`ymax$$}, {
+                 Left, Top}]], 
+              
+              ListLogLogPlot[$CellContext`data3rdOrder, 
+               AxesLabel -> {
+                "\!\(\*SubscriptBox[\(I\), \(in\)]\)", 
+                 "\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Full, 
+               PlotRange -> All]]}}]), 
+        "Specifications" :> {{{$CellContext`pquaManip$$, 2, 
+            "\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)"}, 0.5, 4, 0.001, 
+           Appearance -> 
+           "Open"}, {{$CellContext`ptauManip$$, 0.001, 
+            "\!\(\*SubscriptBox[\(\[Rho]\), \(tau\)]\)"}, 0.0001, 0.002, 
+           0.0001, Appearance -> 
+           "Open"}, {{$CellContext`pilkrManip$$, 0.008, 
+            "\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)"}, 0.0005, 0.015, 
+           0.0001, Appearance -> "Open"}, {$CellContext`xmax$$, 
+           0.3}, {$CellContext`ymax$$, 5}}, "Options" :> {}, 
+        "DefaultOptions" :> {}],
+       ImageSizeCache->{1127., {455., 463.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    TraditionalForm],
+   Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.627849583510892*^9, {3.6278496302893057`*^9, 3.627849640649413*^9}, {
+   3.627849691152266*^9, 3.627849781834366*^9}, {3.627849825647292*^9, 
+   3.6278498481661463`*^9}, 3.627849895296743*^9, 3.627855657939583*^9, 
+   3.627855698943679*^9}]
+}, Open  ]]
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -10522,8 +12773,7 @@ Cell[BoxData[
     RowBox[{"pltEqns", " ", "=", " ", 
      RowBox[{"Table", "[", 
       RowBox[{
-       RowBox[{"2", 
-        SuperscriptBox["\[Pi]", "2"], 
+       RowBox[{
         FractionBox[
          SuperscriptBox[
           RowBox[{"(", 
@@ -10542,8 +12792,7 @@ Cell[BoxData[
         RowBox[{
          RowBox[{"ContourPlot", "[", 
           RowBox[{
-           RowBox[{"2", 
-            SuperscriptBox["\[Pi]", "2"], 
+           RowBox[{
             FractionBox[
              SuperscriptBox[
               RowBox[{"(", 
@@ -10567,7 +12816,17 @@ Cell[BoxData[
            RowBox[{"PlotRange", "\[Rule]", 
             RowBox[{"{", 
              RowBox[{"0", ",", "Automatic"}], "}"}]}], ",", 
-           RowBox[{"ContourLabels", "\[Rule]", "All"}]}], "]"}], ",", 
+           RowBox[{"ContourLabels", "\[Rule]", "All"}], ",", 
+           RowBox[{"RegionFunction", "\[Rule]", 
+            RowBox[{"Function", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"Ilk", ",", "Iin"}], "}"}], ",", 
+              RowBox[{
+               RowBox[{"IintoiIn", "[", 
+                RowBox[{
+                "Iin", ",", "Ilk", ",", "pquaManip", ",", "pilkrManip"}], 
+                "]"}], "<", "\[Pi]"}]}], "]"}]}]}], "]"}], ",", 
          "\[IndentingNewLine]", 
          RowBox[{"Plot", "[", 
           RowBox[{
@@ -10618,7 +12877,12 @@ Cell[BoxData[
   "\[IndentingNewLine]", "]"}]], "Input",
  CellChangeTimes->{{3.626716993003558*^9, 3.626717001900466*^9}, {
   3.626717219451766*^9, 3.626717476734016*^9}, {3.6267175609494267`*^9, 
-  3.626717571384118*^9}, {3.626717724807372*^9, 3.626717726015726*^9}}],
+  3.626717571384118*^9}, {3.626717724807372*^9, 3.626717726015726*^9}, {
+  3.6267293935138083`*^9, 3.6267293961977577`*^9}, {3.6267298616666317`*^9, 
+  3.626729897083687*^9}, {3.6267300076461563`*^9, 3.626730039786788*^9}, {
+  3.6267301213257437`*^9, 3.6267301224972687`*^9}, {3.626730171512519*^9, 
+  3.626730227579254*^9}, {3.62673032978997*^9, 3.6267303389326887`*^9}, {
+  3.626730528724556*^9, 3.6267305323003817`*^9}}],
 
 Cell[BoxData[
  FormBox[
@@ -10639,34 +12903,32 @@ Cell[BoxData[
          "\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)"}, 0.0005, 0.015, 
         0.0001}}, Typeset`size$$ = {360., {167.5, 175.5}}, Typeset`update$$ = 
       0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`pquaManip$160563$$ = 
-      0, $CellContext`ptauManip$160564$$ = 
-      0, $CellContext`pilkrManip$160565$$ = 0}, 
+      True, $CellContext`pquaManip$32452$$ = 
+      0, $CellContext`ptauManip$32453$$ = 0, $CellContext`pilkrManip$32454$$ =
+       0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, 
         "Variables" :> {$CellContext`pilkrManip$$ = 
           0.008, $CellContext`pquaManip$$ = 2, $CellContext`ptauManip$$ = 
           0.001}, "ControllerVariables" :> {
-          Hold[$CellContext`pquaManip$$, $CellContext`pquaManip$160563$$, 0], 
+          Hold[$CellContext`pquaManip$$, $CellContext`pquaManip$32452$$, 0], 
+          Hold[$CellContext`ptauManip$$, $CellContext`ptauManip$32453$$, 0], 
           
-          Hold[$CellContext`ptauManip$$, $CellContext`ptauManip$160564$$, 0], 
-          
-          
-          Hold[$CellContext`pilkrManip$$, $CellContext`pilkrManip$160565$$, 
+          Hold[$CellContext`pilkrManip$$, $CellContext`pilkrManip$32454$$, 
            0]}, "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
           Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
           Typeset`initDone$$, Typeset`skipInitDone$$}, 
         "Body" :> ($CellContext`pltEqns = 
-          Table[2 Pi^2 (($CellContext`Ilk + \
+          Table[(($CellContext`Ilk + \
 $CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) $CellContext`ft2Approx3[
               $CellContext`IintoiIn[$CellContext`Iin, $CellContext`Ilk, \
 $CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Ilk, \
 $CellContext`IlkRange}]; Grid[{{
              Show[
-              ContourPlot[
-              2 Pi^2 (($CellContext`Ilk + \
+              
+              ContourPlot[(($CellContext`Ilk + \
 $CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) $CellContext`ft2Approx3[
                  $CellContext`IintoiIn[$CellContext`Iin, $CellContext`Ilk, \
 $CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Ilk, 0, 
@@ -10674,7 +12936,11 @@ $CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Ilk, 0,
                FrameLabel -> {
                 "\!\(\*SubscriptBox[\(I\), \(lk\)]\)", 
                  "\!\(\*SubscriptBox[\(I\), \(in\)]\)"}, ImageSize -> Medium, 
-               PlotRange -> {0, Automatic}, ContourLabels -> All], 
+               PlotRange -> {0, Automatic}, ContourLabels -> All, 
+               RegionFunction -> 
+               Function[{$CellContext`Ilk$, $CellContext`Iin$}, \
+$CellContext`IintoiIn[$CellContext`Iin$, $CellContext`Ilk$, \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$] < Pi]], 
               Plot[{
                 $CellContext`iIntoIin[
                 1/2, $CellContext`Ilk, $CellContext`pquaManip$$, \
@@ -10709,7 +12975,11 @@ $CellContext`pilkrManip$$]}, {$CellContext`Ilk, 0.002, 0.2}]]}}]),
  CellChangeTimes->{
   3.6267170107644367`*^9, 3.626717346695917*^9, 3.6267173772237186`*^9, {
    3.626717407584223*^9, 3.6267174778925877`*^9}, {3.626717564661399*^9, 
-   3.6267175721523314`*^9}, 3.626717727485136*^9}]
+   3.6267175721523314`*^9}, 3.626717727485136*^9, 3.6267294129366283`*^9, 
+   3.6267298996697273`*^9, {3.626730014782366*^9, 3.626730041271502*^9}, {
+   3.6267301246861677`*^9, 3.62673013137881*^9}, 3.626730205861452*^9, 
+   3.62673023604056*^9, {3.6267303336737823`*^9, 3.626730340008759*^9}, 
+   3.626730428512474*^9, 3.626730533326445*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -10744,8 +13014,7 @@ Cell[BoxData[
     RowBox[{"pltEqns", " ", "=", " ", 
      RowBox[{"Table", "[", 
       RowBox[{
-       RowBox[{"2", 
-        SuperscriptBox["\[Pi]", "2"], 
+       RowBox[{
         FractionBox[
          SuperscriptBox[
           RowBox[{"(", 
@@ -10762,8 +13031,7 @@ Cell[BoxData[
       RowBox[{"{", "\[IndentingNewLine]", 
        RowBox[{"Plot3D", "[", 
         RowBox[{
-         RowBox[{"2", 
-          SuperscriptBox["\[Pi]", "2"], 
+         RowBox[{
           FractionBox[
            SuperscriptBox[
             RowBox[{"(", 
@@ -10781,13 +13049,22 @@ Cell[BoxData[
            RowBox[{
            "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\"", ",", 
             "\"\<\!\(\*SubscriptBox[\(I\), \(lk\)]\)\>\"", ",", 
-            "\"\<2\!\(\*SuperscriptBox[\(\[Pi]\), \
-\(2\)]\)\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
+            "\"\<\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
          RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
          RowBox[{"PlotRange", "\[Rule]", 
           RowBox[{"{", 
-           RowBox[{"0", ",", "Automatic"}], "}"}]}]}], "]"}], "}"}], "}"}], 
-     "]"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"0", ",", "Automatic"}], "}"}]}], ",", 
+         RowBox[{"RegionFunction", "\[Rule]", 
+          RowBox[{"Function", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"Iin", ",", "Ilk"}], "}"}], ",", 
+            RowBox[{
+             RowBox[{"IintoiIn", "[", 
+              RowBox[{
+              "Iin", ",", "Ilk", ",", "pquaManip", ",", "pilkrManip"}], "]"}],
+              "<", "\[Pi]"}]}], "]"}]}]}], "]"}], "\[IndentingNewLine]", 
+       "}"}], "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"{", 
@@ -10853,7 +13130,10 @@ Cell[BoxData[
    3.626716439261486*^9, 3.626716439696669*^9}, {3.626716507805751*^9, 
    3.626716529369484*^9}, {3.6267165852955303`*^9, 3.62671659050408*^9}, {
    3.626716781595739*^9, 3.626716784374321*^9}, {3.6267170741566057`*^9, 
-   3.6267170767485847`*^9}}],
+   3.6267170767485847`*^9}, {3.626729451285975*^9, 3.626729459898323*^9}, 
+   3.6267295467962008`*^9, {3.626730443299193*^9, 3.626730465424835*^9}, {
+   3.6267304994899273`*^9, 3.626730500663817*^9}, {3.626730540292347*^9, 
+   3.6267305439606047`*^9}}],
 
 Cell[BoxData[
  FormBox[
@@ -10861,7 +13141,7 @@ Cell[BoxData[
    FormBox[
     StyleBox[
      DynamicModuleBox[{$CellContext`pilkrManip$$ = 
-      0.0016, $CellContext`pquaManip$$ = 2, $CellContext`ptauManip$$ = 0.001, 
+      0.008, $CellContext`pquaManip$$ = 2, $CellContext`ptauManip$$ = 0.001, 
       Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
       Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ =
        1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
@@ -10872,35 +13152,33 @@ Cell[BoxData[
         0.0001}, {{
          Hold[$CellContext`pilkrManip$$], 0.008, 
          "\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)"}, 0.0005, 0.015, 
-        0.0001}}, Typeset`size$$ = {360., {119.5, 127.5}}, Typeset`update$$ = 
+        0.0001}}, Typeset`size$$ = {360., {130.5, 138.5}}, Typeset`update$$ = 
       0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`pquaManip$147810$$ = 
-      0, $CellContext`ptauManip$147811$$ = 
-      0, $CellContext`pilkrManip$147812$$ = 0}, 
+      True, $CellContext`pquaManip$32835$$ = 
+      0, $CellContext`ptauManip$32836$$ = 0, $CellContext`pilkrManip$32837$$ =
+       0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, 
         "Variables" :> {$CellContext`pilkrManip$$ = 
           0.008, $CellContext`pquaManip$$ = 2, $CellContext`ptauManip$$ = 
           0.001}, "ControllerVariables" :> {
-          Hold[$CellContext`pquaManip$$, $CellContext`pquaManip$147810$$, 0], 
+          Hold[$CellContext`pquaManip$$, $CellContext`pquaManip$32835$$, 0], 
+          Hold[$CellContext`ptauManip$$, $CellContext`ptauManip$32836$$, 0], 
           
-          Hold[$CellContext`ptauManip$$, $CellContext`ptauManip$147811$$, 0], 
-          
-          
-          Hold[$CellContext`pilkrManip$$, $CellContext`pilkrManip$147812$$, 
+          Hold[$CellContext`pilkrManip$$, $CellContext`pilkrManip$32837$$, 
            0]}, "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
           Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
           Typeset`initDone$$, Typeset`skipInitDone$$}, 
         "Body" :> ($CellContext`pltEqns = 
-          Table[2 Pi^2 (($CellContext`Ilk + \
+          Table[(($CellContext`Ilk + \
 $CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) $CellContext`ft2Approx3[
               $CellContext`IintoiIn[$CellContext`Iin, $CellContext`Ilk, \
 $CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Ilk, \
 $CellContext`IlkRange}]; Grid[{{
-             Plot3D[
-             2 Pi^2 (($CellContext`Ilk + \
+             
+             Plot3D[(($CellContext`Ilk + \
 $CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) $CellContext`ft2Approx3[
                 $CellContext`IintoiIn[$CellContext`Iin, $CellContext`Ilk, \
 $CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Iin, 0, 
@@ -10908,9 +13186,11 @@ $CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Iin, 0,
               AxesLabel -> {
                "\!\(\*SubscriptBox[\(I\), \(in\)]\)", 
                 "\!\(\*SubscriptBox[\(I\), \(lk\)]\)", 
-                "2\!\(\*SuperscriptBox[\(\[Pi]\), \
-\(2\)]\)\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Medium, 
-              PlotRange -> {0, Automatic}]}}]), 
+                "\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Medium, 
+              PlotRange -> {0, Automatic}, RegionFunction -> 
+              Function[{$CellContext`Iin$, $CellContext`Ilk$}, \
+$CellContext`IintoiIn[$CellContext`Iin$, $CellContext`Ilk$, \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$] < Pi]]}}]), 
         "Specifications" :> {{{$CellContext`pquaManip$$, 2, 
             "\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)"}, 0.5, 4, 0.001, 
            Appearance -> 
@@ -10921,7 +13201,7 @@ $CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Iin, 0,
             "\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)"}, 0.0005, 0.015, 
            0.0001, Appearance -> "Open"}}, "Options" :> {}, 
         "DefaultOptions" :> {}],
-       ImageSizeCache->{407., {222., 230.}},
+       ImageSizeCache->{407., {233., 241.}},
        SingleEvaluation->True],
       Deinitialization:>None,
       DynamicModuleValues:>{},
@@ -10963,7 +13243,8 @@ $CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Iin, 0,
    3.626713580117064*^9}, 3.626713766791258*^9, {3.626713825193802*^9, 
    3.6267138448050137`*^9}, 3.626716441897903*^9, {3.626716512714181*^9, 
    3.626716531082399*^9}, 3.626716591551276*^9, 3.626716785866762*^9, 
-   3.626717078660673*^9}]
+   3.626717078660673*^9, 3.626729461627795*^9, 3.626729548112275*^9, {
+   3.626730471819952*^9, 3.6267305015835667`*^9}, 3.626730544828834*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -10999,8 +13280,7 @@ Cell[BoxData[
     RowBox[{"pltEqns", " ", "=", " ", 
      RowBox[{"Table", "[", 
       RowBox[{
-       RowBox[{"2", 
-        SuperscriptBox["\[Pi]", "2"], 
+       RowBox[{
         FractionBox[
          SuperscriptBox[
           RowBox[{"(", 
@@ -11032,8 +13312,8 @@ Cell[BoxData[
             RowBox[{"{", 
              RowBox[{
              "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\"", ",", 
-              "\"\<2\!\(\*SuperscriptBox[\(\[Pi]\), \
-\(2\)]\)\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
+              "\"\<\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
+           
            RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
            RowBox[{"PlotRange", "\[Rule]", 
             RowBox[{"{", 
@@ -11044,8 +13324,7 @@ Cell[BoxData[
          RowBox[{
           RowBox[{"ContourPlot", "[", 
            RowBox[{
-            RowBox[{"2", 
-             SuperscriptBox["\[Pi]", "2"], 
+            RowBox[{
              FractionBox[
               SuperscriptBox[
                RowBox[{"(", 
@@ -11069,7 +13348,17 @@ Cell[BoxData[
             RowBox[{"PlotRange", "\[Rule]", 
              RowBox[{"{", 
               RowBox[{"0", ",", "Automatic"}], "}"}]}], ",", 
-            RowBox[{"ContourLabels", "\[Rule]", "All"}]}], "]"}], ",", 
+            RowBox[{"ContourLabels", "\[Rule]", "All"}], ",", 
+            RowBox[{"RegionFunction", "\[Rule]", 
+             RowBox[{"Function", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"Iin", ",", "Ilk"}], "}"}], ",", 
+               RowBox[{
+                RowBox[{"IintoiIn", "[", 
+                 RowBox[{
+                 "Iin", ",", "Ilk", ",", "pquaManip", ",", "pilkrManip"}], 
+                 "]"}], "<", "\[Pi]"}]}], "]"}]}]}], "]"}], ",", 
           "\[IndentingNewLine]", 
           RowBox[{"Plot", "[", 
            RowBox[{"Ilks", ",", 
@@ -11081,8 +13370,7 @@ Cell[BoxData[
        RowBox[{"{", "\[IndentingNewLine]", 
         RowBox[{"Plot3D", "[", 
          RowBox[{
-          RowBox[{"2", 
-           SuperscriptBox["\[Pi]", "2"], 
+          RowBox[{
            FractionBox[
             SuperscriptBox[
              RowBox[{"(", 
@@ -11100,13 +13388,24 @@ Cell[BoxData[
             RowBox[{
             "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\"", ",", 
              "\"\<\!\(\*SubscriptBox[\(I\), \(lk\)]\)\>\"", ",", 
-             "\"\<2\!\(\*SuperscriptBox[\(\[Pi]\), \
-\(2\)]\)\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
+             "\"\<\!\(\*SuperscriptBox[\(f\), \(2\)]\)\>\""}], "}"}]}], ",", 
           RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
           RowBox[{"PlotRange", "\[Rule]", 
            RowBox[{"{", 
-            RowBox[{"0", ",", "Automatic"}], "}"}]}]}], "]"}], "}"}]}], "}"}],
-      "]"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"0", ",", "Automatic"}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"RegionFunction", "\[Rule]", 
+           RowBox[{"Function", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"Iin", ",", "Ilk"}], "}"}], ",", 
+             RowBox[{
+              RowBox[{"IintoiIn", "[", 
+               RowBox[{
+               "Iin", ",", "Ilk", ",", "pquaManip", ",", "pilkrManip"}], 
+               "]"}], "<", "\[Pi]"}]}], "]"}]}]}], "]"}], 
+        "\[IndentingNewLine]", "}"}]}], "}"}], "]"}]}], ",", 
+   "\[IndentingNewLine]", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"{", 
@@ -11177,7 +13476,8 @@ Cell[BoxData[
    3.626718902297779*^9}, {3.626718943745529*^9, 3.6267189903189507`*^9}, {
    3.626719022671894*^9, 3.626719063792873*^9}, {3.626719204061721*^9, 
    3.626719221115543*^9}, {3.6267192783571577`*^9, 3.6267193171981783`*^9}, {
-   3.626719382246048*^9, 3.6267193833079557`*^9}}],
+   3.626719382246048*^9, 3.6267193833079557`*^9}, {3.626729490565308*^9, 
+   3.626729500997908*^9}, {3.626730576866701*^9, 3.6267305977609253`*^9}}],
 
 Cell[BoxData[
  FormBox[
@@ -11196,29 +13496,27 @@ Cell[BoxData[
         0.0001}, {{
          Hold[$CellContext`pilkrManip$$], 0.008, 
          "\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)"}, 0.0005, 0.015, 
-        0.0001}}, Typeset`size$$ = {360., {413., 421.}}, Typeset`update$$ = 0,
+        0.0001}}, Typeset`size$$ = {360., {427., 435.}}, Typeset`update$$ = 0,
        Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`pquaManip$176689$$ = 
-      0, $CellContext`ptauManip$176690$$ = 
-      0, $CellContext`pilkrManip$176691$$ = 0}, 
+      True, $CellContext`pquaManip$33476$$ = 
+      0, $CellContext`ptauManip$33477$$ = 0, $CellContext`pilkrManip$33478$$ =
+       0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, 
         "Variables" :> {$CellContext`pilkrManip$$ = 
           0.008, $CellContext`pquaManip$$ = 2, $CellContext`ptauManip$$ = 
           0.001}, "ControllerVariables" :> {
-          Hold[$CellContext`pquaManip$$, $CellContext`pquaManip$176689$$, 0], 
+          Hold[$CellContext`pquaManip$$, $CellContext`pquaManip$33476$$, 0], 
+          Hold[$CellContext`ptauManip$$, $CellContext`ptauManip$33477$$, 0], 
           
-          Hold[$CellContext`ptauManip$$, $CellContext`ptauManip$176690$$, 0], 
-          
-          
-          Hold[$CellContext`pilkrManip$$, $CellContext`pilkrManip$176691$$, 
+          Hold[$CellContext`pilkrManip$$, $CellContext`pilkrManip$33478$$, 
            0]}, "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
           Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
           Typeset`initDone$$, Typeset`skipInitDone$$}, 
         "Body" :> ($CellContext`pltEqns = 
-          Table[2 Pi^2 (($CellContext`Ilk + \
+          Table[(($CellContext`Ilk + \
 $CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) $CellContext`ft2Approx3[
               $CellContext`IintoiIn[$CellContext`Iin, $CellContext`Ilk, \
 $CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Ilk, \
@@ -11230,12 +13528,11 @@ $CellContext`IlkRange}]; $CellContext`Ilks =
               Plot[{$CellContext`pltEqns}, {$CellContext`Iin, 0, 0.3}, 
                AxesLabel -> {
                 "\!\(\*SubscriptBox[\(I\), \(in\)]\)", 
-                 "2\!\(\*SuperscriptBox[\(\[Pi]\), \
-\(2\)]\)\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Medium, 
-               PlotRange -> {0, Automatic}]]}, {
+                 "\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Medium,
+                PlotRange -> {0, Automatic}]]}, {
              Show[
-              ContourPlot[
-              2 Pi^2 (($CellContext`Ilk + \
+              
+              ContourPlot[(($CellContext`Ilk + \
 $CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) $CellContext`ft2Approx3[
                  $CellContext`IintoiIn[$CellContext`Iin, $CellContext`Ilk, \
 $CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Iin, 0, 
@@ -11243,12 +13540,16 @@ $CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Iin, 0,
                FrameLabel -> {
                 "\!\(\*SubscriptBox[\(I\), \(in\)]\)", 
                  "\!\(\*SubscriptBox[\(I\), \(lk\)]\)"}, ImageSize -> Medium, 
-               PlotRange -> {0, Automatic}, ContourLabels -> All], 
+               PlotRange -> {0, Automatic}, ContourLabels -> All, 
+               RegionFunction -> 
+               Function[{$CellContext`Iin$, $CellContext`Ilk$}, \
+$CellContext`IintoiIn[$CellContext`Iin$, $CellContext`Ilk$, \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$] < Pi]], 
               
               Plot[$CellContext`Ilks, {$CellContext`Iin, 0, 0.3}, 
                PlotStyle -> {Dashed}]]}, {
-             Plot3D[
-             2 Pi^2 (($CellContext`Ilk + \
+             
+             Plot3D[(($CellContext`Ilk + \
 $CellContext`pilkrManip$$)^2/$CellContext`ptauManip$$) $CellContext`ft2Approx3[
                 $CellContext`IintoiIn[$CellContext`Iin, $CellContext`Ilk, \
 $CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Iin, 0, 
@@ -11256,9 +13557,11 @@ $CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Iin, 0,
               AxesLabel -> {
                "\!\(\*SubscriptBox[\(I\), \(in\)]\)", 
                 "\!\(\*SubscriptBox[\(I\), \(lk\)]\)", 
-                "2\!\(\*SuperscriptBox[\(\[Pi]\), \
-\(2\)]\)\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Medium, 
-              PlotRange -> {0, Automatic}]}}]), 
+                "\!\(\*SuperscriptBox[\(f\), \(2\)]\)"}, ImageSize -> Medium, 
+              PlotRange -> {0, Automatic}, RegionFunction -> 
+              Function[{$CellContext`Iin$, $CellContext`Ilk$}, \
+$CellContext`IintoiIn[$CellContext`Iin$, $CellContext`Ilk$, \
+$CellContext`pquaManip$$, $CellContext`pilkrManip$$] < Pi]]}}]), 
         "Specifications" :> {{{$CellContext`pquaManip$$, 2, 
             "\!\(\*SubscriptBox[\(\[Rho]\), \(qua\)]\)"}, 0.5, 4, 0.001, 
            Appearance -> 
@@ -11269,7 +13572,7 @@ $CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Iin, 0,
             "\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)"}, 0.0005, 0.015, 
            0.0001, Appearance -> "Open"}}, "Options" :> {}, 
         "DefaultOptions" :> {}],
-       ImageSizeCache->{407., {515., 523.}},
+       ImageSizeCache->{407., {529., 537.}},
        SingleEvaluation->True],
       Deinitialization:>None,
       DynamicModuleValues:>{},
@@ -11314,7 +13617,8 @@ $CellContext`pquaManip$$, $CellContext`pilkrManip$$]], {$CellContext`Iin, 0,
    3.626717078660673*^9, 3.6267185702256317`*^9, 3.626718647887129*^9, 
    3.626718808565839*^9, {3.626718863511998*^9, 3.626718903037269*^9}, 
    3.6267189460300837`*^9, {3.626718984891178*^9, 3.626718994725521*^9}, {
-   3.626719027869931*^9, 3.626719065460577*^9}, 3.6267193848955812`*^9}]
+   3.626719027869931*^9, 3.626719065460577*^9}, 3.6267193848955812`*^9, 
+   3.626729520407292*^9, 3.626730599819669*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -11335,7 +13639,7 @@ Cell[BoxData[
  CellChangeTimes->{3.626718923279248*^9}]
 }, Open  ]]
 }, Closed]]
-}, Open  ]]
+}, Closed]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -11349,14 +13653,25 @@ Cell[TextData[{
  CellChangeTimes->{{3.6241161861436453`*^9, 3.62411619065799*^9}}],
 
 Cell[TextData[{
+ "(THIS SECTION WAS ONLY THEORIZED AND NEVER IMPLEMENTED IN PYTHON BECAUSE \
+THE ANALYSIS OF THE MATH BELOW SHOWED THAT NEAR BIFURCATION THE PERIOD WOULD \
+NOT HELP WITH RESOLVING ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Rho]", "tau"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ")"
+}], "Text",
+ CellChangeTimes->{{3.627845009451606*^9, 3.6278450693915243`*^9}}],
+
+Cell[TextData[{
  "This section will help show some of the math and intuition behind what \
 happens to the circuit when you square the period (as opposed to the firing \
 rate).  A lot of these plots should be inverses of the previous section \
 (Theory behind ",
  Cell[BoxData[
   FormBox[
-   SuperscriptBox["f", "2"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SuperscriptBox["f", "2"], TraditionalForm]]],
  "), but to be thorough and complete, I want to model all of the \
 approximations"
 }], "Text",
@@ -11692,11 +14007,11 @@ Cell[BoxData[
          "\!\(\*SubscriptBox[\(i\), \(in\)]\)"}, 0.5, 0.55, 0.001}}, 
       Typeset`size$$ = {258., {4., 12.}}, Typeset`update$$ = 0, 
       Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`iin$24088$$ = 0}, 
+      True, $CellContext`iin$59601$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, "Variables" :> {$CellContext`iin$$ = 0.52}, 
         "ControllerVariables" :> {
-          Hold[$CellContext`iin$$, $CellContext`iin$24088$$, 0]}, 
+          Hold[$CellContext`iin$$, $CellContext`iin$59601$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -11730,7 +14045,8 @@ Cell[BoxData[
    3.6243044023109283`*^9}, 3.6243885160374804`*^9, 3.625422802857502*^9, 
    3.625431325095663*^9, 3.625435940779943*^9, 3.62549704773929*^9, 
    3.6254979584094257`*^9, 3.6264627916017838`*^9, 3.626536763919593*^9, 
-   3.626617671030581*^9, 3.626707578894019*^9}]
+   3.626617671030581*^9, 3.626707578894019*^9, 3.6267304226284103`*^9, 
+   3.627848753305608*^9, 3.631472446988802*^9, 3.6315660967870502`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -11864,7 +14180,8 @@ ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
   3.6243043539487333`*^9, 3.624388516854507*^9, 3.625422803329009*^9, 
   3.625431325717902*^9, 3.6254359414347*^9, 3.625497048235567*^9, 
   3.625497959137252*^9, 3.6264627923679237`*^9, 3.626536765054884*^9, 
-  3.626617671539666*^9, 3.626707579445409*^9}],
+  3.626617671539666*^9, 3.626707579445409*^9, 3.626730423130293*^9, 
+  3.6278487538719273`*^9, 3.631472447558804*^9, 3.631566097324243*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -11882,7 +14199,8 @@ ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
   3.6243043539487333`*^9, 3.624388516854507*^9, 3.625422803329009*^9, 
   3.625431325717902*^9, 3.6254359414347*^9, 3.625497048235567*^9, 
   3.625497959137252*^9, 3.6264627923679237`*^9, 3.626536765054884*^9, 
-  3.626617671539666*^9, 3.626707579602001*^9}],
+  3.626617671539666*^9, 3.626707579445409*^9, 3.626730423130293*^9, 
+  3.6278487538719273`*^9, 3.631472447558804*^9, 3.6315660975085278`*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -11900,7 +14218,8 @@ ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
   3.6243043539487333`*^9, 3.624388516854507*^9, 3.625422803329009*^9, 
   3.625431325717902*^9, 3.6254359414347*^9, 3.625497048235567*^9, 
   3.625497959137252*^9, 3.6264627923679237`*^9, 3.626536765054884*^9, 
-  3.626617671539666*^9, 3.626707579805406*^9}],
+  3.626617671539666*^9, 3.626707579445409*^9, 3.626730423130293*^9, 
+  3.6278487538719273`*^9, 3.631472447558804*^9, 3.631566097731279*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -11919,7 +14238,8 @@ ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}], TraditionalForm]], "Message", \
   3.6243043539487333`*^9, 3.624388516854507*^9, 3.625422803329009*^9, 
   3.625431325717902*^9, 3.6254359414347*^9, 3.625497048235567*^9, 
   3.625497959137252*^9, 3.6264627923679237`*^9, 3.626536765054884*^9, 
-  3.626617671539666*^9, 3.626707579959988*^9}],
+  3.626617671539666*^9, 3.626707579445409*^9, 3.626730423130293*^9, 
+  3.6278487538719273`*^9, 3.631472447558804*^9, 3.631566097875044*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -12126,9 +14446,10 @@ Cell[BoxData[
    3.6243885200066957`*^9, 3.6254228065840597`*^9, 3.6254313291258*^9, 
    3.62543594470702*^9, 3.625497051367601*^9, 3.625497962437789*^9, 
    3.626462795415722*^9, 3.626536768180216*^9, 3.6266176746373796`*^9, 
-   3.626707582595426*^9}]
+   3.626707582595426*^9, 3.626730426249468*^9, 3.627848756956147*^9, 
+   3.631472450806923*^9, 3.631566100433474*^9}]
 }, Open  ]]
-}, Closed]]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -17394,15 +19715,15 @@ Cell[BoxData[
          "\!\(\*SubscriptBox[\(p\), \(ilkr\)]\)"}, 0.00005, 0.015, 0.00001}}, 
       Typeset`size$$ = {576., {218., 223.}}, Typeset`update$$ = 0, 
       Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`pqua$16596$$ = 0, $CellContext`ptau$16597$$ = 
-      0, $CellContext`pilkr$16598$$ = 0}, 
+      True, $CellContext`pqua$63686$$ = 0, $CellContext`ptau$63687$$ = 
+      0, $CellContext`pilkr$63688$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, 
         "Variables" :> {$CellContext`pilkr$$ = 0.008, $CellContext`pqua$$ = 
           2, $CellContext`ptau$$ = 0.001}, "ControllerVariables" :> {
-          Hold[$CellContext`pqua$$, $CellContext`pqua$16596$$, 0], 
-          Hold[$CellContext`ptau$$, $CellContext`ptau$16597$$, 0], 
-          Hold[$CellContext`pilkr$$, $CellContext`pilkr$16598$$, 0]}, 
+          Hold[$CellContext`pqua$$, $CellContext`pqua$63686$$, 0], 
+          Hold[$CellContext`ptau$$, $CellContext`ptau$63687$$, 0], 
+          Hold[$CellContext`pilkr$$, $CellContext`pilkr$63688$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -17437,7 +19758,8 @@ $CellContext`pqua$$, $CellContext`ptau$$, $CellContext`pilkr$$], \
  CellChangeTimes->{{3.625433071118278*^9, 3.6254330802734823`*^9}, 
    3.625434091438443*^9, 3.625435945019888*^9, 3.625497051868519*^9, 
    3.62549796339062*^9, 3.626462795871296*^9, 3.626536768577881*^9, 
-   3.626617675084557*^9}]
+   3.626617675084557*^9, 3.626730427773758*^9, 3.627848757486356*^9, 
+   3.6314724515085173`*^9, 3.631566100844822*^9}]
 }, Open  ]]
 }, Closed]]
 }, Open  ]]
@@ -19837,12 +22159,55 @@ EVT5t3346P8BG9gpDw==
    3.623771089177145*^9}, 3.6237712159574738`*^9, 3.62377125777064*^9, {
    3.6237713521489973`*^9, 3.6237714391604147`*^9}}]
 }, Open  ]]
-}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Play section", "Subsection",
+ CellChangeTimes->{{3.627312858417811*^9, 3.627312860375559*^9}, {
+  3.6273135036500883`*^9, 3.627313504019973*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"pquatmp", "=", "2.9999389184"}], "\[IndentingNewLine]", 
+ RowBox[{"ptautmp", "=", "0.000997166345266"}], "\[IndentingNewLine]", 
+ RowBox[{"pilkrtmp", "=", "0.000127767073947"}]}], "Input",
+ CellChangeTimes->{{3.6308749379686604`*^9, 3.630874997224193*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"Ilk", "+", "pilkrtmp"}], ")"}], "2"], "ptautmp"], 
+  RowBox[{"ft2Approx3", "[", 
+   RowBox[{"IintoiIn", "[", 
+    RowBox[{"0.02870431", ",", "0.172", ",", "pquatmp", ",", "pilkrtmp"}], 
+    "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6308747615043297`*^9, 3.630874776072653*^9}, {
+  3.63087481513028*^9, 3.6308748950523653`*^9}, {3.630874929128427*^9, 
+  3.630874949789421*^9}, {3.6308750009483347`*^9, 3.630875011627746*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "8.48873624773332`"}], "-", 
+     RowBox[{"4.1523947077307835`", " ", "\[ImaginaryI]"}]}], ")"}], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"Ilk", "+", "0.008`"}], ")"}], "2"]}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{3.630875013502351*^9}]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 },
 WindowToolbars->"EditBar",
 WindowSize->{1280, 1549},
-WindowMargins->{{Automatic, 1272}, {Automatic, 0}},
+WindowMargins->{{Automatic, -8}, {Automatic, 0}},
 FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
 StyleDefinitions->"Default.nb"
 ]
@@ -19860,460 +22225,528 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[579, 22, 154, 2, 67, "Section"],
 Cell[CellGroupData[{
-Cell[758, 28, 263, 8, 47, "Subsection"],
+Cell[758, 28, 230, 7, 47, "Subsection"],
 Cell[CellGroupData[{
-Cell[1046, 40, 2479, 70, 264, "Input",
+Cell[1013, 39, 2527, 70, 264, "Input",
  InitializationCell->True],
-Cell[3528, 112, 1456, 36, 70, "Output"],
-Cell[4987, 150, 1196, 27, 70, "Output"],
-Cell[6186, 179, 1393, 34, 70, "Output"],
-Cell[7582, 215, 1133, 25, 70, "Output"]
+Cell[3543, 111, 1548, 37, 85, "Output"],
+Cell[5094, 150, 1288, 28, 85, "Output"],
+Cell[6385, 180, 1485, 35, 85, "Output"],
+Cell[7873, 217, 1227, 26, 77, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[8764, 246, 234, 3, 39, "Subsection"],
-Cell[9001, 251, 1065, 38, 37, "Text"],
-Cell[10069, 291, 1166, 34, 151, "Input",
+Cell[9149, 249, 234, 3, 39, "Subsection"],
+Cell[9386, 254, 1065, 38, 37, "Text"],
+Cell[10454, 294, 1166, 34, 151, "Input",
  InitializationCell->True]
 }, Closed]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11284, 331, 385, 9, 67, "Section"],
-Cell[11672, 342, 1617, 49, 97, "Text"],
+Cell[11669, 334, 385, 9, 67, "Section"],
+Cell[12057, 345, 1617, 49, 97, "Text"],
 Cell[CellGroupData[{
-Cell[13314, 395, 192, 2, 47, "Subsection"],
+Cell[13699, 398, 192, 2, 47, "Subsection"],
 Cell[CellGroupData[{
-Cell[13531, 401, 12683, 301, 1449, "Input"],
-Cell[26217, 704, 8240, 155, 1280, "Output"]
+Cell[13916, 404, 12683, 301, 1449, "Input"],
+Cell[26602, 707, 8240, 155, 283, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[34506, 865, 140, 1, 39, "Subsection"],
-Cell[34649, 868, 7469, 141, 579, "Output"]
+Cell[34891, 868, 140, 1, 39, "Subsection"],
+Cell[35034, 871, 7469, 141, 579, "Output"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[42155, 1014, 193, 2, 39, "Subsection"],
-Cell[42351, 1018, 7392, 139, 587, "Output"]
+Cell[42540, 1017, 193, 2, 39, "Subsection"],
+Cell[42736, 1021, 7392, 139, 587, "Output"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[49780, 1162, 268, 7, 39, "Subsection"],
-Cell[50051, 1171, 5375, 105, 315, "Output"],
-Cell[55429, 1278, 7434, 140, 585, "Output"]
+Cell[50165, 1165, 268, 7, 39, "Subsection"],
+Cell[50436, 1174, 5375, 105, 315, "Output"],
+Cell[55814, 1281, 7434, 140, 585, "Output"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[62900, 1423, 272, 7, 39, "Subsection"],
-Cell[63175, 1432, 5377, 105, 315, "Output"],
-Cell[68555, 1539, 7394, 138, 587, "Output"]
+Cell[63285, 1426, 272, 7, 39, "Subsection"],
+Cell[63560, 1435, 5377, 105, 315, "Output"],
+Cell[68940, 1542, 7394, 138, 587, "Output"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[75986, 1682, 362, 8, 39, "Subsection"],
-Cell[76351, 1692, 5288, 103, 319, "Output"],
-Cell[81642, 1797, 7584, 143, 587, "Output"]
+Cell[76371, 1685, 362, 8, 39, "Subsection"],
+Cell[76736, 1695, 5288, 103, 319, "Output"],
+Cell[82027, 1800, 7584, 143, 587, "Output"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[89263, 1945, 318, 8, 39, "Subsection"],
-Cell[89584, 1955, 5299, 103, 319, "Output"],
-Cell[94886, 2060, 7370, 138, 587, "Output"],
-Cell[102259, 2200, 7809, 147, 577, "Output"]
+Cell[89648, 1948, 318, 8, 39, "Subsection"],
+Cell[89969, 1958, 5299, 103, 319, "Output"],
+Cell[95271, 2063, 7370, 138, 587, "Output"],
+Cell[102644, 2203, 7809, 147, 577, "Output"]
 }, Closed]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[110117, 2353, 188, 6, 55, "Section"],
-Cell[110308, 2361, 393, 10, 32, "Text"],
+Cell[110502, 2356, 188, 6, 55, "Section"],
+Cell[110693, 2364, 393, 10, 32, "Text"],
 Cell[CellGroupData[{
-Cell[110726, 2375, 578, 18, 61, "Subsection"],
+Cell[111111, 2378, 578, 18, 61, "Subsection"],
 Cell[CellGroupData[{
-Cell[111329, 2397, 624, 21, 37, "Subsubsection"],
-Cell[111956, 2420, 2013, 52, 188, "Input",
+Cell[111714, 2400, 624, 21, 37, "Subsubsection"],
+Cell[112341, 2423, 2431, 66, 256, "Input",
  InitializationCell->True],
 Cell[CellGroupData[{
-Cell[113994, 2476, 682, 17, 56, "Input"],
-Cell[114679, 2495, 1117, 33, 88, "Output"],
-Cell[115799, 2530, 1191, 35, 81, "Output"]
+Cell[114797, 2493, 682, 17, 56, "Input"],
+Cell[115482, 2512, 1117, 33, 88, "Output"],
+Cell[116602, 2547, 1191, 35, 81, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[117027, 2570, 8656, 210, 509, "Input"],
-Cell[125686, 2782, 21912, 609, 589, "Output"]
+Cell[117830, 2587, 8656, 210, 509, "Input"],
+Cell[126489, 2799, 21978, 612, 589, "Output"]
 }, Open  ]],
-Cell[147613, 3394, 273, 5, 31, "Text"],
+Cell[148482, 3414, 273, 5, 31, "Text"],
 Cell[CellGroupData[{
-Cell[147911, 3403, 647, 16, 37, "Input"],
-Cell[148561, 3421, 2323, 63, 66, "Output"]
+Cell[148780, 3423, 647, 16, 37, "Input"],
+Cell[149430, 3441, 2323, 63, 66, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[150921, 3489, 225, 5, 37, "Input"],
-Cell[151149, 3496, 525, 17, 73, "Output"]
+Cell[151790, 3509, 225, 5, 37, "Input"],
+Cell[152018, 3516, 525, 17, 73, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[151735, 3520, 210, 4, 47, "Subsection"],
+Cell[152604, 3540, 210, 4, 47, "Subsection"],
 Cell[CellGroupData[{
-Cell[151970, 3528, 486, 14, 37, "Subsubsection"],
-Cell[152459, 3544, 2528, 74, 311, "Input",
+Cell[152839, 3548, 486, 14, 37, "Subsubsection"],
+Cell[153328, 3564, 2528, 74, 311, "Input",
  InitializationCell->True],
 Cell[CellGroupData[{
-Cell[155012, 3622, 3351, 84, 315, "Input",
+Cell[155881, 3642, 3351, 84, 315, "Input",
  InitializationCell->True],
-Cell[158366, 3708, 2954, 60, 257, "Output"]
+Cell[159235, 3728, 3053, 62, 257, "Output"]
 }, Open  ]],
-Cell[161335, 3771, 94, 1, 32, "Input"],
+Cell[162303, 3793, 94, 1, 32, "Input"],
 Cell[CellGroupData[{
-Cell[161454, 3776, 1694, 37, 121, "Input",
+Cell[162422, 3798, 1694, 37, 121, "Input",
  InitializationCell->True],
-Cell[163151, 3815, 4483, 113, 413, "Output"]
+Cell[164119, 3837, 4577, 114, 413, "Output"]
 }, Open  ]],
-Cell[167649, 3931, 194, 4, 31, "Text"],
+Cell[168711, 3954, 194, 4, 31, "Text"],
 Cell[CellGroupData[{
-Cell[167868, 3939, 461, 12, 32, "Input"],
-Cell[168332, 3953, 178, 3, 31, "Output"]
+Cell[168930, 3962, 461, 12, 32, "Input"],
+Cell[169394, 3976, 178, 3, 31, "Output"]
 }, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[168559, 3962, 529, 17, 68, "Subsubsection"],
-Cell[169091, 3981, 474, 10, 52, "Text"],
-Cell[CellGroupData[{
-Cell[169590, 3995, 1657, 46, 83, "Input"],
-Cell[171250, 4043, 3494, 98, 412, "Output"]
-}, Open  ]]
-}, Closed]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[174805, 4148, 454, 17, 49, "Subsection"],
+Cell[169621, 3985, 529, 17, 74, "Subsubsection"],
+Cell[170153, 4004, 474, 10, 52, "Text"],
 Cell[CellGroupData[{
-Cell[175284, 4169, 348, 9, 37, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[175657, 4182, 798, 22, 75, "Input"],
-Cell[176458, 4206, 752, 19, 81, "Output"]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[177259, 4231, 349, 9, 31, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[177633, 4244, 2563, 77, 155, "Input"],
-Cell[180199, 4323, 1281, 39, 131, "Output"],
-Cell[181483, 4364, 1214, 37, 94, "Output"]
+Cell[170652, 4018, 1657, 46, 83, "Input"],
+Cell[172312, 4066, 3494, 98, 412, "Output"]
 }, Open  ]]
 }, Closed]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[182758, 4408, 287, 3, 47, "Subsection"],
+Cell[175867, 4171, 454, 17, 49, "Subsection"],
 Cell[CellGroupData[{
-Cell[183070, 4415, 186, 2, 37, "Subsubsection"],
-Cell[183259, 4419, 6960, 208, 749, "Input",
+Cell[176346, 4192, 348, 9, 37, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[176719, 4205, 798, 22, 75, "Input"],
+Cell[177520, 4229, 752, 19, 81, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[178321, 4254, 349, 9, 31, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[178695, 4267, 2563, 77, 155, "Input"],
+Cell[181261, 4346, 1281, 39, 131, "Output"],
+Cell[182545, 4387, 1214, 37, 94, "Output"]
+}, Open  ]]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[183820, 4431, 287, 3, 47, "Subsection"],
+Cell[CellGroupData[{
+Cell[184132, 4438, 186, 2, 37, "Subsubsection"],
+Cell[184321, 4442, 6960, 208, 749, "Input",
  InitializationCell->True]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[190256, 4632, 158, 2, 31, "Subsubsection"],
-Cell[190417, 4636, 156, 3, 31, "Text"],
-Cell[190576, 4641, 910, 26, 165, "Input",
+Cell[191318, 4655, 158, 2, 31, "Subsubsection"],
+Cell[191479, 4659, 156, 3, 31, "Text"],
+Cell[191638, 4664, 1058, 28, 165, "Input",
  InitializationCell->True]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[191523, 4672, 447, 15, 37, "Subsubsection"],
+Cell[192733, 4697, 447, 15, 37, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[191995, 4691, 242, 5, 32, "Input"],
-Cell[192240, 4698, 138, 2, 31, "Output"]
+Cell[193205, 4716, 242, 5, 32, "Input"],
+Cell[193450, 4723, 138, 2, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[192415, 4705, 8215, 167, 751, "Input"],
-Cell[200633, 4874, 40694, 735, 461, "Output"]
+Cell[193625, 4730, 8215, 167, 751, "Input"],
+Cell[201843, 4899, 40694, 735, 461, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[241376, 5615, 581, 17, 31, "Subsubsection"],
+Cell[242586, 5640, 581, 17, 31, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[241982, 5636, 25987, 537, 1524, "Input",
+Cell[243192, 5661, 25987, 537, 1524, "Input",
  InitializationCell->True],
-Cell[267972, 6175, 13552, 259, 70, "Output"]
+Cell[269182, 6200, 13650, 261, 70, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[281573, 6440, 449, 15, 31, "Subsubsection"],
+Cell[282881, 6467, 449, 15, 31, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[282047, 6459, 6152, 150, 533, "Input"],
-Cell[288202, 6611, 8087, 158, 429, "Output"]
-}, Closed]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[296338, 6775, 453, 14, 31, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[296816, 6793, 5899, 144, 509, "Input"],
-Cell[302718, 6939, 7996, 156, 462, "Output"]
+Cell[283355, 6486, 6152, 150, 533, "Input"],
+Cell[289510, 6638, 8087, 158, 429, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[310763, 7101, 562, 18, 31, "Subsubsection"],
+Cell[297646, 6802, 453, 14, 31, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[311350, 7123, 7691, 187, 651, "Input"],
-Cell[319044, 7312, 8888, 179, 457, "Output"]
+Cell[298124, 6820, 5899, 144, 533, "Input"],
+Cell[304026, 6966, 7996, 156, 429, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[327981, 7497, 564, 18, 31, "Subsubsection"],
+Cell[312071, 7128, 562, 18, 31, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[328570, 7519, 10647, 247, 805, "Input"],
-Cell[339220, 7768, 10374, 208, 457, "Output"]
+Cell[312658, 7150, 7691, 187, 651, "Input"],
+Cell[320352, 7339, 8888, 179, 457, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[349643, 7982, 529, 16, 43, "Subsubsection"],
-Cell[350175, 8000, 894, 27, 61, "Text"],
+Cell[329289, 7524, 564, 18, 31, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[351094, 8031, 7590, 190, 628, "Input"],
-Cell[358687, 8223, 5472, 100, 931, "Output"]
+Cell[329878, 7546, 10647, 247, 805, "Input"],
+Cell[340528, 7795, 10374, 208, 457, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[364208, 8329, 529, 19, 47, "Subsubsection"],
+Cell[350951, 8009, 529, 16, 43, "Subsubsection"],
+Cell[351483, 8027, 894, 27, 61, "Text"],
 Cell[CellGroupData[{
-Cell[364762, 8352, 611, 16, 55, "Input",
+Cell[352402, 8058, 7590, 190, 628, "Input"],
+Cell[359995, 8250, 5472, 100, 931, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[365516, 8356, 529, 19, 47, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[366070, 8379, 611, 16, 55, "Input",
  InitializationCell->True],
-Cell[365376, 8370, 59544, 975, 276, "Output"]
+Cell[366684, 8397, 59638, 976, 70, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[424969, 9351, 783, 26, 46, "Subsubsection"],
-Cell[425755, 9379, 357, 8, 33, "Text"],
+Cell[426371, 9379, 783, 26, 46, "Subsubsection"],
+Cell[427157, 9407, 357, 8, 33, "Text"],
 Cell[CellGroupData[{
-Cell[426137, 9391, 9964, 216, 708, "Input"],
-Cell[436104, 9609, 5449, 99, 740, "Output"]
-}, Open  ]]
-}, Closed]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[441614, 9715, 182, 2, 47, "Subsection"],
-Cell[441799, 9719, 1235, 39, 76, "Text"],
-Cell[CellGroupData[{
-Cell[443059, 9762, 2701, 69, 245, "Input"],
-Cell[445763, 9833, 3739, 66, 477, "Output"]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[449551, 9905, 477, 12, 52, "Subsection"],
-Cell[CellGroupData[{
-Cell[450053, 9921, 881, 21, 69, "Input"],
-Cell[450937, 9944, 610, 15, 81, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[451584, 9964, 201, 3, 34, "Input"],
-Cell[451788, 9969, 458, 13, 81, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[452283, 9987, 785, 16, 37, "Input"],
-Cell[453071, 10005, 1487, 39, 112, "Output"]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[454607, 10050, 345, 11, 41, "Subsection"],
-Cell[CellGroupData[{
-Cell[454977, 10065, 739, 30, 40, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[455741, 10099, 734, 17, 61, "Input"],
-Cell[456478, 10118, 3615, 106, 184, "Output"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[460142, 10230, 575, 20, 37, "Subsubsection"],
-Cell[460720, 10252, 1216, 21, 32, "Input"],
-Cell[CellGroupData[{
-Cell[461961, 10277, 4677, 115, 426, "Input"],
-Cell[466641, 10394, 4723, 95, 451, "Output"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[471413, 10495, 558, 18, 37, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[471996, 10517, 4192, 103, 584, "Input"],
-Cell[476191, 10622, 4473, 89, 565, "Output"]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[480713, 10717, 552, 18, 31, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[481290, 10739, 5830, 116, 311, "Input"],
-Cell[487123, 10857, 6121, 108, 469, "Output"]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[493293, 10971, 596, 19, 31, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[493914, 10994, 9059, 185, 682, "Input"],
-Cell[502976, 11181, 7592, 135, 1055, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[510605, 11321, 207, 5, 32, "Input"],
-Cell[510815, 11328, 208, 6, 33, "Output"]
-}, Open  ]]
-}, Closed]]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[511096, 11342, 190, 6, 69, "Section"],
-Cell[511289, 11350, 528, 12, 53, "Text"],
-Cell[CellGroupData[{
-Cell[511842, 11366, 822, 25, 51, "Subsection"],
-Cell[CellGroupData[{
-Cell[512689, 11395, 1212, 29, 102, "Input"],
-Cell[513904, 11426, 720, 22, 93, "Output"],
-Cell[514627, 11450, 1731, 49, 93, "Output"]
-}, Open  ]],
-Cell[516373, 11502, 188, 4, 31, "Text"],
-Cell[CellGroupData[{
-Cell[516586, 11510, 207, 6, 32, "Input"],
-Cell[516796, 11518, 760, 24, 72, "Output"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[517605, 11548, 210, 4, 47, "Subsection"],
-Cell[CellGroupData[{
-Cell[517840, 11556, 429, 12, 37, "Subsubsection"],
-Cell[518272, 11570, 2478, 72, 245, "Input",
- InitializationCell->True],
-Cell[CellGroupData[{
-Cell[520775, 11646, 1305, 33, 187, "Input",
- InitializationCell->True],
-Cell[522083, 11681, 2775, 51, 70, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[524895, 11737, 151, 3, 34, "Input"],
-Cell[525049, 11742, 478, 16, 70, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[525564, 11763, 3443, 85, 286, "Input",
- InitializationCell->True],
-Cell[529010, 11850, 836, 16, 70, "Message"],
-Cell[529849, 11868, 836, 16, 70, "Message"],
-Cell[530688, 11886, 836, 16, 70, "Message"],
-Cell[531527, 11904, 862, 17, 70, "Message"],
-Cell[532392, 11923, 8044, 205, 70, "Output"]
+Cell[427539, 9419, 9964, 216, 708, "Input"],
+Cell[437506, 9637, 5449, 99, 740, "Output"]
 }, Open  ]]
 }, Closed]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[540497, 12135, 404, 15, 49, "Subsection"],
+Cell[443016, 9743, 182, 2, 47, "Subsection"],
+Cell[443201, 9747, 1235, 39, 76, "Text"],
 Cell[CellGroupData[{
-Cell[540926, 12154, 315, 8, 37, "Subsubsection"],
+Cell[444461, 9790, 2701, 69, 245, "Input"],
+Cell[447165, 9861, 3739, 66, 477, "Output"]
+}, Open  ]]
+}, Closed]],
 Cell[CellGroupData[{
-Cell[541266, 12166, 2104, 58, 195, "Input"],
-Cell[543373, 12226, 942, 22, 81, "Output"],
-Cell[544318, 12250, 1043, 25, 81, "Output"],
-Cell[545364, 12277, 1029, 25, 81, "Output"]
+Cell[450953, 9933, 477, 12, 52, "Subsection"],
+Cell[CellGroupData[{
+Cell[451455, 9949, 881, 21, 69, "Input"],
+Cell[452339, 9972, 610, 15, 81, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[452986, 9992, 201, 3, 34, "Input"],
+Cell[453190, 9997, 458, 13, 81, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[453685, 10015, 785, 16, 37, "Input"],
+Cell[454473, 10033, 1487, 39, 112, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[456009, 10078, 330, 10, 41, "Subsection"],
+Cell[CellGroupData[{
+Cell[456364, 10092, 790, 31, 40, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[457179, 10127, 860, 19, 62, "Input"],
+Cell[458042, 10148, 2501, 71, 115, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[460592, 10225, 623, 20, 37, "Subsubsection"],
+Cell[461218, 10247, 1232, 22, 32, "Input"],
+Cell[CellGroupData[{
+Cell[462475, 10273, 7764, 188, 614, "Input"],
+Cell[470242, 10463, 5978, 113, 939, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[476269, 10582, 677, 21, 37, "Subsubsection"],
+Cell[476949, 10605, 1232, 22, 32, "Input"],
+Cell[CellGroupData[{
+Cell[478206, 10631, 8510, 201, 511, "Input"],
+Cell[486719, 10834, 5251, 102, 968, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[492019, 10942, 508, 16, 31, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[492552, 10962, 5005, 120, 518, "Input"],
+Cell[497560, 11084, 4969, 95, 598, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[502578, 11185, 617, 21, 31, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[503220, 11210, 6482, 130, 273, "Input"],
+Cell[509705, 11342, 6386, 110, 491, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[516140, 11458, 656, 21, 37, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[516821, 11483, 10043, 211, 581, "Input"],
+Cell[526867, 11696, 7960, 139, 1081, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[534864, 11840, 207, 5, 32, "Input"],
+Cell[535074, 11847, 208, 6, 33, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[535343, 11860, 345, 11, 49, "Subsection"],
+Cell[CellGroupData[{
+Cell[535713, 11875, 739, 30, 40, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[536477, 11909, 808, 18, 62, "Input"],
+Cell[537288, 11929, 3664, 107, 184, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[541001, 12042, 575, 20, 37, "Subsubsection"],
+Cell[541579, 12064, 1216, 21, 32, "Input"],
+Cell[CellGroupData[{
+Cell[542820, 12089, 7657, 186, 614, "Input"],
+Cell[550480, 12277, 5922, 112, 939, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[556451, 12395, 626, 20, 37, "Subsubsection"],
+Cell[557080, 12417, 1216, 21, 32, "Input"],
+Cell[CellGroupData[{
+Cell[558321, 12442, 8302, 194, 614, "Input"],
+Cell[566626, 12638, 5223, 102, 935, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[571898, 12746, 558, 18, 31, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[572481, 12768, 4866, 116, 584, "Input"],
+Cell[577350, 12886, 4946, 95, 565, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[582345, 12987, 552, 18, 31, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[582922, 13009, 6339, 126, 366, "Input"],
+Cell[589264, 13137, 6359, 109, 491, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[595672, 13252, 596, 19, 31, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[596293, 13275, 9835, 204, 737, "Input"],
+Cell[606131, 13481, 7934, 139, 1116, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[614102, 13625, 207, 5, 32, "Input"],
+Cell[614312, 13632, 208, 6, 33, "Output"]
+}, Open  ]]
+}, Closed]]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[614593, 13646, 190, 6, 69, "Section"],
+Cell[614786, 13654, 396, 10, 52, "Text"],
+Cell[615185, 13666, 495, 11, 53, "Text"],
+Cell[CellGroupData[{
+Cell[615705, 13681, 822, 25, 51, "Subsection"],
+Cell[CellGroupData[{
+Cell[616552, 13710, 1212, 29, 102, "Input"],
+Cell[617767, 13741, 720, 22, 93, "Output"],
+Cell[618490, 13765, 1731, 49, 93, "Output"]
+}, Open  ]],
+Cell[620236, 13817, 188, 4, 31, "Text"],
+Cell[CellGroupData[{
+Cell[620449, 13825, 207, 6, 32, "Input"],
+Cell[620659, 13833, 760, 24, 72, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[621468, 13863, 210, 4, 47, "Subsection"],
+Cell[CellGroupData[{
+Cell[621703, 13871, 429, 12, 37, "Subsubsection"],
+Cell[622135, 13885, 2478, 72, 245, "Input",
+ InitializationCell->True],
+Cell[CellGroupData[{
+Cell[624638, 13961, 1305, 33, 187, "Input",
+ InitializationCell->True],
+Cell[625946, 13996, 2871, 52, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[628854, 14053, 151, 3, 34, "Input"],
+Cell[629008, 14058, 478, 16, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[629523, 14079, 3443, 85, 286, "Input",
+ InitializationCell->True],
+Cell[632969, 14166, 929, 17, 70, "Message"],
+Cell[633901, 14185, 931, 17, 70, "Message"],
+Cell[634835, 14204, 929, 17, 70, "Message"],
+Cell[635767, 14223, 955, 18, 70, "Message"],
+Cell[636725, 14243, 8136, 206, 70, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[644922, 14456, 404, 15, 49, "Subsection"],
+Cell[CellGroupData[{
+Cell[645351, 14475, 315, 8, 37, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[645691, 14487, 2104, 58, 195, "Input"],
+Cell[647798, 14547, 942, 22, 81, "Output"],
+Cell[648743, 14571, 1043, 25, 81, "Output"],
+Cell[649789, 14598, 1029, 25, 81, "Output"]
 }, Open  ]]
 }, Closed]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[546454, 12309, 139, 1, 47, "Subsection"],
-Cell[546596, 12312, 1389, 49, 94, "Text"],
+Cell[650879, 14630, 139, 1, 47, "Subsection"],
+Cell[651021, 14633, 1389, 49, 94, "Text"],
 Cell[CellGroupData[{
-Cell[548010, 12365, 186, 2, 37, "Subsubsection"],
-Cell[548199, 12369, 7139, 201, 722, "Input",
+Cell[652435, 14686, 186, 2, 37, "Subsubsection"],
+Cell[652624, 14690, 7139, 201, 722, "Input",
  InitializationCell->True]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[555375, 12575, 109, 1, 31, "Subsubsection"],
-Cell[555487, 12578, 156, 3, 31, "Text"],
-Cell[555646, 12583, 1043, 29, 187, "Input",
+Cell[659800, 14896, 109, 1, 31, "Subsubsection"],
+Cell[659912, 14899, 156, 3, 31, "Text"],
+Cell[660071, 14904, 1043, 29, 187, "Input",
  InitializationCell->True]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[556726, 12617, 476, 14, 37, "Subsubsection"],
+Cell[661151, 14938, 476, 14, 37, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[557227, 12635, 5154, 87, 218, "Input"],
-Cell[562384, 12724, 13094, 234, 252, "Output"]
+Cell[661652, 14956, 5154, 87, 218, "Input"],
+Cell[666809, 15045, 13094, 234, 252, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[575527, 12964, 290, 10, 31, "Subsubsection"],
+Cell[679952, 15285, 290, 10, 31, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[575842, 12978, 1734, 41, 218, "Input"],
-Cell[577579, 13021, 18044, 317, 264, "Output"]
+Cell[680267, 15299, 1734, 41, 218, "Input"],
+Cell[682004, 15342, 18044, 317, 264, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[595672, 13344, 422, 15, 43, "Subsubsection"],
+Cell[700097, 15665, 422, 15, 43, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[596119, 13363, 3405, 77, 443, "Input"],
-Cell[599527, 13442, 70832, 1374, 277, "Output"]
+Cell[700544, 15684, 3405, 77, 443, "Input"],
+Cell[703952, 15763, 70832, 1374, 277, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[670408, 14822, 786, 19, 44, "Subsubsection"],
+Cell[774833, 17143, 786, 19, 44, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[671219, 14845, 12049, 249, 654, "Input"],
-Cell[683271, 15096, 7242, 138, 483, "Output"]
+Cell[775644, 17166, 12049, 249, 654, "Input"],
+Cell[787696, 17417, 7242, 138, 483, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[690550, 15239, 154, 5, 32, "Input"],
-Cell[690707, 15246, 208, 6, 33, "Output"]
+Cell[794975, 17560, 154, 5, 32, "Input"],
+Cell[795132, 17567, 208, 6, 33, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[690964, 15258, 822, 19, 44, "Subsubsection"],
+Cell[795389, 17579, 822, 19, 44, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[691811, 15281, 10259, 206, 606, "Input"],
-Cell[702073, 15489, 7696, 146, 435, "Output"]
+Cell[796236, 17602, 10259, 206, 606, "Input"],
+Cell[806498, 17810, 7696, 146, 435, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[709818, 15641, 375, 13, 43, "Subsubsection"],
+Cell[814243, 17962, 375, 13, 43, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[710218, 15658, 1477, 34, 242, "Input"],
-Cell[711698, 15694, 18383, 321, 255, "Output"]
+Cell[814643, 17979, 1477, 34, 242, "Input"],
+Cell[816123, 18015, 18383, 321, 255, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[730130, 16021, 323, 10, 43, "Subsubsection"],
+Cell[834555, 18342, 323, 10, 43, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[730478, 16035, 3821, 88, 501, "Input"],
-Cell[734302, 16125, 44115, 761, 323, "Output"]
+Cell[834903, 18356, 3821, 88, 501, "Input"],
+Cell[838727, 18446, 44115, 761, 323, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[778466, 16892, 250, 9, 31, "Subsubsection"],
+Cell[882891, 19213, 250, 9, 31, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[778741, 16905, 1850, 44, 231, "Input"],
-Cell[780594, 16951, 19522, 335, 271, "Output"]
+Cell[883166, 19226, 1850, 44, 231, "Input"],
+Cell[885019, 19272, 19522, 335, 271, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[800165, 17292, 566, 17, 31, "Subsubsection"],
+Cell[904590, 19613, 566, 17, 31, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[800756, 17313, 2608, 63, 175, "Input",
+Cell[905181, 19634, 2608, 63, 175, "Input",
  InitializationCell->True],
-Cell[803367, 17378, 3290, 61, 70, "Output"]
+Cell[907792, 19699, 3384, 62, 70, "Output"]
 }, Open  ]]
 }, Closed]]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[806730, 17447, 106, 1, 53, "Section"],
+Cell[911249, 19769, 106, 1, 53, "Section"],
 Cell[CellGroupData[{
-Cell[806861, 17452, 188, 4, 47, "Subsection"],
+Cell[911380, 19774, 188, 4, 47, "Subsection"],
 Cell[CellGroupData[{
-Cell[807074, 17460, 2319, 59, 221, "Input"],
-Cell[809396, 17521, 497, 17, 63, "Output"],
-Cell[809896, 17540, 557, 18, 68, "Output"],
-Cell[810456, 17560, 770, 25, 71, "Output"]
+Cell[911593, 19782, 2319, 59, 221, "Input"],
+Cell[913915, 19843, 497, 17, 63, "Output"],
+Cell[914415, 19862, 557, 18, 68, "Output"],
+Cell[914975, 19882, 770, 25, 71, "Output"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[811263, 17590, 8107, 197, 621, "Input"],
-Cell[819373, 17789, 6457, 114, 432, "Output"]
+Cell[915782, 19912, 8107, 197, 621, "Input"],
+Cell[923892, 20111, 6457, 114, 432, "Output"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[825867, 17908, 1226, 35, 180, "Input"],
-Cell[827096, 17945, 520, 16, 85, "Output"],
-Cell[827619, 17963, 699, 23, 85, "Output"],
-Cell[828321, 17988, 818, 26, 85, "Output"]
+Cell[930386, 20230, 1226, 35, 180, "Input"],
+Cell[931615, 20267, 520, 16, 85, "Output"],
+Cell[932138, 20285, 699, 23, 85, "Output"],
+Cell[932840, 20310, 818, 26, 85, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[829188, 18020, 134, 1, 39, "Subsection"],
+Cell[933707, 20342, 134, 1, 39, "Subsection"],
 Cell[CellGroupData[{
-Cell[829347, 18025, 1992, 55, 196, "Input"],
-Cell[831342, 18082, 92472, 1755, 387, "Output"]
+Cell[933866, 20347, 1992, 55, 196, "Input"],
+Cell[935861, 20404, 92472, 1755, 387, "Output"]
 }, Open  ]]
-}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1028382, 22165, 151, 2, 39, "Subsection"],
+Cell[1028536, 22169, 281, 4, 77, "Input"],
+Cell[CellGroupData[{
+Cell[1028842, 22177, 520, 12, 61, "Input"],
+Cell[1029365, 22191, 349, 11, 33, "Output"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }
 ]
