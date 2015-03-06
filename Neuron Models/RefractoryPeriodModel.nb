@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    226139,       5439]
-NotebookOptionsPosition[    219877,       5229]
-NotebookOutlinePosition[    220902,       5259]
-CellTagsIndexPosition[    220859,       5256]
+NotebookDataLength[    254964,       6437]
+NotebookOptionsPosition[    248453,       6220]
+NotebookOutlinePosition[    249478,       6250]
+CellTagsIndexPosition[    249435,       6247]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -61,7 +61,7 @@ Cell[BoxData[{
       RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
       RowBox[{"CellStyle", "\[Rule]", 
        RowBox[{"{", "\"\<Input\>\"", "}"}]}]}], "]"}]}]}], 
-  "\n"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\n", 
  RowBox[{"SetOptions", "[", 
   RowBox[{
    RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
@@ -766,7 +766,7 @@ Cell[BoxData[{
    3.634397747104803*^9}, {3.63439855526341*^9, 3.634398555989731*^9}, 
    3.63439859556039*^9}]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -1028,9 +1028,6 @@ Cell[BoxData[{
 }, Open  ]]
 }, Open  ]],
 
-Cell["Other Functions", "Subsection",
- CellChangeTimes->{{3.6344097608130713`*^9, 3.634409764167749*^9}}],
-
 Cell[CellGroupData[{
 
 Cell[TextData[{
@@ -1070,26 +1067,20 @@ Cell[BoxData[
 
 Cell[CellGroupData[{
 
-Cell[TextData[{
- "Leakage term in ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["I", "DS"], TraditionalForm]]],
- " equation"
-}], "Subsection",
+Cell["Sizing ratio equation", "Subsection",
  CellChangeTimes->{{3.634409448923999*^9, 3.6344094527884274`*^9}, {
-  3.6344096502867107`*^9, 3.6344096660776463`*^9}}],
+  3.6344096502867107`*^9, 3.6344096660776463`*^9}, {3.634581148015485*^9, 
+  3.6345811543320427`*^9}}],
 
 Cell[TextData[{
- "\[CapitalLambda]Func  is a helper function that accepts the base leakage \
-current of a device and multiplies it by the ",
+ "\[CapitalLambda]Func  is a helper function that calculates the ",
  Cell[BoxData[
   FormBox[
-   FractionBox["W", "L"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   FractionBox["W", "L"], TraditionalForm]]],
  " ratio of a given transistor device"
 }], "Text",
- CellChangeTimes->{{3.634409674828265*^9, 3.634409742746983*^9}}],
+ CellChangeTimes->{{3.634409674828265*^9, 3.634409742746983*^9}, {
+  3.634581162906986*^9, 3.6345811655718803`*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -1152,13 +1143,14 @@ Cell[BoxData[
 Cell[CellGroupData[{
 
 Cell[TextData[{
- "Derivation of the ",
+ "Current-based derivation of ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["V", "r"], TraditionalForm]],
-  FormatType->"TraditionalForm"]
+   SubscriptBox["V", "r"], TraditionalForm]]]
 }], "Subsubsection",
- CellChangeTimes->{{3.634574264711692*^9, 3.634574273644072*^9}}],
+ CellChangeTimes->{{3.634574264711692*^9, 3.634574273644072*^9}, {
+  3.634592235398035*^9, 3.634592267552313*^9}, {3.634592322238905*^9, 
+  3.634592327662045*^9}}],
 
 Cell[TextData[{
  "The equation above is superficially (b/c of some assumptions that I make) \
@@ -1246,7 +1238,796 @@ derived as follows:\n",
       FontSlant->"Italic"]], "=", 
     RowBox[{
      SubscriptBox["\[Alpha]", "8"], 
-     SubscriptBox["I", "0"], 
+     SubscriptBox["I", 
+      SubscriptBox["0", "8"]], 
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"-", "\[Kappa]"}], "\[CenterDot]", 
+         SubscriptBox["V", "lrgs"]}], 
+        SubscriptBox["U", "t"]]], "(", 
+      RowBox[{"1", "-", 
+       SuperscriptBox["\[ExponentialE]", 
+        FractionBox[
+         SubscriptBox["V", "lrds"], 
+         SubscriptBox["U", "t"]]]}], ")"}]}]}], TraditionalForm]]],
+ ", because this transistor could/would be operating in the linear region \
+during the refractory period\n(1)\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["I", "r"], "=", 
+    FractionBox[
+     RowBox[{
+      SubscriptBox["C", "r"], 
+      SubscriptBox["V", "r"]}], 
+     SubscriptBox["t", "r"]]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["t", "r"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is the actual duration of the refractory period, as opposed to our old \
+theoretical ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["t", "ref"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " value which assumed that the capacitor charged to ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["V", "dd"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", \n\t\tinstead of the ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["V", "r"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " found in this equation.\n",
+ StyleBox["Derivation:",
+  FontVariations->{"Underline"->True}],
+ "\nDuring the refractory period, we can assume capacitor ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["C", "m"], TraditionalForm]]],
+ " is charging or fully charged as long as the following condition is true:\n\
+\n(2)\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["I", "l"], "+", 
+     SubscriptBox["I", "lr"]}], ">", 
+    RowBox[{
+     SubscriptBox["I", "b"], "+", 
+     SubscriptBox["I", "fb"]}]}], TraditionalForm]]],
+ "\n\nSubsituting from the basic equations above:\n\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       SubscriptBox["\[Alpha]", "7"], 
+       SubscriptBox["\[Alpha]", "B1"]], 
+      SubscriptBox["I", "lk"]}], "+", 
+     SubscriptBox["I", "lr"]}], ">", 
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        SubscriptBox["\[Alpha]", "1"], 
+        SubscriptBox["\[Alpha]", "10"]}], 
+       RowBox[{
+        SubscriptBox["\[Alpha]", "B1"], 
+        SubscriptBox["\[Alpha]", "B2"]}]], 
+      FractionBox[
+       RowBox[{
+        SubscriptBox["I", "lk"], 
+        SubscriptBox["I", "in"]}], 
+       SubscriptBox["I", "m"]]}], "+", 
+     RowBox[{
+      FractionBox[
+       SubscriptBox["\[Alpha]", "4"], 
+       SubscriptBox["\[Alpha]", "3"]], 
+      SubscriptBox["I", "m"]}]}]}], TraditionalForm]]],
+ "\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["I", "lr"], ">", 
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        SubscriptBox["\[Alpha]", "1"], 
+        SubscriptBox["\[Alpha]", "10"]}], 
+       RowBox[{
+        SubscriptBox["\[Alpha]", "B1"], 
+        SubscriptBox["\[Alpha]", "B2"]}]], 
+      FractionBox[
+       RowBox[{
+        SubscriptBox["I", "lk"], 
+        SubscriptBox["I", "in"]}], 
+       SubscriptBox["I", "m"]]}], "+", 
+     RowBox[{
+      FractionBox[
+       SubscriptBox["\[Alpha]", "4"], 
+       SubscriptBox["\[Alpha]", "3"]], 
+      SubscriptBox["I", "m"]}], "-", 
+     RowBox[{
+      FractionBox[
+       SubscriptBox["\[Alpha]", "7"], 
+       SubscriptBox["\[Alpha]", "B1"]], 
+      SubscriptBox["I", "lk"]}]}]}], TraditionalForm]]],
+ "\n\t\nOur first major assumption is that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     SubscriptBox["\[Alpha]", "4"], 
+     SubscriptBox["\[Alpha]", "3"]], 
+    SubscriptBox["I", "m"], " ", "and", " ", 
+    FractionBox[
+     SubscriptBox["\[Alpha]", "7"], 
+     SubscriptBox["\[Alpha]", "B1"]], 
+    SubscriptBox["I", "lk"]}], TraditionalForm]]],
+ " can be ignored because during the refractory period ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "m"], TraditionalForm]]],
+ " is small and therefore the ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      SubscriptBox["\[Alpha]", "1"], 
+      SubscriptBox["\[Alpha]", "10"]}], 
+     RowBox[{
+      SubscriptBox["\[Alpha]", "B1"], 
+      SubscriptBox["\[Alpha]", "B2"]}]], 
+    FractionBox[
+     RowBox[{
+      SubscriptBox["I", "lk"], 
+      SubscriptBox["I", "in"]}], 
+     SubscriptBox["I", "m"]]}], TraditionalForm]]],
+ " dominates.\n\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["I", "lr"], ">", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       SubscriptBox["\[Alpha]", "1"], 
+       SubscriptBox["\[Alpha]", "10"]}], 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "B1"], 
+       SubscriptBox["\[Alpha]", "B2"]}]], 
+     FractionBox[
+      RowBox[{
+       SubscriptBox["I", "lk"], 
+       SubscriptBox["I", "in"]}], 
+      SubscriptBox["I", "m"]]}]}], TraditionalForm]]],
+ ", it should be noted here that this is the same as saying ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["I", "lr"], ">", 
+    SubscriptBox["I", "b"]}], TraditionalForm]]],
+ "\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["I", "lr"], ">", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       SubscriptBox["\[Alpha]", "1"], 
+       SubscriptBox["\[Alpha]", "10"]}], 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "B1"], 
+       SubscriptBox["\[Alpha]", "B2"]}]], 
+     FractionBox[
+      RowBox[{
+       SubscriptBox["I", "lk"], 
+       SubscriptBox["I", "in"]}], 
+      SubscriptBox["I", 
+       SubscriptBox["0", "1"]]]}]}], TraditionalForm]]],
+ ", through simulation, we found that ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["V", "m"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is always reset fully, and as such, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["I", "m"], "\[Rule]", 
+    SubscriptBox["I", 
+     SubscriptBox["0", "1"]]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", where ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", 
+    SubscriptBox["0", "1"]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "is the leakage current value of transistor ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["A", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Alpha]", "8"], 
+     SubscriptBox["I", 
+      SubscriptBox["0", "8"]], 
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"-", "\[Kappa]"}], "\[CenterDot]", 
+         SubscriptBox["V", "lrgs"]}], 
+        SubscriptBox["U", "t"]]], "(", 
+      RowBox[{"1", "-", 
+       SuperscriptBox["\[ExponentialE]", 
+        FractionBox[
+         SubscriptBox["V", "lrds"], 
+         SubscriptBox["U", "t"]]]}], ")"}]}], ">", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       SubscriptBox["\[Alpha]", "1"], 
+       SubscriptBox["\[Alpha]", "10"]}], 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "B1"], 
+       SubscriptBox["\[Alpha]", "B2"]}]], 
+     FractionBox[
+      RowBox[{
+       SubscriptBox["I", "lk"], 
+       SubscriptBox["I", "in"]}], 
+      SubscriptBox["I", 
+       SubscriptBox["0", "1"]]]}]}], TraditionalForm]]],
+ ", expand ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "lr"], TraditionalForm]]],
+ "\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"-", "\[Kappa]"}], "\[CenterDot]", 
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["V", "r"], "-", 
+          SubscriptBox["V", "dd"]}], ")"}]}], 
+       SubscriptBox["U", "t"]]], "(", 
+     RowBox[{"1", "-", 
+      SuperscriptBox["\[ExponentialE]", 
+       FractionBox[
+        RowBox[{
+         SubscriptBox["V", "m"], "-", 
+         SubscriptBox["V", "dd"]}], 
+        SubscriptBox["U", "t"]]]}], ")"}], ">", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       SubscriptBox["\[Alpha]", "1"], 
+       SubscriptBox["\[Alpha]", "10"]}], 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "B1"], 
+       SubscriptBox["\[Alpha]", "B2"], 
+       SubscriptBox["\[Alpha]", "8"]}]], 
+     FractionBox[
+      RowBox[{
+       SubscriptBox["I", "lk"], 
+       SubscriptBox["I", "in"]}], 
+      RowBox[{
+       SubscriptBox["I", 
+        SubscriptBox["0", "1"]], 
+       SubscriptBox["I", 
+        SubscriptBox["0", "8"]]}]]}]}], TraditionalForm]]],
+ ", move constants across\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     FractionBox[
+      RowBox[{
+       RowBox[{"-", "\[Kappa]"}], "\[CenterDot]", 
+       RowBox[{"(", 
+        RowBox[{
+         SubscriptBox["V", "r"], "-", 
+         SubscriptBox["V", "dd"]}], ")"}]}], 
+      SubscriptBox["U", "t"]]], ">", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       SubscriptBox["\[Alpha]", "1"], 
+       SubscriptBox["\[Alpha]", "10"]}], 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "B1"], 
+       SubscriptBox["\[Alpha]", "B2"], 
+       SubscriptBox["\[Alpha]", "8"]}]], 
+     FractionBox[
+      RowBox[{
+       SubscriptBox["I", "lk"], 
+       SubscriptBox["I", "in"]}], 
+      RowBox[{
+       SubscriptBox["I", 
+        SubscriptBox["0", "1"]], 
+       SubscriptBox["I", 
+        SubscriptBox["0", "8"]]}]]}]}], TraditionalForm]]],
+ ", b/c ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["V", "m"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " goes to 0 every time, we know that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["V", "m"], "-", 
+    SubscriptBox["V", "dd"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is much larger that ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["U", "t"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " and therefore the linear region term disappears\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[Kappa]", "\[CenterDot]", 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["V", "dd"], "-", 
+        SubscriptBox["V", "r"]}], ")"}]}], 
+     SubscriptBox["U", "t"]], ">", 
+    RowBox[{
+     RowBox[{"log", "(", 
+      FractionBox[
+       RowBox[{
+        SubscriptBox["\[Alpha]", "1"], 
+        SubscriptBox["\[Alpha]", "10"]}], 
+       RowBox[{
+        SubscriptBox["\[Alpha]", "B1"], 
+        SubscriptBox["\[Alpha]", "B2"], 
+        SubscriptBox["\[Alpha]", "8"], 
+        SubscriptBox["I", 
+         SubscriptBox["0", "1"]], 
+        SubscriptBox["I", 
+         SubscriptBox["0", "8"]]}]], ")"}], "+", 
+     RowBox[{"log", "(", 
+      RowBox[{
+       SubscriptBox["I", "lk"], 
+       SubscriptBox["I", "in"]}], ")"}]}]}], TraditionalForm]]],
+ ", take a log of both sides of the equation\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["V", "dd"], "-", 
+     SubscriptBox["V", "r"]}], ">", 
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       SubscriptBox["U", "t"], "\[Kappa]"], 
+      RowBox[{"log", "(", 
+       FractionBox[
+        RowBox[{
+         SubscriptBox["\[Alpha]", "1"], 
+         SubscriptBox["\[Alpha]", "10"]}], 
+        RowBox[{
+         SubscriptBox["\[Alpha]", "B1"], 
+         SubscriptBox["\[Alpha]", "B2"], 
+         SubscriptBox["\[Alpha]", "8"], 
+         SubscriptBox["I", 
+          SubscriptBox["0", "1"]], 
+         SubscriptBox["I", 
+          SubscriptBox["0", "8"]]}]], ")"}]}], "+", 
+     RowBox[{
+      FractionBox[
+       SubscriptBox["U", "t"], "\[Kappa]"], 
+      RowBox[{"log", "(", 
+       RowBox[{
+        SubscriptBox["I", "lk"], 
+        SubscriptBox["I", "in"]}], ")"}]}]}]}], TraditionalForm]]],
+ "\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["V", "r"], "<", 
+    RowBox[{
+     SubscriptBox["V", "dd"], "-", 
+     RowBox[{
+      FractionBox[
+       SubscriptBox["U", "t"], "\[Kappa]"], 
+      RowBox[{"log", "(", 
+       FractionBox[
+        RowBox[{
+         SubscriptBox["\[Alpha]", "1"], 
+         SubscriptBox["\[Alpha]", "10"]}], 
+        RowBox[{
+         SubscriptBox["\[Alpha]", "B1"], 
+         SubscriptBox["\[Alpha]", "B2"], 
+         SubscriptBox["\[Alpha]", "8"], 
+         SubscriptBox["I", 
+          SubscriptBox["0", "1"]], 
+         SubscriptBox["I", 
+          SubscriptBox["0", "8"]]}]], ")"}]}], "+", 
+     RowBox[{
+      FractionBox[
+       SubscriptBox["U", "t"], "\[Kappa]"], 
+      RowBox[{"log", "(", 
+       RowBox[{
+        SubscriptBox["I", "lk"], 
+        SubscriptBox["I", "in"]}], ")"}]}]}]}], TraditionalForm]]],
+ "\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      SubscriptBox["t", "r"], 
+      SubscriptBox["I", "r"]}], 
+     SubscriptBox["C", "r"]], "<", 
+    RowBox[{
+     SubscriptBox["V", "dd"], "-", 
+     RowBox[{
+      FractionBox[
+       SubscriptBox["U", "t"], "\[Kappa]"], 
+      RowBox[{"log", "(", 
+       FractionBox[
+        RowBox[{
+         SubscriptBox["\[Alpha]", "1"], 
+         SubscriptBox["\[Alpha]", "10"]}], 
+        RowBox[{
+         SubscriptBox["\[Alpha]", "B1"], 
+         SubscriptBox["\[Alpha]", "B2"], 
+         SubscriptBox["\[Alpha]", "8"], 
+         SubscriptBox["I", 
+          SubscriptBox["0", "1"]], 
+         SubscriptBox["I", 
+          SubscriptBox["0", "8"]]}]], ")"}]}], "+", 
+     RowBox[{
+      FractionBox[
+       SubscriptBox["U", "t"], "\[Kappa]"], 
+      RowBox[{"log", "(", 
+       RowBox[{
+        SubscriptBox["I", "lk"], 
+        SubscriptBox["I", "in"]}], ")"}]}]}]}], TraditionalForm]]],
+ ", substituted ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["V", "r"], "\[Rule]", " ", 
+    FractionBox[
+     RowBox[{
+      SubscriptBox["t", "r"], 
+      SubscriptBox["I", "r"]}], 
+     SubscriptBox["C", "r"]]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", as per equation (1) above\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["t", "r"], "<", 
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       SubscriptBox["C", "r"], 
+       SubscriptBox["I", "r"]], 
+      SubscriptBox["V", "dd"]}], "-", 
+     RowBox[{
+      FractionBox[
+       SubscriptBox["C", "r"], 
+       SubscriptBox["I", "r"]], 
+      FractionBox[
+       SubscriptBox["U", "t"], "\[Kappa]"], 
+      RowBox[{"log", "(", 
+       FractionBox[
+        RowBox[{
+         SubscriptBox["\[Alpha]", "1"], 
+         SubscriptBox["\[Alpha]", "10"]}], 
+        RowBox[{
+         SubscriptBox["\[Alpha]", "B1"], 
+         SubscriptBox["\[Alpha]", "B2"], 
+         SubscriptBox["\[Alpha]", "8"], 
+         SubscriptBox["I", 
+          SubscriptBox["0", "1"]], 
+         SubscriptBox["I", 
+          SubscriptBox["0", "8"]]}]], ")"}]}], "+", 
+     RowBox[{
+      FractionBox[
+       SubscriptBox["U", "t"], "\[Kappa]"], 
+      RowBox[{"log", "(", 
+       RowBox[{
+        SubscriptBox["I", "lk"], 
+        SubscriptBox["I", "in"]}], ")"}]}]}]}], TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGCQBGIQLR95N15M5LXjjrufkkC0kMS6HR5AepqT2U4QfWhL
+bm4KkDaapdEFovl8XvWC6GsfmyeB6GcG86eD6DMuortA9H5N71sg+ke27R0Q
+vfVPw2sQnTbFijcVSG8Ub9MC0QsjdhuA6AnzT5uA+c9/O4LoDpsITxDNljLR
+B0Rvsd4YDVan+CsLRCu+vFwIon8VzSgB0RHMiwTSQO6Jm2cDotNUrrmA6BPn
+dkSA6AMlH/zzgbTDisAwEB3W9bQARG+4bloOop2CdBeB6GW80ktBdNqzDu0C
+IN2fsMARRP/4fMQDRIekeAaD6DNdjuEg+tgtwToQ7dIl1wOihY+X9YHoZA3/
+SSD6wLnfS0G0IN/zVSCas1N5LYje0qi7EURPuZV6EERftq06BqIX2JWeANEA
+Xha4UA==
+  "]],
+
+Cell["\<\
+As per the equation above, the new equation for the actual refractory period \
+is:\
+\>", "Text",
+ CellChangeTimes->{{3.634595399720867*^9, 3.634595425777069*^9}}],
+
+Cell[TextData[{
+ "\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["t", "r"], "=", 
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        SubscriptBox["C", "r"], 
+        SubscriptBox["\[Alpha]", "B3"]}], 
+       RowBox[{
+        SubscriptBox["I", "ref"], 
+        SubscriptBox["\[Alpha]", "12"]}]], 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["V", "dd"], "-", 
+        RowBox[{
+         FractionBox[
+          SubscriptBox["U", "t"], "\[Kappa]"], 
+         RowBox[{"log", "(", 
+          FractionBox[
+           RowBox[{
+            SubscriptBox["\[Alpha]", "1"], 
+            SubscriptBox["\[Alpha]", "10"]}], 
+           RowBox[{
+            SubscriptBox["\[Alpha]", "B1"], 
+            SubscriptBox["\[Alpha]", "B2"], 
+            SubscriptBox["\[Alpha]", "8"], 
+            SubscriptBox["I", 
+             SubscriptBox["0", "1"]], 
+            SubscriptBox["I", 
+             SubscriptBox["0", "8"]]}]], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        SubscriptBox["C", "r"], 
+        SubscriptBox["U", "t"], 
+        SubscriptBox["\[Alpha]", "B3"]}], 
+       RowBox[{
+        SubscriptBox["I", "ref"], "\[Kappa]", " ", 
+        SubscriptBox["\[Alpha]", "12"]}]], 
+      RowBox[{"log", "(", 
+       RowBox[{
+        SubscriptBox["I", "lk"], 
+        SubscriptBox["I", "in"]}], ")"}]}]}]}], TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.634595434233941*^9, 3.634595541931899*^9}},
+ Background->GrayLevel[0.85]],
+
+Cell[TextData[{
+ "This implies that our old ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Rho]", "ref"], "=", 
+    FractionBox[
+     RowBox[{
+      SubscriptBox["\[Alpha]", "B3"], 
+      SubscriptBox["C", "r"], 
+      SubscriptBox["V", "dd"]}], 
+     SubscriptBox["\[Alpha]", "12"]]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "equation only accounted for the first term in the real ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["t", "ref"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " calculation.  It should now be broken up into two calibration parameters, \
+as per the equations below"
+}], "Text",
+ CellChangeTimes->{{3.6345955489109373`*^9, 3.634595618696525*^9}, {
+  3.6345956541625853`*^9, 3.634595890459388*^9}}],
+
+Cell[TextData[{
+ "\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["t", "r"], "=", 
+    RowBox[{
+     FractionBox[
+      SubscriptBox["\[Rho]", "ref1"], 
+      SubscriptBox["I", "ref"]], "+", 
+     RowBox[{
+      FractionBox[
+       SubscriptBox["\[Rho]", "ref2"], 
+       SubscriptBox["I", "ref"]], 
+      RowBox[{"log", "(", 
+       RowBox[{
+        SubscriptBox["I", "lk"], 
+        SubscriptBox["I", "in"]}], ")"}]}]}]}], TraditionalForm]]],
+ "\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Rho]", "ref1"], "="}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      SubscriptBox["C", "r"], 
+      SubscriptBox["\[Alpha]", "B3"]}], 
+     SubscriptBox["\[Alpha]", "12"]], 
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["V", "dd"], "-", 
+      RowBox[{
+       FractionBox[
+        SubscriptBox["U", "t"], "\[Kappa]"], 
+       RowBox[{"log", "(", 
+        FractionBox[
+         RowBox[{
+          SubscriptBox["\[Alpha]", "1"], 
+          SubscriptBox["\[Alpha]", "10"]}], 
+         RowBox[{
+          SubscriptBox["\[Alpha]", "B1"], 
+          SubscriptBox["\[Alpha]", "B2"], 
+          SubscriptBox["\[Alpha]", "8"], 
+          SubscriptBox["I", 
+           SubscriptBox["0", "1"]], 
+          SubscriptBox["I", 
+           SubscriptBox["0", "8"]]}]], ")"}]}]}], ")"}]}], 
+   TraditionalForm]]],
+ "\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Rho]", "ref2"], "="}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     SubscriptBox["C", "r"], 
+     SubscriptBox["U", "t"], 
+     SubscriptBox["\[Alpha]", "B3"]}], 
+    RowBox[{"\[Kappa]", " ", 
+     SubscriptBox["\[Alpha]", "12"]}]], TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.634595838082467*^9, 3.634595842204419*^9}},
+ Background->GrayLevel[0.85]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Voltage-based derivation of ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["V", "r"], TraditionalForm]]]
+}], "Subsubsection",
+ CellChangeTimes->{{3.634574264711692*^9, 3.634574273644072*^9}, {
+  3.634592235398035*^9, 3.634592246184091*^9}, {3.634592276615803*^9, 
+  3.634592288579135*^9}}],
+
+Cell[TextData[{
+ "The equation above, for ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["V", "r"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", is superficially (b/c of some assumptions that I make) derived as \
+follows:\n",
+ StyleBox["Basic equations:",
+  FontVariations->{"Underline"->True}],
+ "\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     SubscriptBox["I", "l"], 
+     SubscriptBox["\[Alpha]", "7"]], "=", 
+    FractionBox[
+     SubscriptBox["I", "lk"], 
+     SubscriptBox["\[Alpha]", "B1"]], " "}], TraditionalForm]]],
+ ", current mirror mirroring the leak current\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      SubscriptBox["I", "m"], 
+      SubscriptBox["I", "b"]}], 
+     RowBox[{
+      SubscriptBox["\[Alpha]", "1"], 
+      SubscriptBox["\[Alpha]", "10"]}]], "=", 
+    FractionBox[
+     RowBox[{
+      SubscriptBox["I", "lk"], 
+      SubscriptBox["I", "in"]}], 
+     RowBox[{
+      SubscriptBox["\[Alpha]", "B1"], 
+      SubscriptBox["\[Alpha]", "B2"]}]]}], TraditionalForm]]],
+ ", using translinear principle to use the biases ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{
+     SubscriptBox["I", "in"], "and", " ", 
+     SubscriptBox["I", "lk"]}], ")"}], TraditionalForm]]],
+ " to set the output ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["I", "m"], ")"}], TraditionalForm]]],
+ "\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     SubscriptBox["I", "fb"], 
+     SubscriptBox["\[Alpha]", "4"]], "=", 
+    FractionBox[
+     SubscriptBox["I", "m"], 
+     SubscriptBox["\[Alpha]", "3"]]}], TraditionalForm]]],
+ ", this derivation assumes that transisor ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["A", "6"], TraditionalForm]]],
+ " isn\[CloseCurlyQuote]t in the circuit and therefore ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "fb"], TraditionalForm]]],
+ " is just a mirrored version of ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "m"], TraditionalForm]]],
+ "\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     SubscriptBox["I", "r"], 
+     SubscriptBox["\[Alpha]", "12"]], "=", 
+    FractionBox[
+     SubscriptBox["I", "ref"], 
+     SubscriptBox["\[Alpha]", "B3"]]}], TraditionalForm]]],
+ ", current mirror for the refractory current\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["I", 
+     StyleBox["lr",
+      FontSlant->"Italic"]], "=", 
+    RowBox[{
+     SubscriptBox["\[Alpha]", "8"], 
+     SubscriptBox["I", 
+      SubscriptBox["0", "8"]], 
      RowBox[{
       SuperscriptBox["\[ExponentialE]", 
        FractionBox[
@@ -1413,59 +2194,64 @@ during the refractory period\n",
  "\n\t",
  Cell[BoxData[
   FormBox[
-   RowBox[{
+   FormBox[
     RowBox[{
-     SubscriptBox["\[Alpha]", "1"], 
-     SubscriptBox["I", "0"], 
-     SuperscriptBox["\[ExponentialE]", 
-      FractionBox[
-       RowBox[{
-        RowBox[{"-", "\[Kappa]"}], "\[CenterDot]", 
-        SubscriptBox["V", "mgs"]}], 
-       SubscriptBox["U", "t"]]], 
-     SubscriptBox["\[Alpha]", "8"], 
-     SubscriptBox["I", "0"], 
      RowBox[{
+      SubscriptBox["\[Alpha]", "1"], 
+      SubscriptBox["I", 
+       SubscriptBox["0", "1"]], 
       SuperscriptBox["\[ExponentialE]", 
        FractionBox[
         RowBox[{
          RowBox[{"-", "\[Kappa]"}], "\[CenterDot]", 
-         SubscriptBox["V", "lrgs"]}], 
-        SubscriptBox["U", "t"]]], "(", 
-      RowBox[{"1", "-", 
+         SubscriptBox["V", "mgs"]}], 
+        SubscriptBox["U", "t"]]], 
+      SubscriptBox["\[Alpha]", "8"], 
+      SubscriptBox["I", 
+       SubscriptBox["0", "8"]], 
+      RowBox[{
        SuperscriptBox["\[ExponentialE]", 
         FractionBox[
-         SubscriptBox["V", "lrds"], 
-         SubscriptBox["U", "t"]]]}], ")"}]}], ">", 
-    RowBox[{
-     FractionBox[
-      RowBox[{
-       SubscriptBox["\[Alpha]", "1"], 
-       SubscriptBox["\[Alpha]", "10"]}], 
-      RowBox[{
-       SubscriptBox["\[Alpha]", "B1"], 
-       SubscriptBox["\[Alpha]", "B2"]}]], 
-     SubscriptBox["\[Alpha]", "B1"], 
-     SubscriptBox["I", "0"], 
-     SuperscriptBox["\[ExponentialE]", 
+         RowBox[{
+          RowBox[{"-", "\[Kappa]"}], "\[CenterDot]", 
+          SubscriptBox["V", "lrgs"]}], 
+         SubscriptBox["U", "t"]]], "(", 
+       RowBox[{"1", "-", 
+        SuperscriptBox["\[ExponentialE]", 
+         FractionBox[
+          SubscriptBox["V", "lrds"], 
+          SubscriptBox["U", "t"]]]}], ")"}]}], ">", 
+     RowBox[{
       FractionBox[
        RowBox[{
-        RowBox[{"-", "\[Kappa]"}], "\[CenterDot]", 
-        SubscriptBox["V", "lkgs"]}], 
-       SubscriptBox["U", "t"]]], 
-     SubscriptBox["\[Alpha]", "B2"], 
-     SubscriptBox["I", "0"], 
-     SuperscriptBox["\[ExponentialE]", 
-      FractionBox[
+        SubscriptBox["\[Alpha]", "1"], 
+        SubscriptBox["\[Alpha]", "10"]}], 
        RowBox[{
-        RowBox[{"-", "\[Kappa]"}], "\[CenterDot]", 
-        SubscriptBox["V", "ings"]}], 
-       SubscriptBox["U", "t"]]]}]}], TraditionalForm]]],
+        SubscriptBox["\[Alpha]", "B1"], 
+        SubscriptBox["\[Alpha]", "B2"]}]], 
+      SubscriptBox["\[Alpha]", "B1"], 
+      SubscriptBox["I", 
+       SubscriptBox["0", "B1"]], 
+      SuperscriptBox["\[ExponentialE]", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"-", "\[Kappa]"}], "\[CenterDot]", 
+         SubscriptBox["V", "lkgs"]}], 
+        SubscriptBox["U", "t"]]], 
+      SubscriptBox["\[Alpha]", "B2"], 
+      SubscriptBox["I", 
+       SubscriptBox["0", "B2"]], 
+      SuperscriptBox["\[ExponentialE]", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"-", "\[Kappa]"}], "\[CenterDot]", 
+         SubscriptBox["V", "ings"]}], 
+        SubscriptBox["U", "t"]]]}]}],
+    TraditionalForm], TraditionalForm]]],
  ", expand out the forms of ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["I", "x"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["I", "x"], TraditionalForm]]],
  "\n\t",
  Cell[BoxData[
   FormBox[
@@ -1493,6 +2279,17 @@ during the refractory period\n",
      FractionBox[
       SubscriptBox["\[Alpha]", "10"], 
       SubscriptBox["\[Alpha]", "8"]], 
+     FractionBox[
+      RowBox[{
+       SubscriptBox["I", 
+        SubscriptBox["0", "B1"]], 
+       SubscriptBox["I", 
+        SubscriptBox["0", "B2"]]}], 
+      RowBox[{
+       SubscriptBox["I", 
+        SubscriptBox["0", "1"]], 
+       SubscriptBox["I", 
+        SubscriptBox["0", "8"]]}]], 
      SuperscriptBox["\[ExponentialE]", 
       FractionBox[
        RowBox[{
@@ -1528,6 +2325,17 @@ during the refractory period\n",
      FractionBox[
       SubscriptBox["\[Alpha]", "10"], 
       SubscriptBox["\[Alpha]", "8"]], 
+     FractionBox[
+      RowBox[{
+       SubscriptBox["I", 
+        SubscriptBox["0", "B1"]], 
+       SubscriptBox["I", 
+        SubscriptBox["0", "B2"]]}], 
+      RowBox[{
+       SubscriptBox["I", 
+        SubscriptBox["0", "1"]], 
+       SubscriptBox["I", 
+        SubscriptBox["0", "8"]]}]], 
      SuperscriptBox["\[ExponentialE]", 
       FractionBox[
        RowBox[{
@@ -1558,9 +2366,21 @@ during the refractory period\n",
          SubscriptBox["U", "t"]]]}], ")"}]}], ">", 
     RowBox[{
      RowBox[{"log", "(", 
-      FractionBox[
-       SubscriptBox["\[Alpha]", "10"], 
-       SubscriptBox["\[Alpha]", "8"]], ")"}], "+", 
+      RowBox[{
+       FractionBox[
+        SubscriptBox["\[Alpha]", "10"], 
+        SubscriptBox["\[Alpha]", "8"]], 
+       FractionBox[
+        RowBox[{
+         SubscriptBox["I", 
+          SubscriptBox["0", "B1"]], 
+         SubscriptBox["I", 
+          SubscriptBox["0", "B2"]]}], 
+        RowBox[{
+         SubscriptBox["I", 
+          SubscriptBox["0", "1"]], 
+         SubscriptBox["I", 
+          SubscriptBox["0", "8"]]}]]}], ")"}], "+", 
      FractionBox[
       RowBox[{
        RowBox[{"-", "\[Kappa]"}], "\[CenterDot]", 
@@ -1591,9 +2411,21 @@ during the refractory period\n",
          SubscriptBox["V", "ings"]}], ")"}]}], 
       SubscriptBox["U", "t"]], "+", 
      RowBox[{"log", "(", 
-      FractionBox[
-       SubscriptBox["\[Alpha]", "10"], 
-       SubscriptBox["\[Alpha]", "8"]], ")"}], "-", 
+      RowBox[{
+       FractionBox[
+        SubscriptBox["\[Alpha]", "10"], 
+        SubscriptBox["\[Alpha]", "8"]], 
+       FractionBox[
+        RowBox[{
+         SubscriptBox["I", 
+          SubscriptBox["0", "B1"]], 
+         SubscriptBox["I", 
+          SubscriptBox["0", "B2"]]}], 
+        RowBox[{
+         SubscriptBox["I", 
+          SubscriptBox["0", "1"]], 
+         SubscriptBox["I", 
+          SubscriptBox["0", "8"]]}]]}], ")"}], "-", 
      RowBox[{"log", "(", 
       RowBox[{"1", "-", 
        SuperscriptBox["\[ExponentialE]", 
@@ -1620,29 +2452,28 @@ during the refractory period\n",
          SubscriptBox["V", "ings"]}], ")"}]}], 
       SubscriptBox["U", "t"]], "-", 
      RowBox[{"log", "(", 
-      FractionBox[
-       SubscriptBox["\[Alpha]", "10"], 
-       SubscriptBox["\[Alpha]", "8"]], ")"}], "+", 
+      RowBox[{
+       FractionBox[
+        SubscriptBox["\[Alpha]", "10"], 
+        SubscriptBox["\[Alpha]", "8"]], 
+       FractionBox[
+        RowBox[{
+         SubscriptBox["I", 
+          SubscriptBox["0", "B1"]], 
+         SubscriptBox["I", 
+          SubscriptBox["0", "B2"]]}], 
+        RowBox[{
+         SubscriptBox["I", 
+          SubscriptBox["0", "1"]], 
+         SubscriptBox["I", 
+          SubscriptBox["0", "8"]]}]]}], ")"}], "+", 
      RowBox[{"log", "(", 
       RowBox[{"1", "-", 
        SuperscriptBox["\[ExponentialE]", 
         FractionBox[
          SubscriptBox["V", "lrds"], 
-         SubscriptBox["U", "t"]]]}], ")"}]}]}], TraditionalForm]]]
-}], "Text",
- CellChangeTimes->{{3.634410238917129*^9, 3.6344102635895653`*^9}, {
-  3.6345133494404383`*^9, 3.634513353695628*^9}, {3.634570091428315*^9, 
-  3.6345703212688227`*^9}, {3.634570351321784*^9, 3.634570388123271*^9}, {
-  3.634570428974719*^9, 3.634570704664648*^9}, {3.634570962348846*^9, 
-  3.63457097791943*^9}, {3.634571100030848*^9, 3.634571369830615*^9}, {
-  3.634571604190392*^9, 3.634571653854569*^9}, {3.634571686363228*^9, 
-  3.634571791872025*^9}, {3.634571850757389*^9, 3.63457187654346*^9}, {
-  3.634571997538538*^9, 3.634572119816597*^9}, {3.634572174622208*^9, 
-  3.634572196764035*^9}, {3.634573445062908*^9, 3.6345737969490767`*^9}, {
-  3.634573862691943*^9, 3.634574021775242*^9}}],
-
-Cell[TextData[{
- "(3)\t",
+         SubscriptBox["U", "t"]]]}], ")"}]}]}], TraditionalForm]]],
+ "\n\t",
  Cell[BoxData[
   FormBox[
    RowBox[{
@@ -1660,6 +2491,108 @@ Cell[TextData[{
         FractionBox[
          SubscriptBox["\[Alpha]", "8"], 
          SubscriptBox["\[Alpha]", "10"]], 
+        FractionBox[
+         RowBox[{
+          SubscriptBox["I", 
+           SubscriptBox["0", "B1"]], 
+          SubscriptBox["I", 
+           SubscriptBox["0", "B2"]]}], 
+         RowBox[{
+          SubscriptBox["I", 
+           SubscriptBox["0", "1"]], 
+          SubscriptBox["I", 
+           SubscriptBox["0", "8"]]}]], 
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          SuperscriptBox["\[ExponentialE]", 
+           FractionBox[
+            RowBox[{
+             SubscriptBox["V", "m"], "-", 
+             SubscriptBox["V", "dd"]}], 
+            SubscriptBox["U", "t"]]]}], ")"}]}], ")"}]}]}]}], 
+   TraditionalForm]]],
+ "\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["V", "m"], "-", 
+     SubscriptBox["V", "dd"], "+", 
+     SubscriptBox["V", "r"], "-", 
+     SubscriptBox["V", "dd"]}], "<", 
+    RowBox[{
+     SubscriptBox["V", "lk"], "-", 
+     SubscriptBox["V", "dd"], "+", 
+     SubscriptBox["V", "in"], "-", 
+     SubscriptBox["V", "lk"], "+", 
+     RowBox[{
+      FractionBox[
+       SubscriptBox["U", "t"], "\[Kappa]"], 
+      RowBox[{"log", "(", 
+       RowBox[{
+        FractionBox[
+         SubscriptBox["\[Alpha]", "8"], 
+         SubscriptBox["\[Alpha]", "10"]], 
+        FractionBox[
+         RowBox[{
+          SubscriptBox["I", 
+           SubscriptBox["0", "B1"]], 
+          SubscriptBox["I", 
+           SubscriptBox["0", "B2"]]}], 
+         RowBox[{
+          SubscriptBox["I", 
+           SubscriptBox["0", "1"]], 
+          SubscriptBox["I", 
+           SubscriptBox["0", "8"]]}]], 
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          SuperscriptBox["\[ExponentialE]", 
+           FractionBox[
+            RowBox[{
+             SubscriptBox["V", "m"], "-", 
+             SubscriptBox["V", "dd"]}], 
+            SubscriptBox["U", "t"]]]}], ")"}]}], ")"}]}]}]}], 
+   TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQBWIQLR95N15M5LXjjrufkkC0kMS6HR5AepqT2U4QfWhL
+bm4KkDaapdEFovl8XvWC6GsfmyeB6GcG86eD6DMuortA9H5N71sg+ke27R0Q
+vfVPw2sQnTbFijcVSG8Ub9MC0QsjdhuA6AnzT5uA+c9/O4LoDpsITxDNljLR
+B0Rvsd4YDVan+CsLRCu+vFwIon8VzSgB0RHMiwTSQO6Jm2cDotNUrrmA6BPn
+dkSA6Hc3n3jnA+knq076gOiFL5oqQXTXvgV1IPrRze1NIHoJz7EWEJ3FqdUN
+osuWG4Hpa5c6J4DVy/eD6eW3rJaAaMsQDzDN/uDWVhC9BkoDAGOmn54=
+  "]],
+
+Cell[TextData[{
+ "(3)\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["V", "m"], "+", 
+     SubscriptBox["V", "r"]}], "<", 
+    RowBox[{
+     SubscriptBox["V", "dd"], "+", 
+     SubscriptBox["V", "in"], "+", 
+     RowBox[{
+      FractionBox[
+       SubscriptBox["U", "t"], "\[Kappa]"], 
+      RowBox[{"log", "(", 
+       RowBox[{
+        FractionBox[
+         SubscriptBox["\[Alpha]", "8"], 
+         SubscriptBox["\[Alpha]", "10"]], 
+        FractionBox[
+         RowBox[{
+          SubscriptBox["I", 
+           SubscriptBox["0", "B1"]], 
+          SubscriptBox["I", 
+           SubscriptBox["0", "B2"]]}], 
+         RowBox[{
+          SubscriptBox["I", 
+           SubscriptBox["0", "1"]], 
+          SubscriptBox["I", 
+           SubscriptBox["0", "8"]]}]], 
         RowBox[{"(", 
          RowBox[{"1", "-", 
           SuperscriptBox["\[ExponentialE]", 
@@ -1671,7 +2604,9 @@ Cell[TextData[{
    TraditionalForm]]]
 }], "Text",
  CellChangeTimes->{
-  3.6345740301319847`*^9, {3.634574104779125*^9, 3.634574129861349*^9}},
+  3.6345740301319847`*^9, {3.634574104779125*^9, 3.634574129861349*^9}, {
+   3.6345928110269003`*^9, 3.6345928110269547`*^9}, {3.6345928637887*^9, 
+   3.63459292686211*^9}},
  Background->GrayLevel[0.85]]
 }, Closed]],
 
@@ -1709,7 +2644,7 @@ Cell[BoxData[
  RowBox[{"Solve", "[", 
   RowBox[{
    RowBox[{
-    RowBox[{"\[Alpha]8", "*", 
+    RowBox[{"\[Alpha]8", "*", "I08", "*", 
      SuperscriptBox["E", 
       FractionBox[
        RowBox[{"\[Kappa]", " ", 
@@ -1721,7 +2656,7 @@ Cell[BoxData[
         FractionBox[
          RowBox[{"(", 
           RowBox[{"Vm", "-", "Vdd"}], ")"}], "Ut"]]}], ")"}]}], "\[Equal]", 
-    RowBox[{"\[Alpha]10", "*", 
+    RowBox[{"\[Alpha]10", "*", "I010", "*", 
      SuperscriptBox["E", 
       FractionBox[
        RowBox[{"\[Kappa]", " ", 
@@ -1730,7 +2665,8 @@ Cell[BoxData[
   "]"}]], "Input",
  CellChangeTimes->{{3.634410261401176*^9, 3.63441029308597*^9}, {
   3.634513719405809*^9, 3.634513723069036*^9}, {3.6345137793689537`*^9, 
-  3.6345138160725317`*^9}, {3.634572356709454*^9, 3.634572364927494*^9}}],
+  3.6345138160725317`*^9}, {3.634572356709454*^9, 3.634572364927494*^9}, {
+  3.634592954994866*^9, 3.6345929730297613`*^9}}],
 
 Cell[BoxData[
  FormBox[
@@ -1748,7 +2684,7 @@ Cell[BoxData[
             RowBox[{"log", "(", 
              RowBox[{"-", 
               FractionBox[
-               RowBox[{"\[Alpha]10", " ", 
+               RowBox[{"\[Alpha]10", " ", "I010", " ", 
                 SuperscriptBox["\[ExponentialE]", 
                  RowBox[{"-", 
                   FractionBox[
@@ -1756,12 +2692,12 @@ Cell[BoxData[
                     RowBox[{"(", 
                     RowBox[{"Vin", "-", "Vm"}], ")"}]}], "Ut"]}]]}], 
                RowBox[{
-                RowBox[{"\[Alpha]8", " ", 
+                RowBox[{"\[Alpha]8", " ", "I08", " ", 
                  SuperscriptBox["\[ExponentialE]", 
                   RowBox[{
                    FractionBox["Vm", "Ut"], "-", 
-                   FractionBox["Vdd", "Ut"]}]]}], "-", "\[Alpha]8"}]]}], 
-             ")"}], "+", 
+                   FractionBox["Vdd", "Ut"]}]]}], "-", 
+                RowBox[{"\[Alpha]8", " ", "I08"}]}]]}], ")"}], "+", 
             RowBox[{"2", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", 
              SubscriptBox[
               TagBox["c",
@@ -1775,7 +2711,7 @@ Cell[BoxData[
   TraditionalForm]], "Output",
  CellChangeTimes->{
   3.6345135801227903`*^9, 3.634513723742041*^9, {3.6345137870717297`*^9, 
-   3.634513816672894*^9}, 3.6345723675010147`*^9}]
+   3.634513816672894*^9}, 3.6345723675010147`*^9, 3.634592976206105*^9}]
 }, Open  ]],
 
 Cell[TextData[{
@@ -1800,7 +2736,9 @@ is written below.\n\n",
            RowBox[{"-", 
             FractionBox[
              RowBox[{
-              SubscriptBox["\[Alpha]", "10"], " ", 
+              SubscriptBox["\[Alpha]", "10"], 
+              SubscriptBox["I", 
+               SubscriptBox["0", "10"]], " ", 
               SuperscriptBox["\[ExponentialE]", 
                RowBox[{"-", 
                 FractionBox[
@@ -1813,17 +2751,21 @@ is written below.\n\n",
              RowBox[{
               RowBox[{
                SubscriptBox["\[Alpha]", "8"], " ", 
+               SubscriptBox["I", 
+                SubscriptBox["0", "8"]], 
                SuperscriptBox["\[ExponentialE]", 
                 FractionBox[
                  RowBox[{"Vm", "-", 
                   SubscriptBox["V", "dd"]}], 
                  SubscriptBox["U", "t"]]]}], "-", 
-              SubscriptBox["\[Alpha]", "8"]}]]}], ")"}], "+", 
+              RowBox[{
+               SubscriptBox["\[Alpha]", "8"], 
+               SubscriptBox["I", 
+                SubscriptBox["0", "8"]]}]}]]}], ")"}], "+", 
           RowBox[{"2", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", 
            SubscriptBox[
             TagBox["c",
-             C], "1"]}]}], ")"}]}]}], "\[Kappa]"]}]}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+             C], "1"]}]}], ")"}]}]}], "\[Kappa]"]}]}], TraditionalForm]]],
  "\n\t",
  Cell[BoxData[
   FormBox[
@@ -1841,6 +2783,8 @@ is written below.\n\n",
          FractionBox[
           RowBox[{
            SubscriptBox["\[Alpha]", "10"], " ", 
+           SubscriptBox["I", 
+            SubscriptBox["0", "10"]], 
            SuperscriptBox["\[ExponentialE]", 
             RowBox[{"-", 
              FractionBox[
@@ -1851,9 +2795,14 @@ is written below.\n\n",
                  SubscriptBox["V", "m"]}], ")"}]}], 
               SubscriptBox["U", "t"]]}]]}], 
           RowBox[{
-           SubscriptBox["\[Alpha]", "8"], "-", 
            RowBox[{
-            SubscriptBox["\[Alpha]", "8"], " ", 
+            SubscriptBox["\[Alpha]", "8"], 
+            SubscriptBox["I", 
+             SubscriptBox["0", "8"]]}], "-", 
+           RowBox[{
+            SubscriptBox["\[Alpha]", "8"], 
+            SubscriptBox["I", 
+             SubscriptBox["0", "8"]], " ", 
             SuperscriptBox["\[ExponentialE]", 
              FractionBox[
               RowBox[{"Vm", "-", 
@@ -1881,6 +2830,8 @@ is written below.\n\n",
          FractionBox[
           RowBox[{
            SubscriptBox["\[Alpha]", "10"], " ", 
+           SubscriptBox["I", 
+            SubscriptBox["0", "10"]], 
            SuperscriptBox["\[ExponentialE]", 
             RowBox[{"-", 
              FractionBox[
@@ -1891,13 +2842,16 @@ is written below.\n\n",
                  SubscriptBox["V", "m"]}], ")"}]}], 
               SubscriptBox["U", "t"]]}]]}], 
           RowBox[{
-           SubscriptBox["\[Alpha]", "8"], "(", 
-           RowBox[{"1", "-", " ", 
-            SuperscriptBox["\[ExponentialE]", 
-             FractionBox[
-              RowBox[{"Vm", "-", 
-               SubscriptBox["V", "dd"]}], 
-              SubscriptBox["U", "t"]]]}], ")"}]], ")"}], "+", 
+           SubscriptBox["\[Alpha]", "8"], 
+           RowBox[{
+            SubscriptBox["I", 
+             SubscriptBox["0", "8"]], "(", 
+            RowBox[{"1", "-", " ", 
+             SuperscriptBox["\[ExponentialE]", 
+              FractionBox[
+               RowBox[{"Vm", "-", 
+                SubscriptBox["V", "dd"]}], 
+               SubscriptBox["U", "t"]]]}], ")"}]}]], ")"}], "+", 
         FractionBox[
          RowBox[{"2", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", 
           SubscriptBox[
@@ -1919,15 +2873,20 @@ is written below.\n\n",
         RowBox[{"log", "(", 
          FractionBox[
           RowBox[{
-           SubscriptBox["\[Alpha]", "8"], "(", 
-           RowBox[{"1", "-", " ", 
-            SuperscriptBox["\[ExponentialE]", 
-             FractionBox[
-              RowBox[{"Vm", "-", 
-               SubscriptBox["V", "dd"]}], 
-              SubscriptBox["U", "t"]]]}], ")"}], 
+           SubscriptBox["\[Alpha]", "8"], 
+           RowBox[{
+            SubscriptBox["I", 
+             SubscriptBox["0", "8"]], "(", 
+            RowBox[{"1", "-", " ", 
+             SuperscriptBox["\[ExponentialE]", 
+              FractionBox[
+               RowBox[{"Vm", "-", 
+                SubscriptBox["V", "dd"]}], 
+               SubscriptBox["U", "t"]]]}], ")"}]}], 
           RowBox[{
-           SubscriptBox["\[Alpha]", "10"], " ", 
+           SubscriptBox["\[Alpha]", "10"], 
+           SubscriptBox["I", 
+            SubscriptBox["0", "10"]], " ", 
            SuperscriptBox["\[ExponentialE]", 
             RowBox[{"-", 
              FractionBox[
@@ -1958,8 +2917,14 @@ is written below.\n\n",
         RowBox[{"log", "(", 
          RowBox[{
           FractionBox[
-           SubscriptBox["\[Alpha]", "8"], 
-           SubscriptBox["\[Alpha]", "10"]], 
+           RowBox[{
+            SubscriptBox["\[Alpha]", "8"], 
+            SubscriptBox["I", 
+             SubscriptBox["0", "8"]]}], 
+           RowBox[{
+            SubscriptBox["\[Alpha]", "10"], 
+            SubscriptBox["I", 
+             SubscriptBox["0", "10"]]}]], 
           RowBox[{"(", 
            RowBox[{"1", "-", " ", 
             SuperscriptBox["\[ExponentialE]", 
@@ -1997,8 +2962,14 @@ is written below.\n\n",
        RowBox[{"log", "(", 
         RowBox[{
          FractionBox[
-          SubscriptBox["\[Alpha]", "8"], 
-          SubscriptBox["\[Alpha]", "10"]], 
+          RowBox[{
+           SubscriptBox["\[Alpha]", "8"], 
+           SubscriptBox["I", 
+            SubscriptBox["0", "8"]]}], 
+          SubscriptBox["\[Alpha]", 
+           RowBox[{"10", 
+            SubscriptBox["I", 
+             SubscriptBox["0", "10"]]}]]], 
          RowBox[{"(", 
           RowBox[{"1", "-", " ", 
            SuperscriptBox["\[ExponentialE]", 
@@ -2042,8 +3013,14 @@ is written below.\n\n",
        RowBox[{"log", "(", 
         RowBox[{
          FractionBox[
-          SubscriptBox["\[Alpha]", "8"], 
-          SubscriptBox["\[Alpha]", "10"]], 
+          RowBox[{
+           SubscriptBox["\[Alpha]", "8"], 
+           SubscriptBox["I", 
+            SubscriptBox["0", "8"]]}], 
+          RowBox[{
+           SubscriptBox["\[Alpha]", "10"], 
+           SubscriptBox["I", 
+            SubscriptBox["0", "10"]]}]], 
          RowBox[{"(", 
           RowBox[{"1", "-", " ", 
            SuperscriptBox["\[ExponentialE]", 
@@ -2084,8 +3061,14 @@ is written below.\n\n",
        RowBox[{"log", "(", 
         RowBox[{
          FractionBox[
-          SubscriptBox["\[Alpha]", "8"], 
-          SubscriptBox["\[Alpha]", "10"]], 
+          RowBox[{
+           SubscriptBox["\[Alpha]", "8"], 
+           SubscriptBox["I", 
+            SubscriptBox["0", "8"]]}], 
+          RowBox[{
+           SubscriptBox["\[Alpha]", "10"], 
+           SubscriptBox["I", 
+            SubscriptBox["0", "10"]]}]], 
          RowBox[{"(", 
           RowBox[{"1", "-", " ", 
            SuperscriptBox["\[ExponentialE]", 
@@ -2107,7 +3090,7 @@ is written below.\n\n",
 }], "Text",
  CellChangeTimes->{{3.634572593523292*^9, 3.6345732610291367`*^9}, {
   3.6345732943054953`*^9, 3.6345733421311913`*^9}, {3.634574036995356*^9, 
-  3.634574070389526*^9}}],
+  3.634574070389526*^9}, {3.634593323107212*^9, 3.634593399644341*^9}}],
 
 Cell[TextData[{
  "\t",
@@ -2127,8 +3110,14 @@ Cell[TextData[{
        RowBox[{"log", "(", 
         RowBox[{
          FractionBox[
-          SubscriptBox["\[Alpha]", "8"], 
-          SubscriptBox["\[Alpha]", "10"]], 
+          RowBox[{
+           SubscriptBox["\[Alpha]", "8"], 
+           SubscriptBox["I", 
+            SubscriptBox["0", "8"]]}], 
+          RowBox[{
+           SubscriptBox["\[Alpha]", "10"], 
+           SubscriptBox["I", 
+            SubscriptBox["0", "10"]]}]], 
          RowBox[{"(", 
           RowBox[{"1", "-", " ", 
            SuperscriptBox["\[ExponentialE]", 
@@ -2144,7 +3133,8 @@ Cell[TextData[{
           C], "1"]}], 
        SuperscriptBox["\[Kappa]", "2"]]}]}], ")"}], TraditionalForm]]]
 }], "Text",
- CellChangeTimes->{3.634574076095529*^9},
+ CellChangeTimes->{
+  3.634574076095529*^9, {3.6345933512289677`*^9, 3.6345933589900417`*^9}},
  Background->GrayLevel[0.85]]
 }, Closed]]
 }, Open  ]]
@@ -2693,13 +3683,13 @@ Cell[BoxData[
   TagBox[
    FormBox[
     StyleBox[
-     DynamicModuleBox[{$CellContext`vinSlide$$ = 
-      1.21479, $CellContext`vmSlide$$ = 1.7999, $CellContext`xMax1$$ = 
-      1.8, $CellContext`xMax2$$ = 1.8, $CellContext`xMin1$$ = 
-      1.2, $CellContext`xMin2$$ = 1.65, $CellContext`yMin$$ = 0, 
-      Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
-      Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ =
-       1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+     DynamicModuleBox[{$CellContext`vinSlide$$ = 1.3, $CellContext`vmSlide$$ =
+       1.61, $CellContext`xMax1$$ = 1.8, $CellContext`xMax2$$ = 
+      1.8, $CellContext`xMin1$$ = 1.2, $CellContext`xMin2$$ = 
+      1.325, $CellContext`yMin$$ = 0, Typeset`show$$ = True, 
+      Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+      "\"untitled\"", Typeset`specs$$ = {{{
          Hold[$CellContext`xMin1$$], 1.2, 
          "\!\(\*SubscriptBox[\(x\), \(min\)]\)1"}, 0, 1.8, 1.*^-13}, {{
          Hold[$CellContext`xMax1$$], 1.8, 
@@ -2714,12 +3704,12 @@ Cell[BoxData[
          "\!\(\*SubscriptBox[\(V\), \(in\)]\)"}, 1.1, 1.3, 0.00001}, {{
          Hold[$CellContext`vmSlide$$], 1.7999, 
          "\!\(\*SubscriptBox[\(V\), \(m\)]\)"}, 1.5, 1.8, 0.01}}, 
-      Typeset`size$$ = {609., {331.5, 339.5}}, Typeset`update$$ = 0, 
+      Typeset`size$$ = {609., {334., 342.}}, Typeset`update$$ = 0, 
       Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`xMin1$81707$$ = 0, $CellContext`xMax1$81708$$ = 
-      0, $CellContext`xMin2$81709$$ = 0, $CellContext`xMax2$81710$$ = 
-      0, $CellContext`yMin$81711$$ = 0, $CellContext`vinSlide$81712$$ = 
-      0, $CellContext`vmSlide$81713$$ = 0}, 
+      True, $CellContext`xMin1$40415$$ = 0, $CellContext`xMax1$40416$$ = 
+      0, $CellContext`xMin2$40417$$ = 0, $CellContext`xMax2$40418$$ = 
+      0, $CellContext`yMin$40419$$ = 0, $CellContext`vinSlide$40420$$ = 
+      0, $CellContext`vmSlide$40421$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, 
         "Variables" :> {$CellContext`vinSlide$$ = 
@@ -2727,13 +3717,13 @@ Cell[BoxData[
           1.8, $CellContext`xMax2$$ = 1.8, $CellContext`xMin1$$ = 
           1.2, $CellContext`xMin2$$ = 1.65, $CellContext`yMin$$ = 0}, 
         "ControllerVariables" :> {
-          Hold[$CellContext`xMin1$$, $CellContext`xMin1$81707$$, 0], 
-          Hold[$CellContext`xMax1$$, $CellContext`xMax1$81708$$, 0], 
-          Hold[$CellContext`xMin2$$, $CellContext`xMin2$81709$$, 0], 
-          Hold[$CellContext`xMax2$$, $CellContext`xMax2$81710$$, 0], 
-          Hold[$CellContext`yMin$$, $CellContext`yMin$81711$$, 0], 
-          Hold[$CellContext`vinSlide$$, $CellContext`vinSlide$81712$$, 0], 
-          Hold[$CellContext`vmSlide$$, $CellContext`vmSlide$81713$$, 0]}, 
+          Hold[$CellContext`xMin1$$, $CellContext`xMin1$40415$$, 0], 
+          Hold[$CellContext`xMax1$$, $CellContext`xMax1$40416$$, 0], 
+          Hold[$CellContext`xMin2$$, $CellContext`xMin2$40417$$, 0], 
+          Hold[$CellContext`xMax2$$, $CellContext`xMax2$40418$$, 0], 
+          Hold[$CellContext`yMin$$, $CellContext`yMin$40419$$, 0], 
+          Hold[$CellContext`vinSlide$$, $CellContext`vinSlide$40420$$, 0], 
+          Hold[$CellContext`vmSlide$$, $CellContext`vmSlide$40421$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -2829,7 +3819,7 @@ $CellContext`vmSlide$$,
             1.7999, "\!\(\*SubscriptBox[\(V\), \(m\)]\)"}, 1.5, 1.8, 0.01, 
            Appearance -> {"Labeled", "Open"}}}, "Options" :> {}, 
         "DefaultOptions" :> {}],
-       ImageSizeCache->{656., {528., 536.}},
+       ImageSizeCache->{656., {530., 538.}},
        SingleEvaluation->True],
       Deinitialization:>None,
       DynamicModuleValues:>{},
@@ -2843,7 +3833,8 @@ $CellContext`vmSlide$$,
  CellChangeTimes->{3.634410929567696*^9, 3.634410989477297*^9, 
   3.634411070722555*^9, 3.63441111505256*^9, 3.634411149140192*^9, 
   3.634411224827208*^9, 3.6344112934946938`*^9, 3.634411328809441*^9, 
-  3.634411405987719*^9, 3.634411457573332*^9, 3.634479923417103*^9}]
+  3.634411405987719*^9, 3.634411457573332*^9, 3.634479923417103*^9, 
+  3.634574557628179*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -5229,7 +6220,7 @@ Cell[BoxData[
 },
 WindowToolbars->{"RulerBar", "EditBar"},
 WindowSize->{1685, 1328},
-WindowMargins->{{Automatic, 808}, {Automatic, 0}},
+WindowMargins->{{Automatic, 800}, {Automatic, 0}},
 DockedCells->Cell[
   BoxData[
    DynamicModuleBox[{$CellContext`showHide$$ = True}, 
@@ -5318,9 +6309,9 @@ Cell[25140, 684, 264, 6, 37, "Subsubsection"],
 Cell[25407, 692, 2254, 74, 331, "Input",
  InitializationCell->True]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[27710, 772, 293, 4, 39, "Subsection"],
+Cell[27710, 772, 293, 4, 47, "Subsection"],
 Cell[CellGroupData[{
 Cell[28028, 780, 251, 7, 37, "Subsubsection"],
 Cell[28282, 789, 1545, 46, 51, "Text"],
@@ -5335,107 +6326,114 @@ Cell[34084, 964, 2207, 62, 218, "Input",
  InitializationCell->True]
 }, Open  ]]
 }, Open  ]],
-Cell[36318, 1030, 105, 1, 47, "Subsection"],
 Cell[CellGroupData[{
-Cell[36448, 1035, 210, 7, 39, "Subsection"],
-Cell[36661, 1044, 180, 4, 31, "Text"],
-Cell[36844, 1050, 654, 17, 32, "Input",
+Cell[36340, 1032, 210, 7, 47, "Subsection"],
+Cell[36553, 1041, 180, 4, 31, "Text"],
+Cell[36736, 1047, 654, 17, 32, "Input",
  InitializationCell->True]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[37535, 1072, 262, 8, 47, "Subsection"],
-Cell[37800, 1082, 362, 9, 43, "Text"],
-Cell[38165, 1093, 290, 7, 32, "Input",
+Cell[37427, 1069, 215, 3, 47, "Subsection"],
+Cell[37645, 1074, 323, 8, 43, "Text"],
+Cell[37971, 1084, 290, 7, 32, "Input",
  InitializationCell->True]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[38492, 1105, 236, 6, 47, "Subsection"],
-Cell[38731, 1113, 482, 13, 32, "Text"],
-Cell[39216, 1128, 767, 21, 94, "Input",
+Cell[38298, 1096, 236, 6, 47, "Subsection"],
+Cell[38537, 1104, 482, 13, 32, "Text"],
+Cell[39022, 1119, 767, 21, 61, "Input",
  InitializationCell->True],
 Cell[CellGroupData[{
-Cell[40008, 1153, 230, 7, 37, "Subsubsection"],
-Cell[40241, 1162, 14429, 479, 939, "Text"],
-Cell[54673, 1643, 912, 31, 80, "Text"]
+Cell[39814, 1144, 305, 8, 37, "Subsubsection"],
+Cell[40122, 1154, 17697, 616, 1057, "Text"],
+Cell[57822, 1772, 172, 4, 31, "Text"],
+Cell[57997, 1778, 1497, 49, 71, "Text"],
+Cell[59497, 1829, 759, 22, 48, "Text"],
+Cell[60259, 1853, 1902, 69, 143, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[62198, 1927, 305, 8, 37, "Subsubsection"],
+Cell[62506, 1937, 18356, 626, 1046, "Text"],
+Cell[80865, 2565, 1332, 44, 80, "Text"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[55622, 1679, 245, 7, 31, "Subsubsection"],
-Cell[55870, 1688, 588, 15, 32, "Text"],
+Cell[82234, 2614, 245, 7, 31, "Subsubsection"],
+Cell[82482, 2623, 588, 15, 32, "Text"],
 Cell[CellGroupData[{
-Cell[56483, 1707, 880, 25, 61, "Input"],
-Cell[57366, 1734, 1545, 43, 96, "Output"]
+Cell[83095, 2642, 956, 26, 61, "Input"],
+Cell[84054, 2670, 1617, 43, 96, "Output"]
 }, Open  ]],
-Cell[58926, 1780, 10594, 329, 622, "Text"],
-Cell[69523, 2111, 1099, 36, 80, "Text"]
+Cell[85686, 2716, 12158, 376, 634, "Text"],
+Cell[97847, 3094, 1333, 43, 80, "Text"]
 }, Closed]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[70683, 2154, 108, 1, 67, "Section"],
+Cell[99241, 3144, 108, 1, 67, "Section"],
 Cell[CellGroupData[{
-Cell[70816, 2159, 517, 18, 47, "Subsection"],
+Cell[99374, 3149, 517, 18, 47, "Subsection"],
 Cell[CellGroupData[{
-Cell[71358, 2181, 2317, 65, 150, "Input"],
-Cell[73678, 2248, 2925, 56, 237, "Output"]
+Cell[99916, 3171, 2317, 65, 150, "Input"],
+Cell[102236, 3238, 2925, 56, 237, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[76652, 2310, 114, 1, 47, "Subsection"],
+Cell[105210, 3300, 114, 1, 47, "Subsection"],
 Cell[CellGroupData[{
-Cell[76791, 2315, 15631, 373, 1219, "Input"],
-Cell[92425, 2690, 8514, 155, 1081, "Output"]
+Cell[105349, 3305, 15631, 373, 1219, "Input"],
+Cell[120983, 3680, 8532, 156, 1085, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[101012, 2853, 179, 2, 69, "Chapter"],
+Cell[129588, 3844, 179, 2, 69, "Chapter"],
 Cell[CellGroupData[{
-Cell[101216, 2859, 178, 4, 67, "Section"],
+Cell[129792, 3850, 178, 4, 67, "Section"],
 Cell[CellGroupData[{
-Cell[101419, 2867, 359, 12, 47, "Subsection"],
-Cell[101781, 2881, 417, 10, 32, "Text"],
+Cell[129995, 3858, 359, 12, 47, "Subsection"],
+Cell[130357, 3872, 417, 10, 32, "Text"],
 Cell[CellGroupData[{
-Cell[102223, 2895, 22449, 455, 906, "Input"],
-Cell[124675, 3352, 11617, 249, 754, "Output"]
+Cell[130799, 3886, 22449, 455, 906, "Input"],
+Cell[153251, 4343, 11617, 249, 754, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[136341, 3607, 346, 12, 47, "Subsection"],
+Cell[164917, 4598, 346, 12, 47, "Subsection"],
 Cell[CellGroupData[{
-Cell[136712, 3623, 517, 13, 79, "Input"],
-Cell[137232, 3638, 342, 8, 33, "Output"],
-Cell[137577, 3648, 441, 9, 33, "Output"]
+Cell[165288, 4614, 517, 13, 79, "Input"],
+Cell[165808, 4629, 342, 8, 33, "Output"],
+Cell[166153, 4639, 441, 9, 33, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[138055, 3662, 341, 7, 32, "Input"],
-Cell[138399, 3671, 341, 7, 33, "Output"]
+Cell[166631, 4653, 341, 7, 32, "Input"],
+Cell[166975, 4662, 341, 7, 33, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[138777, 3683, 7035, 150, 495, "Input"],
-Cell[145815, 3835, 47804, 815, 266, "Output"]
+Cell[167353, 4674, 7035, 150, 495, "Input"],
+Cell[174391, 4826, 47804, 815, 266, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[193668, 4656, 160, 3, 47, "Subsection"],
+Cell[222244, 5647, 160, 3, 47, "Subsection"],
 Cell[CellGroupData[{
-Cell[193853, 4663, 1154, 22, 99, "Input"],
-Cell[195010, 4687, 788, 15, 33, "Output"],
-Cell[195801, 4704, 849, 15, 33, "Output"],
-Cell[196653, 4721, 956, 18, 33, "Output"]
+Cell[222429, 5654, 1154, 22, 99, "Input"],
+Cell[223586, 5678, 788, 15, 33, "Output"],
+Cell[224377, 5695, 849, 15, 33, "Output"],
+Cell[225229, 5712, 956, 18, 33, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[197646, 4744, 706, 13, 55, "Input"],
-Cell[198355, 4759, 723, 14, 33, "Output"],
-Cell[199081, 4775, 894, 17, 33, "Output"]
+Cell[226222, 5735, 706, 13, 55, "Input"],
+Cell[226931, 5750, 723, 14, 33, "Output"],
+Cell[227657, 5766, 894, 17, 33, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[200012, 4797, 290, 6, 32, "Input"],
-Cell[200305, 4805, 760, 19, 58, "Output"]
+Cell[228588, 5788, 290, 6, 32, "Input"],
+Cell[228881, 5796, 760, 19, 58, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[201102, 4829, 334, 7, 32, "Input"],
-Cell[201439, 4838, 18374, 384, 430, "Output"]
+Cell[229678, 5820, 334, 7, 32, "Input"],
+Cell[230015, 5829, 18374, 384, 430, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
