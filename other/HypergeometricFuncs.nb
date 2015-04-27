@@ -1,0 +1,560 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     21703,        551]
+NotebookOptionsPosition[     20028,        489]
+NotebookOutlinePosition[     20754,        513]
+CellTagsIndexPosition[     20711,        510]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Playing with special functions", "Title",
+ CellChangeTimes->{{3.638727169699791*^9, 3.63872717500312*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Preface", "Chapter",
+ CellChangeTimes->{3.634396468086589*^9}],
+
+Cell["\<\
+Everything in the preface is meant to be general code that should be \
+applicable to any notebook.  In most cases,this section will house \
+commands/scripts that add functionality to the notebook, regardless of the \
+content of the notebook\
+\>", "Text",
+ CellChangeTimes->{{3.634396479003294*^9, 3.634396480352709*^9}, 
+   3.637947688903591*^9, {3.6385515330495234`*^9, 3.638551533209309*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Input cell folding", "Section",
+ CellChangeTimes->{3.634396487587845*^9}],
+
+Cell["\<\
+The following code is a script that adds a button to turn all input cells \
+off,thereby just showing the plots,outputs,and/or manipulators.\
+\>", "Text",
+ CellChangeTimes->{3.634396497339588*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"ShowInputCells", "[", "sh_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"SetOptions", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{"CellOpen", "\[Rule]", "sh"}]}], "]"}], "&"}], "/@", 
+    RowBox[{"Cells", "[", 
+     RowBox[{
+      RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
+      RowBox[{"CellStyle", "\[Rule]", 
+       RowBox[{"{", "\"\<Input\>\"", "}"}]}]}], "]"}]}]}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{"SetOptions", "[", 
+  RowBox[{
+   RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
+   RowBox[{"DockedCells", "\[Rule]", 
+    RowBox[{"Cell", "[", 
+     RowBox[{
+      RowBox[{"BoxData", "[", 
+       RowBox[{"DynamicModuleBox", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"showHide$$", "=", "True"}], "}"}], ",", 
+         RowBox[{"TemplateBox", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"\"\<\\\"Show/hide input cells \\\"\>\"", ",", 
+             RowBox[{"CheckboxBox", "[", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"showHide$$", ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"showHide$$", "=", "#"}], ")"}], "&"}], ",", 
+                  RowBox[{
+                   RowBox[{"ShowInputCells", "[", "showHide$$", "]"}], 
+                   "&"}]}], "}"}]}], "]"}], "]"}]}], "}"}], ",", 
+           "\"\<RowDefault\>\""}], "]"}], ",", 
+         RowBox[{"DynamicModuleValues", "\[RuleDelayed]", 
+          RowBox[{"{", "}"}]}]}], "]"}], "]"}], ",", "\"\<Output\>\""}], 
+     "]"}]}]}], "]"}]}], "Input",
+ CellOpen->True,
+ InitializationCell->True,
+ CellChangeTimes->{{3.6343964307648497`*^9, 3.634396499488337*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Working Area", "Chapter",
+ CellChangeTimes->{{3.638727268190493*^9, 3.6387272693650513`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Plot of hypergeometric functions", "Section",
+ CellChangeTimes->{{3.638727826470936*^9, 3.6387278441056967`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Manipulator of both 1F1 and 2F1 hypergeometric functions", "Subsection",
+ CellChangeTimes->{{3.6387278478249817`*^9, 3.638727859232204*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Hypergeometric1F1", "[", 
+        RowBox[{"a", ",", "c", ",", "x"}], "]"}], ",", "\[IndentingNewLine]", 
+       
+       RowBox[{"Hypergeometric2F1", "[", 
+        RowBox[{"a", ",", "b", ",", "c", ",", "x"}], "]"}]}], 
+      "\[IndentingNewLine]", "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0.1", ",", 
+       SuperscriptBox["10", "xMax"]}], "}"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", "1"}], "}"}], ",", "0", ",", "10", ",", "1", ",", 
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"b", ",", "2"}], "}"}], ",", "0", ",", "10", ",", "1", ",", 
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c", ",", "1"}], "}"}], ",", "0", ",", "10", ",", "1", ",", 
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"xMax", ",", "1"}], "}"}], ",", "0", ",", "100", ",", "1", ",", 
+     
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.638727295155514*^9, 3.638727366867919*^9}, {
+  3.638727399751808*^9, 3.638727419887876*^9}, {3.638727452590302*^9, 
+  3.638727517609614*^9}, {3.638727566536623*^9, 3.6387275912605553`*^9}, {
+  3.63872762347357*^9, 3.638727632204784*^9}, {3.638727785569906*^9, 
+  3.6387277862715597`*^9}, {3.6387282367125263`*^9, 3.638728237221306*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FormBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`a$$ = 6, $CellContext`b$$ = 
+      9, $CellContext`c$$ = 2, $CellContext`xMax$$ = 1, Typeset`show$$ = True,
+       Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+      "\"untitled\"", Typeset`specs$$ = {{{
+         Hold[$CellContext`a$$], 1}, 0, 10, 1}, {{
+         Hold[$CellContext`b$$], 2}, 0, 10, 1}, {{
+         Hold[$CellContext`c$$], 1}, 0, 10, 1}, {{
+         Hold[$CellContext`xMax$$], 1}, 0, 100, 1}}, Typeset`size$$ = {
+      360., {94., 99.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      Typeset`skipInitDone$$ = True, $CellContext`a$58325$$ = 
+      0, $CellContext`b$58326$$ = 0, $CellContext`c$58327$$ = 
+      0, $CellContext`xMax$58328$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, TraditionalForm, 
+        "Variables" :> {$CellContext`a$$ = 1, $CellContext`b$$ = 
+          2, $CellContext`c$$ = 1, $CellContext`xMax$$ = 1}, 
+        "ControllerVariables" :> {
+          Hold[$CellContext`a$$, $CellContext`a$58325$$, 0], 
+          Hold[$CellContext`b$$, $CellContext`b$58326$$, 0], 
+          Hold[$CellContext`c$$, $CellContext`c$58327$$, 0], 
+          Hold[$CellContext`xMax$$, $CellContext`xMax$58328$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> Plot[{
+           
+           Hypergeometric1F1[$CellContext`a$$, $CellContext`c$$, \
+$CellContext`x], 
+           
+           Hypergeometric2F1[$CellContext`a$$, $CellContext`b$$, \
+$CellContext`c$$, $CellContext`x]}, {$CellContext`x, 0.1, 
+           10^$CellContext`xMax$$}], 
+        "Specifications" :> {{{$CellContext`a$$, 1}, 0, 10, 1, 
+           Appearance -> {"Labeled", "Open"}}, {{$CellContext`b$$, 2}, 0, 10, 
+           1, Appearance -> {"Labeled", "Open"}}, {{$CellContext`c$$, 1}, 0, 
+           10, 1, 
+           Appearance -> {"Labeled", "Open"}}, {{$CellContext`xMax$$, 1}, 0, 
+           100, 1, Appearance -> {"Labeled", "Open"}}}, "Options" :> {}, 
+        "DefaultOptions" :> {}],
+       ImageSizeCache->{407., {218., 226.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    TraditionalForm],
+   Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.638727371162704*^9, 3.6387274210034637`*^9, {3.638727453784004*^9, 
+   3.638727468741242*^9}, 3.638727519392971*^9, {3.638727578189348*^9, 
+   3.6387275922838287`*^9}, {3.638727626617015*^9, 3.6387276330008717`*^9}, 
+   3.638727787134225*^9, 3.638728238164175*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Manipulator of 1F1 hypergeometric functions", "Subsection",
+ CellChangeTimes->{{3.638727928125667*^9, 3.638727938381028*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{"Hypergeometric1F1", "[", 
+       RowBox[{"a", ",", "c", ",", "x"}], "]"}], "\[IndentingNewLine]", "}"}],
+      ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", 
+       SuperscriptBox["10", "xMax"]}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "10"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "20000"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", "1"}], "}"}], ",", "0", ",", "10", ",", "1", ",", 
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c", ",", "1"}], "}"}], ",", "0", ",", "10", ",", "1", ",", 
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"xMax", ",", "1"}], "}"}], ",", "0", ",", "10", ",", "1", ",", 
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.638727295155514*^9, 3.638727366867919*^9}, {
+  3.638727399751808*^9, 3.638727419887876*^9}, {3.638727452590302*^9, 
+  3.638727517609614*^9}, {3.638727566536623*^9, 3.6387275912605553`*^9}, {
+  3.63872762347357*^9, 3.638727632204784*^9}, {3.638727785569906*^9, 
+  3.6387277862715597`*^9}, {3.638727942434276*^9, 3.638727991259001*^9}, {
+  3.638728161072578*^9, 3.6387281616540537`*^9}, {3.638728598752594*^9, 
+  3.638728600607039*^9}, {3.638728641440832*^9, 3.638728711933157*^9}, {
+  3.638728776441518*^9, 3.638728835286357*^9}, {3.638728872442088*^9, 
+  3.6387288788034477`*^9}, {3.638735064978215*^9, 3.638735097543942*^9}, {
+  3.6387351398008957`*^9, 3.638735196820958*^9}, {3.638737638376788*^9, 
+  3.638737666245665*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FormBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`a$$ = 1, $CellContext`c$$ = 
+      1, $CellContext`xMax$$ = 1, Typeset`show$$ = True, 
+      Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+      "\"untitled\"", Typeset`specs$$ = {{{
+         Hold[$CellContext`a$$], 1}, 0, 10, 1}, {{
+         Hold[$CellContext`c$$], 1}, 0, 10, 1}, {{
+         Hold[$CellContext`xMax$$], 1}, 0, 10, 1}}, Typeset`size$$ = {
+      360., {105., 110.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      Typeset`skipInitDone$$ = True, $CellContext`a$122053$$ = 
+      0, $CellContext`c$122054$$ = 0, $CellContext`xMax$122055$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, TraditionalForm, 
+        "Variables" :> {$CellContext`a$$ = 1, $CellContext`c$$ = 
+          1, $CellContext`xMax$$ = 1}, "ControllerVariables" :> {
+          Hold[$CellContext`a$$, $CellContext`a$122053$$, 0], 
+          Hold[$CellContext`c$$, $CellContext`c$122054$$, 0], 
+          Hold[$CellContext`xMax$$, $CellContext`xMax$122055$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> Plot[{
+           
+           Hypergeometric1F1[$CellContext`a$$, $CellContext`c$$, \
+$CellContext`x]}, {$CellContext`x, 0, 10^$CellContext`xMax$$}, 
+          PlotRange -> {{0, 10}, {0, 20000}}], 
+        "Specifications" :> {{{$CellContext`a$$, 1}, 0, 10, 1, 
+           Appearance -> {"Labeled", "Open"}}, {{$CellContext`c$$, 1}, 0, 10, 
+           1, Appearance -> {"Labeled", "Open"}}, {{$CellContext`xMax$$, 1}, 
+           0, 10, 1, Appearance -> {"Labeled", "Open"}}}, "Options" :> {}, 
+        "DefaultOptions" :> {}],
+       ImageSizeCache->{407., {205., 213.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    TraditionalForm],
+   Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.638727371162704*^9, 3.6387274210034637`*^9, {3.638727453784004*^9, 
+   3.638727468741242*^9}, 3.638727519392971*^9, {3.638727578189348*^9, 
+   3.6387275922838287`*^9}, {3.638727626617015*^9, 3.6387276330008717`*^9}, 
+   3.638727787134225*^9, {3.63872794476759*^9, 3.638727991778865*^9}, 
+   3.638728162768765*^9, 3.638728601331685*^9, 3.638728658110911*^9, {
+   3.638728691042367*^9, 3.638728713612631*^9}, {3.6387287789383783`*^9, 
+   3.638728836121805*^9}, {3.638728874033635*^9, 3.6387288801126823`*^9}, {
+   3.6387350667725983`*^9, 3.638735098503312*^9}, {3.638735141787348*^9, 
+   3.6387351977258453`*^9}, {3.638737640054728*^9, 3.638737667139286*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Manipulator of 2F1 hypergeometric functions", "Subsection",
+ CellChangeTimes->{{3.6387278478249817`*^9, 3.638727859232204*^9}, {
+  3.6387283036708193`*^9, 3.6387283199018173`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"LogPlot", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{"Hypergeometric2F1", "[", 
+       RowBox[{"a", ",", "b", ",", "c", ",", "x"}], "]"}], 
+      "\[IndentingNewLine]", "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "10"}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", "1"}], "}"}], ",", "0", ",", "10", ",", "1", ",", 
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"b", ",", "2"}], "}"}], ",", "0", ",", "10", ",", "1", ",", 
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c", ",", "1"}], "}"}], ",", "0", ",", "10", ",", "1", ",", 
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"xMax", ",", "1"}], "}"}], ",", "0", ",", "100", ",", "1", ",", 
+     
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.638727295155514*^9, 3.638727366867919*^9}, {
+  3.638727399751808*^9, 3.638727419887876*^9}, {3.638727452590302*^9, 
+  3.638727517609614*^9}, {3.638727566536623*^9, 3.6387275912605553`*^9}, {
+  3.63872762347357*^9, 3.638727632204784*^9}, {3.638727785569906*^9, 
+  3.6387277862715597`*^9}, {3.6387282367125263`*^9, 3.638728237221306*^9}, {
+  3.638728298153956*^9, 3.6387282996431627`*^9}, {3.638728336028263*^9, 
+  3.638728336551458*^9}, {3.638728417892435*^9, 3.638728456239451*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FormBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`a$$ = 1, $CellContext`b$$ = 
+      2, $CellContext`c$$ = 6, $CellContext`xMax$$ = 1, Typeset`show$$ = True,
+       Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+      "\"untitled\"", Typeset`specs$$ = {{{
+         Hold[$CellContext`a$$], 1}, 0, 10, 1}, {{
+         Hold[$CellContext`b$$], 2}, 0, 10, 1}, {{
+         Hold[$CellContext`c$$], 1}, 0, 10, 1}, {{
+         Hold[$CellContext`xMax$$], 1}, 0, 100, 1}}, Typeset`size$$ = {
+      360., {108., 113.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      Typeset`skipInitDone$$ = True, $CellContext`a$67807$$ = 
+      0, $CellContext`b$67808$$ = 0, $CellContext`c$67809$$ = 
+      0, $CellContext`xMax$67810$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, TraditionalForm, 
+        "Variables" :> {$CellContext`a$$ = 1, $CellContext`b$$ = 
+          2, $CellContext`c$$ = 1, $CellContext`xMax$$ = 1}, 
+        "ControllerVariables" :> {
+          Hold[$CellContext`a$$, $CellContext`a$67807$$, 0], 
+          Hold[$CellContext`b$$, $CellContext`b$67808$$, 0], 
+          Hold[$CellContext`c$$, $CellContext`c$67809$$, 0], 
+          Hold[$CellContext`xMax$$, $CellContext`xMax$67810$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> LogPlot[{
+           
+           Hypergeometric2F1[$CellContext`a$$, $CellContext`b$$, \
+$CellContext`c$$, $CellContext`x]}, {$CellContext`x, 0, 10}, PlotRange -> 
+          All], "Specifications" :> {{{$CellContext`a$$, 1}, 0, 10, 1, 
+           Appearance -> {"Labeled", "Open"}}, {{$CellContext`b$$, 2}, 0, 10, 
+           1, Appearance -> {"Labeled", "Open"}}, {{$CellContext`c$$, 1}, 0, 
+           10, 1, Appearance -> {"Labeled", "Open"}}, {{$CellContext`xMax$$, 
+            1}, 0, 100, 1, Appearance -> {"Labeled", "Open"}}}, 
+        "Options" :> {}, "DefaultOptions" :> {}],
+       ImageSizeCache->{407., {232., 240.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    TraditionalForm],
+   Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.638727371162704*^9, 3.6387274210034637`*^9, {3.638727453784004*^9, 
+   3.638727468741242*^9}, 3.638727519392971*^9, {3.638727578189348*^9, 
+   3.6387275922838287`*^9}, {3.638727626617015*^9, 3.6387276330008717`*^9}, 
+   3.638727787134225*^9, 3.638728238164175*^9, {3.638728321462709*^9, 
+   3.638728337441399*^9}, {3.638728418696829*^9, 3.638728456852775*^9}}]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowToolbars->{"RulerBar", "EditBar"},
+WindowSize->{1280, 1549},
+WindowMargins->{{1266, Automatic}, {Automatic, 0}},
+DockedCells->Cell[
+  BoxData[
+   DynamicModuleBox[{$CellContext`showHide$$ = True}, 
+    TemplateBox[{"\"Show/hide input cells \"", 
+      CheckboxBox[
+       Dynamic[$CellContext`showHide$$, {($CellContext`showHide$$ = #)& , \
+$CellContext`ShowInputCells[$CellContext`showHide$$]& }]]}, "RowDefault"], 
+    DynamicModuleValues :> {}]], "Output"],
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 112, 1, 96, "Title"],
+Cell[CellGroupData[{
+Cell[717, 27, 68, 1, 69, "Chapter"],
+Cell[788, 30, 404, 7, 51, "Text"],
+Cell[CellGroupData[{
+Cell[1217, 41, 79, 1, 67, "Section"],
+Cell[1299, 44, 205, 4, 31, "Text"],
+Cell[1507, 50, 1767, 47, 209, "Input",
+ CellOpen->True,
+ InitializationCell->True]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3323, 103, 99, 1, 69, "Chapter"],
+Cell[CellGroupData[{
+Cell[3447, 108, 119, 1, 67, "Section"],
+Cell[CellGroupData[{
+Cell[3591, 113, 146, 1, 47, "Subsection"],
+Cell[CellGroupData[{
+Cell[3762, 118, 2136, 54, 239, "Input"],
+Cell[5901, 174, 3047, 61, 461, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[8997, 241, 131, 1, 39, "Subsection"],
+Cell[CellGroupData[{
+Cell[9153, 246, 2295, 54, 195, "Input"],
+Cell[11451, 302, 3069, 57, 435, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14569, 365, 186, 2, 47, "Subsection"],
+Cell[CellGroupData[{
+Cell[14780, 371, 2155, 52, 209, "Input"],
+Cell[16938, 425, 3026, 57, 489, "Output"]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
