@@ -1,0 +1,16 @@
+The files found in this settings directory include the following:
+  Custom packages that can be loaded into any notebook.
+  Custom settings that set things like the "Show Input" toggle button or having a ruler toolbar
+     enabled by default
+
+Everything in this settings directory should be moved to $UserBaseDirectory/__ as specified below.
+
+Note: $UserBaseDirectory is the base user's directory specified by Mathematica.  You can get this value 
+from any Mathematica notebook by typing '$UserBaseDirectory' into the notebook.
+
+Customizations should be placed in $UserBaseDirectory/Autoload/
+
+All packages (any directory found in ./packages/) should be placed in $UserBaseDirectory/Applications/
+For instance: 
+  Braindrop should be placed in $UserBaseDirectory/Applications/
+  Neurogrid should be placed in $UserBaseDirectory/Applications/

@@ -1,0 +1,702 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     26028,        693]
+NotebookOptionsPosition[     25542,        671]
+NotebookOutlinePosition[     25910,        687]
+CellTagsIndexPosition[     25867,        684]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"BeginPackage", "[", 
+  RowBox[{"\"\<Braindrop`\>\"", ",", " ", 
+   RowBox[{"{", "\"\<Notation`\>\"", "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Symbolize", "[", 
+  RowBox[{"ParsedBoxWrapper", "[", 
+   RowBox[{"SubscriptBox", "[", 
+    RowBox[{"\"\<t\>\"", ",", " ", "\"\<_\>\""}], "]"}], "]"}], "]"}], "\n", 
+ RowBox[{
+  RowBox[{"Symbolize", "[", 
+   RowBox[{"ParsedBoxWrapper", "[", 
+    RowBox[{"SubscriptBox", "[", 
+     RowBox[{"\"\<I\>\"", ",", " ", "\"\<_\>\""}], "]"}], "]"}], "]"}], 
+  " "}], "\n", 
+ RowBox[{"Symbolize", "[", 
+  RowBox[{"ParsedBoxWrapper", "[", 
+   RowBox[{"SubscriptBox", "[", 
+    RowBox[{"\"\<\[CapitalIota]\>\"", ",", " ", "\"\<_\>\""}], "]"}], "]"}], 
+  "]"}], "\n", 
+ RowBox[{"Symbolize", "[", 
+  RowBox[{"ParsedBoxWrapper", "[", 
+   RowBox[{"SubscriptBox", "[", 
+    RowBox[{"\"\<V\>\"", ",", " ", "\"\<_\>\""}], "]"}], "]"}], "]"}], "\n", 
+ RowBox[{"Symbolize", "[", 
+  RowBox[{"ParsedBoxWrapper", "[", 
+   RowBox[{"SubscriptBox", "[", 
+    RowBox[{"\"\<J\>\"", ",", " ", "\"\<_\>\""}], "]"}], "]"}], "]"}], "\n", 
+ RowBox[{"Symbolize", "[", 
+  RowBox[{"ParsedBoxWrapper", "[", 
+   RowBox[{"SubscriptBox", "[", 
+    RowBox[{"\"\<C\>\"", ",", " ", "\"\<_\>\""}], "]"}], "]"}], "]"}], "\n", 
+ RowBox[{"Symbolize", "[", 
+  RowBox[{"ParsedBoxWrapper", "[", 
+   RowBox[{"SubscriptBox", "[", 
+    RowBox[{"\"\<U\>\"", ",", " ", "\"\<T\>\""}], "]"}], "]"}], "]"}], "\n", 
+ RowBox[{
+  RowBox[{"Symbolize", "[", 
+   RowBox[{"ParsedBoxWrapper", "[", 
+    RowBox[{"SubscriptBox", "[", 
+     RowBox[{"\"\<i\>\"", ",", " ", "\"\<_\>\""}], "]"}], "]"}], "]"}], 
+  " "}], "\n", 
+ RowBox[{"Symbolize", "[", 
+  RowBox[{"ParsedBoxWrapper", "[", 
+   RowBox[{"SubscriptBox", "[", 
+    RowBox[{"\"\<v\>\"", ",", " ", "\"\<_\>\""}], "]"}], "]"}], "]"}], "\n", 
+ RowBox[{"Symbolize", "[", 
+  RowBox[{"ParsedBoxWrapper", "[", 
+   RowBox[{"SubscriptBox", "[", 
+    RowBox[{"\"\<j\>\"", ",", " ", "\"\<_\>\""}], "]"}], "]"}], "]"}], "\n", 
+ RowBox[{"Symbolize", "[", 
+  RowBox[{"ParsedBoxWrapper", "[", 
+   RowBox[{"SubscriptBox", "[", 
+    RowBox[{"\"\<p\>\"", ",", " ", "\"\<_\>\""}], "]"}], "]"}], "]"}], "\n", 
+ RowBox[{"Symbolize", "[", 
+  RowBox[{"ParsedBoxWrapper", "[", 
+   RowBox[{"SubscriptBox", "[", 
+    RowBox[{"\"\<\[Tau]\>\"", ",", " ", "\"\<_\>\""}], "]"}], "]"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Symbolize", "[", 
+  RowBox[{"ParsedBoxWrapper", "[", "\"\<\[Kappa]\>\"", "]"}], "]"}], "\n", 
+ RowBox[{"Notation", "[", 
+  RowBox[{
+   RowBox[{"ParsedBoxWrapper", "[", 
+    RowBox[{"SubscriptBox", "[", 
+     RowBox[{"\"\<I0\>\"", ",", " ", "\"\<idx\>\""}], "]"}], "]"}], " ", 
+   "\[DoubleLongLeftRightArrow]", " ", 
+   RowBox[{"ParsedBoxWrapper", "[", 
+    RowBox[{"RowBox", "[", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Subscript\>\"", ",", " ", "\"\<[\>\"", ",", " ", 
+       RowBox[{"RowBox", "[", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<I0\>\"", ",", " ", "\"\<,\>\"", ",", " ", "\"\<idx\>\""}], 
+         "}"}], "]"}], ",", " ", "\"\<]\>\""}], "}"}], "]"}], "]"}]}], 
+  "]"}], "\n", 
+ RowBox[{
+  RowBox[{"Notation", "[", 
+   RowBox[{
+    RowBox[{"ParsedBoxWrapper", "[", 
+     RowBox[{"SubscriptBox", "[", 
+      RowBox[{"\"\<\[CapitalLambda]\>\"", ",", " ", "\"\<idx\>\""}], "]"}], 
+     "]"}], " ", "\[DoubleLongLeftRightArrow]", " ", 
+    RowBox[{"ParsedBoxWrapper", "[", 
+     RowBox[{"RowBox", "[", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Subscript\>\"", ",", " ", "\"\<[\>\"", ",", " ", 
+        RowBox[{"RowBox", "[", 
+         RowBox[{"{", 
+          RowBox[{
+          "\"\<\[CapitalLambda]\>\"", ",", " ", "\"\<,\>\"", ",", " ", 
+           "\"\<idx\>\""}], "}"}], "]"}], ",", " ", "\"\<]\>\""}], "}"}], 
+      "]"}], "]"}]}], "]"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"Not", "@", 
+     RowBox[{"ValueQ", "[", 
+      RowBox[{"UT", "::", "usage"}], "]"}]}], ",", 
+    RowBox[{
+     RowBox[{"UT", "::", "usage"}], " ", "=", 
+     RowBox[{
+      RowBox[{"ToString", "[", 
+       RowBox[{
+       "\"\<UT\!\(\*SuperscriptBox[\([\), \(o\)]\)C] returns the thermal \
+voltage for a given temperature in Celsius.\>\"", ",", " ", "StandardForm"}], 
+       "]"}], "<>", "\"\<\\n\>\"", "<>", 
+      RowBox[{"ToString", "[", 
+       RowBox[{"\"\<UT[] returns the symbol \!\(\*SubscriptBox[
+StyleBox[\"U\",
+FontSlant->\"Italic\"], \"T\"]\).\>\"", ",", " ", "StandardForm"}], 
+       "]"}]}]}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"Not", "@", 
+     RowBox[{"ValueQ", "[", 
+      RowBox[{"IDPFull", "::", "usage"}], "]"}]}], ",", 
+    RowBox[{
+     RowBox[{"IDPFull", "::", "usage"}], " ", "=", 
+     RowBox[{"ToString", "[", 
+      RowBox[{"\"\<IDPFull[\!\(\*SubscriptBox[
+StyleBox[\"V\",
+FontSlant->\"Italic\"], \"GB\"]\), \!\(\*SubscriptBox[
+StyleBox[\"V\",
+FontSlant->\"Italic\"], \"SB\"]\), \!\(\*SubscriptBox[
+StyleBox[\"V\",
+FontSlant->\"Italic\"], \"DB\"]\), \!\(\*
+StyleBox[\"id\",
+FontSlant->\"Italic\"]\),\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)C] returns \
+the \!\(\*
+StyleBox[\"id\",
+FontSlant->\"Italic\"]\) PMOS's subthreshold Drain current \
+\!\(\*SubscriptBox[
+StyleBox[\"I\",
+FontSlant->\"Italic\"], \"D\"]\) (without approximating \!\(\*SubscriptBox[
+StyleBox[\"V\",
+FontSlant->\"Italic\"], \"DS\"]\)), for a given Gate, Source and Drain \
+voltages.\>\"", ",", " ", "StandardForm"}], "]"}]}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"Not", "@", 
+     RowBox[{"ValueQ", "[", 
+      RowBox[{"IDNFull", "::", "usage"}], "]"}]}], ",", 
+    RowBox[{
+     RowBox[{"IDNFull", "::", "usage"}], " ", "=", 
+     RowBox[{"ToString", "[", 
+      RowBox[{"\"\<IDNFull[\!\(\*SubscriptBox[
+StyleBox[\"V\",
+FontSlant->\"Italic\"], \"GB\"]\), \!\(\*SubscriptBox[
+StyleBox[\"V\",
+FontSlant->\"Italic\"], \"SB\"]\), \!\(\*SubscriptBox[
+StyleBox[\"V\",
+FontSlant->\"Italic\"], \"DB\"]\), \!\(\*
+StyleBox[\"id\",
+FontSlant->\"Italic\"]\),\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)C] returns \
+the \!\(\*
+StyleBox[\"id\",
+FontSlant->\"Italic\"]\) NMOS's subthreshold Drain current \
+\!\(\*SubscriptBox[
+StyleBox[\"I\",
+FontSlant->\"Italic\"], \"D\"]\) (without approximating \!\(\*SubscriptBox[
+StyleBox[\"V\",
+FontSlant->\"Italic\"], \"DS\"]\)), for a given Gate, Source and Drain \
+voltages.\>\"", ",", " ", "StandardForm"}], "]"}]}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"Not", "@", 
+     RowBox[{"ValueQ", "[", 
+      RowBox[{"IDP", "::", "usage"}], "]"}]}], ",", 
+    RowBox[{
+     RowBox[{"IDP", "::", "usage"}], " ", "=", 
+     RowBox[{"ToString", "[", 
+      RowBox[{"\"\<IDP[\!\(\*SubscriptBox[
+StyleBox[\"V\",
+FontSlant->\"Italic\"], \"GB\"]\), \!\(\*SubscriptBox[
+StyleBox[\"V\",
+FontSlant->\"Italic\"], \"SB\"]\), \!\(\*
+StyleBox[\"id\",
+FontSlant->\"Italic\"]\),\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)C] returns \
+the \!\(\*
+StyleBox[\"id\",
+FontSlant->\"Italic\"]\) PMOS's subthreshold saturation Drain current \
+\!\(\*SubscriptBox[
+StyleBox[\"I\",
+FontSlant->\"Italic\"], \"D\"]\), for a given Gate-Source and Source \
+voltages.\>\"", ",", " ", "StandardForm"}], "]"}]}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"Not", "@", 
+     RowBox[{"ValueQ", "[", 
+      RowBox[{"IDN", "::", "usage"}], "]"}]}], ",", 
+    RowBox[{
+     RowBox[{"IDN", "::", "usage"}], " ", "=", 
+     RowBox[{"ToString", "[", 
+      RowBox[{"\"\<IDN[\!\(\*SubscriptBox[
+StyleBox[\"V\",
+FontSlant->\"Italic\"], \"GB\"]\), \!\(\*SubscriptBox[
+StyleBox[\"V\",
+FontSlant->\"Italic\"], \"SB\"]\), \!\(\*
+StyleBox[\"id\",
+FontSlant->\"Italic\"]\),\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)C] returns \
+the \!\(\*
+StyleBox[\"id\",
+FontSlant->\"Italic\"]\) NMOS's subthreshold saturation Drain current \
+\!\(\*SubscriptBox[
+StyleBox[\"I\",
+FontSlant->\"Italic\"], \"D\"]\), for a given Gate-Source and Source \
+voltages.\>\"", ",", " ", "StandardForm"}], "]"}]}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"Not", "@", 
+     RowBox[{"ValueQ", "[", 
+      RowBox[{"IGSP", "::", "usage"}], "]"}]}], ",", 
+    RowBox[{
+     RowBox[{"IGSP", "::", "usage"}], " ", "=", 
+     RowBox[{"ToString", "[", 
+      RowBox[{"\"\<IGSP[\!\(\*SubscriptBox[
+StyleBox[\"I\",
+FontSlant->\"Italic\"], \"D\"]\), \!\(\*SubscriptBox[
+StyleBox[\"I\",
+FontSlant->\"Italic\"], \"S\"]\), \!\(\*
+StyleBox[\"id\",
+FontSlant->\"Italic\"]\),\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)C] returns \
+the \!\(\*
+StyleBox[\"id\",
+FontSlant->\"Italic\"]\) PMOS's Gate-Source voltage current component \
+\!\(\*SubscriptBox[\(\[ScriptI]\), \(GS\)]\) for a given drain current \
+\!\(\*SubscriptBox[
+StyleBox[\"I\",
+FontSlant->\"Italic\"], \"D\"]\) and Source voltage current component \
+\!\(\*SubscriptBox[\(\[ScriptI]\), \(S\)]\).\>\"", ",", " ", "StandardForm"}],
+       "]"}]}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"Not", "@", 
+     RowBox[{"ValueQ", "[", 
+      RowBox[{"IGSN", "::", "usage"}], "]"}]}], ",", 
+    RowBox[{
+     RowBox[{"IGSN", "::", "usage"}], " ", "=", 
+     RowBox[{"ToString", "[", 
+      RowBox[{"\"\<IGSN[\!\(\*SubscriptBox[
+StyleBox[\"I\",
+FontSlant->\"Italic\"], \"D\"]\), \!\(\*SubscriptBox[
+StyleBox[\"I\",
+FontSlant->\"Italic\"], \"S\"]\), \!\(\*
+StyleBox[\"id\",
+FontSlant->\"Italic\"]\),\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)C] returns \
+the \!\(\*
+StyleBox[\"id\",
+FontSlant->\"Italic\"]\) NMOS's Gate-Source voltage current component \
+\!\(\*SubscriptBox[\(\[ScriptI]\), \(GS\)]\) for a given drain current \
+\!\(\*SubscriptBox[
+StyleBox[\"I\",
+FontSlant->\"Italic\"], \"D\"]\) and Source voltage current component \
+\!\(\*SubscriptBox[\(\[ScriptI]\), \(S\)]\).\>\"", ",", " ", "StandardForm"}],
+       "]"}]}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"Not", "@", 
+     RowBox[{"ValueQ", "[", 
+      RowBox[{"VGSP", "::", "usage"}], "]"}]}], ",", 
+    RowBox[{
+     RowBox[{"VGSP", "::", "usage"}], " ", "=", 
+     RowBox[{"ToString", "[", 
+      RowBox[{"\"\<VGSP[\!\(\*SubscriptBox[
+StyleBox[\"I\",
+FontSlant->\"Italic\"], \"D\"]\), \!\(\*SubscriptBox[
+StyleBox[\"V\",
+FontSlant->\"Italic\"], \"S\"]\), \!\(\*
+StyleBox[\"id\",
+FontSlant->\"Italic\"]\),\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)C] returns \
+the \!\(\*
+StyleBox[\"id\",
+FontSlant->\"Italic\"]\) PMOS's Gate-Source voltage for a given drain current \
+\!\(\*SubscriptBox[
+StyleBox[\"I\",
+FontSlant->\"Italic\"], \"D\"]\) and Source voltage \!\(\*SubscriptBox[
+StyleBox[\"V\",
+FontSlant->\"Italic\"], \"S\"]\).\>\"", ",", " ", "StandardForm"}], "]"}]}]}],
+    "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"Not", "@", 
+     RowBox[{"ValueQ", "[", 
+      RowBox[{"VGSN", "::", "usage"}], "]"}]}], ",", 
+    RowBox[{
+     RowBox[{"VGSN", "::", "usage"}], " ", "=", 
+     RowBox[{"ToString", "[", 
+      RowBox[{"\"\<VGSN[\!\(\*SubscriptBox[
+StyleBox[\"I\",
+FontSlant->\"Italic\"], \"D\"]\), \!\(\*SubscriptBox[
+StyleBox[\"V\",
+FontSlant->\"Italic\"], \"S\"]\), \!\(\*
+StyleBox[\"id\",
+FontSlant->\"Italic\"]\),\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)C] returns \
+the \!\(\*
+StyleBox[\"id\",
+FontSlant->\"Italic\"]\) NMOS's Gate-Source voltage for a given drain current \
+\!\(\*SubscriptBox[
+StyleBox[\"I\",
+FontSlant->\"Italic\"], \"D\"]\) and Source voltage \!\(\*SubscriptBox[
+StyleBox[\"V\",
+FontSlant->\"Italic\"], \"S\"]\).\>\"", ",", " ", "StandardForm"}], "]"}]}]}],
+    "]"}], ";"}], "\[IndentingNewLine]"}], "Input",
+ CellOpen->True,
+ InitializationCell->True,
+ CellChangeTimes->{{3.632856883676853*^9, 3.632856983299752*^9}, 
+   3.632857166055111*^9, {3.632858282087276*^9, 3.6328582967499037`*^9}, 
+   3.632858377408671*^9, {3.632858995138608*^9, 3.632859042561405*^9}, 
+   3.632859093538053*^9, {3.632859171114452*^9, 3.632859190750741*^9}, {
+   3.632859229354396*^9, 3.6328592481303463`*^9}, 3.632859581040352*^9, {
+   3.6328599810717697`*^9, 3.6328600308688307`*^9}, 3.632860344141933*^9, {
+   3.6328604493876133`*^9, 3.632860468569613*^9}, {3.632860535765938*^9, 
+   3.632860543920211*^9}, {3.632860814782655*^9, 3.632860850747628*^9}, {
+   3.632861069401318*^9, 3.632861114673147*^9}, {3.632861145501007*^9, 
+   3.632861159167404*^9}, {3.6328612885869827`*^9, 3.632861289853018*^9}, {
+   3.632861348758319*^9, 3.6328613555050697`*^9}, {3.632861812262711*^9, 
+   3.632861947275937*^9}, {3.6328619824133873`*^9, 3.632862009347362*^9}, {
+   3.632862068036956*^9, 3.632862191767111*^9}, {3.63286271078176*^9, 
+   3.632862750680481*^9}, {3.632863020738118*^9, 3.632863126219841*^9}, {
+   3.632863181219933*^9, 3.632863260779105*^9}, {3.632863294253421*^9, 
+   3.632863583955709*^9}, {3.6328636171917677`*^9, 3.632863631981745*^9}, {
+   3.632865027480174*^9, 3.632865028415619*^9}, {3.633214551943108*^9, 
+   3.633214555208282*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"Synapse", " ", "Circuit"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"Not", "@", 
+       RowBox[{"ValueQ", "[", 
+        RowBox[{"SynapseBiasWeight", "::", "usage"}], "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"SynapseBiasWeight", "::", "usage"}], " ", "=", 
+       RowBox[{"ToString", "[", 
+        RowBox[{
+        "\"\<SynapseBiasWeight[\!\(\*SubscriptBox[\(i\), \(W\)]\), \
+\!\(\*SubscriptBox[\(I\), \(lkm\)]\), \!\(\*SubscriptBox[\(I\), \(lksyn\)]\)] \
+gives the bias current for the synaptic weight \!\(\*SubscriptBox[\(I\), \
+\(W\)]\), given the dimensionless weight \!\(\*SubscriptBox[\(i\), \(W\)]\) \
+as well as the Soma's leak current \!\(\*SubscriptBox[\(I\), \(lkm\)]\) and \
+the Synapse's leak current \!\(\*SubscriptBox[\(I\), \(lksyn\)]\)\>\"", ",", 
+         " ", "StandardForm"}], "]"}]}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Soma", " ", "Circuit"}], " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"Not", "@", 
+       RowBox[{"ValueQ", "[", 
+        RowBox[{"SomaBiasInput", "::", "usage"}], "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"SomaBiasInput", "::", "usage"}], "=", 
+       RowBox[{"ToString", "[", 
+        RowBox[{
+        "\"\<SomaBiasInput[\!\(\*SubscriptBox[\(i\), \(in\)]\), \
+\!\(\*SubscriptBox[\(I\), \(lkm\)]\)] gives the bias current for the input \!\
+\(\*SubscriptBox[\(I\), \(mbg\)]\), given the dimensionless input \
+\!\(\*SubscriptBox[\(i\), \(in\)]\) as well as the leak current \
+\!\(\*SubscriptBox[\(I\), \(lkm\)]\)\>\"", ",", " ", "StandardForm"}], 
+        "]"}]}]}], "]"}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"Not", "@", 
+       RowBox[{"ValueQ", "[", 
+        RowBox[{"BiasLeak", "::", "usage"}], "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"BiasLeak", "::", "usage"}], "=", 
+       RowBox[{"ToString", "[", 
+        RowBox[{
+        "\"\<BiasLeak[\[Tau], C,\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)C] \
+gives the bias current for the leak \!\(\*SubscriptBox[\(I\), \(leak\)]\), \
+given the time constant \[Tau] as well as capacitance C and temperature in \
+Celsius\>\"", ",", " ", "StandardForm"}], "]"}]}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellOpen->True,
+ InitializationCell->True,
+ CellChangeTimes->{{3.633205463370083*^9, 3.633205533097281*^9}, {
+  3.633205595430006*^9, 3.633205615515998*^9}, {3.6332076313533688`*^9, 
+  3.633207653894554*^9}, {3.6332086208847837`*^9, 3.633208734519472*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Begin", "[", "\"\<`Private`\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"UT", "[", "temp_", "]"}], ":=", " ", 
+  RowBox[{"QuantityMagnitude", "[", 
+   RowBox[{"UnitConvert", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Quantity", "[", "\"\<BoltzmannConstant\>\"", "]"}], " ", "*", 
+      RowBox[{
+       RowBox[{"UnitConvert", "[", 
+        RowBox[{
+         RowBox[{"Quantity", "[", 
+          RowBox[{"temp", ",", "\"\<DegreesCelsius\>\""}], "]"}], ",", 
+         "\"\<Kelvins\>\""}], "]"}], "/", 
+       RowBox[{"Quantity", "[", "\"\<ElectronicCharge\>\"", "]"}]}]}], ",", 
+     " ", "\"\<Volt\>\""}], "]"}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"UT", "[", "\"\<\>\"", "]"}], ":=", " ", 
+  RowBox[{
+  "Symbol", "[", "\"\<U\[UnderBracket]Subscript\[UnderBracket]T\>\"", 
+   "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"UT", "[", "]"}], ":=", " ", 
+  RowBox[{
+  "Symbol", "[", "\"\<U\[UnderBracket]Subscript\[UnderBracket]T\>\"", 
+   "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"IDPFull", "[", 
+    RowBox[{
+    "vgb_", ",", " ", "vsb_", ",", " ", "vdb_", ",", " ", "idx_", ",", " ", 
+     RowBox[{"temp_:", "\"\<\>\""}]}], "]"}], ":=", " ", 
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"vgb", " ", "\[Kappa]"}], 
+       RowBox[{"UT", "[", "temp", "]"}]]}]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       SuperscriptBox["\[ExponentialE]", 
+        FractionBox["vdb", 
+         RowBox[{"UT", "[", "temp", "]"}]]]}], "+", 
+      SuperscriptBox["\[ExponentialE]", 
+       FractionBox["vsb", 
+        RowBox[{"UT", "[", "temp", "]"}]]]}], ")"}], " ", 
+    SubscriptBox["I0", "idx"], " ", 
+    SubscriptBox["\[CapitalLambda]", "idx"]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"IDNFull", "[", 
+   RowBox[{
+   "vgb_", ",", " ", "vsb_", ",", " ", "vdb_", ",", " ", "idx_", ",", " ", 
+    RowBox[{"temp_:", "\"\<\>\""}]}], "]"}], ":=", 
+  RowBox[{
+   SuperscriptBox["\[ExponentialE]", 
+    FractionBox[
+     RowBox[{"vgb", " ", "\[Kappa]"}], 
+     RowBox[{"UT", "[", "temp", "]"}]]], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"-", 
+        FractionBox["vdb", 
+         RowBox[{"UT", "[", "temp", "]"}]]}]]}], "+", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"-", 
+       FractionBox["vsb", 
+        RowBox[{"UT", "[", "temp", "]"}]]}]]}], ")"}], " ", 
+   SubscriptBox["I0", "idx"], " ", 
+   SubscriptBox["\[CapitalLambda]", "idx"]}]}], "\n", 
+ RowBox[{
+  RowBox[{"IDP", "[", 
+   RowBox[{"vgs_", ",", "vs_", ",", "idx_", ",", " ", 
+    RowBox[{"temp_:", "\"\<\>\""}]}], "]"}], ":=", " ", 
+  RowBox[{
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"vs", " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", "\[Kappa]"}], ")"}]}], 
+      RowBox[{"UT", "[", "temp", "]"}]], "-", 
+     FractionBox[
+      RowBox[{"vgs", " ", "\[Kappa]"}], 
+      RowBox[{"UT", "[", "temp", "]"}]]}]], " ", 
+   SubscriptBox["I0", "idx"], " ", 
+   SubscriptBox["\[CapitalLambda]", "idx"]}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"IDN", "[", 
+    RowBox[{"vgs_", ",", "vs_", ",", "idx_", ",", " ", 
+     RowBox[{"temp_:", "\"\<\>\""}]}], "]"}], ":=", " ", 
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{"vs", " ", 
+         RowBox[{"(", 
+          RowBox[{"1", "-", "\[Kappa]"}], ")"}]}], 
+        RowBox[{"UT", "[", "temp", "]"}]]}], "+", 
+      FractionBox[
+       RowBox[{"vgs", " ", "\[Kappa]"}], 
+       RowBox[{"UT", "[", "temp", "]"}]]}]], " ", 
+    SubscriptBox["I0", "idx"], " ", 
+    SubscriptBox["\[CapitalLambda]", "idx"]}]}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"IGSP", "[", 
+   RowBox[{"id_", ",", " ", "is_", ",", " ", "idx_", ",", " ", 
+    RowBox[{"temp_:", "\"\<\>\""}]}], "]"}], ":=", 
+  SuperscriptBox[
+   RowBox[{"(", 
+    FractionBox[
+     RowBox[{"id", " ", 
+      SuperscriptBox["is", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", "\[Kappa]"}]]}], 
+     RowBox[{
+      SubscriptBox["I0", "idx"], " ", 
+      SubscriptBox["\[CapitalLambda]", "idx"]}]], ")"}], 
+   RowBox[{
+    RowBox[{"-", "1"}], "/", "\[Kappa]"}]]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"IGSN", "[", 
+    RowBox[{"id_", ",", " ", "is_", ",", " ", "idx_", ",", " ", 
+     RowBox[{"temp_:", "\"\<\>\""}]}], "]"}], ":=", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     FractionBox[
+      RowBox[{"id", " ", 
+       SuperscriptBox["is", 
+        RowBox[{"1", "-", "\[Kappa]"}]]}], 
+      RowBox[{
+       SubscriptBox["I0", "idx"], " ", 
+       SubscriptBox["\[CapitalLambda]", "idx"]}]], ")"}], 
+    FractionBox["1", "\[Kappa]"]]}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"VGSP", "[", 
+    RowBox[{"id_", ",", "vs_", ",", "idx_", ",", " ", 
+     RowBox[{"temp_:", "\"\<\>\""}]}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Simplify", "[", 
+     RowBox[{"vgs", "/.", " ", 
+      RowBox[{"Refine", "[", 
+       RowBox[{
+        RowBox[{"Solve", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"IDP", "[", 
+            RowBox[{"vgs", ",", "vs", ",", "idx", ",", "temp"}], "]"}], "==", 
+           "id"}], ",", "vgs", ",", "Reals"}], "]"}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Subscript", "[", 
+           RowBox[{"I0", ",", " ", "idx"}], "]"}], ">", "0"}], "&&", 
+         RowBox[{"id", ">", "0"}], "&&", 
+         RowBox[{
+          RowBox[{"Subscript", "[", 
+           RowBox[{"\[CapitalLambda]", ",", " ", "idx"}], "]"}], ">", "0"}], "&&", 
+         RowBox[{"vs", ">=", "0"}]}]}], "]"}]}], "]"}], "[", 
+    RowBox[{"[", "1", "]"}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"VGSN", "[", 
+     RowBox[{"id_", ",", "vs_", ",", "idx_", ",", " ", 
+      RowBox[{"temp_:", "\"\<\>\""}]}], "]"}], ":=", 
+    RowBox[{
+     RowBox[{"Simplify", "[", 
+      RowBox[{"vgs", "/.", " ", 
+       RowBox[{"Refine", "[", 
+        RowBox[{
+         RowBox[{"Solve", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"IDN", "[", 
+             RowBox[{"vgs", ",", "vs", ",", "idx", ",", "temp"}], "]"}], "==",
+             "id"}], ",", "vgs", ",", "Reals"}], "]"}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Subscript", "[", 
+            RowBox[{"I0", ",", " ", "idx"}], "]"}], ">", "0"}], "&&", 
+          RowBox[{"id", ">", "0"}], "&&", 
+          RowBox[{
+           RowBox[{"Subscript", "[", 
+            RowBox[{"\[CapitalLambda]", ",", " ", "idx"}], "]"}], ">", "0"}], 
+          "&&", 
+          RowBox[{"vs", ">=", "0"}]}]}], "]"}]}], "]"}], "[", 
+     RowBox[{"[", "1", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Synapse", " ", "Circuit"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"SynapseBiasWeight", "[", 
+     RowBox[{"dimlessW_", ",", "leakSoma_", ",", "leakSynapse_"}], "]"}], ":=", 
+    FractionBox[
+     RowBox[{"dimlessW", " ", 
+      SuperscriptBox["leakSoma", 
+       FractionBox["1", "\[Kappa]"]]}], 
+     SuperscriptBox["leakSynapse", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", 
+       FractionBox["1", "\[Kappa]"]}]]]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Soma", " ", "Circuit"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SomaBiasInput", "[", 
+   RowBox[{"dimlessI_", ",", " ", "leakSoma_"}], "]"}], ":=", 
+  RowBox[{"dimlessI", " ", "leakSoma"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"BiasLeak", "[", 
+     RowBox[{"\[Tau]_", ",", " ", "cap_", ",", "temp_"}], "]"}], ":=", 
+    FractionBox[
+     RowBox[{"cap", " ", 
+      RowBox[{"UT", "[", "temp", "]"}]}], "\[Tau]"]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"End", "[", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"EndPackage", "[", "]"}], ";"}]}], "Input",
+ CellOpen->True,
+ InitializationCell->True,
+ CellChangeTimes->{{3.632856883676853*^9, 3.632856983299752*^9}, 
+   3.632857166055111*^9, {3.632858282087276*^9, 3.6328582967499037`*^9}, 
+   3.632858377408671*^9, {3.632858995138608*^9, 3.632859042561405*^9}, 
+   3.632859093538053*^9, {3.632859171114452*^9, 3.632859190750741*^9}, {
+   3.632859229354396*^9, 3.6328592481303463`*^9}, 3.632859581040352*^9, {
+   3.6328599810717697`*^9, 3.6328600308688307`*^9}, 3.632860344141933*^9, {
+   3.6328604493876133`*^9, 3.632860468569613*^9}, {3.632860535765938*^9, 
+   3.632860543920211*^9}, {3.632860814782655*^9, 3.632860850747628*^9}, {
+   3.632861069401318*^9, 3.632861114673147*^9}, {3.632861145501007*^9, 
+   3.632861159167404*^9}, {3.6328612885869827`*^9, 3.632861289853018*^9}, {
+   3.632861348758319*^9, 3.6328613555050697`*^9}, {3.632861812262711*^9, 
+   3.632861947275937*^9}, {3.6328619824133873`*^9, 3.632862009347362*^9}, {
+   3.632862068036956*^9, 3.632862125533009*^9}, {3.632862905627532*^9, 
+   3.632862975142165*^9}, {3.633205538405479*^9, 3.633205584526013*^9}, {
+   3.6332076612175694`*^9, 3.633207683630522*^9}, {3.63320852347199*^9, 
+   3.633208549893342*^9}, {3.633208589260621*^9, 3.6332086068059387`*^9}, {
+   3.633208662442329*^9, 3.633208662826562*^9}, {3.6332089278209963`*^9, 
+   3.633208928146249*^9}, {3.639237322919961*^9, 3.639237340308751*^9}}]
+},
+AutoGeneratedPackage->Automatic,
+WindowSize->{1652, 1030},
+WindowMargins->{{-7, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 12969, 335, 1183, "Input",
+ CellOpen->True,
+ InitializationCell->True],
+Cell[13530, 357, 2706, 60, 394, "Input",
+ CellOpen->True,
+ InitializationCell->True],
+Cell[16239, 419, 9299, 250, 851, "Input",
+ CellOpen->True,
+ InitializationCell->True]
+}
+]
+*)
+
+(* End of internal cache information *)

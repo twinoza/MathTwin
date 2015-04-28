@@ -1,0 +1,7 @@
+(* ::Package:: *)
+
+ShowInputCells[sh_]:=
+SetOptions[#,CellOpen->sh]&/@Cells[EvaluationNotebook[],CellStyle->{"Input"}];
+
+SetOptions[$FrontEndSession, DockedCells->Cell[BoxData[DynamicModuleBox[{showHide$$=True},TemplateBox[{"\"Show Input \"",CheckboxBox[Dynamic[showHide$$,{(showHide$$=#)&,ShowInputCells[showHide$$]&}]]},"RowDefault"],DynamicModuleValues:>{}]],"DockedCell"]]
+SetOptions[$FrontEndSession,WindowToolbars->{"RulerBar","EditBar"}]
