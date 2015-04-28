@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    899115,      16460]
-NotebookOptionsPosition[    892495,      16246]
-NotebookOutlinePosition[    893277,      16272]
-CellTagsIndexPosition[    893234,      16269]
+NotebookDataLength[    917805,      17022]
+NotebookOptionsPosition[    910142,      16781]
+NotebookOutlinePosition[    910922,      16807]
+CellTagsIndexPosition[    910879,      16804]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1612,6 +1612,11 @@ Cell["ADC Mismatch", "Subsection",
  CellChangeTimes->{{3.638565529529151*^9, 3.6385655314956293`*^9}, {
   3.638910783513392*^9, 3.638910784119899*^9}}],
 
+Cell[CellGroupData[{
+
+Cell["Background", "Subsubsection",
+ CellChangeTimes->{{3.639167485683757*^9, 3.639167486811747*^9}}],
+
 Cell[TextData[{
  "This section will analyze the 1V ADC design that is an adaptation of the \
 New Gray Code ADC that is described on the wiki.  The goal of this analysis \
@@ -1706,8 +1711,24 @@ that the signal that we are trying to digitize is ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["I", "inV"], TraditionalForm]]],
- " on the wiki.  These naming conventions also apply to the output currents. \
-\n\nTransistors ",
+ " on the wiki.  These naming conventions also apply to the output currents. "
+}], "Text",
+ CellChangeTimes->{{3.638574196226016*^9, 3.6385742433499413`*^9}, {
+   3.638576947169384*^9, 3.638576947321929*^9}, {3.638583195098085*^9, 
+   3.638583210727099*^9}, {3.6385866406172333`*^9, 3.638586744542201*^9}, {
+   3.638590538214889*^9, 3.638590554196527*^9}, {3.638590668113895*^9, 
+   3.638590698166869*^9}, 3.638843694013208*^9, {3.638843729396935*^9, 
+   3.638843737274762*^9}, {3.639152820722786*^9, 3.639152839705645*^9}, {
+   3.639157550393549*^9, 3.639157902438366*^9}, {3.639158245995489*^9, 
+   3.639158319043293*^9}, {3.63915835370157*^9, 3.639158514878839*^9}, {
+   3.639158716386036*^9, 3.639158763884326*^9}, {3.639159029434001*^9, 
+   3.639159041660637*^9}, {3.639159078502294*^9, 3.6391592079538918`*^9}, {
+   3.639159381556219*^9, 3.63915938226781*^9}, {3.639162754330524*^9, 
+   3.639163099504271*^9}, {3.639164637130928*^9, 3.6391646499465*^9}, {
+   3.639167512474716*^9, 3.639167518646762*^9}}],
+
+Cell[TextData[{
+ "Transistors ",
  Cell[BoxData[
   FormBox[
    RowBox[{
@@ -1733,9 +1754,25 @@ that the signal that we are trying to digitize is ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["I", "Rout"], TraditionalForm]]],
- ".  \n\nBased on Ben\[CloseCurlyQuote]s DAC Mismatch analysis and his \
-characterization of transistor mismatch, we assume that the transistor \
-threshold difference, normalized by ",
+ ".  "
+}], "Text",
+ CellChangeTimes->{{3.638574196226016*^9, 3.6385742433499413`*^9}, {
+   3.638576947169384*^9, 3.638576947321929*^9}, {3.638583195098085*^9, 
+   3.638583210727099*^9}, {3.6385866406172333`*^9, 3.638586744542201*^9}, {
+   3.638590538214889*^9, 3.638590554196527*^9}, {3.638590668113895*^9, 
+   3.638590698166869*^9}, 3.638843694013208*^9, {3.638843729396935*^9, 
+   3.638843737274762*^9}, {3.639152820722786*^9, 3.639152839705645*^9}, {
+   3.639157550393549*^9, 3.639157902438366*^9}, {3.639158245995489*^9, 
+   3.639158319043293*^9}, {3.63915835370157*^9, 3.639158514878839*^9}, {
+   3.639158716386036*^9, 3.639158763884326*^9}, {3.639159029434001*^9, 
+   3.639159041660637*^9}, {3.639159078502294*^9, 3.6391592079538918`*^9}, {
+   3.639159381556219*^9, 3.63915938226781*^9}, {3.639162754330524*^9, 
+   3.639163099504271*^9}, {3.639164637130928*^9, 3.6391646499465*^9}, {
+   3.639167512474716*^9, 3.639167518646762*^9}}],
+
+Cell[TextData[{
+ "Based on Ben's DAC Mismatch analysis and his characterization of transistor \
+mismatch, we assume that the transistor threshold difference, normalized by ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["U", "T"], TraditionalForm]]],
@@ -1744,7 +1781,24 @@ threshold difference, normalized by ",
   FormBox[
    RowBox[{"Normal", "[", 
     RowBox[{"0", ",", " ", "\[Sigma]"}], "]"}], TraditionalForm]]],
- ". \n\nI assume that ",
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.638574196226016*^9, 3.6385742433499413`*^9}, {
+   3.638576947169384*^9, 3.638576947321929*^9}, {3.638583195098085*^9, 
+   3.638583210727099*^9}, {3.6385866406172333`*^9, 3.638586744542201*^9}, {
+   3.638590538214889*^9, 3.638590554196527*^9}, {3.638590668113895*^9, 
+   3.638590698166869*^9}, 3.638843694013208*^9, {3.638843729396935*^9, 
+   3.638843737274762*^9}, {3.639152820722786*^9, 3.639152839705645*^9}, {
+   3.639157550393549*^9, 3.639157902438366*^9}, {3.639158245995489*^9, 
+   3.639158319043293*^9}, {3.63915835370157*^9, 3.639158514878839*^9}, {
+   3.639158716386036*^9, 3.639158763884326*^9}, {3.639159029434001*^9, 
+   3.639159041660637*^9}, {3.639159078502294*^9, 3.6391592079538918`*^9}, {
+   3.639159381556219*^9, 3.63915938226781*^9}, {3.639162754330524*^9, 
+   3.639163099504271*^9}, {3.639164637130928*^9, 3.6391646499465*^9}, {
+   3.639167512474716*^9, 3.639167526458807*^9}}],
+
+Cell[TextData[{
+ "I assume that ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["I", "Sin"], TraditionalForm]]],
@@ -1762,7 +1816,24 @@ means that we don't need to include a mismatch term for ",
   FormBox[
    SubscriptBox["I", "Rin"], TraditionalForm]],
   FormatType->"TraditionalForm"],
- ".\n\nFor this mismatch analysis, I have denoted the four branch currents, ",
+ "."
+}], "Text",
+ CellChangeTimes->{{3.638574196226016*^9, 3.6385742433499413`*^9}, {
+   3.638576947169384*^9, 3.638576947321929*^9}, {3.638583195098085*^9, 
+   3.638583210727099*^9}, {3.6385866406172333`*^9, 3.638586744542201*^9}, {
+   3.638590538214889*^9, 3.638590554196527*^9}, {3.638590668113895*^9, 
+   3.638590698166869*^9}, 3.638843694013208*^9, {3.638843729396935*^9, 
+   3.638843737274762*^9}, {3.639152820722786*^9, 3.639152839705645*^9}, {
+   3.639157550393549*^9, 3.639157902438366*^9}, {3.639158245995489*^9, 
+   3.639158319043293*^9}, {3.63915835370157*^9, 3.639158514878839*^9}, {
+   3.639158716386036*^9, 3.639158763884326*^9}, {3.639159029434001*^9, 
+   3.639159041660637*^9}, {3.639159078502294*^9, 3.6391592079538918`*^9}, {
+   3.639159381556219*^9, 3.63915938226781*^9}, {3.639162754330524*^9, 
+   3.639163099504271*^9}, {3.639164637130928*^9, 3.6391646499465*^9}, {
+   3.639167512474716*^9, 3.639167530213818*^9}}],
+
+Cell[TextData[{
+ "For this mismatch analysis, I have denoted the four branch currents, ",
  Cell[BoxData[
   FormBox[
    RowBox[{
@@ -1791,16 +1862,16 @@ distribution.  The mismatch constants will be written as as either ",
     SubscriptBox["I", "Sin"], " ", "or", " ", 
     SubscriptBox["I", "Rin"]}], TraditionalForm]],
   FormatType->"TraditionalForm"],
- ", respectively, where the _ is the unique identifier of the transistor that \
+ ", respectively, where _ is the unique identifier of the transistor that \
 differs.   For instance, ",
  Cell[BoxData[
   FormBox[
    RowBox[{
-    SubscriptBox["I", "Sin"], "=", 
+    OverscriptBox[
+     SubscriptBox["I", "Sin"], "_"], "=", 
     RowBox[{
      SubscriptBox["s", "B2"], 
-     OverscriptBox[
-      SubscriptBox["I", "Sin"], "_"]}]}], TraditionalForm]],
+     SubscriptBox["I", "Sin"]}]}], TraditionalForm]],
   FormatType->"TraditionalForm"],
  ", where if ",
  Cell[BoxData[
@@ -1821,9 +1892,9 @@ differs.   For instance, ",
  Cell[BoxData[
   FormBox[
    RowBox[{
-    SubscriptBox["I", "Sin"], "\[Equal]", " ", 
     OverscriptBox[
-     SubscriptBox["I", "Sin"], "_"]}], TraditionalForm]],
+     SubscriptBox["I", "Sin"], "_"], "\[Equal]", " ", 
+    SubscriptBox["I", "Sin"]}], TraditionalForm]],
   FormatType->"TraditionalForm"]
 }], "Text",
  CellChangeTimes->{{3.638574196226016*^9, 3.6385742433499413`*^9}, {
@@ -1837,7 +1908,9 @@ differs.   For instance, ",
    3.639158716386036*^9, 3.639158763884326*^9}, {3.639159029434001*^9, 
    3.639159041660637*^9}, {3.639159078502294*^9, 3.6391592079538918`*^9}, {
    3.639159381556219*^9, 3.63915938226781*^9}, {3.639162754330524*^9, 
-   3.639163099504271*^9}, {3.639164637130928*^9, 3.6391646499465*^9}}],
+   3.639163099504271*^9}, {3.639164637130928*^9, 3.6391646499465*^9}, {
+   3.639167512474716*^9, 3.639167530213818*^9}, {3.63916768679608*^9, 
+   3.639167687627666*^9}, {3.639169353067054*^9, 3.639169373727646*^9}}],
 
 Cell["\<\
 To begin with, we know, based on circuit current analysis,  that:\
@@ -1850,12 +1923,11 @@ To begin with, we know, based on circuit current analysis,  that:\
 Cell[BoxData[{
  FormBox[
   RowBox[{
-   SubscriptBox["I", "Sin"], "=", 
+   OverscriptBox[
+    SubscriptBox["I", "Sin"], "_"], "=", 
    RowBox[{
     SubscriptBox["s", "B2"], 
-    OverscriptBox[
-     SubscriptBox["I", "Sin"], "_"]}]}], 
-  TraditionalForm], "\[IndentingNewLine]", 
+    SubscriptBox["I", "Sin"]}]}], TraditionalForm], "\[IndentingNewLine]", 
  FormBox[
   RowBox[{
    OverscriptBox[
@@ -1894,7 +1966,8 @@ Cell[BoxData[{
   3.639164425438199*^9}, {3.639164456142229*^9, 3.639164527698406*^9}, {
   3.63916465429254*^9, 3.639164692099135*^9}, {3.639164814313446*^9, 
   3.639164835102166*^9}, {3.6391649317512712`*^9, 3.639164980501048*^9}, {
-  3.639165139150733*^9, 3.639165140868204*^9}}],
+  3.639165139150733*^9, 3.639165140868204*^9}, {3.639169383950891*^9, 
+  3.639169404387968*^9}}],
 
 Cell[TextData[{
  "Of these basic equations, the sixth ",
@@ -1926,7 +1999,8 @@ Cell[TextData[Cell[BoxData[
   3.63916465429254*^9, 3.639164692099135*^9}, {3.639164814313446*^9, 
   3.639164835102166*^9}, {3.6391649317512712`*^9, 3.639164980501048*^9}, {
   3.639165139150733*^9, 3.639165140868204*^9}}]], "Text",
- CellChangeTimes->{{3.639165199902487*^9, 3.6391652444382133`*^9}}],
+ CellChangeTimes->{{3.639165199902487*^9, 3.6391652444382133`*^9}, {
+  3.639169411321385*^9, 3.639169411321451*^9}}],
 
 Cell[TextData[{
  "Because of the nature of the upper portion of the circuit (the Min function \
@@ -1963,92 +2037,552 @@ absolute value of the difference between ",
 }], "Text",
  CellChangeTimes->{{3.639165272892799*^9, 3.6391652978007936`*^9}, {
   3.639166257909004*^9, 3.639166389934595*^9}, {3.6391665243911333`*^9, 
-  3.6391665476383867`*^9}}],
+  3.6391665476383867`*^9}, {3.639169417496827*^9, 3.6391694174968967`*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["I", "Rout"], "\[TildeEqual]", 
+    RowBox[{
+     OverscriptBox[
+      SubscriptBox["I", "Sin"], "_"], "-", 
+     OverscriptBox[
+      SubscriptBox["I", "Sin"], "_"], "+", 
+     SubscriptBox["I", "Rin"], "-", 
+     OverscriptBox[
+      SubscriptBox["I", "Sin"], "_"]}]}], "=", 
+   RowBox[{
+    SubscriptBox["I", "Rin"], "-", 
+    OverscriptBox[
+     SubscriptBox["I", "Sin"], "_"]}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["I", "Rout"], "\[TildeEqual]", 
+    RowBox[{
+     OverscriptBox[
+      SubscriptBox["I", "Sin"], "_"], "-", 
+     SubscriptBox["I", "Rin"], "+", 
+     SubscriptBox["I", "Rin"], "-", 
+     SubscriptBox["I", "Rin"]}]}], "=", 
+   RowBox[{
+    OverscriptBox[
+     SubscriptBox["I", "Sin"], "_"], "-", 
+    SubscriptBox["I", "Rin"]}]}], TraditionalForm]}], "DisplayFormula",
+ CellChangeTimes->{{3.63916635917493*^9, 3.639166482194613*^9}, {
+  3.639167350316971*^9, 3.639167391517767*^9}, {3.639169422478595*^9, 
+  3.6391694389779177`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Mismatch in ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "Sout"], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Subsubsection",
+ CellChangeTimes->{{3.6391674438795547`*^9, 3.639167452221188*^9}}],
+
+Cell["\<\
+The first thing to note when analyzing the ADC circuit, is that there are 4 \
+possible, high-level input situations depending on the following conditions:\
+\>", "Text",
+ CellChangeTimes->{{3.6391678100753736`*^9, 3.6391679127673807`*^9}, {
+  3.639168203178163*^9, 3.6391682114648027`*^9}}],
 
 Cell[TextData[{
  Cell[BoxData[
   FormBox[
    RowBox[{
-    RowBox[{
-     SubscriptBox["I", "Rout"], "\[TildeEqual]", 
-     RowBox[{
-      OverscriptBox[
-       SubscriptBox["I", "Sin"], "_"], "-", 
-      OverscriptBox[
-       SubscriptBox["I", "Sin"], "_"], "+", 
-      SubscriptBox["I", "Rin"], "-", 
-      OverscriptBox[
-       SubscriptBox["I", "Sin"], "_"]}]}], "=", 
-    RowBox[{
-     SubscriptBox["I", "Rin"], "-", 
-     OverscriptBox[
-      SubscriptBox["I", "Sin"], "_"]}]}], TraditionalForm]],
+    SubscriptBox["I", "Sin"], ">>", 
+    SubscriptBox["I", "Rin"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\t",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "Sin"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is much greater than ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "Rin"], TraditionalForm]],
   FormatType->"TraditionalForm"],
  "\n",
  Cell[BoxData[
   FormBox[
    RowBox[{
-    RowBox[{
-     SubscriptBox["I", "Rout"], "\[TildeEqual]", 
-     RowBox[{
-      OverscriptBox[
-       SubscriptBox["I", "Sin"], "_"], "-", 
-      SubscriptBox["I", "Rin"], "+", 
-      SubscriptBox["I", "Rin"], "-", 
-      SubscriptBox["I", "Rin"]}]}], "=", 
-    RowBox[{
-     OverscriptBox[
-      SubscriptBox["I", "Sin"], "_"], "-", 
-     SubscriptBox["I", "Rin"]}]}], TraditionalForm]],
-  FormatType->"TraditionalForm"]
-}], "Text",
- CellChangeTimes->{{3.63916635917493*^9, 3.639166482194613*^9}}],
-
-Cell[BoxData[Cell[TextData[Cell[BoxData[
+    SubscriptBox["I", "Sin"], "\[GreaterTilde]", 
+    SubscriptBox["I", "Rin"]}], TraditionalForm]]],
+ "\t",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "Sin"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is only barely greater than ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "Rin"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
   FormBox[
    RowBox[{
-    SubscriptBox["I", 
-     RowBox[{"0", ":", "T"}]], "=", " ", 
-    RowBox[{
-     SubscriptBox["I", "0"], "(", 
-     RowBox[{"1", "+", 
-      SubscriptBox["\[Alpha]", "T"]}], ")"}]}], TraditionalForm]]]]]], "Text",
- CellChangeTimes->{{3.638640419660696*^9, 3.6386404274808273`*^9}, {
-  3.63864049242416*^9, 3.638640529897069*^9}, {3.638641134491078*^9, 
-  3.6386411392518187`*^9}, {3.638642190608609*^9, 3.638642200472094*^9}, {
-  3.639158202162203*^9, 3.639158217864094*^9}}],
-
-Cell["The current for bit 1 is then", "Text",
- CellChangeTimes->{{3.638640675581675*^9, 3.638640705154214*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  SubscriptBox["I", "1"], "=", " ", 
-  RowBox[{
-   SubscriptBox["\[Alpha]", "1"], 
-   SubscriptBox["I", 
-    RowBox[{"0", ":", "T"}]]}]}]], "Text",
- CellChangeTimes->{{3.638640707354486*^9, 3.638640769641604*^9}, {
-   3.6386410873786297`*^9, 3.63864109566077*^9}, 3.638641141238255*^9, {
-   3.6386418033864594`*^9, 3.638641803643208*^9}, {3.638642193703246*^9, 
-   3.638642218304735*^9}}],
-
-Cell["and the total current through bits 1 and 0 is", "Text",
- CellChangeTimes->{{3.6386422202684917`*^9, 3.638642231013051*^9}, 
-   3.6386435902932367`*^9, 3.638648476237438*^9}],
-
-Cell[BoxData[
- RowBox[{
-  SubscriptBox["I", 
-   RowBox[{"1", ":", "0"}]], " ", "=", " ", 
-  RowBox[{
+    SubscriptBox["I", "Sin"], "\[LessTilde]", 
+    SubscriptBox["I", "Rin"]}], TraditionalForm]]],
+ "\t",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "Sin"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is only barely smaller than ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "Rin"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
    RowBox[{
-    SubscriptBox["\[Alpha]", "1"], 
-    SubscriptBox["I", 
-     RowBox[{"0", ":", "T"}]]}], " ", "+", " ", 
-   SubscriptBox["I", "0"]}]}]], "Text",
- CellChangeTimes->{
-  3.6386422355607758`*^9, {3.638643576736993*^9, 3.6386435830249577`*^9}}],
+    SubscriptBox["I", "Sin"], 
+    RowBox[{"<<", 
+     SubscriptBox["I", "Rin"]}]}], TraditionalForm]]],
+ "\t",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "Sin"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is much smaller than ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "Rin"], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.6391679157788153`*^9, 3.639168037518445*^9}, 
+   3.6391683701606903`*^9}],
+
+Cell[TextData[{
+ "In the first and last situations, the analysis is much easier than in the ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "nd"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " or ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["3", "rd"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " situations.  This results from the fact that when the values of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["I", "Sin"], "\[TildeEqual]", 
+    SubscriptBox["I", "Rin"]}], TraditionalForm]]],
+ ", then the mismatch can cause the circuit to activate ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "S1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "R2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " simultaneously.  This is a confounding factor because if there was no \
+mismatch, then we could assume that if ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "S1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is active, then so are ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["I", "S2"], ",", 
+    SubscriptBox["I", "S3"], ",", 
+    RowBox[{"and", " ", 
+     SubscriptBox["I", "S4"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".  This would also apply to the ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "R_"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " currents if they were active."
+}], "Text",
+ CellChangeTimes->{{3.639168390345772*^9, 3.6391683937115183`*^9}, {
+  3.639168760609371*^9, 3.639168817181849*^9}, {3.6391688768839617`*^9, 
+  3.63916901908116*^9}, {3.6391690844578323`*^9, 3.639169088173995*^9}, {
+  3.63917100189047*^9, 3.6391710145517693`*^9}}],
+
+Cell[TextData[{
+ "In the first case (",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["I", "Sin"], ">>", 
+    SubscriptBox["I", "Rin"]}], TraditionalForm]]],
+ "), the following equations would apply:"
+}], "Text",
+ CellChangeTimes->{{3.6391692373916197`*^9, 3.6391692898076153`*^9}, {
+  3.639169634842717*^9, 3.6391696367668743`*^9}, {3.639169672737556*^9, 
+  3.639169673105153*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   SubscriptBox["I", "1"], "=", 
+   RowBox[{
+    SubscriptBox["s", "R1"], 
+    SubscriptBox["I", "Rin"]}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{
+   SubscriptBox["I", "2"], "=", 
+   RowBox[{
+    SubscriptBox["s", "R2"], 
+    SubscriptBox["I", "Rin"]}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{
+   SubscriptBox["I", "3"], "=", 
+   RowBox[{
+    SubscriptBox["s", "R3"], 
+    SubscriptBox["I", "Rin"]}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{
+   SubscriptBox["I", "4"], "=", 
+   SubscriptBox["I", "Rin"]}], TraditionalForm]}], "DisplayFormula",
+ CellChangeTimes->{{3.639169293850853*^9, 3.6391693012267036`*^9}, {
+   3.639169508044991*^9, 3.639169585116385*^9}, {3.639169759016431*^9, 
+   3.639169842302761*^9}, 3.639169926664468*^9, {3.639169970942939*^9, 
+   3.639169982836217*^9}, {3.639170022637849*^9, 3.639170051616931*^9}, 
+   3.6391706241109667`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubscriptBox["I", "Sout"], "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["s", "R2"], "+", 
+      SubscriptBox["s", "R3"]}], ")"}], 
+    SubscriptBox["I", "Rin"]}]}], TraditionalForm]], "DisplayFormula",
+ CellChangeTimes->{{3.639169293850853*^9, 3.6391693012267036`*^9}, {
+   3.639169508044991*^9, 3.639169585116385*^9}, {3.639169759016431*^9, 
+   3.639169842302761*^9}, 3.639169926664468*^9, {3.639169970942939*^9, 
+   3.639169982836217*^9}, {3.639170022637849*^9, 3.639170051616931*^9}, 
+   3.6391706241109667`*^9},
+ Background->GrayLevel[0.85]],
+
+Cell[TextData[{
+ "In the last case (",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["I", "Sin"], 
+    RowBox[{"<<", 
+     SubscriptBox["I", "Rin"]}]}], TraditionalForm]]],
+ "), the following equations would apply:"
+}], "Text",
+ CellChangeTimes->{{3.639168390345772*^9, 3.639168400087716*^9}, {
+  3.639169645500374*^9, 3.6391696586161222`*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   SubscriptBox["I", "1"], "=", 
+   RowBox[{
+    SubscriptBox["s", "B2"], 
+    SubscriptBox["I", "Sin"]}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{
+   SubscriptBox["I", "2"], "=", 
+   RowBox[{
+    SubscriptBox["s", "S2"], 
+    SubscriptBox["s", "B2"], 
+    SubscriptBox["I", "Sin"]}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{
+   SubscriptBox["I", "3"], "=", 
+   RowBox[{
+    SubscriptBox["s", "S3"], 
+    SubscriptBox["s", "B2"], 
+    SubscriptBox["I", "Sin"]}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{
+   SubscriptBox["I", "4"], "=", 
+   RowBox[{
+    SubscriptBox["s", "S4"], 
+    SubscriptBox["s", "B2"], 
+    SubscriptBox["I", "Sin"]}]}], TraditionalForm]}], "DisplayFormula",
+ CellChangeTimes->{{3.639169293850853*^9, 3.6391693012267036`*^9}, {
+   3.639169508044991*^9, 3.639169585116385*^9}, {3.6391698497621193`*^9, 
+   3.639169849763372*^9}, {3.639170074171978*^9, 3.639170083526202*^9}, 
+   3.6391706267103167`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubscriptBox["I", "Sout"], "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["s", "S2"], "+", 
+      SubscriptBox["s", "S3"]}], ")"}], 
+    SubscriptBox["I", "Sin"]}]}], TraditionalForm]], "DisplayFormula",
+ CellChangeTimes->{{3.639169293850853*^9, 3.6391693012267036`*^9}, {
+   3.639169508044991*^9, 3.639169585116385*^9}, {3.6391698497621193`*^9, 
+   3.639169849763372*^9}, {3.639170074171978*^9, 3.639170083526202*^9}, 
+   3.6391706267103167`*^9},
+ Background->GrayLevel[0.85]],
+
+Cell[TextData[{
+ "In the ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "nd"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["3", "rd"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " cases (",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["I", "Sin"], "\[GreaterTilde]", 
+    SubscriptBox["I", "Rin"]}], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["I", "Sin"], "\[LessTilde]", 
+    SubscriptBox["I", "Rin"]}], TraditionalForm]]],
+ "), the following equations would apply.  It should be noted that we are \
+handling the ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "nd"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["3", "rd"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " cases as the same situation because these situations are the same as \
+saying when ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["I", "Sin"], "\[TildeEqual]", 
+    SubscriptBox["I", "Rin"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", where roughly equals is defined as within the mismatch\[CloseCurlyQuote]s \
+effect to cause a transistor to turn on when it\[CloseCurlyQuote]s native \
+value deems that it should turn off."
+}], "Text",
+ CellChangeTimes->{{3.639168390345772*^9, 3.639168398511833*^9}, {
+  3.639170224670789*^9, 3.6391704392519407`*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   SubscriptBox["I", "1"], "=", 
+   RowBox[{"Min", "(", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["s", "R1"], 
+      SubscriptBox["I", "Rin"]}], ",", 
+     RowBox[{
+      SubscriptBox["s", "B2"], 
+      SubscriptBox["I", "Sin"]}]}], ")"}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{
+   SubscriptBox["I", "2"], "=", 
+   RowBox[{"Min", "(", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["s", "R2"], 
+      SubscriptBox["I", "Rin"]}], ",", 
+     RowBox[{
+      SubscriptBox["s", "S2"], 
+      SubscriptBox["s", "B2"], 
+      SubscriptBox["I", "Sin"]}]}], ")"}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{
+   SubscriptBox["I", "3"], "=", 
+   RowBox[{"Min", "(", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["s", "R3"], 
+      SubscriptBox["I", "Rin"]}], ",", 
+     RowBox[{
+      SubscriptBox["s", "S3"], 
+      SubscriptBox["s", "B2"], 
+      SubscriptBox["I", "Sin"]}]}], ")"}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{
+   SubscriptBox["I", "4"], "=", 
+   RowBox[{"Min", "(", 
+    RowBox[{
+     SubscriptBox["I", "Rin"], ",", 
+     RowBox[{
+      SubscriptBox["s", "S4"], 
+      SubscriptBox["s", "B2"], 
+      SubscriptBox["I", "Sin"]}]}], ")"}]}], 
+  TraditionalForm]}], "DisplayFormula",
+ CellChangeTimes->{{3.639170252261854*^9, 3.639170254545216*^9}, {
+  3.6391704514853992`*^9, 3.639170486827278*^9}, {3.6391707803793983`*^9, 
+  3.6391708868277607`*^9}, {3.639170933958953*^9, 3.639170953696116*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubscriptBox["I", "Sout"], "=", 
+   RowBox[{
+    RowBox[{"Min", "(", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["s", "R2"], 
+       SubscriptBox["I", "Rin"]}], ",", 
+      RowBox[{
+       SubscriptBox["s", "S2"], 
+       SubscriptBox["s", "B2"], 
+       SubscriptBox["I", "Sin"]}]}], ")"}], "+", 
+    RowBox[{"Min", "(", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["s", "R3"], 
+       SubscriptBox["I", "Rin"]}], ",", 
+      RowBox[{
+       SubscriptBox["s", "S3"], 
+       SubscriptBox["s", "B2"], 
+       SubscriptBox["I", "Sin"]}]}], ")"}]}]}], 
+  TraditionalForm]], "DisplayFormula",
+ CellChangeTimes->{{3.639170252261854*^9, 3.639170254545216*^9}, {
+  3.6391704514853992`*^9, 3.639170486827278*^9}, {3.6391707803793983`*^9, 
+  3.6391708868277607`*^9}, {3.639170933958953*^9, 3.639170953696116*^9}},
+ Background->GrayLevel[0.85]],
+
+Cell[TextData[{
+ "It should be noted that this final result is actually the most general form \
+of the mismatch of ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "Sout"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " because it also applies to the first two cases.  As such, moving forward, \
+I will be using the 4 equations for each path\[CloseCurlyQuote]s current \
+mismatch in my analysis."
+}], "Text",
+ CellChangeTimes->{{3.639171502570571*^9, 3.639171592166915*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Mismatch in ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "Rout"], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Subsubsection",
+ CellChangeTimes->{{3.639167456092875*^9, 3.639167459645553*^9}}],
+
+Cell[TextData[{
+ "To analyze the mismatch in ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "Rout"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", we start at the equation that most generally defines ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "Rout"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".  From there, we use our ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "Sout"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " analysis to apply the mismatch that ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["I", "4"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " would introduce to the circuit."
+}], "Text",
+ CellChangeTimes->{{3.639171697361162*^9, 3.6391717712450657`*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   SubscriptBox["I", "Rout"], "=", 
+   RowBox[{
+    OverscriptBox[
+     SubscriptBox["I", "Sin"], "_"], "-", 
+    SubscriptBox["I", "1"], "+", 
+    SubscriptBox["I", "Rin"], "-", 
+    SubscriptBox["I", "4"]}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{
+   SubscriptBox["I", "Rout"], "=", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["s", "B2"], 
+     SubscriptBox["I", "Sin"]}], "-", 
+    SubscriptBox["I", "1"], "+", 
+    SubscriptBox["I", "Rin"], "-", 
+    SubscriptBox["I", "4"]}]}], TraditionalForm]}], "DisplayFormula",
+ CellChangeTimes->{{3.639171459767262*^9, 3.639171494669066*^9}, {
+  3.639171603403657*^9, 3.639171681013866*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubscriptBox["I", "Rout"], "=", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["s", "B2"], 
+     SubscriptBox["I", "Sin"]}], "-", 
+    RowBox[{"Min", "(", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["s", "R1"], 
+       SubscriptBox["I", "Rin"]}], ",", 
+      RowBox[{
+       SubscriptBox["s", "B2"], 
+       SubscriptBox["I", "Sin"]}]}], ")"}], "+", 
+    SubscriptBox["I", "Rin"], "-", 
+    RowBox[{"Min", "(", 
+     RowBox[{
+      SubscriptBox["I", "Rin"], ",", 
+      RowBox[{
+       SubscriptBox["s", "S4"], 
+       SubscriptBox["s", "B2"], 
+       SubscriptBox["I", "Sin"]}]}], ")"}]}]}], 
+  TraditionalForm]], "DisplayFormula",
+ CellChangeTimes->{{3.639171459767262*^9, 3.639171494669066*^9}, {
+  3.639171603403657*^9, 3.63917165818664*^9}},
+ Background->GrayLevel[0.85]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Ben\[CloseCurlyQuote]s Old DAC Analysis (To see how he created the actual \
+equations recursively and such.\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.639167562219757*^9, 3.639167565515361*^9}, {
+   3.639167596056891*^9, 3.639167605277763*^9}, 3.639170019169598*^9}],
 
 Cell[TextData[{
  "Extending this, for any bit ",
@@ -2555,6 +3089,7 @@ Cell[BoxData[
    3.6388503407085533`*^9}, 3.6388503991159887`*^9, {3.6388504554561367`*^9, 
    3.638850461754211*^9}, 3.638850598028185*^9, 3.638851781730339*^9}]
 }, Open  ]]
+}, Closed]]
 }, Open  ]]
 }, Open  ]],
 
@@ -16258,7 +16793,7 @@ $CellContext`ShowInputCells[$CellContext`showHide$$]& }]]}, "RowDefault"],
 PrintingCopies->1,
 PrintingPageRange->{1, Automatic},
 FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
-StyleDefinitions->"Bosphorus.nb"
+StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
 
@@ -16275,10 +16810,10 @@ Cell[558, 20, 136, 3, 32, "Input",
  CellOpen->True],
 Cell[CellGroupData[{
 Cell[719, 27, 108, 1, 47, "Subsection"],
-Cell[830, 30, 234, 4, 31, "Text"],
-Cell[1067, 36, 505, 14, 32, "Input",
+Cell[830, 30, 234, 4, 23, "Text"],
+Cell[1067, 36, 505, 14, 23, "Input",
  CellOpen->True],
-Cell[1575, 52, 1282, 32, 165, "Input",
+Cell[1575, 52, 1282, 32, 40, "Input",
  CellOpen->True]
 }, Closed]],
 Cell[CellGroupData[{
@@ -16289,176 +16824,203 @@ Cell[3279, 102, 91396, 1503, 447, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[94712, 1610, 151, 2, 47, "Subsection"],
-Cell[94866, 1614, 1783, 43, 95, "Text"],
-Cell[96652, 1659, 767, 24, 70, "DisplayFormula"],
-Cell[97422, 1685, 5358, 154, 349, "Text"],
-Cell[102783, 1841, 355, 6, 31, "Text"],
-Cell[103141, 1849, 1547, 47, 146, "DisplayFormula"],
-Cell[104691, 1898, 514, 12, 32, "Text"],
-Cell[105208, 1912, 781, 16, 35, "Text"],
-Cell[105992, 1930, 1204, 35, 59, "Text"],
-Cell[107199, 1967, 1082, 37, 56, "Text"],
-Cell[108284, 2006, 541, 12, 31, "Text"],
-Cell[108828, 2020, 111, 1, 30, "Text"],
-Cell[108942, 2023, 412, 10, 31, "Text"],
-Cell[109357, 2035, 179, 2, 31, "Text"],
-Cell[109539, 2039, 355, 11, 31, "Text"],
-Cell[109897, 2052, 326, 9, 31, "Text"],
-Cell[110226, 2063, 924, 25, 54, "Text"],
-Cell[111153, 2090, 2137, 57, 106, "Input",
- CellOpen->True],
-Cell[113293, 2149, 510, 13, 32, "Text"],
-Cell[113806, 2164, 596, 15, 50, "Text"],
-Cell[114405, 2181, 132, 1, 31, "Text"],
 Cell[CellGroupData[{
-Cell[114562, 2186, 297, 7, 55, "Input",
- CellOpen->True],
-Cell[114862, 2195, 1858, 53, 32, "Output"]
+Cell[94888, 1616, 101, 1, 37, "Subsubsection"],
+Cell[94992, 1619, 1783, 43, 95, "Text"],
+Cell[96778, 1664, 767, 24, 70, "DisplayFormula"],
+Cell[97548, 1690, 1768, 37, 73, "Text"],
+Cell[99319, 1729, 1683, 41, 55, "Text"],
+Cell[101005, 1772, 1374, 25, 54, "Text"],
+Cell[102382, 1799, 1458, 33, 32, "Text"],
+Cell[103843, 1834, 2982, 78, 103, "Text"],
+Cell[106828, 1914, 355, 6, 31, "Text"],
+Cell[107186, 1922, 1592, 47, 146, "DisplayFormula"],
+Cell[108781, 1971, 514, 12, 32, "Text"],
+Cell[109298, 1985, 830, 17, 35, "Text"],
+Cell[110131, 2004, 1252, 35, 59, "Text"],
+Cell[111386, 2041, 1060, 33, 53, "DisplayFormula"]
 }, Open  ]],
-Cell[116735, 2251, 470, 17, 35, "Text"],
 Cell[CellGroupData[{
-Cell[117230, 2272, 1514, 38, 59, "Input",
- CellOpen->True],
-Cell[118747, 2312, 1853, 64, 211, "Output"]
+Cell[112483, 2079, 229, 7, 37, "Subsubsection"],
+Cell[112715, 2088, 299, 5, 31, "Text"],
+Cell[113017, 2095, 1737, 68, 95, "Text"],
+Cell[114757, 2165, 1740, 52, 78, "Text"],
+Cell[116500, 2219, 391, 11, 32, "Text"],
+Cell[116894, 2232, 916, 27, 92, "DisplayFormula"],
+Cell[117813, 2261, 607, 15, 42, "DisplayFormula"],
+Cell[118423, 2278, 353, 11, 32, "Text"],
+Cell[118779, 2291, 981, 31, 92, "DisplayFormula"],
+Cell[119763, 2324, 537, 14, 42, "DisplayFormula"],
+Cell[120303, 2340, 1455, 47, 74, "Text"],
+Cell[121761, 2389, 1465, 49, 92, "DisplayFormula"],
+Cell[123229, 2440, 884, 27, 42, "DisplayFormula"],
+Cell[124116, 2469, 484, 11, 52, "Text"]
 }, Open  ]],
-Cell[120615, 2379, 166, 2, 31, "Text"],
 Cell[CellGroupData[{
-Cell[120806, 2385, 1413, 33, 55, "Input",
+Cell[124637, 2485, 227, 7, 37, "Subsubsection"],
+Cell[124867, 2494, 845, 28, 51, "Text"],
+Cell[125715, 2524, 679, 21, 51, "DisplayFormula"],
+Cell[126397, 2547, 817, 27, 42, "DisplayFormula"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[127251, 2579, 278, 5, 37, "Subsubsection"],
+Cell[127532, 2586, 326, 9, 23, "Text"],
+Cell[127861, 2597, 924, 25, 40, "Text"],
+Cell[128788, 2624, 2137, 57, 87, "Input",
  CellOpen->True],
-Cell[122222, 2420, 4510, 135, 103, "Output"]
+Cell[130928, 2683, 510, 13, 23, "Text"],
+Cell[131441, 2698, 596, 15, 54, "Text"],
+Cell[132040, 2715, 132, 1, 23, "Text"],
+Cell[CellGroupData[{
+Cell[132197, 2720, 297, 7, 40, "Input",
+ CellOpen->True],
+Cell[132497, 2729, 1858, 53, 23, "Output"]
+}, Open  ]],
+Cell[134370, 2785, 470, 17, 27, "Text"],
+Cell[CellGroupData[{
+Cell[134865, 2806, 1514, 38, 25, "Input",
+ CellOpen->True],
+Cell[136382, 2846, 1853, 64, 215, "Output"]
+}, Open  ]],
+Cell[138250, 2913, 166, 2, 23, "Text"],
+Cell[CellGroupData[{
+Cell[138441, 2919, 1413, 33, 23, "Input",
+ CellOpen->True],
+Cell[139857, 2954, 4510, 135, 101, "Output"]
 }, Open  ]]
+}, Closed]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[126793, 2562, 156, 2, 67, "Section"],
+Cell[144440, 3097, 156, 2, 67, "Section"],
 Cell[CellGroupData[{
-Cell[126974, 2568, 151, 2, 47, "Subsection"],
-Cell[127128, 2572, 1577, 46, 96, "Text"],
-Cell[128708, 2620, 279, 5, 31, "Text"],
-Cell[128990, 2627, 434, 11, 31, "Text"],
-Cell[129427, 2640, 111, 1, 30, "Text"],
-Cell[129541, 2643, 412, 10, 31, "Text"],
-Cell[129956, 2655, 179, 2, 31, "Text"],
-Cell[130138, 2659, 355, 11, 31, "Text"],
-Cell[130496, 2672, 359, 10, 31, "Text"],
-Cell[130858, 2684, 924, 25, 54, "Text"],
-Cell[131785, 2711, 2137, 57, 106, "Input",
+Cell[144621, 3103, 151, 2, 23, "Subsection"],
+Cell[144775, 3107, 1577, 46, 71, "Text"],
+Cell[146355, 3155, 279, 5, 23, "Text"],
+Cell[146637, 3162, 434, 11, 23, "Text"],
+Cell[147074, 3175, 111, 1, 23, "Text"],
+Cell[147188, 3178, 412, 10, 23, "Text"],
+Cell[147603, 3190, 179, 2, 23, "Text"],
+Cell[147785, 3194, 355, 11, 23, "Text"],
+Cell[148143, 3207, 359, 10, 23, "Text"],
+Cell[148505, 3219, 924, 25, 40, "Text"],
+Cell[149432, 3246, 2137, 57, 87, "Input",
  CellOpen->True],
-Cell[133925, 2770, 510, 13, 32, "Text"],
-Cell[134438, 2785, 596, 15, 50, "Text"],
-Cell[135037, 2802, 132, 1, 31, "Text"],
+Cell[151572, 3305, 510, 13, 23, "Text"],
+Cell[152085, 3320, 596, 15, 54, "Text"],
+Cell[152684, 3337, 132, 1, 23, "Text"],
 Cell[CellGroupData[{
-Cell[135194, 2807, 297, 7, 55, "Input",
+Cell[152841, 3342, 297, 7, 40, "Input",
  CellOpen->True],
-Cell[135494, 2816, 1858, 53, 32, "Output"]
+Cell[153141, 3351, 1858, 53, 32, "Output"]
 }, Open  ]],
-Cell[137367, 2872, 470, 17, 35, "Text"],
+Cell[155014, 3407, 470, 17, 35, "Text"],
 Cell[CellGroupData[{
-Cell[137862, 2893, 1514, 38, 59, "Input",
+Cell[155509, 3428, 1514, 38, 59, "Input",
  CellOpen->True],
-Cell[139379, 2933, 1853, 64, 211, "Output"]
+Cell[157026, 3468, 1853, 64, 211, "Output"]
 }, Open  ]],
-Cell[141247, 3000, 166, 2, 31, "Text"],
+Cell[158894, 3535, 166, 2, 31, "Text"],
 Cell[CellGroupData[{
-Cell[141438, 3006, 1413, 33, 55, "Input",
+Cell[159085, 3541, 1413, 33, 55, "Input",
  CellOpen->True],
-Cell[142854, 3041, 4510, 135, 103, "Output"]
+Cell[160501, 3576, 4510, 135, 103, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[147413, 3182, 129, 1, 39, "Subsection"],
+Cell[165060, 3717, 129, 1, 39, "Subsection"],
 Cell[CellGroupData[{
-Cell[147567, 3187, 1273, 31, 55, "Input",
+Cell[165214, 3722, 1273, 31, 55, "Input",
  CellOpen->True],
-Cell[148843, 3220, 580, 12, 23, "Message"]
+Cell[166490, 3755, 580, 12, 23, "Message"]
 }, Open  ]],
-Cell[149438, 3235, 1171, 27, 77, "Input",
+Cell[167085, 3770, 1171, 27, 77, "Input",
  CellOpen->True],
-Cell[150612, 3264, 244, 5, 31, "Text"],
+Cell[168259, 3799, 244, 5, 31, "Text"],
 Cell[CellGroupData[{
-Cell[150881, 3273, 333, 8, 32, "Input",
+Cell[168528, 3808, 333, 8, 32, "Input",
  CellOpen->True],
-Cell[151217, 3283, 824, 24, 74, "Output"]
+Cell[168864, 3818, 824, 24, 74, "Output"]
 }, Open  ]],
-Cell[152056, 3310, 198, 3, 31, "Text"],
+Cell[169703, 3845, 198, 3, 31, "Text"],
 Cell[CellGroupData[{
-Cell[152279, 3317, 326, 8, 32, "Input",
+Cell[169926, 3852, 326, 8, 32, "Input",
  CellOpen->True],
-Cell[152608, 3327, 566, 18, 73, "Output"]
+Cell[170255, 3862, 566, 18, 73, "Output"]
 }, Open  ]],
-Cell[153189, 3348, 216, 4, 31, "Text"],
+Cell[170836, 3883, 216, 4, 31, "Text"],
 Cell[CellGroupData[{
-Cell[153430, 3356, 2902, 74, 209, "Input",
+Cell[171077, 3891, 2902, 74, 209, "Input",
  CellOpen->True],
-Cell[156335, 3432, 40923, 713, 239, "Output"]
+Cell[173982, 3967, 40923, 713, 239, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[197307, 4151, 100, 1, 47, "Subsection"],
-Cell[197410, 4154, 420, 13, 32, "Text"],
-Cell[197833, 4169, 2072, 51, 121, "Input",
+Cell[214954, 4686, 100, 1, 47, "Subsection"],
+Cell[215057, 4689, 420, 13, 32, "Text"],
+Cell[215480, 4704, 2072, 51, 121, "Input",
  CellOpen->True],
 Cell[CellGroupData[{
-Cell[199930, 4224, 4735, 103, 231, "Input",
+Cell[217577, 4759, 4735, 103, 231, "Input",
  CellOpen->True],
-Cell[204668, 4329, 292809, 4940, 725, 251597, 4263, "CachedBoxData", \
+Cell[222315, 4864, 292809, 4940, 725, 251597, 4263, "CachedBoxData", \
 "BoxData", "Output"]
 }, Open  ]],
-Cell[497492, 9272, 508, 16, 54, "Text"],
+Cell[515139, 9807, 508, 16, 54, "Text"],
 Cell[CellGroupData[{
-Cell[498025, 9292, 1681, 44, 77, "Input",
+Cell[515672, 9827, 1681, 44, 77, "Input",
  CellOpen->True],
-Cell[499709, 9338, 3665, 89, 242, "Output"],
-Cell[503377, 9429, 785, 21, 200, "Output"]
+Cell[517356, 9873, 3665, 89, 242, "Output"],
+Cell[521024, 9964, 785, 21, 200, "Output"]
 }, Open  ]],
-Cell[504177, 9453, 1021, 33, 33, "Text"],
+Cell[521824, 9988, 1021, 33, 33, "Text"],
 Cell[CellGroupData[{
-Cell[505223, 9490, 5018, 107, 209, "Input",
+Cell[522870, 10025, 5018, 107, 209, "Input",
  CellOpen->True],
-Cell[510244, 9599, 1647, 28, 116, "Output"]
+Cell[527891, 10134, 1647, 28, 116, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[511940, 9633, 112, 1, 47, "Subsection"],
-Cell[512055, 9636, 811, 25, 66, "Text"],
-Cell[512869, 9663, 150, 2, 31, "Text"],
-Cell[513022, 9667, 573, 12, 32, "Input",
+Cell[529587, 10168, 112, 1, 47, "Subsection"],
+Cell[529702, 10171, 811, 25, 66, "Text"],
+Cell[530516, 10198, 150, 2, 31, "Text"],
+Cell[530669, 10202, 573, 12, 32, "Input",
  CellOpen->True],
-Cell[513598, 9681, 2008, 49, 84, "Input",
+Cell[531245, 10216, 2008, 49, 84, "Input",
  CellOpen->True],
 Cell[CellGroupData[{
-Cell[515631, 9734, 518, 13, 32, "Input",
+Cell[533278, 10269, 518, 13, 32, "Input",
  CellOpen->True],
-Cell[516152, 9749, 355806, 5958, 1004, 282291, 4751, "CachedBoxData", \
+Cell[533799, 10284, 355806, 5958, 1004, 282291, 4751, "CachedBoxData", \
 "BoxData", "Output"]
 }, Open  ]],
-Cell[871973, 15710, 202, 4, 31, "Text"],
-Cell[872178, 15716, 276, 8, 31, "Text"],
+Cell[889620, 16245, 202, 4, 31, "Text"],
+Cell[889825, 16251, 276, 8, 31, "Text"],
 Cell[CellGroupData[{
-Cell[872479, 15728, 497, 14, 32, "Input",
+Cell[890126, 16263, 497, 14, 32, "Input",
  CellOpen->True],
-Cell[872979, 15744, 163, 2, 32, "Output"]
+Cell[890626, 16279, 163, 2, 32, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[873191, 15752, 97, 1, 47, "Subsection"],
-Cell[873291, 15755, 1663, 54, 100, "Text"],
-Cell[874957, 15811, 2327, 59, 19, "Input",
+Cell[890838, 16287, 97, 1, 47, "Subsection"],
+Cell[890938, 16290, 1663, 54, 100, "Text"],
+Cell[892604, 16346, 2327, 59, 19, "Input",
  CellOpen->True],
-Cell[877287, 15872, 874, 25, 32, "Text"],
+Cell[894934, 16407, 874, 25, 32, "Text"],
 Cell[CellGroupData[{
-Cell[878186, 15901, 3468, 71, 19, "Input",
+Cell[895833, 16436, 3468, 71, 19, "Input",
  CellOpen->True],
-Cell[881657, 15974, 1733, 29, 133, "Output"]
+Cell[899304, 16509, 1733, 29, 133, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[883439, 16009, 102, 1, 47, "Subsection"],
-Cell[883544, 16012, 121, 1, 30, "Text"],
+Cell[901086, 16544, 102, 1, 47, "Subsection"],
+Cell[901191, 16547, 121, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[883690, 16017, 901, 20, 19, "Input",
+Cell[901337, 16552, 901, 20, 19, "Input",
  CellOpen->True],
-Cell[884594, 16039, 7861, 202, 317, "Output"]
+Cell[902241, 16574, 7861, 202, 317, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Closed]]
