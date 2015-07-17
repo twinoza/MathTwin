@@ -237,7 +237,8 @@ Cell[BoxData[
    3.635621101086713*^9, 3.635701362781631*^9, 3.635777974866726*^9, 
    3.6357782701833572`*^9, 3.636401596429394*^9, 3.636824571090567*^9, 
    3.636920151584057*^9, 3.636994031336298*^9, 3.637434835089363*^9, 
-   3.639238626101836*^9, 3.6410469321989393`*^9, 3.641764214751451*^9}],
+   3.639238626101836*^9, 3.6410469321989393`*^9, 3.641764214751451*^9, 
+   3.645968916339498*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -276,7 +277,8 @@ Cell[BoxData[
    3.635621101086713*^9, 3.635701362781631*^9, 3.635777974866726*^9, 
    3.6357782701833572`*^9, 3.636401596429394*^9, 3.636824571090567*^9, 
    3.636920151584057*^9, 3.636994031336298*^9, 3.637434835089363*^9, 
-   3.639238626101836*^9, 3.6410469321989393`*^9, 3.641764218291993*^9}],
+   3.639238626101836*^9, 3.6410469321989393`*^9, 3.641764214751451*^9, 
+   3.645968920226179*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -322,7 +324,8 @@ Cell[BoxData[
    3.635621101086713*^9, 3.635701362781631*^9, 3.635777974866726*^9, 
    3.6357782701833572`*^9, 3.636401596429394*^9, 3.636824571090567*^9, 
    3.636920151584057*^9, 3.636994031336298*^9, 3.637434835089363*^9, 
-   3.639238626101836*^9, 3.6410469321989393`*^9, 3.641764218913719*^9}],
+   3.639238626101836*^9, 3.6410469321989393`*^9, 3.641764214751451*^9, 
+   3.645968920902376*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -359,7 +362,8 @@ Cell[BoxData[
    3.635621101086713*^9, 3.635701362781631*^9, 3.635777974866726*^9, 
    3.6357782701833572`*^9, 3.636401596429394*^9, 3.636824571090567*^9, 
    3.636920151584057*^9, 3.636994031336298*^9, 3.637434835089363*^9, 
-   3.639238626101836*^9, 3.6410469321989393`*^9, 3.6417642194034433`*^9}]
+   3.639238626101836*^9, 3.6410469321989393`*^9, 3.641764214751451*^9, 
+   3.645968921535301*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -9034,11 +9038,11 @@ Cell[BoxData[
          "\!\(\*SubscriptBox[\(i\), \(in\)]\)"}, 0.5, 1.5, 0.001}}, 
       Typeset`size$$ = {357., {61., 69.}}, Typeset`update$$ = 0, 
       Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`iin$23730$$ = 0}, 
+      True, $CellContext`iin$11627$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, "Variables" :> {$CellContext`iin$$ = 1.2775}, 
         "ControllerVariables" :> {
-          Hold[$CellContext`iin$$, $CellContext`iin$23730$$, 0]}, 
+          Hold[$CellContext`iin$$, $CellContext`iin$11627$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -9080,7 +9084,7 @@ Approx:"],
     TraditionalForm],
    Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
  CellChangeTimes->{3.637434843644971*^9, 3.63923862901995*^9, 
-  3.641046939963305*^9, 3.641764221153138*^9}]
+  3.641046939963305*^9, 3.641764221153138*^9, 3.645968923599224*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -9199,7 +9203,7 @@ ButtonFrame->None, ButtonData:>\\\"paclet:ref/NSolve\\\", ButtonNote -> \
   3.6357013666868353`*^9, 3.635777979397286*^9, 3.635778274322321*^9, 
   3.6364016002169027`*^9, 3.6368245758547297`*^9, 3.636920155577918*^9, 
   3.6374348458353033`*^9, 3.639238629986631*^9, 3.641046941203802*^9, 
-  3.641764222354609*^9}],
+  3.641764222354609*^9, 3.645968924687605*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -9218,7 +9222,7 @@ ButtonFrame->None, ButtonData:>\\\"paclet:ref/NSolve\\\", ButtonNote -> \
   3.6357013666868353`*^9, 3.635777979397286*^9, 3.635778274322321*^9, 
   3.6364016002169027`*^9, 3.6368245758547297`*^9, 3.636920155577918*^9, 
   3.6374348458353033`*^9, 3.639238629986631*^9, 3.641046941203802*^9, 
-  3.641764222802148*^9}],
+  3.641764222354609*^9, 3.645968925101411*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -9237,7 +9241,7 @@ ButtonFrame->None, ButtonData:>\\\"paclet:ref/NSolve\\\", ButtonNote -> \
   3.6357013666868353`*^9, 3.635777979397286*^9, 3.635778274322321*^9, 
   3.6364016002169027`*^9, 3.6368245758547297`*^9, 3.636920155577918*^9, 
   3.6374348458353033`*^9, 3.639238629986631*^9, 3.641046941203802*^9, 
-  3.6417642232588177`*^9}],
+  3.641764222354609*^9, 3.645968925504251*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -9257,7 +9261,7 @@ ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}],
   3.6357013666868353`*^9, 3.635777979397286*^9, 3.635778274322321*^9, 
   3.6364016002169027`*^9, 3.6368245758547297`*^9, 3.636920155577918*^9, 
   3.6374348458353033`*^9, 3.639238629986631*^9, 3.641046941203802*^9, 
-  3.641764223744659*^9}],
+  3.641764222354609*^9, 3.645968925990464*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -9457,7 +9461,8 @@ Cell[BoxData[
    3.6351098164914017`*^9, 3.635621111272003*^9, 3.6357013718968*^9, 
    3.6357779847322598`*^9, 3.635778279530068*^9, 3.6364016049639893`*^9, 
    3.6368245804606333`*^9, 3.636920160287339*^9, 3.637434862621559*^9, 
-   3.639238634590149*^9, 3.641046945677867*^9, 3.641764226834668*^9}]
+   3.639238634590149*^9, 3.641046945677867*^9, 3.641764226834668*^9, 
+   3.6459689292734413`*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -10204,7 +10209,6 @@ $CellContext`pilkr)^(-2)) $CellContext`pqua)^
            Rational[
             1, 2]])^(-2) + ((($CellContext`Iin \
 $CellContext`Ilk)/($CellContext`Ilk + $CellContext`pilkr)) (-1 + (((
-             
              2 $CellContext`Iin) $CellContext`Ilk) ($CellContext`Ilk + \
 $CellContext`pilkr)^(-2)) $CellContext`pqua)^
         Rational[-1, 2]) ($CellContext`ptau^(-1)/(Pi + 
@@ -11098,7 +11102,8 @@ Cell[BoxData[
           
           
           Hold[$CellContext`pilkrManip$$, $CellContext`pilkrManip$143620$$, 
-           0]}, "OtherVariables" :> {
+           0]}, 
+        "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
           Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
@@ -12469,6 +12474,7 @@ Cell[BoxData[
             RowBox[{
             "\"\<\!\(\*SubscriptBox[\(I\), \(in\)]\)\>\"", ",", 
              "\"\<\!\(\*SubscriptBox[\(I\), \(lk\)]\)\>\"", ",", 
+             
              "\"\<\!\(\*SubscriptBox[\(S\), SubscriptBox[\(p\), \(val\)]]\)\>\
 \""}], "}"}]}], ",", 
           RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
@@ -15911,16 +15917,16 @@ Cell[BoxData[
          "\!\(\*SubscriptBox[\(\[Rho]\), \(ilkr\)]\)"}, 0.0005, 0.015, 
         0.0001}}, Typeset`size$$ = {729., {448., 456.}}, Typeset`update$$ = 0,
        Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`pquatmp$31951$$ = 0, $CellContext`ptautmp$31952$$ = 
-      0, $CellContext`pilkrtmp$31953$$ = 0}, 
+      True, $CellContext`pquatmp$19865$$ = 0, $CellContext`ptautmp$19866$$ = 
+      0, $CellContext`pilkrtmp$19867$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, 
         "Variables" :> {$CellContext`pilkrtmp$$ = 
           0.008, $CellContext`pquatmp$$ = 2, $CellContext`ptautmp$$ = 0.001}, 
         "ControllerVariables" :> {
-          Hold[$CellContext`pquatmp$$, $CellContext`pquatmp$31951$$, 0], 
-          Hold[$CellContext`ptautmp$$, $CellContext`ptautmp$31952$$, 0], 
-          Hold[$CellContext`pilkrtmp$$, $CellContext`pilkrtmp$31953$$, 0]}, 
+          Hold[$CellContext`pquatmp$$, $CellContext`pquatmp$19865$$, 0], 
+          Hold[$CellContext`ptautmp$$, $CellContext`ptautmp$19866$$, 0], 
+          Hold[$CellContext`pilkrtmp$$, $CellContext`pilkrtmp$19867$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -16164,7 +16170,7 @@ $CellContext`pilkrtmp$$]}, {$CellContext`f, 1.*^-8, 25},
    3.63570137239386*^9, 3.6357779851962833`*^9, 3.63577827997393*^9, 
    3.636401605342511*^9, 3.636824580910859*^9, 3.6369201609811277`*^9, 
    3.637434863422529*^9, 3.639238635236367*^9, 3.6410469466676273`*^9, 
-   3.641764227550301*^9}]
+   3.641764227550301*^9, 3.645968930243733*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -19082,7 +19088,7 @@ sjw=
    3.635621113366103*^9, 3.635701373991333*^9, 3.6357779871376667`*^9, 
    3.6357782823467712`*^9, 3.636401607233178*^9, 3.636824582906781*^9, 
    3.6369201633630743`*^9, 3.6374348657694693`*^9, 3.639238637637042*^9, 
-   3.641046951161297*^9, 3.641764229323803*^9}]
+   3.641046951161297*^9, 3.641764229323803*^9, 3.645968932707046*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -23739,11 +23745,11 @@ Cell[BoxData[
          "\!\(\*SubscriptBox[\(i\), \(in\)]\)"}, 0.5, 0.55, 0.001}}, 
       Typeset`size$$ = {258., {4., 12.}}, Typeset`update$$ = 0, 
       Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`iin$33466$$ = 0}, 
+      True, $CellContext`iin$21665$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, "Variables" :> {$CellContext`iin$$ = 0.52}, 
         "ControllerVariables" :> {
-          Hold[$CellContext`iin$$, $CellContext`iin$33466$$, 0]}, 
+          Hold[$CellContext`iin$$, $CellContext`iin$21665$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -23787,7 +23793,8 @@ Cell[BoxData[
    3.6351098188272667`*^9, 3.63562111362084*^9, 3.635701374260129*^9, 
    3.635777987527773*^9, 3.635778282584959*^9, 3.6364016074875097`*^9, 
    3.636824583212203*^9, 3.636920163696679*^9, 3.637434866907284*^9, 
-   3.6392386443188562`*^9, 3.6410469517798967`*^9, 3.641764229806717*^9}]
+   3.6392386443188562`*^9, 3.6410469517798967`*^9, 3.641764229806717*^9, 
+   3.645968933179594*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -23884,7 +23891,7 @@ ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
   3.635701374846596*^9, 3.6357779885411367`*^9, 3.6357782830818768`*^9, 
   3.636401607943678*^9, 3.6368245841009417`*^9, 3.6369201641985273`*^9, 
   3.637434868019722*^9, 3.639238645016304*^9, 3.641046952797226*^9, 
-  3.6417642306068907`*^9}],
+  3.6417642306068907`*^9, 3.645968934040887*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -23903,7 +23910,7 @@ ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
   3.635701374846596*^9, 3.6357779885411367`*^9, 3.6357782830818768`*^9, 
   3.636401607943678*^9, 3.6368245841009417`*^9, 3.6369201641985273`*^9, 
   3.637434868019722*^9, 3.639238645016304*^9, 3.641046952797226*^9, 
-  3.6417642310021048`*^9}],
+  3.6417642306068907`*^9, 3.645968934459531*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -23922,7 +23929,7 @@ ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
   3.635701374846596*^9, 3.6357779885411367`*^9, 3.6357782830818768`*^9, 
   3.636401607943678*^9, 3.6368245841009417`*^9, 3.6369201641985273`*^9, 
   3.637434868019722*^9, 3.639238645016304*^9, 3.641046952797226*^9, 
-  3.6417642314783077`*^9}],
+  3.6417642306068907`*^9, 3.645968934915881*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -23942,7 +23949,7 @@ ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}],
   3.635701374846596*^9, 3.6357779885411367`*^9, 3.6357782830818768`*^9, 
   3.636401607943678*^9, 3.6368245841009417`*^9, 3.6369201641985273`*^9, 
   3.637434868019722*^9, 3.639238645016304*^9, 3.641046952797226*^9, 
-  3.641764231953787*^9}],
+  3.6417642306068907`*^9, 3.645968935496166*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -24066,7 +24073,7 @@ Cell[BoxData[
    3.635621115971246*^9, 3.635701376835588*^9, 3.635777990668907*^9, 
    3.6357782851228037`*^9, 3.636401609654975*^9, 3.636824585783354*^9, 
    3.6369201659424953`*^9, 3.637434871484954*^9, 3.6392386466442337`*^9, 
-   3.641046954580675*^9, 3.641764232455709*^9}]
+   3.641046954580675*^9, 3.641764232455709*^9, 3.64596893600263*^9}]
 }, Open  ]]
 }, Closed]]
 }, Open  ]],
@@ -29318,15 +29325,15 @@ Cell[BoxData[
          "\!\(\*SubscriptBox[\(p\), \(ilkr\)]\)"}, 0.00005, 0.015, 0.00001}}, 
       Typeset`size$$ = {576., {218., 223.}}, Typeset`update$$ = 0, 
       Typeset`initDone$$, Typeset`skipInitDone$$ = 
-      True, $CellContext`pqua$36260$$ = 0, $CellContext`ptau$36261$$ = 
-      0, $CellContext`pilkr$36262$$ = 0}, 
+      True, $CellContext`pqua$24459$$ = 0, $CellContext`ptau$24460$$ = 
+      0, $CellContext`pilkr$24461$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, 
         "Variables" :> {$CellContext`pilkr$$ = 0.008, $CellContext`pqua$$ = 
           2, $CellContext`ptau$$ = 0.001}, "ControllerVariables" :> {
-          Hold[$CellContext`pqua$$, $CellContext`pqua$36260$$, 0], 
-          Hold[$CellContext`ptau$$, $CellContext`ptau$36261$$, 0], 
-          Hold[$CellContext`pilkr$$, $CellContext`pilkr$36262$$, 0]}, 
+          Hold[$CellContext`pqua$$, $CellContext`pqua$24459$$, 0], 
+          Hold[$CellContext`ptau$$, $CellContext`ptau$24460$$, 0], 
+          Hold[$CellContext`pilkr$$, $CellContext`pilkr$24461$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -29371,7 +29378,7 @@ $CellContext`pqua$$, $CellContext`ptau$$, $CellContext`pilkr$$], \
    3.635701377336711*^9, 3.635777991323125*^9, 3.63577828561904*^9, 
    3.6364016101033*^9, 3.636824586471925*^9, 3.636920166694827*^9, 
    3.6374348722033157`*^9, 3.6392386470940933`*^9, 3.641046955699779*^9, 
-   3.6417642333404837`*^9}]
+   3.6417642333404837`*^9, 3.6459689367656527`*^9}]
 }, Open  ]]
 }, Closed]]
 }, Open  ]]
@@ -31933,7 +31940,7 @@ Cell[BoxData[
 },
 WindowToolbars->{"RulerBar", "EditBar"},
 WindowSize->{1280, 1548},
-WindowMargins->{{1235, Automatic}, {Automatic, -10}},
+WindowMargins->{{1225, Automatic}, {Automatic, -10}},
 DockedCells->Cell[
   BoxData[
    DynamicModuleBox[{$CellContext`showHide$$ = True}, 
