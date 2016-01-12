@@ -1,0 +1,234 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7107,        224]
+NotebookOptionsPosition[      6417,        195]
+NotebookOutlinePosition[      6759,        210]
+CellTagsIndexPosition[      6716,        207]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6616108742216597`*^9, 3.661610875408045*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Small Signal Analysis of Inverter", "Chapter",
+ CellChangeTimes->{{3.6616111604650908`*^9, 3.661611175629839*^9}}],
+
+Cell[TextData[{
+ "More specifically, this notebook will use the all-region MOSFET model to \
+try and analyze how much we expect the capacitance to change in the circuit.  \
+We have simulation evidence that says this should change by roughly 7-10%, \
+but we want to establish the definitive cause over temperature variations.\n\n\
+Note: In all of the equations below, it should be assumed that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["C", "ox"], ",", " ", 
+    SubscriptBox["C", "b"], ",", " ", 
+    SubscriptBox["C", "i"], ",", 
+    SubscriptBox["Q", 
+     RowBox[{"IS", "(", "D", ")"}]], ",", " ", 
+    RowBox[{"and", " ", 
+     SubscriptBox["Q", "IB"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " are all in terms of unit area (like written in Schneider and Galup-Montoro\
+\[CloseCurlyQuote]s book (denoted with the \[OpenCurlyQuote] mark))."
+}], "Text",
+ CellChangeTimes->{{3.661611178686449*^9, 3.661611207620702*^9}, {
+  3.661611260775131*^9, 3.661611309293085*^9}, {3.661614785478672*^9, 
+  3.661614878344832*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Current Equations", "Subchapter",
+ CellChangeTimes->{{3.661615549999403*^9, 3.661615552454681*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"IFQ", "[", 
+   RowBox[{
+   "QIs_", ",", "\[Mu]n_", ",", "W_", ",", "L_", ",", "n_", ",", "Cox_", ",", 
+    "\[Phi]t_"}], "]"}], ":=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"\[Mu]n", " ", "W"}], "L"], 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      SuperscriptBox["QIs", "2"], 
+      RowBox[{"2", "n", " ", "Cox"}]], "-", 
+     RowBox[{"\[Phi]t", " ", "QIs"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"IRQ", "[", 
+   RowBox[{
+   "QId_", ",", "\[Mu]n_", ",", "W_", ",", "L_", ",", "n_", ",", "Cox_", ",", 
+    "\[Phi]t_"}], "]"}], ":=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"\[Mu]n", " ", "W"}], "L"], 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      SuperscriptBox["QId", "2"], 
+      RowBox[{"2", "n", " ", "Cox"}]], "-", 
+     RowBox[{"\[Phi]t", " ", "QId"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"IS", "[", 
+   RowBox[{
+   "\[Mu]n_", ",", "W_", ",", "L_", ",", "n_", ",", "Cox_", ",", "\[Phi]t_"}],
+    "]"}], ":=", 
+  RowBox[{"\[Mu]n", " ", "n", " ", "Cox", " ", 
+   FractionBox[
+    SuperscriptBox["\[Phi]t", "2"], "2"], 
+   FractionBox["W", "L"]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"IDQ", "[", 
+   RowBox[{
+   "QIs_", ",", "QId_", ",", "\[Mu]n_", ",", "W_", ",", "L_", ",", "n_", ",", 
+    "Cox_", ",", "\[Phi]t_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"IFQ", "[", 
+    RowBox[{
+    "QIs", ",", "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox", ",", 
+     "\[Phi]t"}], "]"}], "-", 
+   RowBox[{"IRQ", "[", 
+    RowBox[{
+    "QId", ",", "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox", ",", 
+     "\[Phi]t"}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ifwd", "[", 
+   RowBox[{
+   "QIs_", ",", "\[Mu]n_", ",", "W_", ",", "L_", ",", "n_", ",", "Cox_", ",", 
+    "\[Phi]t_"}], "]"}], ":=", 
+  FractionBox[
+   RowBox[{"IFQ", "[", 
+    RowBox[{
+    "QIs", ",", "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox", ",", 
+     "\[Phi]t"}], "]"}], 
+   RowBox[{"IS", "[", 
+    RowBox[{
+    "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox", ",", "\[Phi]t"}], 
+    "]"}]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"irev", "[", 
+   RowBox[{
+   "QId_", ",", "\[Mu]n_", ",", "W_", ",", "L_", ",", "n_", ",", "Cox_", ",", 
+    "\[Phi]t_"}], "]"}], ":=", 
+  FractionBox[
+   RowBox[{"IFQ", "[", 
+    RowBox[{
+    "QId", ",", "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox", ",", 
+     "\[Phi]t"}], "]"}], 
+   RowBox[{"IS", "[", 
+    RowBox[{
+    "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox", ",", "\[Phi]t"}], 
+    "]"}]]}]}], "Input",
+ CellChangeTimes->{{3.661611312477764*^9, 3.661611421067193*^9}, {
+  3.661614079269809*^9, 3.6616142639050093`*^9}, {3.661614298240327*^9, 
+  3.661614394924745*^9}, {3.661614731451359*^9, 3.661614779014661*^9}, {
+  3.661614910484632*^9, 3.661614940428937*^9}, {3.661615040017145*^9, 
+  3.661615042215988*^9}, {3.66161550697021*^9, 3.661615507359173*^9}, {
+  3.66161555778509*^9, 3.661615559312049*^9}, {3.661616135871166*^9, 
+  3.66161624979105*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Charge Equations", "Subchapter",
+ CellChangeTimes->{{3.661615572788289*^9, 3.661615578514144*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"QIp", "[", 
+   RowBox[{"n_", ",", " ", "Cox_", ",", " ", "\[Phi]t_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"-", "n"}], " ", "Cox", " ", 
+   "\[Phi]t"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"qIsQ", "[", 
+   RowBox[{"QIs_", ",", "QIp_"}], "]"}], ":=", 
+  FractionBox["QIs", "QIp"]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"qIdQ", "[", 
+   RowBox[{"QId_", ",", "QIp_"}], "]"}], ":=", 
+  FractionBox["QId", "QIp"]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"qIsi", "[", "ifwd_", "]"}], ":=", 
+  RowBox[{
+   SqrtBox[
+    RowBox[{"1", "+", "ifwd"}]], "-", "1"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"qIdi", "[", "irev_", "]"}], ":=", 
+  RowBox[{
+   SqrtBox[
+    RowBox[{"1", "+", "irev"}]], "-", "1"}]}]}], "Input",
+ CellChangeTimes->{{3.6616155637543173`*^9, 3.661615606446686*^9}, {
+  3.6616159926067677`*^9, 3.6616161094962397`*^9}, {3.6616164395390663`*^9, 
+  3.66161644156283*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Misc Equations", "Subchapter",
+ CellChangeTimes->{{3.661615582798484*^9, 3.661615589005624*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"n", "[", 
+   RowBox[{"Cox_", ",", " ", "Cb_"}], "]"}], ":=", 
+  RowBox[{"1", "+", 
+   FractionBox["Cb", "Cox"]}]}]], "Input"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1280, 1548},
+WindowMargins->{{1270, Automatic}, {Automatic, -10}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (December 4, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 94, 1, 32, "Input"],
+Cell[CellGroupData[{
+Cell[677, 25, 120, 1, 69, "Chapter"],
+Cell[800, 28, 1054, 22, 113, "Text"],
+Cell[CellGroupData[{
+Cell[1879, 54, 105, 1, 64, "Subchapter"],
+Cell[1987, 57, 3010, 86, 295, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5034, 148, 104, 1, 64, "Subchapter"],
+Cell[5141, 151, 946, 27, 190, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6124, 183, 102, 1, 64, "Subchapter"],
+Cell[6229, 186, 160, 5, 56, "Input"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
