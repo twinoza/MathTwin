@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     63192,       1682]
-NotebookOptionsPosition[     60740,       1594]
-NotebookOutlinePosition[     61082,       1609]
-CellTagsIndexPosition[     61039,       1606]
+NotebookDataLength[     81783,       2104]
+NotebookOptionsPosition[     79018,       2006]
+NotebookOutlinePosition[     79360,       2021]
+CellTagsIndexPosition[     79317,       2018]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -49,98 +49,26 @@ Note: In all of the equations below, it should be assumed that ",
 
 Cell[CellGroupData[{
 
-Cell["Current equations", "Subchapter",
- CellChangeTimes->{{3.661615549999403*^9, 3.661615552454681*^9}, {
-  3.661723053011639*^9, 3.661723053075781*^9}}],
+Cell["Voltage equations (UCCM)", "Subchapter",
+ CellChangeTimes->{{3.6617225824746237`*^9, 3.661722588182291*^9}}],
 
-Cell[BoxData[{
+Cell[BoxData[
  RowBox[{
-  RowBox[{"IFQ", "[", 
-   RowBox[{
-   "QIs_", ",", "\[Mu]n_", ",", "W_", ",", "L_", ",", "n_", ",", "Cox_", ",", 
-    "\[Phi]t_"}], "]"}], ":=", 
-  RowBox[{
-   FractionBox[
-    RowBox[{"\[Mu]n", " ", "W"}], "L"], 
-   RowBox[{"(", 
-    RowBox[{
-     FractionBox[
-      SuperscriptBox["QIs", "2"], 
-      RowBox[{"2", "n", " ", "Cox"}]], "-", 
-     RowBox[{"\[Phi]t", " ", "QIs"}]}], ")"}]}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"IRQ", "[", 
-   RowBox[{
-   "QId_", ",", "\[Mu]n_", ",", "W_", ",", "L_", ",", "n_", ",", "Cox_", ",", 
-    "\[Phi]t_"}], "]"}], ":=", 
-  RowBox[{
-   FractionBox[
-    RowBox[{"\[Mu]n", " ", "W"}], "L"], 
-   RowBox[{"(", 
-    RowBox[{
-     FractionBox[
-      SuperscriptBox["QId", "2"], 
-      RowBox[{"2", "n", " ", "Cox"}]], "-", 
-     RowBox[{"\[Phi]t", " ", "QId"}]}], ")"}]}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"IS", "[", 
-   RowBox[{
-   "\[Mu]n_", ",", "W_", ",", "L_", ",", "n_", ",", "Cox_", ",", "\[Phi]t_"}],
-    "]"}], ":=", 
-  RowBox[{"\[Mu]n", " ", "n", " ", "Cox", " ", 
-   FractionBox[
-    SuperscriptBox["\[Phi]t", "2"], "2"], 
-   FractionBox["W", "L"]}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"IDQ", "[", 
-   RowBox[{
-   "QIs_", ",", "QId_", ",", "\[Mu]n_", ",", "W_", ",", "L_", ",", "n_", ",", 
-    "Cox_", ",", "\[Phi]t_"}], "]"}], ":=", 
-  RowBox[{
-   RowBox[{"IFQ", "[", 
-    RowBox[{
-    "QIs", ",", "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox", ",", 
-     "\[Phi]t"}], "]"}], "-", 
-   RowBox[{"IRQ", "[", 
-    RowBox[{
-    "QId", ",", "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox", ",", 
-     "\[Phi]t"}], "]"}]}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"ifwd", "[", 
-   RowBox[{
-   "QIs_", ",", "\[Mu]n_", ",", "W_", ",", "L_", ",", "n_", ",", "Cox_", ",", 
-    "\[Phi]t_"}], "]"}], ":=", 
-  FractionBox[
-   RowBox[{"IFQ", "[", 
-    RowBox[{
-    "QIs", ",", "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox", ",", 
-     "\[Phi]t"}], "]"}], 
-   RowBox[{"IS", "[", 
-    RowBox[{
-    "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox", ",", "\[Phi]t"}], 
-    "]"}]]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"irev", "[", 
-   RowBox[{
-   "QId_", ",", "\[Mu]n_", ",", "W_", ",", "L_", ",", "n_", ",", "Cox_", ",", 
-    "\[Phi]t_"}], "]"}], ":=", 
-  FractionBox[
-   RowBox[{"IFQ", "[", 
-    RowBox[{
-    "QId", ",", "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox", ",", 
-     "\[Phi]t"}], "]"}], 
-   RowBox[{"IS", "[", 
-    RowBox[{
-    "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox", ",", "\[Phi]t"}], 
-    "]"}]]}]}], "Input",
+  RowBox[{"Vc", "[", 
+   RowBox[{"Vp_", ",", "QI_", ",", "QIp_", ",", "\[Phi]t_"}], "]"}], ":=", 
+  RowBox[{"Vp", "-", 
+   RowBox[{"\[Phi]t", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox["QI", "QIp"], "-", "1", "-", 
+      RowBox[{"Log", "[", 
+       FractionBox["QIp", "QI"], "]"}]}], ")"}]}]}]}]], "Input",
  InitializationCell->True,
- CellChangeTimes->{{3.661611312477764*^9, 3.661611421067193*^9}, {
-  3.661614079269809*^9, 3.6616142639050093`*^9}, {3.661614298240327*^9, 
-  3.661614394924745*^9}, {3.661614731451359*^9, 3.661614779014661*^9}, {
-  3.661614910484632*^9, 3.661614940428937*^9}, {3.661615040017145*^9, 
-  3.661615042215988*^9}, {3.66161550697021*^9, 3.661615507359173*^9}, {
-  3.66161555778509*^9, 3.661615559312049*^9}, {3.661616135871166*^9, 
-  3.66161624979105*^9}}],
+ CellChangeTimes->{{3.6617228400485563`*^9, 3.661722967656013*^9}, {
+  3.661880747249443*^9, 3.661880747334118*^9}, {3.661880781528142*^9, 
+  3.661880792669958*^9}, {3.6618847254232903`*^9, 3.661884731485124*^9}, {
+  3.661885221109063*^9, 3.6618852391857967`*^9}, {3.661886794650852*^9, 
+  3.6618867973137817`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -151,7 +79,7 @@ Cell[BoxData[
     RowBox[{
      RowBox[{"{", 
       RowBox[{
-       RowBox[{"\[Mu]n", "=", "150"}], ",", 
+       RowBox[{"\[Mu]n", "=", "700"}], ",", 
        RowBox[{"W", "=", 
         RowBox[{"160", " ", 
          SuperscriptBox["10", 
@@ -167,26 +95,512 @@ Cell[BoxData[
           RowBox[{"-", "18"}]]}]}]}], "}"}], ",", "\[IndentingNewLine]", 
      RowBox[{"Plot", "[", 
       RowBox[{
-       RowBox[{"{", 
-        RowBox[{"IFQ", "[", 
+       RowBox[{"(", 
+        RowBox[{"{", 
          RowBox[{
-         "QIs", ",", "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox", ",", 
-          "\[Phi]t"}], "]"}], "}"}], ",", 
+          RowBox[{"Vc", "[", 
+           RowBox[{"Vp", ",", "QI", ",", 
+            RowBox[{"QIp", "[", 
+             RowBox[{"n", ",", "Cox", ",", "\[Phi]t"}], "]"}], ",", 
+            "\[Phi]t"}], "]"}], ",", "Vp"}], "}"}], ")"}], ",", 
        RowBox[{"{", 
-        RowBox[{"QIs", ",", 
-         RowBox[{
-          RowBox[{"-", "1"}], " ", 
-          SuperscriptBox["10", 
-           RowBox[{"-", "17"}]]}], ",", 
-         RowBox[{"1", " ", 
-          SuperscriptBox["10", 
-           RowBox[{"-", "17"}]]}]}], "}"}], ",", " ", 
+        RowBox[{"QI", ",", "minX", ",", "0"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
        RowBox[{"AxesLabel", "\[Rule]", 
         RowBox[{"{", 
          RowBox[{
-         "\"\<\!\(\*SubscriptBox[\(Q\), \(IS\)]\)\>\"", ",", 
-          "\"\<\!\(\*SubscriptBox[\(I\), \(D\)]\)\>\""}], "}"}]}], ",", " ", 
-       RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], 
+         "\"\<\!\(\*SubscriptBox[\(Q\), \(I\)]\)\>\"", ",", 
+          "\"\<\!\(\*SubscriptBox[\(V\), \(C\)]\)\>\""}], "}"}]}], ",", " ", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "1"}], "}"}]}], ",", 
+       RowBox[{"ImageSize", "\[Rule]", "500"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"PlotStyle", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Directive", "[", "None", "]"}], ",", 
+          RowBox[{"Directive", "[", 
+           RowBox[{
+            RowBox[{"Darker", "[", "Green", "]"}], ",", "Dashed"}], "]"}]}], 
+         "}"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Epilog", "\[Rule]", 
+        RowBox[{"{", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"Directive", "[", 
+           RowBox[{"{", 
+            RowBox[{"Red", ",", "Dashed"}], "}"}], "]"}], ",", 
+          RowBox[{"Line", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"QIp", "[", 
+                RowBox[{"n", ",", "Cox", ",", "\[Phi]t"}], "]"}], ",", "0"}], 
+              "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"QIp", "[", 
+                RowBox[{"n", ",", "Cox", ",", "\[Phi]t"}], "]"}], ",", "1"}], 
+              "}"}]}], "}"}], "]"}], ",", " ", "\[IndentingNewLine]", 
+          RowBox[{"Directive", "[", "Black", "]"}], ",", 
+          RowBox[{"Text", "[", 
+           RowBox[{"\"\<QIp  \>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"QIp", "[", 
+               RowBox[{"n", ",", "Cox", ",", "\[Phi]t"}], "]"}], ",", "0.9"}],
+              "}"}], ",", "Right"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Directive", "[", "Black", "]"}], ",", 
+          RowBox[{"Text", "[", 
+           RowBox[{"\"\<SI  \>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"QIp", "[", 
+               RowBox[{"n", ",", "Cox", ",", "\[Phi]t"}], "]"}], ",", 
+              "0.75"}], "}"}], ",", "Right"}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Directive", "[", "Black", "]"}], ",", 
+          RowBox[{"Text", "[", 
+           RowBox[{"\"\<  WI\>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"QIp", "[", 
+               RowBox[{"n", ",", "Cox", ",", "\[Phi]t"}], "]"}], ",", 
+              "0.75"}], "}"}], ",", "Left"}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Directive", "[", "Black", "]"}], ",", 
+          RowBox[{"Text", "[", 
+           RowBox[{"\"\<Vp\>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{"minX", ",", "Vp"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"Left", ",", "Bottom"}], "}"}]}], "]"}]}], 
+         "\[IndentingNewLine]", "}"}]}]}], "\[IndentingNewLine]", "]"}]}], 
+    "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Phi]t", ",", 
+       RowBox[{"\[Phi]T", "[", "25", "]"}], ",", 
+       "\"\<\!\(\*SubscriptBox[\(\[Phi]\), \(t\)]\)\>\""}], "}"}], ",", 
+     "0.02", ",", "0.03", ",", "0.001", ",", 
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "Vp", ",", "0.5", ",", "\"\<\!\(\*SubscriptBox[\(V\), \(p\)]\)\>\""}], 
+      "}"}], ",", "0.01", ",", "1.0", ",", "0.01", ",", 
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"minX", ",", 
+       RowBox[{
+        RowBox[{"-", "50"}], "*", 
+        SuperscriptBox["10", 
+         RowBox[{"-", "18"}]]}], ",", 
+       "\"\<\!\(\*SubscriptBox[\(x\), \(min\)]\)\>\""}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"-", "100"}], "*", 
+      SuperscriptBox["10", 
+       RowBox[{"-", "18"}]]}], ",", "0"}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.661806621449746*^9, 3.661806642920291*^9}, {
+   3.661806680866908*^9, 3.661806803257648*^9}, 3.661806842486174*^9, {
+   3.661806946173015*^9, 3.6618069939497833`*^9}, {3.661807040923566*^9, 
+   3.661807110882494*^9}, 3.661807150084147*^9, {3.661807294440359*^9, 
+   3.661807530672577*^9}, {3.661807593671074*^9, 3.661807614170879*^9}, {
+   3.661807680815125*^9, 3.661807735106535*^9}, {3.6618078194638166`*^9, 
+   3.661807822089159*^9}, {3.661807852413041*^9, 3.661807932454723*^9}, {
+   3.661807984366424*^9, 3.661807996864114*^9}, {3.661808029299757*^9, 
+   3.661808040466916*^9}, {3.6618080896474867`*^9, 3.661808095136162*^9}, {
+   3.6618084335637083`*^9, 3.661808619742601*^9}, {3.661808671510601*^9, 
+   3.661808671640574*^9}, {3.66188075144038*^9, 3.66188075281461*^9}, {
+   3.6618808172012987`*^9, 3.661880825176167*^9}, {3.661880887942081*^9, 
+   3.661880931043827*^9}, {3.6618811263244877`*^9, 3.661881256789878*^9}, {
+   3.6618825250316*^9, 3.66188263532899*^9}, {3.6618826798892097`*^9, 
+   3.661882855080728*^9}, {3.6618829608234987`*^9, 3.661883004734454*^9}, {
+   3.661883595869828*^9, 3.661883684532611*^9}, {3.661883725533205*^9, 
+   3.6618837316486187`*^9}, {3.661883796524035*^9, 3.661883829560375*^9}, {
+   3.661883867687746*^9, 3.661883912692761*^9}, {3.6618839543433104`*^9, 
+   3.661884132232663*^9}, {3.661884450313443*^9, 3.661884592325903*^9}, {
+   3.661884623877831*^9, 3.661884626642048*^9}, {3.661884680609789*^9, 
+   3.661884713798069*^9}, {3.661884745836792*^9, 3.661884810172978*^9}, {
+   3.6618852535117683`*^9, 3.661885280675253*^9}, {3.6618853335968933`*^9, 
+   3.661885347890744*^9}, {3.6618867653663883`*^9, 3.661886851017364*^9}, {
+   3.661886896480945*^9, 3.661886939285748*^9}, {3.661887843986186*^9, 
+   3.661887849333353*^9}, {3.661890139098599*^9, 3.6618901587452087`*^9}, {
+   3.6618903937926273`*^9, 3.661890439411889*^9}, {3.661898971036289*^9, 
+   3.661898981352682*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`minX$$ = 
+    Rational[-1, 20000000000000000], $CellContext`Vp$$ = 
+    0.5, $CellContext`\[Phi]t$$ = 0.025692576505761084`, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`\[Phi]t$$], 0.025692576505761084`, 
+       "\!\(\*SubscriptBox[\(\[Phi]\), \(t\)]\)"}, 0.02, 0.03, 0.001}, {{
+       Hold[$CellContext`Vp$$], 0.5, "\!\(\*SubscriptBox[\(V\), \(p\)]\)"}, 
+      0.01, 1., 0.01}, {{
+       Hold[$CellContext`minX$$], 
+       Rational[-1, 20000000000000000], 
+       "\!\(\*SubscriptBox[\(x\), \(min\)]\)"}, 
+      Rational[-1, 10000000000000000], 0}}, Typeset`size$$ = {
+    500., {156., 161.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[Phi]t$1407$$ = 
+    0, $CellContext`Vp$1408$$ = 0, $CellContext`minX$1409$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`minX$$ = 
+        Rational[-1, 20000000000000000], $CellContext`Vp$$ = 
+        0.5, $CellContext`\[Phi]t$$ = 0.025692576505761084`}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`\[Phi]t$$, $CellContext`\[Phi]t$1407$$, 0], 
+        Hold[$CellContext`Vp$$, $CellContext`Vp$1408$$, 0], 
+        Hold[$CellContext`minX$$, $CellContext`minX$1409$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Block[{$CellContext`\[Mu]n = 700, $CellContext`W = 
+         160 10^(-9), $CellContext`L = 150 10^(-9), $CellContext`n = 
+         1, $CellContext`Cox = 150 10^(-18)}, 
+        Plot[{
+          $CellContext`Vc[$CellContext`Vp$$, $CellContext`QI, 
+           $CellContext`QIp[$CellContext`n, $CellContext`Cox, $CellContext`\
+\[Phi]t$$], $CellContext`\[Phi]t$$], $CellContext`Vp$$}, {$CellContext`QI, \
+$CellContext`minX$$, 0}, 
+         AxesLabel -> {
+          "\!\(\*SubscriptBox[\(Q\), \(I\)]\)", 
+           "\!\(\*SubscriptBox[\(V\), \(C\)]\)"}, PlotRange -> {0, 1}, 
+         ImageSize -> 500, PlotStyle -> {
+           Directive[None], 
+           Directive[
+            Darker[Green], Dashed]}, Epilog -> {
+           Directive[{Red, Dashed}], 
+           Line[{{
+              $CellContext`QIp[$CellContext`n, $CellContext`Cox, \
+$CellContext`\[Phi]t$$], 0}, {
+              $CellContext`QIp[$CellContext`n, $CellContext`Cox, \
+$CellContext`\[Phi]t$$], 1}}], 
+           Directive[Black], 
+           Text["QIp  ", {
+             $CellContext`QIp[$CellContext`n, $CellContext`Cox, $CellContext`\
+\[Phi]t$$], 0.9}, Right], 
+           Directive[Black], 
+           Text["SI  ", {
+             $CellContext`QIp[$CellContext`n, $CellContext`Cox, $CellContext`\
+\[Phi]t$$], 0.75}, Right], 
+           Directive[Black], 
+           Text["  WI", {
+             $CellContext`QIp[$CellContext`n, $CellContext`Cox, $CellContext`\
+\[Phi]t$$], 0.75}, Left], 
+           Directive[Black], 
+           Text[
+           "Vp", {$CellContext`minX$$, $CellContext`Vp$$}, {Left, Bottom}]}]],
+       "Specifications" :> {{{$CellContext`\[Phi]t$$, 0.025692576505761084`, 
+          "\!\(\*SubscriptBox[\(\[Phi]\), \(t\)]\)"}, 0.02, 0.03, 0.001, 
+         Appearance -> {"Labeled", "Open"}}, {{$CellContext`Vp$$, 0.5, 
+          "\!\(\*SubscriptBox[\(V\), \(p\)]\)"}, 0.01, 1., 0.01, 
+         Appearance -> {"Labeled", "Open"}}, {{$CellContext`minX$$, 
+          Rational[-1, 20000000000000000], 
+          "\!\(\*SubscriptBox[\(x\), \(min\)]\)"}, 
+         Rational[-1, 10000000000000000], 0}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{547., {247., 254.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.661882568448325*^9, 3.661882603045412*^9}, 
+   3.661882636597419*^9, {3.661882682733842*^9, 3.661882709390456*^9}, {
+   3.661882742746501*^9, 3.661882798343905*^9}, {3.661882830416586*^9, 
+   3.661882856221838*^9}, {3.661882970495309*^9, 3.6618830060635347`*^9}, 
+   3.6618836474046907`*^9, 3.661883685706712*^9, {3.661883799059753*^9, 
+   3.661883805855002*^9}, {3.661883869742667*^9, 3.66188391365001*^9}, {
+   3.661884012628189*^9, 3.661884023751536*^9}, {3.661884109219574*^9, 
+   3.661884132878509*^9}, {3.661884477456727*^9, 3.661884507256114*^9}, 
+   3.6618846274671717`*^9, {3.661884682381806*^9, 3.661884708065173*^9}, 
+   3.661884739703239*^9, {3.661884777444231*^9, 3.6618848109998283`*^9}, {
+   3.661885256573296*^9, 3.66188528119637*^9}, {3.6618853374405317`*^9, 
+   3.661885348469027*^9}, {3.661886777907894*^9, 3.6618868545042467`*^9}, {
+   3.661886917216899*^9, 3.661886940003388*^9}, 3.6618878500826674`*^9, {
+   3.6618901441333237`*^9, 3.6618901593498163`*^9}, {3.661890424143936*^9, 
+   3.661890439941946*^9}, 3.6618989826660013`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "The plot above shows how charge density ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["Q", "I"], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " and the voltage at the source ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["V", "c"], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " are related if we fix the gate voltage ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"(", 
+     SubscriptBox["V", "g"], ")"}], "."}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "  The reason we have to fix the gate voltage is to keep the pinch-off \
+voltage fixed.  Therefore, in essence, what this plot shows is that when ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["Q", "I"], "<", " ", 
+    SubscriptBox["Q", "IP"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", where ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["Q", "IP"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is designated by the dashed, red line, the circuit is in Strong Inversion \
+(SI), and when ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["Q", "I"], ">", 
+    SubscriptBox["Q", "IP"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", then the circuit is in Weak Inversion (WI).  Note: ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["Q", "I"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " can\[CloseCurlyQuote]t go above 0, because for it to do that, the circuit \
+would have to operate in accumulation and the UCCM model only applies to \
+depletion and inversion."
+}], "Text",
+ CellChangeTimes->{{3.661890463394827*^9, 3.661890486920323*^9}, {
+  3.6618905489779587`*^9, 3.661890690018024*^9}, {3.661890774998942*^9, 
+  3.661890876142992*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Current equations", "Subchapter",
+ CellChangeTimes->{{3.661615549999403*^9, 3.661615552454681*^9}, {
+  3.661723053011639*^9, 3.661723053075781*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"IFRQ", "[", 
+   RowBox[{
+   "QIsd_", ",", "\[Mu]n_", ",", "W_", ",", "L_", ",", "n_", ",", "Cox_", ",",
+     "\[Phi]t_"}], "]"}], ":=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"\[Mu]n", " ", "W"}], "L"], 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      SuperscriptBox["QIsd", "2"], 
+      RowBox[{"2", "n", " ", "Cox"}]], "-", 
+     RowBox[{"\[Phi]t", " ", "QIsd"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"IS", "[", 
+   RowBox[{
+   "\[Mu]n_", ",", "W_", ",", "L_", ",", "n_", ",", "Cox_", ",", "\[Phi]t_"}],
+    "]"}], ":=", 
+  RowBox[{"\[Mu]n", " ", "n", " ", "Cox", " ", 
+   FractionBox[
+    SuperscriptBox["\[Phi]t", "2"], "2"], 
+   FractionBox["W", "L"]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"IDQ", "[", 
+   RowBox[{
+   "QIs_", ",", "QId_", ",", "\[Mu]n_", ",", "W_", ",", "L_", ",", "n_", ",", 
+    "Cox_", ",", "\[Phi]t_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"IFRQ", "[", 
+    RowBox[{
+    "QIs", ",", "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox", ",", 
+     "\[Phi]t"}], "]"}], "-", 
+   RowBox[{"IFRQ", "[", 
+    RowBox[{
+    "QId", ",", "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox", ",", 
+     "\[Phi]t"}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ifwd", "[", 
+   RowBox[{
+   "QIs_", ",", "\[Mu]n_", ",", "W_", ",", "L_", ",", "n_", ",", "Cox_", ",", 
+    "\[Phi]t_"}], "]"}], ":=", 
+  FractionBox[
+   RowBox[{"IFRQ", "[", 
+    RowBox[{
+    "QIs", ",", "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox", ",", 
+     "\[Phi]t"}], "]"}], 
+   RowBox[{"IS", "[", 
+    RowBox[{
+    "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox", ",", "\[Phi]t"}], 
+    "]"}]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"irev", "[", 
+   RowBox[{
+   "QId_", ",", "\[Mu]n_", ",", "W_", ",", "L_", ",", "n_", ",", "Cox_", ",", 
+    "\[Phi]t_"}], "]"}], ":=", 
+  FractionBox[
+   RowBox[{"IFRQ", "[", 
+    RowBox[{
+    "QId", ",", "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox", ",", 
+     "\[Phi]t"}], "]"}], 
+   RowBox[{"IS", "[", 
+    RowBox[{
+    "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox", ",", "\[Phi]t"}], 
+    "]"}]]}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.661611312477764*^9, 3.661611421067193*^9}, {
+  3.661614079269809*^9, 3.6616142639050093`*^9}, {3.661614298240327*^9, 
+  3.661614394924745*^9}, {3.661614731451359*^9, 3.661614779014661*^9}, {
+  3.661614910484632*^9, 3.661614940428937*^9}, {3.661615040017145*^9, 
+  3.661615042215988*^9}, {3.66161550697021*^9, 3.661615507359173*^9}, {
+  3.66161555778509*^9, 3.661615559312049*^9}, {3.661616135871166*^9, 
+  3.66161624979105*^9}, {3.6618983880320997`*^9, 3.66189842005341*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"\[Mu]n", "=", "700"}], ",", 
+       RowBox[{"W", "=", 
+        RowBox[{"160", " ", 
+         SuperscriptBox["10", 
+          RowBox[{"-", "9"}]]}]}], ",", 
+       RowBox[{"L", "=", 
+        RowBox[{"150", " ", 
+         SuperscriptBox["10", 
+          RowBox[{"-", "9"}]]}]}], ",", 
+       RowBox[{"n", "=", "1"}], ",", 
+       RowBox[{"Cox", "=", 
+        RowBox[{"150", " ", 
+         SuperscriptBox["10", 
+          RowBox[{"-", "18"}]]}]}]}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Grid", "[", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Plot3D", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"IDQ", "[", 
+              RowBox[{
+              "QIs", ",", "QId", ",", "\[Mu]n", ",", "W", ",", "L", ",", "n", 
+               ",", "Cox", ",", "\[Phi]t"}], "]"}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"QIs", ",", "minX", ",", 
+              RowBox[{"1", " ", 
+               SuperscriptBox["10", 
+                RowBox[{"-", "17"}]]}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"QId", ",", "minX", ",", 
+              RowBox[{"1", " ", 
+               SuperscriptBox["10", 
+                RowBox[{"-", "17"}]]}]}], "}"}], ",", "\[IndentingNewLine]", 
+            " ", 
+            RowBox[{"AxesLabel", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\!\(\*SubscriptBox[\(Q\), \(IS\)]\)\>\"", ",", 
+               "\"\<\!\(\*SubscriptBox[\(Q\), \(ID\)]\)\>\"", ",", 
+               "\"\<\!\(\*SubscriptBox[\(I\), \(D\)]\)\>\""}], "}"}]}], ",", 
+            " ", 
+            RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+            RowBox[{"ImageSize", "\[Rule]", "Large"}]}], 
+           "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Plot3D", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"IFRQ", "[", 
+               RowBox[{
+               "QIs", ",", "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox",
+                 ",", "\[Phi]t"}], "]"}], ",", 
+              RowBox[{"IFRQ", "[", 
+               RowBox[{
+               "QId", ",", "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox",
+                 ",", "\[Phi]t"}], "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"QIs", ",", "minX", ",", 
+              RowBox[{"1", " ", 
+               SuperscriptBox["10", 
+                RowBox[{"-", "17"}]]}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"QId", ",", "minX", ",", 
+              RowBox[{"1", " ", 
+               SuperscriptBox["10", 
+                RowBox[{"-", "17"}]]}]}], "}"}], ",", "\[IndentingNewLine]", 
+            " ", 
+            RowBox[{"AxesLabel", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\!\(\*SubscriptBox[\(Q\), \(IS\)]\)\>\"", ",", 
+               "\"\<\!\(\*SubscriptBox[\(Q\), \(ID\)]\)\>\"", ",", 
+               "\"\<\!\(\*SubscriptBox[\(I\), \(F \((R)\)\)]\)\>\""}], 
+              "}"}]}], ",", " ", 
+            RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+            RowBox[{"ImageSize", "\[Rule]", "500"}], ",", " ", 
+            RowBox[{"PlotStyle", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"Red", ",", "Blue"}], "}"}]}]}], "\[IndentingNewLine]", 
+           "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"Plot", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"IFRQ", "[", 
+             RowBox[{
+             "QIs", ",", "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox", 
+              ",", "\[Phi]t"}], "]"}], "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"QIs", ",", "minX", ",", 
+             RowBox[{"1", " ", 
+              SuperscriptBox["10", 
+               RowBox[{"-", "17"}]]}]}], "}"}], ",", "\[IndentingNewLine]", 
+           " ", 
+           RowBox[{"AxesLabel", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<\!\(\*SubscriptBox[\(Q\), \(IS\)]\)\>\"", ",", 
+              "\"\<\!\(\*SubscriptBox[\(Q\), \(ID\)]\)\>\"", ",", 
+              "\"\<\!\(\*SubscriptBox[\(I\), \(D\)]\)\>\""}], "}"}]}], ",", 
+           " ", 
+           RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+           RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "\[IndentingNewLine]",
+           "]"}], "}"}]}], "\[IndentingNewLine]", "}"}], "]"}]}], 
     "\[IndentingNewLine]", 
     RowBox[{"(*", 
      RowBox[{"Plot", "[", 
@@ -208,6 +622,16 @@ Cell[BoxData[
     RowBox[{"\[Phi]t", ",", "0.02", ",", "0.03", ",", "0.001", ",", 
      RowBox[{"Appearance", "\[Rule]", 
       RowBox[{"{", 
+       RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"minX", ",", 
+     RowBox[{
+      RowBox[{"-", "1"}], "*", 
+      SuperscriptBox["10", 
+       RowBox[{"-", "17"}]]}], ",", "0", ",", 
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", 
        RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}]}], 
   "\[IndentingNewLine]", "]"}]], "Input",
  CellChangeTimes->{{3.6618005449457703`*^9, 3.6618007637262583`*^9}, {
@@ -217,41 +641,84 @@ Cell[BoxData[
    3.661801197970765*^9}, {3.661802729171063*^9, 3.6618028726724377`*^9}, {
    3.661802952412615*^9, 3.661803292555233*^9}, {3.661808150912663*^9, 
    3.6618082583183327`*^9}, 3.661808336097666*^9, {3.66180837482261*^9, 
-   3.661808392339467*^9}}],
+   3.661808392339467*^9}, {3.661869734078261*^9, 3.661869734369479*^9}, {
+   3.66187125849188*^9, 3.661871343913294*^9}, {3.6618713770404577`*^9, 
+   3.66187143228862*^9}, 3.6618721873386917`*^9, {3.661872228096586*^9, 
+   3.661872242274466*^9}, {3.66187229309103*^9, 3.661872364231842*^9}, 
+   3.661872434260036*^9, {3.661872509327929*^9, 3.661872509560151*^9}, {
+   3.661879524673215*^9, 3.661879527130427*^9}, {3.661879559290595*^9, 
+   3.6618795748996572`*^9}, {3.661898305411697*^9, 3.6618983811597023`*^9}, {
+   3.661898431086904*^9, 3.6618984508390923`*^9}}],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`\[Phi]t$$ = 0.02, Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{
-      Hold[$CellContext`\[Phi]t$$], 0.02, 0.03, 0.001}}, Typeset`size$$ = {
-    360., {102., 106.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`\[Phi]t$371783$$ = 0}, 
+   DynamicModuleBox[{$CellContext`minX$$ = 
+    Rational[-1, 100000000000000000], $CellContext`\[Phi]t$$ = 0.02, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`\[Phi]t$$], 0.02, 0.03, 0.001}, {
+      Hold[$CellContext`minX$$], 
+      Rational[-1, 100000000000000000], 0}}, Typeset`size$$ = {
+    1085., {360.5, 367.5}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[Phi]t$4399$$ = 
+    0, $CellContext`minX$4400$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, "Variables" :> {$CellContext`\[Phi]t$$ = 0.02}, 
+     1, StandardForm, 
+      "Variables" :> {$CellContext`minX$$ = 
+        Rational[-1, 100000000000000000], $CellContext`\[Phi]t$$ = 0.02}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`\[Phi]t$$, $CellContext`\[Phi]t$371783$$, 0]}, 
+        Hold[$CellContext`\[Phi]t$$, $CellContext`\[Phi]t$4399$$, 0], 
+        Hold[$CellContext`minX$$, $CellContext`minX$4400$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
          Typeset`skipInitDone$$}, "Body" :> 
-      Block[{$CellContext`\[Mu]n = 150, $CellContext`W = 
+      Block[{$CellContext`\[Mu]n = 700, $CellContext`W = 
          160 10^(-9), $CellContext`L = 150 10^(-9), $CellContext`n = 
          1, $CellContext`Cox = 150 10^(-18)}, 
-        Plot[{
-          $CellContext`IFQ[$CellContext`QIs, $CellContext`\[Mu]n, \
+        Grid[{{
+           Plot3D[{
+             $CellContext`IDQ[$CellContext`QIs, $CellContext`QId, \
+$CellContext`\[Mu]n, $CellContext`W, $CellContext`L, $CellContext`n, \
+$CellContext`Cox, $CellContext`\[Phi]t$$]}, {$CellContext`QIs, \
+$CellContext`minX$$, 1 10^(-17)}, {$CellContext`QId, $CellContext`minX$$, 1 
+             10^(-17)}, 
+            AxesLabel -> {
+             "\!\(\*SubscriptBox[\(Q\), \(IS\)]\)", 
+              "\!\(\*SubscriptBox[\(Q\), \(ID\)]\)", 
+              "\!\(\*SubscriptBox[\(I\), \(D\)]\)"}, PlotRange -> All, 
+            ImageSize -> Large], 
+           Plot3D[{
+             $CellContext`IFRQ[$CellContext`QIs, $CellContext`\[Mu]n, \
 $CellContext`W, $CellContext`L, $CellContext`n, $CellContext`Cox, \
-$CellContext`\[Phi]t$$]}, {$CellContext`QIs, (-1) 10^(-17), 1 10^(-17)}, 
-         AxesLabel -> {
-          "\!\(\*SubscriptBox[\(Q\), \(IS\)]\)", 
-           "\!\(\*SubscriptBox[\(I\), \(D\)]\)"}, PlotRange -> All]], 
+$CellContext`\[Phi]t$$], 
+             $CellContext`IFRQ[$CellContext`QId, $CellContext`\[Mu]n, \
+$CellContext`W, $CellContext`L, $CellContext`n, $CellContext`Cox, \
+$CellContext`\[Phi]t$$]}, {$CellContext`QIs, $CellContext`minX$$, 1 
+             10^(-17)}, {$CellContext`QId, $CellContext`minX$$, 1 10^(-17)}, 
+            AxesLabel -> {
+             "\!\(\*SubscriptBox[\(Q\), \(IS\)]\)", 
+              "\!\(\*SubscriptBox[\(Q\), \(ID\)]\)", 
+              "\!\(\*SubscriptBox[\(I\), \(F \((R)\)\)]\)"}, PlotRange -> All,
+             ImageSize -> 500, PlotStyle -> {Red, Blue}]}, {
+           Plot[{
+             $CellContext`IFRQ[$CellContext`QIs, $CellContext`\[Mu]n, \
+$CellContext`W, $CellContext`L, $CellContext`n, $CellContext`Cox, \
+$CellContext`\[Phi]t$$]}, {$CellContext`QIs, $CellContext`minX$$, 1 10^(-17)},
+             AxesLabel -> {
+             "\!\(\*SubscriptBox[\(Q\), \(IS\)]\)", 
+              "\!\(\*SubscriptBox[\(Q\), \(ID\)]\)", 
+              "\!\(\*SubscriptBox[\(I\), \(D\)]\)"}, PlotRange -> All, 
+            ImageSize -> Large]}}]], 
       "Specifications" :> {{$CellContext`\[Phi]t$$, 0.02, 0.03, 0.001, 
+         Appearance -> {"Labeled", "Open"}}, {$CellContext`minX$$, 
+         Rational[-1, 100000000000000000], 0, 
          Appearance -> {"Labeled", "Open"}}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{407., {156., 163.}},
+     ImageSizeCache->{1132., {445., 452.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -269,7 +736,190 @@ $CellContext`\[Phi]t$$]}, {$CellContext`QIs, (-1) 10^(-17), 1 10^(-17)},
    3.6618027314271917`*^9, 3.661802814009078*^9}, {3.66180285158235*^9, 
    3.66180287352862*^9}, {3.6618029539435043`*^9, 3.6618030021245747`*^9}, {
    3.6618030342213097`*^9, 3.661803293230328*^9}, {3.6618082348122253`*^9, 
-   3.661808261297947*^9}, 3.66180834509156*^9, 3.661808393302807*^9}]
+   3.661808261297947*^9}, 3.66180834509156*^9, 3.661808393302807*^9, 
+   3.661869737964065*^9, {3.661871331664669*^9, 3.661871345107484*^9}, {
+   3.661871378639248*^9, 3.661871433214816*^9}, 3.661872188967258*^9, {
+   3.661872228661384*^9, 3.661872243194553*^9}, {3.661872331066619*^9, 
+   3.6618723647547693`*^9}, 3.66187251030916*^9, {3.661879562494109*^9, 
+   3.661879576691787*^9}, 3.661898331459877*^9, {3.661898435032208*^9, 
+   3.66189845185259*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"\[Mu]n", "=", "700"}], ",", 
+       RowBox[{"W", "=", 
+        RowBox[{"160", " ", 
+         SuperscriptBox["10", 
+          RowBox[{"-", "9"}]]}]}], ",", 
+       RowBox[{"L", "=", 
+        RowBox[{"150", " ", 
+         SuperscriptBox["10", 
+          RowBox[{"-", "9"}]]}]}], ",", 
+       RowBox[{"n", "=", "1"}], ",", 
+       RowBox[{"Cox", "=", 
+        RowBox[{"150", " ", 
+         SuperscriptBox["10", 
+          RowBox[{"-", "18"}]]}]}]}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"IFRQ", "[", 
+         RowBox[{
+         "QIs", ",", "\[Mu]n", ",", "W", ",", "L", ",", "n", ",", "Cox", ",", 
+          "\[Phi]t"}], "]"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"QIs", ",", "minX", ",", 
+         RowBox[{"1", " ", 
+          SuperscriptBox["10", 
+           RowBox[{"-", "17"}]]}]}], "}"}], ",", "\[IndentingNewLine]", " ", 
+       RowBox[{"AxesLabel", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<\!\(\*SubscriptBox[\(Q\), \(IS\)]\)\>\"", ",", 
+          "\"\<\!\(\*SubscriptBox[\(Q\), \(ID\)]\)\>\"", ",", 
+          "\"\<\!\(\*SubscriptBox[\(I\), \(D\)]\)\>\""}], "}"}]}], ",", " ", 
+       RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+       RowBox[{"ImageSize", "\[Rule]", "Large"}], ",", "\[IndentingNewLine]", 
+       
+       RowBox[{"Epilog", "\[Rule]", 
+        RowBox[{"{", "\[IndentingNewLine]", 
+         RowBox[{"Directive", "[", 
+          RowBox[{"{", 
+           RowBox[{"Red", ",", "Dashed"}], "}"}], "]"}], "}"}]}]}], 
+      "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"IRQ", "[", 
+        RowBox[{
+         RowBox[{"-", "QId"}], ",", "\[Mu]n", ",", "W", ",", "L", ",", "n", 
+         ",", "Cox", ",", "#"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"QId", ",", 
+         RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", " ", 
+       RowBox[{"AxesLabel", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<\!\(\*SubscriptBox[\(Q\), \(ID\)]\)\>\"", ",", 
+          "\"\<\!\(\*SubscriptBox[\(I\), \(D\)]\)\>\""}], "}"}]}]}], "]"}], 
+     "*)"}], "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"\[Phi]t", ",", "0.02", ",", "0.03", ",", "0.001", ",", 
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"minX", ",", 
+     RowBox[{
+      RowBox[{"-", "1.0"}], "*", 
+      SuperscriptBox["10", 
+       RowBox[{"-", "17"}]]}], ",", "0", ",", 
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.6618987446709957`*^9, 3.6618988083678503`*^9}, {
+  3.661898940141024*^9, 3.6618989414589653`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`minX$$ = -1.*^-17, $CellContext`\[Phi]t$$ = 
+    0.02, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`\[Phi]t$$], 0.02, 0.03, 0.001}, {
+      Hold[$CellContext`minX$$], -1.*^-17, 0}}, Typeset`size$$ = {
+    576., {161., 165.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[Phi]t$2330$$ = 
+    0, $CellContext`minX$2331$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`minX$$ = -1.*^-17, $CellContext`\[Phi]t$$ = 
+        0.02}, "ControllerVariables" :> {
+        Hold[$CellContext`\[Phi]t$$, $CellContext`\[Phi]t$2330$$, 0], 
+        Hold[$CellContext`minX$$, $CellContext`minX$2331$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Block[{$CellContext`\[Mu]n = 700, $CellContext`W = 
+         160 10^(-9), $CellContext`L = 150 10^(-9), $CellContext`n = 
+         1, $CellContext`Cox = 150 10^(-18)}, 
+        Plot[{
+          $CellContext`IFRQ[$CellContext`QIs, $CellContext`\[Mu]n, \
+$CellContext`W, $CellContext`L, $CellContext`n, $CellContext`Cox, \
+$CellContext`\[Phi]t$$]}, {$CellContext`QIs, $CellContext`minX$$, 1 10^(-17)},
+          AxesLabel -> {
+          "\!\(\*SubscriptBox[\(Q\), \(IS\)]\)", 
+           "\!\(\*SubscriptBox[\(Q\), \(ID\)]\)", 
+           "\!\(\*SubscriptBox[\(I\), \(D\)]\)"}, PlotRange -> All, ImageSize -> 
+         Large]], 
+      "Specifications" :> {{$CellContext`\[Phi]t$$, 0.02, 0.03, 0.001, 
+         Appearance -> {"Labeled", "Open"}}, {$CellContext`minX$$, -1.*^-17, 
+         0, Appearance -> {"Labeled", "Open"}}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{623., {239., 246.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.661898758208952*^9, 3.6618987682057743`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Block", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"n", "=", "1"}], ",", " ", 
+     RowBox[{"Cox", "=", "100"}], ",", " ", 
+     RowBox[{"\[Phi]t", "=", "0.02"}]}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Line", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"QIp", "[", 
+         RowBox[{"n", ",", "Cox", ",", "\[Phi]t"}], "]"}], ",", "0"}], "}"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"QIp", "[", 
+         RowBox[{"n", ",", "Cox", ",", "\[Phi]t"}], "]"}], ",", "1"}], 
+       "}"}]}], "}"}], "]"}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.661898947127802*^9, 3.6618989493842173`*^9}, {
+  3.661899006838098*^9, 3.661899026660038*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Line", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", "2.`"}], ",", "0"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", "2.`"}], ",", "1"}], "}"}]}], "}"}], "]"}]], "Output",
+ CellChangeTimes->{3.6618990287127028`*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -316,244 +966,6 @@ Cell[BoxData[{
  CellChangeTimes->{{3.6616155637543173`*^9, 3.661615606446686*^9}, {
   3.6616159926067677`*^9, 3.6616161094962397`*^9}, {3.6616164395390663`*^9, 
   3.66161644156283*^9}, {3.661715968743758*^9, 3.66171599849196*^9}}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell["Voltage equations (UCCM)", "Subchapter",
- CellChangeTimes->{{3.6617225824746237`*^9, 3.661722588182291*^9}}],
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"Vs", "[", 
-   RowBox[{"Vp_", ",", "QIs_", ",", "QIp_", ",", "\[Phi]t_"}], "]"}], ":=", 
-  RowBox[{"Vp", "-", 
-   RowBox[{"\[Phi]t", " ", 
-    RowBox[{"(", 
-     RowBox[{
-      FractionBox["QIs", "QIp"], "-", "1", "+", 
-      RowBox[{"Log", "[", 
-       FractionBox["QIs", "QIp"], "]"}]}], ")"}]}]}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"Vd", "[", 
-   RowBox[{"Vp_", ",", "QId_", ",", "QIp_", ",", "\[Phi]t_"}], "]"}], ":=", 
-  RowBox[{"Vp", "-", 
-   RowBox[{"\[Phi]t", " ", 
-    RowBox[{"(", 
-     RowBox[{
-      FractionBox["QId", "QIp"], "-", "1", "+", 
-      RowBox[{"Log", "[", 
-       FractionBox["QId", "QIp"], "]"}]}], ")"}]}]}]}]}], "Input",
- CellChangeTimes->{{3.6617228400485563`*^9, 3.661722967656013*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
-  RowBox[{
-   RowBox[{"Block", "[", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{"\[Mu]n", "=", "700"}], ",", 
-       RowBox[{"W", "=", 
-        RowBox[{"160", " ", 
-         SuperscriptBox["10", 
-          RowBox[{"-", "9"}]]}]}], ",", 
-       RowBox[{"L", "=", 
-        RowBox[{"150", " ", 
-         SuperscriptBox["10", 
-          RowBox[{"-", "9"}]]}]}], ",", 
-       RowBox[{"n", "=", "1"}], ",", 
-       RowBox[{"Cox", "=", 
-        RowBox[{"150", " ", 
-         SuperscriptBox["10", 
-          RowBox[{"-", "18"}]]}]}]}], "}"}], ",", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", 
-     RowBox[{"Show", "[", "\[IndentingNewLine]", 
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"Plot", "[", 
-         RowBox[{
-          RowBox[{"(", 
-           RowBox[{"{", 
-            RowBox[{"Vs", "[", 
-             RowBox[{"Vp", ",", "QIs", ",", 
-              RowBox[{"QIp", "[", 
-               RowBox[{"n", ",", "Cox", ",", "\[Phi]t"}], "]"}], ",", 
-              "\[Phi]t"}], "]"}], "}"}], ")"}], ",", 
-          RowBox[{"{", 
-           RowBox[{"QIs", ",", 
-            RowBox[{
-             RowBox[{"-", "5"}], " ", 
-             SuperscriptBox["10", 
-              RowBox[{"-", "18"}]]}], ",", 
-            RowBox[{
-             RowBox[{"-", "1"}], "*", 
-             SuperscriptBox["10", 
-              RowBox[{"-", "21"}]]}]}], "}"}], ",", " ", 
-          RowBox[{"AxesLabel", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{
-            "\"\<\!\(\*SubscriptBox[\(Q\), \(IS\)]\)\>\"", ",", 
-             "\"\<\!\(\*SubscriptBox[\(V\), \(S\)]\)\>\""}], "}"}]}], ",", 
-          " ", 
-          RowBox[{"PlotRange", "\[Rule]", "All"}], ",", "\[IndentingNewLine]", 
-          RowBox[{"Epilog", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"Directive", "[", 
-              RowBox[{"{", 
-               RowBox[{"Red", ",", "Dashed"}], "}"}], "]"}], ",", 
-             RowBox[{"Line", "[", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"{", 
-                 RowBox[{
-                  RowBox[{"QIp", "[", 
-                   RowBox[{"n", ",", "Cox", ",", "\[Phi]t"}], "]"}], ",", 
-                  "0"}], "}"}], ",", 
-                RowBox[{"{", 
-                 RowBox[{
-                  RowBox[{"QIp", "[", 
-                   RowBox[{"n", ",", "Cox", ",", "\[Phi]t"}], "]"}], ",", 
-                  "1"}], "}"}]}], "}"}], "]"}]}], "}"}]}]}], 
-         "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
-        RowBox[{"Plot", "[", 
-         RowBox[{
-          RowBox[{"(", 
-           RowBox[{"{", 
-            RowBox[{"Vs", "[", 
-             RowBox[{"Vp", ",", 
-              RowBox[{"QIp", "[", 
-               RowBox[{"n", ",", "Cox", ",", "\[Phi]t"}], "]"}], ",", 
-              RowBox[{"QIp", "[", 
-               RowBox[{"n", ",", "Cox", ",", "\[Phi]t"}], "]"}], ",", 
-              "\[Phi]t"}], "]"}], "}"}], ")"}], ",", 
-          RowBox[{"{", 
-           RowBox[{"QIs", ",", 
-            RowBox[{
-             RowBox[{"-", "5"}], " ", 
-             SuperscriptBox["10", 
-              RowBox[{"-", "18"}]]}], ",", 
-            RowBox[{
-             RowBox[{"-", "1"}], "*", 
-             SuperscriptBox["10", 
-              RowBox[{"-", "21"}]]}]}], "}"}], ",", " ", 
-          RowBox[{"AxesLabel", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{
-            "\"\<\!\(\*SubscriptBox[\(Q\), \(IS\)]\)\>\"", ",", 
-             "\"\<\!\(\*SubscriptBox[\(V\), \(S\)]\)\>\""}], "}"}]}], ",", 
-          " ", 
-          RowBox[{"PlotRange", "\[Rule]", "All"}], ",", " ", 
-          RowBox[{"PlotStyle", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{"Dashed", ",", 
-             RowBox[{"Darker", "[", "Green", "]"}]}], "}"}]}]}], 
-         "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "}"}], 
-      "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}], ",", 
-   "\[IndentingNewLine]", 
-   RowBox[{"{", 
-    RowBox[{"\[Phi]t", ",", "0.02", ",", "0.03", ",", "0.001", ",", 
-     RowBox[{"Appearance", "\[Rule]", 
-      RowBox[{"{", 
-       RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}], 
-   ",", "\[IndentingNewLine]", 
-   RowBox[{"{", 
-    RowBox[{"Vp", ",", "0.01", ",", "0.5", ",", "0.01", ",", 
-     RowBox[{"Appearance", "\[Rule]", 
-      RowBox[{"{", 
-       RowBox[{"\"\<Labeled\>\"", ",", "\"\<Open\>\""}], "}"}]}]}], "}"}]}], 
-  "\[IndentingNewLine]", "]"}]], "Input",
- CellChangeTimes->{{3.661806621449746*^9, 3.661806642920291*^9}, {
-   3.661806680866908*^9, 3.661806803257648*^9}, 3.661806842486174*^9, {
-   3.661806946173015*^9, 3.6618069939497833`*^9}, {3.661807040923566*^9, 
-   3.661807110882494*^9}, 3.661807150084147*^9, {3.661807294440359*^9, 
-   3.661807530672577*^9}, {3.661807593671074*^9, 3.661807614170879*^9}, {
-   3.661807680815125*^9, 3.661807735106535*^9}, {3.6618078194638166`*^9, 
-   3.661807822089159*^9}, {3.661807852413041*^9, 3.661807932454723*^9}, {
-   3.661807984366424*^9, 3.661807996864114*^9}, {3.661808029299757*^9, 
-   3.661808040466916*^9}, {3.6618080896474867`*^9, 3.661808095136162*^9}, {
-   3.6618084335637083`*^9, 3.661808619742601*^9}, {3.661808671510601*^9, 
-   3.661808671640574*^9}}],
-
-Cell[BoxData[
- TagBox[
-  StyleBox[
-   DynamicModuleBox[{$CellContext`Vp$$ = 0.02, $CellContext`\[Phi]t$$ = 0.02, 
-    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
-    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
-    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
-      Hold[$CellContext`\[Phi]t$$], 0.02, 0.03, 0.001}, {
-      Hold[$CellContext`Vp$$], 0.01, 0.5, 0.01}}, Typeset`size$$ = {
-    360., {104., 108.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`\[Phi]t$379957$$ = 
-    0, $CellContext`Vp$379958$$ = 0}, 
-    DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, 
-      "Variables" :> {$CellContext`Vp$$ = 0.01, $CellContext`\[Phi]t$$ = 
-        0.02}, "ControllerVariables" :> {
-        Hold[$CellContext`\[Phi]t$$, $CellContext`\[Phi]t$379957$$, 0], 
-        Hold[$CellContext`Vp$$, $CellContext`Vp$379958$$, 0]}, 
-      "OtherVariables" :> {
-       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> 
-      Block[{$CellContext`\[Mu]n = 700, $CellContext`W = 
-         160 10^(-9), $CellContext`L = 150 10^(-9), $CellContext`n = 
-         1, $CellContext`Cox = 150 10^(-18)}, 
-        Show[{
-          Plot[{
-            $CellContext`Vs[$CellContext`Vp$$, $CellContext`QIs, 
-             $CellContext`QIp[$CellContext`n, $CellContext`Cox, $CellContext`\
-\[Phi]t$$], $CellContext`\[Phi]t$$]}, {$CellContext`QIs, (-5) 10^(-18), (-1) 
-            10^(-21)}, 
-           AxesLabel -> {
-            "\!\(\*SubscriptBox[\(Q\), \(IS\)]\)", 
-             "\!\(\*SubscriptBox[\(V\), \(S\)]\)"}, PlotRange -> All, Epilog -> {
-             Directive[{Red, Dashed}], 
-             Line[{{
-                $CellContext`QIp[$CellContext`n, $CellContext`Cox, \
-$CellContext`\[Phi]t$$], 0}, {
-                $CellContext`QIp[$CellContext`n, $CellContext`Cox, \
-$CellContext`\[Phi]t$$], 1}}]}], 
-          Plot[{
-            $CellContext`Vs[$CellContext`Vp$$, 
-             $CellContext`QIp[$CellContext`n, $CellContext`Cox, $CellContext`\
-\[Phi]t$$], 
-             $CellContext`QIp[$CellContext`n, $CellContext`Cox, $CellContext`\
-\[Phi]t$$], $CellContext`\[Phi]t$$]}, {$CellContext`QIs, (-5) 10^(-18), (-1) 
-            10^(-21)}, 
-           AxesLabel -> {
-            "\!\(\*SubscriptBox[\(Q\), \(IS\)]\)", 
-             "\!\(\*SubscriptBox[\(V\), \(S\)]\)"}, PlotRange -> All, 
-           PlotStyle -> {Dashed, 
-             Darker[Green]}]}]], 
-      "Specifications" :> {{$CellContext`\[Phi]t$$, 0.02, 0.03, 0.001, 
-         Appearance -> {"Labeled", "Open"}}, {$CellContext`Vp$$, 0.01, 0.5, 
-         0.01, Appearance -> {"Labeled", "Open"}}}, "Options" :> {}, 
-      "DefaultOptions" :> {}],
-     ImageSizeCache->{407., {182., 189.}},
-     SingleEvaluation->True],
-    Deinitialization:>None,
-    DynamicModuleValues:>{},
-    SynchronousInitialization->True,
-    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-    UnsavedVariables:>{Typeset`initDone$$},
-    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-   Deployed->True,
-   StripOnInput->False],
-  Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{{3.6618074107053633`*^9, 3.6618074966388073`*^9}, {
-   3.661807606127428*^9, 3.661807615759582*^9}, 3.6618076900913877`*^9, {
-   3.6618077226799383`*^9, 3.661807735946829*^9}, 3.661807822885783*^9, {
-   3.661807853754332*^9, 3.66180787017696*^9}, 3.661807910575097*^9, 
-   3.661807998358494*^9, 3.6618080415552273`*^9, 3.661808101543695*^9, 
-   3.661808538035101*^9, {3.6618085850065517`*^9, 3.661808595825611*^9}, 
-   3.661808672449409*^9}]
-}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -718,7 +1130,7 @@ Cell[BoxData[
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`\[Alpha]$$], 0, 1, 0.01}}, Typeset`size$$ = {
-    360., {92., 98.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    360., {101., 107.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
     Typeset`skipInitDone$$ = True, $CellContext`\[Alpha]$393371$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`\[Alpha]$$ = 0}, 
@@ -750,7 +1162,7 @@ $CellContext`Cox]]}, {$CellContext`i, 0, 1},
       "Specifications" :> {{$CellContext`\[Alpha]$$, 0, 1, 0.01, 
          Appearance -> {"Labeled", "Open"}}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{407., {147., 154.}},
+     ImageSizeCache->{407., {156., 163.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1593,7 +2005,7 @@ Cell[BoxData[
 }, Open  ]]
 },
 WindowSize->{1280, 1548},
-WindowMargins->{{1260, Automatic}, {Automatic, -10}},
+WindowMargins->{{1230, Automatic}, {Automatic, -10}},
 FrontEndVersion->"10.0 for Linux x86 (64-bit) (December 4, 2014)",
 StyleDefinitions->"Default.nb"
 ]
@@ -1612,75 +2024,85 @@ Cell[CellGroupData[{
 Cell[580, 22, 120, 1, 69, "Chapter"],
 Cell[703, 25, 1054, 22, 113, "Text"],
 Cell[CellGroupData[{
-Cell[1782, 51, 154, 2, 64, "Subchapter"],
-Cell[1939, 55, 3037, 87, 295, "Input",
+Cell[1782, 51, 114, 1, 64, "Subchapter"],
+Cell[1899, 54, 686, 16, 57, "Input",
  InitializationCell->True],
 Cell[CellGroupData[{
-Cell[5001, 146, 2918, 73, 177, "Input"],
-Cell[7922, 221, 2730, 50, 336, "Output"]
+Cell[2610, 74, 7312, 167, 442, "Input"],
+Cell[9925, 243, 5417, 104, 551, "Output"]
+}, Open  ]],
+Cell[15357, 350, 1761, 52, 96, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17155, 407, 154, 2, 64, "Subchapter"],
+Cell[17312, 411, 2665, 73, 240, "Input",
+ InitializationCell->True],
+Cell[CellGroupData[{
+Cell[20002, 488, 7050, 162, 511, "Input"],
+Cell[27055, 652, 4987, 92, 914, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32079, 749, 3152, 81, 316, "Input"],
+Cell[35234, 832, 2604, 50, 502, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37875, 887, 780, 22, 77, "Input"],
+Cell[38658, 911, 299, 10, 65, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10701, 277, 153, 2, 64, "Subchapter"],
-Cell[10857, 281, 1294, 36, 233, "Input",
+Cell[39006, 927, 153, 2, 64, "Subchapter"],
+Cell[39162, 931, 1294, 36, 233, "Input",
  InitializationCell->True]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12188, 322, 114, 1, 64, "Subchapter"],
-Cell[12305, 325, 763, 21, 108, "Input"],
-Cell[CellGroupData[{
-Cell[13093, 350, 5281, 128, 388, "Input"],
-Cell[18377, 480, 3791, 74, 388, "Output"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[22217, 560, 167, 2, 64, "Subchapter"],
-Cell[22387, 564, 960, 32, 213, "Input",
+Cell[40493, 972, 167, 2, 64, "Subchapter"],
+Cell[40663, 976, 960, 32, 213, "Input",
  InitializationCell->True]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[23384, 601, 109, 1, 64, "Subchapter"],
-Cell[23496, 604, 1262, 38, 168, "Input"],
-Cell[24761, 644, 351, 10, 48, "Text"],
+Cell[41660, 1013, 109, 1, 64, "Subchapter"],
+Cell[41772, 1016, 1262, 38, 168, "Input"],
+Cell[43037, 1056, 351, 10, 48, "Text"],
 Cell[CellGroupData[{
-Cell[25137, 658, 2093, 52, 175, "Input"],
-Cell[27233, 712, 2667, 55, 351, "Output"]
+Cell[43413, 1070, 2093, 52, 175, "Input"],
+Cell[45509, 1124, 2669, 55, 336, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[29949, 773, 153, 2, 64, "Subchapter"],
-Cell[30105, 777, 2191, 52, 134, "Input",
+Cell[48227, 1185, 153, 2, 64, "Subchapter"],
+Cell[48383, 1189, 2191, 52, 134, "Input",
  InitializationCell->True],
 Cell[CellGroupData[{
-Cell[32321, 833, 277, 4, 32, "Input"],
-Cell[32601, 839, 315, 5, 32, "Output"]
+Cell[50599, 1245, 277, 4, 32, "Input"],
+Cell[50879, 1251, 315, 5, 32, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[32965, 850, 156, 2, 64, "Subchapter"],
-Cell[33124, 854, 1593, 40, 177, "Text"],
-Cell[34720, 896, 846, 24, 83, "Input",
+Cell[51243, 1262, 156, 2, 64, "Subchapter"],
+Cell[51402, 1266, 1593, 40, 177, "Text"],
+Cell[52998, 1308, 846, 24, 83, "Input",
  InitializationCell->True],
-Cell[35569, 922, 484, 13, 55, "Input"],
+Cell[53847, 1334, 484, 13, 55, "Input"],
 Cell[CellGroupData[{
-Cell[36078, 939, 5305, 111, 495, "Input"],
-Cell[41386, 1052, 4924, 127, 230, "Output"]
+Cell[54356, 1351, 5305, 111, 495, "Input"],
+Cell[59664, 1464, 4924, 127, 230, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[46359, 1185, 109, 1, 64, "Subchapter"],
+Cell[64637, 1597, 109, 1, 64, "Subchapter"],
 Cell[CellGroupData[{
-Cell[46493, 1190, 2330, 63, 231, "Input"],
-Cell[48826, 1255, 5864, 152, 212, "Output"]
+Cell[64771, 1602, 2330, 63, 231, "Input"],
+Cell[67104, 1667, 5864, 152, 212, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[54727, 1412, 2786, 74, 319, "Input"],
-Cell[57516, 1488, 1932, 57, 99, "Output"]
+Cell[73005, 1824, 2786, 74, 319, "Input"],
+Cell[75794, 1900, 1932, 57, 99, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[59485, 1550, 411, 11, 55, "Input"],
-Cell[59899, 1563, 452, 14, 50, "Output"],
-Cell[60354, 1579, 346, 10, 64, "Output"]
+Cell[77763, 1962, 411, 11, 55, "Input"],
+Cell[78177, 1975, 452, 14, 50, "Output"],
+Cell[78632, 1991, 346, 10, 64, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
