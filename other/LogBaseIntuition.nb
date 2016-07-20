@@ -1,0 +1,283 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10698,        274]
+NotebookOptionsPosition[     10221,        253]
+NotebookOutlinePosition[     10574,        268]
+CellTagsIndexPosition[     10531,        265]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"xVals", "=", 
+     RowBox[{"PowerRange", "[", 
+      RowBox[{"xMin", ",", "xMax", ",", "xPow"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"yVals", "=", 
+     RowBox[{"m", "*", "xVals"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Grid", "[", 
+     RowBox[{"{", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Show", "[", 
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Plot", "[", 
+            RowBox[{
+             RowBox[{"m", "*", "x"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"x", ",", "xMin", ",", "xMax"}], "}"}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", "Medium"}]}], "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"ListPlot", "[", 
+            RowBox[{
+             RowBox[{"Transpose", "[", 
+              RowBox[{"{", 
+               RowBox[{"xVals", ",", "yVals"}], "}"}], "]"}], ",", 
+             RowBox[{"PlotStyle", "\[Rule]", "Thick"}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", "Medium"}]}], "]"}]}], 
+          "\[IndentingNewLine]", "}"}], "]"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"Show", "[", 
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"LogLogPlot", "[", 
+            RowBox[{
+             RowBox[{"m", "*", "x"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"x", ",", "xMin", ",", "xMax"}], "}"}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", "Medium"}]}], "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"ListLogLogPlot", "[", 
+            RowBox[{
+             RowBox[{"Transpose", "[", 
+              RowBox[{"{", 
+               RowBox[{"xVals", ",", "yVals"}], "}"}], "]"}], ",", 
+             RowBox[{"PlotStyle", "\[Rule]", "Thick"}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", "Medium"}]}], "]"}]}], 
+          "\[IndentingNewLine]", "}"}], "]"}]}], "\[IndentingNewLine]", "}"}],
+       "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"m", ",", "1"}], "}"}], ",", "0", ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"xMin", ",", "1"}], "}"}], ",", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "18"}]], ",", "1", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"xMax", ",", 
+       SuperscriptBox["10", "6"]}], "}"}], ",", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "6"}]], ",", 
+     SuperscriptBox["10", "9"], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"xPow", ",", "10"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "10"}], "}"}]}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6694932850586123`*^9, 3.669493433360946*^9}, {
+  3.6694935177434874`*^9, 3.669493727557722*^9}, {3.669493826684729*^9, 
+  3.669493843757484*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`m$$ = 0.04, $CellContext`xMax$$ = 
+    1000000, $CellContext`xMin$$ = 1, $CellContext`xPow$$ = 10, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`m$$], 1}, 0, 10}, {{
+       Hold[$CellContext`xMin$$], 1}, 
+      Rational[1, 1000000000000000000], 1}, {{
+       Hold[$CellContext`xMax$$], 1000000}, 
+      Rational[1, 1000000], 1000000000}, {{
+       Hold[$CellContext`xPow$$], 10}, {2, 10}}}, Typeset`size$$ = {
+    729., {106.5, 113.5}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`m$11541$$ = 
+    0, $CellContext`xMin$11542$$ = 0, $CellContext`xMax$11543$$ = 
+    0, $CellContext`xPow$11544$$ = False}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`m$$ = 1, $CellContext`xMax$$ = 
+        1000000, $CellContext`xMin$$ = 1, $CellContext`xPow$$ = 10}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`m$$, $CellContext`m$11541$$, 0], 
+        Hold[$CellContext`xMin$$, $CellContext`xMin$11542$$, 0], 
+        Hold[$CellContext`xMax$$, $CellContext`xMax$11543$$, 0], 
+        Hold[$CellContext`xPow$$, $CellContext`xPow$11544$$, False]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`xVals = 
+        PowerRange[$CellContext`xMin$$, $CellContext`xMax$$, \
+$CellContext`xPow$$]; $CellContext`yVals = $CellContext`m$$ \
+$CellContext`xVals; Grid[{{
+           Show[{
+             
+             Plot[$CellContext`m$$ $CellContext`x, {$CellContext`x, \
+$CellContext`xMin$$, $CellContext`xMax$$}, ImageSize -> Medium], 
+             ListPlot[
+              Transpose[{$CellContext`xVals, $CellContext`yVals}], PlotStyle -> 
+              Thick, ImageSize -> Medium]}], 
+           Show[{
+             
+             LogLogPlot[$CellContext`m$$ $CellContext`x, {$CellContext`x, \
+$CellContext`xMin$$, $CellContext`xMax$$}, ImageSize -> Medium], 
+             ListLogLogPlot[
+              Transpose[{$CellContext`xVals, $CellContext`yVals}], PlotStyle -> 
+              Thick, ImageSize -> Medium]}]}}]), 
+      "Specifications" :> {{{$CellContext`m$$, 1}, 0, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`xMin$$, 1}, 
+         Rational[1, 1000000000000000000], 1, Appearance -> 
+         "Labeled"}, {{$CellContext`xMax$$, 1000000}, 
+         Rational[1, 1000000], 1000000000, Appearance -> 
+         "Labeled"}, {{$CellContext`xPow$$, 10}, {2, 10}}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{780., {193., 200.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.6694935510293584`*^9, 3.669493595991166*^9}, 
+   3.6694937280216703`*^9, 3.669493844201773*^9}]
+}, Open  ]],
+
+Cell["\<\
+This math below, shows that if the percentage error is large, than taking the \
+inverse can magnify the percentage error.  If the percentage error is small, \
+then the resulting inverse error is almost the same as the original error.  \
+The takeaway point from this is that if one is calculating error and using \
+inverse values throughout their math, they need to be cognizant of how much \
+the inversions might be skewing their error metric.\
+\>", "Text",
+ CellChangeTimes->{{3.669494872182834*^9, 3.6694949860276427`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Block", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"fooS", ",", "invFoos", ",", 
+     RowBox[{"baseVal", "=", 
+      RowBox[{"1", "/", "10"}]}], ",", 
+     RowBox[{"percErr", "=", "0.5"}]}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Grid", "[", 
+    RowBox[{"{", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"fooS", "=", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"baseVal", 
+           RowBox[{"(", 
+            RowBox[{"1", "-", "percErr"}], ")"}]}], ",", " ", "baseVal", ",", 
+          RowBox[{"baseVal", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", "percErr"}], ")"}]}]}], "}"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Max", "[", "fooS", "]"}], "-", 
+          RowBox[{"Min", "[", "fooS", "]"}]}], ")"}], "/", 
+        RowBox[{"Mean", "[", "fooS", "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"invFoos", "=", 
+        RowBox[{"1", "/", "fooS"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Max", "[", "invFoos", "]"}], "-", 
+          RowBox[{"Min", "[", "invFoos", "]"}]}], ")"}], "/", 
+        RowBox[{"Mean", "[", "invFoos", "]"}]}]}], "\[IndentingNewLine]", 
+      "}"}], "}"}], "]"}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.6694941894752827`*^9, 3.6694944576060023`*^9}, {
+  3.66949451424339*^9, 3.669494540732432*^9}, {3.6694947602737627`*^9, 
+  3.669494842801381*^9}, {3.669495049408276*^9, 3.6694950905088634`*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     RowBox[{"{", 
+      RowBox[{"0.05`", ",", 
+       FractionBox["1", "10"], ",", "0.15000000000000002`"}], "}"}], "1.`", 
+     RowBox[{"{", 
+      RowBox[{"20.`", ",", "10", ",", "6.666666666666666`"}], "}"}], 
+     "1.090909090909091`"}
+   },
+   AutoDelete->False,
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{
+  3.6694942759600663`*^9, {3.6694943065315948`*^9, 3.6694943353591795`*^9}, {
+   3.6694944193660297`*^9, 3.6694944579877315`*^9}, {3.669494515152522*^9, 
+   3.669494541506113*^9}, {3.6694947701601763`*^9, 3.6694948434893894`*^9}, {
+   3.669495049943078*^9, 3.6694950915770426`*^9}}]
+}, Open  ]]
+},
+WindowSize->{1108, 1119},
+WindowMargins->{{Automatic, -500}, {Automatic, -1348}},
+FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (December 10, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3281, 84, 381, "Input"],
+Cell[3864, 108, 3470, 69, 410, "Output"]
+}, Open  ]],
+Cell[7349, 180, 535, 8, 68, "Text"],
+Cell[CellGroupData[{
+Cell[7909, 192, 1586, 39, 172, "Input"],
+Cell[9498, 233, 707, 17, 70, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
