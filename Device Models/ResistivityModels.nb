@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1097537,      18605]
-NotebookOptionsPosition[   1092736,      18447]
-NotebookOutlinePosition[   1093089,      18462]
-CellTagsIndexPosition[   1093046,      18459]
+NotebookDataLength[   1097822,      18589]
+NotebookOptionsPosition[   1092937,      18428]
+NotebookOutlinePosition[   1093291,      18443]
+CellTagsIndexPosition[   1093248,      18440]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -68,10 +68,9 @@ Cell[BoxData[
 Cell["\<\
 The parameter EcuAlloy is a worst-case approximation that I am using as a \
 proxy for the conversion of using pure copper to using a copper alloy.  I am \
-also using it to lump other effects like RIE and OPC (which I still don\
-\[CloseCurlyQuote]t know exactly what they are).  The value chosen below for \
-this parameter was gotten using the values in the Table 67 on page 311 of the \
-same pdf referenced above.  I got the scaling factor for EcuAlloy by \
+also using it to lump other effects like RIE and OPC.  The value chosen below \
+for this parameter was gotten using the values in the Table 67 on page 311 of \
+the same pdf referenced above.  I got the scaling factor for EcuAlloy by \
 calculating 9.45/RperUnitLen[Wmin,H,\[Rho]0,1], which roughly equals 1.415.  \
 The 9.45 value was gotten from the table referenced above\
 \>", "Text",
@@ -79,7 +78,8 @@ The 9.45 value was gotten from the table referenced above\
    3.6778565713087196`*^9, 3.677856651379012*^9}, {3.677856681857682*^9, 
    3.6778566878175545`*^9}, {3.6778567853478956`*^9, 
    3.6778568778548813`*^9}, {3.6778752162120724`*^9, 3.6778752752244563`*^9}, 
-   3.67795872620388*^9, {3.677959339454753*^9, 3.677959398263288*^9}}]
+   3.67795872620388*^9, {3.677959339454753*^9, 3.677959398263288*^9}, 
+   3.6785446443541117`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -14816,15 +14816,13 @@ circuit ",
  Cell[BoxData[
   FormBox[
    RowBox[{"(", 
-    SubscriptBox["I", "ckt"], ")"}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+    SubscriptBox["I", "ckt"], ")"}], TraditionalForm]]],
  " is spread out over multiple power stripes.  The total current through each \
 stripe is equal to ",
  Cell[BoxData[
   FormBox[
    FractionBox[
-    SubscriptBox["I", "ckt"], "N"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+    SubscriptBox["I", "ckt"], "N"], TraditionalForm]]],
  ", where N is the number of stripes.  The number of stripes, N, will be \
 calculated as ",
  Cell[BoxData[
@@ -14835,8 +14833,7 @@ calculated as ",
      RowBox[{
       SubscriptBox["W", "stripe"], "+", 
       SubscriptBox["W", "strip_spacing"]}]], "\[RightFloor]"}], 
-   TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   TraditionalForm]]],
  ".  If we assume each stripe stack to be identical, as an \
 approximation/assumption, then we can calculate the voltage drop, \
 \[CapitalDelta]V, across just one stripe and ensure that it is never greater \
@@ -14844,148 +14841,131 @@ than 50mV (or whatever spec we choose, b/c this formulation will be \
 parameterized).\n\nEach power stripe has a width, ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["W", "stripe"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["W", "stripe"], TraditionalForm]]],
  ", a height, ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["H", "B1"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["H", "B1"], TraditionalForm]]],
  ", and a length, ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["L", "ckt"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["L", "ckt"], TraditionalForm]]],
  ".  This has an equivalent resistance that I call ",
  Cell[BoxData[
   FormBox[
    OverscriptBox[
-    SubscriptBox["R", "stripe"], "_"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+    SubscriptBox["R", "stripe"], "_"], TraditionalForm]]],
  ".  ",
  Cell[BoxData[
   FormBox[
    OverscriptBox[
-    SubscriptBox["R", "stripe"], "_"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+    SubscriptBox["R", "stripe"], "_"], TraditionalForm]]],
  " is a function of the width, height, and length of the metal stripe and the \
 resistivity coefficient of the metal type.\n\nOnce the current has flowed \
-across one stripe of metal it must go from B1 to M6 using the W0 via layer.  \
-Depending on the width of the metal on B1, there will be ",
+across one stripe of metal it must go from B1 to M6 using the W0 via layer \
+(Note: It is assumed that we are routing from B1 down, and not the higher \
+layers.  If higher layers are required, either a) the model must be updated \
+with those layers resistive values or b) we can assume that because the \
+higher layers have much smaller resistance values, that they will fall into \
+the \[OpenCurlyDoubleQuote]noise\[CloseCurlyDoubleQuote] of this measurement. \
+ Option B is viable because if we use an Ix layer to route, the innate \
+resistance of the Ix layer is 24x smaller than the resistance of a Bx \
+layer.).  Depending on the width of the metal on B1, there will be ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["N", "VW"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["N", "VW"], TraditionalForm]]],
  " number of vias of type W0.  ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["N", "VW"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["N", "VW"], TraditionalForm]]],
  " is calculated as ",
  Cell[BoxData[
   FormBox[
    RowBox[{"\[LeftFloor]", 
     FractionBox[
      SubscriptBox["W", "stripe"], 
-     SubscriptBox["W", "Wx"]], "\[RightFloor]"}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+     SubscriptBox["W", "Wx"]], "\[RightFloor]"}], TraditionalForm]]],
  ", where ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["W", "Wx"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["W", "Wx"], TraditionalForm]]],
  " is the pitch of Wx vias.  We can calculate the effective resistance of \
 this layer as ",
  Cell[BoxData[
   FormBox[
    OverscriptBox[
-    SubscriptBox["R", "Wx"], "_"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+    SubscriptBox["R", "Wx"], "_"], TraditionalForm]]],
  ", where ",
  Cell[BoxData[
   FormBox[
    OverscriptBox[
-    SubscriptBox["R", "Wx"], "_"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+    SubscriptBox["R", "Wx"], "_"], TraditionalForm]]],
  " is a function of ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["N", "VW"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["N", "VW"], TraditionalForm]]],
  " and ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["R", "VW"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["R", "VW"], TraditionalForm]]],
  ", where ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["R", "VW"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["R", "VW"], TraditionalForm]]],
  " is the resistance of each Wx via.\n\nWe then assume that the vias going \
 down to M1 are identical and stacked on top of each other.  Because each via \
 has the same resistance value we can multiply ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["R", "Vx"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["R", "Vx"], TraditionalForm]]],
  ", the resistance of a single via of Vx type, times 5 and get each via stack\
 \[CloseCurlyQuote]s resistance.  There are ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["N", "VV"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["N", "VV"], TraditionalForm]]],
  " via stacks in parallel for these 6 layers, where ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["N", "VV"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["N", "VV"], TraditionalForm]]],
  " is calculated by ",
  Cell[BoxData[
   FormBox[
    RowBox[{"\[LeftFloor]", 
     FractionBox[
      SubscriptBox["W", "stripe"], 
-     SubscriptBox["W", "Vx"]], "\[RightFloor]"}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+     SubscriptBox["W", "Vx"]], "\[RightFloor]"}], TraditionalForm]]],
  ".  ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["W", "Vx"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["W", "Vx"], TraditionalForm]]],
  " is the pitch of the Vx vias.  Knowing the number of parallel via stacks, \
 we can calculate the effective resistance of the lower metal vias as ",
  Cell[BoxData[
   FormBox[
    OverscriptBox[
-    SubscriptBox["R", "Vx"], "_"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+    SubscriptBox["R", "Vx"], "_"], TraditionalForm]]],
  ", which is a function of ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["N", "VV"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["N", "VV"], TraditionalForm]]],
  " and ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["R", "Vx"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["R", "Vx"], TraditionalForm]]],
  ".\n\nLastly, there are the CA vias, which connect M1 down to PC and RX.  \
 Because we are looking for a worst-case approximation, we will assume that \
 all CA vias are connected to RX, where the via resistance is larger, \
 according to the PDK.  Each CA via has a resistance of ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["R", "VCA"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["R", "VCA"], TraditionalForm]]],
  ".  To calculate the number of vias in parallel, I assume a worst-case \
 estimate that each standard cell has only one CA contact down to RX.  If \
 there are more than one, then this resistance value will get smaller as there \
 will be resistors in parallel.  I also assume that there are ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["N", "SC"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["N", "SC"], TraditionalForm]]],
  " number of standard cells in one row, where each standard cell is assumed \
 to be 2.2\[Mu]m wide.  This assumption is based on a sampling of the standard \
 cells that we have for our design, where I took the largest width I could \
@@ -14999,32 +14979,27 @@ of the circuit, not just one of the strips) is equal to ",
     RowBox[{"\[LeftFloor]", 
      FractionBox[
       SubscriptBox["W", "ckt"], 
-      RowBox[{"2.2", "\[Mu]m"}]], "\[RightFloor]"}]}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+      RowBox[{"2.2", "\[Mu]m"}]], "\[RightFloor]"}]}], TraditionalForm]]],
  ".  We are able to then further stratify these contacts per stripe, by \
 dividing ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["N", "CA"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["N", "CA"], TraditionalForm]]],
  " by N.  As such, the effective resistance of the contacts per stripe is ",
  Cell[BoxData[
   FormBox[
    OverscriptBox[
-    SubscriptBox["R", "CA"], "_"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+    SubscriptBox["R", "CA"], "_"], TraditionalForm]]],
  ", which is a function of ",
  Cell[BoxData[
   FormBox[
    RowBox[{"\[LeftFloor]", 
     FractionBox[
-     SubscriptBox["N", "CA"], "N"], "\[RightFloor]"}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+     SubscriptBox["N", "CA"], "N"], "\[RightFloor]"}], TraditionalForm]]],
  " and ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["R", "VCA"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["R", "VCA"], TraditionalForm]]],
  ".\n\nThe total voltage drop \[CapitalDelta]V across each stripe is \
 therefore ",
  Cell[BoxData[
@@ -15035,8 +15010,7 @@ therefore ",
     RowBox[{"(", 
      RowBox[{
       OverscriptBox[
-       SubscriptBox["R", "stripe"], "_"], "+"}]}]}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+       SubscriptBox["R", "stripe"], "_"], "+"}]}]}], TraditionalForm]]],
  Cell[BoxData[
   FormBox[
    OverscriptBox[
@@ -15063,7 +15037,8 @@ included a simplified sketch, below, of the resistor model described above."
   3.677955065551115*^9}, {3.677955204877843*^9, 3.6779555778501253`*^9}, {
   3.6779556167015553`*^9, 3.6779556404670935`*^9}, {3.6779557534442244`*^9, 
   3.677955795336286*^9}, {3.677955828910103*^9, 3.677955868968114*^9}, {
-  3.6779613932528496`*^9, 3.6779615483753624`*^9}}]
+  3.6779613932528496`*^9, 3.6779615483753624`*^9}, {3.6785433805532975`*^9, 
+  3.6785434492026014`*^9}, {3.678543540475855*^9, 3.678543605734868*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -17506,7 +17481,7 @@ AAAAAAAAAAAAAAAAAICIAQPHfWs=
   ImageSizeRaw->{942, 752},
   PlotRange->{{0, 942}, {0, 752}}]], "Input"]], "Text",
  CellChangeTimes->{3.677955604468302*^9}]
-}, Closed]]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -17531,7 +17506,9 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"HBx", "=", "215"}], ";"}]}], "Input",
  InitializationCell->True,
- CellChangeTimes->{{3.677960302005371*^9, 3.6779603324371777`*^9}}]
+ CellChangeTimes->{{3.677960302005371*^9, 3.6779603324371777`*^9}, {
+  3.678036764834761*^9, 3.6780367652320085`*^9}, {3.67803696379587*^9, 
+  3.678036964014268*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -17544,8 +17521,7 @@ Cell[TextData[{
  Cell[BoxData[
   FormBox[
    RowBox[{"(", 
-    FractionBox["\[CapitalOmega]", "via"], ")"}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+    FractionBox["\[CapitalOmega]", "via"], ")"}], TraditionalForm]]],
  " values of the various types of vias, gotten from Table 61 on page 306 of \
 8307123_A.pdf in the PDK"
 }], "Text",
@@ -17560,7 +17536,9 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"RCA", "=", "200"}], ";"}]}], "Input",
  InitializationCell->True,
- CellChangeTimes->{{3.6779601327576966`*^9, 3.6779601817152257`*^9}}]
+ CellChangeTimes->{{3.6779601327576966`*^9, 3.6779601817152257`*^9}, {
+  3.678036364686968*^9, 3.6780363695502996`*^9}, {3.6785438660399094`*^9, 
+  3.678543871483877*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -17615,236 +17593,8 @@ Cell[BoxData[{
 
 Cell[CellGroupData[{
 
-Cell["Variables", "Subsection",
- CellChangeTimes->{{3.6779603774617586`*^9, 3.677960379209958*^9}}],
-
-Cell["All of the distance measurements are in nm", "Text",
- CellChangeTimes->{{3.677962987364476*^9, 3.6779629927525597`*^9}}],
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{
-   RowBox[{"Ickt", "=", "0.1"}], ";"}], " ", 
-  RowBox[{"(*", " ", 
-   RowBox[{"in", " ", "Amps"}], " ", "*)"}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"Wckt", "=", "120000"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"Lckt", "=", "120000"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"Wstripe", "=", "1000"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"Wspacing", "=", "9000"}], ";"}], " "}]}], "Input",
- CellChangeTimes->{{3.677960383138241*^9, 3.677960408284287*^9}, {
-   3.677960565553496*^9, 3.677960609351495*^9}, {3.677961582410133*^9, 
-   3.6779616542545443`*^9}, {3.677961715858289*^9, 3.677961716596976*^9}, 
-   3.677961794824836*^9, {3.6779629795298176`*^9, 3.677963000628936*^9}, {
-   3.6779644615354943`*^9, 3.6779644640754547`*^9}, {3.677965133758737*^9, 
-   3.677965136130048*^9}, {3.6779653209190793`*^9, 3.677965340400957*^9}, {
-   3.6779654260437346`*^9, 3.677965429823072*^9}}]
-}, Closed]],
-
-Cell[CellGroupData[{
-
 Cell["Calculations", "Subsection",
  CellChangeTimes->{{3.6779599170562944`*^9, 3.6779599183808203`*^9}}],
-
-Cell[CellGroupData[{
-
-Cell["Number of Power Stripes, StdCell Rows, and Power Rails", "Subsubsection",
- CellChangeTimes->{{3.6779629672586*^9, 3.6779629690505004`*^9}, {
-  3.677965062755311*^9, 3.677965072570343*^9}, {3.677965106132456*^9, 
-  3.6779651120962095`*^9}}],
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{
-   RowBox[{"Nstripe", "[", 
-    RowBox[{"Wckt_", ",", "Wstripe_", ",", "Wspacing_"}], "]"}], ":=", 
-   RowBox[{"Floor", "[", 
-    RowBox[{"Wckt", "/", 
-     RowBox[{"(", 
-      RowBox[{"Wstripe", "+", "Wspacing"}], ")"}]}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"Npowerrails", "[", 
-    RowBox[{"Lckt_", ",", "Hstdcell_"}], "]"}], ":=", 
-   RowBox[{"Floor", "[", 
-    RowBox[{
-     RowBox[{"Floor", "[", 
-      RowBox[{"Lckt", "/", "Hstdcell"}], "]"}], "/", "2"}], "]"}]}], 
-  ";"}]}], "Input",
- CellChangeTimes->{{3.6779617996317763`*^9, 3.677961817483499*^9}, {
-   3.677962723218788*^9, 3.6779627237990637`*^9}, 3.677963011559753*^9, 
-   3.677963572045986*^9, {3.677965059011445*^9, 3.6779651547222633`*^9}, {
-   3.6779653543292465`*^9, 3.6779653556155863`*^9}, {3.678024216713976*^9, 
-   3.678024239080954*^9}, {3.678024273845787*^9, 3.6780242873175125`*^9}}]
-}, Closed]],
-
-Cell[CellGroupData[{
-
-Cell["Resistance of B1 Metal", "Subsubsection",
- CellChangeTimes->{{3.677962802273674*^9, 3.677962806692576*^9}}],
-
-Cell[TextData[{
- "Note: I need to divide ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["L", "ckt"], TraditionalForm]]],
- " by 1000 b/c the RperUnitLen function returns things in units of ",
- Cell[BoxData[
-  FormBox[
-   FractionBox["\[CapitalOmega]", "\[Mu]m"], TraditionalForm]]]
-}], "Text",
- CellChangeTimes->{{3.677963922650507*^9, 3.6779639625020065`*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"Rstripe", "=", 
-   RowBox[{
-    RowBox[{"RperUnitLen", "[", 
-     RowBox[{"Wstripe", ",", "HBx", ",", "\[Rho]0", ",", "EcuAlloy"}], "]"}], 
-    "*", 
-    RowBox[{"Lckt", "/", "1000"}]}]}], ";"}]], "Input",
- CellChangeTimes->{{3.677962809968666*^9, 3.677962843562773*^9}, {
-   3.6779629090746393`*^9, 3.6779629294485564`*^9}, 3.6779635693058443`*^9, {
-   3.6779639185806894`*^9, 3.6779639192081795`*^9}, 3.6779653569528503`*^9, {
-   3.677965400825607*^9, 3.6779654023930006`*^9}, {3.678024336604418*^9, 
-   3.6780243415194607`*^9}}]
-}, Closed]],
-
-Cell[CellGroupData[{
-
-Cell["Resistance of Wx Vias", "Subsubsection",
- CellChangeTimes->{{3.6779630541164703`*^9, 3.677963058924876*^9}}],
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{
-   RowBox[{"numWVias", "[", 
-    RowBox[{"Wstripe_", ",", "WWx_"}], "]"}], ":=", 
-   RowBox[{"Floor", "[", 
-    RowBox[{"Wstripe", "/", "WWx"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"RWxEff", "=", 
-   RowBox[{
-    RowBox[{"Rpll", "[", 
-     RowBox[{"RWx", ",", "numWVias"}], "]"}], "//", "N"}]}], ";"}]}], "Input",
- CellChangeTimes->{{3.6779630673716526`*^9, 3.677963141651409*^9}, {
-  3.67796320183025*^9, 3.677963202142251*^9}, {3.6779635996288633`*^9, 
-  3.677963614959468*^9}, {3.677964009045949*^9, 3.6779640163612313`*^9}, {
-  3.6779653578566446`*^9, 3.677965358380488*^9}, {3.6780243965249667`*^9, 
-  3.6780244090362506`*^9}}]
-}, Closed]],
-
-Cell[CellGroupData[{
-
-Cell["Resistance of Vx Vias", "Subsubsection",
- CellChangeTimes->{{3.6779630541164703`*^9, 3.677963058924876*^9}, {
-  3.677963173848025*^9, 3.6779631741324825`*^9}}],
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{
-   RowBox[{"numVVias", "[", 
-    RowBox[{"Wstripe_", ",", "WVx_"}], "]"}], ":=", 
-   RowBox[{"Floor", "[", 
-    RowBox[{"Wstripe", "/", "WVx"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"RVxEff", "=", 
-   RowBox[{
-    RowBox[{"Rpll", "[", 
-     RowBox[{
-      RowBox[{"RVx", "*", "5"}], ",", "numVVias"}], "]"}], "//", "N"}]}], 
-  ";"}]}], "Input",
- CellChangeTimes->{{3.6779630673716526`*^9, 3.677963141651409*^9}, {
-  3.677963177536436*^9, 3.6779632114909134`*^9}, {3.6779636060164447`*^9, 
-  3.6779636064124184`*^9}, {3.677964019400476*^9, 3.677964019732472*^9}, {
-  3.6779653599688034`*^9, 3.677965360372404*^9}, {3.678024414158834*^9, 
-  3.678024422210333*^9}}]
-}, Closed]],
-
-Cell[CellGroupData[{
-
-Cell["Resistance of CA Vias", "Subsubsection",
- CellChangeTimes->{{3.6779630541164703`*^9, 3.677963058924876*^9}, {
-  3.677963173848025*^9, 3.6779631741324825`*^9}, {3.6779632736742535`*^9, 
-  3.6779632749786825`*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{
-   RowBox[{"numCAViasPerStripe", "[", 
-    RowBox[{"Wckt_", ",", "Wstdcell_", ",", "Nstripe_"}], "]"}], ":=", 
-   RowBox[{"Floor", "[", 
-    RowBox[{
-     RowBox[{"Floor", "[", 
-      RowBox[{"Wckt", "/", "Wstdcell"}], "]"}], "/", "Nstripe"}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{"RCAEff", "=", 
-  RowBox[{
-   RowBox[{"Rpll", "[", 
-    RowBox[{"RCA", ",", "numCAViasPerStripe"}], "]"}], "//", 
-   "N"}]}]}], "Input",
- CellChangeTimes->{{3.6779630673716526`*^9, 3.677963141651409*^9}, {
-  3.677963177536436*^9, 3.6779632114909134`*^9}, {3.6779632779931183`*^9, 
-  3.6779632786414194`*^9}, {3.6779633949905624`*^9, 3.677963460946162*^9}, {
-  3.6779636106198225`*^9, 3.6779636113083115`*^9}, {3.677965362028821*^9, 
-  3.6779653645194387`*^9}, {3.6779654520901747`*^9, 3.6779654589970994`*^9}, {
-  3.678024449309791*^9, 3.678024494293108*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Table", "::", "iterb"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Iterator \[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\", \
-RowBox[{\\\"i\\\", \\\",\\\", \\\"numCAViasPerStripe\\\"}], \\\"}\\\"}]\\)\
-\[NoBreak] does not have appropriate bounds. \\!\\(\\*ButtonBox[\\\"\
-\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/iterb\\\", ButtonNote -> \
-\\\"Table::iterb\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.678024511713594*^9}],
-
-Cell[BoxData["100.`"], "Output",
- CellChangeTimes->{{3.67796545318152*^9, 3.677965459457923*^9}, 
-   3.6780245117343893`*^9}]
-}, Open  ]]
-}, Closed]],
-
-Cell[CellGroupData[{
-
-Cell["Total Resistance and Voltage Drop", "Subsubsection",
- CellChangeTimes->{{3.677963484768203*^9, 3.677963508797925*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"Rstack", "=", 
-   RowBox[{"Rstripe", "+", "RWxEff", "+", "RVxEff", "+", "RCAEff"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{"Vdrop", "=", 
-  RowBox[{
-   RowBox[{"Ickt", "/", 
-    RowBox[{"(", 
-     RowBox[{"Nstripe", "*", "Npowerrails"}], ")"}]}], "*", 
-   "Rstack"}]}]}], "Input",
- CellChangeTimes->{{3.6779597715803385`*^9, 3.677959846425431*^9}, {
-   3.677961557328106*^9, 3.677961570014902*^9}, {3.6779630451418*^9, 
-   3.6779630502289715`*^9}, {3.677963516278284*^9, 3.6779635639752274`*^9}, {
-   3.6779642743528166`*^9, 3.6779642751003723`*^9}, {3.677965167416995*^9, 
-   3.677965186940096*^9}, {3.677965365691227*^9, 3.677965366239088*^9}, 
-   3.6779654136325703`*^9}],
-
-Cell[BoxData["0.017325135576800304`"], "Output",
- CellChangeTimes->{{3.677965414065662*^9, 3.677965440618867*^9}}]
-}, Open  ]]
-}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -17852,10 +17602,11 @@ Cell["Manipulator to calculate voltage drop", "Subsubsection",
  CellChangeTimes->{{3.678024111722005*^9, 3.678024138143597*^9}}],
 
 Cell["\<\
-This manipulator combines all of the individual calculations from above into \
-one quick, efficient manipulator.\
+This manipulator combines all of the individual calculations into one \
+manipulator.\
 \>", "Text",
- CellChangeTimes->{{3.6780283689659557`*^9, 3.6780283971914797`*^9}}],
+ CellChangeTimes->{{3.6780283689659557`*^9, 3.6780283971914797`*^9}, {
+  3.678543123007414*^9, 3.678543127672246*^9}}],
 
 Cell[CellGroupData[{
 
@@ -17868,12 +17619,6 @@ Cell[BoxData[
       RowBox[{"Wckt", "/", 
        RowBox[{"(", 
         RowBox[{"Wstripe", "+", "Wspacing"}], ")"}]}], "]"}]}], ";", 
-    "\[IndentingNewLine]", 
-    RowBox[{"Npowerrails", "=", 
-     RowBox[{"Floor", "[", 
-      RowBox[{
-       RowBox[{"Floor", "[", 
-        RowBox[{"Lckt", "/", "Hstdcell"}], "]"}], "/", "2"}], "]"}]}], ";", 
     "\[IndentingNewLine]", 
     RowBox[{"Rstripe", "=", 
      RowBox[{
@@ -17899,11 +17644,12 @@ Cell[BoxData[
         RowBox[{"RVx", "*", "5"}], ",", "numVVias"}], "]"}], "//", "N"}]}], 
     ";", "\[IndentingNewLine]", 
     RowBox[{"numCAViasPerStripe", "=", 
-     RowBox[{"Floor", "[", 
-      RowBox[{
-       RowBox[{"Floor", "[", 
-        RowBox[{"Wckt", "/", "Wstdcell"}], "]"}], "/", "Nstripe"}], "]"}]}], 
-    ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Floor", "[", 
+       RowBox[{
+        RowBox[{"Floor", "[", 
+         RowBox[{"Wckt", "/", "Wstdcell"}], "]"}], "/", "Nstripe"}], "]"}], 
+      "*", "numCAViasPerStdCell"}]}], ";", "\[IndentingNewLine]", 
     RowBox[{"RCAEff", "=", 
      RowBox[{
       RowBox[{"Rpll", "[", 
@@ -17915,9 +17661,8 @@ Cell[BoxData[
     RowBox[{"Vdrop", "=", 
      RowBox[{
       RowBox[{"Ickt", "/", 
-       RowBox[{"(", 
-        RowBox[{"Nstripe", "*", "Npowerrails"}], ")"}]}], "*", "Rstack"}]}], 
-    ";", "\[IndentingNewLine]", 
+       RowBox[{"(", "Nstripe", ")"}]}], "*", "Rstack"}]}], ";", 
+    "\[IndentingNewLine]", 
     RowBox[{"Grid", "[", 
      RowBox[{"{", "\[IndentingNewLine]", 
       RowBox[{
@@ -18043,9 +17788,9 @@ Cell[BoxData[
     RowBox[{
      RowBox[{"{", 
       RowBox[{
-      "Ickt", ",", "0.1", ",", 
-       "\"\<\!\(\*SubscriptBox[\(I\), \(ckt\)]\)\>\""}], "}"}], ",", "0.01", 
-     ",", "1", ",", " ", 
+      "Ickt", ",", "0.01", ",", 
+       "\"\<\!\(\*SubscriptBox[\(I\), \(ckt\)]\)\>\""}], "}"}], ",", "0.001", 
+     ",", ".1", ",", " ", 
      RowBox[{"Appearance", "\[Rule]", 
       RowBox[{"{", "\"\<Labeled\>\"", "}"}]}]}], "}"}], ",", 
    "\[IndentingNewLine]", 
@@ -18055,7 +17800,7 @@ Cell[BoxData[
       RowBox[{
       "Wckt", ",", "120000", ",", 
        "\"\<\!\(\*SubscriptBox[\(W\), \(ckt\)]\)\>\""}], "}"}], ",", "5000", 
-     ",", "500000", ",", " ", 
+     ",", "500000", ",", 
      RowBox[{"Appearance", "\[Rule]", 
       RowBox[{"{", "\"\<Labeled\>\"", "}"}]}]}], "}"}], ",", 
    "\[IndentingNewLine]", 
@@ -18065,7 +17810,17 @@ Cell[BoxData[
       RowBox[{
       "Lckt", ",", "120000", ",", 
        "\"\<\!\(\*SubscriptBox[\(L\), \(ckt\)]\)\>\""}], " ", "}"}], ",", 
-     "5000", ",", " ", "500000", ",", 
+     "5000", ",", "500000", ",", 
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", "\"\<Labeled\>\"", "}"}]}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "numCAViasPerStdCell", ",", "4", ",", " ", 
+       "\"\<\!\(\*SubscriptBox[\(N\), \(CA\\\ vias/stdcell\)]\)\>\""}], "}"}],
+      ",", "1", ",", "10", ",", "1", ",", 
      RowBox[{"Appearance", "\[Rule]", 
       RowBox[{"{", "\"\<Labeled\>\"", "}"}]}]}], "}"}], ",", 
    "\[IndentingNewLine]", 
@@ -18075,7 +17830,7 @@ Cell[BoxData[
       RowBox[{
       "Wstripe", ",", "1000", ",", " ", 
        "\"\<\!\(\*SubscriptBox[\(W\), \(stripe\)]\)\>\""}], "}"}], ",", "200",
-      ",", " ", "5000", ",", " ", 
+      ",", "5000", ",", 
      RowBox[{"Appearance", "\[Rule]", 
       RowBox[{"{", 
        RowBox[{"\"\<Labeled\>\"", ",", " ", "\"\<Open\>\""}], "}"}]}]}], 
@@ -18086,7 +17841,7 @@ Cell[BoxData[
       RowBox[{
       "Wspacing", ",", "9000", ",", " ", 
        "\"\<\!\(\*SubscriptBox[\(W\), \(spacing\)]\)\>\""}], "}"}], ",", 
-     "100", ",", " ", "25000", ",", " ", 
+     "100", ",", "25000", ",", 
      RowBox[{"Appearance", "\[Rule]", 
       RowBox[{"{", 
        RowBox[{"\"\<Labeled\>\"", ",", " ", "\"\<Open\>\""}], "}"}]}]}], 
@@ -18101,42 +17856,49 @@ Cell[BoxData[
    3.678027661573346*^9, 3.6780276618367634`*^9}, {3.678027783989077*^9, 
    3.678027904573922*^9}, {3.6780280058953357`*^9, 3.678028129205888*^9}, {
    3.678028177332758*^9, 3.678028178351532*^9}, {3.6780282087073517`*^9, 
-   3.6780283279994507`*^9}}],
+   3.6780283279994507`*^9}, {3.678035038965851*^9, 3.6780350662726316`*^9}, {
+   3.678035586040734*^9, 3.6780356917064962`*^9}, {3.6780363517302933`*^9, 
+   3.678036356646596*^9}, {3.6785432130517836`*^9, 3.678543213371862*^9}}],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`Ickt$$ = 0.1, $CellContext`Lckt$$ = 
-    86000., $CellContext`Wckt$$ = 120000, $CellContext`Wspacing$$ = 
-    9000, $CellContext`Wstripe$$ = 800., Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`Ickt$$], 0.1, 
-       "\!\(\*SubscriptBox[\(I\), \(ckt\)]\)"}, 0.01, 1}, {{
+   DynamicModuleBox[{$CellContext`Ickt$$ = 0.01, $CellContext`Lckt$$ = 
+    120000, $CellContext`numCAViasPerStdCell$$ = 4, $CellContext`Wckt$$ = 
+    120000, $CellContext`Wspacing$$ = 9000, $CellContext`Wstripe$$ = 1000, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`Ickt$$], 0.01, 
+       "\!\(\*SubscriptBox[\(I\), \(ckt\)]\)"}, 0.001, 0.1}, {{
        Hold[$CellContext`Wckt$$], 120000, 
        "\!\(\*SubscriptBox[\(W\), \(ckt\)]\)"}, 5000, 500000}, {{
        Hold[$CellContext`Lckt$$], 120000, 
        "\!\(\*SubscriptBox[\(L\), \(ckt\)]\)"}, 5000, 500000}, {{
+       Hold[$CellContext`numCAViasPerStdCell$$], 4, 
+       "\!\(\*SubscriptBox[\(N\), \(CA\\ vias/stdcell\)]\)"}, 1, 10, 1}, {{
        Hold[$CellContext`Wstripe$$], 1000, 
        "\!\(\*SubscriptBox[\(W\), \(stripe\)]\)"}, 200, 5000}, {{
        Hold[$CellContext`Wspacing$$], 9000, 
        "\!\(\*SubscriptBox[\(W\), \(spacing\)]\)"}, 100, 25000}}, 
-    Typeset`size$$ = {288., {74.5, 81.5}}, Typeset`update$$ = 0, 
+    Typeset`size$$ = {296., {74.5, 81.5}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    True, $CellContext`Ickt$162911$$ = 0, $CellContext`Wckt$162912$$ = 
-    0, $CellContext`Lckt$162913$$ = 0, $CellContext`Wstripe$162914$$ = 
-    0, $CellContext`Wspacing$162915$$ = 0}, 
+    True, $CellContext`Ickt$659$$ = 0, $CellContext`Wckt$664$$ = 
+    0, $CellContext`Lckt$665$$ = 0, $CellContext`numCAViasPerStdCell$666$$ = 
+    0, $CellContext`Wstripe$667$$ = 0, $CellContext`Wspacing$668$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
-      "Variables" :> {$CellContext`Ickt$$ = 0.1, $CellContext`Lckt$$ = 
-        120000, $CellContext`Wckt$$ = 120000, $CellContext`Wspacing$$ = 
-        9000, $CellContext`Wstripe$$ = 1000}, "ControllerVariables" :> {
-        Hold[$CellContext`Ickt$$, $CellContext`Ickt$162911$$, 0], 
-        Hold[$CellContext`Wckt$$, $CellContext`Wckt$162912$$, 0], 
-        Hold[$CellContext`Lckt$$, $CellContext`Lckt$162913$$, 0], 
-        Hold[$CellContext`Wstripe$$, $CellContext`Wstripe$162914$$, 0], 
-        Hold[$CellContext`Wspacing$$, $CellContext`Wspacing$162915$$, 0]}, 
+      "Variables" :> {$CellContext`Ickt$$ = 0.01, $CellContext`Lckt$$ = 
+        120000, $CellContext`numCAViasPerStdCell$$ = 4, $CellContext`Wckt$$ = 
+        120000, $CellContext`Wspacing$$ = 9000, $CellContext`Wstripe$$ = 
+        1000}, "ControllerVariables" :> {
+        Hold[$CellContext`Ickt$$, $CellContext`Ickt$659$$, 0], 
+        Hold[$CellContext`Wckt$$, $CellContext`Wckt$664$$, 0], 
+        Hold[$CellContext`Lckt$$, $CellContext`Lckt$665$$, 0], 
+        Hold[$CellContext`numCAViasPerStdCell$$, \
+$CellContext`numCAViasPerStdCell$666$$, 0], 
+        Hold[$CellContext`Wstripe$$, $CellContext`Wstripe$667$$, 0], 
+        Hold[$CellContext`Wspacing$$, $CellContext`Wspacing$668$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -18144,9 +17906,7 @@ Cell[BoxData[
          Typeset`skipInitDone$$}, 
       "Body" :> ($CellContext`Nstripe = 
         Floor[$CellContext`Wckt$$/($CellContext`Wstripe$$ + \
-$CellContext`Wspacing$$)]; $CellContext`Npowerrails = 
-        Floor[Floor[$CellContext`Lckt$$/$CellContext`Hstdcell]/
-          2]; $CellContext`Rstripe = \
+$CellContext`Wspacing$$)]; $CellContext`Rstripe = \
 $CellContext`RperUnitLen[$CellContext`Wstripe$$, $CellContext`HBx, \
 $CellContext`\[Rho]0, $CellContext`EcuAlloy] ($CellContext`Lckt$$/
           1000); $CellContext`numWVias = 
@@ -18159,12 +17919,12 @@ $CellContext`numVVias =
           $CellContext`Rpll[$CellContext`RVx 
            5, $CellContext`numVVias]]; $CellContext`numCAViasPerStripe = 
         Floor[Floor[$CellContext`Wckt$$/$CellContext`Wstdcell]/$CellContext`\
-Nstripe]; $CellContext`RCAEff = N[
+Nstripe] $CellContext`numCAViasPerStdCell$$; $CellContext`RCAEff = N[
           $CellContext`Rpll[$CellContext`RCA, \
 $CellContext`numCAViasPerStripe]]; $CellContext`Rstack = $CellContext`Rstripe + \
 $CellContext`RWxEff + $CellContext`RVxEff + $CellContext`RCAEff; \
-$CellContext`Vdrop = ($CellContext`Ickt$$/($CellContext`Nstripe \
-$CellContext`Npowerrails)) $CellContext`Rstack; Grid[{{
+$CellContext`Vdrop = ($CellContext`Ickt$$/$CellContext`Nstripe) \
+$CellContext`Rstack; Grid[{{
            Style["Layer", Bold, FontFamily -> "Helvetica"], 
            Style["# of Elements", Bold, FontFamily -> "Helvetica"], 
            Style[
@@ -18201,19 +17961,21 @@ $CellContext`Npowerrails)) $CellContext`Rstack; Grid[{{
            Row[{$CellContext`Vdrop, 
              Style[" V", FontFamily -> "Helvetica"]}], 
            Style["Voltage Drop/Stack", FontFamily -> "Helvetica"]}}]), 
-      "Specifications" :> {{{$CellContext`Ickt$$, 0.1, 
-          "\!\(\*SubscriptBox[\(I\), \(ckt\)]\)"}, 0.01, 1, 
+      "Specifications" :> {{{$CellContext`Ickt$$, 0.01, 
+          "\!\(\*SubscriptBox[\(I\), \(ckt\)]\)"}, 0.001, 0.1, 
          Appearance -> {"Labeled"}}, {{$CellContext`Wckt$$, 120000, 
           "\!\(\*SubscriptBox[\(W\), \(ckt\)]\)"}, 5000, 500000, 
          Appearance -> {"Labeled"}}, {{$CellContext`Lckt$$, 120000, 
           "\!\(\*SubscriptBox[\(L\), \(ckt\)]\)"}, 5000, 500000, 
+         Appearance -> {"Labeled"}}, {{$CellContext`numCAViasPerStdCell$$, 4, 
+          "\!\(\*SubscriptBox[\(N\), \(CA\\ vias/stdcell\)]\)"}, 1, 10, 1, 
          Appearance -> {"Labeled"}}, {{$CellContext`Wstripe$$, 1000, 
           "\!\(\*SubscriptBox[\(W\), \(stripe\)]\)"}, 200, 5000, 
          Appearance -> {"Labeled", "Open"}}, {{$CellContext`Wspacing$$, 9000, 
           "\!\(\*SubscriptBox[\(W\), \(spacing\)]\)"}, 100, 25000, 
          Appearance -> {"Labeled", "Open"}}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{340., {201., 208.}},
+     ImageSizeCache->{364., {215., 222.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -18224,10 +17986,7 @@ $CellContext`Npowerrails)) $CellContext`Rstack; Grid[{{
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{
-  3.6780276644377365`*^9, {3.6780278811014504`*^9, 3.678027905313247*^9}, 
-   3.6780280969164405`*^9, 3.6780281301682034`*^9, {3.678028222504781*^9, 
-   3.678028238687174*^9}, 3.678028331907669*^9}]
+ CellChangeTimes->{3.6785436278336296`*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -18442,11 +18201,233 @@ ButtonData:>\\\"paclet:ref/message/General/indet\\\", ButtonNote -> \
 \\\"Infinity::indet\\\"]\\)\"\>"}]], "Message", "MSG",
  CellChangeTimes->{3.6780276708353233`*^9}]
 }, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Original implementation of calculations before manipulator", "Section",
+ CellChangeTimes->{{3.6785430059152756`*^9, 3.67854301669882*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Variables", "Subsubsection",
+ CellChangeTimes->{{3.6779603774617586`*^9, 3.677960379209958*^9}}],
+
+Cell["All of the distance measurements are in nm", "Text",
+ CellChangeTimes->{{3.677962987364476*^9, 3.6779629927525597`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Ickt", "=", "0.1"}], ";"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"in", " ", "Amps"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Wckt", "=", "120000"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Lckt", "=", "120000"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Wstripe", "=", "1000"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Wspacing", "=", "9000"}], ";"}], " "}]}], "Input",
+ CellChangeTimes->{{3.677960383138241*^9, 3.677960408284287*^9}, {
+   3.677960565553496*^9, 3.677960609351495*^9}, {3.677961582410133*^9, 
+   3.6779616542545443`*^9}, {3.677961715858289*^9, 3.677961716596976*^9}, 
+   3.677961794824836*^9, {3.6779629795298176`*^9, 3.677963000628936*^9}, {
+   3.6779644615354943`*^9, 3.6779644640754547`*^9}, {3.677965133758737*^9, 
+   3.677965136130048*^9}, {3.6779653209190793`*^9, 3.677965340400957*^9}, {
+   3.6779654260437346`*^9, 3.677965429823072*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Number of Power Stripes, StdCell Rows, and Power Rails", "Subsubsection",
+ CellChangeTimes->{{3.6779629672586*^9, 3.6779629690505004`*^9}, {
+  3.677965062755311*^9, 3.677965072570343*^9}, {3.677965106132456*^9, 
+  3.6779651120962095`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Nstripe", "[", 
+    RowBox[{"Wckt_", ",", "Wstripe_", ",", "Wspacing_"}], "]"}], ":=", 
+   RowBox[{"Floor", "[", 
+    RowBox[{"Wckt", "/", 
+     RowBox[{"(", 
+      RowBox[{"Wstripe", "+", "Wspacing"}], ")"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6779617996317763`*^9, 3.677961817483499*^9}, {
+   3.677962723218788*^9, 3.6779627237990637`*^9}, 3.677963011559753*^9, 
+   3.677963572045986*^9, {3.677965059011445*^9, 3.6779651547222633`*^9}, {
+   3.6779653543292465`*^9, 3.6779653556155863`*^9}, {3.678024216713976*^9, 
+   3.678024239080954*^9}, {3.678024273845787*^9, 3.6780242873175125`*^9}, {
+   3.678543207654312*^9, 3.678543208018298*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Resistance of B1 Metal", "Subsubsection",
+ CellChangeTimes->{{3.677962802273674*^9, 3.677962806692576*^9}}],
+
+Cell[TextData[{
+ "Note: I need to divide ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["L", "ckt"], TraditionalForm]]],
+ " by 1000 b/c the RperUnitLen function returns things in units of ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["\[CapitalOmega]", "\[Mu]m"], TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.677963922650507*^9, 3.6779639625020065`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Rstripe", "=", 
+   RowBox[{
+    RowBox[{"RperUnitLen", "[", 
+     RowBox[{"Wstripe", ",", "HBx", ",", "\[Rho]0", ",", "EcuAlloy"}], "]"}], 
+    "*", 
+    RowBox[{"Lckt", "/", "1000"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.677962809968666*^9, 3.677962843562773*^9}, {
+   3.6779629090746393`*^9, 3.6779629294485564`*^9}, 3.6779635693058443`*^9, {
+   3.6779639185806894`*^9, 3.6779639192081795`*^9}, 3.6779653569528503`*^9, {
+   3.677965400825607*^9, 3.6779654023930006`*^9}, {3.678024336604418*^9, 
+   3.6780243415194607`*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Resistance of Wx Vias", "Subsubsection",
+ CellChangeTimes->{{3.6779630541164703`*^9, 3.677963058924876*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"numWVias", "[", 
+    RowBox[{"Wstripe_", ",", "WWx_"}], "]"}], ":=", 
+   RowBox[{"Floor", "[", 
+    RowBox[{"Wstripe", "/", "WWx"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"RWxEff", "=", 
+   RowBox[{
+    RowBox[{"Rpll", "[", 
+     RowBox[{"RWx", ",", "numWVias"}], "]"}], "//", "N"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6779630673716526`*^9, 3.677963141651409*^9}, {
+  3.67796320183025*^9, 3.677963202142251*^9}, {3.6779635996288633`*^9, 
+  3.677963614959468*^9}, {3.677964009045949*^9, 3.6779640163612313`*^9}, {
+  3.6779653578566446`*^9, 3.677965358380488*^9}, {3.6780243965249667`*^9, 
+  3.6780244090362506`*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Resistance of Vx Vias", "Subsubsection",
+ CellChangeTimes->{{3.6779630541164703`*^9, 3.677963058924876*^9}, {
+  3.677963173848025*^9, 3.6779631741324825`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"numVVias", "[", 
+    RowBox[{"Wstripe_", ",", "WVx_"}], "]"}], ":=", 
+   RowBox[{"Floor", "[", 
+    RowBox[{"Wstripe", "/", "WVx"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"RVxEff", "=", 
+   RowBox[{
+    RowBox[{"Rpll", "[", 
+     RowBox[{
+      RowBox[{"RVx", "*", "5"}], ",", "numVVias"}], "]"}], "//", "N"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.6779630673716526`*^9, 3.677963141651409*^9}, {
+  3.677963177536436*^9, 3.6779632114909134`*^9}, {3.6779636060164447`*^9, 
+  3.6779636064124184`*^9}, {3.677964019400476*^9, 3.677964019732472*^9}, {
+  3.6779653599688034`*^9, 3.677965360372404*^9}, {3.678024414158834*^9, 
+  3.678024422210333*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Resistance of CA Vias", "Subsubsection",
+ CellChangeTimes->{{3.6779630541164703`*^9, 3.677963058924876*^9}, {
+  3.677963173848025*^9, 3.6779631741324825`*^9}, {3.6779632736742535`*^9, 
+  3.6779632749786825`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"numCAViasPerStripe", "[", 
+    RowBox[{"Wckt_", ",", "Wstdcell_", ",", "Nstripe_"}], "]"}], ":=", 
+   RowBox[{"Floor", "[", 
+    RowBox[{
+     RowBox[{"Floor", "[", 
+      RowBox[{"Wckt", "/", "Wstdcell"}], "]"}], "/", "Nstripe"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"RCAEff", "=", 
+  RowBox[{
+   RowBox[{"Rpll", "[", 
+    RowBox[{"RCA", ",", "numCAViasPerStripe"}], "]"}], "//", 
+   "N"}]}]}], "Input",
+ CellChangeTimes->{{3.6779630673716526`*^9, 3.677963141651409*^9}, {
+  3.677963177536436*^9, 3.6779632114909134`*^9}, {3.6779632779931183`*^9, 
+  3.6779632786414194`*^9}, {3.6779633949905624`*^9, 3.677963460946162*^9}, {
+  3.6779636106198225`*^9, 3.6779636113083115`*^9}, {3.677965362028821*^9, 
+  3.6779653645194387`*^9}, {3.6779654520901747`*^9, 3.6779654589970994`*^9}, {
+  3.678024449309791*^9, 3.678024494293108*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Table", "::", "iterb"}], "MessageName"], ":", 
+  " ", "\<\"Iterator \[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"i\\\", \
+\\\",\\\", \\\"numCAViasPerStripe\\\"}], \\\"}\\\"}]\\)\[NoBreak] does not \
+have appropriate bounds. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/iterb\\\", ButtonNote -> \
+\\\"Table::iterb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.678024511713594*^9}],
+
+Cell[BoxData["100.`"], "Output",
+ CellChangeTimes->{{3.67796545318152*^9, 3.677965459457923*^9}, 
+   3.6780245117343893`*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Total Resistance and Voltage Drop", "Subsubsection",
+ CellChangeTimes->{{3.677963484768203*^9, 3.677963508797925*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Rstack", "=", 
+   RowBox[{"Rstripe", "+", "RWxEff", "+", "RVxEff", "+", "RCAEff"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Vdrop", "=", 
+  RowBox[{
+   RowBox[{"Ickt", "/", 
+    RowBox[{"(", "Nstripe", ")"}]}], "*", "Rstack"}]}]}], "Input",
+ CellChangeTimes->{{3.6779597715803385`*^9, 3.677959846425431*^9}, {
+   3.677961557328106*^9, 3.677961570014902*^9}, {3.6779630451418*^9, 
+   3.6779630502289715`*^9}, {3.677963516278284*^9, 3.6779635639752274`*^9}, {
+   3.6779642743528166`*^9, 3.6779642751003723`*^9}, {3.677965167416995*^9, 
+   3.677965186940096*^9}, {3.677965365691227*^9, 3.677965366239088*^9}, 
+   3.6779654136325703`*^9, {3.6785432040356293`*^9, 3.678543204295938*^9}}],
+
+Cell[BoxData["0.017325135576800304`"], "Output",
+ CellChangeTimes->{{3.677965414065662*^9, 3.677965440618867*^9}}]
+}, Open  ]]
 }, Closed]]
+}, Open  ]]
 }, Closed]]
 },
 WindowSize->{1278, 1183},
-WindowMargins->{{Automatic, -318}, {Automatic, -1419}},
+WindowMargins->{{Automatic, -2070}, {Automatic, -1396}},
 FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (December 10, 2015)",
 StyleDefinitions->"Default.nb"
 ]
@@ -18466,146 +18447,149 @@ Cell[580, 22, 111, 1, 70, "Section"],
 Cell[694, 25, 929, 17, 87, "Text"],
 Cell[1626, 44, 930, 21, 46, "Input",
  InitializationCell->True],
-Cell[2559, 67, 967, 14, 87, "Text"]
+Cell[2559, 67, 927, 14, 68, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3563, 86, 116, 1, 70, "Section"],
+Cell[3523, 86, 116, 1, 70, "Section"],
 Cell[CellGroupData[{
-Cell[3704, 91, 97, 1, 49, "Subsection"],
-Cell[3804, 94, 1116, 24, 52, "Input",
+Cell[3664, 91, 97, 1, 49, "Subsection"],
+Cell[3764, 94, 1116, 24, 52, "Input",
  InitializationCell->True]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4957, 123, 127, 1, 49, "Subsection"],
-Cell[5087, 126, 258, 5, 30, "Text"],
-Cell[5348, 133, 913, 22, 31, "Input",
+Cell[4917, 123, 127, 1, 49, "Subsection"],
+Cell[5047, 126, 258, 5, 30, "Text"],
+Cell[5308, 133, 913, 22, 31, "Input",
  InitializationCell->True]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6310, 161, 178, 2, 70, "Section"],
+Cell[6270, 161, 178, 2, 70, "Section"],
 Cell[CellGroupData[{
-Cell[6513, 167, 100, 1, 49, "Subsection"],
+Cell[6473, 167, 100, 1, 49, "Subsection"],
 Cell[CellGroupData[{
-Cell[6638, 172, 110, 1, 39, "Subsubsection"],
-Cell[6751, 175, 892011, 14629, 701, 488397, 8011, "CachedBoxData", "BoxData", \
+Cell[6598, 172, 110, 1, 39, "Subsubsection"],
+Cell[6711, 175, 892011, 14629, 701, 488397, 8011, "CachedBoxData", "BoxData", \
 "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[898799, 14809, 137, 1, 39, "Subsubsection"],
-Cell[898939, 14812, 8844, 253, 606, "Text"]
+Cell[898759, 14809, 137, 1, 39, "Subsubsection"],
+Cell[898899, 14812, 8393, 228, 646, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[907820, 15070, 145, 1, 39, "Subsubsection"],
-Cell[907968, 15073, 148203, 2434, 529, "Text"]
+Cell[907329, 15045, 145, 1, 39, "Subsubsection"],
+Cell[907477, 15048, 148203, 2434, 529, "Text"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1055729, 17488, 101, 1, 49, "Subsection"],
+Cell[1055833, 17491, 144, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[1056002, 17496, 106, 1, 39, "Subsubsection"],
+Cell[1056111, 17499, 135, 1, 30, "Text"],
+Cell[1056249, 17502, 339, 8, 52, "Input",
+ InitializationCell->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1056625, 17515, 108, 1, 39, "Subsubsection"],
+Cell[1056736, 17518, 405, 10, 43, "Text"],
+Cell[1057144, 17530, 413, 10, 72, "Input",
+ InitializationCell->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1057594, 17545, 155, 2, 39, "Subsubsection"],
+Cell[1057752, 17549, 294, 5, 30, "Text"],
+Cell[1058049, 17556, 339, 8, 52, "Input",
+ InitializationCell->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1058425, 17569, 166, 2, 39, "Subsubsection"],
+Cell[1058594, 17573, 415, 7, 49, "Text"],
+Cell[1059012, 17582, 305, 7, 52, "Input",
+ InitializationCell->True]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1059366, 17595, 104, 1, 49, "Subsection"],
+Cell[CellGroupData[{
+Cell[1059495, 17600, 128, 1, 39, "Subsubsection"],
+Cell[1059626, 17603, 227, 5, 30, "Text"],
+Cell[CellGroupData[{
+Cell[1059878, 17612, 9903, 248, 652, "Input"],
+Cell[1069784, 17862, 6849, 126, 454, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1076706, 17996, 94, 1, 72, "Chapter"],
+Cell[1076803, 17999, 191, 4, 30, "Text"],
+Cell[CellGroupData[{
+Cell[1077019, 18007, 113, 1, 70, "Section"],
+Cell[1077135, 18010, 1279, 30, 92, "Input"],
+Cell[CellGroupData[{
+Cell[1078439, 18044, 1609, 40, 92, "Input"],
+Cell[1080051, 18086, 598, 10, 31, "Output"],
+Cell[1080652, 18098, 588, 10, 31, "Output"]
+}, Open  ]],
+Cell[1081255, 18111, 134, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[1081414, 18116, 288, 5, 31, "Input"],
+Cell[1081705, 18123, 113, 1, 31, "Output"]
+}, Open  ]],
+Cell[1081833, 18127, 120, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[1081978, 18132, 793, 15, 72, "Input"],
+Cell[1082774, 18149, 119, 3, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1082930, 18157, 165, 3, 31, "Input"],
+Cell[1083098, 18162, 70, 1, 31, "Output"],
+Cell[1083171, 18165, 478, 10, 40, "Message"],
+Cell[1083652, 18177, 476, 10, 40, "Message"],
+Cell[1084131, 18189, 608, 12, 21, "Message"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1084788, 18207, 144, 1, 56, "Section"],
+Cell[CellGroupData[{
+Cell[1084957, 18212, 102, 1, 39, "Subsubsection"],
+Cell[1085062, 18215, 126, 1, 30, "Text"],
+Cell[1085191, 18218, 979, 21, 112, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1086207, 18244, 245, 3, 33, "Subsubsection"],
+Cell[1086455, 18249, 702, 14, 31, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1087194, 18268, 113, 1, 33, "Subsubsection"],
+Cell[1087310, 18271, 358, 10, 45, "Text"],
+Cell[1087671, 18283, 566, 12, 31, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1088274, 18300, 114, 1, 33, "Subsubsection"],
+Cell[1088391, 18303, 692, 16, 52, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1089120, 18324, 165, 2, 33, "Subsubsection"],
+Cell[1089288, 18328, 721, 18, 52, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1090046, 18351, 218, 3, 33, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[1090289, 18358, 891, 20, 52, "Input"],
+Cell[1091183, 18380, 535, 10, 21, "Message"],
+Cell[1091721, 18392, 125, 2, 31, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1091895, 18400, 124, 1, 33, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[1092044, 18405, 724, 14, 52, "Input"],
+Cell[1092771, 18421, 114, 1, 31, "Output"]
+}, Open  ]]
 }, Closed]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1056220, 17513, 101, 1, 49, "Subsection"],
-Cell[1056324, 17516, 144, 1, 30, "Text"],
-Cell[CellGroupData[{
-Cell[1056493, 17521, 106, 1, 39, "Subsubsection"],
-Cell[1056602, 17524, 135, 1, 30, "Text"],
-Cell[1056740, 17527, 240, 6, 52, "Input",
- InitializationCell->True]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1057017, 17538, 108, 1, 39, "Subsubsection"],
-Cell[1057128, 17541, 438, 11, 43, "Text"],
-Cell[1057569, 17554, 311, 8, 72, "Input",
- InitializationCell->True]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1057917, 17567, 155, 2, 39, "Subsubsection"],
-Cell[1058075, 17571, 294, 5, 30, "Text"],
-Cell[1058372, 17578, 339, 8, 52, "Input",
- InitializationCell->True]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1058748, 17591, 166, 2, 39, "Subsubsection"],
-Cell[1058917, 17595, 415, 7, 49, "Text"],
-Cell[1059335, 17604, 305, 7, 52, "Input",
- InitializationCell->True]
 }, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1059689, 17617, 99, 1, 49, "Subsection"],
-Cell[1059791, 17620, 126, 1, 30, "Text"],
-Cell[1059920, 17623, 979, 21, 112, "Input"]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[1060936, 17649, 104, 1, 41, "Subsection"],
-Cell[CellGroupData[{
-Cell[1061065, 17654, 245, 3, 39, "Subsubsection"],
-Cell[1061313, 17659, 935, 23, 52, "Input"]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[1062285, 17687, 113, 1, 33, "Subsubsection"],
-Cell[1062401, 17690, 358, 10, 45, "Text"],
-Cell[1062762, 17702, 566, 12, 31, "Input"]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[1063365, 17719, 114, 1, 33, "Subsubsection"],
-Cell[1063482, 17722, 692, 16, 52, "Input"]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[1064211, 17743, 165, 2, 33, "Subsubsection"],
-Cell[1064379, 17747, 721, 18, 52, "Input"]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[1065137, 17770, 218, 3, 33, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[1065380, 17777, 891, 20, 52, "Input"],
-Cell[1066274, 17799, 548, 11, 21, "Message"],
-Cell[1066825, 17812, 125, 2, 31, "Output"]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[1066999, 17820, 124, 1, 33, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[1067148, 17825, 716, 16, 52, "Input"],
-Cell[1067867, 17843, 114, 1, 31, "Output"]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[1068030, 17850, 128, 1, 33, "Subsubsection"],
-Cell[1068161, 17853, 206, 4, 30, "Text"],
-Cell[CellGroupData[{
-Cell[1068392, 17861, 9566, 242, 652, "Input"],
-Cell[1077961, 18105, 6629, 124, 459, "Output"]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1084663, 18237, 94, 1, 72, "Chapter"],
-Cell[1084760, 18240, 191, 4, 30, "Text"],
-Cell[CellGroupData[{
-Cell[1084976, 18248, 113, 1, 70, "Section"],
-Cell[1085092, 18251, 1279, 30, 92, "Input"],
-Cell[CellGroupData[{
-Cell[1086396, 18285, 1609, 40, 92, "Input"],
-Cell[1088008, 18327, 598, 10, 31, "Output"],
-Cell[1088609, 18339, 588, 10, 31, "Output"]
-}, Open  ]],
-Cell[1089212, 18352, 134, 1, 30, "Text"],
-Cell[CellGroupData[{
-Cell[1089371, 18357, 288, 5, 31, "Input"],
-Cell[1089662, 18364, 113, 1, 31, "Output"]
-}, Open  ]],
-Cell[1089790, 18368, 120, 1, 30, "Text"],
-Cell[CellGroupData[{
-Cell[1089935, 18373, 793, 15, 72, "Input"],
-Cell[1090731, 18390, 119, 3, 31, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1090887, 18398, 165, 3, 31, "Input"],
-Cell[1091055, 18403, 70, 1, 31, "Output"],
-Cell[1091128, 18406, 478, 10, 40, "Message"],
-Cell[1091609, 18418, 476, 10, 40, "Message"],
-Cell[1092088, 18430, 608, 12, 21, "Message"]
-}, Open  ]]
-}, Closed]]
 }, Closed]]
 }
 ]
