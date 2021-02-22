@@ -1,0 +1,337 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11852,        327]
+NotebookOptionsPosition[     10848,        301]
+NotebookOutlinePosition[     11233,        317]
+CellTagsIndexPosition[     11190,        314]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Cnet", " ", 
+   RowBox[{
+    RowBox[{"Vm", "'"}], "[", "t", "]"}]}], "\[Equal]", 
+  RowBox[{
+   RowBox[{"a", " ", "Iin"}], " ", "+", " ", 
+   RowBox[{"(", 
+    RowBox[{"b", "  ", "I0", " ", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"\[Beta]", " ", 
+       RowBox[{"Vm", "[", "t", "]"}]}]]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.7210769130874205`*^9, 3.7210769905420704`*^9}, {
+  3.721077065310445*^9, 3.72107706558248*^9}, {3.7210775060314827`*^9, 
+  3.721077515293933*^9}},ExpressionUUID->"03c7ef86-b220-47bf-930b-\
+858ab54d64a7"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Cnet", " ", 
+   RowBox[{
+    SuperscriptBox["Vm", "\[Prime]",
+     MultilineFunction->None], "[", "t", "]"}]}], "\[Equal]", 
+  RowBox[{
+   RowBox[{"b", " ", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"\[Beta]", " ", 
+      RowBox[{"Vm", "[", "t", "]"}]}]], " ", "I0"}], "+", 
+   RowBox[{"a", " ", "Iin"}]}]}]], "Output",
+ CellChangeTimes->{3.72107699836679*^9, 
+  3.721077516515071*^9},ExpressionUUID->"0d63dc72-7d0a-457b-b94a-\
+8589f453ff0b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Cnet", " ", 
+     RowBox[{
+      SuperscriptBox["Vm", "\[Prime]",
+       MultilineFunction->None], "[", "t", "]"}]}], "\[Equal]", 
+    RowBox[{
+     RowBox[{"b", " ", 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"\[Beta]", " ", 
+        RowBox[{"Vm", "[", "t", "]"}]}]], " ", "I0"}], "+", 
+     RowBox[{"a", " ", "Iin"}]}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Vm", "[", "t", "]"}], "}"}], ",", 
+   RowBox[{"{", "t", "}"}]}], "]"}]], "Input",
+ NumberMarks->False,ExpressionUUID->"143a8be3-ccf4-4322-8dfe-5e61cc38d7f5"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Solve","ifun",
+   "\"Inverse functions are being used by \
+\\!\\(\\*RowBox[{\\\"Solve\\\"}]\\), so some solutions may not be found; use \
+Reduce for complete solution information.\"",2,18,6,20792865107392965836,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.721077520864365*^9},ExpressionUUID->"ed16e9ca-7e54-40a6-abdb-\
+e9011a200668"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Vm", "[", "t", "]"}], "\[Rule]", 
+    RowBox[{"-", 
+     FractionBox[
+      RowBox[{"Log", "[", 
+       RowBox[{
+        FractionBox[
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{"a", " ", "Iin", " ", "t", " ", "\[Beta]"}], "Cnet"]}], 
+           "-", 
+           RowBox[{"a", " ", "Iin", " ", "\[Beta]", " ", 
+            RowBox[{"C", "[", "1", "]"}]}]}]], 
+         RowBox[{"a", " ", "Iin"}]], "-", 
+        FractionBox[
+         RowBox[{"b", " ", "I0"}], 
+         RowBox[{"a", " ", "Iin"}]]}], "]"}], "\[Beta]"]}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.721077520873376*^9},ExpressionUUID->"171b8d18-be08-4703-841b-\
+6010a8291e64"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"Log", "[", 
+        RowBox[{
+         FractionBox[
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{
+            RowBox[{"-", 
+             FractionBox[
+              RowBox[{"a", " ", "Iin", " ", "t", " ", "\[Beta]"}], "Cnet"]}], 
+            "-", 
+            RowBox[{"a", " ", "Iin", " ", "\[Beta]", " "}]}]], 
+          RowBox[{"a", " ", "Iin"}]], "-", 
+         FractionBox[
+          RowBox[{"b", " ", "I0"}], 
+          RowBox[{"a", " ", "Iin"}]]}], "]"}], "\[Beta]"]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "100"}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "10"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "2"}], ",", "0.5"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", 
+       SuperscriptBox["10", 
+        RowBox[{"-", "4"}]]}], "}"}], ",", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "6"}]], ",", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "2"}]]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"b", ",", 
+       SuperscriptBox["10", 
+        RowBox[{"-", "4"}]]}], "}"}], ",", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "6"}]], ",", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "2"}]]}], "}"}], ",", 
+   RowBox[{"{", " ", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Beta]", ",", "40"}], "}"}], ",", "10", ",", "50"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"I0", ",", 
+       RowBox[{"5", "*", 
+        SuperscriptBox["10", 
+         RowBox[{"-", "15"}]]}]}], "}"}], ",", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "15"}]], ",", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "14"}]]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Iin", ",", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "15"}]], ",", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "11"}]]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Cnet", ",", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "15"}]], ",", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "14"}]]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7210771215698147`*^9, 3.7210771357539296`*^9}, {
+  3.721077188677992*^9, 3.72107725574304*^9}, {3.721077379935565*^9, 
+  3.7210773832770042`*^9}, {3.7210774672494335`*^9, 3.721077473028425*^9}, {
+  3.7210775626727695`*^9, 3.721077744972186*^9}, {3.7210778124984474`*^9, 
+  3.721077815311625*^9}, {3.721077853500265*^9, 3.72107794253301*^9}, {
+  3.7210780151382694`*^9, 3.721078077897019*^9}, {3.7210781149267673`*^9, 
+  3.721078178097153*^9}, {3.721078312285384*^9, 
+  3.7210783142051983`*^9}},ExpressionUUID->"575a59e6-6792-4302-9808-\
+8edcb093859d"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = Rational[1, 10000], $CellContext`b$$ =
+     Rational[1, 10000], $CellContext`Cnet$$ = 2.242*^-15, $CellContext`I0$$ =
+     Rational[1, 200000000000000], $CellContext`Iin$$ = 
+    2.4607539999999995`*^-12, $CellContext`\[Beta]$$ = 40, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`a$$], 
+       Rational[1, 10000]}, 
+      Rational[1, 1000000], 
+      Rational[1, 100]}, {{
+       Hold[$CellContext`b$$], 
+       Rational[1, 10000]}, 
+      Rational[1, 1000000], 
+      Rational[1, 100]}, {{
+       Hold[$CellContext`\[Beta]$$], 40}, 10, 50}, {{
+       Hold[$CellContext`I0$$], 
+       Rational[1, 200000000000000]}, 
+      Rational[1, 1000000000000000], 
+      Rational[1, 100000000000000]}, {
+      Hold[$CellContext`Iin$$], 
+      Rational[1, 1000000000000000], 
+      Rational[1, 100000000000]}, {
+      Hold[$CellContext`Cnet$$], 
+      Rational[1, 1000000000000000], 
+      Rational[1, 100000000000000]}}, Typeset`size$$ = {450., {133., 138.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`a$95968$$ = 0, $CellContext`b$95969$$ = 
+    0, $CellContext`\[Beta]$95970$$ = 0, $CellContext`I0$95971$$ = 
+    0, $CellContext`Iin$95972$$ = 0, $CellContext`Cnet$95973$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a$$ = Rational[1, 10000], $CellContext`b$$ = 
+        Rational[1, 10000], $CellContext`Cnet$$ = 
+        Rational[1, 1000000000000000], $CellContext`I0$$ = 
+        Rational[1, 200000000000000], $CellContext`Iin$$ = 
+        Rational[1, 1000000000000000], $CellContext`\[Beta]$$ = 40}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`a$$, $CellContext`a$95968$$, 0], 
+        Hold[$CellContext`b$$, $CellContext`b$95969$$, 0], 
+        Hold[$CellContext`\[Beta]$$, $CellContext`\[Beta]$95970$$, 0], 
+        Hold[$CellContext`I0$$, $CellContext`I0$95971$$, 0], 
+        Hold[$CellContext`Iin$$, $CellContext`Iin$95972$$, 0], 
+        Hold[$CellContext`Cnet$$, $CellContext`Cnet$95973$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[-(Log[
+          E^(-($CellContext`a$$ $CellContext`Iin$$ $CellContext`t \
+$CellContext`\[Beta]$$/$CellContext`Cnet$$) - $CellContext`a$$ \
+$CellContext`Iin$$ $CellContext`\[Beta]$$)/($CellContext`a$$ \
+$CellContext`Iin$$) - $CellContext`b$$ $CellContext`I0$$/($CellContext`a$$ \
+$CellContext`Iin$$)]/$CellContext`\[Beta]$$), {$CellContext`t, 0, 100}, 
+        PlotRange -> {{0, 10}, {-2, 0.5}}], 
+      "Specifications" :> {{{$CellContext`a$$, 
+          Rational[1, 10000]}, 
+         Rational[1, 1000000], 
+         Rational[1, 100]}, {{$CellContext`b$$, 
+          Rational[1, 10000]}, 
+         Rational[1, 1000000], 
+         Rational[1, 100]}, {{$CellContext`\[Beta]$$, 40}, 10, 
+         50}, {{$CellContext`I0$$, 
+          Rational[1, 200000000000000]}, 
+         Rational[1, 1000000000000000], 
+         Rational[1, 100000000000000]}, {$CellContext`Iin$$, 
+         Rational[1, 1000000000000000], 
+         Rational[1, 100000000000]}, {$CellContext`Cnet$$, 
+         Rational[1, 1000000000000000], 
+         Rational[1, 100000000000000]}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{511., {262., 269.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.721077860789889*^9, 3.7210779429442644`*^9}, {
+   3.72107802786432*^9, 3.721078078579871*^9}, 3.7210781409141736`*^9, 
+   3.7210781792563763`*^9, 
+   3.721078314908777*^9},ExpressionUUID->"df5fb23d-f1fc-40f6-952b-\
+ebf846501df2"]
+}, Open  ]]
+},
+WindowSize->{1534, 1646},
+WindowMargins->{{Automatic, -3079}, {1565, Automatic}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (September 10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 586, 15, 41, "Input",ExpressionUUID->"03c7ef86-b220-47bf-930b-858ab54d64a7"],
+Cell[1169, 39, 488, 14, 42, "Output",ExpressionUUID->"0d63dc72-7d0a-457b-b94a-8589f453ff0b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1694, 58, 606, 17, 41, "Input",ExpressionUUID->"143a8be3-ccf4-4322-8dfe-5e61cc38d7f5"],
+Cell[2303, 77, 399, 10, 29, "Message",ExpressionUUID->"ed16e9ca-7e54-40a6-abdb-e9011a200668"],
+Cell[2705, 89, 809, 25, 85, "Output",ExpressionUUID->"171b8d18-be08-4703-841b-6010a8291e64"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3551, 119, 2916, 87, 131, "Input",ExpressionUUID->"575a59e6-6792-4302-9808-8edcb093859d"],
+Cell[6470, 208, 4362, 90, 587, "Output",ExpressionUUID->"df5fb23d-f1fc-40f6-952b-ebf846501df2"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
